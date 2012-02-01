@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/quickpanel_call" android:background="@drawable/tw_quick_panel_call_bg" android:layout_width="fill_parent" android:layout_height="96.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.299988dip">
+        <Button android:id="@id/quickpanel_call_type" android:background="@drawable/quickpanel_btn_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.299988dip" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.5999756dip" android:layout_weight="1.0">
+            <Button android:textSize="14.0dip" android:typeface="sans" android:textStyle="normal" android:textColor="#ff392b2b" android:gravity="center" android:id="@id/quickpanel_call_unhold" android:background="@drawable/quickpanel_btn_default" android:layout_width="fill_parent" android:layout_height="41.299988dip" android:text="@string/onscreenUnholdText" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="41.299988dip">
+                <Button android:textSize="14.0dip" android:typeface="sans" android:textStyle="normal" android:textColor="#ff392b2b" android:id="@id/quickpanel_call_mute" android:background="@drawable/quickpanel_btn_default" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/onscreenMuteText" android:layout_weight="1.0" />
+                <Button android:textSize="14.0dip" android:typeface="sans" android:textStyle="normal" android:textColor="#ff392b2b" android:id="@id/quickpanel_call_speaker" android:background="@drawable/quickpanel_btn_default" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:text="@string/onscreenSpeakerText" android:layout_weight="1.0" />
+            </LinearLayout>
+        </FrameLayout>
+        <Button android:textSize="14.0dip" android:typeface="sans" android:textStyle="normal" android:textColor="@color/twcolor001" android:gravity="center" android:id="@id/quickpanel_call_end" android:background="@drawable/quickpanel_btn_mini_call_red" android:layout_width="fill_parent" android:layout_height="41.299988dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="9.299988dip" android:text="@string/onscreenEndCallText" android:layout_weight="1.5" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="25.299988dip" android:layout_marginTop="63.299988dip">
+        <TextView android:textSize="18.599976dip" android:typeface="sans" android:textStyle="normal" android:textColor="@color/twcolor001" android:gravity="center_vertical" android:id="@id/quickpanel_call_description" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.599976dip" android:singleLine="true" android:layout_weight="1.0" />
+        <Chronometer android:textSize="18.599976dip" android:typeface="sans" android:textStyle="normal" android:textColor="@color/twcolor001" android:gravity="right|center" android:id="@id/quickpanel_time" android:background="@null" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="16.599976dip" android:layout_weight="3.0" android:layout_toRightOf="@id/quickpanel_call_description" />
+    </LinearLayout>
+</RelativeLayout>

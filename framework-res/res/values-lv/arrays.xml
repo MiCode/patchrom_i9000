@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Mājas</item>
+        <item>Darba</item>
+        <item>Cits</item>
+        <item>Pielāgot</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo!</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Darba</item>
+        <item>Cits</item>
+        <item>Pielāgot</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Mājas</item>
+        <item>Mobilais</item>
+        <item>Darba</item>
+        <item>Darba fakss</item>
+        <item>Mājas fakss</item>
+        <item>Peidžera numurs</item>
+        <item>Cits</item>
+        <item>Pielāgot</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Mājas</item>
+        <item>Darba</item>
+        <item>Cits</item>
+        <item>Pielāgot</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrWeek">
+        <item>ERR</item>
+        <item>Sv.</item>
+        <item>Pr.</item>
+        <item>Ot.</item>
+        <item>Tr.</item>
+        <item>Ce.</item>
+        <item>Pk.</item>
+        <item>Se.</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrMonth">
+        <item>ERR</item>
+        <item>Jan.</item>
+        <item>Feb.</item>
+        <item>Mar.</item>
+        <item>Apr.</item>
+        <item>Maijs</item>
+        <item>Jūn.</item>
+        <item>Jūl.</item>
+        <item>Aug.</item>
+        <item>Sep.</item>
+        <item>Okt.</item>
+        <item>Nov.</item>
+        <item>Dec.</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrAMPM">
+        <item>ERR</item>
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Mājas</item>
+        <item>Darba</item>
+        <item>Cits</item>
+        <item>Pielāgot</item>
+    </string-array>
+    <array name="carrier_properties" />
+    <string-array name="zzzzz_tw_cursor_handle_search_list">
+        <item>Google</item>
+        <item>Google tulkotājs</item>
+        <item>Wikipedia</item>
+        <item>Vārdnīca</item>
+    </string-array>
+</resources>

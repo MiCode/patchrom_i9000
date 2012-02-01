@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Baile</item>
+        <item>Obair</item>
+        <item>Eile</item>
+        <item>Saincheap</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo!</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Obair</item>
+        <item>Eile</item>
+        <item>Saincheap</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Baile</item>
+        <item>Póca</item>
+        <item>Obair</item>
+        <item>Facs Oibre</item>
+        <item>Facs Baile</item>
+        <item>Glaoire</item>
+        <item>Eile</item>
+        <item>Saincheap</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Baile</item>
+        <item>Obair</item>
+        <item>Eile</item>
+        <item>Saincheap</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrWeek">
+        <item>ERR</item>
+        <item>Domh</item>
+        <item>Luan</item>
+        <item>Már.</item>
+        <item>Céad</item>
+        <item>Déar</item>
+        <item>Aoin</item>
+        <item>Sath</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrMonth">
+        <item>ERR</item>
+        <item>Ean.</item>
+        <item>Feab</item>
+        <item>Már.</item>
+        <item>Aib.</item>
+        <item>Beal</item>
+        <item>Meit</item>
+        <item>Iúil</item>
+        <item>Lún.</item>
+        <item>M.F.</item>
+        <item>D.F.</item>
+        <item>Samh</item>
+        <item>Noll</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrAMPM">
+        <item>ERR</item>
+        <item>R.N.</item>
+        <item>I.N.</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Baile</item>
+        <item>Obair</item>
+        <item>Eile</item>
+        <item>Saincheap</item>
+    </string-array>
+    <array name="carrier_properties" />
+    <string-array name="zzzzz_tw_cursor_handle_search_list">
+        <item>Google</item>
+        <item>Aistrigh le Google</item>
+        <item>Wikipedia</item>
+        <item>Foclóir</item>
+    </string-array>
+</resources>

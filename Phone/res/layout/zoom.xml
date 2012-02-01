@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/call_option_tap_bg" android:layout_width="480.0dip" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/zoomout" android:background="@color/subtext_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:src="@drawable/call_brightness_zoomout" />
+    <SeekBar android:id="@id/seekbar_zoom" android:layout_width="204.0dip" android:layout_height="46.0dip" android:layout_marginLeft="5.0dip" android:layout_toRightOf="@id/zoomout" style="@style/TwSeekBar" />
+    <ImageView android:id="@id/zoomin" android:background="@color/subtext_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/call_brightness_zoomin" android:layout_toRightOf="@id/seekbar_zoom" />
+</RelativeLayout>

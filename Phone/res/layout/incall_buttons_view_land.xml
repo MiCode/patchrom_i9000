@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/holdButtonContainer" android:visibility="gone" android:layout_marginLeft="184.0dip" android:layout_marginBottom="117.0dip" style="@style/InCallRoundButtonContainer">
+        <ImageButton android:id="@id/holdButton" android:src="@drawable/incall_button_hold_icon" style="@style/InCallRoundTouchHoldButton" />
+        <TextView android:id="@id/holdButtonLabel" style="@style/InCallRoundButtonLabel" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="1.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ToggleButton android:id="@id/speakerButton" android:paddingTop="20.0dip" android:layout_height="90.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="0.0dip" android:textOn="@string/onscreenSpeakerText" android:textOff="@string/onscreenSpeakerText" style="@style/InCallTouchToggleButtonNoFrame" />
+            <ToggleButton android:id="@id/muteButton" android:paddingTop="20.0dip" android:layout_height="90.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="0.0dip" android:textOn="@string/onscreenMuteText" android:textOff="@string/onscreenMuteText" style="@style/InCallTouchToggleButtonNoFrame" />
+            <ToggleButton android:id="@id/bluetoothButton" android:paddingTop="20.0dip" android:layout_height="90.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="0.0dip" android:textOn="@string/onscreenBluetoothText" android:textOff="@string/onscreenBluetoothText" style="@style/InCallTouchToggleButtonNoFrame" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="1.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <FrameLayout android:layout_width="1.0dip" android:layout_height="90.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="0.0dip" android:layout_weight="1.0">
+                <Button android:id="@id/addButton" android:paddingTop="7.0dip" android:visibility="gone" android:text="@string/onscreenAddCallText" android:drawableTop="@drawable/incall_button_add_icon" style="@style/InCallTouchUpperButton" />
+                <Button android:id="@id/webexButton" android:paddingTop="7.0dip" android:visibility="gone" android:text="@string/webex" android:drawableTop="@drawable/incall_button_webex_icon" style="@style/InCallTouchUpperButton" />
+            </FrameLayout>
+            <Button android:id="@id/dialpadButton" android:paddingTop="7.0dip" android:layout_height="90.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="0.0dip" android:text="@string/onscreenShowDialpadText" android:drawableTop="@drawable/incall_button_dialpad_icon" style="@style/InCallTouchUpperButtonNoFrame" />
+            <FrameLayout android:layout_width="1.0dip" android:layout_height="90.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="0.0dip" android:layout_weight="1.0">
+                <Button android:id="@id/endButton" android:background="@drawable/red_button" android:paddingTop="7.0dip" android:visibility="gone" android:text="@string/end_call" android:drawableTop="@drawable/incall_button_end_icon" style="@style/InCallTouchUpperButton" />
+                <Button android:id="@id/cancelButton" android:background="@drawable/red_button" android:paddingTop="7.0dip" android:visibility="gone" android:text="@string/end_call" android:drawableTop="@drawable/incall_button_cancel_icon" style="@style/InCallTouchUpperButton" />
+                <Button android:id="@id/inCallSaveButton" android:background="@drawable/red_button" android:paddingTop="7.0dip" android:visibility="gone" android:text="@string/save" android:drawableTop="@drawable/incall_button_save_icon" style="@style/InCallTouchUpperButton" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

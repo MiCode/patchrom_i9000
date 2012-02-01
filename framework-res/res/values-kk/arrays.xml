@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Үй парағы</item>
+        <item>Жұмыс</item>
+        <item>Басқа</item>
+        <item>Әдеттегі</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo!</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Жұмыс</item>
+        <item>Басқа</item>
+        <item>Әдеттегі</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Үй парағы</item>
+        <item>Ұялы телефон</item>
+        <item>Жұмыс</item>
+        <item>Жұмыс факсы</item>
+        <item>Үй факсы</item>
+        <item>Пейджер</item>
+        <item>Басқа</item>
+        <item>Әдеттегі</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Үй парағы</item>
+        <item>Жұмыс</item>
+        <item>Басқа</item>
+        <item>Әдеттегі</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrWeek">
+        <item>ERR</item>
+        <item>Жс.</item>
+        <item>Дс.</item>
+        <item>Сс.</item>
+        <item>Ср.</item>
+        <item>Бс.</item>
+        <item>Жм.</item>
+        <item>Сн.</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrMonth">
+        <item>ERR</item>
+        <item>Қаң</item>
+        <item>Ақп</item>
+        <item>Нау</item>
+        <item>Сәу</item>
+        <item>Maмыр</item>
+        <item>Мау</item>
+        <item>Шіл</item>
+        <item>Там</item>
+        <item>Қыр</item>
+        <item>Қаз</item>
+        <item>Қар</item>
+        <item>Жел</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrAMPM">
+        <item>ERR</item>
+        <item>ТД</item>
+        <item>TK</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Үй парағы</item>
+        <item>Жұмыс</item>
+        <item>Басқа</item>
+        <item>Әдеттегі</item>
+    </string-array>
+    <array name="carrier_properties" />
+    <string-array name="zzzzz_tw_cursor_handle_search_list">
+        <item>Google</item>
+        <item>Google аудару</item>
+        <item>Wikipedia</item>
+        <item>Сөздік</item>
+    </string-array>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Thuis</item>
+        <item>Werk</item>
+        <item>Overig</item>
+        <item>Aangepast</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Werk</item>
+        <item>Overig</item>
+        <item>Aangepast</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Thuis</item>
+        <item>Mobiel</item>
+        <item>Werk</item>
+        <item>Fax werk</item>
+        <item>Fax thuis</item>
+        <item>Semafoon</item>
+        <item>Overig</item>
+        <item>Aangepast</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Thuis</item>
+        <item>Werk</item>
+        <item>Overig</item>
+        <item>Aangepast</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrWeek">
+        <item>ERR</item>
+        <item>ZO</item>
+        <item>MA</item>
+        <item>DI</item>
+        <item>WO</item>
+        <item>DO</item>
+        <item>VR</item>
+        <item>ZA</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrMonth">
+        <item>ERR</item>
+        <item>jan</item>
+        <item>feb</item>
+        <item>mrt</item>
+        <item>apr</item>
+        <item>Mei</item>
+        <item>jun</item>
+        <item>jul</item>
+        <item>aug</item>
+        <item>sep</item>
+        <item>okt</item>
+        <item>nov</item>
+        <item>dec</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrAMPM">
+        <item>ERR</item>
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Thuis</item>
+        <item>Werk</item>
+        <item>Overig</item>
+        <item>Aangepast</item>
+    </string-array>
+    <string-array name="zzzzz_tw_cursor_handle_search_list">
+        <item>Google</item>
+        <item>Vertalen via Google</item>
+        <item>Wikipedia</item>
+        <item>Woordenlijst</item>
+    </string-array>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.system" android:versionCode="10" android:versionName="2.3.6" package="com.android.providers.settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="10" />
+    <application android:label="@string/app_label" android:icon="@drawable/ic_launcher_settings" android:allowClearUserData="false" android:process="system" android:backupAgent="SettingsBackupAgent" android:killAfterRestore="false">
+        <provider android:name="SettingsProvider" android:writePermission="android.permission.WRITE_SETTINGS" android:multiprocess="false" android:authorities="settings" android:initOrder="100" />
+    </application>
+</manifest>

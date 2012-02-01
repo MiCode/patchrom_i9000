@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="button_start_service">false</item>
+    <item type="id" name="button_stop_service">false</item>
+    <item type="id" name="button_update_browser">false</item>
+</resources>

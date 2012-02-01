@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:rotaryunlock="http://schemas.android.com/apk/res/com.android.rotaryunlock">
+    <RelativeLayout android:id="@id/zzz_background01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:id="@id/zzz_sweepglassfull01" android:background="@drawable/zzz_unlock_blackbg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/zzz_sweepglass" android:background="@drawable/zzz_unlock_textbg" android:layout_width="fill_parent" android:layout_height="104.66998dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="89.32999dip" android:layout_alignParentBottom="true">
+                <TextView android:textSize="29.329987dip" android:typeface="sans" android:textColor="#ffffffff" android:id="@id/zzz_sweepglasstext01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" />
+                <TextView android:textSize="29.329987dip" android:typeface="sans" android:textColor="#ffffffff" android:id="@id/zzz_sweepglasstext02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

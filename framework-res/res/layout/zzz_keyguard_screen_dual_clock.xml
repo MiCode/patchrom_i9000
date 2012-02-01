@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/zzz_UnlockClock" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/zzz_citylayout" android:background="@drawable/zzz_unlock_blackbg_dual" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginBottom="57.329987dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="17.329987dip" android:textColor="#ffb2d1ff" android:ellipsize="marquee" android:id="@id/zzz_city02" android:layout_width="118.66998dip" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:singleLine="true" android:shadowDx="1.0" android:shadowDy="-1.0" android:marqueeRepeatLimit="marquee_forever" />
+        <TextView android:layout_width="48.0dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="17.329987dip" android:textColor="#ffb2d1ff" android:ellipsize="marquee" android:id="@id/zzz_city01" android:layout_width="118.66998dip" android:layout_height="fill_parent" android:singleLine="true" android:shadowDx="1.0" android:shadowDy="-1.0" android:layout_weight="0.7" android:marqueeRepeatLimit="marquee_forever" />
+        <TextView android:layout_width="14.669983dip" android:layout_height="fill_parent" android:layout_weight="0.4" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/zzz_datetime02" android:background="@drawable/zzz_unlock_dualclock_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:id="@id/zzz_datelayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="13.329987dip" android:id="@id/zzz_date_city02" android:layout_width="166.66998dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:shadowDx="1.0" android:shadowDy="-1.0" />
+                <TextView android:textSize="13.329987dip" android:id="@id/zzz_date_city01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowDx="1.0" android:shadowDy="-1.0" android:layout_weight="0.5" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="left" android:id="@id/zzz_datetimeframe02" android:layout_width="138.66998dip" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/zzz_timecity02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="13.329987dip" android:layout_marginTop="19.329987dip">
+                    <ImageView android:id="@id/zzz_hour01_city2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/zzz_hour02_city2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zzz_hour01_city2" />
+                    <ImageView android:id="@id/zzz_colon01_city2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zzz_hour02_city2" />
+                    <ImageView android:id="@id/zzz_minute01_city2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zzz_colon01_city2" />
+                    <ImageView android:id="@id/zzz_minute02_city2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zzz_minute01_city2" />
+                    <ImageView android:id="@id/zzz_ampm_city2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.669983dip" android:layout_toRightOf="@id/zzz_minute02_city2" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="right" android:id="@id/zzz_datetimeframe01" android:layout_width="140.0dip" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/zzz_timecity01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="19.329987dip">
+                    <ImageView android:id="@id/zzz_hour01_city1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/zzz_hour02_city1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zzz_hour01_city1" />
+                    <ImageView android:id="@id/zzz_colon01_city1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zzz_hour02_city1" />
+                    <ImageView android:id="@id/zzz_minute01_city1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zzz_colon01_city1" />
+                    <ImageView android:id="@id/zzz_minute02_city1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/zzz_minute01_city1" />
+                    <ImageView android:id="@id/zzz_ampm_city1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.669983dip" android:layout_toRightOf="@id/zzz_minute02_city1" />
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/button_start_service" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/start_service" />
+    <Button android:id="@id/button_stop_service" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/stop_service" />
+    <Button android:id="@id/button_update_browser" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/update_browser" />
+</LinearLayout>

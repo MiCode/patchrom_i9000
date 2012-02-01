@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/NotificationMainLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/MessageLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/MessageLayoutImage" android:background="@drawable/zzz_unlock_noti_icon_mail" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/MessageLayoutText" android:paddingLeft="8.659973dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.8" />
+        <TextView android:id="@id/MessageLayoutTime" android:paddingRight="12.659973dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/EmailLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/EmailLayoutView" android:background="@drawable/zzz_unlock_noti_icon_email" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/EmailLayoutText" android:paddingLeft="8.659973dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.8" />
+        <TextView android:id="@id/EmailLayoutTime" android:paddingRight="12.659973dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/CallLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/CallLayoutImageView" android:background="@drawable/zzz_unlock_noti_icon_call" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/CallLayoutText" android:paddingLeft="8.659973dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.8" />
+        <TextView android:id="@id/CallLayoutTime" android:paddingRight="12.659973dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

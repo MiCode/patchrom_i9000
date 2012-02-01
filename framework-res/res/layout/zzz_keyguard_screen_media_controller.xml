@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/zzz_MusicMovingBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-102.66dip">
+        <RelativeLayout android:gravity="center_horizontal" android:id="@id/zzz_CDHandle" android:layout_width="133.32999dip" android:layout_height="133.32999dip" android:layout_marginLeft="93.32999dip" android:layout_marginTop="28.659973dip">
+            <ImageView android:id="@id/zzz_CDImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/zzz_unlock_disk_default" />
+            <ImageView android:id="@id/zzz_UpDownAllow" android:background="@drawable/zzz_unlock_disk_open" android:layout_width="18.659973dip" android:layout_height="18.659973dip" android:layout_marginLeft="56.0dip" android:layout_marginTop="107.32999dip" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/zzz_MusicControlBox" android:background="@drawable/zzz_unlock_ctr_bg" android:layout_width="fill_parent" android:layout_height="120.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="62.659973dip">
+                <RelativeLayout android:layout_width="88.0dip" android:layout_height="62.659973dip">
+                    <ImageView android:id="@id/zzz_MusicBoxAlbumImage" android:background="@color/unlock_album_image_background_normal" android:padding="1.2199707dip" android:layout_width="50.659973dip" android:layout_height="50.659973dip" android:layout_marginLeft="10.659973dip" android:layout_marginTop="8.0dip" android:scaleType="fitXY" />
+                    <ImageView android:id="@id/zzz_MusicBoxWithouAlbumImage" android:background="@drawable/zzz_unlock_music_sound_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.659973dip" android:layout_marginTop="12.0dip" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="62.659973dip">
+                    <ImageButton android:id="@id/zzz_MusicBoxReword" android:background="@drawable/zzz_unlock_selector_rew" android:longClickable="false" android:layout_width="53.329987dip" android:layout_height="40.0dip" android:layout_marginTop="12.0dip" />
+                    <ImageButton android:id="@id/zzz_MusicBoxPause" android:background="@drawable/zzz_unlock_selector_pause" android:longClickable="false" android:layout_width="53.329987dip" android:layout_height="40.0dip" android:layout_marginLeft="28.0dip" android:layout_marginTop="12.0dip" android:layout_toRightOf="@id/zzz_MusicBoxReword" />
+                    <ImageButton android:id="@id/zzz_MusicBoxForward" android:background="@drawable/zzz_unlock_selector_ff" android:longClickable="false" android:layout_width="53.329987dip" android:layout_height="40.0dip" android:layout_marginLeft="29.329987dip" android:layout_marginTop="12.0dip" android:layout_toRightOf="@id/zzz_MusicBoxPause" />
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView android:textSize="17.0sp" android:typeface="sans" android:textColor="#ffffffff" android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@id/zzz_MusicBoxTitleInBox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.329987dip" android:layout_marginRight="17.329987dip" android:singleLine="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/surfacelayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="16.0dip" android:typeface="normal" android:gravity="center" android:id="@id/state" android:layout_width="fill_parent" android:layout_height="22.0dip" android:layout_marginTop="19.0dip" android:text="@string/card_title_dialing" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip">
+            <ImageView android:id="@id/outgoing_contact_image" android:layout_width="123.0dip" android:layout_height="123.0dip" android:src="@drawable/call_videocall_defaultcaller_ls_m" />
+        </LinearLayout>
+        <TextView android:textSize="18.0dip" android:typeface="normal" android:textColor="@color/twcolor001" android:id="@id/caller_name" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_marginTop="5.0dip" />
+        <TextView android:textSize="16.0dip" android:typeface="normal" android:textColor="@color/twcolor003" android:id="@id/caller_num" android:layout_width="wrap_content" android:layout_height="22.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/RelativeLayout04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip">
+            <ImageView android:id="@id/facebook_icon" android:visibility="invisible" android:layout_width="33.0dip" android:layout_height="33.0dip" android:src="@drawable/call_flickr_icon" />
+            <TextView android:textSize="17.0dip" android:typeface="normal" android:textColor="@color/twcolor001" android:gravity="center" android:id="@id/facebook_status" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginLeft="8.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/surfacelayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <FrameLayout android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
+            <SurfaceView android:id="@id/near_end" android:visibility="visible" android:layout_width="242.0dip" android:layout_height="181.0dip" />
+            <ImageView android:id="@id/near_end_image" android:visibility="invisible" android:layout_width="242.0dip" android:layout_height="181.0dip" android:src="@drawable/call_videocall_defaultcaller_ls_m" />
+        </FrameLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/RelativeLayout04" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="91.0dip" android:layout_marginLeft="0.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="7.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0">
+                <Button android:textSize="16.0dip" android:textColor="@color/twcolor001" android:id="@id/hide" android:background="@drawable/incall_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/hide" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="91.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="7.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0">
+                <ToggleButton android:textSize="16.0dip" android:textColor="@color/twcolor001" android:id="@id/speaker" android:background="@drawable/incall_toggle_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textOn="@string/onscreenSpeakerText" android:textOff="@string/onscreenSpeakerText" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="91.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="7.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0">
+                <Button android:textSize="16.0dip" android:textColor="@color/twcolor001" android:id="@id/endcall" android:background="@drawable/red_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/end_call" android:drawableTop="@drawable/incall_button_end_icon" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

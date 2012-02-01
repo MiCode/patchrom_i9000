@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/incomingButtonsLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.phone.PhoneSlidingTab android:id="@id/incomingCallWidget" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="80.0dip" android:layout_alignParentBottom="true" />
+    <include layout="@layout/reject_call_with_msg_sliding_drawer" />
+</RelativeLayout>

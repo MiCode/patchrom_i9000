@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/zzz_UnlockClock" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/zzz_datetime01" android:background="@drawable/zzz_unlock_clockbg" android:layout_width="fill_parent" android:layout_height="77.32999dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_gravity="left" android:id="@id/zzz_datetimeframe01" android:layout_width="86.66998dip" android:layout_height="fill_parent">
+            <TextView android:textSize="22.0dip" android:id="@id/zzz_date01" android:layout_width="86.66998dip" android:layout_height="wrap_content" android:layout_marginLeft="6.669983dip" android:layout_marginTop="12.0dip" android:singleLine="true" android:shadowDx="1.0" android:shadowDy="1.0" />
+            <TextView android:textSize="22.0dip" android:textColor="#ff5cc4ff" android:id="@id/zzz_week01" android:layout_width="86.66998dip" android:layout_height="wrap_content" android:layout_marginLeft="6.669983dip" android:shadowDx="1.0" android:shadowDy="1.0" android:layout_below="@id/zzz_date01" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="right" android:id="@id/zzz_datetimeframe02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.6">
+            <ImageView android:id="@id/zzz_hour01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="12.0dip" />
+            <ImageView android:id="@id/zzz_hour02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_toRightOf="@id/zzz_hour01" />
+            <ImageView android:id="@id/zzz_colon01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_toRightOf="@id/zzz_hour02" />
+            <ImageView android:id="@id/zzz_minute01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_toRightOf="@id/zzz_colon01" />
+            <ImageView android:id="@id/zzz_minute02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_toRightOf="@id/zzz_minute01" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="left" android:id="@id/zzz_datetimeframe03" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="6.669983dip" android:minWidth="18.669983dip">
+            <ImageView android:id="@id/zzz_ampm01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

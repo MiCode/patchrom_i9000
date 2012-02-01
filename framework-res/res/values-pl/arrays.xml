@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Dom</item>
+        <item>Praca</item>
+        <item>Inne</item>
+        <item>Niestandardowy</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Praca</item>
+        <item>Inne</item>
+        <item>Niestandardowy</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Dom</item>
+        <item>Komórka</item>
+        <item>Praca</item>
+        <item>Faks w pracy</item>
+        <item>Faks domowy</item>
+        <item>Pager</item>
+        <item>Inny</item>
+        <item>Niestandardowy</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Dom</item>
+        <item>Praca</item>
+        <item>Inny</item>
+        <item>Niestandardowy</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrWeek">
+        <item>ERR</item>
+        <item>Nd</item>
+        <item>Pn</item>
+        <item>Wt</item>
+        <item>Śr</item>
+        <item>Cz</item>
+        <item>Pt</item>
+        <item>So</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrMonth">
+        <item>ERR</item>
+        <item>Sty</item>
+        <item>Lut</item>
+        <item>Mar</item>
+        <item>Kwi</item>
+        <item>Maj</item>
+        <item>Cze</item>
+        <item>Lip</item>
+        <item>Sie</item>
+        <item>Wrz</item>
+        <item>Paź</item>
+        <item>Lis</item>
+        <item>Gru</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrAMPM">
+        <item>ERR</item>
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Dom</item>
+        <item>Praca</item>
+        <item>Inne</item>
+        <item>Niestandardowy</item>
+    </string-array>
+    <string-array name="zzzzz_tw_cursor_handle_search_list">
+        <item>Google</item>
+        <item>Tłumacz z Google</item>
+        <item>Wikipedia</item>
+        <item>Słownik</item>
+    </string-array>
+</resources>

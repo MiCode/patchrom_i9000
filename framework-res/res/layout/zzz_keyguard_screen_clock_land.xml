@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/zzz_UnlockClock" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/zzz_datetime01" android:background="@drawable/zzz_unlock_clockbg" android:layout_width="fill_parent" android:layout_height="77.32999dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="22.0dip" android:id="@id/zzz_date01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.669983dip" android:layout_marginTop="12.0dip" android:shadowDx="1.0" android:shadowDy="1.0" />
+        <TextView android:textSize="22.0dip" android:textColor="#ff5cc4ff" android:id="@id/zzz_week01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.669983dip" android:shadowDx="1.0" android:shadowDy="1.0" android:layout_below="@id/zzz_date01" />
+        <ImageView android:id="@id/zzz_hour01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="286.66406dip" android:layout_marginTop="12.0dip" android:layout_weight="1.5" />
+        <ImageView android:id="@id/zzz_hour02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_weight="1.2" android:layout_toRightOf="@id/zzz_hour01" />
+        <ImageView android:id="@id/zzz_colon01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_weight="1.0" android:layout_toRightOf="@id/zzz_hour02" />
+        <ImageView android:id="@id/zzz_minute01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_weight="0.7" android:layout_toRightOf="@id/zzz_colon01" />
+        <ImageView android:id="@id/zzz_minute02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_weight="0.4" android:layout_toRightOf="@id/zzz_minute01" />
+        <ImageView android:id="@id/zzz_ampm01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:layout_marginRight="17.329987dip" android:layout_weight="2.0" android:layout_toRightOf="@id/zzz_minute02" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Otthoni</item>
+        <item>Munkahelyi</item>
+        <item>Egyéb</item>
+        <item>Egyedi</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo!</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Munkahelyi</item>
+        <item>Egyéb</item>
+        <item>Egyedi</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Otthoni</item>
+        <item>Mobil</item>
+        <item>Munkahelyi</item>
+        <item>Munkahelyi fax</item>
+        <item>Otthoni fax</item>
+        <item>Személyhívó</item>
+        <item>Egyéb</item>
+        <item>Egyedi</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Otthoni</item>
+        <item>Munkahelyi</item>
+        <item>Egyéb</item>
+        <item>Egyedi</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrWeek">
+        <item>ERR</item>
+        <item>Vas</item>
+        <item>Hét</item>
+        <item>Ke</item>
+        <item>Sze</item>
+        <item>Csü</item>
+        <item>Pén</item>
+        <item>Szo</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrMonth">
+        <item>ERR</item>
+        <item>jan.</item>
+        <item>feb.</item>
+        <item>már.</item>
+        <item>ápr.</item>
+        <item>máj.</item>
+        <item>jún.</item>
+        <item>júl.</item>
+        <item>aug.</item>
+        <item>szep</item>
+        <item>okt.</item>
+        <item>nov.</item>
+        <item>dec.</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrAMPM">
+        <item>ERR</item>
+        <item>de.</item>
+        <item>du.</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Otthoni</item>
+        <item>Munkahelyi</item>
+        <item>Egyéb</item>
+        <item>Egyedi</item>
+    </string-array>
+    <array name="carrier_properties" />
+    <string-array name="zzzzz_tw_cursor_handle_search_list">
+        <item>Google</item>
+        <item>Google fordítás</item>
+        <item>Wikipédia</item>
+        <item>Szótár</item>
+    </string-array>
+</resources>

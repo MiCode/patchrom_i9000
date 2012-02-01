@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Οικία</item>
+        <item>Εργασία</item>
+        <item>Άλλο</item>
+        <item>Προσαρμοσμένο</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Εργασία</item>
+        <item>Άλλο</item>
+        <item>Προσαρμοσμένο</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Οικία</item>
+        <item>Κινητό</item>
+        <item>Εργασία</item>
+        <item>Φαξ εργασίας</item>
+        <item>Φαξ οικίας</item>
+        <item>Pager</item>
+        <item>Άλλο</item>
+        <item>Προσαρμοσμένο</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Οικία</item>
+        <item>Εργασία</item>
+        <item>Άλλο</item>
+        <item>Προσαρμοσμένο</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrWeek">
+        <item>ERR</item>
+        <item>Κυρ.</item>
+        <item>Δευ.</item>
+        <item>Τρ.</item>
+        <item>Τετ.</item>
+        <item>Πέμ.</item>
+        <item>Παρ.</item>
+        <item>Σαβ.</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrMonth">
+        <item>ERR</item>
+        <item>Ιαν</item>
+        <item>Φεβρ</item>
+        <item>Μάρτ</item>
+        <item>Απρ</item>
+        <item>Μάης</item>
+        <item>Ιούν</item>
+        <item>Ιούλ</item>
+        <item>Αυγ</item>
+        <item>Σεπτ</item>
+        <item>Οκτ</item>
+        <item>Noέμ</item>
+        <item>Δεκ</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrAMPM">
+        <item>ERR</item>
+        <item>ΠΜ</item>
+        <item>ΜΜ</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Οικία</item>
+        <item>Εργασία</item>
+        <item>Άλλο</item>
+        <item>Προσαρμοσμένο</item>
+    </string-array>
+    <string-array name="zzzzz_tw_cursor_handle_search_list">
+        <item>Google</item>
+        <item>Μετάφραση Google</item>
+        <item>Wikipedia</item>
+        <item>Λεξικό</item>
+    </string-array>
+</resources>

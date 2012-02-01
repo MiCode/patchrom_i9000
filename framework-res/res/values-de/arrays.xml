@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Privat</item>
+        <item>Geschäftlich</item>
+        <item>Andere</item>
+        <item>Benutzerdefiniert</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo!</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Geschäftlich</item>
+        <item>Andere</item>
+        <item>Benutzerdefiniert</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Privat</item>
+        <item>Mobil</item>
+        <item>Geschäftlich</item>
+        <item>Fax (geschäftl.)</item>
+        <item>Fax (privat)</item>
+        <item>Pager</item>
+        <item>Andere</item>
+        <item>Benutzerdefiniert</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Privat</item>
+        <item>Geschäftlich</item>
+        <item>Andere</item>
+        <item>Benutzerdefiniert</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrWeek">
+        <item>ERR</item>
+        <item>So</item>
+        <item>Mo</item>
+        <item>Di</item>
+        <item>Mi</item>
+        <item>Do</item>
+        <item>Fr</item>
+        <item>Sa</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrMonth">
+        <item>ERR</item>
+        <item>Jan.</item>
+        <item>Feb.</item>
+        <item>Mär.</item>
+        <item>Apr.</item>
+        <item>Mai</item>
+        <item>Jun.</item>
+        <item>Jul.</item>
+        <item>Aug.</item>
+        <item>Sep.</item>
+        <item>Okt.</item>
+        <item>Nov.</item>
+        <item>Dez.</item>
+    </string-array>
+    <string-array name="zzz_UnlockClock_strArrAMPM">
+        <item>ERR</item>
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Privat</item>
+        <item>Geschäftlich</item>
+        <item>Andere</item>
+        <item>Benutzerdefiniert</item>
+    </string-array>
+    <string-array name="zzzzz_tw_cursor_handle_search_list">
+        <item>Google</item>
+        <item>Mit Google übersetzen</item>
+        <item>Wikipedia</item>
+        <item>Wörterbuch</item>
+    </string-array>
+</resources>
