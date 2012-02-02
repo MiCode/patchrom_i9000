@@ -70,6 +70,7 @@
     .parameter
 
     .prologue
+    .line 891
     iput-object p1, p0, Lcom/android/server/UsbStorageService$VoldResponseCode;->this$0:Lcom/android/server/UsbStorageService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

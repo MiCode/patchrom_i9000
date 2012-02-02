@@ -47,6 +47,7 @@
 
     const/4 v3, 0x0
 
+    .line 37
     new-instance v0, Landroid/net/vpn/VpnState;
 
     const-string v1, "CONNECTING"
@@ -107,6 +108,7 @@
 
     sput-object v0, Landroid/net/vpn/VpnState;->UNKNOWN:Landroid/net/vpn/VpnState;
 
+    .line 36
     const/4 v0, 0x7
 
     new-array v0, v0, [Landroid/net/vpn/VpnState;
@@ -159,6 +161,7 @@
     .end annotation
 
     .prologue
+    .line 36
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -169,6 +172,7 @@
     .parameter "name"
 
     .prologue
+    .line 36
     const-class v0, Landroid/net/vpn/VpnState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -185,6 +189,7 @@
     .locals 1
 
     .prologue
+    .line 36
     sget-object v0, Landroid/net/vpn/VpnState;->$VALUES:[Landroid/net/vpn/VpnState;
 
     invoke-virtual {v0}, [Landroid/net/vpn/VpnState;->clone()Ljava/lang/Object;

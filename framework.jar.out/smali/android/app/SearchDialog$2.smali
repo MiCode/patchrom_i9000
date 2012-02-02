@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 685
     iput-object p1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "s"
 
     .prologue
+    .line 712
     iget-object v1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchable:Landroid/app/SearchableInfo;
@@ -50,10 +52,12 @@
 
     if-nez v1, :cond_1
 
+    .line 727
     :cond_0
     :goto_0
     return-void
 
+    .line 715
     :cond_1
     iget-object v1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
@@ -81,6 +85,7 @@
 
     if-nez v1, :cond_0
 
+    .line 718
     iget-object v1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchAutoComplete:Landroid/app/SearchDialog$SearchAutoComplete;
@@ -96,6 +101,7 @@
 
     or-int/lit8 v0, v1, 0x2
 
+    .line 720
     .local v0, options:I
     iget-object v1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
@@ -106,11 +112,13 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 721
     iget-object v1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     #setter for: Landroid/app/SearchDialog;->mSearchAutoCompleteImeOptions:I
     invoke-static {v1, v0}, Landroid/app/SearchDialog;->access$902(Landroid/app/SearchDialog;I)I
 
+    .line 722
     iget-object v1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchAutoComplete:Landroid/app/SearchDialog$SearchAutoComplete;
@@ -120,6 +128,7 @@
 
     invoke-virtual {v1, v0}, Landroid/app/SearchDialog$SearchAutoComplete;->setImeOptions(I)V
 
+    .line 724
     iget-object v1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchAutoComplete:Landroid/app/SearchDialog$SearchAutoComplete;
@@ -151,6 +160,7 @@
     .parameter "after"
 
     .prologue
+    .line 687
     return-void
 .end method
 
@@ -162,6 +172,7 @@
     .parameter "after"
 
     .prologue
+    .line 694
     iget-object v0, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchable:Landroid/app/SearchableInfo;
@@ -171,9 +182,11 @@
 
     if-nez v0, :cond_0
 
+    .line 709
     :goto_0
     return-void
 
+    .line 697
     :cond_0
     iget-object v0, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
@@ -188,6 +201,7 @@
 
     if-nez v0, :cond_1
 
+    .line 699
     iget-object v0, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     if-nez p1, :cond_4
@@ -198,12 +212,14 @@
     #setter for: Landroid/app/SearchDialog;->mUserQuery:Ljava/lang/String;
     invoke-static {v0, v1}, Landroid/app/SearchDialog;->access$202(Landroid/app/SearchDialog;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 701
     :cond_1
     iget-object v0, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     #calls: Landroid/app/SearchDialog;->updateWidgetState()V
     invoke-static {v0}, Landroid/app/SearchDialog;->access$300(Landroid/app/SearchDialog;)V
 
+    .line 705
     iget-object v0, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
 
     iget-object v1, p0, Landroid/app/SearchDialog$2;->this$0:Landroid/app/SearchDialog;
@@ -283,6 +299,7 @@
 
     goto :goto_0
 
+    .line 699
     :cond_4
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -290,6 +307,7 @@
 
     goto :goto_1
 
+    .line 705
     :cond_5
     const/4 v1, 0x0
 

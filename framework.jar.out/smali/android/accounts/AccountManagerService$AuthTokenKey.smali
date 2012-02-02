@@ -32,20 +32,25 @@
     .parameter "authTokenType"
 
     .prologue
+    .line 182
     iput-object p1, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->this$0:Landroid/accounts/AccountManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 183
     iput-object p2, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->mAccount:Landroid/accounts/Account;
 
+    .line 184
     iput-object p3, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->mAuthTokenType:Ljava/lang/String;
 
+    .line 185
     invoke-direct {p0}, Landroid/accounts/AccountManagerService$AuthTokenKey;->computeHashCode()I
 
     move-result v0
 
     iput v0, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->mHashCode:I
 
+    .line 186
     return-void
 .end method
 
@@ -53,8 +58,10 @@
     .locals 3
 
     .prologue
+    .line 205
     const/16 v0, 0x11
 
+    .line 206
     .local v0, result:I
     mul-int/lit8 v1, v0, 0x1f
 
@@ -66,6 +73,7 @@
 
     add-int/lit16 v0, v1, 0x20f
 
+    .line 207
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v2, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->mAuthTokenType:Ljava/lang/String;
@@ -77,8 +85,10 @@
     :goto_0
     add-int v0, v1, v2
 
+    .line 208
     return v0
 
+    .line 207
     :cond_0
     iget-object v2, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->mAuthTokenType:Ljava/lang/String;
 
@@ -100,13 +110,16 @@
 
     const/4 v4, 0x0
 
+    .line 189
     if-ne p1, p0, :cond_0
 
     move v2, v5
 
+    .line 199
     :goto_0
     return v2
 
+    .line 192
     :cond_0
     instance-of v2, p1, Landroid/accounts/AccountManagerService$AuthTokenKey;
 
@@ -114,8 +127,10 @@
 
     move v2, v4
 
+    .line 193
     goto :goto_0
 
+    .line 195
     :cond_1
     move-object v0, p1
 
@@ -123,6 +138,7 @@
 
     move-object v1, v0
 
+    .line 196
     .local v1, other:Landroid/accounts/AccountManagerService$AuthTokenKey;
     iget-object v2, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->mAccount:Landroid/accounts/Account;
 
@@ -136,8 +152,10 @@
 
     move v2, v4
 
+    .line 197
     goto :goto_0
 
+    .line 199
     :cond_2
     iget-object v2, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->mAuthTokenType:Ljava/lang/String;
 
@@ -172,6 +190,7 @@
     .locals 1
 
     .prologue
+    .line 212
     iget v0, p0, Landroid/accounts/AccountManagerService$AuthTokenKey;->mHashCode:I
 
     return v0

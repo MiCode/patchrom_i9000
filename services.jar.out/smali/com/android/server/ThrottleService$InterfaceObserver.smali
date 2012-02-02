@@ -30,14 +30,19 @@
     .parameter "iface"
 
     .prologue
+    .line 151
     invoke-direct {p0}, Landroid/net/INetworkManagementEventObserver$Stub;-><init>()V
 
+    .line 152
     iput-object p1, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mHandler:Landroid/os/Handler;
 
+    .line 153
     iput p2, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mMsg:I
 
+    .line 154
     iput-object p3, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mIface:Ljava/lang/String;
 
+    .line 155
     return-void
 .end method
 
@@ -48,6 +53,7 @@
     .parameter "iface"
 
     .prologue
+    .line 168
     iget-object v0, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mIface:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -56,6 +62,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 169
     iget-object v0, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mHandler:Landroid/os/Handler;
 
     iget v1, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mMsg:I
@@ -66,6 +73,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 171
     :cond_0
     return-void
 .end method
@@ -76,8 +84,10 @@
     .parameter "link"
 
     .prologue
+    .line 158
     if-eqz p2, :cond_0
 
+    .line 159
     iget-object v0, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mIface:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -86,6 +96,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 160
     iget-object v0, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mHandler:Landroid/os/Handler;
 
     iget v1, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mMsg:I
@@ -96,6 +107,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 163
     :cond_0
     return-void
 .end method
@@ -105,5 +117,6 @@
     .parameter "iface"
 
     .prologue
+    .line 173
     return-void
 .end method

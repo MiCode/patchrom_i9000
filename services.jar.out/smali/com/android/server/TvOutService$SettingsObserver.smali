@@ -25,10 +25,13 @@
     .parameter "handler"
 
     .prologue
+    .line 118
     iput-object p1, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
+    .line 119
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
+    .line 120
     return-void
 .end method
 
@@ -40,12 +43,14 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 123
     const-string v1, "TvOut-Observer"
 
     const-string v2, "observe"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 125
     iget-object v1, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
     #getter for: Lcom/android/server/TvOutService;->mContext:Landroid/content/Context;
@@ -57,6 +62,7 @@
 
     move-result-object v0
 
+    .line 126
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "tv_system"
 
@@ -66,6 +72,7 @@
 
     invoke-virtual {v0, v1, v3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
+    .line 128
     const-string v1, "tv_out"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -74,8 +81,10 @@
 
     invoke-virtual {v0, v1, v3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
+    .line 130
     invoke-virtual {p0}, Lcom/android/server/TvOutService$SettingsObserver;->update()V
 
+    .line 131
     return-void
 .end method
 
@@ -84,14 +93,17 @@
     .parameter "selfChange"
 
     .prologue
+    .line 134
     const-string v0, "TvOut-Observer"
 
     const-string v1, "onChange"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 135
     invoke-virtual {p0}, Lcom/android/server/TvOutService$SettingsObserver;->update()V
 
+    .line 136
     return-void
 .end method
 
@@ -99,12 +111,14 @@
     .locals 9
 
     .prologue
+    .line 139
     const-string v6, "TvOut-Observer"
 
     const-string v7, "update"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 140
     iget-object v6, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
     #getter for: Lcom/android/server/TvOutService;->mContext:Landroid/content/Context;
@@ -116,12 +130,15 @@
 
     move-result-object v2
 
+    .line 141
     .local v2, resolver:Landroid/content/ContentResolver;
     const/4 v1, 0x0
 
+    .line 142
     .local v1, isupdatetvsystem:Z
     const/4 v0, 0x0
 
+    .line 146
     .local v0, isupdatetvstatus:Z
     iget-object v6, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
@@ -129,6 +146,7 @@
 
     monitor-enter v6
 
+    .line 148
     :try_start_0
     iget-object v7, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
@@ -147,11 +165,13 @@
 
     move-result-object v3
 
+    .line 149
     .local v3, tvoutsystem:Ljava/lang/String;
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v5
 
+    .line 150
     .local v5, tvsystem:I
     iget-object v7, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
@@ -162,13 +182,16 @@
 
     if-eq v7, v5, :cond_0
 
+    .line 151
     iget-object v7, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
     #setter for: Lcom/android/server/TvOutService;->mTvSystem:I
     invoke-static {v7, v5}, Lcom/android/server/TvOutService;->access$102(Lcom/android/server/TvOutService;I)I
 
+    .line 152
     const/4 v1, 0x1
 
+    .line 156
     :cond_0
     const-string v7, "tv_out"
 
@@ -178,6 +201,7 @@
 
     move-result v4
 
+    .line 157
     .local v4, tvstatus:I
     iget-object v7, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
@@ -188,40 +212,51 @@
 
     if-eq v7, v4, :cond_1
 
+    .line 158
     iget-object v7, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
     #setter for: Lcom/android/server/TvOutService;->mTvStatus:I
     invoke-static {v7, v4}, Lcom/android/server/TvOutService;->access$202(Lcom/android/server/TvOutService;I)I
 
+    .line 159
     const/4 v0, 0x1
 
+    .line 162
     :cond_1
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 164
     if-eqz v1, :cond_2
 
+    .line 165
     iget-object v6, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
     #calls: Lcom/android/server/TvOutService;->updatetvsystem()V
     invoke-static {v6}, Lcom/android/server/TvOutService;->access$300(Lcom/android/server/TvOutService;)V
 
+    .line 166
     const/4 v1, 0x0
 
+    .line 168
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 169
     iget-object v6, p0, Lcom/android/server/TvOutService$SettingsObserver;->this$0:Lcom/android/server/TvOutService;
 
     #calls: Lcom/android/server/TvOutService;->updatetvstatus()V
     invoke-static {v6}, Lcom/android/server/TvOutService;->access$400(Lcom/android/server/TvOutService;)V
 
+    .line 170
     const/4 v0, 0x0
 
+    .line 173
     :cond_3
     return-void
 
+    .line 162
     .end local v3           #tvoutsystem:Ljava/lang/String;
     .end local v4           #tvstatus:I
     .end local v5           #tvsystem:I

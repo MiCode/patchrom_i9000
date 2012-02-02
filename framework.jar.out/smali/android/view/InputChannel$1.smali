@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,13 +45,16 @@
     .parameter "source"
 
     .prologue
+    .line 38
     new-instance v0, Landroid/view/InputChannel;
 
     invoke-direct {v0}, Landroid/view/InputChannel;-><init>()V
 
+    .line 39
     .local v0, result:Landroid/view/InputChannel;
     invoke-virtual {v0, p1}, Landroid/view/InputChannel;->readFromParcel(Landroid/os/Parcel;)V
 
+    .line 40
     return-object v0
 .end method
 
@@ -59,6 +63,7 @@
     .parameter "x0"
 
     .prologue
+    .line 36
     invoke-virtual {p0, p1}, Landroid/view/InputChannel$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/InputChannel;
 
     move-result-object v0
@@ -71,6 +76,7 @@
     .parameter "size"
 
     .prologue
+    .line 44
     new-array v0, p1, [Landroid/view/InputChannel;
 
     return-object v0
@@ -81,6 +87,7 @@
     .parameter "x0"
 
     .prologue
+    .line 36
     invoke-virtual {p0, p1}, Landroid/view/InputChannel$1;->newArray(I)[Landroid/view/InputChannel;
 
     move-result-object v0

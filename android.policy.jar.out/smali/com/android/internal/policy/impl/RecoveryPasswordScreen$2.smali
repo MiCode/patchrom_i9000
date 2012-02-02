@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 133
     iput-object p1, p0, Lcom/android/internal/policy/impl/RecoveryPasswordScreen$2;->this$0:Lcom/android/internal/policy/impl/RecoveryPasswordScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +42,12 @@
     .parameter "v"
 
     .prologue
+    .line 135
     iget-object v0, p0, Lcom/android/internal/policy/impl/RecoveryPasswordScreen$2;->this$0:Lcom/android/internal/policy/impl/RecoveryPasswordScreen;
 
     #calls: Lcom/android/internal/policy/impl/RecoveryPasswordScreen;->verifyRecoveryPassword()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/RecoveryPasswordScreen;->access$100(Lcom/android/internal/policy/impl/RecoveryPasswordScreen;)V
 
+    .line 136
     return-void
 .end method

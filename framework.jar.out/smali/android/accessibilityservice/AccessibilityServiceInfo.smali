@@ -48,6 +48,7 @@
     .locals 1
 
     .prologue
+    .line 129
     new-instance v0, Landroid/accessibilityservice/AccessibilityServiceInfo$1;
 
     invoke-direct {v0}, Landroid/accessibilityservice/AccessibilityServiceInfo$1;-><init>()V
@@ -61,6 +62,7 @@
     .locals 0
 
     .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,6 +74,7 @@
     .locals 1
 
     .prologue
+    .line 115
     const/4 v0, 0x0
 
     return v0
@@ -83,25 +86,31 @@
     .parameter "flagz"
 
     .prologue
+    .line 119
     iget v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->eventTypes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 120
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->packageNames:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
+    .line 121
     iget v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 122
     iget-wide v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->notificationTimeout:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 123
     iget v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 124
     return-void
 .end method

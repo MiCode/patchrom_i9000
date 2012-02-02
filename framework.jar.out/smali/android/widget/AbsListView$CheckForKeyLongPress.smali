@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 2011
     iput-object p1, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
 
     const/4 v0, 0x0
@@ -42,6 +43,7 @@
     .parameter "x1"
 
     .prologue
+    .line 2011
     invoke-direct {p0, p1}, Landroid/widget/AbsListView$CheckForKeyLongPress;-><init>(Landroid/widget/AbsListView;)V
 
     return-void
@@ -55,6 +57,7 @@
     .prologue
     const/4 v7, 0x0
 
+    .line 2013
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v3}, Landroid/widget/AbsListView;->isPressed()Z
@@ -69,6 +72,7 @@
 
     if-ltz v3, :cond_1
 
+    .line 2014
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
 
     iget v3, v3, Landroid/widget/AdapterView;->mSelectedPosition:I
@@ -79,6 +83,7 @@
 
     sub-int v1, v3, v4
 
+    .line 2015
     .local v1, index:I
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
 
@@ -86,6 +91,7 @@
 
     move-result-object v2
 
+    .line 2017
     .local v2, v:Landroid/view/View;
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
 
@@ -93,8 +99,10 @@
 
     if-nez v3, :cond_2
 
+    .line 2018
     const/4 v0, 0x0
 
+    .line 2019
     .local v0, handled:Z
     invoke-virtual {p0}, Landroid/widget/AbsListView$CheckForKeyLongPress;->sameWindow()Z
 
@@ -102,6 +110,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 2020
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
 
     iget-object v4, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
@@ -117,15 +126,19 @@
 
     move-result v0
 
+    .line 2022
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 2023
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForKeyLongPress;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v3, v7}, Landroid/widget/AbsListView;->setPressed(Z)V
 
+    .line 2024
     invoke-virtual {v2, v7}, Landroid/view/View;->setPressed(Z)V
 
+    .line 2031
     .end local v0           #handled:Z
     .end local v1           #index:I
     .end local v2           #v:Landroid/view/View;
@@ -133,6 +146,7 @@
     :goto_0
     return-void
 
+    .line 2027
     .restart local v1       #index:I
     .restart local v2       #v:Landroid/view/View;
     :cond_2
@@ -140,6 +154,7 @@
 
     invoke-virtual {v3, v7}, Landroid/widget/AbsListView;->setPressed(Z)V
 
+    .line 2028
     if-eqz v2, :cond_1
 
     invoke-virtual {v2, v7}, Landroid/view/View;->setPressed(Z)V

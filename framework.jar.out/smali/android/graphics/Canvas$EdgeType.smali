@@ -44,6 +44,7 @@
 
     const/4 v2, 0x0
 
+    .line 618
     new-instance v0, Landroid/graphics/Canvas$EdgeType;
 
     const-string v1, "BW"
@@ -52,6 +53,7 @@
 
     sput-object v0, Landroid/graphics/Canvas$EdgeType;->BW:Landroid/graphics/Canvas$EdgeType;
 
+    .line 619
     new-instance v0, Landroid/graphics/Canvas$EdgeType;
 
     const-string v1, "AA"
@@ -60,6 +62,7 @@
 
     sput-object v0, Landroid/graphics/Canvas$EdgeType;->AA:Landroid/graphics/Canvas$EdgeType;
 
+    .line 617
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/graphics/Canvas$EdgeType;
@@ -89,10 +92,13 @@
     .end annotation
 
     .prologue
+    .line 621
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 622
     iput p3, p0, Landroid/graphics/Canvas$EdgeType;->nativeInt:I
 
+    .line 623
     return-void
 .end method
 
@@ -101,6 +107,7 @@
     .parameter "name"
 
     .prologue
+    .line 617
     const-class v0, Landroid/graphics/Canvas$EdgeType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -117,6 +124,7 @@
     .locals 1
 
     .prologue
+    .line 617
     sget-object v0, Landroid/graphics/Canvas$EdgeType;->$VALUES:[Landroid/graphics/Canvas$EdgeType;
 
     invoke-virtual {v0}, [Landroid/graphics/Canvas$EdgeType;->clone()Ljava/lang/Object;

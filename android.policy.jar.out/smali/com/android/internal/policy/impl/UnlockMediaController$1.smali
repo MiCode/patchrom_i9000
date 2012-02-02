@@ -31,6 +31,7 @@
     .parameter
 
     .prologue
+    .line 208
     iput-object p1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +46,7 @@
     .parameter "y"
 
     .prologue
+    .line 262
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicControllerMaxPullValue:I
@@ -52,14 +54,18 @@
 
     move-result v0
 
+    .line 263
     .local v0, maxY:I
     if-le p3, v0, :cond_0
 
+    .line 264
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/internal/policy/impl/UnlockMediaController$1;->viewMoveTo(Landroid/view/View;II)V
 
+    .line 268
     :goto_0
     return-void
 
+    .line 266
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/UnlockMediaController$1;->viewMoveTo(Landroid/view/View;II)V
 
@@ -78,27 +84,32 @@
 
     const/4 v3, 0x0
 
+    .line 221
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v1
 
     float-to-int v0, v1
 
+    .line 223
     .local v0, rawY:I
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #calls: Lcom/android/internal/policy/impl/UnlockMediaController;->sendTouchDetection()V
     invoke-static {v1}, Lcom/android/internal/policy/impl/UnlockMediaController;->access$000(Lcom/android/internal/policy/impl/UnlockMediaController;)V
 
+    .line 225
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
+    .line 258
     :goto_0
     return v4
 
+    .line 227
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
@@ -113,6 +124,7 @@
 
     iput v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->mMusicMovingBoxOrigTop:I
 
+    .line 228
     iget v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->mMusicMovingBoxOrigTop:I
 
     sub-int v1, v0, v1
@@ -121,6 +133,7 @@
 
     goto :goto_0
 
+    .line 233
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
@@ -137,6 +150,7 @@
 
     goto :goto_0
 
+    .line 238
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
@@ -160,11 +174,13 @@
 
     if-lt v1, v2, :cond_0
 
+    .line 239
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #setter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mControllerOpened:Z
     invoke-static {v1, v4}, Lcom/android/internal/policy/impl/UnlockMediaController;->access$302(Lcom/android/internal/policy/impl/UnlockMediaController;Z)Z
 
+    .line 240
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicMovingBoxLayout:Landroid/widget/RelativeLayout;
@@ -181,6 +197,7 @@
 
     invoke-virtual {p0, v1, v3, v2}, Lcom/android/internal/policy/impl/UnlockMediaController$1;->viewMoveTo(Landroid/view/View;II)V
 
+    .line 241
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicMovingBoxLayout:Landroid/widget/RelativeLayout;
@@ -190,6 +207,7 @@
 
     invoke-virtual {v1}, Landroid/widget/RelativeLayout;->forceLayout()V
 
+    .line 242
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicControlBox:Landroid/widget/LinearLayout;
@@ -199,6 +217,7 @@
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->invalidate()V
 
+    .line 244
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicBoxUpDownAllow:Landroid/widget/ImageView;
@@ -210,6 +229,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
+    .line 255
     :goto_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
@@ -225,12 +245,14 @@
 
     goto :goto_0
 
+    .line 247
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #setter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mControllerOpened:Z
     invoke-static {v1, v3}, Lcom/android/internal/policy/impl/UnlockMediaController;->access$302(Lcom/android/internal/policy/impl/UnlockMediaController;Z)Z
 
+    .line 248
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicMovingBoxLayout:Landroid/widget/RelativeLayout;
@@ -247,6 +269,7 @@
 
     invoke-virtual {p0, v1, v3, v2}, Lcom/android/internal/policy/impl/UnlockMediaController$1;->viewMoveTo(Landroid/view/View;II)V
 
+    .line 251
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicMovingBoxLayout:Landroid/widget/RelativeLayout;
@@ -256,6 +279,7 @@
 
     invoke-virtual {v1}, Landroid/widget/RelativeLayout;->forceLayout()V
 
+    .line 252
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicControlBox:Landroid/widget/LinearLayout;
@@ -265,6 +289,7 @@
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->invalidate()V
 
+    .line 253
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$1;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockMediaController;->mMusicBoxUpDownAllow:Landroid/widget/ImageView;
@@ -278,6 +303,7 @@
 
     goto :goto_1
 
+    .line 225
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -293,15 +319,18 @@
     .parameter "absY"
 
     .prologue
+    .line 214
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
+    .line 215
     .local v1, width:I
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
+    .line 216
     .local v0, height:I
     add-int v2, p2, v1
 
@@ -309,5 +338,6 @@
 
     invoke-virtual {p1, p2, p3, v2, v3}, Landroid/view/View;->layout(IIII)V
 
+    .line 217
     return-void
 .end method

@@ -33,16 +33,22 @@
     .parameter "isPrimary"
 
     .prologue
+    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 91
     iput p1, p0, Landroid/pim/vcard/VCardEntry$PhoneData;->type:I
 
+    .line 92
     iput-object p2, p0, Landroid/pim/vcard/VCardEntry$PhoneData;->data:Ljava/lang/String;
 
+    .line 93
     iput-object p3, p0, Landroid/pim/vcard/VCardEntry$PhoneData;->label:Ljava/lang/String;
 
+    .line 94
     iput-boolean p4, p0, Landroid/pim/vcard/VCardEntry$PhoneData;->isPrimary:Z
 
+    .line 95
     return-void
 .end method
 
@@ -55,15 +61,18 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 99
     instance-of v2, p1, Landroid/pim/vcard/VCardEntry$PhoneData;
 
     if-nez v2, :cond_0
 
     move v2, v4
 
+    .line 103
     :goto_0
     return v2
 
+    .line 102
     :cond_0
     move-object v0, p1
 
@@ -71,6 +80,7 @@
 
     move-object v1, v0
 
+    .line 103
     .local v1, phoneData:Landroid/pim/vcard/VCardEntry$PhoneData;
     iget v2, p0, Landroid/pim/vcard/VCardEntry$PhoneData;->type:I
 
@@ -118,7 +128,8 @@
     .locals 4
 
     .prologue
-    const-string v0, "type: %d, data: %s, label: %s, isPrimary: %s"
+    .line 109
+    const-string/jumbo v0, "type: %d, data: %s, label: %s, isPrimary: %s"
 
     const/4 v1, 0x4
 

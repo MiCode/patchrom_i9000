@@ -31,8 +31,10 @@
     .locals 0
 
     .prologue
+    .line 67
     invoke-static {}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->classFmTxInitNative()V
 
+    .line 68
     return-void
 .end method
 
@@ -41,22 +43,27 @@
     .parameter "context"
 
     .prologue
+    .line 73
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/framework/BaseService;-><init>(Landroid/content/Context;)V
 
+    .line 47
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
+    .line 466
     new-instance v0, Lcom/broadcom/bt/service/fm/FmTransmitterService$1;
 
     invoke-direct {v0, p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService$1;-><init>(Lcom/broadcom/bt/service/fm/FmTransmitterService;)V
 
     iput-object v0, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->operationHandler:Landroid/os/Handler;
 
+    .line 74
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->initializeStateMachine()V
 
+    .line 75
     return-void
 .end method
 
@@ -85,10 +92,12 @@
     .locals 1
 
     .prologue
+    .line 123
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/broadcom/bt/service/fm/FmTransmitterServiceState;->mRadioIsOn:Z
 
+    .line 124
     return-void
 .end method
 
@@ -135,16 +144,20 @@
     .locals 2
 
     .prologue
+    .line 100
     const-string v0, "FmTransmitterService"
 
-    const-string v1, "startFmTransmit_Loop()"
+    const-string/jumbo v1, "startFmTransmit_Loop()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 102
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->initLoopNative()V
 
+    .line 103
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->initNativeDataNative()V
 
+    .line 104
     return-void
 .end method
 
@@ -155,14 +168,17 @@
     .locals 2
 
     .prologue
+    .line 108
     const-string v0, "FmTransmitterService"
 
-    const-string v1, "stopFM_Loop()"
+    const-string/jumbo v1, "stopFM_Loop()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 110
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->cleanupLoopNative()V
 
+    .line 111
     return-void
 .end method
 
@@ -174,6 +190,7 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 373
     monitor-enter p0
 
     :try_start_0
@@ -185,8 +202,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 375
     const/4 v1, 0x5
 
+    .line 378
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->abortScanForBestChannelNative()Z
@@ -198,20 +217,25 @@
 
     if-eqz v2, :cond_0
 
+    .line 379
     const/4 v1, 0x0
 
+    .line 385
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 380
     :catch_0
     move-exception v0
 
+    .line 381
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 382
     :try_start_2
     const-string v2, "FmTransmitterService"
 
@@ -223,6 +247,7 @@
 
     goto :goto_0
 
+    .line 373
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -239,6 +264,7 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 148
     monitor-enter p0
 
     :try_start_0
@@ -250,8 +276,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 150
     const/4 v1, 0x5
 
+    .line 153
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->disableNative()Z
@@ -263,20 +291,25 @@
 
     if-eqz v2, :cond_0
 
+    .line 154
     const/4 v1, 0x0
 
+    .line 160
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 155
     :catch_0
     move-exception v0
 
+    .line 156
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 157
     :try_start_2
     const-string v2, "FmTransmitterService"
 
@@ -288,6 +321,7 @@
 
     goto :goto_0
 
+    .line 148
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -304,6 +338,7 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 128
     monitor-enter p0
 
     :try_start_0
@@ -313,12 +348,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 130
     invoke-static {}, Lcom/broadcom/bt/service/fm/FmServiceManager;->initFmPower()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 131
     const/4 v1, 0x5
 
+    .line 136
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->enableNative()Z
@@ -330,20 +368,25 @@
 
     if-eqz v2, :cond_0
 
+    .line 137
     const/4 v1, 0x0
 
+    .line 143
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 138
     :catch_0
     move-exception v0
 
+    .line 139
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 140
     :try_start_2
     const-string v2, "FmTransmitterService"
 
@@ -355,6 +398,7 @@
 
     goto :goto_0
 
+    .line 128
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -374,10 +418,13 @@
     .end annotation
 
     .prologue
+    .line 78
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->stopFM_Loop()V
 
+    .line 79
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 80
     return-void
 .end method
 
@@ -385,12 +432,14 @@
     .locals 2
 
     .prologue
+    .line 117
     const-string v0, "FmTransmitterService"
 
     const-string v1, "getName"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 119
     const-string v0, "bluetooth_fm_transmitter_service"
 
     return-object v0
@@ -400,6 +449,7 @@
     .locals 1
 
     .prologue
+    .line 51
     sget-boolean v0, Lcom/broadcom/bt/service/fm/FmTransmitterServiceState;->mRadioIsOn:Z
 
     return v0
@@ -412,6 +462,7 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 323
     monitor-enter p0
 
     :try_start_0
@@ -423,8 +474,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 325
     const/4 v1, 0x5
 
+    .line 328
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->muteAudioNative(I)Z
@@ -436,20 +489,25 @@
 
     if-eqz v2, :cond_0
 
+    .line 329
     const/4 v1, 0x0
 
+    .line 334
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 330
     :catch_0
     move-exception v0
 
+    .line 331
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 332
     :try_start_2
     const-string v2, "FmTransmitterService"
 
@@ -461,6 +519,7 @@
 
     goto :goto_0
 
+    .line 323
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -479,18 +538,21 @@
     .parameter "rssi"
 
     .prologue
+    .line 671
     const-string v3, "FmTransmitterService"
 
-    const-string v4, "onBestChannelEvent"
+    const-string/jumbo v4, "onBestChannelEvent"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 685
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v0
 
+    .line 686
     .local v0, callbacks:I
     const/4 v2, 0x0
 
@@ -498,6 +560,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 689
     :try_start_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -511,27 +574,32 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 686
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 690
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 691
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
+    .line 694
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
+    .line 696
     return-void
 .end method
 
@@ -542,18 +610,21 @@
     .parameter "channel_status"
 
     .prologue
+    .line 712
     const-string v3, "FmTransmitterService"
 
-    const-string v4, "onChannelStatusEvent"
+    const-string/jumbo v4, "onChannelStatusEvent"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 725
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v0
 
+    .line 726
     .local v0, callbacks:I
     const/4 v2, 0x0
 
@@ -561,6 +632,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 729
     :try_start_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -574,27 +646,32 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 726
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 731
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 732
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
+    .line 735
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
+    .line 737
     return-void
 .end method
 
@@ -603,20 +680,25 @@
     .parameter "status"
 
     .prologue
+    .line 515
     const-string v3, "FmTransmitterService"
 
-    const-string v4, "onFmTransmitterDisabledEvent"
+    const-string/jumbo v4, "onFmTransmitterDisabledEvent"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 518
     invoke-static {}, Lcom/broadcom/bt/service/fm/FmServiceManager;->shutdownFmPower()V
 
+    .line 520
     if-nez p1, :cond_0
 
+    .line 522
     const/4 v3, 0x0
 
     sput-boolean v3, Lcom/broadcom/bt/service/fm/FmTransmitterServiceState;->mRadioIsOn:Z
 
+    .line 532
     :cond_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -624,6 +706,7 @@
 
     move-result v0
 
+    .line 533
     .local v0, callbacks:I
     const/4 v2, 0x0
 
@@ -631,6 +714,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 536
     :try_start_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -644,27 +728,32 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 533
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 537
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 538
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
+    .line 541
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_1
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
+    .line 544
     return-void
 .end method
 
@@ -673,18 +762,22 @@
     .parameter "status"
 
     .prologue
+    .line 486
     const-string v3, "FmTransmitterService"
 
-    const-string v4, "onFmTransmitterEnabledEvent"
+    const-string/jumbo v4, "onFmTransmitterEnabledEvent"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 489
     if-nez p1, :cond_0
 
+    .line 491
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/broadcom/bt/service/fm/FmTransmitterServiceState;->mRadioIsOn:Z
 
+    .line 500
     :cond_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -692,6 +785,7 @@
 
     move-result v0
 
+    .line 501
     .local v0, callbacks:I
     const/4 v2, 0x0
 
@@ -699,6 +793,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 504
     :try_start_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -712,27 +807,32 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 501
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 505
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 506
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
+    .line 509
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_1
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
+    .line 511
     return-void
 .end method
 
@@ -742,18 +842,21 @@
     .parameter "frequency"
 
     .prologue
+    .line 597
     const-string v3, "FmTransmitterService"
 
-    const-string v4, "onSetTxFrequencyEvent"
+    const-string/jumbo v4, "onSetTxFrequencyEvent"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 609
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v0
 
+    .line 610
     .local v0, callbacks:I
     const/4 v2, 0x0
 
@@ -761,6 +864,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 613
     :try_start_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -774,27 +878,32 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 610
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 614
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 615
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
+    .line 618
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
+    .line 620
     return-void
 .end method
 
@@ -804,18 +913,21 @@
     .parameter "powerOn"
 
     .prologue
+    .line 633
     const-string v3, "FmTransmitterService"
 
-    const-string v4, "onSetTxPowerEvent"
+    const-string/jumbo v4, "onSetTxPowerEvent"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 644
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v0
 
+    .line 645
     .local v0, callbacks:I
     const/4 v2, 0x0
 
@@ -823,6 +935,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 648
     :try_start_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -836,27 +949,32 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 645
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 649
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 650
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
+    .line 653
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
+    .line 655
     return-void
 .end method
 
@@ -865,6 +983,7 @@
     .parameter "started"
 
     .prologue
+    .line 740
     monitor-enter p0
 
     :try_start_0
@@ -872,24 +991,29 @@
 
     if-eqz v0, :cond_0
 
+    .line 741
     iput-boolean p1, p0, Lcom/broadcom/bt/service/framework/BaseService;->mIsStarted:Z
 
+    .line 742
     iget-boolean v0, p0, Lcom/broadcom/bt/service/framework/BaseService;->mIsStarted:Z
 
     if-eqz v0, :cond_1
 
+    .line 743
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseService;->mListener:Lcom/broadcom/bt/service/framework/IServiceStateListener;
 
     invoke-interface {v0}, Lcom/broadcom/bt/service/framework/IServiceStateListener;->onStart()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 755
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 745
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseService;->mListener:Lcom/broadcom/bt/service/framework/IServiceStateListener;
@@ -900,6 +1024,7 @@
 
     goto :goto_0
 
+    .line 740
     :catchall_0
     move-exception v0
 
@@ -914,13 +1039,14 @@
     .parameter "status"
 
     .prologue
+    .line 563
     const-string v3, "FmTransmitterService"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onStatusEvent: type: "
+    const-string/jumbo v5, "onStatusEvent: type: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -946,12 +1072,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 574
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v0
 
+    .line 575
     .local v0, callbacks:I
     const/4 v2, 0x0
 
@@ -959,6 +1087,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 578
     :try_start_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -972,27 +1101,32 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 575
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 579
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 580
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
+    .line 583
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_0
     iget-object v3, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v3}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
+    .line 585
     return-void
 .end method
 
@@ -1006,12 +1140,15 @@
     .end annotation
 
     .prologue
+    .line 55
     if-eqz p1, :cond_0
 
+    .line 56
     iget-object v0, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
+    .line 58
     :cond_0
     return-void
 .end method
@@ -1024,19 +1161,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 356
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "scanForBestChannel()"
+    const-string/jumbo v3, "scanForBestChannel()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 358
     const/4 v1, 0x5
 
+    .line 361
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->scanForBestChannelNative(IZ)Z
@@ -1048,24 +1188,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 362
     const/4 v1, 0x0
 
+    .line 368
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 363
     :catch_0
     move-exception v0
 
+    .line 364
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 365
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "scanForBestChannel failed"
+    const-string/jumbo v3, "scanForBestChannel failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1073,6 +1218,7 @@
 
     goto :goto_0
 
+    .line 356
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1090,19 +1236,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 222
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setAudioMode()"
+    const-string/jumbo v3, "setAudioMode()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 225
     const/4 v1, 0x5
 
+    .line 228
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setAudioModeNative(I)Z
@@ -1114,24 +1263,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 229
     const/4 v1, 0x0
 
+    .line 234
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 230
     :catch_0
     move-exception v0
 
+    .line 231
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 232
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setAudioMode failed"
+    const-string/jumbo v3, "setAudioMode failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1139,6 +1293,7 @@
 
     goto :goto_0
 
+    .line 222
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1156,19 +1311,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 306
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setAudioPath()"
+    const-string/jumbo v3, "setAudioPath()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 308
     const/4 v1, 0x5
 
+    .line 311
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setAudioPathNative(I)Z
@@ -1180,24 +1338,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 312
     const/4 v1, 0x0
 
+    .line 318
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 313
     :catch_0
     move-exception v0
 
+    .line 314
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 315
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setAudioPath failed"
+    const-string/jumbo v3, "setAudioPath failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1205,6 +1368,7 @@
 
     goto :goto_0
 
+    .line 306
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1222,19 +1386,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 272
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setBandwidth()"
+    const-string/jumbo v3, "setBandwidth()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 274
     const/4 v1, 0x5
 
+    .line 277
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setBandwidthNative(I)Z
@@ -1246,24 +1413,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 278
     const/4 v1, 0x0
 
+    .line 283
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 279
     :catch_0
     move-exception v0
 
+    .line 280
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 281
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setBandwidth failed"
+    const-string/jumbo v3, "setBandwidth failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1271,6 +1443,7 @@
 
     goto :goto_0
 
+    .line 272
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1288,19 +1461,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 339
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setInterferenceNotif()"
+    const-string/jumbo v3, "setInterferenceNotif()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 341
     const/4 v1, 0x5
 
+    .line 344
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setInterferenceNotifNative(I)Z
@@ -1312,24 +1488,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 345
     const/4 v1, 0x0
 
+    .line 351
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 346
     :catch_0
     move-exception v0
 
+    .line 347
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 348
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setInterferenceNotif failed"
+    const-string/jumbo v3, "setInterferenceNotif failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1337,6 +1518,7 @@
 
     goto :goto_0
 
+    .line 339
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1354,19 +1536,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 288
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setPreemphasis()"
+    const-string/jumbo v3, "setPreemphasis()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 291
     const/4 v1, 0x5
 
+    .line 294
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setPreemphasisNative(I)Z
@@ -1378,24 +1563,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 295
     const/4 v1, 0x0
 
+    .line 301
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 296
     :catch_0
     move-exception v0
 
+    .line 297
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 298
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setPreemphasis failed"
+    const-string/jumbo v3, "setPreemphasis failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1403,6 +1593,7 @@
 
     goto :goto_0
 
+    .line 288
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1420,19 +1611,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 200
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setPwrLevel()"
+    const-string/jumbo v3, "setPwrLevel()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 203
     const/4 v1, 0x5
 
+    .line 206
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setPwrLevelNative(I)Z
@@ -1444,24 +1638,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 207
     const/4 v1, 0x0
 
+    .line 213
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 208
     :catch_0
     move-exception v0
 
+    .line 209
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 210
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setPwrLevel failed"
+    const-string/jumbo v3, "setPwrLevel failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1469,6 +1668,7 @@
 
     goto :goto_0
 
+    .line 200
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1486,19 +1686,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 255
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setRegion()"
+    const-string/jumbo v3, "setRegion()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 257
     const/4 v1, 0x5
 
+    .line 260
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setRegionNative(I)Z
@@ -1510,24 +1713,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 261
     const/4 v1, 0x0
 
+    .line 267
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 262
     :catch_0
     move-exception v0
 
+    .line 263
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 264
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setRegion failed"
+    const-string/jumbo v3, "setRegion failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1535,6 +1743,7 @@
 
     goto :goto_0
 
+    .line 255
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1552,19 +1761,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 183
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setTxFrequency()"
+    const-string/jumbo v3, "setTxFrequency()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 185
     const/4 v1, 0x5
 
+    .line 188
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setTxFrequencyNative(I)Z
@@ -1576,24 +1788,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 189
     const/4 v1, 0x0
 
+    .line 195
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 190
     :catch_0
     move-exception v0
 
+    .line 191
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 192
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setTxFrequency failed"
+    const-string/jumbo v3, "setTxFrequency failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1601,6 +1818,7 @@
 
     goto :goto_0
 
+    .line 183
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1618,19 +1836,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 165
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setTxPower()"
+    const-string/jumbo v3, "setTxPower()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 168
     const/4 v1, 0x5
 
+    .line 171
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setTxPowerNative(Z)Z
@@ -1642,24 +1863,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 172
     const/4 v1, 0x0
 
+    .line 178
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 173
     :catch_0
     move-exception v0
 
+    .line 174
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 175
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setTxPower failed"
+    const-string/jumbo v3, "setTxPower failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1667,6 +1893,7 @@
 
     goto :goto_0
 
+    .line 165
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1684,19 +1911,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 239
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setVolume()"
+    const-string/jumbo v3, "setVolume()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 241
     const/4 v1, 0x5
 
+    .line 244
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->setVolumeNative(I)Z
@@ -1708,24 +1938,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 245
     const/4 v1, 0x0
 
+    .line 250
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 246
     :catch_0
     move-exception v0
 
+    .line 247
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 248
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "setVolume failed"
+    const-string/jumbo v3, "setVolume failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1733,6 +1968,7 @@
 
     goto :goto_0
 
+    .line 239
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1747,27 +1983,32 @@
     .locals 2
 
     .prologue
+    .line 84
     monitor-enter p0
 
     :try_start_0
     const-string v0, "FmTransmitterService"
 
-    const-string v1, "start"
+    const-string/jumbo v1, "start"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 86
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->startFM_Loop()V
 
+    .line 87
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->onStateChangeEvent(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 88
     monitor-exit p0
 
     return-void
 
+    .line 84
     :catchall_0
     move-exception v0
 
@@ -1791,19 +2032,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 391
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "startAudioChirp()"
+    const-string/jumbo v3, "startAudioChirp()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 393
     const/4 v1, 0x5
 
+    .line 396
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct/range {p0 .. p9}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->startAudioChirpNative(ZIIIIIIII)Z
@@ -1815,24 +2059,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 398
     const/4 v1, 0x0
 
+    .line 404
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 399
     :catch_0
     move-exception v0
 
+    .line 400
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 401
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "startAudioChirp failed"
+    const-string/jumbo v3, "startAudioChirp failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1840,6 +2089,7 @@
 
     goto :goto_0
 
+    .line 391
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1854,27 +2104,32 @@
     .locals 2
 
     .prologue
+    .line 92
     monitor-enter p0
 
     :try_start_0
     const-string v0, "FmTransmitterService"
 
-    const-string v1, "stop"
+    const-string/jumbo v1, "stop"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 94
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->stopFM_Loop()V
 
+    .line 95
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->onStateChangeEvent(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 96
     monitor-exit p0
 
     return-void
 
+    .line 92
     :catchall_0
     move-exception v0
 
@@ -1889,19 +2144,22 @@
     .prologue
     const-string v2, "FmTransmitterService"
 
+    .line 409
     monitor-enter p0
 
     :try_start_0
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "stopAudioChirp()"
+    const-string/jumbo v3, "stopAudioChirp()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 411
     const/4 v1, 0x5
 
+    .line 414
     .local v1, returnStatus:I
     :try_start_1
     invoke-direct {p0}, Lcom/broadcom/bt/service/fm/FmTransmitterService;->stopAudioChirpNative()Z
@@ -1913,24 +2171,29 @@
 
     if-eqz v2, :cond_0
 
+    .line 415
     const/4 v1, 0x0
 
+    .line 421
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 416
     :catch_0
     move-exception v0
 
+    .line 417
     .local v0, e:Ljava/lang/Exception;
     const/4 v1, 0x5
 
+    .line 418
     :try_start_2
     const-string v2, "FmTransmitterService"
 
-    const-string v3, "stopAudioChirpNative failed"
+    const-string/jumbo v3, "stopAudioChirpNative failed"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
@@ -1938,6 +2201,7 @@
 
     goto :goto_0
 
+    .line 409
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #returnStatus:I
     :catchall_0
@@ -1958,10 +2222,12 @@
     .end annotation
 
     .prologue
+    .line 61
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
+    .line 62
     :try_start_0
     iget-object v0, p0, Lcom/broadcom/bt/service/fm/FmTransmitterService;->m_callbacks:Landroid/os/RemoteCallbackList;
 
@@ -1969,11 +2235,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 64
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 61
     :catchall_0
     move-exception v0
 

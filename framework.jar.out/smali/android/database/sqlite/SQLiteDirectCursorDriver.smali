@@ -26,14 +26,19 @@
     .parameter "editTable"
 
     .prologue
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 35
     iput-object p1, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
+    .line 36
     iput-object p3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mEditTable:Ljava/lang/String;
 
+    .line 37
     iput-object p2, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mSql:Ljava/lang/String;
 
+    .line 38
     return-void
 .end method
 
@@ -43,10 +48,12 @@
     .locals 1
 
     .prologue
+    .line 68
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mCursor:Landroid/database/Cursor;
 
+    .line 69
     return-void
 .end method
 
@@ -54,6 +61,7 @@
     .locals 0
 
     .prologue
+    .line 80
     return-void
 .end method
 
@@ -62,6 +70,7 @@
     .parameter "cursor"
 
     .prologue
+    .line 84
     return-void
 .end method
 
@@ -73,6 +82,7 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 42
     new-instance v2, Landroid/database/sqlite/SQLiteQuery;
 
     iget-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -81,11 +91,13 @@
 
     invoke-direct {v2, v3, v4, v5, p2}, Landroid/database/sqlite/SQLiteQuery;-><init>(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;I[Ljava/lang/String;)V
 
+    .line 46
     .local v2, query:Landroid/database/sqlite/SQLiteQuery;
     if-nez p2, :cond_0
 
     move v1, v5
 
+    .line 47
     .local v1, numArgs:I
     :goto_0
     const/4 v0, 0x0
@@ -94,6 +106,7 @@
     :goto_1
     if-ge v0, v1, :cond_1
 
+    .line 48
     add-int/lit8 v3, v0, 0x1
 
     :try_start_0
@@ -101,10 +114,12 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/database/sqlite/SQLiteQuery;->bindString(ILjava/lang/String;)V
 
+    .line 47
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
+    .line 46
     .end local v0           #i:I
     .end local v1           #numArgs:I
     :cond_0
@@ -114,11 +129,13 @@
 
     goto :goto_0
 
+    .line 52
     .restart local v0       #i:I
     .restart local v1       #numArgs:I
     :cond_1
     if-nez p1, :cond_3
 
+    .line 53
     new-instance v3, Landroid/database/sqlite/SQLiteCursor;
 
     iget-object v4, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -129,15 +146,19 @@
 
     iput-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mCursor:Landroid/database/Cursor;
 
+    .line 58
     :goto_2
     iput-object v2, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mQuery:Landroid/database/sqlite/SQLiteQuery;
 
+    .line 59
     const/4 v2, 0x0
 
+    .line 60
     iget-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mCursor:Landroid/database/Cursor;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 63
     if-eqz v2, :cond_2
 
     throw v2
@@ -145,6 +166,7 @@
     :cond_2
     return-object v3
 
+    .line 55
     :cond_3
     :try_start_1
     iget-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -161,6 +183,7 @@
 
     goto :goto_2
 
+    .line 63
     .end local v0           #i:I
     .end local v1           #numArgs:I
     :catchall_0
@@ -179,8 +202,10 @@
     .parameter "bindArgs"
 
     .prologue
+    .line 72
     array-length v1, p1
 
+    .line 73
     .local v1, numArgs:I
     const/4 v0, 0x0
 
@@ -188,6 +213,7 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
+    .line 74
     iget-object v2, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mQuery:Landroid/database/sqlite/SQLiteQuery;
 
     add-int/lit8 v3, v0, 0x1
@@ -196,10 +222,12 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/database/sqlite/SQLiteQuery;->bindString(ILjava/lang/String;)V
 
+    .line 73
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 76
     :cond_0
     return-void
 .end method
@@ -208,6 +236,7 @@
     .locals 2
 
     .prologue
+    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

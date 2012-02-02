@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 138
     iput-object p1, p0, Landroid/app/SearchDialog$1;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,6 +40,7 @@
     .parameter "intent"
 
     .prologue
+    .line 141
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -51,10 +53,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 142
     iget-object v0, p0, Landroid/app/SearchDialog$1;->this$0:Landroid/app/SearchDialog;
 
     invoke-virtual {v0}, Landroid/app/SearchDialog;->onConfigurationChanged()V
 
+    .line 144
     :cond_0
     return-void
 .end method

@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 527
     iput-object p1, p0, Landroid/webkit/CookieManager$2;->this$0:Landroid/webkit/CookieManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +41,12 @@
     .locals 6
 
     .prologue
+    .line 529
     iget-object v0, p0, Landroid/webkit/CookieManager$2;->this$0:Landroid/webkit/CookieManager;
 
     monitor-enter v0
 
+    .line 530
     :try_start_0
     iget-object v1, p0, Landroid/webkit/CookieManager$2;->this$0:Landroid/webkit/CookieManager;
 
@@ -60,16 +63,20 @@
     #setter for: Landroid/webkit/CookieManager;->mCookieMap:Ljava/util/Map;
     invoke-static {v1, v2}, Landroid/webkit/CookieManager;->access$102(Landroid/webkit/CookieManager;Ljava/util/Map;)Ljava/util/Map;
 
+    .line 532
     invoke-static {}, Landroid/webkit/CookieSyncManager;->getInstance()Landroid/webkit/CookieSyncManager;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/webkit/CookieSyncManager;->clearAllCookies()V
 
+    .line 533
     monitor-exit v0
 
+    .line 534
     return-void
 
+    .line 533
     :catchall_0
     move-exception v1
 

@@ -90,7 +90,8 @@
 
     const-string v3, "false"
 
-    const-string v0, "ro.secdevenc"
+    .line 22
+    const-string/jumbo v0, "ro.secdevenc"
 
     const-string v1, "false"
 
@@ -100,7 +101,8 @@
 
     sput-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v0, "ro.file_level_encryption"
+    .line 23
+    const-string/jumbo v0, "ro.file_level_encryption"
 
     const-string v1, "false"
 
@@ -110,16 +112,20 @@
 
     sput-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->supportFileLevelEncryption:Ljava/lang/String;
 
+    .line 34
     new-instance v0, Landroid/deviceencryption/DeviceEncryptionManager$1;
 
     invoke-direct {v0}, Landroid/deviceencryption/DeviceEncryptionManager$1;-><init>()V
 
     sput-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
+    .line 72
     sput-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
+    .line 77
     sput-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->token:Ljava/lang/String;
 
+    .line 78
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/deviceencryption/DeviceEncryptionManager;->isFirstboot:Z
@@ -132,10 +138,13 @@
     .parameter "context"
 
     .prologue
+    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 91
     iput-object p1, p0, Landroid/deviceencryption/DeviceEncryptionManager;->mContext:Landroid/content/Context;
 
+    .line 92
     return-void
 .end method
 
@@ -148,9 +157,10 @@
 
     const-string v5, "DeviceEncryption"
 
+    .line 269
     sget-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v3, "true"
+    const-string/jumbo v3, "true"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -160,9 +170,11 @@
 
     move v2, v4
 
+    .line 305
     :goto_0
     return v2
 
+    .line 271
     :cond_0
     if-eqz p0, :cond_1
 
@@ -177,16 +189,20 @@
     :cond_1
     move v2, v4
 
+    .line 272
     goto :goto_0
 
+    .line 275
     :cond_2
     const/4 v1, 0x0
 
+    .line 276
     .local v1, ret:Z
     sget-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
     monitor-enter v2
 
+    .line 277
     const/4 v3, 0x0
 
     :try_start_0
@@ -194,22 +210,28 @@
 
     move-result v1
 
+    .line 278
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 280
     if-eqz v1, :cond_3
 
+    .line 281
     sput-object p0, Landroid/deviceencryption/DeviceEncryptionManager;->token:Ljava/lang/String;
 
+    .line 285
     :cond_3
     if-eqz v1, :cond_5
 
+    .line 289
     :try_start_1
     sget-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
     if-nez v2, :cond_4
 
+    .line 290
     const-string v2, "encrypt"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -222,11 +244,13 @@
 
     sput-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
+    .line 293
     :cond_4
     sget-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
     if-eqz v2, :cond_6
 
+    .line 294
     sget-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
     invoke-interface {v2, p0}, Landroid/os/storage/IEncryptService;->setPassword(Ljava/lang/String;)V
@@ -237,8 +261,10 @@
     :goto_1
     move v2, v1
 
+    .line 305
     goto :goto_0
 
+    .line 278
     :catchall_0
     move-exception v3
 
@@ -249,6 +275,7 @@
 
     throw v3
 
+    .line 296
     :cond_6
     :try_start_3
     const-string v2, "DeviceEncryption"
@@ -261,11 +288,13 @@
 
     goto :goto_1
 
+    .line 298
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 300
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "DeviceEncryption"
 
@@ -304,9 +333,10 @@
     .parameter "label"
 
     .prologue
+    .line 402
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -316,26 +346,32 @@
 
     const/4 v1, 0x0
 
+    .line 413
     :goto_0
     return-object v1
 
+    .line 408
     :cond_0
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 409
     :try_start_0
     invoke-static {p0}, Landroid/deviceencryption/DeviceEncryptionManager;->getBatchStatus(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 410
     .local v0, propertyBuffer:Ljava/lang/String;
     monitor-exit v1
 
     move-object v1, v0
 
+    .line 413
     goto :goto_0
 
+    .line 410
     .end local v0           #propertyBuffer:Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -355,9 +391,10 @@
 
     const/4 v3, 0x0
 
+    .line 224
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -367,23 +404,28 @@
 
     move v1, v3
 
+    .line 235
     :goto_0
     return v1
 
+    .line 226
     :cond_0
-    const-string v1, "policy"
+    const-string/jumbo v1, "policy"
 
     invoke-static {v1}, Landroid/deviceencryption/DeviceEncryptionManager;->getFileCryptProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 228
     .local v0, appliedPolicy:Ljava/lang/String;
     if-nez v0, :cond_1
 
     move v1, v3
 
+    .line 229
     goto :goto_0
 
+    .line 232
     :cond_1
     const-string v1, "external"
 
@@ -395,11 +437,13 @@
 
     move v1, v4
 
+    .line 233
     goto :goto_0
 
     :cond_2
     move v1, v3
 
+    .line 235
     goto :goto_0
 .end method
 
@@ -408,9 +452,10 @@
     .parameter "label"
 
     .prologue
+    .line 418
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -420,26 +465,32 @@
 
     const/4 v1, 0x0
 
+    .line 429
     :goto_0
     return-object v1
 
+    .line 424
     :cond_0
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 425
     :try_start_0
     invoke-static {p0}, Landroid/deviceencryption/DeviceEncryptionManager;->getFileProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 426
     .local v0, propertyBuffer:Ljava/lang/String;
     monitor-exit v1
 
     move-object v1, v0
 
+    .line 429
     goto :goto_0
 
+    .line 426
     .end local v0           #propertyBuffer:Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -462,9 +513,10 @@
 
     const/4 v3, 0x0
 
+    .line 202
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -474,23 +526,28 @@
 
     move v1, v3
 
+    .line 213
     :goto_0
     return v1
 
+    .line 204
     :cond_0
-    const-string v1, "policy"
+    const-string/jumbo v1, "policy"
 
     invoke-static {v1}, Landroid/deviceencryption/DeviceEncryptionManager;->getFileCryptProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 206
     .local v0, appliedPolicy:Ljava/lang/String;
     if-nez v0, :cond_1
 
     move v1, v3
 
+    .line 207
     goto :goto_0
 
+    .line 210
     :cond_1
     const-string v1, "internal"
 
@@ -502,11 +559,13 @@
 
     move v1, v4
 
+    .line 211
     goto :goto_0
 
     :cond_2
     move v1, v3
 
+    .line 213
     goto :goto_0
 .end method
 
@@ -514,6 +573,7 @@
     .locals 1
 
     .prologue
+    .line 447
     invoke-static {}, Landroid/deviceencryption/DeviceEncryptionManager;->getSaltPath()Ljava/lang/String;
 
     move-result-object v0
@@ -528,9 +588,10 @@
     .locals 2
 
     .prologue
+    .line 248
     sget-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v1, "true"
+    const-string/jumbo v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -543,9 +604,10 @@
     .locals 2
 
     .prologue
+    .line 261
     sget-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->supportFileLevelEncryption:Ljava/lang/String;
 
-    const-string v1, "true"
+    const-string/jumbo v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -558,9 +620,10 @@
     .locals 3
 
     .prologue
+    .line 370
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -570,28 +633,35 @@
 
     const/4 v1, 0x0
 
+    .line 380
     :goto_0
     return v1
 
+    .line 371
     :cond_0
     const/4 v0, 0x0
 
+    .line 374
     .local v0, ret:Z
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 375
     :try_start_0
     invoke-static {}, Landroid/deviceencryption/DeviceEncryptionManager;->isPasswordEnabled()Z
 
     move-result v0
 
+    .line 376
     monitor-exit v1
 
     move v1, v0
 
+    .line 380
     goto :goto_0
 
+    .line 376
     :catchall_0
     move-exception v2
 
@@ -613,9 +683,10 @@
 
     const/4 v2, 0x1
 
+    .line 363
     sget-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v1, "true"
+    const-string/jumbo v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -625,9 +696,11 @@
 
     move v0, v3
 
+    .line 365
     :goto_0
     return v0
 
+    .line 364
     :cond_0
     invoke-static {}, Landroid/deviceencryption/DeviceEncryptionManager;->getInternalStorageStatus()Z
 
@@ -648,6 +721,7 @@
     :cond_1
     move v0, v3
 
+    .line 365
     goto :goto_0
 .end method
 
@@ -661,9 +735,10 @@
     .locals 2
 
     .prologue
+    .line 451
     sget-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v1, "true"
+    const-string/jumbo v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -671,9 +746,11 @@
 
     if-nez v0, :cond_0
 
+    .line 453
     :goto_0
     return-void
 
+    .line 452
     :cond_0
     invoke-static {}, Landroid/deviceencryption/DeviceEncryptionManager;->removeEDK_P()V
 
@@ -686,9 +763,10 @@
     .parameter "obj"
 
     .prologue
+    .line 384
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -698,31 +776,39 @@
 
     const/4 v1, 0x0
 
+    .line 397
     :goto_0
     return v1
 
+    .line 385
     :cond_0
     const/4 v0, 0x0
 
+    .line 388
     .local v0, ret:Z
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 389
     :try_start_0
     invoke-static {p0}, Landroid/deviceencryption/DeviceEncryptionManager;->recoverPassword(Ljava/lang/String;)Z
 
     move-result v0
 
+    .line 390
     monitor-exit v1
 
+    .line 392
     if-eqz p1, :cond_1
 
     :cond_1
     move v1, v0
 
+    .line 397
     goto :goto_0
 
+    .line 390
     :catchall_0
     move-exception v2
 
@@ -742,9 +828,10 @@
 
     const-string v4, "DeviceEncryption"
 
+    .line 309
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -754,14 +841,17 @@
 
     move v1, v3
 
+    .line 345
     :goto_0
     return v1
 
+    .line 314
     :cond_0
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 315
     :try_start_0
     sget-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->token:Ljava/lang/String;
 
@@ -769,10 +859,12 @@
 
     invoke-static {v2, p0, v3}, Landroid/deviceencryption/DeviceEncryptionManager;->savePassword(Ljava/lang/String;Ljava/lang/String;I)Z
 
+    .line 316
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 321
     if-eqz p0, :cond_1
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -781,12 +873,14 @@
 
     if-gtz v1, :cond_4
 
+    .line 325
     :cond_1
     :try_start_1
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
     if-nez v1, :cond_2
 
+    .line 326
     const-string v1, "encrypt"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -799,17 +893,20 @@
 
     sput-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
+    .line 328
     :cond_2
     const-string v1, "DeviceEncryption"
 
-    const-string v2, "saveLockPassword : IEncryptService : setPassword!"
+    const-string/jumbo v2, "saveLockPassword : IEncryptService : setPassword!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 330
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
     if-eqz v1, :cond_3
 
+    .line 331
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->m_InstEncSvc:Landroid/os/storage/IEncryptService;
 
     const-string v2, ""
@@ -818,16 +915,19 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 341
     :goto_1
     const/4 v1, 0x0
 
     sput-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->token:Ljava/lang/String;
 
+    .line 345
     :goto_2
     const/4 v1, 0x1
 
     goto :goto_0
 
+    .line 316
     :catchall_0
     move-exception v2
 
@@ -838,11 +938,12 @@
 
     throw v2
 
+    .line 333
     :cond_3
     :try_start_3
     const-string v1, "DeviceEncryption"
 
-    const-string v2, "saveLockPassword : IEncryptService instance is null!"
+    const-string/jumbo v2, "saveLockPassword : IEncryptService instance is null!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
@@ -850,11 +951,13 @@
 
     goto :goto_1
 
+    .line 335
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 337
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "DeviceEncryption"
 
@@ -884,6 +987,7 @@
 
     goto :goto_1
 
+    .line 343
     .end local v0           #e:Ljava/lang/Exception;
     :cond_4
     invoke-static {p0}, Landroid/deviceencryption/DeviceEncryptionManager;->checkPassword(Ljava/lang/String;)Z
@@ -902,9 +1006,10 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 349
     sget-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v1, "true"
+    const-string/jumbo v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -914,25 +1019,31 @@
 
     const/4 v0, 0x0
 
+    .line 358
     :goto_0
     return v0
 
+    .line 354
     :cond_0
     sget-object v0, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 355
     const/4 v1, 0x1
 
     :try_start_0
     invoke-static {p1, p0, v1}, Landroid/deviceencryption/DeviceEncryptionManager;->savePassword(Ljava/lang/String;Ljava/lang/String;I)Z
 
+    .line 356
     monitor-exit v0
 
     move v0, v2
 
+    .line 358
     goto :goto_0
 
+    .line 356
     :catchall_0
     move-exception v1
 
@@ -948,8 +1059,10 @@
     .parameter "password"
 
     .prologue
+    .line 265
     sput-object p0, Landroid/deviceencryption/DeviceEncryptionManager;->token:Ljava/lang/String;
 
+    .line 266
     return-void
 .end method
 
@@ -962,9 +1075,10 @@
     .prologue
     const/4 v5, 0x1
 
+    .line 160
     sget-object v3, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v4, "true"
+    const-string/jumbo v4, "true"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -972,49 +1086,60 @@
 
     if-nez v3, :cond_1
 
+    .line 192
     :cond_0
     :goto_0
     return-void
 
+    .line 162
     :cond_1
     const-string v1, ""
 
+    .line 164
     .local v1, cmd:Ljava/lang/String;
     if-ne p1, v5, :cond_4
 
     if-ne p2, v5, :cond_4
 
+    .line 165
     const-string v1, "internal:external"
 
+    .line 172
     :cond_2
     :goto_1
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
+    .line 173
     .local v2, intent:Landroid/content/Intent;
     const-string v3, "com.sec.android.app.encrypt.action.ENCRYPT"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 174
     const-string v3, "cmd"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 175
     const-string v3, "force"
 
     invoke-virtual {v2, v3, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    .line 176
     const/high16 v3, 0x1000
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
+    .line 177
     const-string v3, "com.sec.android.app.encrypt"
 
     const-string v4, "com.sec.android.app.encrypt.DeviceEncryptionActivity"
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 179
     iget-object v3, p0, Landroid/deviceencryption/DeviceEncryptionManager;->mContext:Landroid/content/Context;
 
     const-string v4, "device_policy"
@@ -1025,40 +1150,48 @@
 
     check-cast v0, Landroid/app/admin/DevicePolicyManager;
 
+    .line 181
     .local v0, DPM:Landroid/app/admin/DevicePolicyManager;
     if-eqz v0, :cond_3
 
+    .line 182
     invoke-virtual {v0, v2}, Landroid/app/admin/DevicePolicyManager;->setEncryptionPolicyWithEncryptApp(Landroid/content/Intent;)Z
 
     move-result v3
 
     if-eq v3, v5, :cond_0
 
+    .line 189
     :cond_3
     const-string v3, "DeviceEncryption"
 
-    const-string v4, "setEncryptPolicyInternal for system application"
+    const-string/jumbo v4, "setEncryptPolicyInternal for system application"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 190
     iget-object v3, p0, Landroid/deviceencryption/DeviceEncryptionManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
+    .line 166
     .end local v0           #DPM:Landroid/app/admin/DevicePolicyManager;
     .end local v2           #intent:Landroid/content/Intent;
     :cond_4
     if-ne p1, v5, :cond_5
 
+    .line 167
     const-string v1, "internal"
 
     goto :goto_1
 
+    .line 168
     :cond_5
     if-ne p2, v5, :cond_2
 
+    .line 169
     const-string v1, "external"
 
     goto :goto_1
@@ -1070,9 +1203,10 @@
     .parameter "value"
 
     .prologue
+    .line 433
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v2, "true"
+    const-string/jumbo v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1082,28 +1216,35 @@
 
     const/4 v1, 0x0
 
+    .line 443
     :goto_0
     return v1
 
+    .line 434
     :cond_0
     const/4 v0, 0x0
 
+    .line 439
     .local v0, ret:I
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->LOCK_SCAN_MOUNT_ACCESS:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 440
     :try_start_0
     invoke-static {p0, p1}, Landroid/deviceencryption/DeviceEncryptionManager;->setFileProperty(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
+    .line 441
     monitor-exit v1
 
     move v1, v0
 
+    .line 443
     goto :goto_0
 
+    .line 441
     :catchall_0
     move-exception v2
 
@@ -1130,9 +1271,10 @@
     .prologue
     const/4 v4, 0x1
 
+    .line 104
     sget-object v2, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
-    const-string v3, "true"
+    const-string/jumbo v3, "true"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1140,35 +1282,43 @@
 
     if-nez v2, :cond_1
 
+    .line 126
     :cond_0
     :goto_0
     return-void
 
+    .line 106
     :cond_1
     const/4 v1, 0x0
 
     .local v1, internal:I
     const/4 v0, 0x0
 
+    .line 108
     .local v0, external:I
     if-eq p2, v4, :cond_2
 
     if-nez p2, :cond_0
 
+    .line 110
     :cond_2
     if-nez p1, :cond_5
 
+    .line 111
     invoke-static {}, Landroid/deviceencryption/DeviceEncryptionManager;->getInternalStorageStatus()Z
 
     move-result v2
 
     if-ne v2, v4, :cond_3
 
+    .line 112
     const/4 v1, 0x1
 
+    .line 114
     :cond_3
     move v0, p2
 
+    .line 125
     :cond_4
     :goto_1
     const/4 v2, 0x0
@@ -1177,29 +1327,36 @@
 
     goto :goto_0
 
+    .line 115
     :cond_5
     if-ne p1, v4, :cond_7
 
+    .line 116
     invoke-static {}, Landroid/deviceencryption/DeviceEncryptionManager;->getExternalStorageStatus()Z
 
     move-result v2
 
     if-ne v2, v4, :cond_6
 
+    .line 117
     const/4 v0, 0x1
 
+    .line 119
     :cond_6
     move v1, p2
 
     goto :goto_1
 
+    .line 120
     :cond_7
     const/4 v2, 0x2
 
     if-ne p1, v2, :cond_4
 
+    .line 121
     move v1, p2
 
+    .line 122
     move v0, p2
 
     goto :goto_1
@@ -1211,10 +1368,12 @@
     .parameter "external"
 
     .prologue
+    .line 137
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/deviceencryption/DeviceEncryptionManager;->setEncryptPolicyInternal(IIZ)V
 
+    .line 138
     return-void
 .end method
 
@@ -1225,7 +1384,9 @@
     .parameter "force"
 
     .prologue
+    .line 156
     invoke-direct {p0, p1, p2, p3}, Landroid/deviceencryption/DeviceEncryptionManager;->setEncryptPolicyInternal(IIZ)V
 
+    .line 157
     return-void
 .end method

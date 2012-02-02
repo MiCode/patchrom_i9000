@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
     .parameter "needWidth"
 
     .prologue
+    .line 250
     move-object/from16 v0, p1
 
     instance-of v0, v0, Landroid/text/Spanned;
@@ -39,23 +41,29 @@
 
     if-nez v4, :cond_5
 
+    .line 251
     const/16 p7, 0x0
 
+    .line 253
     .local p7, ret:F
     if-eqz p5, :cond_3
 
+    .line 254
     invoke-static/range {p1 .. p3}, Landroid/text/TextUtils;->getReverse(Ljava/lang/CharSequence;II)Ljava/lang/CharSequence;
 
     move-result-object v5
 
+    .line 257
     .local v5, tmp:Ljava/lang/CharSequence;
     sub-int v7, p3, p2
 
+    .line 259
     .local v7, tmpend:I
     if-nez p0, :cond_0
 
     if-eqz p13, :cond_11
 
+    .line 260
     :cond_0
     const/16 p1, 0x0
 
@@ -72,11 +80,13 @@
     .end local p1
     move-result p1
 
+    .line 262
     .end local p7           #ret:F
     .local p1, ret:F
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 263
     const/4 v6, 0x0
 
     sub-float v8, p6, p1
@@ -96,6 +106,7 @@
     :cond_1
     move/from16 p0, p1
 
+    .line 273
     .end local v5           #tmp:Ljava/lang/CharSequence;
     .end local v7           #tmpend:I
     .end local p1           #ret:F
@@ -104,12 +115,14 @@
     :goto_1
     if-eqz p10, :cond_2
 
+    .line 274
     move-object/from16 v0, p11
 
     move-object/from16 v1, p10
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
 
+    .line 277
     :cond_2
     move/from16 v0, p4
 
@@ -119,10 +132,12 @@
 
     mul-float p0, p0, p1
 
+    .line 326
     .end local p0           #ret:F
     :goto_2
     return p0
 
+    .line 266
     .local p0, canvas:Landroid/graphics/Canvas;
     .local p1, text:Ljava/lang/CharSequence;
     .restart local p5
@@ -130,6 +145,7 @@
     :cond_3
     if-eqz p13, :cond_10
 
+    .line 267
     move-object/from16 v0, p11
 
     move-object/from16 v1, p1
@@ -142,11 +158,13 @@
 
     move-result p5
 
+    .line 269
     .end local p7           #ret:F
     .local p5, ret:F
     :goto_3
     if-eqz p0, :cond_4
 
+    .line 270
     move/from16 v0, p8
 
     int-to-float v0, v0
@@ -174,12 +192,14 @@
     .local p0, ret:F
     goto :goto_1
 
+    .line 280
     .local p0, canvas:Landroid/graphics/Canvas;
     .local p5, runIsRtl:Z
     .local p7, top:I
     :cond_5
     move/from16 v22, p6
 
+    .line 281
     .local v22, ox:F
     const/4 v6, 0x0
 
@@ -192,6 +212,7 @@
     .local v7, minTop:I
     const/4 v4, 0x0
 
+    .line 283
     .local v4, maxBottom:I
     move-object/from16 v0, p1
 
@@ -199,11 +220,14 @@
 
     move-object v9, v0
 
+    .line 286
     .local v9, sp:Landroid/text/Spanned;
     if-nez p0, :cond_b
 
+    .line 287
     const-class p1, Landroid/text/style/MetricAffectingSpan;
 
+    .line 292
     .local p1, division:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     :goto_4
     move/from16 v10, p2
@@ -216,6 +240,7 @@
 
     if-ge v0, v1, :cond_d
 
+    .line 293
     move-object v0, v9
 
     move v1, v10
@@ -228,6 +253,7 @@
 
     move-result v11
 
+    .line 298
     .local v11, next:I
     if-nez p13, :cond_6
 
@@ -269,8 +295,10 @@
 
     add-float p6, p6, v8
 
+    .line 302
     if-eqz p10, :cond_a
 
+    .line 303
     move-object/from16 v0, p10
 
     iget v0, v0, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
@@ -279,12 +307,14 @@
 
     if-ge v8, v6, :cond_7
 
+    .line 304
     move-object/from16 v0, p10
 
     iget v0, v0, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
     move v6, v0
 
+    .line 305
     :cond_7
     move-object/from16 v0, p10
 
@@ -294,12 +324,14 @@
 
     if-le v8, v5, :cond_8
 
+    .line 306
     move-object/from16 v0, p10
 
     iget v0, v0, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
     move v5, v0
 
+    .line 308
     :cond_8
     move-object/from16 v0, p10
 
@@ -309,12 +341,14 @@
 
     if-ge v8, v7, :cond_9
 
+    .line 309
     move-object/from16 v0, p10
 
     iget v0, v0, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
     move v7, v0
 
+    .line 310
     :cond_9
     move-object/from16 v0, p10
 
@@ -324,17 +358,20 @@
 
     if-le v8, v4, :cond_a
 
+    .line 311
     move-object/from16 v0, p10
 
     iget v0, v0, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
     move v4, v0
 
+    .line 292
     :cond_a
     move v10, v11
 
     goto :goto_5
 
+    .line 289
     .end local v10           #i:I
     .end local v11           #next:I
     .local p1, text:Ljava/lang/CharSequence;
@@ -344,6 +381,7 @@
     .local p1, division:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     goto :goto_4
 
+    .line 298
     .restart local v10       #i:I
     .restart local v11       #next:I
     :cond_c
@@ -353,28 +391,33 @@
 
     goto :goto_6
 
+    .line 315
     .end local v11           #next:I
     :cond_d
     if-eqz p10, :cond_e
 
+    .line 316
     move/from16 v0, p2
 
     move/from16 v1, p3
 
     if-ne v0, v1, :cond_f
 
+    .line 317
     move-object/from16 v0, p11
 
     move-object/from16 v1, p10
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
 
+    .line 326
     :cond_e
     :goto_7
     sub-float p0, p6, v22
 
     goto/16 :goto_2
 
+    .line 319
     :cond_f
     move v0, v6
 
@@ -382,18 +425,21 @@
 
     iput v0, v1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
+    .line 320
     move v0, v5
 
     move-object/from16 v1, p10
 
     iput v0, v1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
+    .line 321
     move v0, v7
 
     move-object/from16 v1, p10
 
     iput v0, v1, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
+    .line 322
     move v0, v4
 
     move-object/from16 v1, p10
@@ -446,10 +492,12 @@
     .parameter "needWidth"
 
     .prologue
+    .line 400
     if-ltz p4, :cond_0
 
     const/16 p4, 0x1
 
+    .line 407
     :goto_0
     const/4 v5, 0x0
 
@@ -484,6 +532,7 @@
     .end local p0
     return p0
 
+    .line 400
     .restart local p0
     :cond_0
     const/16 p4, -0x1
@@ -508,6 +557,7 @@
     .parameter "needWidth"
 
     .prologue
+    .line 342
     const/4 v2, -0x1
 
     move/from16 v0, p4
@@ -529,6 +579,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 345
     :cond_1
     const/4 v2, 0x0
 
@@ -562,6 +613,7 @@
 
     move-result p12
 
+    .line 349
     .local p12, ch:F
     move/from16 v0, p4
 
@@ -571,6 +623,7 @@
 
     mul-float p12, p12, v2
 
+    .line 350
     move/from16 v0, p4
 
     neg-int v0, v0
@@ -607,6 +660,7 @@
 
     move/from16 p0, p12
 
+    .line 357
     .end local p0
     .end local p12           #ch:F
     :goto_0
@@ -668,11 +722,14 @@
     .parameter "needWidth"
 
     .prologue
+    .line 59
     const/4 v14, 0x0
 
+    .line 60
     .local v14, haveWidth:Z
     const/4 v5, 0x0
 
+    .line 61
     .local v5, ret:F
     const-class v4, Landroid/text/style/CharacterStyle;
 
@@ -690,9 +747,11 @@
 
     check-cast v7, [Landroid/text/style/CharacterStyle;
 
+    .line 63
     .local v7, spans:[Landroid/text/style/CharacterStyle;
     const/4 v4, 0x0
 
+    .line 68
     .local v4, replacement:Landroid/text/style/ReplacementSpan;
     const/4 v6, 0x0
 
@@ -702,6 +761,7 @@
 
     iput v0, v1, Landroid/text/TextPaint;->bgColor:I
 
+    .line 69
     const/4 v6, 0x0
 
     move v0, v6
@@ -710,12 +770,14 @@
 
     iput v0, v1, Landroid/text/TextPaint;->baselineShift:I
 
+    .line 70
     move-object/from16 v0, p12
 
     move-object/from16 v1, p11
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->set(Landroid/text/TextPaint;)V
 
+    .line 72
     move-object v0, v7
 
     array-length v0, v0
@@ -725,6 +787,7 @@
     .end local p11
     if-lez p11, :cond_1
 
+    .line 73
     const/16 p11, 0x0
 
     .local p11, i:I
@@ -737,24 +800,29 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 74
     aget-object v6, v7, p11
 
+    .line 76
     .local v6, span:Landroid/text/style/CharacterStyle;
     instance-of v8, v6, Landroid/text/style/ReplacementSpan;
 
     if-eqz v8, :cond_0
 
+    .line 77
     move-object v0, v6
 
     check-cast v0, Landroid/text/style/ReplacementSpan;
 
     move-object v4, v0
 
+    .line 73
     :goto_1
     add-int/lit8 p11, p11, 0x1
 
     goto :goto_0
 
+    .line 80
     :cond_0
     move-object v0, v6
 
@@ -764,20 +832,25 @@
 
     goto :goto_1
 
+    .line 85
     .end local v6           #span:Landroid/text/style/CharacterStyle;
     .end local p11           #i:I
     :cond_1
     if-nez v4, :cond_9
 
+    .line 89
     if-eqz p5, :cond_4
 
+    .line 90
     invoke-static/range {p1 .. p3}, Landroid/text/TextUtils;->getReverse(Ljava/lang/CharSequence;II)Ljava/lang/CharSequence;
 
     move-result-object p1
 
+    .line 91
     .local p1, tmp:Ljava/lang/CharSequence;
     const/16 p5, 0x0
 
+    .line 93
     .local p5, tmpstart:I
     sub-int p2, p3, p2
 
@@ -792,20 +865,24 @@
     .local v11, tmpstart:I
     move-object/from16 p11, p1
 
+    .line 100
     .end local p1           #tmp:Ljava/lang/CharSequence;
     .local p11, tmp:Ljava/lang/CharSequence;
     :goto_2
     if-eqz p10, :cond_2
 
+    .line 101
     move-object/from16 v0, p12
 
     move-object/from16 v1, p10
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
 
+    .line 104
     :cond_2
     if-eqz p0, :cond_8
 
+    .line 105
     move-object/from16 v0, p12
 
     iget v0, v0, Landroid/text/TextPaint;->bgColor:I
@@ -814,15 +891,18 @@
 
     if-eqz p1, :cond_10
 
+    .line 106
     invoke-virtual/range {p12 .. p12}, Landroid/text/TextPaint;->getColor()I
 
     move-result p1
 
+    .line 107
     .local p1, c:I
     invoke-virtual/range {p12 .. p12}, Landroid/text/TextPaint;->getStyle()Landroid/graphics/Paint$Style;
 
     move-result-object p5
 
+    .line 108
     .local p5, s:Landroid/graphics/Paint$Style;
     move-object/from16 v0, p12
 
@@ -836,6 +916,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
+    .line 109
     sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     move-object/from16 v0, p12
@@ -844,8 +925,10 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 111
     if-nez v14, :cond_f
 
+    .line 112
     move-object/from16 v0, p12
 
     move-object/from16 v1, p11
@@ -858,10 +941,12 @@
 
     move-result p3
 
+    .line 113
     .end local v5           #ret:F
     .local p3, ret:F
     const/16 p2, 0x1
 
+    .line 116
     .end local v14           #haveWidth:Z
     .local p2, haveWidth:Z
     :goto_3
@@ -873,6 +958,7 @@
 
     if-ne v0, v1, :cond_5
 
+    .line 117
     .end local p10
     sub-float v5, p6, p3
 
@@ -896,6 +982,7 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 121
     .end local v4           #replacement:Landroid/text/style/ReplacementSpan;
     .end local v7           #spans:[Landroid/text/style/CharacterStyle;
     :goto_4
@@ -905,6 +992,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 122
     move-object/from16 v0, p12
 
     move/from16 v1, p1
@@ -917,6 +1005,7 @@
     .local p1, haveWidth:Z
     move/from16 p2, p3
 
+    .line 125
     .end local p3           #ret:F
     .end local p5           #s:Landroid/graphics/Paint$Style;
     .local p2, ret:F
@@ -929,8 +1018,10 @@
 
     if-ne v0, v1, :cond_6
 
+    .line 126
     if-nez p1, :cond_3
 
+    .line 127
     move-object/from16 v0, p12
 
     move-object/from16 v1, p11
@@ -943,8 +1034,10 @@
 
     move-result p2
 
+    .line 128
     const/16 p1, 0x1
 
+    .line 131
     :cond_3
     sub-float v8, p6, p2
 
@@ -981,6 +1074,7 @@
     .local p0, haveWidth:Z
     move/from16 p1, p2
 
+    .line 163
     .end local v11           #tmpstart:I
     .end local p2           #ret:F
     .end local p11           #tmp:Ljava/lang/CharSequence;
@@ -994,6 +1088,7 @@
 
     if-ne v0, v1, :cond_c
 
+    .line 164
     .end local p0           #haveWidth:Z
     move/from16 v0, p1
 
@@ -1001,9 +1096,11 @@
 
     move p0, v0
 
+    .line 166
     :goto_7
     return p0
 
+    .line 95
     .restart local v4       #replacement:Landroid/text/style/ReplacementSpan;
     .restart local v5       #ret:F
     .restart local v7       #spans:[Landroid/text/style/CharacterStyle;
@@ -1017,9 +1114,11 @@
     :cond_4
     move-object/from16 p1, p1
 
+    .line 96
     .local p1, tmp:Ljava/lang/CharSequence;
     move/from16 p5, p2
 
+    .line 97
     .local p5, tmpstart:I
     move/from16 p2, p3
 
@@ -1038,6 +1137,7 @@
     .restart local p11       #tmp:Ljava/lang/CharSequence;
     goto/16 :goto_2
 
+    .line 119
     .end local v5           #ret:F
     .end local v14           #haveWidth:Z
     .end local p10
@@ -1070,6 +1170,7 @@
 
     goto :goto_4
 
+    .line 134
     .end local v4           #replacement:Landroid/text/style/ReplacementSpan;
     .end local v7           #spans:[Landroid/text/style/CharacterStyle;
     .end local p3           #ret:F
@@ -1079,8 +1180,10 @@
     :cond_6
     if-eqz p13, :cond_7
 
+    .line 135
     if-nez p1, :cond_7
 
+    .line 136
     move-object/from16 v0, p12
 
     move-object/from16 v1, p11
@@ -1093,8 +1196,10 @@
 
     move-result p2
 
+    .line 137
     const/16 p1, 0x1
 
+    .line 141
     :cond_7
     move-object/from16 v0, p12
 
@@ -1135,6 +1240,7 @@
     .local p1, ret:F
     goto :goto_6
 
+    .line 145
     .end local p1           #ret:F
     .restart local v4       #replacement:Landroid/text/style/ReplacementSpan;
     .restart local v5       #ret:F
@@ -1149,6 +1255,7 @@
 
     if-nez v14, :cond_d
 
+    .line 146
     move-object/from16 v0, p12
 
     move-object/from16 v1, p11
@@ -1161,6 +1268,7 @@
 
     move-result p1
 
+    .line 147
     .end local v5           #ret:F
     .restart local p1       #ret:F
     const/4 p0, 0x1
@@ -1189,6 +1297,7 @@
 
     move-object/from16 v9, p10
 
+    .line 151
     invoke-virtual/range {v4 .. v9}, Landroid/text/style/ReplacementSpan;->getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
 
     .end local v5           #ret:F
@@ -1202,9 +1311,11 @@
 
     move/from16 p5, v0
 
+    .line 153
     .local p5, ret:F
     if-eqz p0, :cond_b
 
+    .line 154
     const/16 p10, -0x1
 
     move/from16 v0, p4
@@ -1213,6 +1324,7 @@
 
     if-ne v0, v1, :cond_a
 
+    .line 155
     .end local p10
     sub-float v9, p6, p5
 
@@ -1267,6 +1379,7 @@
 
     move-object/from16 v13, p12
 
+    .line 158
     invoke-virtual/range {v4 .. v13}, Landroid/text/style/ReplacementSpan;->draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
 
     :cond_b
@@ -1287,6 +1400,7 @@
     :cond_c
     move/from16 p0, p1
 
+    .line 166
     goto/16 :goto_7
 
     .end local p1           #ret:F
@@ -1371,6 +1485,7 @@
     .parameter "fmi"
 
     .prologue
+    .line 190
     const-class v1, Landroid/text/style/MetricAffectingSpan;
 
     invoke-interface {p2, p3, p4, v1}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
@@ -1379,12 +1494,15 @@
 
     check-cast v3, [Landroid/text/style/MetricAffectingSpan;
 
+    .line 193
     .local v3, spans:[Landroid/text/style/MetricAffectingSpan;
     const/4 v1, 0x0
 
+    .line 194
     .local v1, replacement:Landroid/text/style/ReplacementSpan;
     invoke-virtual {p1, p0}, Landroid/text/TextPaint;->set(Landroid/text/TextPaint;)V
 
+    .line 196
     const/4 p0, 0x0
 
     .local p0, i:I
@@ -1393,37 +1511,46 @@
 
     if-ge p0, v2, :cond_1
 
+    .line 197
     aget-object v2, v3, p0
 
+    .line 198
     .local v2, span:Landroid/text/style/MetricAffectingSpan;
     instance-of v4, v2, Landroid/text/style/ReplacementSpan;
 
     if-eqz v4, :cond_0
 
+    .line 199
     move-object v0, v2
 
     check-cast v0, Landroid/text/style/ReplacementSpan;
 
     move-object v1, v0
 
+    .line 196
     :goto_1
     add-int/lit8 p0, p0, 0x1
 
     goto :goto_0
 
+    .line 202
     :cond_0
     invoke-virtual {v2, p1}, Landroid/text/style/MetricAffectingSpan;->updateMeasureState(Landroid/text/TextPaint;)V
 
     goto :goto_1
 
+    .line 206
     .end local v2           #span:Landroid/text/style/MetricAffectingSpan;
     :cond_1
     if-nez v1, :cond_3
 
+    .line 207
     invoke-virtual {p1, p6}, Landroid/text/TextPaint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
 
+    .line 208
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/text/TextPaint;->getTextWidths(Ljava/lang/CharSequence;II[F)I
 
+    .line 218
     .end local v3           #spans:[Landroid/text/style/MetricAffectingSpan;
     .end local p0           #i:I
     .end local p1
@@ -1448,20 +1575,24 @@
 
     move-object v6, p6
 
+    .line 210
     invoke-virtual/range {v1 .. v6}, Landroid/text/style/ReplacementSpan;->getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
 
     .end local v3           #spans:[Landroid/text/style/MetricAffectingSpan;
     move-result p0
 
+    .line 212
     .local p0, wid:I
     if-le p4, p3, :cond_2
 
+    .line 213
     const/4 p1, 0x0
 
     int-to-float p0, p0
 
     aput p0, p5, p1
 
+    .line 214
     .end local p0           #wid:I
     .end local p1
     add-int/lit8 p0, p3, 0x1
@@ -1471,12 +1602,14 @@
     :goto_2
     if-ge p0, p4, :cond_2
 
+    .line 215
     sub-int p1, p0, p3
 
     const/4 p2, 0x0
 
     aput p2, p5, p1
 
+    .line 214
     add-int/lit8 p0, p0, 0x1
 
     goto :goto_2
@@ -1492,6 +1625,7 @@
     .parameter "fmi"
 
     .prologue
+    .line 430
     const/4 v0, 0x0
 
     const/4 v4, 0x1

@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,6 +47,7 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 165
     const-class v3, Landroid/net/vpn/VpnType;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -58,6 +60,7 @@
 
     check-cast v2, Landroid/net/vpn/VpnType;
 
+    .line 166
     .local v2, type:Landroid/net/vpn/VpnType;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -69,6 +72,7 @@
 
     move v0, v3
 
+    .line 167
     .local v0, customized:Z
     :goto_0
     new-instance v3, Landroid/net/vpn/VpnManager;
@@ -79,14 +83,17 @@
 
     move-result-object v1
 
+    .line 169
     .local v1, p:Landroid/net/vpn/VpnProfile;
     if-nez v1, :cond_1
 
     move-object v3, v5
 
+    .line 171
     :goto_1
     return-object v3
 
+    .line 166
     .end local v0           #customized:Z
     .end local v1           #p:Landroid/net/vpn/VpnProfile;
     :cond_0
@@ -96,6 +103,7 @@
 
     goto :goto_0
 
+    .line 170
     .restart local v0       #customized:Z
     .restart local v1       #p:Landroid/net/vpn/VpnProfile;
     :cond_1
@@ -103,6 +111,7 @@
 
     move-object v3, v1
 
+    .line 171
     goto :goto_1
 .end method
 
@@ -111,6 +120,7 @@
     .parameter "x0"
 
     .prologue
+    .line 163
     invoke-virtual {p0, p1}, Landroid/net/vpn/VpnProfile$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/vpn/VpnProfile;
 
     move-result-object v0
@@ -123,6 +133,7 @@
     .parameter "size"
 
     .prologue
+    .line 175
     new-array v0, p1, [Landroid/net/vpn/VpnProfile;
 
     return-object v0
@@ -133,6 +144,7 @@
     .parameter "x0"
 
     .prologue
+    .line 163
     invoke-virtual {p0, p1}, Landroid/net/vpn/VpnProfile$1;->newArray(I)[Landroid/net/vpn/VpnProfile;
 
     move-result-object v0

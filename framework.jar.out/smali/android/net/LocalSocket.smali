@@ -22,16 +22,20 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 41
     new-instance v0, Landroid/net/LocalSocketImpl;
 
     invoke-direct {v0}, Landroid/net/LocalSocketImpl;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/net/LocalSocket;-><init>(Landroid/net/LocalSocketImpl;)V
 
+    .line 42
     iput-boolean v1, p0, Landroid/net/LocalSocket;->isBound:Z
 
+    .line 43
     iput-boolean v1, p0, Landroid/net/LocalSocket;->isConnected:Z
 
+    .line 44
     return-void
 .end method
 
@@ -42,14 +46,19 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 51
     iput-object p1, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
+    .line 52
     iput-boolean v0, p0, Landroid/net/LocalSocket;->isConnected:Z
 
+    .line 53
     iput-boolean v0, p0, Landroid/net/LocalSocket;->isBound:Z
 
+    .line 54
     return-void
 .end method
 
@@ -62,12 +71,15 @@
     .end annotation
 
     .prologue
+    .line 70
     iget-boolean v0, p0, Landroid/net/LocalSocket;->implCreated:Z
 
     if-nez v0, :cond_1
 
+    .line 71
     monitor-enter p0
 
+    .line 72
     :try_start_0
     iget-boolean v0, p0, Landroid/net/LocalSocket;->implCreated:Z
     :try_end_0
@@ -75,6 +87,7 @@
 
     if-nez v0, :cond_0
 
+    .line 74
     :try_start_1
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
@@ -84,17 +97,21 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 76
     const/4 v0, 0x1
 
     :try_start_2
     iput-boolean v0, p0, Landroid/net/LocalSocket;->implCreated:Z
 
+    .line 79
     :cond_0
     monitor-exit p0
 
+    .line 81
     :cond_1
     return-void
 
+    .line 76
     :catchall_0
     move-exception v0
 
@@ -104,6 +121,7 @@
 
     throw v0
 
+    .line 79
     :catchall_1
     move-exception v0
 
@@ -126,15 +144,19 @@
     .end annotation
 
     .prologue
+    .line 112
     invoke-direct {p0}, Landroid/net/LocalSocket;->implCreateIfNeeded()V
 
+    .line 114
     monitor-enter p0
 
+    .line 115
     :try_start_0
     iget-boolean v0, p0, Landroid/net/LocalSocket;->isBound:Z
 
     if-eqz v0, :cond_0
 
+    .line 116
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "already bound"
@@ -143,6 +165,7 @@
 
     throw v0
 
+    .line 122
     :catchall_0
     move-exception v0
 
@@ -152,24 +175,29 @@
 
     throw v0
 
+    .line 119
     :cond_0
     :try_start_1
     iput-object p1, p0, Landroid/net/LocalSocket;->localAddress:Landroid/net/LocalSocketAddress;
 
+    .line 120
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     iget-object v1, p0, Landroid/net/LocalSocket;->localAddress:Landroid/net/LocalSocketAddress;
 
     invoke-virtual {v0, v1}, Landroid/net/LocalSocketImpl;->bind(Landroid/net/LocalSocketAddress;)V
 
+    .line 121
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/net/LocalSocket;->isBound:Z
 
+    .line 122
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 123
     return-void
 .end method
 
@@ -182,12 +210,15 @@
     .end annotation
 
     .prologue
+    .line 162
     invoke-direct {p0}, Landroid/net/LocalSocket;->implCreateIfNeeded()V
 
+    .line 163
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0}, Landroid/net/LocalSocketImpl;->close()V
 
+    .line 164
     return-void
 .end method
 
@@ -201,13 +232,16 @@
     .end annotation
 
     .prologue
+    .line 92
     monitor-enter p0
 
+    .line 93
     :try_start_0
     iget-boolean v0, p0, Landroid/net/LocalSocket;->isConnected:Z
 
     if-eqz v0, :cond_0
 
+    .line 94
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "already connected"
@@ -216,6 +250,7 @@
 
     throw v0
 
+    .line 101
     :catchall_0
     move-exception v0
 
@@ -225,28 +260,34 @@
 
     throw v0
 
+    .line 97
     :cond_0
     :try_start_1
     invoke-direct {p0}, Landroid/net/LocalSocket;->implCreateIfNeeded()V
 
+    .line 98
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Landroid/net/LocalSocketImpl;->connect(Landroid/net/LocalSocketAddress;I)V
 
+    .line 99
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/net/LocalSocket;->isConnected:Z
 
+    .line 100
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/net/LocalSocket;->isBound:Z
 
+    .line 101
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 102
     return-void
 .end method
 
@@ -261,6 +302,7 @@
     .end annotation
 
     .prologue
+    .line 243
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -277,6 +319,7 @@
     .end annotation
 
     .prologue
+    .line 269
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0}, Landroid/net/LocalSocketImpl;->getAncillaryFileDescriptors()[Ljava/io/FileDescriptor;
@@ -290,6 +333,7 @@
     .locals 1
 
     .prologue
+    .line 289
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0}, Landroid/net/LocalSocketImpl;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -308,8 +352,10 @@
     .end annotation
 
     .prologue
+    .line 141
     invoke-direct {p0}, Landroid/net/LocalSocket;->implCreateIfNeeded()V
 
+    .line 142
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0}, Landroid/net/LocalSocketImpl;->getInputStream()Ljava/io/InputStream;
@@ -323,6 +369,7 @@
     .locals 1
 
     .prologue
+    .line 131
     iget-object v0, p0, Landroid/net/LocalSocket;->localAddress:Landroid/net/LocalSocketAddress;
 
     return-object v0
@@ -337,8 +384,10 @@
     .end annotation
 
     .prologue
+    .line 152
     invoke-direct {p0}, Landroid/net/LocalSocket;->implCreateIfNeeded()V
 
+    .line 153
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0}, Landroid/net/LocalSocketImpl;->getOutputStream()Ljava/io/OutputStream;
@@ -357,6 +406,7 @@
     .end annotation
 
     .prologue
+    .line 280
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0}, Landroid/net/LocalSocketImpl;->getPeerCredentials()Landroid/net/Credentials;
@@ -375,6 +425,7 @@
     .end annotation
 
     .prologue
+    .line 191
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     const/16 v1, 0x1002
@@ -397,6 +448,7 @@
     .locals 1
 
     .prologue
+    .line 212
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -413,6 +465,7 @@
     .end annotation
 
     .prologue
+    .line 207
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     const/16 v1, 0x1001
@@ -440,6 +493,7 @@
     .end annotation
 
     .prologue
+    .line 199
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     const/16 v1, 0x1006
@@ -462,6 +516,7 @@
     .locals 1
 
     .prologue
+    .line 227
     monitor-enter p0
 
     :try_start_0
@@ -485,6 +540,7 @@
     .locals 1
 
     .prologue
+    .line 222
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -496,6 +552,7 @@
     .locals 1
 
     .prologue
+    .line 217
     monitor-enter p0
 
     :try_start_0
@@ -519,6 +576,7 @@
     .locals 1
 
     .prologue
+    .line 237
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -530,6 +588,7 @@
     .locals 1
 
     .prologue
+    .line 232
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -542,10 +601,12 @@
     .parameter "fds"
 
     .prologue
+    .line 255
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0, p1}, Landroid/net/LocalSocketImpl;->setFileDescriptorsForSend([Ljava/io/FileDescriptor;)V
 
+    .line 256
     return-void
 .end method
 
@@ -559,6 +620,7 @@
     .end annotation
 
     .prologue
+    .line 187
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     const/16 v1, 0x1002
@@ -569,6 +631,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/LocalSocketImpl;->setOption(ILjava/lang/Object;)V
 
+    .line 188
     return-void
 .end method
 
@@ -582,6 +645,7 @@
     .end annotation
 
     .prologue
+    .line 203
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     const/16 v1, 0x1001
@@ -592,6 +656,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/LocalSocketImpl;->setOption(ILjava/lang/Object;)V
 
+    .line 204
     return-void
 .end method
 
@@ -605,6 +670,7 @@
     .end annotation
 
     .prologue
+    .line 195
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     const/16 v1, 0x1006
@@ -615,6 +681,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/LocalSocketImpl;->setOption(ILjava/lang/Object;)V
 
+    .line 196
     return-void
 .end method
 
@@ -627,12 +694,15 @@
     .end annotation
 
     .prologue
+    .line 172
     invoke-direct {p0}, Landroid/net/LocalSocket;->implCreateIfNeeded()V
 
+    .line 173
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0}, Landroid/net/LocalSocketImpl;->shutdownInput()V
 
+    .line 174
     return-void
 .end method
 
@@ -645,12 +715,15 @@
     .end annotation
 
     .prologue
+    .line 182
     invoke-direct {p0}, Landroid/net/LocalSocket;->implCreateIfNeeded()V
 
+    .line 183
     iget-object v0, p0, Landroid/net/LocalSocket;->impl:Landroid/net/LocalSocketImpl;
 
     invoke-virtual {v0}, Landroid/net/LocalSocketImpl;->shutdownOutput()V
 
+    .line 184
     return-void
 .end method
 
@@ -658,6 +731,7 @@
     .locals 2
 
     .prologue
+    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

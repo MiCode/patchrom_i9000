@@ -52,28 +52,35 @@
     .prologue
     const/4 v0, 0x2
 
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 79
     iput v0, p0, Landroid/gesture/GestureStore;->mSequenceType:I
 
+    .line 80
     iput v0, p0, Landroid/gesture/GestureStore;->mOrientationStyle:I
 
+    .line 82
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
+    .line 87
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/gesture/GestureStore;->mChanged:Z
 
+    .line 90
     new-instance v0, Landroid/gesture/InstanceLearner;
 
     invoke-direct {v0}, Landroid/gesture/InstanceLearner;-><init>()V
 
     iput-object v0, p0, Landroid/gesture/GestureStore;->mClassifier:Landroid/gesture/Learner;
 
+    .line 91
     return-void
 .end method
 
@@ -87,18 +94,23 @@
     .end annotation
 
     .prologue
+    .line 307
     iget-object v0, p0, Landroid/gesture/GestureStore;->mClassifier:Landroid/gesture/Learner;
 
+    .line 308
     .local v0, classifier:Landroid/gesture/Learner;
     iget-object v8, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
+    .line 309
     .local v8, namedGestures:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/util/ArrayList<Landroid/gesture/Gesture;>;>;"
     invoke-virtual {v8}, Ljava/util/HashMap;->clear()V
 
+    .line 312
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v1
 
+    .line 314
     .local v1, entriesCount:I
     const/4 v5, 0x0
 
@@ -106,20 +118,24 @@
     :goto_0
     if-ge v5, v1, :cond_1
 
+    .line 316
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v7
 
+    .line 318
     .local v7, name:Ljava/lang/String;
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
+    .line 320
     .local v3, gestureCount:I
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v3}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 321
     .local v4, gestures:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
     const/4 v6, 0x0
 
@@ -127,13 +143,16 @@
     :goto_1
     if-ge v6, v3, :cond_0
 
+    .line 322
     invoke-static {p1}, Landroid/gesture/Gesture;->deserialize(Ljava/io/DataInputStream;)Landroid/gesture/Gesture;
 
     move-result-object v2
 
+    .line 323
     .local v2, gesture:Landroid/gesture/Gesture;
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 324
     iget v9, p0, Landroid/gesture/GestureStore;->mSequenceType:I
 
     iget v10, p0, Landroid/gesture/GestureStore;->mOrientationStyle:I
@@ -144,18 +163,22 @@
 
     invoke-virtual {v0, v9}, Landroid/gesture/Learner;->addInstance(Landroid/gesture/Instance;)V
 
+    .line 321
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
+    .line 328
     .end local v2           #gesture:Landroid/gesture/Gesture;
     :cond_0
     invoke-virtual {v8, v7, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 314
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
+    .line 330
     .end local v3           #gestureCount:I
     .end local v4           #gestures:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
     .end local v6           #j:I
@@ -172,6 +195,7 @@
     .parameter "gesture"
 
     .prologue
+    .line 149
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -180,10 +204,12 @@
 
     if-nez v1, :cond_1
 
+    .line 161
     :cond_0
     :goto_0
     return-void
 
+    .line 152
     :cond_1
     iget-object v1, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
@@ -193,22 +219,27 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
+    .line 153
     .local v0, gestures:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
     if-nez v0, :cond_2
 
+    .line 154
     new-instance v0, Ljava/util/ArrayList;
 
     .end local v0           #gestures:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 155
     .restart local v0       #gestures:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
     iget-object v1, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 157
     :cond_2
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 158
     iget-object v1, p0, Landroid/gesture/GestureStore;->mClassifier:Landroid/gesture/Learner;
 
     iget v2, p0, Landroid/gesture/GestureStore;->mSequenceType:I
@@ -221,6 +252,7 @@
 
     invoke-virtual {v1, v2}, Landroid/gesture/Learner;->addInstance(Landroid/gesture/Instance;)V
 
+    .line 160
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/gesture/GestureStore;->mChanged:Z
@@ -241,6 +273,7 @@
     .end annotation
 
     .prologue
+    .line 127
     iget-object v0, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -266,6 +299,7 @@
     .end annotation
 
     .prologue
+    .line 206
     iget-object v1, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -274,13 +308,16 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
+    .line 207
     .local v0, gestures:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
     if-eqz v0, :cond_0
 
+    .line 208
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 210
     :goto_0
     return-object v1
 
@@ -294,6 +331,7 @@
     .locals 1
 
     .prologue
+    .line 333
     iget-object v0, p0, Landroid/gesture/GestureStore;->mClassifier:Landroid/gesture/Learner;
 
     return-object v0
@@ -303,6 +341,7 @@
     .locals 1
 
     .prologue
+    .line 104
     iget v0, p0, Landroid/gesture/GestureStore;->mOrientationStyle:I
 
     return v0
@@ -312,6 +351,7 @@
     .locals 1
 
     .prologue
+    .line 118
     iget v0, p0, Landroid/gesture/GestureStore;->mSequenceType:I
 
     return v0
@@ -321,6 +361,7 @@
     .locals 1
 
     .prologue
+    .line 215
     iget-boolean v0, p0, Landroid/gesture/GestureStore;->mChanged:Z
 
     return v0
@@ -336,10 +377,12 @@
     .end annotation
 
     .prologue
+    .line 275
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/gesture/GestureStore;->load(Ljava/io/InputStream;Z)V
 
+    .line 276
     return-void
 .end method
 
@@ -354,8 +397,10 @@
     .end annotation
 
     .prologue
+    .line 279
     const/4 v0, 0x0
 
+    .line 281
     .local v0, in:Ljava/io/DataInputStream;
     :try_start_0
     new-instance v1, Ljava/io/DataInputStream;
@@ -371,6 +416,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 290
     .end local v0           #in:Ljava/io/DataInputStream;
     .local v1, in:Ljava/io/DataInputStream;
     :try_start_1
@@ -380,17 +426,21 @@
 
     move-result v2
 
+    .line 291
     .local v2, versionNumber:S
     packed-switch v2, :pswitch_data_0
 
+    .line 302
     :goto_1
     if-eqz p2, :cond_0
 
     invoke-static {v1}, Landroid/gesture/GestureUtils;->closeStream(Ljava/io/Closeable;)V
 
+    .line 304
     :cond_0
     return-void
 
+    .line 281
     .end local v1           #in:Ljava/io/DataInputStream;
     .end local v2           #versionNumber:S
     .restart local v0       #in:Ljava/io/DataInputStream;
@@ -406,6 +456,7 @@
 
     goto :goto_0
 
+    .line 302
     :catchall_0
     move-exception v3
 
@@ -417,6 +468,7 @@
     :cond_2
     throw v3
 
+    .line 293
     .end local v0           #in:Ljava/io/DataInputStream;
     .restart local v1       #in:Ljava/io/DataInputStream;
     .restart local v2       #versionNumber:S
@@ -428,6 +480,7 @@
 
     goto :goto_1
 
+    .line 302
     .end local v2           #versionNumber:S
     :catchall_1
     move-exception v3
@@ -438,6 +491,7 @@
     .restart local v0       #in:Ljava/io/DataInputStream;
     goto :goto_2
 
+    .line 291
     nop
 
     :pswitch_data_0
@@ -462,6 +516,7 @@
     .end annotation
 
     .prologue
+    .line 137
     iget v1, p0, Landroid/gesture/GestureStore;->mSequenceType:I
 
     iget v2, p0, Landroid/gesture/GestureStore;->mOrientationStyle:I
@@ -472,6 +527,7 @@
 
     move-result-object v0
 
+    .line 139
     .local v0, instance:Landroid/gesture/Instance;
     iget-object v1, p0, Landroid/gesture/GestureStore;->mClassifier:Landroid/gesture/Learner;
 
@@ -493,18 +549,22 @@
     .parameter "entryName"
 
     .prologue
+    .line 194
     iget-object v0, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 195
     iget-object v0, p0, Landroid/gesture/GestureStore;->mClassifier:Landroid/gesture/Learner;
 
     invoke-virtual {v0, p1}, Landroid/gesture/Learner;->removeInstances(Ljava/lang/String;)V
 
+    .line 196
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/gesture/GestureStore;->mChanged:Z
 
+    .line 197
     return-void
 .end method
 
@@ -514,6 +574,7 @@
     .parameter "gesture"
 
     .prologue
+    .line 171
     iget-object v1, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -522,25 +583,31 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
+    .line 172
     .local v0, gestures:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
     if-nez v0, :cond_0
 
+    .line 186
     :goto_0
     return-void
 
+    .line 176
     :cond_0
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 179
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 180
     iget-object v1, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 183
     :cond_1
     iget-object v1, p0, Landroid/gesture/GestureStore;->mClassifier:Landroid/gesture/Learner;
 
@@ -550,6 +617,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/gesture/Learner;->removeInstance(J)V
 
+    .line 185
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/gesture/GestureStore;->mChanged:Z
@@ -567,10 +635,12 @@
     .end annotation
 
     .prologue
+    .line 222
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/gesture/GestureStore;->save(Ljava/io/OutputStream;Z)V
 
+    .line 223
     return-void
 .end method
 
@@ -585,12 +655,15 @@
     .end annotation
 
     .prologue
+    .line 226
     const/4 v7, 0x0
 
+    .line 234
     .local v7, out:Ljava/io/DataOutputStream;
     :try_start_0
     iget-object v6, p0, Landroid/gesture/GestureStore;->mNamedGestures:Ljava/util/HashMap;
 
+    .line 236
     .local v6, maps:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/util/ArrayList<Landroid/gesture/Gesture;>;>;"
     new-instance v8, Ljava/io/DataOutputStream;
 
@@ -605,6 +678,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 239
     .end local v7           #out:Ljava/io/DataOutputStream;
     .local v8, out:Ljava/io/DataOutputStream;
     const/4 v9, 0x1
@@ -612,12 +686,14 @@
     :try_start_1
     invoke-virtual {v8, v9}, Ljava/io/DataOutputStream;->writeShort(I)V
 
+    .line 241
     invoke-virtual {v6}, Ljava/util/HashMap;->size()I
 
     move-result v9
 
     invoke-virtual {v8, v9}, Ljava/io/DataOutputStream;->writeInt(I)V
 
+    .line 243
     invoke-virtual {v6}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v9
@@ -640,6 +716,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 244
     .local v1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Landroid/gesture/Gesture;>;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -647,6 +724,7 @@
 
     check-cast v5, Ljava/lang/String;
 
+    .line 245
     .local v5, key:Ljava/lang/String;
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -654,22 +732,27 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
+    .line 246
     .local v2, examples:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 249
     .local v0, count:I
     invoke-virtual {v8, v5}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
+    .line 251
     invoke-virtual {v8, v0}, Ljava/io/DataOutputStream;->writeInt(I)V
 
+    .line 253
     const/4 v3, 0x0
 
     .local v3, i:I
     :goto_1
     if-ge v3, v0, :cond_0
 
+    .line 254
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -680,10 +763,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 253
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
+    .line 236
     .end local v0           #count:I
     .end local v1           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Landroid/gesture/Gesture;>;>;"
     .end local v2           #examples:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/Gesture;>;"
@@ -704,6 +789,7 @@
 
     goto :goto_0
 
+    .line 267
     .end local v6           #maps:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/util/ArrayList<Landroid/gesture/Gesture;>;>;"
     :catchall_0
     move-exception v9
@@ -716,6 +802,7 @@
     :cond_2
     throw v9
 
+    .line 258
     .end local v7           #out:Ljava/io/DataOutputStream;
     .restart local v4       #i$:Ljava/util/Iterator;
     .restart local v6       #maps:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/util/ArrayList<Landroid/gesture/Gesture;>;>;"
@@ -724,19 +811,23 @@
     :try_start_3
     invoke-virtual {v8}, Ljava/io/DataOutputStream;->flush()V
 
+    .line 265
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Landroid/gesture/GestureStore;->mChanged:Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 267
     if-eqz p2, :cond_4
 
     invoke-static {v8}, Landroid/gesture/GestureUtils;->closeStream(Ljava/io/Closeable;)V
 
+    .line 269
     :cond_4
     return-void
 
+    .line 267
     .end local v4           #i$:Ljava/util/Iterator;
     :catchall_1
     move-exception v9
@@ -753,8 +844,10 @@
     .parameter "style"
 
     .prologue
+    .line 100
     iput p1, p0, Landroid/gesture/GestureStore;->mOrientationStyle:I
 
+    .line 101
     return-void
 .end method
 
@@ -763,7 +856,9 @@
     .parameter "type"
 
     .prologue
+    .line 111
     iput p1, p0, Landroid/gesture/GestureStore;->mSequenceType:I
 
+    .line 112
     return-void
 .end method

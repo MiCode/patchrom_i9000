@@ -182,66 +182,90 @@
 
     const-string v2, ""
 
+    .line 139
     const/16 v0, 0x50
 
     sput v0, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mFuncMask:I
 
+    .line 140
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mFreq:I
 
+    .line 141
     const/16 v0, 0x7f
 
     sput v0, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mRssi:I
 
+    .line 142
     sput-boolean v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mRadioIsOn:Z
 
+    .line 143
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mRdsProgramType:I
 
+    .line 144
     const-string v0, ""
 
     sput-object v2, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mRdsProgramService:Ljava/lang/String;
 
+    .line 145
     const-string v0, ""
 
     sput-object v2, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mRdsRadioText:Ljava/lang/String;
 
+    .line 146
     const-string v0, ""
 
     sput-object v2, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mRdsProgramTypeName:Ljava/lang/String;
 
+    .line 147
     sput-boolean v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mIsMute:Z
 
+    .line 148
     sput-boolean v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mSeekSuccess:Z
 
+    .line 149
     sput-boolean v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mRdsOn:Z
 
+    .line 150
     sput-boolean v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mAfOn:Z
 
+    .line 151
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mRdsType:I
 
+    .line 152
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mAlternateFreqHopThreshold:I
 
+    .line 153
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mAudioMode:I
 
+    .line 154
     sput v3, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mAudioPath:I
 
+    .line 155
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mWorldRegion:I
 
+    .line 156
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mStepSize:I
 
+    .line 157
     sput-boolean v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mLiveAudioQuality:Z
 
+    .line 158
     sput v3, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mEstimatedNoiseFloorLevel:I
 
+    .line 159
     const/16 v0, 0x64
 
     sput v0, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mSignalPollInterval:I
 
+    .line 160
     const/16 v0, 0x40
 
     sput v0, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->mDeemphasisTime:I
 
+    .line 161
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->radio_state:I
 
+    .line 163
     sput v1, Lcom/broadcom/bt/service/fm/FmReceiverServiceState;->radio_op_state:I
 
     return-void
@@ -251,6 +275,7 @@
     .locals 0
 
     .prologue
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

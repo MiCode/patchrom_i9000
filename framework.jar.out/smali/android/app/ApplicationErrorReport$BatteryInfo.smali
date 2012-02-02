@@ -29,8 +29,10 @@
     .locals 0
 
     .prologue
+    .line 469
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 470
     return-void
 .end method
 
@@ -39,32 +41,38 @@
     .parameter "in"
 
     .prologue
+    .line 475
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 476
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/ApplicationErrorReport$BatteryInfo;->usagePercent:I
 
+    .line 477
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/app/ApplicationErrorReport$BatteryInfo;->durationMicros:J
 
+    .line 478
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ApplicationErrorReport$BatteryInfo;->usageDetails:Ljava/lang/String;
 
+    .line 479
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ApplicationErrorReport$BatteryInfo;->checkinDetails:Ljava/lang/String;
 
+    .line 480
     return-void
 .end method
 
@@ -76,6 +84,7 @@
     .parameter "prefix"
 
     .prologue
+    .line 496
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,7 +93,7 @@
 
     move-result-object v0
 
-    const-string v1, "usagePercent: "
+    const-string/jumbo v1, "usagePercent: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,6 +111,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 497
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,6 +138,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 498
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,7 +147,7 @@
 
     move-result-object v0
 
-    const-string v1, "usageDetails: "
+    const-string/jumbo v1, "usageDetails: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -154,6 +165,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 499
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -180,6 +192,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 500
     return-void
 .end method
 
@@ -189,21 +202,26 @@
     .parameter "flags"
 
     .prologue
+    .line 486
     iget v0, p0, Landroid/app/ApplicationErrorReport$BatteryInfo;->usagePercent:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 487
     iget-wide v0, p0, Landroid/app/ApplicationErrorReport$BatteryInfo;->durationMicros:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 488
     iget-object v0, p0, Landroid/app/ApplicationErrorReport$BatteryInfo;->usageDetails:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 489
     iget-object v0, p0, Landroid/app/ApplicationErrorReport$BatteryInfo;->checkinDetails:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 490
     return-void
 .end method

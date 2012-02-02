@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 332
     iput-object p1, p0, Lcom/android/internal/app/RingtonePickerActivity$2;->this$0:Lcom/android/internal/app/RingtonePickerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .locals 1
 
     .prologue
+    .line 334
     iget-object v0, p0, Lcom/android/internal/app/RingtonePickerActivity$2;->this$0:Lcom/android/internal/app/RingtonePickerActivity;
 
     #getter for: Lcom/android/internal/app/RingtonePickerActivity;->mCursor:Landroid/database/Cursor;
@@ -49,5 +51,6 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->deactivate()V
 
+    .line 335
     return-void
 .end method

@@ -40,6 +40,7 @@
     .parameter
 
     .prologue
+    .line 94
     iput-object p1, p0, Lcom/android/server/EncryptService$EncryptResponseCode;->this$0:Lcom/android/server/EncryptService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

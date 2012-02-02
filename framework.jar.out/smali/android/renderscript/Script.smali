@@ -33,10 +33,13 @@
     .parameter "rs"
 
     .prologue
+    .line 46
     invoke-direct {p0, p2}, Landroid/renderscript/BaseObj;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 47
     iput p1, p0, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 48
     return-void
 .end method
 
@@ -48,10 +51,12 @@
     .parameter "slot"
 
     .prologue
+    .line 51
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 52
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
@@ -60,6 +65,7 @@
 
     invoke-virtual {v0, v1, v2, p2}, Landroid/renderscript/RenderScript;->nScriptBindAllocation(III)V
 
+    .line 53
     return-void
 .end method
 
@@ -67,6 +73,7 @@
     .locals 0
 
     .prologue
+    .line 22
     invoke-super {p0}, Landroid/renderscript/BaseObj;->destroy()V
 
     return-void
@@ -76,6 +83,7 @@
     .locals 1
 
     .prologue
+    .line 22
     invoke-super {p0}, Landroid/renderscript/BaseObj;->getID()I
 
     move-result v0
@@ -91,10 +99,12 @@
     .parameter "a"
 
     .prologue
+    .line 56
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 57
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
@@ -109,6 +119,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/RenderScript;->nScriptSetClearColor(IFFFF)V
 
+    .line 58
     return-void
 .end method
 
@@ -117,16 +128,19 @@
     .parameter "d"
 
     .prologue
+    .line 61
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 62
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
 
     invoke-virtual {v0, v1, p1}, Landroid/renderscript/RenderScript;->nScriptSetClearDepth(IF)V
 
+    .line 63
     return-void
 .end method
 
@@ -135,16 +149,19 @@
     .parameter "stencil"
 
     .prologue
+    .line 66
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 67
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
 
     invoke-virtual {v0, v1, p1}, Landroid/renderscript/RenderScript;->nScriptSetClearStencil(II)V
 
+    .line 68
     return-void
 .end method
 
@@ -159,6 +176,7 @@
     .end annotation
 
     .prologue
+    .line 22
     invoke-super {p0, p1}, Landroid/renderscript/BaseObj;->setName(Ljava/lang/String;)V
 
     return-void
@@ -169,10 +187,12 @@
     .parameter "timeZone"
 
     .prologue
+    .line 71
     iget-object v1, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v1}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 73
     :try_start_0
     iget-object v1, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
@@ -188,13 +208,16 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 77
     return-void
 
+    .line 74
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 75
     .local v0, e:Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/RuntimeException;
 

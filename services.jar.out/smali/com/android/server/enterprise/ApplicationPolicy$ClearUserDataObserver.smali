@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 292
     iput-object p1, p0, Lcom/android/server/enterprise/ApplicationPolicy$ClearUserDataObserver;->this$0:Lcom/android/server/enterprise/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDataObserver$Stub;-><init>()V
@@ -43,6 +44,7 @@
     .parameter "x1"
 
     .prologue
+    .line 292
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/ApplicationPolicy$ClearUserDataObserver;-><init>(Lcom/android/server/enterprise/ApplicationPolicy;)V
 
     return-void
@@ -56,23 +58,31 @@
     .parameter "succeeded"
 
     .prologue
+    .line 298
     monitor-enter p0
 
+    .line 299
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/enterprise/ApplicationPolicy$ClearUserDataObserver;->finished:Z
 
+    .line 300
     iput-object p1, p0, Lcom/android/server/enterprise/ApplicationPolicy$ClearUserDataObserver;->packageName:Ljava/lang/String;
 
+    .line 301
     iput-boolean p2, p0, Lcom/android/server/enterprise/ApplicationPolicy$ClearUserDataObserver;->success:Z
 
+    .line 302
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 303
     monitor-exit p0
 
+    .line 304
     return-void
 
+    .line 303
     :catchall_0
     move-exception v0
 

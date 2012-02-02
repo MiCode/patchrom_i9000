@@ -30,12 +30,15 @@
     .parameter "version"
 
     .prologue
+    .line 118
     iput-object p1, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 119
     iput p2, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->mThreadState:I
 
+    .line 120
     return-void
 .end method
 
@@ -45,18 +48,21 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 122
     iget-object v0, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     iget-object v0, v0, Landroid/database/sqlite/SQLiteCursor;->mNotificationHandler:Landroid/database/sqlite/SQLiteCursor$MainThreadNotificationHandler;
 
     if-eqz v0, :cond_0
 
+    .line 123
     iget-object v0, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     iget-object v0, v0, Landroid/database/sqlite/SQLiteCursor;->mNotificationHandler:Landroid/database/sqlite/SQLiteCursor$MainThreadNotificationHandler;
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteCursor$MainThreadNotificationHandler;->sendEmptyMessage(I)Z
 
+    .line 124
     iget-object v0, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     const/4 v1, 0x0
@@ -64,9 +70,11 @@
     #setter for: Landroid/database/sqlite/SQLiteCursor;->mPendingData:Z
     invoke-static {v0, v1}, Landroid/database/sqlite/SQLiteCursor;->access$002(Landroid/database/sqlite/SQLiteCursor;Z)Z
 
+    .line 129
     :goto_0
     return-void
 
+    .line 126
     :cond_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
@@ -82,6 +90,7 @@
     .locals 6
 
     .prologue
+    .line 132
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     #getter for: Landroid/database/AbstractWindowedCursor;->mWindow:Landroid/database/CursorWindow;
@@ -89,6 +98,7 @@
 
     move-result-object v1
 
+    .line 133
     .local v1, cw:Landroid/database/CursorWindow;
     invoke-static {}, Landroid/os/Process;->myTid()I
 
@@ -98,6 +108,7 @@
 
     invoke-static {v3, v4}, Landroid/os/Process;->setThreadPriority(II)V
 
+    .line 136
     :goto_0
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
@@ -108,6 +119,7 @@
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 137
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     #getter for: Landroid/database/sqlite/SQLiteCursor;->mCursorState:I
@@ -119,6 +131,7 @@
 
     if-eq v3, v4, :cond_0
 
+    .line 138
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     #getter for: Landroid/database/sqlite/SQLiteCursor;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
@@ -128,9 +141,11 @@
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 163
     :goto_1
     return-void
 
+    .line 142
     :cond_0
     :try_start_0
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
@@ -158,13 +173,16 @@
 
     move-result v0
 
+    .line 144
     .local v0, count:I
     if-eqz v0, :cond_2
 
+    .line 145
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_1
 
+    .line 146
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     iget-object v4, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
@@ -176,11 +194,13 @@
 
     invoke-static {v3, v4}, Landroid/database/sqlite/SQLiteCursor;->access$512(Landroid/database/sqlite/SQLiteCursor;I)I
 
+    .line 147
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteCursor$QueryThread;->sendMessage()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 160
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     #getter for: Landroid/database/sqlite/SQLiteCursor;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
@@ -192,6 +212,7 @@
 
     goto :goto_0
 
+    .line 149
     :cond_1
     :try_start_1
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
@@ -199,11 +220,13 @@
     #setter for: Landroid/database/sqlite/SQLiteCursor;->mCount:I
     invoke-static {v3, v0}, Landroid/database/sqlite/SQLiteCursor;->access$502(Landroid/database/sqlite/SQLiteCursor;I)I
 
+    .line 150
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteCursor$QueryThread;->sendMessage()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 160
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     #getter for: Landroid/database/sqlite/SQLiteCursor;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
@@ -217,11 +240,13 @@
 
     goto :goto_1
 
+    .line 156
     :catch_0
     move-exception v3
 
     move-object v2, v3
 
+    .line 160
     .local v2, e:Ljava/lang/Exception;
     iget-object v3, p0, Landroid/database/sqlite/SQLiteCursor$QueryThread;->this$0:Landroid/database/sqlite/SQLiteCursor;
 

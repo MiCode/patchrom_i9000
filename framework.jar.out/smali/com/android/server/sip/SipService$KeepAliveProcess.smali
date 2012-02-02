@@ -38,16 +38,20 @@
     .parameter "session"
 
     .prologue
+    .line 698
     iput-object p1, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->this$0:Lcom/android/server/sip/SipService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 696
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mRunning:Z
 
+    .line 699
     iput-object p2, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mSession:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
 
+    .line 700
     return-void
 .end method
 
@@ -57,10 +61,12 @@
     .locals 6
 
     .prologue
+    .line 710
     iget-object v2, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->this$0:Lcom/android/server/sip/SipService;
 
     monitor-enter v2
 
+    .line 711
     :try_start_0
     iget-boolean v3, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mRunning:Z
 
@@ -68,9 +74,11 @@
 
     monitor-exit v2
 
+    .line 728
     :goto_0
     return-void
 
+    .line 715
     :cond_0
     iget-object v3, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mSession:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
 
@@ -80,16 +88,19 @@
 
     move-result-object v0
 
+    .line 717
     .local v0, session:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
     :try_start_1
     invoke-virtual {v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->sendKeepAlive()V
 
+    .line 718
     invoke-virtual {v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->isReRegisterRequired()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 721
     iget-object v3, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->this$0:Lcom/android/server/sip/SipService;
 
     #getter for: Lcom/android/server/sip/SipService;->mMyWakeLock:Lcom/android/server/sip/SipWakeLock;
@@ -101,6 +112,7 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/sip/SipWakeLock;->acquire(Ljava/lang/Object;)V
 
+    .line 722
     iget-object v3, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mSession:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
 
     const/16 v4, 0xe10
@@ -110,6 +122,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 727
     :cond_1
     :goto_1
     :try_start_2
@@ -127,12 +140,14 @@
 
     throw v3
 
+    .line 724
     .restart local v0       #session:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 725
     .local v1, t:Ljava/lang/Throwable;
     :try_start_3
     const-string v3, "\\KEEPALIVE/"
@@ -166,18 +181,22 @@
     .locals 2
 
     .prologue
+    .line 703
     iget-boolean v0, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mRunning:Z
 
     if-eqz v0, :cond_0
 
+    .line 706
     :goto_0
     return-void
 
+    .line 704
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mRunning:Z
 
+    .line 705
     iget-object v0, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->this$0:Lcom/android/server/sip/SipService;
 
     #getter for: Lcom/android/server/sip/SipService;->mTimer:Lcom/android/server/sip/SipService$WakeupTimer;
@@ -196,14 +215,17 @@
     .locals 1
 
     .prologue
+    .line 733
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mRunning:Z
 
+    .line 734
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->mSession:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
 
+    .line 735
     iget-object v0, p0, Lcom/android/server/sip/SipService$KeepAliveProcess;->this$0:Lcom/android/server/sip/SipService;
 
     #getter for: Lcom/android/server/sip/SipService;->mTimer:Lcom/android/server/sip/SipService$WakeupTimer;
@@ -213,5 +235,6 @@
 
     invoke-virtual {v0, p0}, Lcom/android/server/sip/SipService$WakeupTimer;->cancel(Ljava/lang/Runnable;)V
 
+    .line 736
     return-void
 .end method

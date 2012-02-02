@@ -90,6 +90,7 @@
 
     const-string v5, "_id"
 
+    .line 134
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -102,6 +103,7 @@
 
     sput-object v0, Lcom/android/internal/widget/ContactHeaderWidget;->PHONE_LOOKUP_PROJECTION:[Ljava/lang/String;
 
+    .line 142
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "contact_id"
@@ -114,6 +116,7 @@
 
     sput-object v0, Lcom/android/internal/widget/ContactHeaderWidget;->EMAIL_LOOKUP_PROJECTION:[Ljava/lang/String;
 
+    .line 149
     new-array v0, v3, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -130,10 +133,12 @@
     .parameter "context"
 
     .prologue
+    .line 160
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/widget/ContactHeaderWidget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 161
     return-void
 .end method
 
@@ -143,10 +148,12 @@
     .parameter "attrs"
 
     .prologue
+    .line 164
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/widget/ContactHeaderWidget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 165
     return-void
 .end method
 
@@ -157,12 +164,15 @@
     .parameter "defStyle"
 
     .prologue
+    .line 168
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 80
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mExcludeMimes:[Ljava/lang/String;
 
+    .line 170
     iget-object v4, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -171,6 +181,7 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mContentResolver:Landroid/content/ContentResolver;
 
+    .line 172
     iget-object v4, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     const-string v5, "layout_inflater"
@@ -181,11 +192,13 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
+    .line 174
     .local v0, inflater:Landroid/view/LayoutInflater;
     const v4, 0x1090022
 
     invoke-virtual {v0, v4, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
+    .line 176
     const v4, 0x10201ad
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ContactHeaderWidget;->findViewById(I)Landroid/view/View;
@@ -196,6 +209,7 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mDisplayNameView:Landroid/widget/TextView;
 
+    .line 177
     const v4, 0x10201ac
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ContactHeaderWidget;->findViewById(I)Landroid/view/View;
@@ -204,6 +218,7 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mAggregateBadge:Landroid/view/View;
 
+    .line 179
     const v4, 0x10201ae
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ContactHeaderWidget;->findViewById(I)Landroid/view/View;
@@ -214,6 +229,7 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhoneticNameView:Landroid/widget/TextView;
 
+    .line 181
     const v4, 0x10201b2
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ContactHeaderWidget;->findViewById(I)Landroid/view/View;
@@ -224,10 +240,12 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStarredView:Landroid/widget/CheckBox;
 
+    .line 182
     iget-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStarredView:Landroid/widget/CheckBox;
 
     invoke-virtual {v4, p0}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 184
     const v4, 0x10201ab
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ContactHeaderWidget;->findViewById(I)Landroid/view/View;
@@ -238,6 +256,7 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhotoView:Landroid/widget/QuickContactBadge;
 
+    .line 186
     const v4, 0x10201b1
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ContactHeaderWidget;->findViewById(I)Landroid/view/View;
@@ -248,6 +267,7 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPresenceView:Landroid/widget/ImageView;
 
+    .line 188
     const v4, 0x10201af
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ContactHeaderWidget;->findViewById(I)Landroid/view/View;
@@ -258,6 +278,7 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusView:Landroid/widget/TextView;
 
+    .line 189
     const v4, 0x10201b0
 
     invoke-virtual {p0, v4}, Lcom/android/internal/widget/ContactHeaderWidget;->findViewById(I)Landroid/view/View;
@@ -268,40 +289,49 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusAttributionView:Landroid/widget/TextView;
 
+    .line 192
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
+    .line 193
     .local v1, now:J
     long-to-int v4, v1
 
     and-int/lit8 v3, v4, 0xf
 
+    .line 194
     .local v3, num:I
     const/16 v4, 0x9
 
     if-ge v3, v4, :cond_0
 
+    .line 196
     const v4, 0x10801a6
 
     iput v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mNoPhotoResource:I
 
+    .line 205
     :goto_0
     invoke-direct {p0}, Lcom/android/internal/widget/ContactHeaderWidget;->resetAsyncQueryHandler()V
 
+    .line 206
     return-void
 
+    .line 197
     :cond_0
     const/16 v4, 0xe
 
     if-ge v3, v4, :cond_1
 
+    .line 199
     const v4, 0x10801a7
 
     iput v4, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mNoPhotoResource:I
 
     goto :goto_0
 
+    .line 202
     :cond_1
     const v4, 0x10801a8
 
@@ -315,6 +345,7 @@
     .parameter "x0"
 
     .prologue
+    .line 63
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mQueryHandler:Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;
 
     return-object v0
@@ -326,6 +357,7 @@
     .parameter "x1"
 
     .prologue
+    .line 63
     invoke-direct {p0, p1}, Lcom/android/internal/widget/ContactHeaderWidget;->loadPlaceholderPhoto(Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -338,6 +370,7 @@
     .parameter "x0"
 
     .prologue
+    .line 63
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhotoView:Landroid/widget/QuickContactBadge;
 
     return-object v0
@@ -350,6 +383,7 @@
     .parameter "x2"
 
     .prologue
+    .line 63
     invoke-direct {p0, p1, p2}, Lcom/android/internal/widget/ContactHeaderWidget;->bindFromContactUriInternal(Landroid/net/Uri;Z)V
 
     return-void
@@ -361,10 +395,13 @@
     .parameter "resetQueryHandler"
 
     .prologue
+    .line 450
     iput-object p1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mContactUri:Landroid/net/Uri;
 
+    .line 451
     invoke-direct {p0, p1, p2}, Lcom/android/internal/widget/ContactHeaderWidget;->startContactQuery(Landroid/net/Uri;Z)V
 
+    .line 452
     return-void
 .end method
 
@@ -373,12 +410,15 @@
     .parameter "options"
 
     .prologue
+    .line 662
     iget v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mNoPhotoResource:I
 
     if-nez v0, :cond_0
 
+    .line 663
     const/4 v0, 0x0
 
+    .line 665
     :goto_0
     return-object v0
 
@@ -402,16 +442,19 @@
     .locals 2
 
     .prologue
+    .line 227
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mListener:Lcom/android/internal/widget/ContactHeaderWidget$ContactHeaderListener;
 
     if-eqz v0, :cond_0
 
+    .line 228
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mListener:Lcom/android/internal/widget/ContactHeaderWidget$ContactHeaderListener;
 
     iget-object v1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mDisplayNameView:Landroid/widget/TextView;
 
     invoke-interface {v0, v1}, Lcom/android/internal/widget/ContactHeaderWidget$ContactHeaderListener;->onDisplayNameClick(Landroid/view/View;)V
 
+    .line 230
     :cond_0
     return-void
 .end method
@@ -420,16 +463,19 @@
     .locals 2
 
     .prologue
+    .line 221
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mListener:Lcom/android/internal/widget/ContactHeaderWidget$ContactHeaderListener;
 
     if-eqz v0, :cond_0
 
+    .line 222
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mListener:Lcom/android/internal/widget/ContactHeaderWidget$ContactHeaderListener;
 
     iget-object v1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhotoView:Landroid/widget/QuickContactBadge;
 
     invoke-interface {v0, v1}, Lcom/android/internal/widget/ContactHeaderWidget$ContactHeaderListener;->onPhotoClick(Landroid/view/View;)V
 
+    .line 224
     :cond_0
     return-void
 .end method
@@ -438,6 +484,7 @@
     .locals 2
 
     .prologue
+    .line 541
     new-instance v0, Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;
 
     iget-object v1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mContentResolver:Landroid/content/ContentResolver;
@@ -446,6 +493,7 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mQueryHandler:Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;
 
+    .line 542
     return-void
 .end method
 
@@ -457,10 +505,13 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 495
     if-eqz p2, :cond_0
 
+    .line 496
     invoke-direct {p0}, Lcom/android/internal/widget/ContactHeaderWidget;->resetAsyncQueryHandler()V
 
+    .line 499
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mQueryHandler:Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;
 
@@ -478,6 +529,7 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 501
     return-void
 .end method
 
@@ -488,6 +540,7 @@
     .parameter "c"
 
     .prologue
+    .line 548
     const/4 v5, 0x3
 
     move-object/from16 v0, p1
@@ -498,6 +551,7 @@
 
     move-result-object v11
 
+    .line 549
     .local v11, displayName:Ljava/lang/String;
     const/4 v5, 0x4
 
@@ -509,6 +563,7 @@
 
     move-result-object v15
 
+    .line 550
     .local v15, phoneticName:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -518,6 +573,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/widget/ContactHeaderWidget;->setDisplayName(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
+    .line 552
     const/4 v5, 0x5
 
     move-object/from16 v0, p1
@@ -534,6 +590,7 @@
 
     move/from16 v20, v5
 
+    .line 553
     .local v20, starred:Z
     :goto_0
     move-object/from16 v0, p0
@@ -548,6 +605,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
+    .line 556
     const/4 v5, 0x6
 
     move-object/from16 v0, p1
@@ -560,6 +618,7 @@
 
     if-nez v5, :cond_3
 
+    .line 557
     const/4 v5, 0x6
 
     move-object/from16 v0, p1
@@ -570,6 +629,7 @@
 
     move-result v17
 
+    .line 558
     .local v17, presence:I
     move-object/from16 v0, p0
 
@@ -583,6 +643,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 559
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/ContactHeaderWidget;->mPresenceView:Landroid/widget/ImageView;
@@ -593,6 +654,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 565
     .end local v17           #presence:I
     :goto_1
     const/4 v5, 0x7
@@ -605,6 +667,7 @@
 
     move-result-object v21
 
+    .line 566
     .local v21, status:Ljava/lang/String;
     invoke-static/range {v21 .. v21}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -612,6 +675,7 @@
 
     if-nez v5, :cond_9
 
+    .line 567
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusView:Landroid/widget/TextView;
@@ -624,6 +688,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 568
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusView:Landroid/widget/TextView;
@@ -634,8 +699,10 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 570
     const/16 v22, 0x0
 
+    .line 572
     .local v22, timestamp:Ljava/lang/CharSequence;
     const/16 v5, 0x8
 
@@ -649,6 +716,7 @@
 
     if-nez v5, :cond_0
 
+    .line 573
     const/16 v5, 0x8
 
     move-object/from16 v0, p1
@@ -659,9 +727,11 @@
 
     move-result-wide v3
 
+    .line 577
     .local v3, date:J
     const/high16 v9, 0x4
 
+    .line 579
     .local v9, flags:I
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -673,11 +743,13 @@
 
     move-result-object v22
 
+    .line 583
     .end local v3           #date:J
     .end local v9           #flags:I
     :cond_0
     const/4 v13, 0x0
 
+    .line 585
     .local v13, label:Ljava/lang/String;
     const/16 v5, 0xa
 
@@ -691,6 +763,7 @@
 
     if-nez v5, :cond_1
 
+    .line 586
     const/16 v5, 0x9
 
     move-object/from16 v0, p1
@@ -701,6 +774,7 @@
 
     move-result-object v18
 
+    .line 587
     .local v18, resPackage:Ljava/lang/String;
     const/16 v5, 0xa
 
@@ -712,6 +786,7 @@
 
     move-result v14
 
+    .line 589
     .local v14, labelResource:I
     invoke-static/range {v18 .. v18}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -719,14 +794,17 @@
 
     if-eqz v5, :cond_4
 
+    .line 590
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/ContactHeaderWidget;->getResources()Landroid/content/res/Resources;
 
     move-result-object v19
 
+    .line 602
     .local v19, resources:Landroid/content/res/Resources;
     :goto_2
     if-eqz v19, :cond_1
 
+    .line 604
     :try_start_0
     move-object/from16 v0, v19
 
@@ -738,6 +816,7 @@
 
     move-result-object v13
 
+    .line 613
     .end local v14           #labelResource:I
     .end local v18           #resPackage:Ljava/lang/String;
     .end local v19           #resources:Landroid/content/res/Resources;
@@ -747,6 +826,7 @@
 
     if-eqz v13, :cond_5
 
+    .line 614
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/ContactHeaderWidget;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -769,10 +849,12 @@
 
     move-result-object v10
 
+    .line 626
     .local v10, attribution:Ljava/lang/CharSequence;
     :goto_4
     if-eqz v10, :cond_8
 
+    .line 627
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusAttributionView:Landroid/widget/TextView;
@@ -781,6 +863,7 @@
 
     invoke-virtual {v5, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 628
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusAttributionView:Landroid/widget/TextView;
@@ -791,12 +874,14 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 636
     .end local v10           #attribution:Ljava/lang/CharSequence;
     .end local v13           #label:Ljava/lang/String;
     .end local v22           #timestamp:Ljava/lang/CharSequence;
     :goto_5
     return-void
 
+    .line 552
     .end local v20           #starred:Z
     .end local v21           #status:Ljava/lang/String;
     :cond_2
@@ -806,6 +891,7 @@
 
     goto/16 :goto_0
 
+    .line 561
     .restart local v20       #starred:Z
     :cond_3
     move-object/from16 v0, p0
@@ -820,6 +906,7 @@
 
     goto/16 :goto_1
 
+    .line 592
     .restart local v13       #label:Ljava/lang/String;
     .restart local v14       #labelResource:I
     .restart local v18       #resPackage:Ljava/lang/String;
@@ -834,6 +921,7 @@
 
     move-result-object v16
 
+    .line 594
     .local v16, pm:Landroid/content/pm/PackageManager;
     :try_start_1
     move-object/from16 v0, v16
@@ -849,10 +937,12 @@
     .restart local v19       #resources:Landroid/content/res/Resources;
     goto :goto_2
 
+    .line 595
     .end local v19           #resources:Landroid/content/res/Resources;
     :catch_0
     move-exception v12
 
+    .line 596
     .local v12, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v5, "ContactHeaderWidget"
 
@@ -880,16 +970,19 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 598
     const/16 v19, 0x0
 
     .restart local v19       #resources:Landroid/content/res/Resources;
     goto :goto_2
 
+    .line 605
     .end local v12           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v16           #pm:Landroid/content/pm/PackageManager;
     :catch_1
     move-exception v12
 
+    .line 606
     .local v12, e:Landroid/content/res/Resources$NotFoundException;
     const-string v5, "ContactHeaderWidget"
 
@@ -929,6 +1022,7 @@
 
     goto/16 :goto_3
 
+    .line 617
     .end local v12           #e:Landroid/content/res/Resources$NotFoundException;
     .end local v14           #labelResource:I
     .end local v18           #resPackage:Ljava/lang/String;
@@ -938,6 +1032,7 @@
 
     if-eqz v13, :cond_6
 
+    .line 618
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/ContactHeaderWidget;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -959,15 +1054,18 @@
     .restart local v10       #attribution:Ljava/lang/CharSequence;
     goto/16 :goto_4
 
+    .line 621
     .end local v10           #attribution:Ljava/lang/CharSequence;
     :cond_6
     if-eqz v22, :cond_7
 
+    .line 622
     move-object/from16 v10, v22
 
     .restart local v10       #attribution:Ljava/lang/CharSequence;
     goto/16 :goto_4
 
+    .line 624
     .end local v10           #attribution:Ljava/lang/CharSequence;
     :cond_7
     const/4 v10, 0x0
@@ -975,6 +1073,7 @@
     .restart local v10       #attribution:Ljava/lang/CharSequence;
     goto/16 :goto_4
 
+    .line 630
     :cond_8
     move-object/from16 v0, p0
 
@@ -988,6 +1087,7 @@
 
     goto/16 :goto_5
 
+    .line 633
     .end local v10           #attribution:Ljava/lang/CharSequence;
     .end local v13           #label:Ljava/lang/String;
     .end local v22           #timestamp:Ljava/lang/CharSequence;
@@ -1002,6 +1102,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 634
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusAttributionView:Landroid/widget/TextView;
@@ -1020,10 +1121,12 @@
     .parameter "contactLookupUri"
 
     .prologue
+    .line 439
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/widget/ContactHeaderWidget;->bindFromContactUriInternal(Landroid/net/Uri;Z)V
 
+    .line 440
     return-void
 .end method
 
@@ -1034,8 +1137,10 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 463
     invoke-direct {p0}, Lcom/android/internal/widget/ContactHeaderWidget;->resetAsyncQueryHandler()V
 
+    .line 465
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mQueryHandler:Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;
 
     const/4 v1, 0x2
@@ -1060,6 +1165,7 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 468
     return-void
 .end method
 
@@ -1070,8 +1176,10 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 479
     invoke-direct {p0}, Lcom/android/internal/widget/ContactHeaderWidget;->resetAsyncQueryHandler()V
 
+    .line 481
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mQueryHandler:Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;
 
     const/4 v1, 0x1
@@ -1096,6 +1204,7 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 484
     return-void
 .end method
 
@@ -1103,14 +1212,17 @@
     .locals 1
 
     .prologue
+    .line 209
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mDisplayNameView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 210
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhotoView:Landroid/widget/QuickContactBadge;
 
     invoke-virtual {v0, p0}, Landroid/widget/QuickContactBadge;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 211
     return-void
 .end method
 
@@ -1121,29 +1233,34 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 639
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v1
 
     sparse-switch v1, :sswitch_data_0
 
+    .line 659
     :cond_0
     :goto_0
     return-void
 
+    .line 643
     :sswitch_0
     iget-object v1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mContactUri:Landroid/net/Uri;
 
     if-eqz v1, :cond_0
 
+    .line 644
     new-instance v0, Landroid/content/ContentValues;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Landroid/content/ContentValues;-><init>(I)V
 
+    .line 645
     .local v0, values:Landroid/content/ContentValues;
-    const-string v1, "starred"
+    const-string/jumbo v1, "starred"
 
     iget-object v2, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStarredView:Landroid/widget/CheckBox;
 
@@ -1157,6 +1274,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
+    .line 646
     iget-object v1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v2, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mContactUri:Landroid/net/Uri;
@@ -1165,17 +1283,20 @@
 
     goto :goto_0
 
+    .line 651
     .end local v0           #values:Landroid/content/ContentValues;
     :sswitch_1
     invoke-direct {p0}, Lcom/android/internal/widget/ContactHeaderWidget;->performPhotoClick()V
 
     goto :goto_0
 
+    .line 655
     :sswitch_2
     invoke-direct {p0}, Lcom/android/internal/widget/ContactHeaderWidget;->performDisplayNameClick()V
 
     goto :goto_0
 
+    .line 639
     nop
 
     :sswitch_data_0
@@ -1191,8 +1312,10 @@
     .parameter "listener"
 
     .prologue
+    .line 217
     iput-object p1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mListener:Lcom/android/internal/widget/ContactHeaderWidget$ContactHeaderListener;
 
+    .line 218
     return-void
 .end method
 
@@ -1201,10 +1324,12 @@
     .parameter "uri"
 
     .prologue
+    .line 374
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/widget/ContactHeaderWidget;->setContactUri(Landroid/net/Uri;Z)V
 
+    .line 375
     return-void
 .end method
 
@@ -1214,14 +1339,18 @@
     .parameter "sendToFastrack"
 
     .prologue
+    .line 381
     iput-object p1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mContactUri:Landroid/net/Uri;
 
+    .line 382
     if-eqz p2, :cond_0
 
+    .line 383
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhotoView:Landroid/widget/QuickContactBadge;
 
     invoke-virtual {v0, p1}, Landroid/widget/QuickContactBadge;->assignContactUri(Landroid/net/Uri;)V
 
+    .line 385
     :cond_0
     return-void
 .end method
@@ -1232,29 +1361,35 @@
     .parameter "phoneticName"
 
     .prologue
+    .line 400
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mDisplayNameView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 401
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 402
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhoneticNameView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 403
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhoneticNameView:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 407
     :goto_0
     return-void
 
+    .line 405
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhoneticNameView:Landroid/widget/TextView;
 
@@ -1270,12 +1405,15 @@
     .parameter "excludeMimes"
 
     .prologue
+    .line 428
     iput-object p1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mExcludeMimes:[Ljava/lang/String;
 
+    .line 429
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhotoView:Landroid/widget/QuickContactBadge;
 
     invoke-virtual {v0, p1}, Landroid/widget/QuickContactBadge;->setExcludeMimes([Ljava/lang/String;)V
 
+    .line 430
     return-void
 .end method
 
@@ -1284,10 +1422,12 @@
     .parameter "bitmap"
 
     .prologue
+    .line 392
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhotoView:Landroid/widget/QuickContactBadge;
 
     invoke-virtual {v0, p1}, Landroid/widget/QuickContactBadge;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
+    .line 393
     return-void
 .end method
 
@@ -1296,6 +1436,7 @@
     .parameter "presence"
 
     .prologue
+    .line 367
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPresenceView:Landroid/widget/ImageView;
 
     invoke-static {p1}, Landroid/provider/ContactsContract$StatusUpdates;->getPresenceIconResourceId(I)I
@@ -1304,6 +1445,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 368
     return-void
 .end method
 
@@ -1312,10 +1454,12 @@
     .parameter "value"
 
     .prologue
+    .line 338
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mPhotoView:Landroid/widget/QuickContactBadge;
 
     invoke-virtual {v0, p1}, Landroid/widget/QuickContactBadge;->setSelectedContactsAppTabIndex(I)V
 
+    .line 339
     return-void
 .end method
 
@@ -1326,24 +1470,30 @@
     .prologue
     const/16 v1, 0x8
 
+    .line 413
     if-nez p1, :cond_0
 
+    .line 414
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 415
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusAttributionView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 420
     :goto_0
     return-void
 
+    .line 417
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 418
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStatusView:Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1358,10 +1508,12 @@
     .parameter "starred"
 
     .prologue
+    .line 360
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStarredView:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, p1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
+    .line 361
     return-void
 .end method
 
@@ -1370,6 +1522,7 @@
     .parameter "showBagde"
 
     .prologue
+    .line 345
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mAggregateBadge:Landroid/view/View;
 
     if-eqz p1, :cond_0
@@ -1379,8 +1532,10 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 346
     return-void
 
+    .line 345
     :cond_0
     const/16 v1, 0x8
 
@@ -1392,6 +1547,7 @@
     .parameter "showStar"
 
     .prologue
+    .line 352
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mStarredView:Landroid/widget/CheckBox;
 
     if-eqz p1, :cond_0
@@ -1401,8 +1557,10 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setVisibility(I)V
 
+    .line 353
     return-void
 
+    .line 352
     :cond_0
     const/16 v1, 0x8
 
@@ -1418,10 +1576,13 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 513
     if-eqz p4, :cond_0
 
+    .line 514
     invoke-direct {p0}, Lcom/android/internal/widget/ContactHeaderWidget;->resetAsyncQueryHandler()V
 
+    .line 517
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mQueryHandler:Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;
 
@@ -1443,6 +1604,7 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/android/internal/widget/ContactHeaderWidget$QueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 520
     return-void
 .end method
 
@@ -1452,25 +1614,33 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 527
     invoke-direct {p0}, Lcom/android/internal/widget/ContactHeaderWidget;->resetAsyncQueryHandler()V
 
+    .line 529
     invoke-virtual {p0, v1, v1}, Lcom/android/internal/widget/ContactHeaderWidget;->setDisplayName(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
+    .line 530
     invoke-direct {p0, v1}, Lcom/android/internal/widget/ContactHeaderWidget;->loadPlaceholderPhoto(Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ContactHeaderWidget;->setPhoto(Landroid/graphics/Bitmap;)V
 
+    .line 531
     invoke-virtual {p0, v1}, Lcom/android/internal/widget/ContactHeaderWidget;->setSocialSnippet(Ljava/lang/CharSequence;)V
 
+    .line 532
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ContactHeaderWidget;->setPresence(I)V
 
+    .line 533
     iput-object v1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mContactUri:Landroid/net/Uri;
 
+    .line 534
     iput-object v1, p0, Lcom/android/internal/widget/ContactHeaderWidget;->mExcludeMimes:[Ljava/lang/String;
 
+    .line 535
     return-void
 .end method

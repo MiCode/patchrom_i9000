@@ -33,14 +33,17 @@
     .parameter "viewRoot"
 
     .prologue
+    .line 3077
     invoke-direct {p0}, Lcom/android/internal/view/IInputMethodCallback$Stub;-><init>()V
 
+    .line 3078
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/view/ViewRoot$InputMethodCallback;->mViewRoot:Ljava/lang/ref/WeakReference;
 
+    .line 3079
     return-void
 .end method
 
@@ -52,6 +55,7 @@
     .parameter "handled"
 
     .prologue
+    .line 3082
     iget-object v1, p0, Landroid/view/ViewRoot$InputMethodCallback;->mViewRoot:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -60,11 +64,14 @@
 
     check-cast v0, Landroid/view/ViewRoot;
 
+    .line 3083
     .local v0, viewRoot:Landroid/view/ViewRoot;
     if-eqz v0, :cond_0
 
+    .line 3084
     invoke-virtual {v0, p1, p2}, Landroid/view/ViewRoot;->dispatchFinishedEvent(IZ)V
 
+    .line 3086
     :cond_0
     return-void
 .end method
@@ -79,5 +86,6 @@
     .end annotation
 
     .prologue
+    .line 3090
     return-void
 .end method

@@ -101,6 +101,7 @@
     .locals 1
 
     .prologue
+    .line 126
     const-string v0, "broadcom.android.bluetooth.intent.action."
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -116,6 +117,7 @@
     .locals 0
 
     .prologue
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -135,8 +137,10 @@
     .prologue
     const-string v1, "broadcom.android.bluetooth.intent.action.BT_SERVICE_ACCESS"
 
+    .line 207
     if-nez p0, :cond_0
 
+    .line 208
     new-instance p0, Landroid/content/Intent;
 
     .end local p0
@@ -144,42 +148,51 @@
 
     invoke-direct {p0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 212
     .restart local p0
     :goto_0
     const-string v0, "SVC_NAME"
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 213
     const-string v0, "RMT_DEV_NAME"
 
     invoke-virtual {p0, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 214
     const-string v0, "RMT_DEV_ADDR"
 
     invoke-virtual {p0, v0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 215
     const-string v0, "OPERATION"
 
     int-to-byte v1, p4
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;B)Landroid/content/Intent;
 
+    .line 216
     const-string v0, "FORMAT"
 
     int-to-byte v1, p5
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;B)Landroid/content/Intent;
 
+    .line 217
     const-string v0, "FILEPATH"
 
     invoke-virtual {p0, v0, p6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 218
     const-string v0, "TOTAL_BYTES"
 
     invoke-virtual {p0, v0, p7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 219
     return-object p0
 
+    .line 210
     :cond_0
     const-string v0, "broadcom.android.bluetooth.intent.action.BT_SERVICE_ACCESS"
 
@@ -194,20 +207,24 @@
     .parameter "state"
 
     .prologue
+    .line 230
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "broadcom.bt.intent.action.BT_SVC_STATE_CHANGE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 231
     .local v0, i:Landroid/content/Intent;
     const-string v1, "bt_svc_name"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 232
     const-string v1, "bt_svc_state"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 233
     return-object v0
 .end method

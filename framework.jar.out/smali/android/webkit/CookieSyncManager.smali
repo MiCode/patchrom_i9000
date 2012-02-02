@@ -17,10 +17,12 @@
     .parameter "context"
 
     .prologue
+    .line 69
     const-string v0, "CookieSyncManager"
 
     invoke-direct {p0, p1, v0}, Landroid/webkit/WebSyncManager;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
+    .line 70
     return-void
 .end method
 
@@ -29,6 +31,7 @@
     .parameter "context"
 
     .prologue
+    .line 95
     const-class v0, Landroid/webkit/CookieSyncManager;
 
     monitor-enter v0
@@ -38,6 +41,7 @@
 
     if-nez v1, :cond_0
 
+    .line 96
     new-instance v1, Landroid/webkit/CookieSyncManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -48,6 +52,7 @@
 
     sput-object v1, Landroid/webkit/CookieSyncManager;->sRef:Landroid/webkit/CookieSyncManager;
 
+    .line 98
     :cond_0
     sget-object v1, Landroid/webkit/CookieSyncManager;->sRef:Landroid/webkit/CookieSyncManager;
     :try_end_0
@@ -57,6 +62,7 @@
 
     return-object v1
 
+    .line 95
     :catchall_0
     move-exception v1
 
@@ -69,6 +75,7 @@
     .locals 3
 
     .prologue
+    .line 80
     const-class v0, Landroid/webkit/CookieSyncManager;
 
     monitor-enter v0
@@ -78,6 +85,7 @@
 
     if-nez v1, :cond_0
 
+    .line 81
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "CookieSyncManager::createInstance() needs to be called before CookieSyncManager::getInstance()"
@@ -88,6 +96,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 80
     :catchall_0
     move-exception v1
 
@@ -95,6 +104,7 @@
 
     throw v1
 
+    .line 85
     :cond_0
     :try_start_1
     sget-object v1, Landroid/webkit/CookieSyncManager;->sRef:Landroid/webkit/CookieSyncManager;
@@ -120,11 +130,13 @@
     .end annotation
 
     .prologue
+    .line 196
     .local p1, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
+    .line 197
     .local v1, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/webkit/CookieManager$Cookie;>;"
     :cond_0
     :goto_0
@@ -134,12 +146,14 @@
 
     if-eqz v2, :cond_3
 
+    .line 198
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/webkit/CookieManager$Cookie;
 
+    .line 199
     .local v0, cookie:Landroid/webkit/CookieManager$Cookie;
     iget-byte v2, v0, Landroid/webkit/CookieManager$Cookie;->mode:B
 
@@ -147,10 +161,12 @@
 
     if-eq v2, v3, :cond_0
 
+    .line 200
     iget-byte v2, v0, Landroid/webkit/CookieManager$Cookie;->mode:B
 
     if-eqz v2, :cond_1
 
+    .line 201
     iget-object v2, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     iget-object v3, v0, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
@@ -161,6 +177,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/webkit/WebViewDatabase;->deleteCookies(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 204
     :cond_1
     iget-byte v2, v0, Landroid/webkit/CookieManager$Cookie;->mode:B
 
@@ -168,10 +185,12 @@
 
     if-eq v2, v3, :cond_2
 
+    .line 205
     iget-object v2, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v2, v0}, Landroid/webkit/WebViewDatabase;->addCookie(Landroid/webkit/CookieManager$Cookie;)V
 
+    .line 206
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v2
@@ -180,6 +199,7 @@
 
     goto :goto_0
 
+    .line 208
     :cond_2
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
@@ -189,6 +209,7 @@
 
     goto :goto_0
 
+    .line 212
     .end local v0           #cookie:Landroid/webkit/CookieManager$Cookie;
     :cond_3
     return-void
@@ -200,13 +221,16 @@
     .locals 1
 
     .prologue
+    .line 124
     iget-object v0, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     if-nez v0, :cond_0
 
+    .line 129
     :goto_0
     return-void
 
+    .line 128
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
@@ -220,13 +244,16 @@
     .parameter "now"
 
     .prologue
+    .line 165
     iget-object v0, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     if-nez v0, :cond_0
 
+    .line 170
     :goto_0
     return-void
 
+    .line 169
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
@@ -239,13 +266,16 @@
     .locals 1
 
     .prologue
+    .line 151
     iget-object v0, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     if-nez v0, :cond_0
 
+    .line 156
     :goto_0
     return-void
 
+    .line 155
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
@@ -270,14 +300,17 @@
     .end annotation
 
     .prologue
+    .line 110
     iget-object v0, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     if-nez v0, :cond_0
 
+    .line 111
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 114
     :goto_0
     return-object v0
 
@@ -295,12 +328,15 @@
     .locals 1
 
     .prologue
+    .line 137
     iget-object v0, p0, Landroid/webkit/WebSyncManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     if-nez v0, :cond_0
 
+    .line 138
     const/4 v0, 0x0
 
+    .line 141
     :goto_0
     return v0
 
@@ -318,6 +354,7 @@
     .locals 0
 
     .prologue
+    .line 61
     invoke-super {p0}, Landroid/webkit/WebSyncManager;->resetSync()V
 
     return-void
@@ -327,6 +364,7 @@
     .locals 0
 
     .prologue
+    .line 61
     invoke-super {p0}, Landroid/webkit/WebSyncManager;->run()V
 
     return-void
@@ -336,6 +374,7 @@
     .locals 0
 
     .prologue
+    .line 61
     invoke-super {p0}, Landroid/webkit/WebSyncManager;->startSync()V
 
     return-void
@@ -345,6 +384,7 @@
     .locals 0
 
     .prologue
+    .line 61
     invoke-super {p0}, Landroid/webkit/WebSyncManager;->stopSync()V
 
     return-void
@@ -354,6 +394,7 @@
     .locals 0
 
     .prologue
+    .line 61
     invoke-super {p0}, Landroid/webkit/WebSyncManager;->sync()V
 
     return-void
@@ -363,6 +404,7 @@
     .locals 5
 
     .prologue
+    .line 177
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v2
@@ -373,9 +415,11 @@
 
     if-nez v2, :cond_0
 
+    .line 193
     :goto_0
     return-void
 
+    .line 181
     :cond_0
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
@@ -387,6 +431,7 @@
 
     move-result-object v0
 
+    .line 183
     .local v0, cookieList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;"
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -394,8 +439,10 @@
 
     iput-wide v2, p0, Landroid/webkit/CookieSyncManager;->mLastUpdate:J
 
+    .line 184
     invoke-direct {p0, v0}, Landroid/webkit/CookieSyncManager;->syncFromRamToFlash(Ljava/util/ArrayList;)V
 
+    .line 186
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v2
@@ -404,6 +451,7 @@
 
     move-result-object v1
 
+    .line 188
     .local v1, lruList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;"
     invoke-direct {p0, v1}, Landroid/webkit/CookieSyncManager;->syncFromRamToFlash(Ljava/util/ArrayList;)V
 

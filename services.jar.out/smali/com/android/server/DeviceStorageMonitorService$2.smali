@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 137
     iput-object p1, p0, Lcom/android/server/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/DeviceStorageMonitorService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,19 +41,23 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 141
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eq v0, v2, :cond_0
 
+    .line 142
     const-string v0, "DeviceStorageMonitorService"
 
     const-string v1, "Will not process invalid message"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 146
     :goto_0
     return-void
 
+    .line 145
     :cond_0
     iget-object v0, p0, Lcom/android/server/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/DeviceStorageMonitorService;
 

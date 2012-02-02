@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 102
     iput-object p1, p0, Landroid/webkit/ViewManager$ChildView$2;->this$1:Landroid/webkit/ViewManager$ChildView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +41,12 @@
     .locals 1
 
     .prologue
+    .line 104
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView$2;->this$1:Landroid/webkit/ViewManager$ChildView;
 
     #calls: Landroid/webkit/ViewManager$ChildView;->removeViewOnUIThread()V
     invoke-static {v0}, Landroid/webkit/ViewManager$ChildView;->access$500(Landroid/webkit/ViewManager$ChildView;)V
 
+    .line 105
     return-void
 .end method

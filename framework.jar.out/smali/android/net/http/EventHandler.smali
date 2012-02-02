@@ -44,6 +44,7 @@
     .locals 1
 
     .prologue
+    .line 71
     const/16 v0, 0x10
 
     new-array v0, v0, [I

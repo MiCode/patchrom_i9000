@@ -63,6 +63,7 @@
     .locals 4
 
     .prologue
+    .line 87
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -91,28 +92,35 @@
     .parameter "c"
 
     .prologue
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 98
     iput-object p1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mContext:Landroid/content/Context;
 
+    .line 100
     const-string v1, "bluetooth_hid"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
+    .line 101
     .local v0, b:Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
+    .line 102
     invoke-static {v0}, Lcom/broadcom/bt/service/hid/IBluetoothHID$Stub;->asInterface(Landroid/os/IBinder;)Lcom/broadcom/bt/service/hid/IBluetoothHID;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
 
+    .line 110
     :goto_0
     return-void
 
+    .line 104
     :cond_0
     const-string v1, "BluetoothHID"
 
@@ -120,6 +128,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 108
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
@@ -136,6 +145,7 @@
     .prologue
     const-string v3, "BluetoothHID"
 
+    .line 119
     const-string v1, "BluetoothHID"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -164,6 +174,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 121
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
 
@@ -173,14 +184,17 @@
 
     move-result v1
 
+    .line 124
     :goto_0
     return v1
 
+    .line 122
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 123
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHID"
 
@@ -188,6 +202,7 @@
 
     invoke-static {v3, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 124
     const/4 v1, 0x0
 
     goto :goto_0
@@ -200,6 +215,7 @@
     .prologue
     const-string v3, "BluetoothHID"
 
+    .line 135
     const-string v1, "BluetoothHID"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -228,6 +244,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 137
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
 
@@ -235,14 +252,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 141
     :goto_0
     return-void
 
+    .line 138
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 139
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHID"
 
@@ -266,6 +286,7 @@
     .end annotation
 
     .prologue
+    .line 243
     :try_start_0
     new-instance v1, Ljava/util/HashSet;
 
@@ -287,14 +308,17 @@
 
     move-result-object v1
 
+    .line 247
     :goto_0
     return-object v1
 
+    .line 245
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 246
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHID"
 
@@ -302,6 +326,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 247
     const/4 v1, 0x0
 
     goto :goto_0
@@ -312,6 +337,7 @@
     .parameter "device"
 
     .prologue
+    .line 205
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
 
@@ -321,14 +347,17 @@
 
     move-result v1
 
+    .line 208
     :goto_0
     return v1
 
+    .line 206
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 207
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHID"
 
@@ -336,6 +365,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 208
     const/4 v1, 0x0
 
     goto :goto_0
@@ -348,13 +378,16 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 253
     if-nez p1, :cond_0
 
     move v1, v4
 
+    .line 262
     :goto_0
     return v1
 
+    .line 258
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
@@ -363,15 +396,18 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 259
     const/4 v1, 0x1
 
     goto :goto_0
 
+    .line 260
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 261
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothHID"
 
@@ -403,6 +439,7 @@
 
     move v1, v4
 
+    .line 262
     goto :goto_0
 .end method
 
@@ -418,6 +455,7 @@
 
     const/4 v4, 0x0
 
+    .line 281
     if-eqz p1, :cond_0
 
     if-lt p2, v2, :cond_0
@@ -429,9 +467,11 @@
     :cond_0
     move v1, v4
 
+    .line 290
     :goto_0
     return v1
 
+    .line 286
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
@@ -442,13 +482,16 @@
 
     move v1, v2
 
+    .line 287
     goto :goto_0
 
+    .line 288
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 289
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothHID"
 
@@ -480,6 +523,7 @@
 
     move v1, v4
 
+    .line 290
     goto :goto_0
 .end method
 
@@ -488,6 +532,7 @@
     .parameter "device"
 
     .prologue
+    .line 175
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
 
@@ -497,14 +542,17 @@
 
     move-result v1
 
+    .line 178
     :goto_0
     return v1
 
+    .line 176
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 177
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHID"
 
@@ -512,6 +560,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 178
     const/4 v1, 0x0
 
     goto :goto_0
@@ -522,10 +571,12 @@
     .parameter "device"
 
     .prologue
+    .line 164
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/hid/BluetoothHID;->getState(Landroid/bluetooth/BluetoothDevice;)I
 
     move-result v0
 
+    .line 165
     .local v0, state:I
     const/4 v1, 0x2
 
@@ -550,6 +601,7 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 310
     if-eqz p1, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -561,9 +613,11 @@
     :cond_0
     move v1, v4
 
+    .line 319
     :goto_0
     return v1
 
+    .line 315
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
@@ -572,15 +626,18 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 316
     const/4 v1, 0x1
 
     goto :goto_0
 
+    .line 317
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 318
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothHID"
 
@@ -612,6 +669,7 @@
 
     move v1, v4
 
+    .line 319
     goto :goto_0
 .end method
 
@@ -621,6 +679,7 @@
     .parameter "priority"
 
     .prologue
+    .line 192
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
 
@@ -630,14 +689,17 @@
 
     move-result v1
 
+    .line 195
     :goto_0
     return v1
 
+    .line 193
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 194
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHID"
 
@@ -645,6 +707,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 195
     const/4 v1, 0x0
 
     goto :goto_0
@@ -658,6 +721,7 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 267
     if-eqz p1, :cond_0
 
     if-gez p2, :cond_1
@@ -665,9 +729,11 @@
     :cond_0
     move v1, v4
 
+    .line 276
     :goto_0
     return v1
 
+    .line 272
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
@@ -676,15 +742,18 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 273
     const/4 v1, 0x1
 
     goto :goto_0
 
+    .line 274
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 275
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothHID"
 
@@ -716,6 +785,7 @@
 
     move v1, v4
 
+    .line 276
     goto :goto_0
 .end method
 
@@ -730,6 +800,7 @@
 
     const/4 v4, 0x0
 
+    .line 295
     if-eqz p1, :cond_0
 
     if-lt p2, v2, :cond_0
@@ -747,9 +818,11 @@
     :cond_0
     move v1, v4
 
+    .line 304
     :goto_0
     return v1
 
+    .line 300
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
@@ -760,13 +833,16 @@
 
     move v1, v2
 
+    .line 301
     goto :goto_0
 
+    .line 302
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 303
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothHID"
 
@@ -798,6 +874,7 @@
 
     move v1, v4
 
+    .line 304
     goto :goto_0
 .end method
 
@@ -808,13 +885,16 @@
     .prologue
     const/4 v7, 0x0
 
+    .line 218
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 219
     .local v2, deviceName:Ljava/lang/String;
     if-eqz v2, :cond_1
 
+    .line 220
     sget-object v5, Lcom/broadcom/bt/service/hid/BluetoothHID;->HOST_SHOULD_NOT_CONNECT_BLACK_LIST:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -835,6 +915,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 221
     .local v1, blacklistName:Ljava/lang/String;
     invoke-virtual {v2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -844,11 +925,13 @@
 
     move v5, v7
 
+    .line 233
     .end local v1           #blacklistName:Ljava/lang/String;
     .end local v4           #i$:Ljava/util/Iterator;
     :goto_0
     return v5
 
+    .line 228
     :cond_1
     :try_start_0
     iget-object v5, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
@@ -859,6 +942,7 @@
 
     move-result v0
 
+    .line 229
     .local v0, attrMask:I
     and-int/lit8 v5, v0, 0x4
 
@@ -878,12 +962,14 @@
 
     goto :goto_0
 
+    .line 231
     .end local v0           #attrMask:I
     :catch_0
     move-exception v5
 
     move-object v3, v5
 
+    .line 232
     .local v3, e:Landroid/os/RemoteException;
     const-string v5, "BluetoothHID"
 
@@ -893,6 +979,7 @@
 
     move v5, v7
 
+    .line 233
     goto :goto_0
 .end method
 
@@ -903,13 +990,14 @@
     .prologue
     const-string v3, "BluetoothHID"
 
+    .line 150
     const-string v1, "BluetoothHID"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "virtualUnplug("
+    const-string/jumbo v2, "virtualUnplug("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -931,6 +1019,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 152
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/hid/BluetoothHID;->mService:Lcom/broadcom/bt/service/hid/IBluetoothHID;
 
@@ -938,14 +1027,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 156
     :goto_0
     return-void
 
+    .line 153
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 154
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothHID"
 

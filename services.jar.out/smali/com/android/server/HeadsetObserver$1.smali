@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 270
     iput-object p1, p0, Lcom/android/server/HeadsetObserver$1;->this$0:Lcom/android/server/HeadsetObserver;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,6 +39,7 @@
     .parameter "msg"
 
     .prologue
+    .line 273
     iget-object v1, p0, Lcom/android/server/HeadsetObserver$1;->this$0:Lcom/android/server/HeadsetObserver;
 
     iget v2, p1, Landroid/os/Message;->arg1:I
@@ -51,6 +53,7 @@
     #calls: Lcom/android/server/HeadsetObserver;->sendIntents(IILjava/lang/String;)V
     invoke-static {v1, v2, v3, v0}, Lcom/android/server/HeadsetObserver;->access$000(Lcom/android/server/HeadsetObserver;IILjava/lang/String;)V
 
+    .line 274
     iget-object v0, p0, Lcom/android/server/HeadsetObserver$1;->this$0:Lcom/android/server/HeadsetObserver;
 
     #getter for: Lcom/android/server/HeadsetObserver;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -60,5 +63,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
+    .line 275
     return-void
 .end method

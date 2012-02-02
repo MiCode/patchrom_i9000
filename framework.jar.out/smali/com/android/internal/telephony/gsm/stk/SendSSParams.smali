@@ -15,9 +15,12 @@
     .parameter "ssString"
 
     .prologue
+    .line 72
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/gsm/stk/DisplayTextParams;-><init>(Lcom/android/internal/telephony/gsm/stk/CommandDetails;Lcom/android/internal/telephony/gsm/stk/TextMessage;)V
 
+    .line 73
     iput-object p3, p0, Lcom/android/internal/telephony/gsm/stk/SendSSParams;->ssString:Ljava/lang/String;
 
+    .line 74
     return-void
 .end method

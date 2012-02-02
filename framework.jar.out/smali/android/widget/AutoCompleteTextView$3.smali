@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1351
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$3;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,11 +54,13 @@
     .end annotation
 
     .prologue
+    .line 1355
     .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     const/4 v1, -0x1
 
     if-eq p3, v1, :cond_0
 
+    .line 1356
     iget-object v1, p0, Landroid/widget/AutoCompleteTextView$3;->this$0:Landroid/widget/AutoCompleteTextView;
 
     #getter for: Landroid/widget/AutoCompleteTextView;->mDropDownList:Landroid/widget/AutoCompleteTextView$DropDownListView;
@@ -65,14 +68,17 @@
 
     move-result-object v0
 
+    .line 1358
     .local v0, dropDownList:Landroid/widget/AutoCompleteTextView$DropDownListView;
     if-eqz v0, :cond_0
 
+    .line 1359
     const/4 v1, 0x0
 
     #setter for: Landroid/widget/AutoCompleteTextView$DropDownListView;->mListSelectionHidden:Z
     invoke-static {v0, v1}, Landroid/widget/AutoCompleteTextView$DropDownListView;->access$602(Landroid/widget/AutoCompleteTextView$DropDownListView;Z)Z
 
+    .line 1362
     .end local v0           #dropDownList:Landroid/widget/AutoCompleteTextView$DropDownListView;
     :cond_0
     return-void
@@ -90,6 +96,7 @@
     .end annotation
 
     .prologue
+    .line 1365
     .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     return-void
 .end method

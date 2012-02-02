@@ -33,6 +33,7 @@
     .parameter
 
     .prologue
+    .line 1168
     iput-object p1, p0, Landroid/accounts/AccountManager$11;->this$0:Landroid/accounts/AccountManager;
 
     iput-object p2, p0, Landroid/accounts/AccountManager$11;->val$listener:Landroid/accounts/OnAccountsUpdateListener;
@@ -50,6 +51,7 @@
     .locals 3
 
     .prologue
+    .line 1171
     :try_start_0
     iget-object v1, p0, Landroid/accounts/AccountManager$11;->val$listener:Landroid/accounts/OnAccountsUpdateListener;
 
@@ -59,14 +61,17 @@
     :try_end_0
     .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1177
     :goto_0
     return-void
 
+    .line 1172
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1175
     .local v0, e:Landroid/database/SQLException;
     const-string v1, "AccountManager"
 

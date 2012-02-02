@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "in"
 
     .prologue
+    .line 36
     new-instance v0, Lcom/broadcom/bt/service/bpp/LoadedMedia;
 
     const/4 v1, 0x0
@@ -58,6 +60,7 @@
     .parameter "x0"
 
     .prologue
+    .line 34
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/bpp/LoadedMedia$1;->createFromParcel(Landroid/os/Parcel;)Lcom/broadcom/bt/service/bpp/LoadedMedia;
 
     move-result-object v0
@@ -70,6 +73,7 @@
     .parameter "size"
 
     .prologue
+    .line 40
     new-array v0, p1, [Lcom/broadcom/bt/service/bpp/LoadedMedia;
 
     return-object v0
@@ -80,6 +84,7 @@
     .parameter "x0"
 
     .prologue
+    .line 34
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/bpp/LoadedMedia$1;->newArray(I)[Lcom/broadcom/bt/service/bpp/LoadedMedia;
 
     move-result-object v0

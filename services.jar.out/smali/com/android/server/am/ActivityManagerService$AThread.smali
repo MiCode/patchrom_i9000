@@ -25,14 +25,17 @@
     .locals 1
 
     .prologue
+    .line 1312
     const-string v0, "ActivityManager"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
+    .line 1309
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/am/ActivityManagerService$AThread;->mReady:Z
 
+    .line 1313
     return-void
 .end method
 
@@ -42,36 +45,46 @@
     .locals 2
 
     .prologue
+    .line 1316
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
+    .line 1318
     const/4 v1, -0x2
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
+    .line 1320
     const/4 v1, 0x0
 
     invoke-static {v1}, Landroid/os/Process;->setCanSelfBackground(Z)V
 
+    .line 1322
     new-instance v0, Lcom/android/server/am/ActivityManagerService;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/am/ActivityManagerService;-><init>(Lcom/android/server/am/ActivityManagerService$1;)V
 
+    .line 1324
     .local v0, m:Lcom/android/server/am/ActivityManagerService;
     monitor-enter p0
 
+    .line 1325
     :try_start_0
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerService$AThread;->mService:Lcom/android/server/am/ActivityManagerService;
 
+    .line 1326
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 1327
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1329
     monitor-enter p0
 
+    .line 1330
     :goto_0
     :try_start_1
     iget-boolean v1, p0, Lcom/android/server/am/ActivityManagerService$AThread;->mReady:Z
@@ -80,6 +93,7 @@
 
     if-nez v1, :cond_0
 
+    .line 1332
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_2
@@ -88,11 +102,13 @@
 
     goto :goto_0
 
+    .line 1333
     :catch_0
     move-exception v1
 
     goto :goto_0
 
+    .line 1327
     :catchall_0
     move-exception v1
 
@@ -103,16 +119,20 @@
 
     throw v1
 
+    .line 1336
     :cond_0
     :try_start_4
     monitor-exit p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 1338
     invoke-static {}, Landroid/os/Looper;->loop()V
 
+    .line 1339
     return-void
 
+    .line 1336
     :catchall_1
     move-exception v1
 

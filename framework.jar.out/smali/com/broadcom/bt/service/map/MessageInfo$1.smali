@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 196
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "source"
 
     .prologue
+    .line 200
     new-instance v0, Lcom/broadcom/bt/service/map/MessageInfo;
 
     invoke-direct {v0, p1}, Lcom/broadcom/bt/service/map/MessageInfo;-><init>(Landroid/os/Parcel;)V
@@ -56,6 +58,7 @@
     .parameter "x0"
 
     .prologue
+    .line 196
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/map/MessageInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/broadcom/bt/service/map/MessageInfo;
 
     move-result-object v0
@@ -68,6 +71,7 @@
     .parameter "size"
 
     .prologue
+    .line 205
     new-array v0, p1, [Lcom/broadcom/bt/service/map/MessageInfo;
 
     return-object v0
@@ -78,6 +82,7 @@
     .parameter "x0"
 
     .prologue
+    .line 196
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/map/MessageInfo$1;->newArray(I)[Lcom/broadcom/bt/service/map/MessageInfo;
 
     move-result-object v0

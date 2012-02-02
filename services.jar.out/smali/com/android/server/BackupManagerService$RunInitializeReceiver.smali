@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 555
     iput-object p1, p0, Lcom/android/server/BackupManagerService$RunInitializeReceiver;->this$0:Lcom/android/server/BackupManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 555
     invoke-direct {p0, p1}, Lcom/android/server/BackupManagerService$RunInitializeReceiver;-><init>(Lcom/android/server/BackupManagerService;)V
 
     return-void
@@ -50,6 +52,7 @@
     .parameter "intent"
 
     .prologue
+    .line 557
     const-string v1, "android.app.backup.intent.INIT"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -62,12 +65,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 558
     iget-object v1, p0, Lcom/android/server/BackupManagerService$RunInitializeReceiver;->this$0:Lcom/android/server/BackupManagerService;
 
     iget-object v1, v1, Lcom/android/server/BackupManagerService;->mQueueLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 563
     :try_start_0
     iget-object v2, p0, Lcom/android/server/BackupManagerService$RunInitializeReceiver;->this$0:Lcom/android/server/BackupManagerService;
 
@@ -75,6 +80,7 @@
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
+    .line 565
     iget-object v2, p0, Lcom/android/server/BackupManagerService$RunInitializeReceiver;->this$0:Lcom/android/server/BackupManagerService;
 
     iget-object v2, v2, Lcom/android/server/BackupManagerService;->mBackupHandler:Lcom/android/server/BackupManagerService$BackupHandler;
@@ -85,6 +91,7 @@
 
     move-result-object v0
 
+    .line 566
     .local v0, msg:Landroid/os/Message;
     iget-object v2, p0, Lcom/android/server/BackupManagerService$RunInitializeReceiver;->this$0:Lcom/android/server/BackupManagerService;
 
@@ -92,12 +99,15 @@
 
     invoke-virtual {v2, v0}, Lcom/android/server/BackupManagerService$BackupHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 567
     monitor-exit v1
 
+    .line 569
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return-void
 
+    .line 567
     :catchall_0
     move-exception v2
 

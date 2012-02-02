@@ -12,6 +12,7 @@
     .locals 3
 
     .prologue
+    .line 25
     const/16 v0, 0x51
 
     new-array v0, v0, [Ljava/lang/String;
@@ -24,61 +25,61 @@
 
     const/4 v1, 0x1
 
-    const-string v2, "text/*"
+    const-string/jumbo v2, "text/*"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x2
 
-    const-string v2, "text/html"
+    const-string/jumbo v2, "text/html"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x3
 
-    const-string v2, "text/plain"
+    const-string/jumbo v2, "text/plain"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x4
 
-    const-string v2, "text/x-hdml"
+    const-string/jumbo v2, "text/x-hdml"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string v2, "text/x-ttml"
+    const-string/jumbo v2, "text/x-ttml"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string v2, "text/x-vCalendar"
+    const-string/jumbo v2, "text/x-vCalendar"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string v2, "text/x-vCard"
+    const-string/jumbo v2, "text/x-vCard"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    const-string v2, "text/vnd.wap.wml"
+    const-string/jumbo v2, "text/vnd.wap.wml"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    const-string v2, "text/vnd.wap.wmlscript"
+    const-string/jumbo v2, "text/vnd.wap.wmlscript"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    const-string v2, "text/vnd.wap.wta-event"
+    const-string/jumbo v2, "text/vnd.wap.wta-event"
 
     aput-object v2, v0, v1
 
@@ -258,7 +259,7 @@
 
     const/16 v1, 0x28
 
-    const-string v2, "text/xml"
+    const-string/jumbo v2, "text/xml"
 
     aput-object v2, v0, v1
 
@@ -288,7 +289,7 @@
 
     const/16 v1, 0x2d
 
-    const-string v2, "text/vnd.wap.si"
+    const-string/jumbo v2, "text/vnd.wap.si"
 
     aput-object v2, v0, v1
 
@@ -300,7 +301,7 @@
 
     const/16 v1, 0x2f
 
-    const-string v2, "text/vnd.wap.sl"
+    const-string/jumbo v2, "text/vnd.wap.sl"
 
     aput-object v2, v0, v1
 
@@ -312,7 +313,7 @@
 
     const/16 v1, 0x31
 
-    const-string v2, "text/vnd.wap.co"
+    const-string/jumbo v2, "text/vnd.wap.co"
 
     aput-object v2, v0, v1
 
@@ -336,7 +337,7 @@
 
     const/16 v1, 0x35
 
-    const-string v2, "text/vnd.wap.connectivity-xml"
+    const-string/jumbo v2, "text/vnd.wap.connectivity-xml"
 
     aput-object v2, v0, v1
 
@@ -384,7 +385,7 @@
 
     const/16 v1, 0x3d
 
-    const-string v2, "text/css"
+    const-string/jumbo v2, "text/css"
 
     aput-object v2, v0, v1
 
@@ -486,7 +487,7 @@
 
     const/16 v1, 0x4e
 
-    const-string v2, "video/*"
+    const-string/jumbo v2, "video/*"
 
     aput-object v2, v0, v1
 
@@ -511,6 +512,7 @@
     .locals 0
 
     .prologue
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

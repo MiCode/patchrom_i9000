@@ -28,10 +28,13 @@
     .parameter "out"
 
     .prologue
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 47
     iput-object p1, p0, Landroid/renderscript/ProgramVertex$Builder;->mRS:Landroid/renderscript/RenderScript;
 
+    .line 48
     return-void
 .end method
 
@@ -41,6 +44,7 @@
     .locals 3
 
     .prologue
+    .line 55
     iget-object v1, p0, Landroid/renderscript/ProgramVertex$Builder;->mRS:Landroid/renderscript/RenderScript;
 
     iget-boolean v2, p0, Landroid/renderscript/ProgramVertex$Builder;->mTextureMatrixEnable:Z
@@ -49,6 +53,7 @@
 
     move-result v0
 
+    .line 56
     .local v0, id:I
     new-instance v1, Landroid/renderscript/ProgramVertex;
 
@@ -64,7 +69,9 @@
     .parameter "enable"
 
     .prologue
+    .line 51
     iput-boolean p1, p0, Landroid/renderscript/ProgramVertex$Builder;->mTextureMatrixEnable:Z
 
+    .line 52
     return-void
 .end method

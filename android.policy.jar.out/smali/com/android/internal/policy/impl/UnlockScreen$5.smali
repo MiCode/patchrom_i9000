@@ -23,6 +23,7 @@
     .locals 3
 
     .prologue
+    .line 144
     invoke-static {}, Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;->values()[Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;
 
     move-result-object v0

@@ -36,6 +36,7 @@
     .parameter
 
     .prologue
+    .line 216
     iput-object p1, p0, Lcom/android/server/UsbStorageService$3;->this$0:Lcom/android/server/UsbStorageService;
 
     iput p2, p0, Lcom/android/server/UsbStorageService$3;->val$code:I
@@ -55,6 +56,7 @@
     .locals 4
 
     .prologue
+    .line 218
     iget-object v0, p0, Lcom/android/server/UsbStorageService$3;->this$0:Lcom/android/server/UsbStorageService;
 
     iget v1, p0, Lcom/android/server/UsbStorageService$3;->val$code:I
@@ -66,5 +68,6 @@
     #calls: Lcom/android/server/UsbStorageService;->onEventInner(ILjava/lang/String;[Ljava/lang/String;)Z
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/UsbStorageService;->access$600(Lcom/android/server/UsbStorageService;ILjava/lang/String;[Ljava/lang/String;)Z
 
+    .line 219
     return-void
 .end method

@@ -13,8 +13,10 @@
     .parameter "fd"
 
     .prologue
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 69
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -23,6 +25,7 @@
 
     throw v0
 
+    .line 70
     :cond_0
     invoke-static {p1}, Landroid/app/backup/BackupDataOutput;->ctor(Ljava/io/FileDescriptor;)I
 
@@ -30,10 +33,12 @@
 
     iput v0, p0, Landroid/app/backup/BackupDataOutput;->mBackupWriter:I
 
+    .line 71
     iget v0, p0, Landroid/app/backup/BackupDataOutput;->mBackupWriter:I
 
     if-nez v0, :cond_1
 
+    .line 72
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -58,6 +63,7 @@
 
     throw v0
 
+    .line 74
     :cond_1
     return-void
 .end method
@@ -88,6 +94,7 @@
     .end annotation
 
     .prologue
+    .line 118
     :try_start_0
     iget v0, p0, Landroid/app/backup/BackupDataOutput;->mBackupWriter:I
 
@@ -95,10 +102,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 120
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 122
     return-void
 
+    .line 120
     :catchall_0
     move-exception v0
 
@@ -112,10 +122,12 @@
     .parameter "keyPrefix"
 
     .prologue
+    .line 112
     iget v0, p0, Landroid/app/backup/BackupDataOutput;->mBackupWriter:I
 
     invoke-static {v0, p1}, Landroid/app/backup/BackupDataOutput;->setKeyPrefix_native(ILjava/lang/String;)V
 
+    .line 113
     return-void
 .end method
 
@@ -130,17 +142,21 @@
     .end annotation
 
     .prologue
+    .line 102
     iget v1, p0, Landroid/app/backup/BackupDataOutput;->mBackupWriter:I
 
     invoke-static {v1, p1, p2}, Landroid/app/backup/BackupDataOutput;->writeEntityData_native(I[BI)I
 
     move-result v0
 
+    .line 103
     .local v0, result:I
     if-ltz v0, :cond_0
 
+    .line 104
     return v0
 
+    .line 106
     :cond_0
     new-instance v1, Ljava/io/IOException;
 
@@ -148,7 +164,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "result=0x"
+    const-string/jumbo v3, "result=0x"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -182,17 +198,21 @@
     .end annotation
 
     .prologue
+    .line 86
     iget v1, p0, Landroid/app/backup/BackupDataOutput;->mBackupWriter:I
 
     invoke-static {v1, p1, p2}, Landroid/app/backup/BackupDataOutput;->writeEntityHeader_native(ILjava/lang/String;I)I
 
     move-result v0
 
+    .line 87
     .local v0, result:I
     if-ltz v0, :cond_0
 
+    .line 88
     return v0
 
+    .line 90
     :cond_0
     new-instance v1, Ljava/io/IOException;
 
@@ -200,7 +220,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "result=0x"
+    const-string/jumbo v3, "result=0x"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -12,6 +12,7 @@
     .locals 1
 
     .prologue
+    .line 13
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/enterprise/Utils;->mLogEnbaled:Z
@@ -23,6 +24,7 @@
     .locals 0
 
     .prologue
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,14 +35,17 @@
     .parameter "logMessage"
 
     .prologue
+    .line 16
     sget-boolean v0, Lcom/android/server/enterprise/Utils;->mLogEnbaled:Z
 
     if-eqz v0, :cond_0
 
+    .line 17
     const-string v0, "DM_Framework_API: "
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 19
     :cond_0
     return-void
 .end method
@@ -51,12 +56,15 @@
     .parameter "logMessage"
 
     .prologue
+    .line 22
     sget-boolean v0, Lcom/android/server/enterprise/Utils;->mLogEnbaled:Z
 
     if-eqz v0, :cond_0
 
+    .line 23
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 25
     :cond_0
     return-void
 .end method

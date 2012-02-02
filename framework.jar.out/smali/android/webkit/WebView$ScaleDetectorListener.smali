@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 6645
     iput-object p1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .parameter "x1"
 
     .prologue
+    .line 6645
     invoke-direct {p0, p1}, Landroid/webkit/WebView$ScaleDetectorListener;-><init>(Landroid/webkit/WebView;)V
 
     return-void
@@ -56,6 +58,7 @@
 
     const/4 v6, 0x0
 
+    .line 6748
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v2, v2, Landroid/webkit/WebView;->mPinchZoomListener:Landroid/webkit/OnPinchZoomListener;
@@ -72,6 +75,7 @@
 
     if-ne v2, v7, :cond_2
 
+    .line 6751
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mTouchMode:I
@@ -83,18 +87,22 @@
 
     if-eq v2, v3, :cond_0
 
+    .line 6752
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->cancelTouch()V
 
+    .line 6753
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->dismissZoomControl()V
 
+    .line 6755
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iput-boolean v6, v2, Landroid/webkit/WebView;->mInZoomOverview:Z
 
+    .line 6758
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->inEditingMode()Z
@@ -112,6 +120,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 6759
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
@@ -121,6 +130,7 @@
 
     invoke-virtual {v2, v6}, Landroid/webkit/WebTextView;->setInPassword(Z)V
 
+    .line 6763
     :cond_0
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
@@ -130,9 +140,11 @@
 
     move-result v0
 
+    .line 6766
     .local v0, flag:Z
     if-ne v0, v7, :cond_1
 
+    .line 6768
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mPreviewZoomOnly:Z
@@ -141,10 +153,12 @@
     :cond_1
     move v2, v0
 
+    .line 6791
     .end local v0           #flag:Z
     :goto_0
     return v2
 
+    .line 6775
     :cond_2
     invoke-virtual {p1}, Landroid/webkit/WebviewScaleGestureDetector;->getScaleFactor()F
 
@@ -175,6 +189,7 @@
 
     double-to-float v1, v2
 
+    .line 6777
     .local v1, scale:F
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
@@ -197,11 +212,13 @@
 
     if-ltz v2, :cond_4
 
+    .line 6778
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mPreviewZoomOnly:Z
     invoke-static {v2, v7}, Landroid/webkit/WebView;->access$2002(Landroid/webkit/WebView;Z)Z
 
+    .line 6780
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mActualScale:F
@@ -213,6 +230,7 @@
 
     if-lez v2, :cond_3
 
+    .line 6781
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mActualScale:F
@@ -228,6 +246,7 @@
 
     move-result v1
 
+    .line 6785
     :goto_1
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
@@ -238,6 +257,7 @@
     #setter for: Landroid/webkit/WebView;->mZoomCenterX:F
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$2102(Landroid/webkit/WebView;F)F
 
+    .line 6786
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {p1}, Landroid/webkit/WebviewScaleGestureDetector;->getFocusY()F
@@ -247,6 +267,7 @@
     #setter for: Landroid/webkit/WebView;->mZoomCenterY:F
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$2202(Landroid/webkit/WebView;F)F
 
+    .line 6787
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     const/4 v3, 0x0
@@ -254,14 +275,17 @@
     #calls: Landroid/webkit/WebView;->setNewZoomScale(FZZLandroid/webkit/OnPinchZoomListener$ZoomInfo;)V
     invoke-static {v2, v1, v6, v6, v3}, Landroid/webkit/WebView;->access$2800(Landroid/webkit/WebView;FZZLandroid/webkit/OnPinchZoomListener$ZoomInfo;)V
 
+    .line 6788
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->invalidate()V
 
     move v2, v7
 
+    .line 6789
     goto :goto_0
 
+    .line 6783
     :cond_3
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
@@ -283,6 +307,7 @@
     :cond_4
     move v2, v6
 
+    .line 6791
     goto :goto_0
 .end method
 
@@ -295,18 +320,22 @@
 
     const/4 v2, 0x0
 
+    .line 6650
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->cancelTouch()V
 
+    .line 6651
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->dismissZoomControl()V
 
+    .line 6653
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iput-boolean v2, v1, Landroid/webkit/WebView;->mInZoomOverview:Z
 
+    .line 6656
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->inEditingMode()Z
@@ -324,6 +353,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 6657
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
@@ -333,6 +363,7 @@
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebTextView;->setInPassword(Z)V
 
+    .line 6660
     :cond_0
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
@@ -340,6 +371,7 @@
 
     invoke-virtual {v1}, Landroid/webkit/ViewManager;->startZoom()V
 
+    .line 6664
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v1, v1, Landroid/webkit/WebView;->mPinchZoomListener:Landroid/webkit/OnPinchZoomListener;
@@ -356,6 +388,7 @@
 
     if-ne v1, v4, :cond_2
 
+    .line 6666
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v1, v1, Landroid/webkit/WebView;->mPinchZoomListener:Landroid/webkit/OnPinchZoomListener;
@@ -366,17 +399,21 @@
 
     if-ne v1, v4, :cond_1
 
+    .line 6668
     new-instance v0, Landroid/webkit/WebView$PluginUpdateData;
 
     invoke-direct {v0}, Landroid/webkit/WebView$PluginUpdateData;-><init>()V
 
+    .line 6669
     .local v0, data:Landroid/webkit/WebView$PluginUpdateData;
     iput v2, v0, Landroid/webkit/WebView$PluginUpdateData;->mMode:I
 
+    .line 6670
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v1, v0}, Landroid/webkit/WebView;->sendPluginUpdate(Landroid/webkit/WebView$PluginUpdateData;)V
 
+    .line 6673
     .end local v0           #data:Landroid/webkit/WebView$PluginUpdateData;
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -399,6 +436,7 @@
 
     invoke-interface {v1, p1, v2, v3}, Landroid/webkit/OnPinchZoomListener;->onScaleBegin(Landroid/webkit/WebviewScaleGestureDetector;FF)Z
 
+    .line 6678
     :cond_2
     return v4
 .end method
@@ -412,6 +450,7 @@
 
     const/4 v8, 0x1
 
+    .line 6684
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v2, v2, Landroid/webkit/WebView;->mPinchZoomListener:Landroid/webkit/OnPinchZoomListener;
@@ -428,11 +467,13 @@
 
     if-ne v2, v8, :cond_1
 
+    .line 6686
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mPreviewZoomOnly:Z
     invoke-static {v2, v8}, Landroid/webkit/WebView;->access$2002(Landroid/webkit/WebView;Z)Z
 
+    .line 6687
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v3, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -446,6 +487,7 @@
     #setter for: Landroid/webkit/WebView;->mZoomCenterX:F
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$2102(Landroid/webkit/WebView;F)F
 
+    .line 6688
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v3, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -459,6 +501,7 @@
     #setter for: Landroid/webkit/WebView;->mZoomCenterY:F
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$2202(Landroid/webkit/WebView;F)F
 
+    .line 6689
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v3, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -472,6 +515,7 @@
     #setter for: Landroid/webkit/WebView;->mActualScale:F
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$1002(Landroid/webkit/WebView;F)F
 
+    .line 6691
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mActualScale:F
@@ -490,6 +534,7 @@
 
     if-gez v2, :cond_0
 
+    .line 6692
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v3, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -502,6 +547,7 @@
     #setter for: Landroid/webkit/WebView;->mActualScale:F
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$1002(Landroid/webkit/WebView;F)F
 
+    .line 6694
     :cond_0
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
@@ -521,6 +567,7 @@
 
     if-lez v2, :cond_1
 
+    .line 6695
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v3, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -533,6 +580,7 @@
     #setter for: Landroid/webkit/WebView;->mActualScale:F
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$1002(Landroid/webkit/WebView;F)F
 
+    .line 6698
     :cond_1
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
@@ -543,11 +591,13 @@
 
     if-eqz v2, :cond_3
 
+    .line 6699
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mPreviewZoomOnly:Z
     invoke-static {v2, v9}, Landroid/webkit/WebView;->access$2002(Landroid/webkit/WebView;Z)Z
 
+    .line 6700
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v3, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -577,6 +627,7 @@
     #setter for: Landroid/webkit/WebView;->mAnchorX:I
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$2302(Landroid/webkit/WebView;I)I
 
+    .line 6701
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v3, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -606,6 +657,7 @@
     #setter for: Landroid/webkit/WebView;->mAnchorY:I
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$2502(Landroid/webkit/WebView;I)I
 
+    .line 6704
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mActualScale:F
@@ -656,6 +708,7 @@
     :cond_2
     move v1, v8
 
+    .line 6709
     .local v1, reflowNow:Z
     :goto_0
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -672,10 +725,12 @@
     #calls: Landroid/webkit/WebView;->setNewZoomScale(FZZLandroid/webkit/OnPinchZoomListener$ZoomInfo;)V
     invoke-static {v2, v3, v1, v8, v4}, Landroid/webkit/WebView;->access$2800(Landroid/webkit/WebView;FZZLandroid/webkit/OnPinchZoomListener$ZoomInfo;)V
 
+    .line 6711
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->invalidate()V
 
+    .line 6714
     .end local v1           #reflowNow:Z
     :cond_3
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
@@ -704,6 +759,7 @@
 
     if-eqz v2, :cond_4
 
+    .line 6718
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
@@ -713,6 +769,7 @@
 
     invoke-virtual {v2, v8}, Landroid/webkit/WebTextView;->setInPassword(Z)V
 
+    .line 6723
     :cond_4
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
@@ -721,11 +778,13 @@
     #setter for: Landroid/webkit/WebView;->mTouchMode:I
     invoke-static {v2, v3}, Landroid/webkit/WebView;->access$3002(Landroid/webkit/WebView;I)I
 
+    .line 6724
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mConfirmMove:Z
     invoke-static {v2, v8}, Landroid/webkit/WebView;->access$3102(Landroid/webkit/WebView;Z)Z
 
+    .line 6725
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {p1}, Landroid/webkit/WebviewScaleGestureDetector;->getFocusX()F
@@ -746,12 +805,14 @@
     #calls: Landroid/webkit/WebView;->startTouch(FFJ)V
     invoke-static {v2, v3, v4, v5, v6}, Landroid/webkit/WebView;->access$3300(Landroid/webkit/WebView;FFJ)V
 
+    .line 6728
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v2, v2, Landroid/webkit/WebView;->mViewManager:Landroid/webkit/ViewManager;
 
     invoke-virtual {v2}, Landroid/webkit/ViewManager;->endZoom()V
 
+    .line 6732
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v2, v2, Landroid/webkit/WebView;->mPinchZoomListener:Landroid/webkit/OnPinchZoomListener;
@@ -768,12 +829,14 @@
 
     if-ne v2, v8, :cond_5
 
+    .line 6734
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v2, v2, Landroid/webkit/WebView;->mPinchZoomListener:Landroid/webkit/OnPinchZoomListener;
 
     invoke-interface {v2, p1}, Landroid/webkit/OnPinchZoomListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
 
+    .line 6735
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     iget-object v2, v2, Landroid/webkit/WebView;->mPinchZoomListener:Landroid/webkit/OnPinchZoomListener;
@@ -784,17 +847,21 @@
 
     if-ne v2, v8, :cond_5
 
+    .line 6737
     new-instance v0, Landroid/webkit/WebView$PluginUpdateData;
 
     invoke-direct {v0}, Landroid/webkit/WebView$PluginUpdateData;-><init>()V
 
+    .line 6738
     .local v0, data:Landroid/webkit/WebView$PluginUpdateData;
     iput v8, v0, Landroid/webkit/WebView$PluginUpdateData;->mMode:I
 
+    .line 6739
     iget-object v2, p0, Landroid/webkit/WebView$ScaleDetectorListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v2, v0}, Landroid/webkit/WebView;->sendPluginUpdate(Landroid/webkit/WebView$PluginUpdateData;)V
 
+    .line 6742
     .end local v0           #data:Landroid/webkit/WebView$PluginUpdateData;
     :cond_5
     return-void
@@ -802,5 +869,6 @@
     :cond_6
     move v1, v9
 
+    .line 6704
     goto/16 :goto_0
 .end method

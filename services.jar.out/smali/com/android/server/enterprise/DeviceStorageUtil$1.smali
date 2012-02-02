@@ -33,6 +33,7 @@
     .parameter
 
     .prologue
+    .line 90
     iput-object p1, p0, Lcom/android/server/enterprise/DeviceStorageUtil$1;->this$0:Lcom/android/server/enterprise/DeviceStorageUtil;
 
     iput-boolean p2, p0, Lcom/android/server/enterprise/DeviceStorageUtil$1;->val$acceptAllFiles:Z
@@ -51,22 +52,28 @@
     .parameter "pathname"
 
     .prologue
+    .line 92
     const/4 v0, 0x0
 
+    .line 94
     .local v0, acceptFile:Z
     iget-boolean v6, p0, Lcom/android/server/enterprise/DeviceStorageUtil$1;->val$acceptAllFiles:Z
 
     if-eqz v6, :cond_1
 
+    .line 95
     const/4 v0, 0x1
 
+    .line 106
     :cond_0
     :goto_0
     return v0
 
+    .line 96
     :cond_1
     if-eqz p1, :cond_0
 
+    .line 97
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -75,6 +82,7 @@
 
     move-result-object v2
 
+    .line 98
     .local v2, fileName:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/enterprise/DeviceStorageUtil$1;->val$fileFilers:[Ljava/lang/String;
 
@@ -90,6 +98,7 @@
 
     aget-object v5, v1, v3
 
+    .line 99
     .local v5, string:Ljava/lang/String;
     invoke-virtual {v2, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -97,10 +106,13 @@
 
     if-eqz v6, :cond_2
 
+    .line 100
     const/4 v0, 0x1
 
+    .line 101
     goto :goto_0
 
+    .line 98
     :cond_2
     add-int/lit8 v3, v3, 0x1
 

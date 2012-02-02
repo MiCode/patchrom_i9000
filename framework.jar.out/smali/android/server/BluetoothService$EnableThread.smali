@@ -27,12 +27,15 @@
     .parameter "saveSetting"
 
     .prologue
+    .line 946
     iput-object p1, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
+    .line 947
     iput-boolean p2, p0, Landroid/server/BluetoothService$EnableThread;->mSaveSetting:Z
 
+    .line 948
     return-void
 .end method
 
@@ -46,6 +49,7 @@
 
     const/4 v12, 0x0
 
+    .line 950
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #calls: Landroid/server/BluetoothService;->enableNative()I
@@ -57,18 +61,22 @@
 
     move v5, v13
 
+    .line 951
     .local v5, res:Z
     :goto_0
     if-eqz v5, :cond_4
 
+    .line 952
     const/4 v6, 0x2
 
+    .line 953
     .local v6, retryCount:I
     const/4 v8, 0x0
 
     .local v8, running:Z
     move v7, v6
 
+    .line 954
     .end local v6           #retryCount:I
     .local v7, retryCount:I
     :goto_1
@@ -80,6 +88,7 @@
 
     if-nez v8, :cond_3
 
+    .line 955
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mEventLoop:Landroid/server/BluetoothEventLoop;
@@ -89,11 +98,13 @@
 
     invoke-virtual {v9}, Landroid/server/BluetoothEventLoop;->start()V
 
+    .line 958
     const/4 v2, 0x5
 
     .local v2, pollCount:I
     move v3, v2
 
+    .line 959
     .end local v2           #pollCount:I
     .local v3, pollCount:I
     :goto_2
@@ -105,6 +116,7 @@
 
     if-nez v8, :cond_0
 
+    .line 960
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mEventLoop:Landroid/server/BluetoothEventLoop;
@@ -118,11 +130,13 @@
 
     if-eqz v9, :cond_2
 
+    .line 961
     const/4 v8, 0x1
 
     :cond_0
     move v7, v6
 
+    .line 968
     .end local v6           #retryCount:I
     .restart local v7       #retryCount:I
     goto :goto_1
@@ -134,8 +148,10 @@
     :cond_1
     move v5, v12
 
+    .line 950
     goto :goto_0
 
+    .line 965
     .restart local v2       #pollCount:I
     .restart local v5       #res:Z
     .restart local v6       #retryCount:I
@@ -150,6 +166,7 @@
 
     move v3, v2
 
+    .line 966
     .end local v2           #pollCount:I
     .restart local v3       #pollCount:I
     goto :goto_2
@@ -165,27 +182,33 @@
     .restart local v3       #pollCount:I
     goto :goto_2
 
+    .line 969
     .end local v3           #pollCount:I
     :cond_3
     if-nez v8, :cond_4
 
+    .line 970
     const-string v9, "bt EnableThread giving up"
 
     #calls: Landroid/server/BluetoothService;->log(Ljava/lang/String;)V
     invoke-static {v9}, Landroid/server/BluetoothService;->access$1300(Ljava/lang/String;)V
 
+    .line 971
     const/4 v5, 0x0
 
+    .line 972
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #calls: Landroid/server/BluetoothService;->disableNative()I
     invoke-static {v9}, Landroid/server/BluetoothService;->access$1400(Landroid/server/BluetoothService;)I
 
+    .line 977
     .end local v6           #retryCount:I
     .end local v8           #running:Z
     :cond_4
     if-eqz v5, :cond_8
 
+    .line 978
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #calls: Landroid/server/BluetoothService;->setupNativeDataNative()Z
@@ -195,26 +218,31 @@
 
     if-nez v9, :cond_6
 
+    .line 1025
     :cond_5
     :goto_3
     return-void
 
+    .line 981
     :cond_6
     iget-boolean v9, p0, Landroid/server/BluetoothService$EnableThread;->mSaveSetting:Z
 
     if-eqz v9, :cond_7
 
+    .line 982
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #calls: Landroid/server/BluetoothService;->persistBluetoothOnSetting(Z)V
     invoke-static {v9, v13}, Landroid/server/BluetoothService;->access$1600(Landroid/server/BluetoothService;Z)V
 
+    .line 984
     :cond_7
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #setter for: Landroid/server/BluetoothService;->mIsDiscovering:Z
     invoke-static {v9, v12}, Landroid/server/BluetoothService;->access$1702(Landroid/server/BluetoothService;Z)Z
 
+    .line 985
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mBondState:Landroid/server/BluetoothService$BondState;
@@ -224,6 +252,7 @@
 
     invoke-virtual {v9}, Landroid/server/BluetoothService$BondState;->readAutoPairingData()V
 
+    .line 986
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mBondState:Landroid/server/BluetoothService$BondState;
@@ -233,15 +262,18 @@
 
     invoke-virtual {v9}, Landroid/server/BluetoothService$BondState;->loadBondState()V
 
+    .line 987
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     #calls: Landroid/server/BluetoothService;->initProfileState()V
     invoke-static {v9}, Landroid/server/BluetoothService;->access$1900(Landroid/server/BluetoothService;)V
 
+    .line 994
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
+    .line 996
     .local v0, ident:J
     :try_start_1
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
@@ -256,9 +288,11 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 999
     :goto_4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 1003
     .end local v0           #ident:J
     :cond_8
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
@@ -268,6 +302,7 @@
     #setter for: Landroid/server/BluetoothService;->mEnableThread:Landroid/server/BluetoothService$EnableThread;
     invoke-static {v9, v10}, Landroid/server/BluetoothService;->access$2102(Landroid/server/BluetoothService;Landroid/server/BluetoothService$EnableThread;)Landroid/server/BluetoothService$EnableThread;
 
+    .line 1005
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     if-eqz v5, :cond_a
@@ -278,8 +313,10 @@
     #calls: Landroid/server/BluetoothService;->setBluetoothState(I)V
     invoke-static {v9, v10}, Landroid/server/BluetoothService;->access$2200(Landroid/server/BluetoothService;I)V
 
+    .line 1009
     if-eqz v5, :cond_9
 
+    .line 1015
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     const/16 v10, 0x15
@@ -289,6 +326,7 @@
     #calls: Landroid/server/BluetoothService;->_setScanMode(II)Z
     invoke-static {v9, v10, v11}, Landroid/server/BluetoothService;->access$2300(Landroid/server/BluetoothService;II)Z
 
+    .line 1016
     const/4 v9, 0x2
 
     new-array v4, v9, [Ljava/lang/String;
@@ -297,10 +335,11 @@
 
     aput-object v9, v4, v12
 
-    const-string v9, "true"
+    const-string/jumbo v9, "true"
 
     aput-object v9, v4, v13
 
+    .line 1018
     .local v4, propVal:[Ljava/lang/String;
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
@@ -311,6 +350,7 @@
 
     invoke-virtual {v9, v4}, Landroid/server/BluetoothEventLoop;->onPropertyChanged([Ljava/lang/String;)V
 
+    .line 1021
     .end local v4           #propVal:[Ljava/lang/String;
     :cond_9
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
@@ -340,12 +380,14 @@
 
     if-nez v9, :cond_5
 
+    .line 1022
     iget-object v9, p0, Landroid/server/BluetoothService$EnableThread;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v9, v12}, Landroid/server/BluetoothService;->disable(Z)Z
 
     goto/16 :goto_3
 
+    .line 999
     .restart local v0       #ident:J
     :catchall_0
     move-exception v9
@@ -354,12 +396,14 @@
 
     throw v9
 
+    .line 1005
     .end local v0           #ident:J
     :cond_a
     const/16 v10, 0xa
 
     goto :goto_5
 
+    .line 997
     .restart local v0       #ident:J
     :catch_1
     move-exception v9

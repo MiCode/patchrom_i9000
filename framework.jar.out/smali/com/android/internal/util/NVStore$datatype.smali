@@ -48,6 +48,7 @@
 
     const/4 v2, 0x0
 
+    .line 53
     new-instance v0, Lcom/android/internal/util/NVStore$datatype;
 
     const-string v1, "All"
@@ -56,6 +57,7 @@
 
     sput-object v0, Lcom/android/internal/util/NVStore$datatype;->All:Lcom/android/internal/util/NVStore$datatype;
 
+    .line 54
     new-instance v0, Lcom/android/internal/util/NVStore$datatype;
 
     const-string v1, "PHPWD"
@@ -64,6 +66,7 @@
 
     sput-object v0, Lcom/android/internal/util/NVStore$datatype;->PHPWD:Lcom/android/internal/util/NVStore$datatype;
 
+    .line 55
     new-instance v0, Lcom/android/internal/util/NVStore$datatype;
 
     const-string v1, "PHLOCK_STATE"
@@ -72,6 +75,7 @@
 
     sput-object v0, Lcom/android/internal/util/NVStore$datatype;->PHLOCK_STATE:Lcom/android/internal/util/NVStore$datatype;
 
+    .line 56
     new-instance v0, Lcom/android/internal/util/NVStore$datatype;
 
     const-string v1, "ENABLE_PHLOCK_FIRST"
@@ -80,6 +84,7 @@
 
     sput-object v0, Lcom/android/internal/util/NVStore$datatype;->ENABLE_PHLOCK_FIRST:Lcom/android/internal/util/NVStore$datatype;
 
+    .line 52
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/util/NVStore$datatype;
@@ -116,6 +121,7 @@
     .end annotation
 
     .prologue
+    .line 52
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -126,6 +132,7 @@
     .parameter "name"
 
     .prologue
+    .line 52
     const-class v0, Lcom/android/internal/util/NVStore$datatype;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -142,6 +149,7 @@
     .locals 1
 
     .prologue
+    .line 52
     sget-object v0, Lcom/android/internal/util/NVStore$datatype;->$VALUES:[Lcom/android/internal/util/NVStore$datatype;
 
     invoke-virtual {v0}, [Lcom/android/internal/util/NVStore$datatype;->clone()Ljava/lang/Object;

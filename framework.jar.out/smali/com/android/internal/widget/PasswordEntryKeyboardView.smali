@@ -22,8 +22,10 @@
     .parameter "attrs"
 
     .prologue
+    .line 32
     invoke-direct {p0, p1, p2}, Landroid/inputmethodservice/KeyboardView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 33
     return-void
 .end method
 
@@ -34,7 +36,9 @@
     .parameter "defStyle"
 
     .prologue
+    .line 36
     invoke-direct {p0, p1, p2, p3}, Landroid/inputmethodservice/KeyboardView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 37
     return-void
 .end method

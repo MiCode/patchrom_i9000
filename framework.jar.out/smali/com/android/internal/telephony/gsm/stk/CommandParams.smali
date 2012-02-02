@@ -13,10 +13,13 @@
     .parameter "cmdDet"
 
     .prologue
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/stk/CommandParams;->cmdDet:Lcom/android/internal/telephony/gsm/stk/CommandDetails;
 
+    .line 30
     return-void
 .end method
 
@@ -26,6 +29,7 @@
     .locals 1
 
     .prologue
+    .line 33
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/CommandParams;->cmdDet:Lcom/android/internal/telephony/gsm/stk/CommandDetails;
 
     iget v0, v0, Lcom/android/internal/telephony/gsm/stk/CommandDetails;->typeOfCommand:I
@@ -42,6 +46,7 @@
     .parameter "icon"
 
     .prologue
+    .line 36
     const/4 v0, 0x1
 
     return v0

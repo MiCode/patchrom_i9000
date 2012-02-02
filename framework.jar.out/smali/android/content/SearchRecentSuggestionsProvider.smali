@@ -54,8 +54,10 @@
     .locals 0
 
     .prologue
+    .line 67
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
+    .line 121
     return-void
 .end method
 
@@ -68,16 +70,18 @@
     .parameter "selectionArgs"
 
     .prologue
-    const-string v7, "suggestions"
+    const-string/jumbo v7, "suggestions"
 
     const-string v6, "Unknown Uri"
 
+    .line 214
     iget-object v4, p0, Landroid/content/SearchRecentSuggestionsProvider;->mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
 
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
+    .line 216
     .local v2, db:Landroid/database/sqlite/SQLiteDatabase;
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -87,11 +91,13 @@
 
     move-result v3
 
+    .line 217
     .local v3, length:I
     const/4 v4, 0x1
 
     if-eq v3, v4, :cond_0
 
+    .line 218
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "Unknown Uri"
@@ -100,6 +106,7 @@
 
     throw v4
 
+    .line 221
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -113,11 +120,13 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 222
     .local v0, base:Ljava/lang/String;
     const/4 v1, 0x0
 
+    .line 223
     .local v1, count:I
-    const-string v4, "suggestions"
+    const-string/jumbo v4, "suggestions"
 
     invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -125,12 +134,14 @@
 
     if-eqz v4, :cond_1
 
-    const-string v4, "suggestions"
+    .line 224
+    const-string/jumbo v4, "suggestions"
 
     invoke-virtual {v2, v7, p2, p3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v1
 
+    .line 228
     invoke-virtual {p0}, Landroid/content/SearchRecentSuggestionsProvider;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -143,8 +154,10 @@
 
     invoke-virtual {v4, p1, v5}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
+    .line 229
     return v1
 
+    .line 226
     :cond_1
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -162,6 +175,7 @@
     .prologue
     const/4 v4, 0x1
 
+    .line 238
     iget-object v2, p0, Landroid/content/SearchRecentSuggestionsProvider;->mUriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v2, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -170,11 +184,14 @@
 
     if-ne v2, v4, :cond_0
 
-    const-string v2, "vnd.android.cursor.dir/vnd.android.search.suggest"
+    .line 239
+    const-string/jumbo v2, "vnd.android.cursor.dir/vnd.android.search.suggest"
 
+    .line 248
     :goto_0
     return-object v2
 
+    .line 241
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -184,9 +201,11 @@
 
     move-result v1
 
+    .line 242
     .local v1, length:I
     if-lt v1, v4, :cond_2
 
+    .line 243
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v2
@@ -199,8 +218,9 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 244
     .local v0, base:Ljava/lang/String;
-    const-string v2, "suggestions"
+    const-string/jumbo v2, "suggestions"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -208,21 +228,26 @@
 
     if-eqz v2, :cond_2
 
+    .line 245
     if-ne v1, v4, :cond_1
 
-    const-string v2, "vnd.android.cursor.dir/suggestion"
+    .line 246
+    const-string/jumbo v2, "vnd.android.cursor.dir/suggestion"
 
     goto :goto_0
 
+    .line 247
     :cond_1
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_2
 
-    const-string v2, "vnd.android.cursor.item/suggestion"
+    .line 248
+    const-string/jumbo v2, "vnd.android.cursor.item/suggestion"
 
     goto :goto_0
 
+    .line 252
     .end local v0           #base:Ljava/lang/String;
     :cond_2
     new-instance v2, Ljava/lang/IllegalArgumentException;
@@ -244,16 +269,18 @@
 
     const/4 v8, 0x1
 
-    const-string v12, "suggestions"
+    const-string/jumbo v12, "suggestions"
 
     const-string v11, "Unknown Uri"
 
+    .line 261
     iget-object v6, p0, Landroid/content/SearchRecentSuggestionsProvider;->mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
 
     invoke-virtual {v6}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
+    .line 263
     .local v1, db:Landroid/database/sqlite/SQLiteDatabase;
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -263,9 +290,11 @@
 
     move-result v2
 
+    .line 264
     .local v2, length:I
     if-ge v2, v8, :cond_0
 
+    .line 265
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "Unknown Uri"
@@ -274,9 +303,11 @@
 
     throw v6
 
+    .line 268
     :cond_0
     const-wide/16 v4, -0x1
 
+    .line 269
     .local v4, rowID:J
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -290,11 +321,13 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 270
     .local v0, base:Ljava/lang/String;
     const/4 v3, 0x0
 
+    .line 271
     .local v3, newUri:Landroid/net/Uri;
-    const-string v6, "suggestions"
+    const-string/jumbo v6, "suggestions"
 
     invoke-virtual {v0, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -302,20 +335,24 @@
 
     if-eqz v6, :cond_1
 
+    .line 272
     if-ne v2, v8, :cond_1
 
-    const-string v6, "suggestions"
+    .line 273
+    const-string/jumbo v6, "suggestions"
 
-    const-string v6, "query"
+    const-string/jumbo v6, "query"
 
     invoke-virtual {v1, v12, v6, p2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v4
 
+    .line 274
     cmp-long v6, v4, v9
 
     if-lez v6, :cond_1
 
+    .line 275
     iget-object v6, p0, Landroid/content/SearchRecentSuggestionsProvider;->mSuggestionsUri:Landroid/net/Uri;
 
     invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -326,11 +363,13 @@
 
     move-result-object v3
 
+    .line 279
     :cond_1
     cmp-long v6, v4, v9
 
     if-gez v6, :cond_2
 
+    .line 280
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "Unknown Uri"
@@ -339,6 +378,7 @@
 
     throw v6
 
+    .line 282
     :cond_2
     invoke-virtual {p0}, Landroid/content/SearchRecentSuggestionsProvider;->getContext()Landroid/content/Context;
 
@@ -352,6 +392,7 @@
 
     invoke-virtual {v6, v3, v7}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
+    .line 283
     return-object v3
 .end method
 
@@ -359,6 +400,7 @@
     .locals 3
 
     .prologue
+    .line 292
     iget-object v1, p0, Landroid/content/SearchRecentSuggestionsProvider;->mAuthority:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -367,6 +409,7 @@
 
     if-nez v1, :cond_1
 
+    .line 293
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -376,11 +419,13 @@
 
     throw v1
 
+    .line 295
     :cond_1
     iget v1, p0, Landroid/content/SearchRecentSuggestionsProvider;->mMode:I
 
     add-int/lit16 v0, v1, 0x200
 
+    .line 296
     .local v0, mWorkingDbVersion:I
     new-instance v1, Landroid/content/SearchRecentSuggestionsProvider$DatabaseHelper;
 
@@ -392,6 +437,7 @@
 
     iput-object v1, p0, Landroid/content/SearchRecentSuggestionsProvider;->mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
 
+    .line 298
     const/4 v1, 0x1
 
     return v1
@@ -406,6 +452,7 @@
     .parameter "sortOrder"
 
     .prologue
+    .line 309
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/SearchRecentSuggestionsProvider;->mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
@@ -416,6 +463,7 @@
 
     move-result-object v5
 
+    .line 312
     .local v5, db:Landroid/database/sqlite/SQLiteDatabase;
     move-object/from16 v0, p0
 
@@ -435,6 +483,7 @@
 
     if-ne v6, v7, :cond_2
 
+    .line 315
     const/4 v6, 0x0
 
     aget-object v6, p4, v6
@@ -445,14 +494,17 @@
 
     if-eqz v6, :cond_0
 
+    .line 316
     const/4 v8, 0x0
 
+    .line 317
     .local v8, suggestSelection:Ljava/lang/String;
     const/4 v9, 0x0
 
+    .line 328
     .local v9, myArgs:[Ljava/lang/String;
     :goto_0
-    const-string v6, "suggestions"
+    const-string/jumbo v6, "suggestions"
 
     move-object/from16 v0, p0
 
@@ -472,6 +524,7 @@
 
     move-result-object v19
 
+    .line 330
     .local v19, c:Landroid/database/Cursor;
     invoke-virtual/range {p0 .. p0}, Landroid/content/SearchRecentSuggestionsProvider;->getContext()Landroid/content/Context;
 
@@ -489,12 +542,14 @@
 
     invoke-interface {v0, v1, v2}, Landroid/database/Cursor;->setNotificationUri(Landroid/content/ContentResolver;Landroid/net/Uri;)V
 
+    .line 373
     .end local v8           #suggestSelection:Ljava/lang/String;
     .end local v9           #myArgs:[Ljava/lang/String;
     .end local p2
     :goto_1
     return-object v19
 
+    .line 319
     .end local v19           #c:Landroid/database/Cursor;
     .restart local p2
     :cond_0
@@ -526,6 +581,7 @@
 
     move-result-object v21
 
+    .line 320
     .local v21, like:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -535,6 +591,7 @@
 
     if-eqz v6, :cond_1
 
+    .line 321
     const/4 v6, 0x2
 
     new-array v9, v6, [Ljava/lang/String;
@@ -547,6 +604,7 @@
 
     aput-object v21, v9, v6
 
+    .line 325
     .restart local v9       #myArgs:[Ljava/lang/String;
     :goto_2
     move-object/from16 v0, p0
@@ -558,6 +616,7 @@
     .restart local v8       #suggestSelection:Ljava/lang/String;
     goto :goto_0
 
+    .line 323
     .end local v8           #suggestSelection:Ljava/lang/String;
     .end local v9           #myArgs:[Ljava/lang/String;
     :cond_1
@@ -572,6 +631,7 @@
     .restart local v9       #myArgs:[Ljava/lang/String;
     goto :goto_2
 
+    .line 335
     .end local v9           #myArgs:[Ljava/lang/String;
     .end local v21           #like:Ljava/lang/String;
     :cond_2
@@ -583,6 +643,7 @@
 
     move-result v20
 
+    .line 336
     .local v20, length:I
     const/4 v6, 0x1
 
@@ -600,6 +661,7 @@
 
     if-eq v0, v1, :cond_3
 
+    .line 337
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "Unknown Uri"
@@ -608,6 +670,7 @@
 
     throw v6
 
+    .line 340
     :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -621,8 +684,9 @@
 
     check-cast v11, Ljava/lang/String;
 
+    .line 341
     .local v11, base:Ljava/lang/String;
-    const-string v6, "suggestions"
+    const-string/jumbo v6, "suggestions"
 
     invoke-virtual {v11, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -630,6 +694,7 @@
 
     if-nez v6, :cond_4
 
+    .line 342
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "Unknown Uri"
@@ -638,9 +703,11 @@
 
     throw v6
 
+    .line 345
     :cond_4
     const/4 v12, 0x0
 
+    .line 346
     .local v12, useProjection:[Ljava/lang/String;
     if-eqz p2, :cond_5
 
@@ -652,6 +719,7 @@
 
     if-lez v6, :cond_5
 
+    .line 347
     move-object/from16 v0, p2
 
     array-length v0, v0
@@ -662,6 +730,7 @@
 
     new-array v12, v6, [Ljava/lang/String;
 
+    .line 348
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -684,6 +753,7 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 349
     move-object/from16 v0, p2
 
     array-length v0, v0
@@ -694,6 +764,7 @@
 
     aput-object v7, v12, v6
 
+    .line 352
     :cond_5
     new-instance v22, Ljava/lang/StringBuilder;
 
@@ -705,6 +776,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 353
     .local v22, whereClause:Ljava/lang/StringBuilder;
     const/4 v6, 0x2
 
@@ -714,6 +786,7 @@
 
     if-ne v0, v1, :cond_6
 
+    .line 354
     const-string v6, "(_id = "
 
     move-object/from16 v0, v22
@@ -749,6 +822,7 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 358
     :cond_6
     if-eqz p3, :cond_8
 
@@ -758,12 +832,14 @@
 
     if-lez v6, :cond_8
 
+    .line 359
     invoke-virtual/range {v22 .. v22}, Ljava/lang/StringBuilder;->length()I
 
     move-result v6
 
     if-lez v6, :cond_7
 
+    .line 360
     const-string v6, " AND "
 
     move-object/from16 v0, v22
@@ -772,6 +848,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 363
     :cond_7
     const/16 v6, 0x28
 
@@ -781,12 +858,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 364
     move-object/from16 v0, v22
 
     move-object/from16 v1, p3
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 365
     const/16 v6, 0x29
 
     move-object/from16 v0, v22
@@ -795,6 +874,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 369
     :cond_8
     invoke-virtual/range {v22 .. v22}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -816,6 +896,7 @@
 
     move-result-object v19
 
+    .line 372
     .restart local v19       #c:Landroid/database/Cursor;
     invoke-virtual/range {p0 .. p0}, Landroid/content/SearchRecentSuggestionsProvider;->getContext()Landroid/content/Context;
 
@@ -852,6 +933,7 @@
 
     const/4 v3, 0x1
 
+    .line 168
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -862,6 +944,7 @@
 
     if-nez v0, :cond_1
 
+    .line 170
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -869,6 +952,7 @@
 
     throw v0
 
+    .line 173
     :cond_1
     and-int/lit8 v0, p2, 0x2
 
@@ -879,14 +963,17 @@
     :goto_0
     iput-boolean v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mTwoLineDisplay:Z
 
+    .line 176
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mAuthority:Ljava/lang/String;
 
+    .line 177
     iput p2, p0, Landroid/content/SearchRecentSuggestionsProvider;->mMode:I
 
+    .line 180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -919,6 +1006,7 @@
 
     iput-object v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mSuggestionsUri:Landroid/net/Uri;
 
+    .line 181
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -927,22 +1015,26 @@
 
     iput-object v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mUriMatcher:Landroid/content/UriMatcher;
 
+    .line 182
     iget-object v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mUriMatcher:Landroid/content/UriMatcher;
 
     iget-object v1, p0, Landroid/content/SearchRecentSuggestionsProvider;->mAuthority:Ljava/lang/String;
 
-    const-string v2, "search_suggest_query"
+    const-string/jumbo v2, "search_suggest_query"
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 184
     iget-boolean v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mTwoLineDisplay:Z
 
     if-eqz v0, :cond_3
 
+    .line 185
     const-string v0, "display1 LIKE ? OR display2 LIKE ?"
 
     iput-object v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mSuggestSuggestionClause:Ljava/lang/String;
 
+    .line 187
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -959,7 +1051,7 @@
 
     aput-object v1, v0, v5
 
-    const-string v1, "query AS suggest_intent_query"
+    const-string/jumbo v1, "query AS suggest_intent_query"
 
     aput-object v1, v0, v6
 
@@ -969,19 +1061,23 @@
 
     iput-object v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mSuggestionProjection:[Ljava/lang/String;
 
+    .line 206
     :goto_1
     return-void
 
     :cond_2
     move v0, v4
 
+    .line 173
     goto :goto_0
 
+    .line 195
     :cond_3
     const-string v0, "display1 LIKE ?"
 
     iput-object v0, p0, Landroid/content/SearchRecentSuggestionsProvider;->mSuggestSuggestionClause:Ljava/lang/String;
 
+    .line 197
     new-array v0, v7, [Ljava/lang/String;
 
     const-string v1, "0 AS suggest_format"
@@ -992,7 +1088,7 @@
 
     aput-object v1, v0, v3
 
-    const-string v1, "query AS suggest_intent_query"
+    const-string/jumbo v1, "query AS suggest_intent_query"
 
     aput-object v1, v0, v5
 
@@ -1013,6 +1109,7 @@
     .parameter "selectionArgs"
 
     .prologue
+    .line 382
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Not implemented"

@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 724
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,13 +45,16 @@
     .parameter "parcel"
 
     .prologue
+    .line 726
     invoke-static {}, Landroid/view/accessibility/AccessibilityEvent;->obtain()Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object v0
 
+    .line 727
     .local v0, event:Landroid/view/accessibility/AccessibilityEvent;
     invoke-virtual {v0, p1}, Landroid/view/accessibility/AccessibilityEvent;->initFromParcel(Landroid/os/Parcel;)V
 
+    .line 728
     return-object v0
 .end method
 
@@ -59,6 +63,7 @@
     .parameter "x0"
 
     .prologue
+    .line 724
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object v0
@@ -71,6 +76,7 @@
     .parameter "size"
 
     .prologue
+    .line 732
     new-array v0, p1, [Landroid/view/accessibility/AccessibilityEvent;
 
     return-object v0
@@ -81,6 +87,7 @@
     .parameter "x0"
 
     .prologue
+    .line 724
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent$1;->newArray(I)[Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object v0

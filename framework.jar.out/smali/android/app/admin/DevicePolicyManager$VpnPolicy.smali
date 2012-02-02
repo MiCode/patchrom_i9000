@@ -26,11 +26,13 @@
     .parameter
 
     .prologue
+    .line 1617
     iput-object p1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->this$0:Landroid/app/admin/DevicePolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "vpn_policy"
+    .line 1618
+    const-string/jumbo v0, "vpn_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -42,6 +44,7 @@
 
     iput-object v0, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
+    .line 1619
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
     move-result-object v0
@@ -68,6 +71,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1620
     return-void
 .end method
 
@@ -77,6 +81,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1614
     invoke-direct {p0, p1}, Landroid/app/admin/DevicePolicyManager$VpnPolicy;-><init>(Landroid/app/admin/DevicePolicyManager;)V
 
     return-void
@@ -89,26 +94,31 @@
     .parameter "type"
 
     .prologue
+    .line 1624
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 1625
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v1, p1}, Landroid/app/enterprise/IVpnInfoPolicy;->createProfile(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1630
     :cond_0
     :goto_0
     return-void
 
+    .line 1627
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1628
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -125,14 +135,17 @@
     .locals 4
 
     .prologue
+    .line 1709
     const/4 v1, 0x0
 
+    .line 1711
     .local v1, str:Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v2, :cond_0
 
+    .line 1712
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v2}, Landroid/app/enterprise/IVpnInfoPolicy;->getId()Ljava/lang/String;
@@ -141,15 +154,18 @@
 
     move-result-object v1
 
+    .line 1717
     :cond_0
     :goto_0
     return-object v1
 
+    .line 1714
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 1715
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -166,14 +182,17 @@
     .locals 4
 
     .prologue
+    .line 1685
     const/4 v1, 0x0
 
+    .line 1687
     .local v1, str:Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v2, :cond_0
 
+    .line 1688
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v2}, Landroid/app/enterprise/IVpnInfoPolicy;->getName()Ljava/lang/String;
@@ -182,15 +201,18 @@
 
     move-result-object v1
 
+    .line 1693
     :cond_0
     :goto_0
     return-object v1
 
+    .line 1690
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 1691
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -207,14 +229,17 @@
     .locals 4
 
     .prologue
+    .line 1697
     const/4 v1, 0x0
 
+    .line 1699
     .local v1, str:Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v2, :cond_0
 
+    .line 1700
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v2}, Landroid/app/enterprise/IVpnInfoPolicy;->getServerName()Ljava/lang/String;
@@ -223,15 +248,18 @@
 
     move-result-object v1
 
+    .line 1705
     :cond_0
     :goto_0
     return-object v1
 
+    .line 1702
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 1703
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -248,14 +276,17 @@
     .locals 4
 
     .prologue
+    .line 1721
     const/4 v1, 0x0
 
+    .line 1723
     .local v1, str:Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v2, :cond_0
 
+    .line 1724
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v2}, Landroid/app/enterprise/IVpnInfoPolicy;->getState()Ljava/lang/String;
@@ -264,15 +295,18 @@
 
     move-result-object v1
 
+    .line 1729
     :cond_0
     :goto_0
     return-object v1
 
+    .line 1726
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 1727
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -289,14 +323,17 @@
     .locals 4
 
     .prologue
+    .line 1673
     const/4 v1, 0x0
 
+    .line 1675
     .local v1, str:Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v2, :cond_0
 
+    .line 1676
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v2}, Landroid/app/enterprise/IVpnInfoPolicy;->getType()Ljava/lang/String;
@@ -305,15 +342,18 @@
 
     move-result-object v1
 
+    .line 1681
     :cond_0
     :goto_0
     return-object v1
 
+    .line 1678
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 1679
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -331,26 +371,31 @@
     .parameter "Id"
 
     .prologue
+    .line 1654
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 1655
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v1, p1}, Landroid/app/enterprise/IVpnInfoPolicy;->setId(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1660
     :cond_0
     :goto_0
     return-void
 
+    .line 1657
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1658
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -368,26 +413,31 @@
     .parameter "name"
 
     .prologue
+    .line 1634
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 1635
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v1, p1}, Landroid/app/enterprise/IVpnInfoPolicy;->setName(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1640
     :cond_0
     :goto_0
     return-void
 
+    .line 1637
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1638
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -405,26 +455,31 @@
     .parameter "name"
 
     .prologue
+    .line 1644
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 1645
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v1, p1}, Landroid/app/enterprise/IVpnInfoPolicy;->setServerName(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1650
     :cond_0
     :goto_0
     return-void
 
+    .line 1647
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1648
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -442,26 +497,31 @@
     .parameter "x"
 
     .prologue
+    .line 1664
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 1665
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$VpnPolicy;->lService:Landroid/app/enterprise/IVpnInfoPolicy;
 
     invoke-interface {v1, p1}, Landroid/app/enterprise/IVpnInfoPolicy;->setState(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1670
     :cond_0
     :goto_0
     return-void
 
+    .line 1667
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1668
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 

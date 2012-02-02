@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 23
     invoke-direct {p0}, Landroid/database/Observable;-><init>()V
 
     return-void
@@ -30,10 +31,12 @@
     .locals 4
 
     .prologue
+    .line 29
     iget-object v2, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     monitor-enter v2
 
+    .line 30
     :try_start_0
     iget-object v3, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
@@ -55,11 +58,13 @@
 
     check-cast v1, Landroid/database/DataSetObserver;
 
+    .line 31
     .local v1, observer:Landroid/database/DataSetObserver;
     invoke-virtual {v1}, Landroid/database/DataSetObserver;->onChanged()V
 
     goto :goto_0
 
+    .line 33
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v1           #observer:Landroid/database/DataSetObserver;
     :catchall_0
@@ -78,6 +83,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 34
     return-void
 .end method
 
@@ -85,10 +91,12 @@
     .locals 4
 
     .prologue
+    .line 41
     iget-object v2, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     monitor-enter v2
 
+    .line 42
     :try_start_0
     iget-object v3, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
@@ -110,11 +118,13 @@
 
     check-cast v1, Landroid/database/DataSetObserver;
 
+    .line 43
     .local v1, observer:Landroid/database/DataSetObserver;
     invoke-virtual {v1}, Landroid/database/DataSetObserver;->onInvalidated()V
 
     goto :goto_0
 
+    .line 45
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v1           #observer:Landroid/database/DataSetObserver;
     :catchall_0
@@ -133,5 +143,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 46
     return-void
 .end method

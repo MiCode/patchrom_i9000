@@ -60,6 +60,7 @@
 
     const/4 v3, 0x0
 
+    .line 116
     new-instance v0, Lcom/android/internal/policy/impl/LockScreen$Status;
 
     const-string v1, "Normal"
@@ -68,6 +69,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockScreen$Status;->Normal:Lcom/android/internal/policy/impl/LockScreen$Status;
 
+    .line 121
     new-instance v0, Lcom/android/internal/policy/impl/LockScreen$Status;
 
     const-string v1, "NetworkLocked"
@@ -76,6 +78,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockScreen$Status;->NetworkLocked:Lcom/android/internal/policy/impl/LockScreen$Status;
 
+    .line 126
     new-instance v0, Lcom/android/internal/policy/impl/LockScreen$Status;
 
     const-string v1, "SimMissing"
@@ -84,6 +87,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockScreen$Status;->SimMissing:Lcom/android/internal/policy/impl/LockScreen$Status;
 
+    .line 132
     new-instance v0, Lcom/android/internal/policy/impl/LockScreen$Status;
 
     const-string v1, "SimMissingLocked"
@@ -92,6 +96,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockScreen$Status;->SimMissingLocked:Lcom/android/internal/policy/impl/LockScreen$Status;
 
+    .line 138
     new-instance v0, Lcom/android/internal/policy/impl/LockScreen$Status;
 
     const-string v1, "SimPukLocked"
@@ -100,6 +105,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockScreen$Status;->SimPukLocked:Lcom/android/internal/policy/impl/LockScreen$Status;
 
+    .line 143
     new-instance v0, Lcom/android/internal/policy/impl/LockScreen$Status;
 
     const-string v1, "SimLocked"
@@ -110,6 +116,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockScreen$Status;->SimLocked:Lcom/android/internal/policy/impl/LockScreen$Status;
 
+    .line 148
     new-instance v0, Lcom/android/internal/policy/impl/LockScreen$Status;
 
     const-string v1, "SimPukBlocked"
@@ -120,6 +127,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockScreen$Status;->SimPukBlocked:Lcom/android/internal/policy/impl/LockScreen$Status;
 
+    .line 112
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/internal/policy/impl/LockScreen$Status;
@@ -173,10 +181,13 @@
     .end annotation
 
     .prologue
+    .line 152
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 153
     iput-boolean p3, p0, Lcom/android/internal/policy/impl/LockScreen$Status;->mShowStatusLines:Z
 
+    .line 154
     return-void
 .end method
 
@@ -185,6 +196,7 @@
     .parameter "name"
 
     .prologue
+    .line 112
     const-class v0, Lcom/android/internal/policy/impl/LockScreen$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -201,6 +213,7 @@
     .locals 1
 
     .prologue
+    .line 112
     sget-object v0, Lcom/android/internal/policy/impl/LockScreen$Status;->$VALUES:[Lcom/android/internal/policy/impl/LockScreen$Status;
 
     invoke-virtual {v0}, [Lcom/android/internal/policy/impl/LockScreen$Status;->clone()Ljava/lang/Object;
@@ -218,6 +231,7 @@
     .locals 1
 
     .prologue
+    .line 161
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/LockScreen$Status;->mShowStatusLines:Z
 
     return v0

@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 153
     iput-object p1, p0, Lcom/android/internal/app/ShutdownThread$1;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,20 +43,24 @@
     .parameter "which"
 
     .prologue
+    .line 156
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 157
     iget-object v0, p0, Lcom/android/internal/app/ShutdownThread$1;->val$context:Landroid/content/Context;
 
     #calls: Lcom/android/internal/app/ShutdownThread;->beginShutdownSamsungSequence(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/internal/app/ShutdownThread;->access$100(Landroid/content/Context;)V
 
+    .line 162
     :goto_0
     return-void
 
+    .line 159
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/ShutdownThread$1;->val$context:Landroid/content/Context;
 

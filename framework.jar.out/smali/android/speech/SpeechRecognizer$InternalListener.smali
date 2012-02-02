@@ -48,10 +48,12 @@
     .parameter
 
     .prologue
+    .line 392
     iput-object p1, p0, Landroid/speech/SpeechRecognizer$InternalListener;->this$0:Landroid/speech/SpeechRecognizer;
 
     invoke-direct {p0}, Landroid/speech/IRecognitionListener$Stub;-><init>()V
 
+    .line 405
     new-instance v0, Landroid/speech/SpeechRecognizer$InternalListener$1;
 
     invoke-direct {v0, p0}, Landroid/speech/SpeechRecognizer$InternalListener$1;-><init>(Landroid/speech/SpeechRecognizer$InternalListener;)V
@@ -67,6 +69,7 @@
     .parameter "x1"
 
     .prologue
+    .line 392
     invoke-direct {p0, p1}, Landroid/speech/SpeechRecognizer$InternalListener;-><init>(Landroid/speech/SpeechRecognizer;)V
 
     return-void
@@ -77,6 +80,7 @@
     .parameter "x0"
 
     .prologue
+    .line 392
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalListener:Landroid/speech/RecognitionListener;
 
     return-object v0
@@ -88,6 +92,7 @@
     .parameter "x1"
 
     .prologue
+    .line 392
     iput-object p1, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalListener:Landroid/speech/RecognitionListener;
 
     return-object p1
@@ -99,6 +104,7 @@
     .locals 2
 
     .prologue
+    .line 444
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -109,6 +115,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 445
     return-void
 .end method
 
@@ -117,6 +124,7 @@
     .parameter "buffer"
 
     .prologue
+    .line 448
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
@@ -127,6 +135,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 449
     return-void
 .end method
 
@@ -134,6 +143,7 @@
     .locals 2
 
     .prologue
+    .line 452
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
@@ -144,6 +154,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 453
     return-void
 .end method
 
@@ -152,6 +163,7 @@
     .parameter "error"
 
     .prologue
+    .line 456
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
@@ -166,6 +178,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 457
     return-void
 .end method
 
@@ -175,6 +188,7 @@
     .parameter "params"
 
     .prologue
+    .line 476
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/16 v1, 0x9
@@ -185,6 +199,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 478
     return-void
 .end method
 
@@ -193,6 +208,7 @@
     .parameter "results"
 
     .prologue
+    .line 468
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/4 v1, 0x7
@@ -203,6 +219,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 469
     return-void
 .end method
 
@@ -211,6 +228,7 @@
     .parameter "noiseParams"
 
     .prologue
+    .line 460
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
@@ -221,6 +239,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 461
     return-void
 .end method
 
@@ -229,6 +248,7 @@
     .parameter "results"
 
     .prologue
+    .line 464
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
@@ -239,6 +259,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 465
     return-void
 .end method
 
@@ -247,6 +268,7 @@
     .parameter "rmsdB"
 
     .prologue
+    .line 472
     iget-object v0, p0, Landroid/speech/SpeechRecognizer$InternalListener;->mInternalHandler:Landroid/os/Handler;
 
     const/16 v1, 0x8
@@ -261,5 +283,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 473
     return-void
 .end method

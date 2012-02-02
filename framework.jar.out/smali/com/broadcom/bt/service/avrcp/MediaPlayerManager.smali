@@ -57,22 +57,27 @@
     .parameter "service"
 
     .prologue
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
+    .line 107
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mRegBinders:Ljava/util/ArrayList;
 
+    .line 40
     iput-object p1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mAVService:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
 
+    .line 44
     return-void
 .end method
 
@@ -84,10 +89,12 @@
     .prologue
     const-string v4, "AVRCP:MediaPlayerManager"
 
+    .line 66
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mCurrBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 67
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mRegBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -109,6 +116,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 68
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->getPlayer()Lcom/broadcom/bt/service/avrcp/MediaPlayer;
 
@@ -116,6 +124,7 @@
 
     if-nez v2, :cond_0
 
+    .line 69
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v2}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->bindService(Landroid/content/Context;)Z
@@ -124,6 +133,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 70
     const-string v2, "AVRCP:MediaPlayerManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -158,12 +168,14 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 71
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 74
     :cond_1
     const-string v2, "AVRCP:MediaPlayerManager"
 
@@ -205,12 +217,14 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 76
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 80
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :cond_2
     return-void
@@ -222,25 +236,31 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 82
     iput-object v3, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mCurrBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 83
     iput-object v3, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mDefaultBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 84
     iget-object v3, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mRegBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
+    .line 85
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 86
     .local v1, binders:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;>;"
     iget-object v3, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
+    .line 87
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -259,6 +279,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 88
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     const-string v3, "AVRCP:MediaPlayerManager"
 
@@ -308,16 +329,19 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 90
     iget-object v3, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v3}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->unbind(Landroid/content/Context;)V
 
     goto :goto_0
 
+    .line 92
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :cond_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
+    .line 93
     return-void
 .end method
 
@@ -326,6 +350,7 @@
     .parameter "PackageName"
 
     .prologue
+    .line 46
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -346,6 +371,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 47
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->getPackageName()Ljava/lang/String;
 
@@ -359,6 +385,7 @@
 
     move-object v2, v0
 
+    .line 49
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :goto_0
     return-object v2
@@ -374,6 +401,7 @@
     .parameter "PlayerName"
 
     .prologue
+    .line 52
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -382,12 +410,15 @@
 
     if-nez v2, :cond_1
 
+    .line 53
     :cond_0
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mDefaultBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 57
     :goto_0
     return-object v2
 
+    .line 54
     :cond_1
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
@@ -409,6 +440,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 55
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->getPlayerName()Ljava/lang/String;
 
@@ -422,8 +454,10 @@
 
     move-object v2, v0
 
+    .line 56
     goto :goto_0
 
+    .line 57
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :cond_3
     const/4 v2, 0x0
@@ -436,6 +470,7 @@
     .parameter "ServiceName"
 
     .prologue
+    .line 60
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -456,6 +491,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 61
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->getPlaybackServiceName()Ljava/lang/String;
 
@@ -469,6 +505,7 @@
 
     move-object v2, v0
 
+    .line 63
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :goto_0
     return-object v2
@@ -483,6 +520,7 @@
     .locals 1
 
     .prologue
+    .line 38
     iget-object v0, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -492,6 +530,7 @@
     .locals 1
 
     .prologue
+    .line 134
     monitor-enter p0
 
     :try_start_0
@@ -499,6 +538,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 135
     iget-object v0, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mCurrBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->getPlayerName()Ljava/lang/String;
@@ -507,6 +547,7 @@
 
     move-result-object v0
 
+    .line 136
     :goto_0
     monitor-exit p0
 
@@ -524,6 +565,7 @@
 
     goto :goto_0
 
+    .line 134
     :catchall_0
     move-exception v0
 
@@ -536,16 +578,19 @@
     .locals 1
 
     .prologue
+    .line 139
     iget-object v0, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mDefaultBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
     if-eqz v0, :cond_0
 
+    .line 140
     iget-object v0, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mDefaultBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->getPlayerName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 141
     :goto_0
     return-object v0
 
@@ -560,6 +605,7 @@
     .parameter "PlayerName"
 
     .prologue
+    .line 128
     monitor-enter p0
 
     :try_start_0
@@ -567,15 +613,18 @@
 
     move-result-object v0
 
+    .line 129
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     if-eqz v0, :cond_0
 
+    .line 130
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->getPlayer()Lcom/broadcom/bt/service/avrcp/MediaPlayer;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v1
 
+    .line 131
     :goto_0
     monitor-exit p0
 
@@ -586,6 +635,7 @@
 
     goto :goto_0
 
+    .line 128
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :catchall_0
     move-exception v1
@@ -599,6 +649,7 @@
     .locals 4
 
     .prologue
+    .line 118
     monitor-enter p0
 
     :try_start_0
@@ -608,11 +659,14 @@
 
     move-result v2
 
+    .line 119
     .local v2, size:I
     if-lez v2, :cond_1
 
+    .line 120
     new-array v1, v2, [Ljava/lang/String;
 
+    .line 121
     .local v1, players:[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -620,6 +674,7 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
+    .line 122
     iget-object v3, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -636,6 +691,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 121
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -643,6 +699,7 @@
     :cond_0
     move-object v3, v1
 
+    .line 125
     .end local v0           #i:I
     .end local v1           #players:[Ljava/lang/String;
     :goto_1
@@ -655,6 +712,7 @@
 
     goto :goto_1
 
+    .line 118
     .end local v2           #size:I
     :catchall_0
     move-exception v3
@@ -671,16 +729,20 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 110
     iput-object p1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mContext:Landroid/content/Context;
 
+    .line 113
     new-instance v0, Lcom/broadcom/bt/service/avrcp/MediaPlayerAndroidBinder;
 
     invoke-direct {v0, p0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerAndroidBinder;-><init>(Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;)V
 
     invoke-virtual {p0, v0, v1}, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->registerMediaPlayer(Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;Z)Z
 
+    .line 114
     invoke-virtual {p0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->bindAll()V
 
+    .line 115
     return v1
 .end method
 
@@ -689,6 +751,7 @@
     .parameter "PlayerName"
 
     .prologue
+    .line 152
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->getPlayer(Ljava/lang/String;)Lcom/broadcom/bt/service/avrcp/MediaPlayer;
 
     move-result-object v0
@@ -712,30 +775,39 @@
     .parameter "msWait"
 
     .prologue
+    .line 160
     const/4 v0, 0x0
 
+    .line 161
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     monitor-enter p0
 
+    .line 162
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->findBinderByPlayerName(Ljava/lang/String;)Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
     move-result-object v0
 
+    .line 163
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 164
     if-eqz v0, :cond_1
 
+    .line 165
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v2}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->launch(Landroid/content/Context;)V
 
+    .line 166
     monitor-enter v0
 
+    .line 167
     if-lez p2, :cond_0
 
+    .line 169
     int-to-long v2, p2
 
     :try_start_1
@@ -744,6 +816,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 175
     :cond_0
     :goto_0
     :try_start_2
@@ -751,9 +824,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 177
     :cond_1
     return-void
 
+    .line 163
     :catchall_0
     move-exception v2
 
@@ -764,9 +839,11 @@
 
     throw v2
 
+    .line 170
     :catch_0
     move-exception v1
 
+    .line 171
     .local v1, ie:Ljava/lang/InterruptedException;
     :try_start_4
     const-string v2, "AVRCP:MediaPlayerManager"
@@ -779,6 +856,7 @@
 
     goto :goto_0
 
+    .line 175
     .end local v1           #ie:Ljava/lang/InterruptedException;
     :catchall_1
     move-exception v2
@@ -795,16 +873,19 @@
     .parameter "player"
 
     .prologue
+    .line 193
     monitor-enter p0
 
     const/4 v0, 0x0
 
+    .line 194
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 195
     :try_start_1
     invoke-virtual {p1}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->getName()Ljava/lang/String;
 
@@ -814,36 +895,44 @@
 
     move-result-object v0
 
+    .line 196
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 197
     :cond_0
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 198
     if-eqz v0, :cond_1
 
+    .line 199
     :try_start_2
     monitor-enter v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 200
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
+    .line 201
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 203
     :cond_1
     monitor-exit p0
 
     return-void
 
+    .line 197
     :catchall_0
     move-exception v1
 
@@ -857,6 +946,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 193
     :catchall_1
     move-exception v1
 
@@ -864,6 +954,7 @@
 
     throw v1
 
+    .line 201
     :catchall_2
     move-exception v1
 
@@ -883,11 +974,14 @@
     .parameter "player"
 
     .prologue
+    .line 179
     const/4 v0, 0x0
 
+    .line 180
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     monitor-enter p0
 
+    .line 181
     :try_start_0
     invoke-virtual {p1}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->getName()Ljava/lang/String;
 
@@ -897,24 +991,31 @@
 
     move-result-object v0
 
+    .line 182
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 183
     if-eqz v0, :cond_0
 
+    .line 184
     monitor-enter v0
 
+    .line 185
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
+    .line 186
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 188
     :cond_0
     monitor-enter p0
 
+    .line 189
     :try_start_2
     iget-object v1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mAVService:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
 
@@ -926,12 +1027,15 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;->onPlayStateChanged(Ljava/lang/String;I)V
 
+    .line 190
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
+    .line 191
     return-void
 
+    .line 182
     :catchall_0
     move-exception v1
 
@@ -942,6 +1046,7 @@
 
     throw v1
 
+    .line 186
     :catchall_1
     move-exception v1
 
@@ -952,6 +1057,7 @@
 
     throw v1
 
+    .line 190
     :catchall_2
     move-exception v1
 
@@ -968,6 +1074,7 @@
     .parameter "player"
 
     .prologue
+    .line 205
     monitor-enter p0
 
     :try_start_0
@@ -979,6 +1086,7 @@
 
     move-result-object v0
 
+    .line 207
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     if-eqz v0, :cond_0
 
@@ -990,10 +1098,12 @@
 
     if-nez v1, :cond_0
 
+    .line 208
     iget-object v1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 209
     iget-object v1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mAVService:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
 
     invoke-virtual {p1}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->getName()Ljava/lang/String;
@@ -1006,11 +1116,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 211
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 205
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :catchall_0
     move-exception v1
@@ -1026,6 +1138,7 @@
     .parameter "type"
 
     .prologue
+    .line 213
     monitor-enter p0
 
     :try_start_0
@@ -1039,10 +1152,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 214
     monitor-exit p0
 
     return-void
 
+    .line 213
     :catchall_0
     move-exception v0
 
@@ -1057,6 +1172,7 @@
     .parameter "DefaultPlayer"
 
     .prologue
+    .line 96
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mRegBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1077,6 +1193,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 97
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;->getPackageName()Ljava/lang/String;
 
@@ -1092,21 +1209,27 @@
 
     if-eqz v2, :cond_0
 
+    .line 98
     const/4 v2, 0x0
 
+    .line 102
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :goto_0
     return v2
 
+    .line 99
     :cond_1
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mRegBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 100
     if-eqz p2, :cond_2
 
+    .line 101
     iput-object p1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mDefaultBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
 
+    .line 102
     :cond_2
     const/4 v2, 0x1
 
@@ -1118,6 +1241,7 @@
     .parameter "PlayerName"
 
     .prologue
+    .line 144
     monitor-enter p0
 
     :try_start_0
@@ -1125,15 +1249,19 @@
 
     move-result-object v0
 
+    .line 145
     .local v0, b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     if-eqz v0, :cond_0
 
+    .line 146
     iput-object v0, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->mCurrBinder:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 147
     const/4 v1, 0x1
 
+    .line 149
     :goto_0
     monitor-exit p0
 
@@ -1144,6 +1272,7 @@
 
     goto :goto_0
 
+    .line 144
     .end local v0           #b:Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;
     :catchall_0
     move-exception v1

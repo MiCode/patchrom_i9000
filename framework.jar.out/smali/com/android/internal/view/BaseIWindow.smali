@@ -12,6 +12,7 @@
     .locals 0
 
     .prologue
+    .line 29
     invoke-direct {p0}, Landroid/view/IWindow$Stub;-><init>()V
 
     return-void
@@ -24,6 +25,7 @@
     .parameter "reason"
 
     .prologue
+    .line 59
     return-void
 .end method
 
@@ -32,6 +34,7 @@
     .parameter "visible"
 
     .prologue
+    .line 47
     return-void
 .end method
 
@@ -39,6 +42,7 @@
     .locals 0
 
     .prologue
+    .line 50
     return-void
 .end method
 
@@ -52,8 +56,10 @@
     .parameter "sync"
 
     .prologue
+    .line 72
     if-eqz p6, :cond_0
 
+    .line 74
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/view/BaseIWindow;->mSession:Landroid/view/IWindowSession;
 
@@ -67,10 +73,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 78
     :cond_0
     :goto_0
     return-void
 
+    .line 75
     :catch_0
     move-exception v0
 
@@ -86,8 +94,10 @@
     .parameter "sync"
 
     .prologue
+    .line 62
     if-eqz p5, :cond_0
 
+    .line 64
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/view/BaseIWindow;->mSession:Landroid/view/IWindowSession;
 
@@ -99,10 +109,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 68
     :cond_0
     :goto_0
     return-void
 
+    .line 65
     :catch_0
     move-exception v0
 
@@ -116,6 +128,7 @@
     .parameter "out"
 
     .prologue
+    .line 56
     return-void
 .end method
 
@@ -129,8 +142,10 @@
     .parameter "newConfig"
 
     .prologue
+    .line 38
     if-eqz p5, :cond_0
 
+    .line 40
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/view/BaseIWindow;->mSession:Landroid/view/IWindowSession;
 
@@ -138,10 +153,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 44
     :cond_0
     :goto_0
     return-void
 
+    .line 41
     :catch_0
     move-exception v0
 
@@ -153,8 +170,10 @@
     .parameter "session"
 
     .prologue
+    .line 33
     iput-object p1, p0, Lcom/android/internal/view/BaseIWindow;->mSession:Landroid/view/IWindowSession;
 
+    .line 34
     return-void
 .end method
 
@@ -164,5 +183,6 @@
     .parameter "touchEnabled"
 
     .prologue
+    .line 53
     return-void
 .end method

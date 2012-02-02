@@ -31,12 +31,14 @@
     .parameter "s"
 
     .prologue
+    .line 517
     invoke-static {p2}, Lcom/android/internal/telephony/IccUtils;->hexStringToBytes(Ljava/lang/String;)[B
 
     move-result-object v0
 
     invoke-direct {p0, p1, v0}, Landroid/telephony/gsm/CbMessage$CbPduParser;-><init>(Landroid/telephony/gsm/CbMessage;[B)V
 
+    .line 518
     return-void
 .end method
 
@@ -48,16 +50,21 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 520
     iput-object p1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->this$0:Landroid/telephony/gsm/CbMessage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 521
     iput-object p2, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
+    .line 522
     iput v0, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
 
+    .line 523
     iput v0, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mUserDataSeptetPadding:I
 
+    .line 524
     return-void
 .end method
 
@@ -67,6 +74,7 @@
     .parameter "x1"
 
     .prologue
+    .line 511
     invoke-direct {p0, p1}, Landroid/telephony/gsm/CbMessage$CbPduParser;->getGarbageCnt(I)I
 
     move-result v0
@@ -80,6 +88,7 @@
     .parameter "x1"
 
     .prologue
+    .line 511
     invoke-direct {p0, p1}, Landroid/telephony/gsm/CbMessage$CbPduParser;->getUserDataGSM7Bit(I)Ljava/lang/String;
 
     move-result-object v0
@@ -93,6 +102,7 @@
     .parameter "x1"
 
     .prologue
+    .line 511
     invoke-direct {p0, p1}, Landroid/telephony/gsm/CbMessage$CbPduParser;->getUserDataUCS2(I)Ljava/lang/String;
 
     move-result-object v0
@@ -105,8 +115,10 @@
     .parameter "length"
 
     .prologue
+    .line 566
     const/4 v0, 0x0
 
+    .line 568
     .local v0, cnt:I
     iget v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
 
@@ -114,6 +126,7 @@
     :goto_0
     if-ge v1, p1, :cond_1
 
+    .line 570
     iget-object v2, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     const/4 v3, 0x1
@@ -130,13 +143,16 @@
 
     if-nez v2, :cond_0
 
+    .line 572
     add-int/lit8 v0, v0, 0x1
 
+    .line 568
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 577
     :cond_1
     return v0
 .end method
@@ -146,6 +162,7 @@
     .parameter "septetCount"
 
     .prologue
+    .line 583
     iget-object v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     iget v2, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
@@ -156,6 +173,7 @@
 
     move-result-object v0
 
+    .line 585
     .local v0, ret:Ljava/lang/String;
     iget v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
 
@@ -167,6 +185,7 @@
 
     iput v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
 
+    .line 587
     return-object v0
 .end method
 
@@ -177,12 +196,14 @@
     .prologue
     const-string v5, "GSM"
 
+    .line 591
     const-string v2, "GSM"
 
     const-string v2, "Entered getUserDataUCS2 method"
 
     invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 596
     :try_start_0
     new-instance v1, Ljava/lang/String;
 
@@ -190,12 +211,13 @@
 
     iget v3, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
 
-    const-string v4, "utf-16"
+    const-string/jumbo v4, "utf-16"
 
     invoke-direct {v1, v2, v3, p1, v4}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 602
     .local v1, ret:Ljava/lang/String;
     :goto_0
     iget v2, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
@@ -204,17 +226,21 @@
 
     iput v2, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
 
+    .line 603
     return-object v1
 
+    .line 597
     .end local v1           #ret:Ljava/lang/String;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 598
     .local v0, ex:Ljava/io/UnsupportedEncodingException;
     const-string v1, ""
 
+    .line 599
     .restart local v1       #ret:Ljava/lang/String;
     const-string v2, "GSM"
 
@@ -231,6 +257,7 @@
     .locals 3
 
     .prologue
+    .line 530
     iget-object v0, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     iget v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
@@ -252,6 +279,7 @@
     .locals 1
 
     .prologue
+    .line 527
     iget-object v0, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->this$0:Landroid/telephony/gsm/CbMessage;
 
     #getter for: Landroid/telephony/gsm/CbMessage;->mPdu:[B
@@ -266,6 +294,7 @@
     .locals 2
 
     .prologue
+    .line 535
     iget-object v0, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     iget v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
@@ -287,6 +316,7 @@
     .locals 4
 
     .prologue
+    .line 557
     iget-object v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     iget v2, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
@@ -301,6 +331,7 @@
 
     int-to-short v0, v1
 
+    .line 558
     .local v0, msgCode:S
     iget-object v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
@@ -322,6 +353,7 @@
 
     int-to-short v0, v1
 
+    .line 559
     iget-object v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     iget v2, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
@@ -338,6 +370,7 @@
 
     int-to-short v0, v1
 
+    .line 561
     return v0
 .end method
 
@@ -345,6 +378,7 @@
     .locals 4
 
     .prologue
+    .line 551
     iget-object v0, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     iget v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
@@ -382,6 +416,7 @@
     .locals 3
 
     .prologue
+    .line 540
     iget-object v0, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     iget v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I
@@ -415,6 +450,7 @@
     .locals 3
 
     .prologue
+    .line 546
     iget-object v0, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mpdu:[B
 
     iget v1, p0, Landroid/telephony/gsm/CbMessage$CbPduParser;->mcur:I

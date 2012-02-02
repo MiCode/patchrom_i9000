@@ -132,30 +132,43 @@
 
     const/4 v0, 0x0
 
+    .line 220
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
+    .line 59
     iput v0, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
+    .line 76
     iput-wide v1, p0, Landroid/widget/AdapterView;->mSyncRowId:J
 
+    .line 86
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mNeedSync:Z
 
+    .line 118
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mInLayout:Z
 
+    .line 144
     iput v3, p0, Landroid/widget/AdapterView;->mNextSelectedPosition:I
 
+    .line 150
     iput-wide v1, p0, Landroid/widget/AdapterView;->mNextSelectedRowId:J
 
+    .line 155
     iput v3, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
+    .line 161
     iput-wide v1, p0, Landroid/widget/AdapterView;->mSelectedRowId:J
 
+    .line 193
     iput v3, p0, Landroid/widget/AdapterView;->mOldSelectedPosition:I
 
+    .line 198
     iput-wide v1, p0, Landroid/widget/AdapterView;->mOldSelectedRowId:J
 
+    .line 217
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mBlockLayoutRequests:Z
 
+    .line 221
     return-void
 .end method
 
@@ -172,30 +185,43 @@
 
     const/4 v0, 0x0
 
+    .line 224
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 59
     iput v0, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
+    .line 76
     iput-wide v1, p0, Landroid/widget/AdapterView;->mSyncRowId:J
 
+    .line 86
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mNeedSync:Z
 
+    .line 118
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mInLayout:Z
 
+    .line 144
     iput v3, p0, Landroid/widget/AdapterView;->mNextSelectedPosition:I
 
+    .line 150
     iput-wide v1, p0, Landroid/widget/AdapterView;->mNextSelectedRowId:J
 
+    .line 155
     iput v3, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
+    .line 161
     iput-wide v1, p0, Landroid/widget/AdapterView;->mSelectedRowId:J
 
+    .line 193
     iput v3, p0, Landroid/widget/AdapterView;->mOldSelectedPosition:I
 
+    .line 198
     iput-wide v1, p0, Landroid/widget/AdapterView;->mOldSelectedRowId:J
 
+    .line 217
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mBlockLayoutRequests:Z
 
+    .line 225
     return-void
 .end method
 
@@ -213,30 +239,43 @@
 
     const/4 v0, 0x0
 
+    .line 228
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 59
     iput v0, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
+    .line 76
     iput-wide v1, p0, Landroid/widget/AdapterView;->mSyncRowId:J
 
+    .line 86
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mNeedSync:Z
 
+    .line 118
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mInLayout:Z
 
+    .line 144
     iput v3, p0, Landroid/widget/AdapterView;->mNextSelectedPosition:I
 
+    .line 150
     iput-wide v1, p0, Landroid/widget/AdapterView;->mNextSelectedRowId:J
 
+    .line 155
     iput v3, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
+    .line 161
     iput-wide v1, p0, Landroid/widget/AdapterView;->mSelectedRowId:J
 
+    .line 193
     iput v3, p0, Landroid/widget/AdapterView;->mOldSelectedPosition:I
 
+    .line 198
     iput-wide v1, p0, Landroid/widget/AdapterView;->mOldSelectedRowId:J
 
+    .line 217
     iput-boolean v0, p0, Landroid/widget/AdapterView;->mBlockLayoutRequests:Z
 
+    .line 229
     return-void
 .end method
 
@@ -246,6 +285,7 @@
     .parameter "x1"
 
     .prologue
+    .line 42
     invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
@@ -256,6 +296,7 @@
     .parameter "x0"
 
     .prologue
+    .line 42
     invoke-virtual {p0}, Landroid/widget/AdapterView;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
@@ -268,6 +309,7 @@
     .parameter "x0"
 
     .prologue
+    .line 42
     invoke-direct {p0}, Landroid/widget/AdapterView;->fireOnSelected()V
 
     return-void
@@ -277,26 +319,32 @@
     .locals 6
 
     .prologue
+    .line 865
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     if-nez v0, :cond_0
 
+    .line 876
     :goto_0
     return-void
 
+    .line 868
     :cond_0
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v3
 
+    .line 869
     .local v3, selection:I
     if-ltz v3, :cond_1
 
+    .line 870
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedView()Landroid/view/View;
 
     move-result-object v2
 
+    .line 871
     .local v2, v:Landroid/view/View;
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
@@ -314,6 +362,7 @@
 
     goto :goto_0
 
+    .line 874
     .end local v2           #v:Landroid/view/View;
     :cond_1
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
@@ -333,32 +382,40 @@
 
     const/4 v1, 0x0
 
+    .line 707
     invoke-virtual {p0}, Landroid/widget/AdapterView;->isInFilterMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 708
     const/4 p1, 0x0
 
+    .line 711
     :cond_0
     if-eqz p1, :cond_3
 
+    .line 712
     iget-object v0, p0, Landroid/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
+    .line 713
     iget-object v0, p0, Landroid/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 714
     invoke-virtual {p0, v2}, Landroid/widget/AdapterView;->setVisibility(I)V
 
+    .line 723
     :goto_0
     iget-boolean v0, p0, Landroid/widget/AdapterView;->mDataChanged:Z
 
     if-eqz v0, :cond_1
 
+    .line 724
     iget v2, p0, Landroid/view/View;->mLeft:I
 
     iget v3, p0, Landroid/view/View;->mTop:I
@@ -371,15 +428,18 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/AdapterView;->onLayout(ZIIII)V
 
+    .line 730
     :cond_1
     :goto_1
     return-void
 
+    .line 717
     :cond_2
     invoke-virtual {p0, v1}, Landroid/widget/AdapterView;->setVisibility(I)V
 
     goto :goto_0
 
+    .line 727
     :cond_3
     iget-object v0, p0, Landroid/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
@@ -389,6 +449,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
+    .line 728
     :cond_4
     invoke-virtual {p0, v1}, Landroid/widget/AdapterView;->setVisibility(I)V
 
@@ -402,6 +463,7 @@
     .parameter "child"
 
     .prologue
+    .line 435
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -418,6 +480,7 @@
     .parameter "index"
 
     .prologue
+    .line 448
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -435,6 +498,7 @@
     .parameter "params"
 
     .prologue
+    .line 476
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -451,6 +515,7 @@
     .parameter "params"
 
     .prologue
+    .line 461
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -465,6 +530,7 @@
     .locals 1
 
     .prologue
+    .line 909
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     invoke-super {p0}, Landroid/view/ViewGroup;->canAnimate()Z
 
@@ -496,10 +562,12 @@
 
     const/4 v4, 0x0
 
+    .line 688
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
+    .line 689
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -512,6 +580,7 @@
     :cond_0
     move v1, v5
 
+    .line 690
     .local v1, empty:Z
     :goto_0
     if-eqz v1, :cond_1
@@ -525,6 +594,7 @@
     :cond_1
     move v2, v5
 
+    .line 694
     .local v2, focusable:Z
     :goto_1
     if-eqz v2, :cond_6
@@ -538,6 +608,7 @@
     :goto_2
     invoke-super {p0, v3}, Landroid/view/ViewGroup;->setFocusableInTouchMode(Z)V
 
+    .line 695
     if-eqz v2, :cond_7
 
     iget-boolean v3, p0, Landroid/widget/AdapterView;->mDesiredFocusableState:Z
@@ -549,10 +620,12 @@
     :goto_3
     invoke-super {p0, v3}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
+    .line 696
     iget-object v3, p0, Landroid/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
     if-eqz v3, :cond_3
 
+    .line 697
     if-eqz v0, :cond_2
 
     invoke-interface {v0}, Landroid/widget/Adapter;->isEmpty()Z
@@ -567,6 +640,7 @@
     :goto_4
     invoke-direct {p0, v3}, Landroid/widget/AdapterView;->updateEmptyStatus(Z)V
 
+    .line 699
     :cond_3
     return-void
 
@@ -575,28 +649,33 @@
     :cond_4
     move v1, v4
 
+    .line 689
     goto :goto_0
 
     .restart local v1       #empty:Z
     :cond_5
     move v2, v4
 
+    .line 690
     goto :goto_1
 
     .restart local v2       #focusable:Z
     :cond_6
     move v3, v4
 
+    .line 694
     goto :goto_2
 
     :cond_7
     move v3, v4
 
+    .line 695
     goto :goto_3
 
     :cond_8
     move v3, v4
 
+    .line 697
     goto :goto_4
 .end method
 
@@ -604,6 +683,7 @@
     .locals 4
 
     .prologue
+    .line 976
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget v0, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
@@ -619,17 +699,21 @@
 
     if-eqz v0, :cond_1
 
+    .line 977
     :cond_0
     invoke-virtual {p0}, Landroid/widget/AdapterView;->selectionChanged()V
 
+    .line 978
     iget v0, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
     iput v0, p0, Landroid/widget/AdapterView;->mOldSelectedPosition:I
 
+    .line 979
     iget-wide v0, p0, Landroid/widget/AdapterView;->mSelectedRowId:J
 
     iput-wide v0, p0, Landroid/widget/AdapterView;->mOldSelectedRowId:J
 
+    .line 981
     :cond_1
     return-void
 .end method
@@ -639,9 +723,11 @@
     .parameter "event"
 
     .prologue
+    .line 880
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     const/4 v0, 0x0
 
+    .line 885
     .local v0, populated:Z
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
 
@@ -651,33 +737,41 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 886
     const/4 v2, 0x4
 
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setEventType(I)V
 
+    .line 891
     :cond_0
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedView()Landroid/view/View;
 
     move-result-object v1
 
+    .line 892
     .local v1, selectedView:Landroid/view/View;
     if-eqz v1, :cond_1
 
+    .line 893
     invoke-virtual {v1, p1}, Landroid/view/View;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
 
+    .line 896
     :cond_1
     if-nez v0, :cond_3
 
+    .line 897
     if-eqz v1, :cond_2
 
+    .line 898
     invoke-virtual {v1}, Landroid/view/View;->isEnabled()Z
 
     move-result v2
 
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setEnabled(Z)V
 
+    .line 900
     :cond_2
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getCount()I
 
@@ -685,12 +779,14 @@
 
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setItemCount(I)V
 
+    .line 901
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v2
 
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setCurrentItemIndex(I)V
 
+    .line 904
     :cond_3
     return v0
 .end method
@@ -709,10 +805,12 @@
     .end annotation
 
     .prologue
+    .line 767
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     .local p1, container:Landroid/util/SparseArray;,"Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->dispatchThawSelfOnly(Landroid/util/SparseArray;)V
 
+    .line 768
     return-void
 .end method
 
@@ -730,10 +828,12 @@
     .end annotation
 
     .prologue
+    .line 759
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     .local p1, container:Landroid/util/SparseArray;,"Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->dispatchFreezeSelfOnly(Landroid/util/SparseArray;)V
 
+    .line 760
     return-void
 .end method
 
@@ -741,6 +841,7 @@
     .locals 20
 
     .prologue
+    .line 992
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     move-object/from16 v0, p0
 
@@ -748,14 +849,18 @@
 
     move v3, v0
 
+    .line 994
     .local v3, count:I
     if-nez v3, :cond_0
 
+    .line 995
     const/16 v16, -0x1
 
+    .line 1067
     :goto_0
     return v16
 
+    .line 998
     :cond_0
     move-object/from16 v0, p0
 
@@ -763,6 +868,7 @@
 
     move-wide v9, v0
 
+    .line 999
     .local v9, idToMatch:J
     move-object/from16 v0, p0
 
@@ -770,6 +876,7 @@
 
     move v15, v0
 
+    .line 1002
     .local v15, seed:I
     const-wide/high16 v16, -0x8000
 
@@ -777,10 +884,12 @@
 
     if-nez v16, :cond_1
 
+    .line 1003
     const/16 v16, -0x1
 
     goto :goto_0
 
+    .line 1007
     :cond_1
     const/16 v16, 0x0
 
@@ -792,6 +901,7 @@
 
     move-result v15
 
+    .line 1008
     const/16 v16, 0x1
 
     sub-int v16, v3, v16
@@ -804,6 +914,7 @@
 
     move-result v15
 
+    .line 1010
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v16
@@ -812,27 +923,34 @@
 
     add-long v4, v16, v18
 
+    .line 1015
     .local v4, endTime:J
     move v6, v15
 
+    .line 1018
     .local v6, first:I
     move v11, v15
 
+    .line 1021
     .local v11, last:I
     const/4 v12, 0x0
 
+    .line 1031
     .local v12, next:Z
     invoke-virtual/range {p0 .. p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v2
 
+    .line 1032
     .local v2, adapter:Landroid/widget/Adapter;,"TT;"
     if-nez v2, :cond_4
 
+    .line 1033
     const/16 v16, -0x1
 
     goto :goto_0
 
+    .line 1051
     .local v7, hitFirst:Z
     .local v8, hitLast:Z
     .local v13, rowId:J
@@ -843,13 +961,17 @@
 
     if-nez v8, :cond_9
 
+    .line 1053
     :cond_3
     add-int/lit8 v11, v11, 0x1
 
+    .line 1054
     move v15, v11
 
+    .line 1056
     const/4 v12, 0x0
 
+    .line 1036
     .end local v7           #hitFirst:Z
     .end local v8           #hitLast:Z
     .end local v13           #rowId:J
@@ -863,10 +985,12 @@
 
     if-gtz v16, :cond_6
 
+    .line 1037
     invoke-interface {v2, v15}, Landroid/widget/Adapter;->getItemId(I)J
 
     move-result-wide v13
 
+    .line 1038
     .restart local v13       #rowId:J
     cmp-long v16, v13, v9
 
@@ -874,8 +998,10 @@
 
     move/from16 v16, v15
 
+    .line 1040
     goto :goto_0
 
+    .line 1043
     :cond_5
     const/16 v16, 0x1
 
@@ -891,6 +1017,7 @@
 
     move/from16 v8, v16
 
+    .line 1044
     .restart local v8       #hitLast:Z
     :goto_2
     if-nez v6, :cond_8
@@ -899,12 +1026,14 @@
 
     move/from16 v7, v16
 
+    .line 1046
     .restart local v7       #hitFirst:Z
     :goto_3
     if-eqz v8, :cond_2
 
     if-eqz v7, :cond_2
 
+    .line 1067
     .end local v7           #hitFirst:Z
     .end local v8           #hitLast:Z
     .end local v13           #rowId:J
@@ -913,6 +1042,7 @@
 
     goto :goto_0
 
+    .line 1043
     .restart local v13       #rowId:J
     :cond_7
     const/16 v16, 0x0
@@ -921,6 +1051,7 @@
 
     goto :goto_2
 
+    .line 1044
     .restart local v8       #hitLast:Z
     :cond_8
     const/16 v16, 0x0
@@ -929,6 +1060,7 @@
 
     goto :goto_3
 
+    .line 1057
     .restart local v7       #hitFirst:Z
     :cond_9
     if-nez v8, :cond_a
@@ -937,11 +1069,14 @@
 
     if-nez v7, :cond_4
 
+    .line 1059
     :cond_a
     add-int/lit8 v6, v6, -0x1
 
+    .line 1060
     move v15, v6
 
+    .line 1062
     const/4 v12, 0x1
 
     goto :goto_1
@@ -961,6 +1096,7 @@
     .end annotation
 
     .prologue
+    .line 565
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget v0, p0, Landroid/widget/AdapterView;->mItemCount:I
 
@@ -971,6 +1107,7 @@
     .locals 1
 
     .prologue
+    .line 648
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget-object v0, p0, Landroid/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
@@ -981,6 +1118,7 @@
     .locals 1
 
     .prologue
+    .line 608
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget v0, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
@@ -992,11 +1130,13 @@
     .parameter "position"
 
     .prologue
+    .line 739
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
+    .line 740
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1021,11 +1161,13 @@
     .parameter "position"
 
     .prologue
+    .line 744
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
+    .line 745
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1049,6 +1191,7 @@
     .locals 2
 
     .prologue
+    .line 618
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget v0, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
@@ -1069,6 +1212,7 @@
     .locals 1
 
     .prologue
+    .line 269
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
@@ -1079,6 +1223,7 @@
     .locals 1
 
     .prologue
+    .line 332
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemLongClickListener:Landroid/widget/AdapterView$OnItemLongClickListener;
 
@@ -1089,6 +1234,7 @@
     .locals 1
 
     .prologue
+    .line 376
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
@@ -1103,8 +1249,10 @@
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     const/4 v6, -0x1
 
+    .line 578
     move-object v3, p1
 
+    .line 581
     .local v3, listItem:Landroid/view/View;
     :goto_0
     :try_start_0
@@ -1123,10 +1271,12 @@
 
     if-nez v5, :cond_0
 
+    .line 582
     move-object v3, v4
 
     goto :goto_0
 
+    .line 584
     .end local v4           #v:Landroid/view/View;
     :catch_0
     move-exception v5
@@ -1136,16 +1286,19 @@
     .local v1, e:Ljava/lang/ClassCastException;
     move v5, v6
 
+    .line 598
     .end local v1           #e:Ljava/lang/ClassCastException;
     :goto_1
     return v5
 
+    .line 590
     .restart local v4       #v:Landroid/view/View;
     :cond_0
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getChildCount()I
 
     move-result v0
 
+    .line 591
     .local v0, childCount:I
     const/4 v2, 0x0
 
@@ -1153,6 +1306,7 @@
     :goto_2
     if-ge v2, v0, :cond_2
 
+    .line 592
     invoke-virtual {p0, v2}, Landroid/widget/AdapterView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
@@ -1163,12 +1317,14 @@
 
     if-eqz v5, :cond_1
 
+    .line 593
     iget v5, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
     add-int/2addr v5, v2
 
     goto :goto_1
 
+    .line 591
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
@@ -1177,6 +1333,7 @@
     :cond_2
     move v5, v6
 
+    .line 598
     goto :goto_1
 .end method
 
@@ -1184,16 +1341,19 @@
     .locals 3
 
     .prologue
+    .line 549
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
+    .line 550
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v1
 
+    .line 551
     .local v1, selection:I
     if-eqz v0, :cond_0
 
@@ -1205,10 +1365,12 @@
 
     if-ltz v1, :cond_0
 
+    .line 552
     invoke-interface {v0, v1}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 554
     :goto_0
     return-object v2
 
@@ -1224,6 +1386,7 @@
     .end annotation
 
     .prologue
+    .line 535
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget-wide v0, p0, Landroid/widget/AdapterView;->mNextSelectedRowId:J
 
@@ -1236,6 +1399,7 @@
     .end annotation
 
     .prologue
+    .line 526
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget v0, p0, Landroid/widget/AdapterView;->mNextSelectedPosition:I
 
@@ -1258,95 +1422,127 @@
 
     const/4 v5, 0x0
 
+    .line 913
     iget v0, p0, Landroid/widget/AdapterView;->mItemCount:I
 
+    .line 914
     .local v0, count:I
     const/4 v1, 0x0
 
+    .line 916
     .local v1, found:Z
     if-lez v0, :cond_4
 
+    .line 921
     iget-boolean v4, p0, Landroid/widget/AdapterView;->mNeedSync:Z
 
     if-eqz v4, :cond_0
 
+    .line 924
     iput-boolean v5, p0, Landroid/widget/AdapterView;->mNeedSync:Z
 
+    .line 928
     invoke-virtual {p0}, Landroid/widget/AdapterView;->findSyncPosition()I
 
     move-result v2
 
+    .line 929
     .local v2, newPos:I
     if-ltz v2, :cond_0
 
+    .line 931
     invoke-virtual {p0, v2, v6}, Landroid/widget/AdapterView;->lookForSelectablePosition(IZ)I
 
     move-result v3
 
+    .line 932
     .local v3, selectablePos:I
     if-ne v3, v2, :cond_0
 
+    .line 934
     invoke-virtual {p0, v2}, Landroid/widget/AdapterView;->setNextSelectedPositionInt(I)V
 
+    .line 935
     const/4 v1, 0x1
 
+    .line 939
     .end local v2           #newPos:I
     .end local v3           #selectablePos:I
     :cond_0
     if-nez v1, :cond_4
 
+    .line 941
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v2
 
+    .line 944
     .restart local v2       #newPos:I
     if-lt v2, v0, :cond_1
 
+    .line 945
     sub-int v2, v0, v6
 
+    .line 947
     :cond_1
     if-gez v2, :cond_2
 
+    .line 948
     const/4 v2, 0x0
 
+    .line 952
     :cond_2
     invoke-virtual {p0, v2, v6}, Landroid/widget/AdapterView;->lookForSelectablePosition(IZ)I
 
     move-result v3
 
+    .line 953
     .restart local v3       #selectablePos:I
     if-gez v3, :cond_3
 
+    .line 955
     invoke-virtual {p0, v2, v5}, Landroid/widget/AdapterView;->lookForSelectablePosition(IZ)I
 
     move-result v3
 
+    .line 957
     :cond_3
     if-ltz v3, :cond_4
 
+    .line 958
     invoke-virtual {p0, v3}, Landroid/widget/AdapterView;->setNextSelectedPositionInt(I)V
 
+    .line 959
     invoke-virtual {p0}, Landroid/widget/AdapterView;->checkSelectionChanged()V
 
+    .line 960
     const/4 v1, 0x1
 
+    .line 964
     .end local v2           #newPos:I
     .end local v3           #selectablePos:I
     :cond_4
     if-nez v1, :cond_5
 
+    .line 966
     iput v7, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
+    .line 967
     iput-wide v8, p0, Landroid/widget/AdapterView;->mSelectedRowId:J
 
+    .line 968
     iput v7, p0, Landroid/widget/AdapterView;->mNextSelectedPosition:I
 
+    .line 969
     iput-wide v8, p0, Landroid/widget/AdapterView;->mNextSelectedRowId:J
 
+    .line 970
     iput-boolean v5, p0, Landroid/widget/AdapterView;->mNeedSync:Z
 
+    .line 971
     invoke-virtual {p0}, Landroid/widget/AdapterView;->checkSelectionChanged()V
 
+    .line 973
     :cond_5
     return-void
 .end method
@@ -1355,6 +1551,7 @@
     .locals 1
 
     .prologue
+    .line 658
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     const/4 v0, 0x0
 
@@ -1367,6 +1564,7 @@
     .parameter "lookDown"
 
     .prologue
+    .line 1079
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     return p1
 .end method
@@ -1375,13 +1573,16 @@
     .locals 1
 
     .prologue
+    .line 823
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
 
+    .line 824
     iget-object v0, p0, Landroid/widget/AdapterView;->mSelectionNotifier:Landroid/widget/AdapterView$SelectionNotifier;
 
     invoke-virtual {p0, v0}, Landroid/widget/AdapterView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 825
     return-void
 .end method
 
@@ -1394,6 +1595,7 @@
     .parameter "bottom"
 
     .prologue
+    .line 516
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getHeight()I
 
@@ -1401,6 +1603,7 @@
 
     iput v0, p0, Landroid/widget/AdapterView;->mLayoutHeight:I
 
+    .line 517
     return-void
 .end method
 
@@ -1414,12 +1617,15 @@
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     const/4 v1, 0x0
 
+    .line 282
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
     if-eqz v0, :cond_0
 
+    .line 283
     invoke-virtual {p0, v1}, Landroid/widget/AdapterView;->playSoundEffect(I)V
 
+    .line 284
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
     move-object v1, p0
@@ -1432,8 +1638,10 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
+    .line 285
     const/4 v0, 0x1
 
+    .line 288
     :goto_0
     return v0
 
@@ -1452,24 +1660,29 @@
 
     const/4 v4, 0x0
 
+    .line 1112
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getChildCount()I
 
     move-result v2
 
     if-lez v2, :cond_1
 
+    .line 1113
     iput-boolean v5, p0, Landroid/widget/AdapterView;->mNeedSync:Z
 
+    .line 1114
     iget v2, p0, Landroid/widget/AdapterView;->mLayoutHeight:I
 
     int-to-long v2, v2
 
     iput-wide v2, p0, Landroid/widget/AdapterView;->mSyncHeight:J
 
+    .line 1115
     iget v2, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
     if-ltz v2, :cond_2
 
+    .line 1117
     iget v2, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
     iget v3, p0, Landroid/widget/AdapterView;->mFirstPosition:I
@@ -1480,41 +1693,50 @@
 
     move-result-object v1
 
+    .line 1118
     .local v1, v:Landroid/view/View;
     iget-wide v2, p0, Landroid/widget/AdapterView;->mNextSelectedRowId:J
 
     iput-wide v2, p0, Landroid/widget/AdapterView;->mSyncRowId:J
 
+    .line 1119
     iget v2, p0, Landroid/widget/AdapterView;->mNextSelectedPosition:I
 
     iput v2, p0, Landroid/widget/AdapterView;->mSyncPosition:I
 
+    .line 1120
     if-eqz v1, :cond_0
 
+    .line 1121
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v2
 
     iput v2, p0, Landroid/widget/AdapterView;->mSpecificTop:I
 
+    .line 1123
     :cond_0
     iput v4, p0, Landroid/widget/AdapterView;->mSyncMode:I
 
+    .line 1140
     .end local v1           #v:Landroid/view/View;
     :cond_1
     :goto_0
     return-void
 
+    .line 1126
     :cond_2
     invoke-virtual {p0, v4}, Landroid/widget/AdapterView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
+    .line 1127
     .restart local v1       #v:Landroid/view/View;
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
+    .line 1128
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     iget v2, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
@@ -1528,6 +1750,7 @@
 
     if-ge v2, v3, :cond_4
 
+    .line 1129
     iget v2, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
     invoke-interface {v0, v2}, Landroid/widget/Adapter;->getItemId(I)J
@@ -1536,24 +1759,29 @@
 
     iput-wide v2, p0, Landroid/widget/AdapterView;->mSyncRowId:J
 
+    .line 1133
     :goto_1
     iget v2, p0, Landroid/widget/AdapterView;->mFirstPosition:I
 
     iput v2, p0, Landroid/widget/AdapterView;->mSyncPosition:I
 
+    .line 1134
     if-eqz v1, :cond_3
 
+    .line 1135
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v2
 
     iput v2, p0, Landroid/widget/AdapterView;->mSpecificTop:I
 
+    .line 1137
     :cond_3
     iput v5, p0, Landroid/widget/AdapterView;->mSyncMode:I
 
     goto :goto_0
 
+    .line 1131
     :cond_4
     const-wide/16 v2, -0x1
 
@@ -1566,10 +1794,11 @@
     .locals 2
 
     .prologue
+    .line 511
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "removeAllViews() is not supported in AdapterView"
+    const-string/jumbo v1, "removeAllViews() is not supported in AdapterView"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
@@ -1581,10 +1810,11 @@
     .parameter "child"
 
     .prologue
+    .line 489
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "removeView(View) is not supported in AdapterView"
+    const-string/jumbo v1, "removeView(View) is not supported in AdapterView"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
@@ -1596,10 +1826,11 @@
     .parameter "index"
 
     .prologue
+    .line 501
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "removeViewAt(int) is not supported in AdapterView"
+    const-string/jumbo v1, "removeViewAt(int) is not supported in AdapterView"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
@@ -1610,11 +1841,13 @@
     .locals 2
 
     .prologue
+    .line 843
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iget-object v0, p0, Landroid/widget/AdapterView;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     if-eqz v0, :cond_2
 
+    .line 844
     iget-boolean v0, p0, Landroid/widget/AdapterView;->mInLayout:Z
 
     if-nez v0, :cond_0
@@ -1623,11 +1856,13 @@
 
     if-eqz v0, :cond_4
 
+    .line 849
     :cond_0
     iget-object v0, p0, Landroid/widget/AdapterView;->mSelectionNotifier:Landroid/widget/AdapterView$SelectionNotifier;
 
     if-nez v0, :cond_1
 
+    .line 850
     new-instance v0, Landroid/widget/AdapterView$SelectionNotifier;
 
     const/4 v1, 0x0
@@ -1636,11 +1871,13 @@
 
     iput-object v0, p0, Landroid/widget/AdapterView;->mSelectionNotifier:Landroid/widget/AdapterView$SelectionNotifier;
 
+    .line 852
     :cond_1
     iget-object v0, p0, Landroid/widget/AdapterView;->mSelectionNotifier:Landroid/widget/AdapterView$SelectionNotifier;
 
     invoke-virtual {p0, v0}, Landroid/widget/AdapterView;->post(Ljava/lang/Runnable;)Z
 
+    .line 859
     :cond_2
     :goto_0
     iget v0, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
@@ -1661,13 +1898,16 @@
 
     if-nez v0, :cond_3
 
+    .line 860
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Landroid/widget/AdapterView;->sendAccessibilityEvent(I)V
 
+    .line 862
     :cond_3
     return-void
 
+    .line 854
     :cond_4
     invoke-direct {p0}, Landroid/widget/AdapterView;->fireOnSelected()V
 
@@ -1687,13 +1927,16 @@
     .parameter "emptyView"
 
     .prologue
+    .line 633
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iput-object p1, p0, Landroid/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
+    .line 635
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
+    .line 636
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1708,12 +1951,15 @@
 
     move v1, v2
 
+    .line 637
     .local v1, empty:Z
     :goto_0
     invoke-direct {p0, v1}, Landroid/widget/AdapterView;->updateEmptyStatus(Z)V
 
+    .line 638
     return-void
 
+    .line 636
     .end local v1           #empty:Z
     :cond_1
     const/4 v2, 0x0
@@ -1733,10 +1979,12 @@
 
     const/4 v3, 0x0
 
+    .line 663
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
+    .line 664
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1749,14 +1997,18 @@
     :cond_0
     move v1, v4
 
+    .line 666
     .local v1, empty:Z
     :goto_0
     iput-boolean p1, p0, Landroid/widget/AdapterView;->mDesiredFocusableState:Z
 
+    .line 667
     if-nez p1, :cond_1
 
+    .line 668
     iput-boolean v3, p0, Landroid/widget/AdapterView;->mDesiredFocusableInTouchModeState:Z
 
+    .line 671
     :cond_1
     if-eqz p1, :cond_4
 
@@ -1774,18 +2026,21 @@
     :goto_1
     invoke-super {p0, v2}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
+    .line 672
     return-void
 
     .end local v1           #empty:Z
     :cond_3
     move v1, v3
 
+    .line 664
     goto :goto_0
 
     .restart local v1       #empty:Z
     :cond_4
     move v2, v3
 
+    .line 671
     goto :goto_1
 .end method
 
@@ -1799,10 +2054,12 @@
 
     const/4 v3, 0x1
 
+    .line 676
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
+    .line 677
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1815,14 +2072,18 @@
     :cond_0
     move v1, v3
 
+    .line 679
     .local v1, empty:Z
     :goto_0
     iput-boolean p1, p0, Landroid/widget/AdapterView;->mDesiredFocusableInTouchModeState:Z
 
+    .line 680
     if-eqz p1, :cond_1
 
+    .line 681
     iput-boolean v3, p0, Landroid/widget/AdapterView;->mDesiredFocusableState:Z
 
+    .line 684
     :cond_1
     if-eqz p1, :cond_4
 
@@ -1840,18 +2101,21 @@
     :goto_1
     invoke-super {p0, v2}, Landroid/view/ViewGroup;->setFocusableInTouchMode(Z)V
 
+    .line 685
     return-void
 
     .end local v1           #empty:Z
     :cond_3
     move v1, v4
 
+    .line 677
     goto :goto_0
 
     .restart local v1       #empty:Z
     :cond_4
     move v2, v4
 
+    .line 684
     goto :goto_1
 .end method
 
@@ -1860,15 +2124,18 @@
     .parameter "position"
 
     .prologue
+    .line 1097
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iput p1, p0, Landroid/widget/AdapterView;->mNextSelectedPosition:I
 
+    .line 1098
     invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->getItemIdAtPosition(I)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/widget/AdapterView;->mNextSelectedRowId:J
 
+    .line 1100
     iget-boolean v0, p0, Landroid/widget/AdapterView;->mNeedSync:Z
 
     if-eqz v0, :cond_0
@@ -1879,12 +2146,15 @@
 
     if-ltz p1, :cond_0
 
+    .line 1101
     iput p1, p0, Landroid/widget/AdapterView;->mSyncPosition:I
 
+    .line 1102
     iget-wide v0, p0, Landroid/widget/AdapterView;->mNextSelectedRowId:J
 
     iput-wide v0, p0, Landroid/widget/AdapterView;->mSyncRowId:J
 
+    .line 1104
     :cond_0
     return-void
 .end method
@@ -1894,6 +2164,7 @@
     .parameter "l"
 
     .prologue
+    .line 750
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -1909,9 +2180,11 @@
     .parameter "listener"
 
     .prologue
+    .line 261
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iput-object p1, p0, Landroid/widget/AdapterView;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
+    .line 262
     return-void
 .end method
 
@@ -1920,6 +2193,7 @@
     .parameter "listener"
 
     .prologue
+    .line 321
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Landroid/widget/AdapterView;->isLongClickable()Z
 
@@ -1927,13 +2201,16 @@
 
     if-nez v0, :cond_0
 
+    .line 322
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/widget/AdapterView;->setLongClickable(Z)V
 
+    .line 324
     :cond_0
     iput-object p1, p0, Landroid/widget/AdapterView;->mOnItemLongClickListener:Landroid/widget/AdapterView$OnItemLongClickListener;
 
+    .line 325
     return-void
 .end method
 
@@ -1942,9 +2219,11 @@
     .parameter "listener"
 
     .prologue
+    .line 372
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iput-object p1, p0, Landroid/widget/AdapterView;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
+    .line 373
     return-void
 .end method
 
@@ -1953,15 +2232,18 @@
     .parameter "position"
 
     .prologue
+    .line 1087
     .local p0, this:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<TT;>;"
     iput p1, p0, Landroid/widget/AdapterView;->mSelectedPosition:I
 
+    .line 1088
     invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->getItemIdAtPosition(I)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/widget/AdapterView;->mSelectedRowId:J
 
+    .line 1089
     return-void
 .end method
 

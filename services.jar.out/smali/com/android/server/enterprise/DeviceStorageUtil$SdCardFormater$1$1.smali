@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 326
     iput-object p1, p0, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1$1;->this$2:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -39,6 +40,7 @@
     .prologue
     const-string v7, "DeviceStorageUtil"
 
+    .line 328
     const-string v4, "mount"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -49,6 +51,7 @@
 
     move-result-object v3
 
+    .line 331
     .local v3, service:Landroid/os/storage/IMountService;
     :try_start_0
     const-string v4, "DeviceStorageUtil"
@@ -57,6 +60,7 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 332
     iget-object v4, p0, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1$1;->this$2:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;
 
     iget-object v4, v4, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;->this$1:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater;
@@ -74,9 +78,11 @@
 
     move-result v1
 
+    .line 333
     .local v1, result:I
     if-nez v1, :cond_1
 
+    .line 334
     iget-object v4, p0, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1$1;->this$2:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;
 
     iget-object v4, v4, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;->this$1:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater;
@@ -85,12 +91,14 @@
 
     iput-boolean v5, v4, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater;->success:Z
 
+    .line 335
     const-string v4, "DeviceStorageUtil"
 
     const-string v5, "SDcard is formatted successfully :-)"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 336
     iget-object v4, p0, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1$1;->this$2:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;
 
     iget-object v4, v4, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;->this$1:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater;
@@ -99,6 +107,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 338
     iget-object v4, p0, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1$1;->this$2:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;
 
     iget-object v4, v4, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;->this$1:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater;
@@ -108,21 +117,25 @@
 
     move-result v2
 
+    .line 339
     .local v2, retSuccess:Z
     if-nez v2, :cond_0
 
+    .line 340
     const-string v4, "DeviceStorageUtil"
 
     const-string v5, "Unable to mount SDcard. :-("
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 351
     .end local v1           #result:I
     .end local v2           #retSuccess:Z
     :cond_0
     :goto_0
     return-void
 
+    .line 344
     .restart local v1       #result:I
     :cond_1
     const-string v4, "DeviceStorageUtil"
@@ -151,12 +164,14 @@
 
     goto :goto_0
 
+    .line 347
     .end local v1           #result:I
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
+    .line 348
     .local v0, e:Ljava/lang/Exception;
     const-string v4, "DeviceStorageUtil"
 
@@ -164,6 +179,7 @@
 
     invoke-static {v7, v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 349
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

@@ -105,18 +105,21 @@
 
     const/4 v3, 0x2
 
+    .line 168
     new-array v0, v5, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->INTERNAL_TO_SURFACE_ROTATION:[I
 
+    .line 173
     new-array v0, v5, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->SURFACE_TO_INTERNAL_ROTATION:[I
 
+    .line 183
     new-array v0, v5, [[[I
 
     new-array v1, v3, [[I
@@ -217,6 +220,7 @@
 
     sput-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->THRESHOLDS:[[[I
 
+    .line 193
     new-array v0, v5, [[I
 
     new-array v1, v3, [I
@@ -247,6 +251,7 @@
 
     sput-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->ROTATE_TO:[[I
 
+    .line 201
     new-array v0, v5, [[[I
 
     new-array v1, v4, [[I
@@ -357,6 +362,7 @@
 
     sput-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->THRESHOLDS_WITH_180:[[[I
 
+    .line 208
     new-array v0, v5, [[I
 
     new-array v1, v4, [I
@@ -385,12 +391,14 @@
 
     sput-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->ROTATE_TO_WITH_180:[[I
 
+    .line 222
     new-array v0, v5, [I
 
     fill-array-data v0, :array_26
 
     sput-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->MAX_TRANSITION_TILT:[I
 
+    .line 263
     const/16 v0, 0x64
 
     invoke-static {v0}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->computeLowpassAlpha(I)F
@@ -399,6 +407,7 @@
 
     sput v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->DEFAULT_LOWPASS_ALPHA:F
 
+    .line 265
     const/16 v0, 0x1f4
 
     invoke-static {v0}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->computeLowpassAlpha(I)F
@@ -407,6 +416,7 @@
 
     sput v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->TILTED_LOWPASS_ALPHA:F
 
+    .line 267
     const/16 v0, 0x7d0
 
     invoke-static {v0}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->computeLowpassAlpha(I)F
@@ -417,6 +427,7 @@
 
     return-void
 
+    .line 168
     nop
 
     :array_0
@@ -427,6 +438,7 @@
         0x2t 0x0t 0x0t 0x0t
     .end array-data
 
+    .line 173
     :array_1
     .array-data 0x4
         0x0t 0x0t 0x0t 0x0t
@@ -435,6 +447,7 @@
         0x2t 0x0t 0x0t 0x0t
     .end array-data
 
+    .line 183
     :array_2
     .array-data 0x4
         0x3ct 0x0t 0x0t 0x0t
@@ -513,6 +526,7 @@
         0x68t 0x1t 0x0t 0x0t
     .end array-data
 
+    .line 193
     :array_f
     .array-data 0x4
         0x1t 0x0t 0x0t 0x0t
@@ -542,6 +556,7 @@
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
+    .line 201
     :array_13
     .array-data 0x4
         0x3ct 0x0t 0x0t 0x0t
@@ -632,6 +647,7 @@
         0x68t 0x1t 0x0t 0x0t
     .end array-data
 
+    .line 208
     :array_22
     .array-data 0x4
         0x1t 0x0t 0x0t 0x0t
@@ -663,6 +679,7 @@
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
+    .line 222
     :array_26
     .array-data 0x4
         0x4bt 0x0t 0x0t 0x0t
@@ -681,22 +698,31 @@
 
     const/4 v0, 0x0
 
+    .line 285
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 270
     iput-boolean v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAllow180Rotation:Z
 
+    .line 273
     iput v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mRotation:I
 
+    .line 274
     iput v1, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltAngle:F
 
+    .line 275
     iput v1, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
+    .line 282
     iput v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAccelerationDistrust:I
 
+    .line 283
     iput v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltDistrust:I
 
+    .line 286
     iput-object p1, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationListener:Landroid/view/WindowOrientationListener;
 
+    .line 287
     return-void
 .end method
 
@@ -708,8 +734,10 @@
     .prologue
     const-string v7, "WindowOrientationListener"
 
+    .line 307
     iget-boolean v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAllow180Rotation:Z
 
+    .line 308
     .local v0, allow180Rotation:Z
     if-eqz v0, :cond_1
 
@@ -721,10 +749,12 @@
 
     move-object v4, v5
 
+    .line 310
     .local v4, thresholdRanges:[[I
     :goto_0
     const/4 v3, -0x1
 
+    .line 311
     .local v3, row:I
     const/4 v1, 0x0
 
@@ -734,6 +764,7 @@
 
     if-ge v1, v5, :cond_0
 
+    .line 312
     aget-object v5, v4, v1
 
     const/4 v6, 0x0
@@ -758,16 +789,20 @@
 
     if-gez v5, :cond_2
 
+    .line 313
     move v3, v1
 
+    .line 317
     :cond_0
     const/4 v5, -0x1
 
     if-ne v3, v5, :cond_3
 
+    .line 331
     :goto_2
     return-void
 
+    .line 308
     .end local v1           #i:I
     .end local v3           #row:I
     .end local v4           #thresholdRanges:[[I
@@ -782,6 +817,7 @@
 
     goto :goto_0
 
+    .line 311
     .restart local v1       #i:I
     .restart local v3       #row:I
     .restart local v4       #thresholdRanges:[[I
@@ -790,6 +826,7 @@
 
     goto :goto_1
 
+    .line 319
     :cond_3
     if-eqz v0, :cond_4
 
@@ -803,6 +840,7 @@
 
     move v2, v5
 
+    .line 322
     .local v2, rotation:I
     :goto_3
     sget-object v5, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->MAX_TRANSITION_TILT:[I
@@ -815,14 +853,16 @@
 
     if-lez v5, :cond_5
 
+    .line 323
     const-string v5, "WindowOrientationListener"
 
-    const-string v5, "tilted too far flat to go to this rotation"
+    const-string/jumbo v5, "tilted too far flat to go to this rotation"
 
     invoke-static {v7, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
+    .line 319
     .end local v2           #rotation:I
     :cond_4
     sget-object v5, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->ROTATE_TO:[[I
@@ -837,6 +877,7 @@
 
     goto :goto_3
 
+    .line 328
     .restart local v2       #rotation:I
     :cond_5
     const-string v5, "WindowOrientationListener"
@@ -845,7 +886,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "orientation "
+    const-string/jumbo v6, "orientation "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -871,8 +912,10 @@
 
     invoke-static {v7, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 329
     iput v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mRotation:I
 
+    .line 330
     iget-object v5, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationListener:Landroid/view/WindowOrientationListener;
 
     sget-object v6, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->INTERNAL_TO_SURFACE_ROTATION:[I
@@ -895,42 +938,51 @@
 
     const/4 v1, 0x1
 
+    .line 418
     const/high16 v0, 0x4296
 
     cmpl-float v0, p1, v0
 
     if-lez v0, :cond_3
 
+    .line 419
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mRotation:I
 
     if-nez v0, :cond_1
 
+    .line 420
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
+    .line 427
     :goto_0
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltDistrust:I
 
     if-ge v0, v2, :cond_0
 
+    .line 428
     iput v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltDistrust:I
 
+    .line 433
     :cond_0
     :goto_1
     return-void
 
+    .line 421
     :cond_1
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mRotation:I
 
     if-ne v0, v1, :cond_2
 
+    .line 422
     const/high16 v0, 0x42b4
 
     iput v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
     goto :goto_0
 
+    .line 424
     :cond_2
     const/high16 v0, 0x4387
 
@@ -938,11 +990,13 @@
 
     goto :goto_0
 
+    .line 430
     :cond_3
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltDistrust:I
 
     if-lez v0, :cond_0
 
+    .line 431
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltDistrust:I
 
     sub-int/2addr v0, v1
@@ -957,6 +1011,7 @@
     .parameter "timeConstantMs"
 
     .prologue
+    .line 290
     const/high16 v0, 0x4348
 
     add-int/lit16 v1, p0, 0xc8
@@ -974,6 +1029,7 @@
     .parameter "y"
 
     .prologue
+    .line 442
     neg-float v1, p1
 
     float-to-double v1, v1
@@ -992,6 +1048,7 @@
 
     mul-float v0, v1, v2
 
+    .line 444
     .local v0, orientationAngle:F
     const/4 v1, 0x0
 
@@ -999,10 +1056,12 @@
 
     if-gez v1, :cond_0
 
+    .line 445
     const/high16 v1, 0x43b4
 
     add-float/2addr v0, v1
 
+    .line 447
     :cond_0
     return v0
 .end method
@@ -1017,21 +1076,26 @@
 
     const/high16 v4, 0x43b4
 
+    .line 454
     sget v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->DEFAULT_LOWPASS_ALPHA:F
 
+    .line 455
     .local v0, alpha:F
     iget v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAccelerationDistrust:I
 
     if-le v2, v3, :cond_3
 
+    .line 457
     sget v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->ACCELERATING_LOWPASS_ALPHA:F
 
+    .line 465
     :cond_0
     :goto_0
     iget v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
     sub-float v1, p2, v2
 
+    .line 466
     .local v1, deltaOrientation:F
     const/high16 v2, 0x4334
 
@@ -1039,8 +1103,10 @@
 
     if-lez v2, :cond_5
 
+    .line 467
     sub-float/2addr p2, v4
 
+    .line 471
     :cond_1
     :goto_1
     iget v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
@@ -1051,22 +1117,26 @@
 
     iput v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
+    .line 473
     iget v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
     cmpl-float v2, v2, v4
 
     if-lez v2, :cond_6
 
+    .line 474
     iget v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
     sub-float/2addr v2, v4
 
     iput v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
+    .line 478
     :cond_2
     :goto_2
     return-void
 
+    .line 458
     .end local v1           #deltaOrientation:F
     :cond_3
     const/high16 v2, 0x4248
@@ -1079,11 +1149,13 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 460
     :cond_4
     sget v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->TILTED_LOWPASS_ALPHA:F
 
     goto :goto_0
 
+    .line 468
     .restart local v1       #deltaOrientation:F
     :cond_5
     const/high16 v2, -0x3ccc
@@ -1092,10 +1164,12 @@
 
     if-gez v2, :cond_1
 
+    .line 469
     add-float/2addr p2, v4
 
     goto :goto_1
 
+    .line 475
     :cond_6
     iget v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
@@ -1105,6 +1179,7 @@
 
     if-gez v2, :cond_2
 
+    .line 476
     iget v2, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
     add-float/2addr v2, v4
@@ -1119,33 +1194,39 @@
     .parameter "deviation"
 
     .prologue
+    .line 394
     const/high16 v0, 0x3fc0
 
     cmpl-float v0, p1, v0
 
     if-lez v0, :cond_1
 
+    .line 395
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAccelerationDistrust:I
 
     const/4 v1, 0x5
 
     if-ge v0, v1, :cond_0
 
+    .line 396
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAccelerationDistrust:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAccelerationDistrust:I
 
+    .line 401
     :cond_0
     :goto_0
     return-void
 
+    .line 398
     :cond_1
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAccelerationDistrust:I
 
     if-lez v0, :cond_0
 
+    .line 399
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAccelerationDistrust:I
 
     const/4 v1, 0x1
@@ -1164,6 +1245,7 @@
     .parameter "alpha"
 
     .prologue
+    .line 334
     mul-float v0, p3, p1
 
     const/high16 v1, 0x3f80
@@ -1183,6 +1265,7 @@
     .parameter "magnitude"
 
     .prologue
+    .line 346
     div-float v0, p1, p2
 
     float-to-double v0, v0
@@ -1207,6 +1290,7 @@
     .parameter "z"
 
     .prologue
+    .line 338
     mul-float v0, p1, p1
 
     mul-float v1, p2, p2
@@ -1235,16 +1319,19 @@
     .parameter "lastRotation"
 
     .prologue
+    .line 298
     iget v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltDistrust:I
 
     if-lez v0, :cond_0
 
+    .line 300
     sget-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->SURFACE_TO_INTERNAL_ROTATION:[I
 
     aget v0, v0, p1
 
     iput v0, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mRotation:I
 
+    .line 302
     :cond_0
     sget-object v0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->INTERNAL_TO_SURFACE_ROTATION:[I
 
@@ -1261,6 +1348,7 @@
     .parameter "accuracy"
 
     .prologue
+    .line 482
     return-void
 .end method
 
@@ -1269,12 +1357,14 @@
     .parameter "event"
 
     .prologue
+    .line 352
     iget-object v9, p1, Landroid/hardware/SensorEvent;->values:[F
 
     const/4 v10, 0x0
 
     aget v6, v9, v10
 
+    .line 353
     .local v6, x:F
     iget-object v9, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -1282,6 +1372,7 @@
 
     aget v7, v9, v10
 
+    .line 354
     .local v7, y:F
     iget-object v9, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -1289,11 +1380,13 @@
 
     aget v8, v9, v10
 
+    .line 355
     .local v8, z:F
     invoke-direct {p0, v6, v7, v8}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->vectorMagnitude(FFF)F
 
     move-result v3
 
+    .line 356
     .local v3, magnitude:F
     const v9, 0x411ce80a
 
@@ -1303,34 +1396,42 @@
 
     move-result v2
 
+    .line 358
     .local v2, deviation:F
     invoke-direct {p0, v2}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->handleAccelerationDistrust(F)V
 
+    .line 359
     const/high16 v9, 0x3fc0
 
     cmpg-float v9, v3, v9
 
     if-gez v9, :cond_1
 
+    .line 382
     :cond_0
     :goto_0
     return-void
 
+    .line 364
     :cond_1
     const/high16 v1, 0x3f80
 
+    .line 365
     .local v1, alpha:F
     iget v9, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAccelerationDistrust:I
 
     if-lez v9, :cond_2
 
+    .line 366
     sget v1, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->ACCELERATING_LOWPASS_ALPHA:F
 
+    .line 368
     :cond_2
     invoke-direct {p0, v8, v3}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->tiltAngle(FF)F
 
     move-result v5
 
+    .line 369
     .local v5, newTiltAngle:F
     iget v9, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltAngle:F
 
@@ -1340,24 +1441,30 @@
 
     iput v9, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltAngle:F
 
+    .line 372
     invoke-static {v5}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
 
+    .line 374
     .local v0, absoluteTilt:F
     invoke-direct {p0, v0}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->checkFullyTilted(F)V
 
+    .line 375
     iget v9, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mTiltDistrust:I
 
     if-gtz v9, :cond_0
 
+    .line 379
     invoke-direct {p0, v6, v7}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->computeNewOrientation(FF)F
 
     move-result v4
 
+    .line 380
     .local v4, newOrientationAngle:F
     invoke-direct {p0, v0, v4}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->filterOrientation(FF)V
 
+    .line 381
     iget v9, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mOrientationAngle:F
 
     invoke-direct {p0, v9, v0}, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->calculateNewRotation(FF)V
@@ -1370,7 +1477,9 @@
     .parameter "allowed"
 
     .prologue
+    .line 294
     iput-boolean p1, p0, Landroid/view/WindowOrientationListener$SensorEventListenerImpl;->mAllow180Rotation:Z
 
+    .line 295
     return-void
 .end method

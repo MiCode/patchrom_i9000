@@ -59,6 +59,7 @@
     .locals 1
 
     .prologue
+    .line 66
     const-string v0, "com.broadcom.bt.service.map."
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I

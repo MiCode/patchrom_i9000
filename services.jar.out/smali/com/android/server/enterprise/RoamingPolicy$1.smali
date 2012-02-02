@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 68
     iput-object p1, p0, Lcom/android/server/enterprise/RoamingPolicy$1;->this$0:Lcom/android/server/enterprise/RoamingPolicy;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -40,6 +41,7 @@
     .prologue
     const-string v2, "RoamingPolicy"
 
+    .line 71
     const-string v0, "RoamingPolicy"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -62,6 +64,7 @@
 
     invoke-static {v2, v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 73
     iget-object v0, p0, Lcom/android/server/enterprise/RoamingPolicy$1;->this$0:Lcom/android/server/enterprise/RoamingPolicy;
 
     #getter for: Lcom/android/server/enterprise/RoamingPolicy;->mTelMgr:Landroid/telephony/TelephonyManager;
@@ -75,17 +78,20 @@
 
     if-eqz v0, :cond_0
 
+    .line 75
     const-string v0, "RoamingPolicy"
 
     const-string v0, "Entering Roaming"
 
     invoke-static {v2, v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 76
     iget-object v0, p0, Lcom/android/server/enterprise/RoamingPolicy$1;->this$0:Lcom/android/server/enterprise/RoamingPolicy;
 
     #calls: Lcom/android/server/enterprise/RoamingPolicy;->storeUserAutoSyncSetting()V
     invoke-static {v0}, Lcom/android/server/enterprise/RoamingPolicy;->access$100(Lcom/android/server/enterprise/RoamingPolicy;)V
 
+    .line 77
     iget-object v0, p0, Lcom/android/server/enterprise/RoamingPolicy$1;->this$0:Lcom/android/server/enterprise/RoamingPolicy;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/RoamingPolicy;->isRoamingSyncEnabled()Z
@@ -94,9 +100,11 @@
 
     invoke-static {v0}, Landroid/content/ContentResolver;->setMasterSyncAutomatically(Z)V
 
+    .line 84
     :goto_0
     return-void
 
+    .line 81
     :cond_0
     const-string v0, "RoamingPolicy"
 
@@ -104,6 +112,7 @@
 
     invoke-static {v2, v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 82
     iget-object v0, p0, Lcom/android/server/enterprise/RoamingPolicy$1;->this$0:Lcom/android/server/enterprise/RoamingPolicy;
 
     #calls: Lcom/android/server/enterprise/RoamingPolicy;->restoreUserAutoSyncSetting()V

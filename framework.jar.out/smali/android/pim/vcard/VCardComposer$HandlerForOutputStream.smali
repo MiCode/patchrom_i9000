@@ -38,16 +38,20 @@
     .parameter "outputStream"
 
     .prologue
+    .line 176
     iput-object p1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->this$0:Landroid/pim/vcard/VCardComposer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 168
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mOnTerminateIsCalled:Z
 
+    .line 177
     iput-object p2, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
+    .line 178
     return-void
 .end method
 
@@ -57,6 +61,7 @@
     .locals 3
 
     .prologue
+    .line 247
     :try_start_0
     iget-object v1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mWriter:Ljava/io/Writer;
 
@@ -64,14 +69,17 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 251
     :goto_0
     return-void
 
+    .line 248
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 249
     .local v0, e:Ljava/io/IOException;
     const-string v1, "VCardComposer.HandlerForOutputStream"
 
@@ -86,12 +94,15 @@
     .locals 1
 
     .prologue
+    .line 255
     iget-boolean v0, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mOnTerminateIsCalled:Z
 
     if-nez v0, :cond_0
 
+    .line 256
     invoke-virtual {p0}, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->onTerminate()V
 
+    .line 258
     :cond_0
     return-void
 .end method
@@ -101,6 +112,7 @@
     .parameter "vcard"
 
     .prologue
+    .line 212
     :try_start_0
     iget-object v1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mWriter:Ljava/io/Writer;
 
@@ -108,16 +120,19 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 220
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
+    .line 213
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 214
     .local v0, e:Ljava/io/IOException;
     const-string v1, "VCardComposer.HandlerForOutputStream"
 
@@ -145,6 +160,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 217
     iget-object v1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->this$0:Landroid/pim/vcard/VCardComposer;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -172,6 +188,7 @@
     #setter for: Landroid/pim/vcard/VCardComposer;->mErrorReason:Ljava/lang/String;
     invoke-static {v1, v2}, Landroid/pim/vcard/VCardComposer;->access$102(Landroid/pim/vcard/VCardComposer;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 218
     const/4 v1, 0x0
 
     goto :goto_0
@@ -186,6 +203,7 @@
 
     const-string v7, "VCardComposer.HandlerForOutputStream"
 
+    .line 182
     :try_start_0
     new-instance v2, Ljava/io/BufferedWriter;
 
@@ -208,6 +226,7 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 191
     iget-object v2, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->this$0:Landroid/pim/vcard/VCardComposer;
 
     #getter for: Landroid/pim/vcard/VCardComposer;->mIsDoCoMo:Z
@@ -217,6 +236,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 194
     :try_start_1
     iget-object v2, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mWriter:Ljava/io/Writer;
 
@@ -236,17 +256,20 @@
     .catch Landroid/pim/vcard/exception/VCardException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
+    .line 207
     :cond_0
     const/4 v2, 0x1
 
     :goto_0
     return v2
 
+    .line 184
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 185
     .local v1, e1:Ljava/io/UnsupportedEncodingException;
     const-string v2, "VCardComposer.HandlerForOutputStream"
 
@@ -277,6 +300,7 @@
 
     invoke-static {v7, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 186
     iget-object v2, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->this$0:Landroid/pim/vcard/VCardComposer;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -309,14 +333,17 @@
 
     move v2, v6
 
+    .line 188
     goto :goto_0
 
+    .line 195
     .end local v1           #e1:Ljava/io/UnsupportedEncodingException;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
+    .line 196
     .local v0, e:Landroid/pim/vcard/exception/VCardException;
     const-string v2, "VCardComposer.HandlerForOutputStream"
 
@@ -346,14 +373,17 @@
 
     move v2, v6
 
+    .line 198
     goto :goto_0
 
+    .line 199
     .end local v0           #e:Landroid/pim/vcard/exception/VCardException;
     :catch_2
     move-exception v2
 
     move-object v0, v2
 
+    .line 200
     .local v0, e:Ljava/io/IOException;
     const-string v2, "VCardComposer.HandlerForOutputStream"
 
@@ -381,6 +411,7 @@
 
     invoke-static {v7, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 203
     iget-object v2, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->this$0:Landroid/pim/vcard/VCardComposer;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -410,6 +441,7 @@
 
     move v2, v6
 
+    .line 204
     goto/16 :goto_0
 .end method
 
@@ -417,19 +449,23 @@
     .locals 4
 
     .prologue
+    .line 224
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mOnTerminateIsCalled:Z
 
+    .line 225
     iget-object v1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mWriter:Ljava/io/Writer;
 
     if-eqz v1, :cond_1
 
+    .line 230
     :try_start_0
     iget-object v1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mWriter:Ljava/io/Writer;
 
     invoke-virtual {v1}, Ljava/io/Writer;->flush()V
 
+    .line 231
     iget-object v1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     if-eqz v1, :cond_0
@@ -440,6 +476,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 233
     iget-object v1, p0, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     check-cast v1, Ljava/io/FileOutputStream;
@@ -453,18 +490,22 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 240
     :cond_0
     invoke-virtual {p0}, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->closeOutputStream()V
 
+    .line 243
     :cond_1
     :goto_0
     return-void
 
+    .line 235
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 236
     .local v0, e:Ljava/io/IOException;
     :try_start_1
     const-string v1, "VCardComposer.HandlerForOutputStream"
@@ -495,6 +536,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 240
     invoke-virtual {p0}, Landroid/pim/vcard/VCardComposer$HandlerForOutputStream;->closeOutputStream()V
 
     goto :goto_0

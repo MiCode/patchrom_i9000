@@ -42,6 +42,7 @@
     .locals 3
 
     .prologue
+    .line 354
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -84,6 +85,7 @@
 
     sput-object v0, Landroid/provider/Notes$Account;->ACCOUNT_PROJECTION:[Ljava/lang/String;
 
+    .line 358
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,6 +119,7 @@
     .locals 0
 
     .prologue
+    .line 351
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -129,6 +132,7 @@
     .parameter "selectionArgs"
 
     .prologue
+    .line 370
     sget-object v0, Landroid/provider/Notes$Account;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v0, p1, p2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
@@ -146,6 +150,7 @@
     .parameter "orderBy"
 
     .prologue
+    .line 365
     sget-object v1, Landroid/provider/Notes$Account;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

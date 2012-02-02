@@ -24,12 +24,15 @@
     .parameter "context"
 
     .prologue
+    .line 228
     const-string v0, "ConnectivityThread"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
+    .line 229
     iput-object p1, p0, Lcom/android/server/ConnectivityService$ConnectivityThread;->mContext:Landroid/content/Context;
 
+    .line 230
     return-void
 .end method
 
@@ -38,15 +41,19 @@
     .parameter "context"
 
     .prologue
+    .line 243
     new-instance v1, Lcom/android/server/ConnectivityService$ConnectivityThread;
 
     invoke-direct {v1, p0}, Lcom/android/server/ConnectivityService$ConnectivityThread;-><init>(Landroid/content/Context;)V
 
+    .line 244
     .local v1, thread:Lcom/android/server/ConnectivityService$ConnectivityThread;
     invoke-virtual {v1}, Lcom/android/server/ConnectivityService$ConnectivityThread;->start()V
 
+    .line 246
     monitor-enter v1
 
+    .line 247
     :goto_0
     :try_start_0
     invoke-static {}, Lcom/android/server/ConnectivityService;->access$000()Lcom/android/server/ConnectivityService;
@@ -57,6 +64,7 @@
 
     if-nez v2, :cond_0
 
+    .line 250
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
     :try_end_1
@@ -65,9 +73,11 @@
 
     goto :goto_0
 
+    .line 251
     :catch_0
     move-exception v0
 
+    .line 252
     .local v0, ignore:Ljava/lang/InterruptedException;
     :try_start_2
     const-string v2, "ConnectivityService"
@@ -78,6 +88,7 @@
 
     goto :goto_0
 
+    .line 257
     .end local v0           #ignore:Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v2
@@ -94,6 +105,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 259
     invoke-static {}, Lcom/android/server/ConnectivityService;->access$000()Lcom/android/server/ConnectivityService;
 
     move-result-object v2
@@ -107,10 +119,13 @@
     .locals 3
 
     .prologue
+    .line 234
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
+    .line 235
     monitor-enter p0
 
+    .line 236
     :try_start_0
     new-instance v0, Lcom/android/server/ConnectivityService;
 
@@ -122,16 +137,21 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$002(Lcom/android/server/ConnectivityService;)Lcom/android/server/ConnectivityService;
 
+    .line 237
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 238
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 239
     invoke-static {}, Landroid/os/Looper;->loop()V
 
+    .line 240
     return-void
 
+    .line 238
     :catchall_0
     move-exception v0
 

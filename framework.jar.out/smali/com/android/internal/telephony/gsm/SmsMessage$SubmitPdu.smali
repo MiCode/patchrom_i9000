@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 149
     invoke-direct {p0}, Lcom/android/internal/telephony/SmsMessageBase$SubmitPduBase;-><init>()V
 
     return-void

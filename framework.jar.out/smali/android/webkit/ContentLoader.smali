@@ -16,19 +16,23 @@
     .parameter "loadListener"
 
     .prologue
+    .line 40
     invoke-direct {p0, p2}, Landroid/webkit/StreamLoader;-><init>(Landroid/webkit/LoadListener;)V
 
+    .line 43
     const/16 v1, 0x3f
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v0
 
+    .line 44
     .local v0, mimeIndex:I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
+    .line 45
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -37,6 +41,7 @@
 
     iput-object v1, p0, Landroid/webkit/ContentLoader;->mUrl:Ljava/lang/String;
 
+    .line 46
     add-int/lit8 v1, v0, 0x1
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -45,9 +50,11 @@
 
     iput-object v1, p0, Landroid/webkit/ContentLoader;->mContentType:Ljava/lang/String;
 
+    .line 51
     :goto_0
     return-void
 
+    .line 48
     :cond_0
     iput-object p1, p0, Landroid/webkit/ContentLoader;->mUrl:Ljava/lang/String;
 
@@ -59,10 +66,12 @@
     .parameter "ex"
 
     .prologue
+    .line 54
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 55
     .local v1, exMessage:Ljava/lang/String;
     iget-object v2, p0, Landroid/webkit/StreamLoader;->mContext:Landroid/content/Context;
 
@@ -72,9 +81,11 @@
 
     move-result-object v0
 
+    .line 57
     .local v0, errString:Ljava/lang/String;
     if-eqz v1, :cond_0
 
+    .line 58
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,6 +108,7 @@
 
     move-result-object v0
 
+    .line 60
     :cond_0
     return-object v0
 .end method
@@ -108,19 +120,23 @@
     .parameter "headers"
 
     .prologue
+    .line 92
     iget-object v0, p0, Landroid/webkit/ContentLoader;->mContentType:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    const-string v0, "text/html"
+    .line 93
+    const-string/jumbo v0, "text/html"
 
     invoke-virtual {p1, v0}, Landroid/net/http/Headers;->setContentType(Ljava/lang/String;)V
 
+    .line 96
     :cond_0
     const-string v0, "no-store, no-cache"
 
     invoke-virtual {p1, v0}, Landroid/net/http/Headers;->setCacheControl(Ljava/lang/String;)V
 
+    .line 97
     return-void
 .end method
 
@@ -134,15 +150,18 @@
 
     const/4 v7, 0x0
 
+    .line 65
     iget-object v2, p0, Landroid/webkit/ContentLoader;->mUrl:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
+    .line 66
     .local v1, uri:Landroid/net/Uri;
     if-nez v1, :cond_0
 
+    .line 67
     iget-object v2, p0, Landroid/webkit/StreamLoader;->mLoadListener:Landroid/webkit/LoadListener;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -181,9 +200,11 @@
 
     move v2, v7
 
+    .line 87
     :goto_0
     return v2
 
+    .line 76
     :cond_0
     :try_start_0
     iget-object v2, p0, Landroid/webkit/StreamLoader;->mContext:Landroid/content/Context;
@@ -198,6 +219,7 @@
 
     iput-object v2, p0, Landroid/webkit/StreamLoader;->mDataStream:Ljava/io/InputStream;
 
+    .line 77
     iget-object v2, p0, Landroid/webkit/StreamLoader;->mLoadListener:Landroid/webkit/LoadListener;
 
     const/4 v3, 0x1
@@ -215,13 +237,16 @@
 
     move v2, v8
 
+    .line 87
     goto :goto_0
 
+    .line 78
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 79
     .local v0, ex:Ljava/io/FileNotFoundException;
     iget-object v2, p0, Landroid/webkit/StreamLoader;->mLoadListener:Landroid/webkit/LoadListener;
 
@@ -233,14 +258,17 @@
 
     move v2, v7
 
+    .line 80
     goto :goto_0
 
+    .line 81
     .end local v0           #ex:Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
+    .line 84
     .local v0, ex:Ljava/lang/RuntimeException;
     iget-object v2, p0, Landroid/webkit/StreamLoader;->mLoadListener:Landroid/webkit/LoadListener;
 
@@ -254,5 +282,6 @@
 
     move v2, v7
 
+    .line 85
     goto :goto_0
 .end method

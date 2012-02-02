@@ -82,6 +82,7 @@
 
     const/4 v2, 0x2
 
+    .line 107
     new-array v0, v4, [B
 
     const/16 v1, 0x54
@@ -90,6 +91,7 @@
 
     sput-object v0, Landroid/nfc/NdefRecord;->RTD_TEXT:[B
 
+    .line 112
     new-array v0, v4, [B
 
     const/16 v1, 0x55
@@ -98,36 +100,42 @@
 
     sput-object v0, Landroid/nfc/NdefRecord;->RTD_URI:[B
 
+    .line 117
     new-array v0, v2, [B
 
     fill-array-data v0, :array_0
 
     sput-object v0, Landroid/nfc/NdefRecord;->RTD_SMART_POSTER:[B
 
+    .line 122
     new-array v0, v2, [B
 
     fill-array-data v0, :array_1
 
     sput-object v0, Landroid/nfc/NdefRecord;->RTD_ALTERNATIVE_CARRIER:[B
 
+    .line 127
     new-array v0, v2, [B
 
     fill-array-data v0, :array_2
 
     sput-object v0, Landroid/nfc/NdefRecord;->RTD_HANDOVER_CARRIER:[B
 
+    .line 132
     new-array v0, v2, [B
 
     fill-array-data v0, :array_3
 
     sput-object v0, Landroid/nfc/NdefRecord;->RTD_HANDOVER_REQUEST:[B
 
+    .line 137
     new-array v0, v2, [B
 
     fill-array-data v0, :array_4
 
     sput-object v0, Landroid/nfc/NdefRecord;->RTD_HANDOVER_SELECT:[B
 
+    .line 270
     new-instance v0, Landroid/nfc/NdefRecord$1;
 
     invoke-direct {v0}, Landroid/nfc/NdefRecord$1;-><init>()V
@@ -136,12 +144,14 @@
 
     return-void
 
+    .line 117
     :array_0
     .array-data 0x1
         0x53t
         0x70t
     .end array-data
 
+    .line 122
     nop
 
     :array_1
@@ -150,6 +160,7 @@
         0x63t
     .end array-data
 
+    .line 127
     nop
 
     :array_2
@@ -158,6 +169,7 @@
         0x63t
     .end array-data
 
+    .line 132
     nop
 
     :array_3
@@ -166,6 +178,7 @@
         0x72t
     .end array-data
 
+    .line 137
     nop
 
     :array_4
@@ -183,14 +196,17 @@
     .parameter "payload"
 
     .prologue
+    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 167
     if-eqz p2, :cond_0
 
     if-eqz p3, :cond_0
 
     if-nez p4, :cond_1
 
+    .line 168
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -200,6 +216,7 @@
 
     throw v1
 
+    .line 171
     :cond_1
     if-ltz p1, :cond_2
 
@@ -207,6 +224,7 @@
 
     if-le p1, v1, :cond_3
 
+    .line 172
     :cond_2
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -232,9 +250,11 @@
 
     throw v1
 
+    .line 176
     :cond_3
     const/16 v0, -0x40
 
+    .line 179
     .local v0, flags:B
     array-length v1, p4
 
@@ -242,24 +262,30 @@
 
     if-ge v1, v2, :cond_4
 
+    .line 180
     or-int/lit8 v1, v0, 0x10
 
     int-to-byte v0, v1
 
+    .line 184
     :cond_4
     array-length v1, p3
 
     if-eqz v1, :cond_5
 
+    .line 185
     or-int/lit8 v1, v0, 0x8
 
     int-to-byte v0, v1
 
+    .line 188
     :cond_5
     iput-byte v0, p0, Landroid/nfc/NdefRecord;->mFlags:B
 
+    .line 189
     iput-short p1, p0, Landroid/nfc/NdefRecord;->mTnf:S
 
+    .line 190
     invoke-virtual {p2}, [B->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -268,6 +294,7 @@
 
     iput-object v1, p0, Landroid/nfc/NdefRecord;->mType:[B
 
+    .line 191
     invoke-virtual {p3}, [B->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -276,6 +303,7 @@
 
     iput-object v1, p0, Landroid/nfc/NdefRecord;->mId:[B
 
+    .line 192
     invoke-virtual {p4}, [B->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -284,6 +312,7 @@
 
     iput-object v1, p0, Landroid/nfc/NdefRecord;->mPayload:[B
 
+    .line 193
     return-void
 .end method
 
@@ -301,18 +330,25 @@
 
     const/4 v0, 0x0
 
+    .line 203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 205
     iput-byte v1, p0, Landroid/nfc/NdefRecord;->mFlags:B
 
+    .line 206
     iput-short v1, p0, Landroid/nfc/NdefRecord;->mTnf:S
 
+    .line 207
     iput-object v0, p0, Landroid/nfc/NdefRecord;->mType:[B
 
+    .line 208
     iput-object v0, p0, Landroid/nfc/NdefRecord;->mId:[B
 
+    .line 209
     iput-object v0, p0, Landroid/nfc/NdefRecord;->mPayload:[B
 
+    .line 211
     invoke-direct {p0, p1}, Landroid/nfc/NdefRecord;->parseNdefRecord([B)I
 
     move-result v0
@@ -321,6 +357,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 212
     new-instance v0, Landroid/nfc/FormatException;
 
     const-string v1, "Error while parsing NDEF record"
@@ -329,6 +366,7 @@
 
     throw v0
 
+    .line 214
     :cond_0
     return-void
 .end method
@@ -345,6 +383,7 @@
     .locals 1
 
     .prologue
+    .line 257
     const/4 v0, 0x0
 
     return v0
@@ -354,6 +393,7 @@
     .locals 1
 
     .prologue
+    .line 239
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mId:[B
 
     invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
@@ -370,6 +410,7 @@
     .locals 1
 
     .prologue
+    .line 246
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mPayload:[B
 
     invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
@@ -386,6 +427,7 @@
     .locals 1
 
     .prologue
+    .line 222
     iget-short v0, p0, Landroid/nfc/NdefRecord;->mTnf:S
 
     return v0
@@ -395,6 +437,7 @@
     .locals 1
 
     .prologue
+    .line 232
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mType:[B
 
     invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
@@ -411,6 +454,7 @@
     .locals 6
 
     .prologue
+    .line 253
     iget-byte v0, p0, Landroid/nfc/NdefRecord;->mFlags:B
 
     int-to-short v1, v0
@@ -438,39 +482,47 @@
     .parameter "flags"
 
     .prologue
+    .line 261
     iget-short v0, p0, Landroid/nfc/NdefRecord;->mTnf:S
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 262
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mType:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 263
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mType:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 264
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mId:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 265
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mId:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 266
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mPayload:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 267
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mPayload:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 268
     return-void
 .end method

@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,23 +45,28 @@
     .parameter "in"
 
     .prologue
+    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     int-to-short v2, v3
 
+    .line 74
     .local v2, sap:S
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 75
     .local v1, dataLength:I
     new-array v0, v1, [B
 
+    .line 76
     .local v0, data:[B
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
+    .line 78
     new-instance v3, Landroid/nfc/LlcpPacket;
 
     invoke-direct {v3, v2, v0}, Landroid/nfc/LlcpPacket;-><init>(I[B)V
@@ -73,6 +79,7 @@
     .parameter "x0"
 
     .prologue
+    .line 68
     invoke-virtual {p0, p1}, Landroid/nfc/LlcpPacket$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/LlcpPacket;
 
     move-result-object v0
@@ -85,6 +92,7 @@
     .parameter "size"
 
     .prologue
+    .line 82
     new-array v0, p1, [Landroid/nfc/LlcpPacket;
 
     return-object v0
@@ -95,6 +103,7 @@
     .parameter "x0"
 
     .prologue
+    .line 68
     invoke-virtual {p0, p1}, Landroid/nfc/LlcpPacket$1;->newArray(I)[Landroid/nfc/LlcpPacket;
 
     move-result-object v0

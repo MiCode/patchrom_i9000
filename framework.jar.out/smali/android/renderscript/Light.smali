@@ -18,10 +18,13 @@
     .parameter "rs"
 
     .prologue
+    .line 28
     invoke-direct {p0, p2}, Landroid/renderscript/BaseObj;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 29
     iput p1, p0, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 30
     return-void
 .end method
 
@@ -31,6 +34,7 @@
     .locals 0
 
     .prologue
+    .line 26
     invoke-super {p0}, Landroid/renderscript/BaseObj;->destroy()V
 
     return-void
@@ -40,6 +44,7 @@
     .locals 1
 
     .prologue
+    .line 26
     invoke-super {p0}, Landroid/renderscript/BaseObj;->getID()I
 
     move-result v0
@@ -54,16 +59,19 @@
     .parameter "b"
 
     .prologue
+    .line 33
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 34
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
 
     invoke-virtual {v0, v1, p1, p2, p3}, Landroid/renderscript/RenderScript;->nLightSetColor(IFFF)V
 
+    .line 35
     return-void
 .end method
 
@@ -78,6 +86,7 @@
     .end annotation
 
     .prologue
+    .line 26
     invoke-super {p0, p1}, Landroid/renderscript/BaseObj;->setName(Ljava/lang/String;)V
 
     return-void
@@ -90,15 +99,18 @@
     .parameter "z"
 
     .prologue
+    .line 38
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 39
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
 
     invoke-virtual {v0, v1, p1, p2, p3}, Landroid/renderscript/RenderScript;->nLightSetPosition(IFFF)V
 
+    .line 40
     return-void
 .end method

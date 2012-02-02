@@ -27,10 +27,13 @@
     .parameter "rs"
 
     .prologue
+    .line 33
     invoke-direct {p0, p2}, Landroid/renderscript/BaseObj;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 34
     iput p1, p0, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 35
     return-void
 .end method
 
@@ -41,10 +44,12 @@
     .parameter "a"
 
     .prologue
+    .line 43
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 44
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
@@ -53,6 +58,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/renderscript/RenderScript;->nSimpleMeshBindIndex(II)V
 
+    .line 45
     return-void
 .end method
 
@@ -62,10 +68,12 @@
     .parameter "slot"
 
     .prologue
+    .line 38
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 39
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
@@ -74,6 +82,7 @@
 
     invoke-virtual {v0, v1, v2, p2}, Landroid/renderscript/RenderScript;->nSimpleMeshBindVertex(III)V
 
+    .line 40
     return-void
 .end method
 
@@ -81,10 +90,12 @@
     .locals 2
 
     .prologue
+    .line 53
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 54
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/SimpleMesh;->mIndexType:Landroid/renderscript/Type;
@@ -101,10 +112,12 @@
     .parameter "slot"
 
     .prologue
+    .line 48
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 49
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/SimpleMesh;->mVertexTypes:[Landroid/renderscript/Type;
@@ -122,6 +135,7 @@
     .locals 0
 
     .prologue
+    .line 26
     invoke-super {p0}, Landroid/renderscript/BaseObj;->destroy()V
 
     return-void
@@ -131,6 +145,7 @@
     .locals 1
 
     .prologue
+    .line 26
     invoke-super {p0}, Landroid/renderscript/BaseObj;->getID()I
 
     move-result v0
@@ -142,6 +157,7 @@
     .locals 1
 
     .prologue
+    .line 62
     iget-object v0, p0, Landroid/renderscript/SimpleMesh;->mIndexType:Landroid/renderscript/Type;
 
     return-object v0
@@ -152,6 +168,7 @@
     .parameter "slot"
 
     .prologue
+    .line 58
     iget-object v0, p0, Landroid/renderscript/SimpleMesh;->mVertexTypes:[Landroid/renderscript/Type;
 
     aget-object v0, v0, p1
@@ -170,6 +187,7 @@
     .end annotation
 
     .prologue
+    .line 26
     invoke-super {p0, p1}, Landroid/renderscript/BaseObj;->setName(Ljava/lang/String;)V
 
     return-void

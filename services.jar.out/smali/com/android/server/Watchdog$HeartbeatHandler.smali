@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 108
     iput-object p1, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,13 +41,16 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 111
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
+    .line 137
     :goto_0
     return-void
 
+    .line 114
     :pswitch_0
     iget-object v3, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
@@ -60,6 +64,7 @@
 
     move v1, v3
 
+    .line 118
     .local v1, rebootInterval:I
     :goto_1
     iget-object v3, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
@@ -68,14 +73,17 @@
 
     if-eq v3, v1, :cond_0
 
+    .line 119
     iget-object v3, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
     iput v1, v3, Lcom/android/server/Watchdog;->mRebootInterval:I
 
+    .line 122
     iget-object v3, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
     invoke-virtual {v3, v5}, Lcom/android/server/Watchdog;->checkReboot(Z)V
 
+    .line 125
     :cond_0
     iget-object v3, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
@@ -85,6 +93,7 @@
 
     move-result v2
 
+    .line 126
     .local v2, size:I
     const/4 v0, 0x0
 
@@ -92,6 +101,7 @@
     :goto_2
     if-ge v0, v2, :cond_2
 
+    .line 127
     iget-object v4, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
     iget-object v3, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
@@ -106,16 +116,19 @@
 
     iput-object v3, v4, Lcom/android/server/Watchdog;->mCurrentMonitor:Lcom/android/server/Watchdog$Monitor;
 
+    .line 128
     iget-object v3, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
     iget-object v3, v3, Lcom/android/server/Watchdog;->mCurrentMonitor:Lcom/android/server/Watchdog$Monitor;
 
     invoke-interface {v3}, Lcom/android/server/Watchdog$Monitor;->monitor()V
 
+    .line 126
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
+    .line 114
     .end local v0           #i:I
     .end local v1           #rebootInterval:I
     .end local v2           #size:I
@@ -134,6 +147,7 @@
 
     goto :goto_1
 
+    .line 131
     .restart local v0       #i:I
     .restart local v1       #rebootInterval:I
     .restart local v2       #size:I
@@ -142,6 +156,7 @@
 
     monitor-enter v3
 
+    .line 132
     :try_start_0
     iget-object v4, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
@@ -149,12 +164,14 @@
 
     iput-boolean v5, v4, Lcom/android/server/Watchdog;->mCompleted:Z
 
+    .line 133
     iget-object v4, p0, Lcom/android/server/Watchdog$HeartbeatHandler;->this$0:Lcom/android/server/Watchdog;
 
     const/4 v5, 0x0
 
     iput-object v5, v4, Lcom/android/server/Watchdog;->mCurrentMonitor:Lcom/android/server/Watchdog$Monitor;
 
+    .line 134
     monitor-exit v3
 
     goto :goto_0
@@ -168,6 +185,7 @@
 
     throw v4
 
+    .line 111
     :pswitch_data_0
     .packed-switch 0xa9e
         :pswitch_0

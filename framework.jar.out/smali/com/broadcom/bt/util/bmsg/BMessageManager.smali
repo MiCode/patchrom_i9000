@@ -12,6 +12,7 @@
     .locals 0
 
     .prologue
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -124,8 +125,10 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 38
     const/4 v0, 0x0
 
+    .line 39
     .local v0, bitsSet:I
     const/4 v1, 0x0
 
@@ -135,27 +138,33 @@
 
     if-gt v1, v2, :cond_2
 
+    .line 40
     shl-int v2, v3, v1
 
     and-int/2addr v2, p0
 
     if-lez v2, :cond_1
 
+    .line 41
     if-ne v0, v3, :cond_0
 
     move v2, v3
 
+    .line 47
     :goto_1
     return v2
 
+    .line 44
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
+    .line 39
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 47
     :cond_2
     if-eq v0, v3, :cond_3
 

@@ -20,7 +20,9 @@
     .parameter "error"
 
     .prologue
+    .line 79
     invoke-direct {p0, p1}, Landroid/database/SQLException;-><init>(Ljava/lang/String;)V
 
+    .line 80
     return-void
 .end method

@@ -26,6 +26,7 @@
     .locals 1
 
     .prologue
+    .line 70
     const-class v0, Lcom/android/server/sip/SipHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -48,16 +49,21 @@
     .end annotation
 
     .prologue
+    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 81
     iput-object p1, p0, Lcom/android/server/sip/SipHelper;->mSipStack:Ljavax/sip/SipStack;
 
+    .line 82
     iput-object p2, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
+    .line 84
     invoke-static {}, Ljavax/sip/SipFactory;->getInstance()Ljavax/sip/SipFactory;
 
     move-result-object v0
 
+    .line 85
     .local v0, sipFactory:Ljavax/sip/SipFactory;
     invoke-virtual {v0}, Ljavax/sip/SipFactory;->createAddressFactory()Ljavax/sip/address/AddressFactory;
 
@@ -65,18 +71,21 @@
 
     iput-object v1, p0, Lcom/android/server/sip/SipHelper;->mAddressFactory:Ljavax/sip/address/AddressFactory;
 
+    .line 86
     invoke-virtual {v0}, Ljavax/sip/SipFactory;->createHeaderFactory()Ljavax/sip/header/HeaderFactory;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
+    .line 87
     invoke-virtual {v0}, Ljavax/sip/SipFactory;->createMessageFactory()Ljavax/sip/message/MessageFactory;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/sip/SipHelper;->mMessageFactory:Ljavax/sip/message/MessageFactory;
 
+    .line 88
     return-void
 .end method
 
@@ -91,6 +100,7 @@
     .end annotation
 
     .prologue
+    .line 110
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v2
@@ -101,6 +111,7 @@
 
     double-to-long v0, v2
 
+    .line 111
     .local v0, sequence:J
     iget-object v2, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
@@ -115,6 +126,7 @@
     .locals 1
 
     .prologue
+    .line 105
     iget-object v0, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
     invoke-interface {v0}, Ljavax/sip/SipProvider;->getNewCallId()Ljavax/sip/header/CallIdHeader;
@@ -135,10 +147,12 @@
     .end annotation
 
     .prologue
+    .line 150
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->getListeningPoint()Ljavax/sip/ListeningPoint;
 
     move-result-object v2
 
+    .line 151
     .local v2, lp:Ljavax/sip/ListeningPoint;
     invoke-virtual {p1}, Landroid/net/sip/SipProfile;->getUserName()Ljava/lang/String;
 
@@ -152,6 +166,7 @@
 
     move-result-object v1
 
+    .line 154
     .local v1, contactURI:Ljavax/sip/address/SipURI;
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mAddressFactory:Ljavax/sip/address/AddressFactory;
 
@@ -159,6 +174,7 @@
 
     move-result-object v0
 
+    .line 155
     .local v0, contactAddress:Ljavax/sip/address/Address;
     invoke-virtual {p1}, Landroid/net/sip/SipProfile;->getDisplayName()Ljava/lang/String;
 
@@ -166,6 +182,7 @@
 
     invoke-interface {v0, v3}, Ljavax/sip/address/Address;->setDisplayName(Ljava/lang/String;)V
 
+    .line 157
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     invoke-interface {v3, v0}, Ljavax/sip/header/HeaderFactory;->createContactHeader(Ljavax/sip/address/Address;)Ljavax/sip/header/ContactHeader;
@@ -186,6 +203,7 @@
     .end annotation
 
     .prologue
+    .line 92
     iget-object v0, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     invoke-virtual {p1}, Landroid/net/sip/SipProfile;->getSipAddress()Ljavax/sip/address/Address;
@@ -208,6 +226,7 @@
     .end annotation
 
     .prologue
+    .line 116
     iget-object v0, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     const/16 v1, 0x46
@@ -229,6 +248,7 @@
     .end annotation
 
     .prologue
+    .line 121
     iget-object v0, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     invoke-interface {v0, p1}, Ljavax/sip/header/HeaderFactory;->createMaxForwardsHeader(I)Ljavax/sip/header/MaxForwardsHeader;
@@ -251,15 +271,18 @@
     .end annotation
 
     .prologue
+    .line 216
     invoke-direct {p0, p2, p3}, Lcom/android/server/sip/SipHelper;->createFromHeader(Landroid/net/sip/SipProfile;Ljava/lang/String;)Ljavax/sip/header/FromHeader;
 
     move-result-object v5
 
+    .line 217
     .local v5, fromHeader:Ljavax/sip/header/FromHeader;
     invoke-direct {p0, p2}, Lcom/android/server/sip/SipHelper;->createToHeader(Landroid/net/sip/SipProfile;)Ljavax/sip/header/ToHeader;
 
     move-result-object v6
 
+    .line 218
     .local v6, toHeader:Ljavax/sip/header/ToHeader;
     iget-object v0, p0, Lcom/android/server/sip/SipHelper;->mAddressFactory:Ljavax/sip/address/AddressFactory;
 
@@ -299,26 +322,31 @@
 
     move-result-object v1
 
+    .line 221
     .local v1, requestURI:Ljavax/sip/address/SipURI;
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->createViaHeaders()Ljava/util/List;
 
     move-result-object v7
 
+    .line 222
     .local v7, viaHeaders:Ljava/util/List;,"Ljava/util/List<Ljavax/sip/header/ViaHeader;>;"
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->createCallIdHeader()Ljavax/sip/header/CallIdHeader;
 
     move-result-object v3
 
+    .line 223
     .local v3, callIdHeader:Ljavax/sip/header/CallIdHeader;
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipHelper;->createCSeqHeader(Ljava/lang/String;)Ljavax/sip/header/CSeqHeader;
 
     move-result-object v4
 
+    .line 224
     .local v4, cSeqHeader:Ljavax/sip/header/CSeqHeader;
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->createMaxForwardsHeader()Ljavax/sip/header/MaxForwardsHeader;
 
     move-result-object v8
 
+    .line 225
     .local v8, maxForwards:Ljavax/sip/header/MaxForwardsHeader;
     iget-object v0, p0, Lcom/android/server/sip/SipHelper;->mMessageFactory:Ljavax/sip/message/MessageFactory;
 
@@ -328,6 +356,7 @@
 
     move-result-object v9
 
+    .line 228
     .local v9, request:Ljavax/sip/message/Request;
     iget-object v0, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
@@ -340,9 +369,11 @@
 
     move-result-object v10
 
+    .line 230
     .local v10, userAgentHeader:Ljavax/sip/header/Header;
     invoke-interface {v9, v10}, Ljavax/sip/message/Request;->addHeader(Ljavax/sip/header/Header;)V
 
+    .line 231
     return-object v9
 .end method
 
@@ -358,6 +389,7 @@
     .end annotation
 
     .prologue
+    .line 168
     iget-object v2, p0, Lcom/android/server/sip/SipHelper;->mAddressFactory:Ljavax/sip/address/AddressFactory;
 
     invoke-interface {p3}, Ljavax/sip/ListeningPoint;->getIPAddress()Ljava/lang/String;
@@ -368,6 +400,7 @@
 
     move-result-object v1
 
+    .line 170
     .local v1, uri:Ljavax/sip/address/SipURI;
     :try_start_0
     invoke-interface {p3}, Ljavax/sip/ListeningPoint;->getPort()I
@@ -376,17 +409,21 @@
 
     invoke-interface {v1, v2}, Ljavax/sip/address/SipURI;->setPort(I)V
 
+    .line 171
     invoke-interface {v1, p2}, Ljavax/sip/address/SipURI;->setTransportParam(Ljava/lang/String;)V
     :try_end_0
     .catch Ljavax/sip/InvalidArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 175
     return-object v1
 
+    .line 172
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 173
     .local v0, e:Ljavax/sip/InvalidArgumentException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -405,6 +442,7 @@
     .end annotation
 
     .prologue
+    .line 96
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/sip/SipHelper;->createToHeader(Landroid/net/sip/SipProfile;Ljava/lang/String;)Ljavax/sip/header/ToHeader;
@@ -425,6 +463,7 @@
     .end annotation
 
     .prologue
+    .line 101
     iget-object v0, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     invoke-virtual {p1}, Landroid/net/sip/SipProfile;->getSipAddress()Ljavax/sip/address/Address;
@@ -458,17 +497,20 @@
     .end annotation
 
     .prologue
+    .line 139
     new-instance v2, Ljava/util/ArrayList;
 
     const/4 v3, 0x1
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 140
     .local v2, viaHeaders:Ljava/util/List;,"Ljava/util/List<Ljavax/sip/header/ViaHeader;>;"
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->getListeningPoint()Ljavax/sip/ListeningPoint;
 
     move-result-object v0
 
+    .line 141
     .local v0, lp:Ljavax/sip/ListeningPoint;
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
@@ -490,11 +532,14 @@
 
     move-result-object v1
 
+    .line 143
     .local v1, viaHeader:Ljavax/sip/header/ViaHeader;
     invoke-interface {v1}, Ljavax/sip/header/ViaHeader;->setRPort()V
 
+    .line 144
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 145
     return-object v2
 .end method
 
@@ -502,15 +547,18 @@
     .locals 2
 
     .prologue
+    .line 161
     iget-object v1, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     invoke-interface {v1}, Ljavax/sip/header/HeaderFactory;->createContactHeader()Ljavax/sip/header/ContactHeader;
 
     move-result-object v0
 
+    .line 162
     .local v0, contactHeader:Ljavax/sip/header/ContactHeader;
     invoke-interface {v0}, Ljavax/sip/header/ContactHeader;->setWildCard()V
 
+    .line 163
     return-object v0
 .end method
 
@@ -519,20 +567,24 @@
     .parameter "event"
 
     .prologue
+    .line 433
     if-nez p0, :cond_0
 
     const/4 v4, 0x0
 
+    .line 454
     .end local p0
     :goto_0
     return-object v4
 
+    .line 434
     .restart local p0
     :cond_0
     instance-of v4, p0, Ljavax/sip/RequestEvent;
 
     if-eqz v4, :cond_1
 
+    .line 435
     check-cast p0, Ljavax/sip/RequestEvent;
 
     .end local p0
@@ -546,12 +598,14 @@
 
     goto :goto_0
 
+    .line 436
     .restart local p0
     :cond_1
     instance-of v4, p0, Ljavax/sip/ResponseEvent;
 
     if-eqz v4, :cond_2
 
+    .line 437
     check-cast p0, Ljavax/sip/ResponseEvent;
 
     .end local p0
@@ -565,12 +619,14 @@
 
     goto :goto_0
 
+    .line 438
     .restart local p0
     :cond_2
     instance-of v4, p0, Ljavax/sip/DialogTerminatedEvent;
 
     if-eqz v4, :cond_3
 
+    .line 439
     move-object v0, p0
 
     check-cast v0, Ljavax/sip/DialogTerminatedEvent;
@@ -581,6 +637,7 @@
 
     move-result-object v1
 
+    .line 440
     .local v1, dialog:Ljavax/sip/Dialog;
     check-cast p0, Ljavax/sip/DialogTerminatedEvent;
 
@@ -595,6 +652,7 @@
 
     goto :goto_0
 
+    .line 441
     .end local v1           #dialog:Ljavax/sip/Dialog;
     .restart local p0
     :cond_3
@@ -602,12 +660,14 @@
 
     if-eqz v4, :cond_5
 
+    .line 442
     move-object v0, p0
 
     check-cast v0, Ljavax/sip/TransactionTerminatedEvent;
 
     move-object v2, v0
 
+    .line 443
     .local v2, e:Ljavax/sip/TransactionTerminatedEvent;
     invoke-virtual {v2}, Ljavax/sip/TransactionTerminatedEvent;->isServerTransaction()Z
 
@@ -633,17 +693,20 @@
 
     goto :goto_1
 
+    .line 447
     .end local v2           #e:Ljavax/sip/TransactionTerminatedEvent;
     :cond_5
     invoke-virtual {p0}, Ljava/util/EventObject;->getSource()Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 448
     .local v3, source:Ljava/lang/Object;
     instance-of v4, v3, Ljavax/sip/Transaction;
 
     if-eqz v4, :cond_6
 
+    .line 449
     check-cast v3, Ljavax/sip/Transaction;
 
     .end local v3           #source:Ljava/lang/Object;
@@ -653,12 +716,14 @@
 
     goto :goto_0
 
+    .line 450
     .restart local v3       #source:Ljava/lang/Object;
     :cond_6
     instance-of v4, v3, Ljavax/sip/Dialog;
 
     if-eqz v4, :cond_7
 
+    .line 451
     check-cast v3, Ljavax/sip/Dialog;
 
     .end local v3           #source:Ljava/lang/Object;
@@ -668,6 +733,7 @@
 
     goto :goto_0
 
+    .line 454
     .restart local v3       #source:Ljava/lang/Object;
     :cond_7
     const-string v4, ""
@@ -680,6 +746,7 @@
     .parameter "dialog"
 
     .prologue
+    .line 469
     invoke-interface {p0}, Ljavax/sip/Dialog;->getCallId()Ljavax/sip/header/CallIdHeader;
 
     move-result-object v0
@@ -696,6 +763,7 @@
     .parameter "transaction"
 
     .prologue
+    .line 458
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljavax/sip/Transaction;->getRequest()Ljavax/sip/message/Request;
@@ -720,6 +788,7 @@
     .parameter "message"
 
     .prologue
+    .line 463
     const-string v1, "Call-ID"
 
     invoke-interface {p0, v1}, Ljavax/sip/message/Message;->getHeader(Ljava/lang/String;)Ljavax/sip/header/Header;
@@ -728,6 +797,7 @@
 
     check-cast v0, Ljavax/sip/header/CallIdHeader;
 
+    .line 465
     .local v0, callIdHeader:Ljavax/sip/header/CallIdHeader;
     invoke-interface {v0}, Ljavax/sip/header/CallIdHeader;->getCallId()Ljava/lang/String;
 
@@ -745,6 +815,7 @@
     .end annotation
 
     .prologue
+    .line 125
     iget-object v2, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
     const-string v3, "UDP"
@@ -753,6 +824,7 @@
 
     move-result-object v0
 
+    .line 126
     .local v0, lp:Ljavax/sip/ListeningPoint;
     if-nez v0, :cond_0
 
@@ -764,15 +836,18 @@
 
     move-result-object v0
 
+    .line 127
     :cond_0
     if-nez v0, :cond_1
 
+    .line 128
     iget-object v2, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
     invoke-interface {v2}, Ljavax/sip/SipProvider;->getListeningPoints()[Ljavax/sip/ListeningPoint;
 
     move-result-object v1
 
+    .line 129
     .local v1, lps:[Ljavax/sip/ListeningPoint;
     if-eqz v1, :cond_1
 
@@ -784,10 +859,12 @@
 
     aget-object v0, v1, v2
 
+    .line 131
     .end local v1           #lps:[Ljavax/sip/ListeningPoint;
     :cond_1
     if-nez v0, :cond_2
 
+    .line 132
     new-instance v2, Ljavax/sip/SipException;
 
     const-string v3, "no listening point is available"
@@ -796,6 +873,7 @@
 
     throw v2
 
+    .line 134
     :cond_2
     return-object v0
 .end method
@@ -810,17 +888,21 @@
     .end annotation
 
     .prologue
+    .line 299
     invoke-virtual {p1}, Ljavax/sip/RequestEvent;->getServerTransaction()Ljavax/sip/ServerTransaction;
 
     move-result-object v1
 
+    .line 300
     .local v1, transaction:Ljavax/sip/ServerTransaction;
     if-nez v1, :cond_0
 
+    .line 301
     invoke-virtual {p1}, Ljavax/sip/RequestEvent;->getRequest()Ljavax/sip/message/Request;
 
     move-result-object v0
 
+    .line 302
     .local v0, request:Ljavax/sip/message/Request;
     iget-object v2, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
@@ -828,6 +910,7 @@
 
     move-result-object v2
 
+    .line 304
     .end local v0           #request:Ljavax/sip/message/Request;
     :goto_0
     return-object v2
@@ -851,6 +934,7 @@
     .end annotation
 
     .prologue
+    .line 236
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mSipStack:Ljavax/sip/SipStack;
 
     check-cast v3, Lgov/nist/javax/sip/SipStackExt;
@@ -861,11 +945,13 @@
 
     move-result-object v0
 
+    .line 239
     .local v0, authenticationHelper:Lgov/nist/javax/sip/clientauthutils/AuthenticationHelper;
     invoke-virtual {p1}, Ljavax/sip/ResponseEvent;->getClientTransaction()Ljavax/sip/ClientTransaction;
 
     move-result-object v2
 
+    .line 240
     .local v2, tid:Ljavax/sip/ClientTransaction;
     invoke-virtual {p1}, Ljavax/sip/ResponseEvent;->getResponse()Ljavax/sip/message/Response;
 
@@ -879,6 +965,7 @@
 
     move-result-object v1
 
+    .line 242
     .local v1, ct:Ljavax/sip/ClientTransaction;
     sget-object v3, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
@@ -886,7 +973,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "send request with challenge response: "
+    const-string/jumbo v5, "send request with challenge response: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -906,8 +993,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 244
     invoke-interface {v1}, Ljavax/sip/ClientTransaction;->sendRequest()V
 
+    .line 245
     return-object v1
 .end method
 
@@ -921,12 +1010,14 @@
     .end annotation
 
     .prologue
+    .line 396
     const-string v1, "BYE"
 
     invoke-interface {p1, v1}, Ljavax/sip/Dialog;->createRequest(Ljava/lang/String;)Ljavax/sip/message/Request;
 
     move-result-object v0
 
+    .line 397
     .local v0, byeRequest:Ljavax/sip/message/Request;
     sget-object v1, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
@@ -934,7 +1025,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "send BYE: "
+    const-string/jumbo v3, "send BYE: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -950,6 +1041,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 398
     iget-object v1, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
     invoke-interface {v1, v0}, Ljavax/sip/SipProvider;->getNewClientTransaction(Ljavax/sip/message/Request;)Ljavax/sip/ClientTransaction;
@@ -958,6 +1050,7 @@
 
     invoke-interface {p1, v1}, Ljavax/sip/Dialog;->sendRequest(Ljavax/sip/ClientTransaction;)V
 
+    .line 399
     return-void
 .end method
 
@@ -971,10 +1064,12 @@
     .end annotation
 
     .prologue
+    .line 403
     invoke-interface {p1}, Ljavax/sip/ClientTransaction;->createCancel()Ljavax/sip/message/Request;
 
     move-result-object v0
 
+    .line 404
     .local v0, cancelRequest:Ljavax/sip/message/Request;
     sget-object v1, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
@@ -982,7 +1077,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "send CANCEL: "
+    const-string/jumbo v3, "send CANCEL: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -998,6 +1093,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 405
     iget-object v1, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
     invoke-interface {v1, v0}, Ljavax/sip/SipProvider;->getNewClientTransaction(Ljavax/sip/message/Request;)Ljavax/sip/ClientTransaction;
@@ -1006,6 +1102,7 @@
 
     invoke-interface {v1}, Ljavax/sip/ClientTransaction;->sendRequest()V
 
+    .line 406
     return-void
 .end method
 
@@ -1022,6 +1119,7 @@
     .end annotation
 
     .prologue
+    .line 252
     :try_start_0
     move-object v0, p0
 
@@ -1033,6 +1131,7 @@
 
     move-result-object v8
 
+    .line 253
     .local v8, fromHeader:Ljavax/sip/header/FromHeader;
     move-object v0, p0
 
@@ -1042,21 +1141,25 @@
 
     move-result-object v9
 
+    .line 254
     .local v9, toHeader:Ljavax/sip/header/ToHeader;
     invoke-virtual/range {p2 .. p2}, Landroid/net/sip/SipProfile;->getUri()Ljavax/sip/address/SipURI;
 
     move-result-object v4
 
+    .line 255
     .local v4, requestURI:Ljavax/sip/address/SipURI;
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->createViaHeaders()Ljava/util/List;
 
     move-result-object v10
 
+    .line 256
     .local v10, viaHeaders:Ljava/util/List;,"Ljava/util/List<Ljavax/sip/header/ViaHeader;>;"
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->createCallIdHeader()Ljavax/sip/header/CallIdHeader;
 
     move-result-object v6
 
+    .line 257
     .local v6, callIdHeader:Ljavax/sip/header/CallIdHeader;
     const-string v3, "INVITE"
 
@@ -1064,11 +1167,13 @@
 
     move-result-object v7
 
+    .line 258
     .local v7, cSeqHeader:Ljavax/sip/header/CSeqHeader;
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->createMaxForwardsHeader()Ljavax/sip/header/MaxForwardsHeader;
 
     move-result-object v11
 
+    .line 260
     .local v11, maxForwards:Ljavax/sip/header/MaxForwardsHeader;
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mMessageFactory:Ljavax/sip/message/MessageFactory;
 
@@ -1078,6 +1183,7 @@
 
     move-result-object v14
 
+    .line 264
     .local v14, request:Ljavax/sip/message/Request;
     invoke-direct/range {p0 .. p1}, Lcom/android/server/sip/SipHelper;->createContactHeader(Landroid/net/sip/SipProfile;)Ljavax/sip/header/ContactHeader;
 
@@ -1085,12 +1191,13 @@
 
     invoke-interface {v14, v3}, Ljavax/sip/message/Request;->addHeader(Ljavax/sip/header/Header;)V
 
+    .line 265
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     const-string v4, "application"
 
     .end local v4           #requestURI:Ljavax/sip/address/SipURI;
-    const-string v5, "sdp"
+    const-string/jumbo v5, "sdp"
 
     invoke-interface {v3, v4, v5}, Ljavax/sip/header/HeaderFactory;->createContentTypeHeader(Ljava/lang/String;Ljava/lang/String;)Ljavax/sip/header/ContentTypeHeader;
 
@@ -1104,12 +1211,14 @@
 
     invoke-interface {v0, v1, v2}, Ljavax/sip/message/Request;->setContent(Ljava/lang/Object;Ljavax/sip/header/ContentTypeHeader;)V
 
+    .line 269
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
     invoke-interface {v3, v14}, Ljavax/sip/SipProvider;->getNewClientTransaction(Ljavax/sip/message/Request;)Ljavax/sip/ClientTransaction;
 
     move-result-object v12
 
+    .line 271
     .local v12, clientTransaction:Ljavax/sip/ClientTransaction;
     sget-object v3, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
@@ -1117,7 +1226,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "send INVITE: "
+    const-string/jumbo v5, "send INVITE: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1133,12 +1242,15 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 272
     invoke-interface {v12}, Ljavax/sip/ClientTransaction;->sendRequest()V
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 273
     return-object v12
 
+    .line 274
     .end local v6           #callIdHeader:Ljavax/sip/header/CallIdHeader;
     .end local v7           #cSeqHeader:Ljavax/sip/header/CSeqHeader;
     .end local v8           #fromHeader:Ljavax/sip/header/FromHeader;
@@ -1152,10 +1264,11 @@
 
     move-object v13, v3
 
+    .line 275
     .local v13, e:Ljava/text/ParseException;
     new-instance v3, Ljavax/sip/SipException;
 
-    const-string v4, "sendInvite()"
+    const-string/jumbo v4, "sendInvite()"
 
     invoke-direct {v3, v4, v13}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1173,10 +1286,12 @@
     .end annotation
 
     .prologue
+    .line 387
     invoke-virtual {p1}, Ljavax/sip/ResponseEvent;->getResponse()Ljavax/sip/message/Response;
 
     move-result-object v3
 
+    .line 388
     .local v3, response:Ljavax/sip/message/Response;
     const-string v4, "CSeq"
 
@@ -1191,11 +1306,13 @@
 
     move-result-wide v1
 
+    .line 390
     .local v1, cseq:J
     invoke-interface {p2, v1, v2}, Ljavax/sip/Dialog;->createAck(J)Ljavax/sip/message/Request;
 
     move-result-object v0
 
+    .line 391
     .local v0, ack:Ljavax/sip/message/Request;
     sget-object v4, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
@@ -1203,7 +1320,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "send ACK: "
+    const-string/jumbo v6, "send ACK: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1219,8 +1336,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 392
     invoke-interface {p2, v0}, Ljavax/sip/Dialog;->sendAck(Ljavax/sip/message/Request;)V
 
+    .line 393
     return-void
 .end method
 
@@ -1235,11 +1354,13 @@
     .end annotation
 
     .prologue
+    .line 365
     :try_start_0
     invoke-virtual {p1}, Ljavax/sip/RequestEvent;->getRequest()Ljavax/sip/message/Request;
 
     move-result-object v1
 
+    .line 366
     .local v1, request:Ljavax/sip/message/Request;
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mMessageFactory:Ljavax/sip/message/MessageFactory;
 
@@ -1249,13 +1370,16 @@
 
     move-result-object v2
 
+    .line 369
     .local v2, response:Ljavax/sip/message/Response;
     if-nez p2, :cond_0
 
+    .line 370
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipHelper;->getServerTransaction(Ljavax/sip/RequestEvent;)Ljavax/sip/ServerTransaction;
 
     move-result-object p2
 
+    .line 373
     :cond_0
     invoke-interface {p2}, Ljavax/sip/ServerTransaction;->getState()Ljavax/sip/TransactionState;
 
@@ -1265,13 +1389,14 @@
 
     if-eq v3, v4, :cond_1
 
+    .line 374
     sget-object v3, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "send BUSY HERE: "
+    const-string/jumbo v5, "send BUSY HERE: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1287,13 +1412,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 375
     invoke-interface {p2, v2}, Ljavax/sip/ServerTransaction;->sendResponse(Ljavax/sip/message/Response;)V
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 380
     :cond_1
     return-void
 
+    .line 377
     .end local v1           #request:Ljavax/sip/message/Request;
     .end local v2           #response:Ljavax/sip/message/Response;
     :catch_0
@@ -1301,10 +1429,11 @@
 
     move-object v0, v3
 
+    .line 378
     .local v0, e:Ljava/text/ParseException;
     new-instance v3, Ljavax/sip/SipException;
 
-    const-string v4, "sendInviteBusyHere()"
+    const-string/jumbo v4, "sendInviteBusyHere()"
 
     invoke-direct {v3, v4, v0}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1324,11 +1453,13 @@
     .end annotation
 
     .prologue
+    .line 339
     :try_start_0
     invoke-virtual {p1}, Ljavax/sip/RequestEvent;->getRequest()Ljavax/sip/message/Request;
 
     move-result-object v1
 
+    .line 340
     .local v1, request:Ljavax/sip/message/Request;
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mMessageFactory:Ljavax/sip/message/MessageFactory;
 
@@ -1338,6 +1469,7 @@
 
     move-result-object v2
 
+    .line 342
     .local v2, response:Ljavax/sip/message/Response;
     invoke-direct {p0, p2}, Lcom/android/server/sip/SipHelper;->createContactHeader(Landroid/net/sip/SipProfile;)Ljavax/sip/header/ContactHeader;
 
@@ -1345,11 +1477,12 @@
 
     invoke-interface {v2, v3}, Ljavax/sip/message/Response;->addHeader(Ljavax/sip/header/Header;)V
 
+    .line 343
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     const-string v4, "application"
 
-    const-string v5, "sdp"
+    const-string/jumbo v5, "sdp"
 
     invoke-interface {v3, v4, v5}, Ljavax/sip/header/HeaderFactory;->createContentTypeHeader(Ljava/lang/String;Ljava/lang/String;)Ljavax/sip/header/ContentTypeHeader;
 
@@ -1357,12 +1490,15 @@
 
     invoke-interface {v2, p3, v3}, Ljavax/sip/message/Response;->setContent(Ljava/lang/Object;Ljavax/sip/header/ContentTypeHeader;)V
 
+    .line 347
     if-nez p4, :cond_0
 
+    .line 348
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipHelper;->getServerTransaction(Ljavax/sip/RequestEvent;)Ljavax/sip/ServerTransaction;
 
     move-result-object p4
 
+    .line 351
     :cond_0
     invoke-interface {p4}, Ljavax/sip/ServerTransaction;->getState()Ljavax/sip/TransactionState;
 
@@ -1372,13 +1508,14 @@
 
     if-eq v3, v4, :cond_1
 
+    .line 352
     sget-object v3, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "send OK: "
+    const-string/jumbo v5, "send OK: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1394,13 +1531,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 353
     invoke-interface {p4, v2}, Ljavax/sip/ServerTransaction;->sendResponse(Ljavax/sip/message/Response;)V
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 356
     :cond_1
     return-object p4
 
+    .line 357
     .end local v1           #request:Ljavax/sip/message/Request;
     .end local v2           #response:Ljavax/sip/message/Response;
     :catch_0
@@ -1408,10 +1548,11 @@
 
     move-object v0, v3
 
+    .line 358
     .local v0, e:Ljava/text/ParseException;
     new-instance v3, Ljavax/sip/SipException;
 
-    const-string v4, "sendInviteOk()"
+    const-string/jumbo v4, "sendInviteOk()"
 
     invoke-direct {v3, v4, v0}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1429,6 +1570,7 @@
     .end annotation
 
     .prologue
+    .line 423
     :try_start_0
     iget-object v2, p0, Lcom/android/server/sip/SipHelper;->mMessageFactory:Ljavax/sip/message/MessageFactory;
 
@@ -1438,6 +1580,7 @@
 
     move-result-object v1
 
+    .line 425
     .local v1, response:Ljavax/sip/message/Response;
     sget-object v2, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
@@ -1445,7 +1588,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "send response: "
+    const-string/jumbo v4, "send response: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1461,22 +1604,26 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 426
     invoke-interface {p2, v1}, Ljavax/sip/ServerTransaction;->sendResponse(Ljavax/sip/message/Response;)V
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 430
     return-void
 
+    .line 427
     .end local v1           #response:Ljavax/sip/message/Response;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 428
     .local v0, e:Ljava/text/ParseException;
     new-instance v2, Ljavax/sip/SipException;
 
-    const-string v3, "sendInviteRequestTerminated()"
+    const-string/jumbo v3, "sendInviteRequestTerminated()"
 
     invoke-direct {v2, v3, v0}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1494,6 +1641,7 @@
     .end annotation
 
     .prologue
+    .line 181
     :try_start_0
     const-string v3, "OPTIONS"
 
@@ -1501,6 +1649,7 @@
 
     move-result-object v2
 
+    .line 183
     .local v2, request:Ljavax/sip/message/Request;
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
@@ -1508,13 +1657,16 @@
 
     move-result-object v0
 
+    .line 185
     .local v0, clientTransaction:Ljavax/sip/ClientTransaction;
     invoke-interface {v0}, Ljavax/sip/ClientTransaction;->sendRequest()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 186
     return-object v0
 
+    .line 187
     .end local v0           #clientTransaction:Ljavax/sip/ClientTransaction;
     .end local v2           #request:Ljavax/sip/message/Request;
     :catch_0
@@ -1522,10 +1674,11 @@
 
     move-object v1, v3
 
+    .line 188
     .local v1, e:Ljava/lang/Exception;
     new-instance v3, Ljavax/sip/SipException;
 
-    const-string v4, "sendKeepAlive()"
+    const-string/jumbo v4, "sendKeepAlive()"
 
     invoke-direct {v3, v4, v1}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1544,6 +1697,7 @@
     .end annotation
 
     .prologue
+    .line 195
     :try_start_0
     const-string v3, "REGISTER"
 
@@ -1551,15 +1705,18 @@
 
     move-result-object v2
 
+    .line 196
     .local v2, request:Ljavax/sip/message/Request;
     if-nez p3, :cond_0
 
+    .line 199
     invoke-direct {p0}, Lcom/android/server/sip/SipHelper;->createWildcardContactHeader()Ljavax/sip/header/ContactHeader;
 
     move-result-object v3
 
     invoke-interface {v2, v3}, Ljavax/sip/message/Request;->addHeader(Ljavax/sip/header/Header;)V
 
+    .line 203
     :goto_0
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
@@ -1569,17 +1726,21 @@
 
     invoke-interface {v2, v3}, Ljavax/sip/message/Request;->addHeader(Ljavax/sip/header/Header;)V
 
+    .line 205
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
     invoke-interface {v3, v2}, Ljavax/sip/SipProvider;->getNewClientTransaction(Ljavax/sip/message/Request;)Ljavax/sip/ClientTransaction;
 
     move-result-object v0
 
+    .line 207
     .local v0, clientTransaction:Ljavax/sip/ClientTransaction;
     invoke-interface {v0}, Ljavax/sip/ClientTransaction;->sendRequest()V
 
+    .line 208
     return-object v0
 
+    .line 201
     .end local v0           #clientTransaction:Ljavax/sip/ClientTransaction;
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipHelper;->createContactHeader(Landroid/net/sip/SipProfile;)Ljavax/sip/header/ContactHeader;
@@ -1592,16 +1753,18 @@
 
     goto :goto_0
 
+    .line 209
     .end local v2           #request:Ljavax/sip/message/Request;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 210
     .local v1, e:Ljava/text/ParseException;
     new-instance v3, Ljavax/sip/SipException;
 
-    const-string v4, "sendRegister()"
+    const-string/jumbo v4, "sendRegister()"
 
     invoke-direct {v3, v4, v1}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1619,6 +1782,7 @@
     .end annotation
 
     .prologue
+    .line 282
     :try_start_0
     const-string v3, "INVITE"
 
@@ -1626,12 +1790,13 @@
 
     move-result-object v2
 
+    .line 283
     .local v2, request:Ljavax/sip/message/Request;
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mHeaderFactory:Ljavax/sip/header/HeaderFactory;
 
     const-string v4, "application"
 
-    const-string v5, "sdp"
+    const-string/jumbo v5, "sdp"
 
     invoke-interface {v3, v4, v5}, Ljavax/sip/header/HeaderFactory;->createContentTypeHeader(Ljava/lang/String;Ljava/lang/String;)Ljavax/sip/header/ContentTypeHeader;
 
@@ -1639,12 +1804,14 @@
 
     invoke-interface {v2, p2, v3}, Ljavax/sip/message/Request;->setContent(Ljava/lang/Object;Ljavax/sip/header/ContentTypeHeader;)V
 
+    .line 287
     iget-object v3, p0, Lcom/android/server/sip/SipHelper;->mSipProvider:Ljavax/sip/SipProvider;
 
     invoke-interface {v3, v2}, Ljavax/sip/SipProvider;->getNewClientTransaction(Ljavax/sip/message/Request;)Ljavax/sip/ClientTransaction;
 
     move-result-object v0
 
+    .line 289
     .local v0, clientTransaction:Ljavax/sip/ClientTransaction;
     sget-object v3, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
@@ -1652,7 +1819,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "send RE-INVITE: "
+    const-string/jumbo v5, "send RE-INVITE: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1668,12 +1835,15 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 290
     invoke-interface {p1, v0}, Ljavax/sip/Dialog;->sendRequest(Ljavax/sip/ClientTransaction;)V
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 291
     return-object v0
 
+    .line 292
     .end local v0           #clientTransaction:Ljavax/sip/ClientTransaction;
     .end local v2           #request:Ljavax/sip/message/Request;
     :catch_0
@@ -1681,10 +1851,11 @@
 
     move-object v1, v3
 
+    .line 293
     .local v1, e:Ljava/text/ParseException;
     new-instance v3, Ljavax/sip/SipException;
 
-    const-string v4, "sendReinvite()"
+    const-string/jumbo v4, "sendReinvite()"
 
     invoke-direct {v3, v4, v1}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1702,6 +1873,7 @@
     .end annotation
 
     .prologue
+    .line 411
     :try_start_0
     iget-object v2, p0, Lcom/android/server/sip/SipHelper;->mMessageFactory:Ljavax/sip/message/MessageFactory;
 
@@ -1713,6 +1885,7 @@
 
     move-result-object v1
 
+    .line 413
     .local v1, response:Ljavax/sip/message/Response;
     sget-object v2, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
@@ -1720,7 +1893,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "send response: "
+    const-string/jumbo v4, "send response: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1736,6 +1909,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 414
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipHelper;->getServerTransaction(Ljavax/sip/RequestEvent;)Ljavax/sip/ServerTransaction;
 
     move-result-object v2
@@ -1744,18 +1918,21 @@
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 418
     return-void
 
+    .line 415
     .end local v1           #response:Ljavax/sip/message/Response;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 416
     .local v0, e:Ljava/text/ParseException;
     new-instance v2, Ljavax/sip/SipException;
 
-    const-string v3, "sendResponse()"
+    const-string/jumbo v3, "sendResponse()"
 
     invoke-direct {v2, v3, v0}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1773,16 +1950,19 @@
     .end annotation
 
     .prologue
+    .line 314
     :try_start_0
     invoke-virtual {p1}, Ljavax/sip/RequestEvent;->getRequest()Ljavax/sip/message/Request;
 
     move-result-object v1
 
+    .line 315
     .local v1, request:Ljavax/sip/message/Request;
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipHelper;->getServerTransaction(Ljavax/sip/RequestEvent;)Ljavax/sip/ServerTransaction;
 
     move-result-object v4
 
+    .line 317
     .local v4, transaction:Ljavax/sip/ServerTransaction;
     iget-object v5, p0, Lcom/android/server/sip/SipHelper;->mMessageFactory:Ljavax/sip/message/MessageFactory;
 
@@ -1792,6 +1972,7 @@
 
     move-result-object v2
 
+    .line 320
     .local v2, response:Ljavax/sip/message/Response;
     const-string v5, "To"
 
@@ -1801,18 +1982,21 @@
 
     check-cast v3, Ljavax/sip/header/ToHeader;
 
+    .line 321
     .local v3, toHeader:Ljavax/sip/header/ToHeader;
     invoke-interface {v3, p2}, Ljavax/sip/header/ToHeader;->setTag(Ljava/lang/String;)V
 
+    .line 322
     invoke-interface {v2, v3}, Ljavax/sip/message/Response;->addHeader(Ljavax/sip/header/Header;)V
 
+    .line 323
     sget-object v5, Lcom/android/server/sip/SipHelper;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "send RINGING: "
+    const-string/jumbo v7, "send RINGING: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1828,12 +2012,15 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 324
     invoke-interface {v4, v2}, Ljavax/sip/ServerTransaction;->sendResponse(Ljavax/sip/message/Response;)V
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 325
     return-object v4
 
+    .line 326
     .end local v1           #request:Ljavax/sip/message/Request;
     .end local v2           #response:Ljavax/sip/message/Response;
     .end local v3           #toHeader:Ljavax/sip/header/ToHeader;
@@ -1843,10 +2030,11 @@
 
     move-object v0, v5
 
+    .line 327
     .local v0, e:Ljava/text/ParseException;
     new-instance v5, Ljavax/sip/SipException;
 
-    const-string v6, "sendRinging()"
+    const-string/jumbo v6, "sendRinging()"
 
     invoke-direct {v5, v6, v0}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 

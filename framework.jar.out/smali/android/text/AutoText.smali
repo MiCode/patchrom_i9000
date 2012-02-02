@@ -46,6 +46,7 @@
     .locals 2
 
     .prologue
+    .line 58
     new-instance v0, Landroid/text/AutoText;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
@@ -56,6 +57,7 @@
 
     sput-object v0, Landroid/text/AutoText;->sInstance:Landroid/text/AutoText;
 
+    .line 59
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -70,8 +72,10 @@
     .parameter "resources"
 
     .prologue
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 77
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
@@ -80,8 +84,10 @@
 
     iput-object v0, p0, Landroid/text/AutoText;->mLocale:Ljava/util/Locale;
 
+    .line 78
     invoke-direct {p0, p1}, Landroid/text/AutoText;->init(Landroid/content/res/Resources;)V
 
+    .line 79
     return-void
 .end method
 
@@ -95,13 +101,16 @@
 
     const v8, 0xffff
 
+    .line 213
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v5
 
+    .line 214
     .local v5, slen:I
     const/4 v2, 0x0
 
+    .line 216
     .local v2, herep:I
     iget v6, p0, Landroid/text/AutoText;->mSize:I
 
@@ -109,19 +118,23 @@
 
     iput v6, p0, Landroid/text/AutoText;->mSize:I
 
+    .line 218
     const/4 v3, 0x0
 
     .local v3, i:I
     :goto_0
     if-ge v3, v5, :cond_0
 
+    .line 219
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
+    .line 220
     .local v0, c:C
     const/4 v1, 0x0
 
+    .line 222
     .local v1, found:Z
     :goto_1
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
@@ -130,6 +143,7 @@
 
     if-eq v6, v8, :cond_2
 
+    .line 224
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
 
     iget-object v7, p0, Landroid/text/AutoText;->mTrie:[C
@@ -142,10 +156,12 @@
 
     if-ne v0, v6, :cond_3
 
+    .line 228
     sub-int v6, v5, v9
 
     if-ne v3, v6, :cond_1
 
+    .line 229
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
 
     iget-object v7, p0, Landroid/text/AutoText;->mTrie:[C
@@ -156,12 +172,14 @@
 
     aput-char p2, v6, v7
 
+    .line 265
     .end local v0           #c:C
     .end local v1           #found:Z
     :cond_0
     :goto_2
     return-void
 
+    .line 236
     .restart local v0       #c:C
     .restart local v1       #found:Z
     :cond_1
@@ -171,20 +189,25 @@
 
     add-int/lit8 v2, v6, 0x2
 
+    .line 237
     const/4 v1, 0x1
 
+    .line 242
     :cond_2
     if-nez v1, :cond_5
 
+    .line 245
     invoke-direct {p0}, Landroid/text/AutoText;->newTrieNode()C
 
     move-result v4
 
+    .line 246
     .local v4, node:C
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
 
     aput-char v4, v6, v2
 
+    .line 248
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
 
     iget-object v7, p0, Landroid/text/AutoText;->mTrie:[C
@@ -195,6 +218,7 @@
 
     aput-char v0, v6, v7
 
+    .line 249
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
 
     iget-object v7, p0, Landroid/text/AutoText;->mTrie:[C
@@ -205,6 +229,7 @@
 
     aput-char v8, v6, v7
 
+    .line 250
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
 
     iget-object v7, p0, Landroid/text/AutoText;->mTrie:[C
@@ -215,6 +240,7 @@
 
     aput-char v8, v6, v7
 
+    .line 251
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
 
     iget-object v7, p0, Landroid/text/AutoText;->mTrie:[C
@@ -225,10 +251,12 @@
 
     aput-char v8, v6, v7
 
+    .line 255
     sub-int v6, v5, v9
 
     if-ne v3, v6, :cond_4
 
+    .line 256
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
 
     iget-object v7, p0, Landroid/text/AutoText;->mTrie:[C
@@ -241,6 +269,7 @@
 
     goto :goto_2
 
+    .line 223
     .end local v4           #node:C
     :cond_3
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
@@ -251,6 +280,7 @@
 
     goto :goto_1
 
+    .line 262
     .restart local v4       #node:C
     :cond_4
     iget-object v6, p0, Landroid/text/AutoText;->mTrie:[C
@@ -259,6 +289,7 @@
 
     add-int/lit8 v2, v6, 0x2
 
+    .line 218
     .end local v4           #node:C
     :cond_5
     add-int/lit8 v3, v3, 0x1
@@ -274,6 +305,7 @@
     .parameter "view"
 
     .prologue
+    .line 111
     invoke-static {p3}, Landroid/text/AutoText;->getInstance(Landroid/view/View;)Landroid/text/AutoText;
 
     move-result-object v0
@@ -290,6 +322,7 @@
     .parameter "view"
 
     .prologue
+    .line 88
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -298,6 +331,7 @@
 
     move-result-object v2
 
+    .line 89
     .local v2, res:Landroid/content/res/Resources;
     invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -305,14 +339,17 @@
 
     iget-object v1, v3, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
+    .line 92
     .local v1, locale:Ljava/util/Locale;
     sget-object v3, Landroid/text/AutoText;->sLock:Ljava/lang/Object;
 
     monitor-enter v3
 
+    .line 93
     :try_start_0
     sget-object v0, Landroid/text/AutoText;->sInstance:Landroid/text/AutoText;
 
+    .line 95
     .local v0, instance:Landroid/text/AutoText;
     iget-object v4, v0, Landroid/text/AutoText;->mLocale:Ljava/util/Locale;
 
@@ -322,19 +359,24 @@
 
     if-nez v4, :cond_0
 
+    .line 96
     new-instance v0, Landroid/text/AutoText;
 
     .end local v0           #instance:Landroid/text/AutoText;
     invoke-direct {v0, v2}, Landroid/text/AutoText;-><init>(Landroid/content/res/Resources;)V
 
+    .line 97
     .restart local v0       #instance:Landroid/text/AutoText;
     sput-object v0, Landroid/text/AutoText;->sInstance:Landroid/text/AutoText;
 
+    .line 99
     :cond_0
     monitor-exit v3
 
+    .line 101
     return-object v0
 
+    .line 99
     .end local v0           #instance:Landroid/text/AutoText;
     :catchall_0
     move-exception v4
@@ -350,6 +392,7 @@
     .locals 1
 
     .prologue
+    .line 129
     iget v0, p0, Landroid/text/AutoText;->mSize:I
 
     return v0
@@ -360,6 +403,7 @@
     .parameter "view"
 
     .prologue
+    .line 122
     invoke-static {p0}, Landroid/text/AutoText;->getInstance(Landroid/view/View;)Landroid/text/AutoText;
 
     move-result-object v0
@@ -376,12 +420,14 @@
     .parameter "r"
 
     .prologue
+    .line 162
     const v9, 0x10b0001
 
     invoke-virtual {p1, v9}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object v6
 
+    .line 164
     .local v6, parser:Landroid/content/res/XmlResourceParser;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -389,6 +435,7 @@
 
     invoke-direct {v7, v9}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 165
     .local v7, right:Ljava/lang/StringBuilder;
     const/16 v9, 0x3801
 
@@ -396,6 +443,7 @@
 
     iput-object v9, p0, Landroid/text/AutoText;->mTrie:[C
 
+    .line 166
     iget-object v9, p0, Landroid/text/AutoText;->mTrie:[C
 
     const/4 v10, 0x0
@@ -404,33 +452,40 @@
 
     aput-char v11, v9, v10
 
+    .line 167
     const/4 v9, 0x1
 
     iput-char v9, p0, Landroid/text/AutoText;->mTrieUsed:C
 
+    .line 170
     :try_start_0
-    const-string v9, "words"
+    const-string/jumbo v9, "words"
 
     invoke-static {v6, v9}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
+    .line 171
     const-string v3, ""
 
+    .line 172
     .local v3, odest:Ljava/lang/String;
     const/4 v5, 0x0
 
+    .line 175
     .local v5, ooff:C
     :cond_0
     :goto_0
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
+    .line 177
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 178
     .local v2, element:Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    const-string v9, "word"
+    const-string/jumbo v9, "word"
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -438,6 +493,7 @@
 
     if-nez v9, :cond_2
 
+    .line 200
     :cond_1
     invoke-virtual {p1}, Landroid/content/res/Resources;->flushLayoutCache()V
     :try_end_0
@@ -445,26 +501,31 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 206
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->close()V
 
+    .line 209
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v9
 
     iput-object v9, p0, Landroid/text/AutoText;->mText:Ljava/lang/String;
 
+    .line 210
     return-void
 
+    .line 182
     :cond_2
     const/4 v9, 0x0
 
     :try_start_1
-    const-string v10, "src"
+    const-string/jumbo v10, "src"
 
     invoke-interface {v6, v9, v10}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 183
     .local v8, src:Ljava/lang/String;
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -474,10 +535,12 @@
 
     if-ne v9, v10, :cond_0
 
+    .line 184
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->getText()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 187
     .local v0, dest:Ljava/lang/String;
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -485,8 +548,10 @@
 
     if-eqz v9, :cond_3
 
+    .line 188
     move v4, v5
 
+    .line 195
     .local v4, off:C
     :goto_1
     invoke-direct {p0, v8, v4}, Landroid/text/AutoText;->add(Ljava/lang/String;C)V
@@ -497,6 +562,7 @@
 
     goto :goto_0
 
+    .line 201
     .end local v0           #dest:Ljava/lang/String;
     .end local v2           #element:Ljava/lang/String;
     .end local v3           #odest:Ljava/lang/String;
@@ -508,6 +574,7 @@
 
     move-object v1, v9
 
+    .line 202
     .local v1, e:Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_2
     new-instance v9, Ljava/lang/RuntimeException;
@@ -518,6 +585,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 206
     .end local v1           #e:Lorg/xmlpull/v1/XmlPullParserException;
     :catchall_0
     move-exception v9
@@ -526,6 +594,7 @@
 
     throw v9
 
+    .line 190
     .restart local v0       #dest:Ljava/lang/String;
     .restart local v2       #element:Ljava/lang/String;
     .restart local v3       #odest:Ljava/lang/String;
@@ -539,6 +608,7 @@
 
     int-to-char v4, v9
 
+    .line 191
     .restart local v4       #off:C
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -548,6 +618,7 @@
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 192
     invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -556,6 +627,7 @@
 
     goto :goto_1
 
+    .line 203
     .end local v0           #dest:Ljava/lang/String;
     .end local v2           #element:Ljava/lang/String;
     .end local v3           #odest:Ljava/lang/String;
@@ -567,6 +639,7 @@
 
     move-object v1, v9
 
+    .line 204
     .local v1, e:Ljava/io/IOException;
     :try_start_4
     new-instance v9, Ljava/lang/RuntimeException;
@@ -589,12 +662,14 @@
 
     const v7, 0xffff
 
+    .line 133
     iget-object v5, p0, Landroid/text/AutoText;->mTrie:[C
 
     const/4 v6, 0x0
 
     aget-char v1, v5, v6
 
+    .line 135
     .local v1, here:I
     move v2, p2
 
@@ -602,14 +677,17 @@
     :goto_0
     if-ge v2, p3, :cond_4
 
+    .line 136
     invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
+    .line 138
     .local v0, c:C
     :goto_1
     if-eq v1, v7, :cond_1
 
+    .line 139
     iget-object v5, p0, Landroid/text/AutoText;->mTrie:[C
 
     add-int/lit8 v6, v1, 0x0
@@ -618,6 +696,7 @@
 
     if-ne v0, v5, :cond_2
 
+    .line 140
     const/4 v5, 0x1
 
     sub-int v5, p3, v5
@@ -632,12 +711,14 @@
 
     if-eq v5, v7, :cond_0
 
+    .line 142
     iget-object v5, p0, Landroid/text/AutoText;->mTrie:[C
 
     add-int/lit8 v6, v1, 0x1
 
     aget-char v4, v5, v6
 
+    .line 143
     .local v4, off:I
     iget-object v5, p0, Landroid/text/AutoText;->mText:Ljava/lang/String;
 
@@ -645,6 +726,7 @@
 
     move-result v3
 
+    .line 145
     .local v3, len:I
     iget-object v5, p0, Landroid/text/AutoText;->mText:Ljava/lang/String;
 
@@ -658,12 +740,14 @@
 
     move-result-object v5
 
+    .line 158
     .end local v0           #c:C
     .end local v3           #len:I
     .end local v4           #off:I
     :goto_2
     return-object v5
 
+    .line 148
     .restart local v0       #c:C
     :cond_0
     iget-object v5, p0, Landroid/text/AutoText;->mTrie:[C
@@ -672,13 +756,16 @@
 
     aget-char v1, v5, v6
 
+    .line 153
     :cond_1
     if-ne v1, v7, :cond_3
 
     move-object v5, v8
 
+    .line 154
     goto :goto_2
 
+    .line 138
     :cond_2
     iget-object v5, p0, Landroid/text/AutoText;->mTrie:[C
 
@@ -688,6 +775,7 @@
 
     goto :goto_1
 
+    .line 135
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
@@ -697,6 +785,7 @@
     :cond_4
     move-object v5, v8
 
+    .line 158
     goto :goto_2
 .end method
 
@@ -706,6 +795,7 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 268
     iget-char v2, p0, Landroid/text/AutoText;->mTrieUsed:C
 
     add-int/lit8 v2, v2, 0x4
@@ -716,6 +806,7 @@
 
     if-le v2, v3, :cond_0
 
+    .line 269
     iget-object v2, p0, Landroid/text/AutoText;->mTrie:[C
 
     array-length v2, v2
@@ -724,6 +815,7 @@
 
     new-array v0, v2, [C
 
+    .line 270
     .local v0, copy:[C
     iget-object v2, p0, Landroid/text/AutoText;->mTrie:[C
 
@@ -733,12 +825,15 @@
 
     invoke-static {v2, v4, v0, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 271
     iput-object v0, p0, Landroid/text/AutoText;->mTrie:[C
 
+    .line 274
     .end local v0           #copy:[C
     :cond_0
     iget-char v1, p0, Landroid/text/AutoText;->mTrieUsed:C
 
+    .line 275
     .local v1, ret:C
     iget-char v2, p0, Landroid/text/AutoText;->mTrieUsed:C
 
@@ -748,5 +843,6 @@
 
     iput-char v2, p0, Landroid/text/AutoText;->mTrieUsed:C
 
+    .line 277
     return v1
 .end method

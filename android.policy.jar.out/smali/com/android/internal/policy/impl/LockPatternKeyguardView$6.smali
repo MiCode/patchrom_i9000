@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1348
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$6;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "which"
 
     .prologue
+    .line 1350
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$6;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->lastAttemptDialog:Landroid/app/AlertDialog;
@@ -51,5 +53,6 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
+    .line 1352
     return-void
 .end method

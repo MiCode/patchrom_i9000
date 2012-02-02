@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 143
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,10 +49,12 @@
 
     const/4 v6, 0x0
 
+    .line 145
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 146
     .local v1, numItems:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -61,41 +64,51 @@
 
     move v0, v7
 
+    .line 148
     .local v0, lastSlice:Z
     :goto_0
     if-lez v1, :cond_1
 
+    .line 149
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
+    .line 152
     .local v4, parcelSize:I
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
 
+    .line 153
     .local v2, offset:I
     add-int v5, v2, v4
 
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->setDataPosition(I)V
 
+    .line 155
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
 
+    .line 156
     .local v3, p:Landroid/os/Parcel;
     invoke-virtual {v3, v6}, Landroid/os/Parcel;->setDataPosition(I)V
 
+    .line 157
     invoke-virtual {v3, p1, v2, v4}, Landroid/os/Parcel;->appendFrom(Landroid/os/Parcel;II)V
 
+    .line 158
     invoke-virtual {v3, v6}, Landroid/os/Parcel;->setDataPosition(I)V
 
+    .line 160
     new-instance v5, Landroid/content/pm/ParceledListSlice;
 
     const/4 v6, 0x0
 
     invoke-direct {v5, v3, v1, v0, v6}, Landroid/content/pm/ParceledListSlice;-><init>(Landroid/os/Parcel;IZLandroid/content/pm/ParceledListSlice$1;)V
 
+    .line 162
     .end local v2           #offset:I
     .end local v3           #p:Landroid/os/Parcel;
     .end local v4           #parcelSize:I
@@ -106,8 +119,10 @@
     :cond_0
     move v0, v6
 
+    .line 146
     goto :goto_0
 
+    .line 162
     .restart local v0       #lastSlice:Z
     :cond_1
     new-instance v5, Landroid/content/pm/ParceledListSlice;
@@ -122,6 +137,7 @@
     .parameter "x0"
 
     .prologue
+    .line 143
     invoke-virtual {p0, p1}, Landroid/content/pm/ParceledListSlice$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/pm/ParceledListSlice;
 
     move-result-object v0
@@ -134,6 +150,7 @@
     .parameter "size"
 
     .prologue
+    .line 167
     new-array v0, p1, [Landroid/content/pm/ParceledListSlice;
 
     return-object v0
@@ -144,6 +161,7 @@
     .parameter "x0"
 
     .prologue
+    .line 143
     invoke-virtual {p0, p1}, Landroid/content/pm/ParceledListSlice$1;->newArray(I)[Landroid/content/pm/ParceledListSlice;
 
     move-result-object v0

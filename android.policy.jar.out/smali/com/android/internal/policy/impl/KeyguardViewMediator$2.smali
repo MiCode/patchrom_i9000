@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 987
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,10 +46,12 @@
 
     const-string v3, "android.intent.action.PHONE_STATE"
 
+    .line 990
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 991
     .local v0, action:Ljava/lang/String;
     const-string v2, "com.android.internal.policy.impl.PhoneWindowManager.DELAYED_KEYGUARD"
 
@@ -58,12 +61,14 @@
 
     if-eqz v2, :cond_1
 
+    .line 993
     const-string v2, "seq"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
+    .line 998
     .local v1, sequence:I
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -74,6 +79,7 @@
 
     if-ne v2, v1, :cond_0
 
+    .line 1001
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     const/4 v3, 0x1
@@ -81,21 +87,25 @@
     #setter for: Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSuppressNextLockSound:Z
     invoke-static {v2, v3}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->access$202(Lcom/android/internal/policy/impl/KeyguardViewMediator;Z)Z
 
+    .line 1002
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #setter for: Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeygaurdShowingDone:Z
     invoke-static {v2, v4}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->access$302(Lcom/android/internal/policy/impl/KeyguardViewMediator;Z)Z
 
+    .line 1003
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardViewMediator;->doKeyguard()V
     invoke-static {v2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->access$400(Lcom/android/internal/policy/impl/KeyguardViewMediator;)V
 
+    .line 1052
     .end local v1           #sequence:I
     :cond_0
     :goto_0
     return-void
 
+    .line 1005
     :cond_1
     const-string v2, "android.intent.action.PHONE_STATE"
 
@@ -105,6 +115,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 1006
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     const-string v3, "state"
@@ -116,6 +127,7 @@
     #setter for: Lcom/android/internal/policy/impl/KeyguardViewMediator;->mPhoneState:Ljava/lang/String;
     invoke-static {v2, v3}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->access$502(Lcom/android/internal/policy/impl/KeyguardViewMediator;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 1008
     sget-object v2, Landroid/telephony/TelephonyManager;->EXTRA_STATE_IDLE:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
@@ -149,6 +161,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 1018
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardViewMediator;->doKeyguard()V
@@ -156,6 +169,7 @@
 
     goto :goto_0
 
+    .line 1020
     :cond_2
     const-string v2, "android.intent.action.PHONE_STATE"
 
@@ -179,14 +193,17 @@
 
     if-eqz v2, :cond_3
 
+    .line 1033
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     invoke-static {v2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->access$108(Lcom/android/internal/policy/impl/KeyguardViewMediator;)I
 
+    .line 1034
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->pokeWakelock()V
 
+    .line 1035
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
@@ -196,6 +213,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 1036
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardViewMediator;->hideBatteryStatus()V
@@ -203,6 +221,7 @@
 
     goto :goto_0
 
+    .line 1038
     :cond_3
     const-string v2, "android.intent.action.BATTERY_CHANGED"
 
@@ -212,6 +231,7 @@
 
     if-eqz v2, :cond_4
 
+    .line 1039
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardViewMediator;->informBatteryStatus(Landroid/content/Intent;)V
@@ -219,6 +239,7 @@
 
     goto :goto_0
 
+    .line 1040
     :cond_4
     const-string v2, "android.intent.action.BATTERY_LOW"
 
@@ -228,6 +249,7 @@
 
     if-eqz v2, :cond_5
 
+    .line 1041
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardViewMediator;->informLowBatteryWarn(Landroid/content/Intent;)V
@@ -235,6 +257,7 @@
 
     goto/16 :goto_0
 
+    .line 1042
     :cond_5
     const-string v2, "android.intent.action.BATTERY_OKAY"
 
@@ -244,6 +267,7 @@
 
     if-eqz v2, :cond_6
 
+    .line 1043
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardViewMediator;->informOkayBattery(Landroid/content/Intent;)V
@@ -251,6 +275,7 @@
 
     goto/16 :goto_0
 
+    .line 1044
     :cond_6
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -265,10 +290,12 @@
 
     if-eqz v2, :cond_0
 
+    .line 1047
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->pokeWakelock()V
 
+    .line 1048
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
@@ -278,6 +305,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 1049
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardViewMediator;->hideBatteryStatus()V

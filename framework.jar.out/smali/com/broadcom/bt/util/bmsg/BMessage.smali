@@ -19,8 +19,10 @@
     .end annotation
 
     .prologue
+    .line 64
     invoke-direct {p0}, Lcom/broadcom/bt/util/bmsg/BMessageBase;-><init>()V
 
+    .line 65
     invoke-static {}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->createBMsg()I
 
     move-result v0
@@ -31,6 +33,7 @@
 
     if-nez v0, :cond_0
 
+    .line 66
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Unable to create BMesage object"
@@ -39,6 +42,7 @@
 
     throw v0
 
+    .line 68
     :cond_0
     return-void
 .end method
@@ -48,10 +52,13 @@
     .parameter "nativeRef"
 
     .prologue
+    .line 74
     invoke-direct {p0}, Lcom/broadcom/bt/util/bmsg/BMessageBase;-><init>()V
 
+    .line 75
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/util/bmsg/BMessage;->setNativeRef(I)Z
 
+    .line 76
     return-void
 .end method
 
@@ -62,6 +69,7 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 36
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -74,6 +82,7 @@
 
     if-nez v1, :cond_1
 
+    .line 37
     :cond_0
     const-string v1, "BMessage"
 
@@ -109,9 +118,11 @@
 
     move-object v1, v4
 
+    .line 45
     :goto_0
     return-object v1
 
+    .line 41
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -121,9 +132,11 @@
 
     move-result v0
 
+    .line 42
     .local v0, nativeObj:I
     if-lez v0, :cond_2
 
+    .line 43
     new-instance v1, Lcom/broadcom/bt/util/bmsg/BMessage;
 
     invoke-direct {v1, v0}, Lcom/broadcom/bt/util/bmsg/BMessage;-><init>(I)V
@@ -133,6 +146,7 @@
     :cond_2
     move-object v1, v4
 
+    .line 45
     goto :goto_0
 .end method
 
@@ -142,26 +156,32 @@
     .locals 4
 
     .prologue
+    .line 180
     iget v2, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v2}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->addBMsgEnv(I)I
 
     move-result v0
 
+    .line 181
     .local v0, nativeObject:I
     if-gtz v0, :cond_0
 
+    .line 182
     const-string v2, "BMessage"
 
     const-string v3, "Unable to create native Envelope object for BMessage"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 183
     const/4 v2, 0x0
 
+    .line 186
     :goto_0
     return-object v2
 
+    .line 185
     :cond_0
     new-instance v1, Lcom/broadcom/bt/util/bmsg/BMessageEnvelope;
 
@@ -170,6 +190,7 @@
     .local v1, obj:Lcom/broadcom/bt/util/bmsg/BMessageEnvelope;
     move-object v2, v1
 
+    .line 186
     goto :goto_0
 .end method
 
@@ -177,26 +198,32 @@
     .locals 4
 
     .prologue
+    .line 160
     iget v2, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v2}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->addBMsgOrig(I)I
 
     move-result v0
 
+    .line 161
     .local v0, nativeObject:I
     if-gtz v0, :cond_0
 
+    .line 162
     const-string v2, "BMessage"
 
     const-string v3, "Unable to create native VCard for BMessage originator object"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 163
     const/4 v2, 0x0
 
+    .line 166
     :goto_0
     return-object v2
 
+    .line 165
     :cond_0
     new-instance v1, Lcom/broadcom/bt/util/bmsg/BMessageVCard;
 
@@ -205,6 +232,7 @@
     .local v1, vCard:Lcom/broadcom/bt/util/bmsg/BMessageVCard;
     move-object v2, v1
 
+    .line 166
     goto :goto_0
 .end method
 
@@ -213,12 +241,14 @@
     .parameter "submitPDU"
 
     .prologue
+    .line 200
     const-string v0, "BMessage"
 
     const-string v1, "decodeSMSSubmitPDU"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 201
     invoke-static {p1}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->decodeSMSSubmitPDU(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -234,12 +264,14 @@
     .parameter "dateTime"
 
     .prologue
+    .line 205
     const-string v0, "BMessage"
 
     const-string v1, "encodeSMSDeliverPDU"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 206
     invoke-static {p1, p2, p3, p4}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->encodeSMSDeliverPDU(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -251,8 +283,10 @@
     .locals 0
 
     .prologue
+    .line 89
     invoke-virtual {p0}, Lcom/broadcom/bt/util/bmsg/BMessage;->finish()V
 
+    .line 90
     return-void
 .end method
 
@@ -260,18 +294,22 @@
     .locals 1
 
     .prologue
+    .line 82
     invoke-virtual {p0}, Lcom/broadcom/bt/util/bmsg/BMessage;->isNativeCreated()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 83
     iget v0, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v0}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->deleteBMsg(I)V
 
+    .line 84
     invoke-virtual {p0}, Lcom/broadcom/bt/util/bmsg/BMessage;->clearNativeRef()V
 
+    .line 86
     :cond_0
     return-void
 .end method
@@ -280,20 +318,25 @@
     .locals 3
 
     .prologue
+    .line 190
     iget v2, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v2}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->getBMsgEnv(I)I
 
     move-result v0
 
+    .line 191
     .local v0, nativeObject:I
     if-gtz v0, :cond_0
 
+    .line 192
     const/4 v2, 0x0
 
+    .line 195
     :goto_0
     return-object v2
 
+    .line 194
     :cond_0
     new-instance v1, Lcom/broadcom/bt/util/bmsg/BMessageEnvelope;
 
@@ -302,6 +345,7 @@
     .local v1, vCard:Lcom/broadcom/bt/util/bmsg/BMessageEnvelope;
     move-object v2, v1
 
+    .line 195
     goto :goto_0
 .end method
 
@@ -309,6 +353,7 @@
     .locals 1
 
     .prologue
+    .line 155
     iget v0, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v0}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->getBMsgFldr(I)Ljava/lang/String;
@@ -322,6 +367,7 @@
     .locals 1
 
     .prologue
+    .line 137
     iget v0, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v0}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->getBMsgMType(I)B
@@ -335,20 +381,25 @@
     .locals 3
 
     .prologue
+    .line 170
     iget v2, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v2}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->getBMsgOrig(I)I
 
     move-result v0
 
+    .line 171
     .local v0, nativeMessageVCard:I
     if-gtz v0, :cond_0
 
+    .line 172
     const/4 v2, 0x0
 
+    .line 175
     :goto_0
     return-object v2
 
+    .line 174
     :cond_0
     new-instance v1, Lcom/broadcom/bt/util/bmsg/BMessageVCard;
 
@@ -357,6 +408,7 @@
     .local v1, vCard:Lcom/broadcom/bt/util/bmsg/BMessageVCard;
     move-object v2, v1
 
+    .line 175
     goto :goto_0
 .end method
 
@@ -364,6 +416,7 @@
     .locals 1
 
     .prologue
+    .line 108
     iget v0, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v0}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->isBMsgRd(I)Z
@@ -378,10 +431,12 @@
     .parameter "folder"
 
     .prologue
+    .line 146
     iget v0, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v0, p1}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->setBMsgFldr(ILjava/lang/String;)V
 
+    .line 147
     return-void
 .end method
 
@@ -390,6 +445,7 @@
     .parameter "msgType"
 
     .prologue
+    .line 122
     const/4 v0, 0x4
 
     invoke-static {p1, v0}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->hasBitError(II)Z
@@ -398,6 +454,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 123
     const-string v0, "BMessage"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -420,9 +477,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 127
     :goto_0
     return-void
 
+    .line 126
     :cond_0
     iget v0, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
@@ -436,10 +495,12 @@
     .parameter "isRead"
 
     .prologue
+    .line 99
     iget v0, p0, Lcom/broadcom/bt/util/bmsg/BMessageBase;->mNativeObjectRef:I
 
     invoke-static {v0, p1}, Lcom/broadcom/bt/util/bmsg/BMessageManager;->setBMsgRd(IZ)V
 
+    .line 100
     return-void
 .end method
 
@@ -448,12 +509,14 @@
     .parameter "f"
 
     .prologue
+    .line 49
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 51
     const-string v0, "BMessage"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -486,8 +549,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 52
     const/4 v0, 0x0
 
+    .line 54
     :goto_0
     return v0
 

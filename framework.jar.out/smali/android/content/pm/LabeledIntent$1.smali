@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 184
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "source"
 
     .prologue
+    .line 186
     new-instance v0, Landroid/content/pm/LabeledIntent;
 
     invoke-direct {v0, p1}, Landroid/content/pm/LabeledIntent;-><init>(Landroid/os/Parcel;)V
@@ -56,6 +58,7 @@
     .parameter "x0"
 
     .prologue
+    .line 184
     invoke-virtual {p0, p1}, Landroid/content/pm/LabeledIntent$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/pm/LabeledIntent;
 
     move-result-object v0
@@ -68,6 +71,7 @@
     .parameter "size"
 
     .prologue
+    .line 189
     new-array v0, p1, [Landroid/content/pm/LabeledIntent;
 
     return-object v0
@@ -78,6 +82,7 @@
     .parameter "x0"
 
     .prologue
+    .line 184
     invoke-virtual {p0, p1}, Landroid/content/pm/LabeledIntent$1;->newArray(I)[Landroid/content/pm/LabeledIntent;
 
     move-result-object v0

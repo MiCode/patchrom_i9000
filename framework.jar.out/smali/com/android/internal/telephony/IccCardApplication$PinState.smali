@@ -54,6 +54,7 @@
 
     const/4 v3, 0x0
 
+    .line 97
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     const-string v1, "PINSTATE_UNKNOWN"
@@ -62,6 +63,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->PINSTATE_UNKNOWN:Lcom/android/internal/telephony/IccCardApplication$PinState;
 
+    .line 98
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     const-string v1, "PINSTATE_ENABLED_NOT_VERIFIED"
@@ -70,6 +72,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->PINSTATE_ENABLED_NOT_VERIFIED:Lcom/android/internal/telephony/IccCardApplication$PinState;
 
+    .line 99
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     const-string v1, "PINSTATE_ENABLED_VERIFIED"
@@ -78,6 +81,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->PINSTATE_ENABLED_VERIFIED:Lcom/android/internal/telephony/IccCardApplication$PinState;
 
+    .line 100
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     const-string v1, "PINSTATE_DISABLED"
@@ -86,6 +90,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->PINSTATE_DISABLED:Lcom/android/internal/telephony/IccCardApplication$PinState;
 
+    .line 101
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     const-string v1, "PINSTATE_ENABLED_BLOCKED"
@@ -94,6 +99,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->PINSTATE_ENABLED_BLOCKED:Lcom/android/internal/telephony/IccCardApplication$PinState;
 
+    .line 102
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     const-string v1, "PINSTATE_ENABLED_PERM_BLOCKED"
@@ -104,6 +110,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->PINSTATE_ENABLED_PERM_BLOCKED:Lcom/android/internal/telephony/IccCardApplication$PinState;
 
+    .line 96
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/telephony/IccCardApplication$PinState;
@@ -150,6 +157,7 @@
     .end annotation
 
     .prologue
+    .line 96
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -160,6 +168,7 @@
     .parameter "name"
 
     .prologue
+    .line 96
     const-class v0, Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -176,6 +185,7 @@
     .locals 1
 
     .prologue
+    .line 96
     sget-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->$VALUES:[Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/IccCardApplication$PinState;->clone()Ljava/lang/Object;
@@ -193,6 +203,7 @@
     .locals 1
 
     .prologue
+    .line 105
     sget-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->PINSTATE_ENABLED_BLOCKED:Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     if-ne p0, v0, :cond_0
@@ -212,6 +223,7 @@
     .locals 1
 
     .prologue
+    .line 108
     sget-object v0, Lcom/android/internal/telephony/IccCardApplication$PinState;->PINSTATE_ENABLED_PERM_BLOCKED:Lcom/android/internal/telephony/IccCardApplication$PinState;
 
     if-ne p0, v0, :cond_0

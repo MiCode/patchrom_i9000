@@ -13,8 +13,10 @@
     .parameter "region"
 
     .prologue
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
     invoke-virtual {p1}, Landroid/graphics/Region;->ni()I
 
     move-result v0
@@ -25,6 +27,7 @@
 
     iput v0, p0, Landroid/graphics/RegionIterator;->mNativeIter:I
 
+    .line 30
     return-void
 .end method
 
@@ -48,10 +51,12 @@
     .end annotation
 
     .prologue
+    .line 45
     iget v0, p0, Landroid/graphics/RegionIterator;->mNativeIter:I
 
     invoke-static {v0}, Landroid/graphics/RegionIterator;->nativeDestructor(I)V
 
+    .line 46
     return-void
 .end method
 
@@ -60,8 +65,10 @@
     .parameter "r"
 
     .prologue
+    .line 38
     if-nez p1, :cond_0
 
+    .line 39
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "The Rect must be provided"
@@ -70,6 +77,7 @@
 
     throw v0
 
+    .line 41
     :cond_0
     iget v0, p0, Landroid/graphics/RegionIterator;->mNativeIter:I
 

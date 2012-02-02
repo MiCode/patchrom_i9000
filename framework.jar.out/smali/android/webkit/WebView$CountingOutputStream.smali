@@ -35,19 +35,25 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 11566
     iput-object p1, p0, Landroid/webkit/WebView$CountingOutputStream;->this$0:Landroid/webkit/WebView;
 
+    .line 11567
     invoke-direct {p0, p2}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
+    .line 11563
     iput-boolean v0, p0, Landroid/webkit/WebView$CountingOutputStream;->mIsBigFile:Z
 
+    .line 11568
     iput v0, p0, Landroid/webkit/WebView$CountingOutputStream;->total:I
 
+    .line 11569
     check-cast p2, Ljava/io/FileOutputStream;
 
     .end local p2
     iput-object p2, p0, Landroid/webkit/WebView$CountingOutputStream;->fout:Ljava/io/FileOutputStream;
 
+    .line 11570
     return-void
 .end method
 
@@ -56,20 +62,24 @@
     .parameter "size"
 
     .prologue
+    .line 11586
     iget v0, p0, Landroid/webkit/WebView$CountingOutputStream;->total:I
 
     add-int/2addr v0, p1
 
     iput v0, p0, Landroid/webkit/WebView$CountingOutputStream;->total:I
 
+    .line 11587
     iget v0, p0, Landroid/webkit/WebView$CountingOutputStream;->total:I
 
     const v1, 0xf4240
 
     if-le v0, v1, :cond_0
 
+    .line 11588
     const/4 v0, 0x0
 
+    .line 11590
     :goto_0
     return v0
 
@@ -90,10 +100,12 @@
     .end annotation
 
     .prologue
+    .line 11582
     iget-object v0, p0, Landroid/webkit/WebView$CountingOutputStream;->fout:Ljava/io/FileOutputStream;
 
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
 
+    .line 11583
     return-void
 .end method
 
@@ -101,6 +113,7 @@
     .locals 1
 
     .prologue
+    .line 11594
     iget-boolean v0, p0, Landroid/webkit/WebView$CountingOutputStream;->mIsBigFile:Z
 
     return v0
@@ -111,8 +124,10 @@
     .parameter "isBigFile"
 
     .prologue
+    .line 11598
     iput-boolean p1, p0, Landroid/webkit/WebView$CountingOutputStream;->mIsBigFile:Z
 
+    .line 11599
     return-void
 .end method
 
@@ -128,6 +143,7 @@
     .end annotation
 
     .prologue
+    .line 11573
     invoke-direct {p0, p3}, Landroid/webkit/WebView$CountingOutputStream;->check(I)Z
 
     move-result v0
@@ -138,17 +154,21 @@
 
     if-nez v0, :cond_0
 
+    .line 11574
     iget-object v0, p0, Landroid/webkit/WebView$CountingOutputStream;->fout:Ljava/io/FileOutputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/FileOutputStream;->write([BII)V
 
+    .line 11579
     return-void
 
+    .line 11576
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/WebView$CountingOutputStream;->mIsBigFile:Z
 
+    .line 11577
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "file is too big."

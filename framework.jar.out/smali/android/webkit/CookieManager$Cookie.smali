@@ -49,8 +49,10 @@
     .locals 0
 
     .prologue
+    .line 143
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 144
     return-void
 .end method
 
@@ -60,16 +62,21 @@
     .parameter "defaultPath"
 
     .prologue
+    .line 146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 147
     iput-object p1, p0, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
 
+    .line 148
     iput-object p2, p0, Landroid/webkit/CookieManager$Cookie;->path:Ljava/lang/String;
 
+    .line 149
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/webkit/CookieManager$Cookie;->expires:J
 
+    .line 150
     return-void
 .end method
 
@@ -84,6 +91,7 @@
 
     const/4 v4, 0x1
 
+    .line 163
     iget-object v2, p0, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
 
     const-string v3, "."
@@ -94,6 +102,7 @@
 
     if-eqz v2, :cond_3
 
+    .line 164
     iget-object v2, p0, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -106,22 +115,26 @@
 
     if-eqz v2, :cond_2
 
+    .line 165
     iget-object v2, p0, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 166
     .local v0, len:I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
+    .line 167
     .local v1, urlLen:I
     sub-int v2, v0, v4
 
     if-le v1, v2, :cond_1
 
+    .line 169
     sub-int v2, v1, v0
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
@@ -134,6 +147,7 @@
 
     move v2, v4
 
+    .line 176
     .end local v0           #len:I
     .end local v1           #urlLen:I
     :goto_0
@@ -144,11 +158,13 @@
     :cond_0
     move v2, v5
 
+    .line 169
     goto :goto_0
 
     :cond_1
     move v2, v4
 
+    .line 171
     goto :goto_0
 
     .end local v0           #len:I
@@ -156,8 +172,10 @@
     :cond_2
     move v2, v5
 
+    .line 173
     goto :goto_0
 
+    .line 176
     :cond_3
     iget-object v2, p0, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
 
@@ -177,6 +195,7 @@
 
     const/4 v3, 0x0
 
+    .line 157
     iget-object v1, p0, Landroid/webkit/CookieManager$Cookie;->value:Ljava/lang/String;
 
     if-nez v1, :cond_0
@@ -197,6 +216,7 @@
 
     move v0, v4
 
+    .line 158
     .local v0, valuesMatch:Z
     :goto_2
     iget-object v1, p0, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
@@ -240,6 +260,7 @@
     :cond_0
     move v1, v3
 
+    .line 157
     goto :goto_0
 
     :cond_1
@@ -256,6 +277,7 @@
     :cond_3
     move v1, v3
 
+    .line 158
     goto :goto_3
 .end method
 
@@ -270,6 +292,7 @@
 
     const/4 v4, 0x0
 
+    .line 181
     iget-object v2, p0, Landroid/webkit/CookieManager$Cookie;->path:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -278,16 +301,19 @@
 
     if-eqz v2, :cond_3
 
+    .line 182
     iget-object v2, p0, Landroid/webkit/CookieManager$Cookie;->path:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 183
     .local v0, len:I
     if-nez v0, :cond_0
 
-    const-string v2, "webkit"
+    .line 184
+    const-string/jumbo v2, "webkit"
 
     const-string v3, "Empty cookie path"
 
@@ -295,16 +321,19 @@
 
     move v2, v4
 
+    .line 194
     .end local v0           #len:I
     :goto_0
     return v2
 
+    .line 187
     .restart local v0       #len:I
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
+    .line 188
     .local v1, urlLen:I
     iget-object v2, p0, Landroid/webkit/CookieManager$Cookie;->path:Ljava/lang/String;
 
@@ -318,6 +347,7 @@
 
     if-le v1, v0, :cond_2
 
+    .line 190
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -336,6 +366,7 @@
     :cond_2
     move v2, v5
 
+    .line 192
     goto :goto_0
 
     .end local v0           #len:I
@@ -343,6 +374,7 @@
     :cond_3
     move v2, v4
 
+    .line 194
     goto :goto_0
 .end method
 
@@ -350,6 +382,7 @@
     .locals 2
 
     .prologue
+    .line 198
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

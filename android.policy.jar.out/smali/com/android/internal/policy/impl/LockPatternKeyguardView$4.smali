@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 741
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$4;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "which"
 
     .prologue
+    .line 743
     invoke-static {}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->access$2700()I
 
     move-result v0
@@ -58,6 +60,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 744
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$4;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
@@ -69,6 +72,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/policy/impl/KeyguardViewCallback;->pokeWakeDimlock(I)V
 
+    .line 746
     :cond_1
     return-void
 .end method

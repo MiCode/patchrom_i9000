@@ -30,13 +30,17 @@
     .parameter "endOff"
 
     .prologue
+    .line 5927
     iput-object p1, p0, Landroid/webkit/WebView$SelectionOffset;->this$0:Landroid/webkit/WebView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5928
     iput p2, p0, Landroid/webkit/WebView$SelectionOffset;->startOffset:I
 
+    .line 5929
     iput p3, p0, Landroid/webkit/WebView$SelectionOffset;->endOffset:I
 
+    .line 5930
     return-void
 .end method

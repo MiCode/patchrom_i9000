@@ -33,6 +33,7 @@
     .parameter
 
     .prologue
+    .line 1154
     iput-object p1, p0, Landroid/accounts/AccountManager$10;->this$0:Landroid/accounts/AccountManager;
 
     iput-object p2, p0, Landroid/accounts/AccountManager$10;->val$callback:Landroid/accounts/AccountManagerCallback;
@@ -50,11 +51,13 @@
     .locals 2
 
     .prologue
+    .line 1156
     iget-object v0, p0, Landroid/accounts/AccountManager$10;->val$callback:Landroid/accounts/AccountManagerCallback;
 
     iget-object v1, p0, Landroid/accounts/AccountManager$10;->val$future:Landroid/accounts/AccountManagerFuture;
 
     invoke-interface {v0, v1}, Landroid/accounts/AccountManagerCallback;->run(Landroid/accounts/AccountManagerFuture;)V
 
+    .line 1157
     return-void
 .end method

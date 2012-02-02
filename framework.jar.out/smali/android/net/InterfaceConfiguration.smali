@@ -34,6 +34,7 @@
     .locals 1
 
     .prologue
+    .line 86
     new-instance v0, Landroid/net/InterfaceConfiguration$1;
 
     invoke-direct {v0}, Landroid/net/InterfaceConfiguration$1;-><init>()V
@@ -47,8 +48,10 @@
     .locals 0
 
     .prologue
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     return-void
 .end method
 
@@ -60,6 +63,7 @@
     .prologue
     const/16 v2, 0x2e
 
+    .line 48
     shr-int/lit8 v0, p1, 0x18
 
     and-int/lit16 v0, v0, 0xff
@@ -100,6 +104,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
+    .line 52
     return-void
 .end method
 
@@ -109,6 +114,7 @@
     .locals 1
 
     .prologue
+    .line 74
     const/4 v0, 0x0
 
     return v0
@@ -120,10 +126,11 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 63
     :try_start_0
     iget-object v1, p0, Landroid/net/InterfaceConfiguration;->interfaceFlags:Ljava/lang/String;
 
-    const-string v2, "up"
+    const-string/jumbo v2, "up"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -131,6 +138,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 64
     iget v1, p0, Landroid/net/InterfaceConfiguration;->ipAddr:I
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -139,9 +147,11 @@
 
     const/4 v1, 0x1
 
+    .line 69
     :goto_0
     return v1
 
+    .line 66
     :catch_0
     move-exception v1
 
@@ -150,12 +160,14 @@
     .local v0, e:Ljava/lang/NullPointerException;
     move v1, v3
 
+    .line 67
     goto :goto_0
 
     .end local v0           #e:Ljava/lang/NullPointerException;
     :cond_0
     move v1, v3
 
+    .line 69
     goto :goto_0
 .end method
 
@@ -163,10 +175,12 @@
     .locals 3
 
     .prologue
+    .line 37
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
+    .line 39
     .local v0, str:Ljava/lang/StringBuffer;
     const-string v1, "ipddress "
 
@@ -176,6 +190,7 @@
 
     invoke-static {v0, v1}, Landroid/net/InterfaceConfiguration;->putAddress(Ljava/lang/StringBuffer;I)V
 
+    .line 40
     const-string v1, " netmask "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -184,6 +199,7 @@
 
     invoke-static {v0, v1}, Landroid/net/InterfaceConfiguration;->putAddress(Ljava/lang/StringBuffer;I)V
 
+    .line 41
     const-string v1, " flags "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -194,6 +210,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 42
     const-string v1, " hwaddr "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -204,6 +221,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 44
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -217,21 +235,26 @@
     .parameter "flags"
 
     .prologue
+    .line 79
     iget-object v0, p0, Landroid/net/InterfaceConfiguration;->hwAddr:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 80
     iget v0, p0, Landroid/net/InterfaceConfiguration;->ipAddr:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 81
     iget v0, p0, Landroid/net/InterfaceConfiguration;->netmask:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 82
     iget-object v0, p0, Landroid/net/InterfaceConfiguration;->interfaceFlags:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 83
     return-void
 .end method

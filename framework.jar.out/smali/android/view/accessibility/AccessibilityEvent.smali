@@ -103,12 +103,14 @@
     .locals 1
 
     .prologue
+    .line 218
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/view/accessibility/AccessibilityEvent;->mPoolLock:Ljava/lang/Object;
 
+    .line 723
     new-instance v0, Landroid/view/accessibility/AccessibilityEvent$1;
 
     invoke-direct {v0}, Landroid/view/accessibility/AccessibilityEvent$1;-><init>()V
@@ -122,18 +124,22 @@
     .locals 1
 
     .prologue
+    .line 253
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 246
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mText:Ljava/util/List;
 
+    .line 254
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mCurrentItemIndex:I
 
+    .line 255
     return-void
 .end method
 
@@ -145,40 +151,55 @@
 
     const/4 v1, 0x0
 
+    .line 613
     iput v1, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventType:I
 
+    .line 614
     iput v1, p0, Landroid/view/accessibility/AccessibilityEvent;->mBooleanProperties:I
 
+    .line 615
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mCurrentItemIndex:I
 
+    .line 616
     iput v1, p0, Landroid/view/accessibility/AccessibilityEvent;->mItemCount:I
 
+    .line 617
     iput v1, p0, Landroid/view/accessibility/AccessibilityEvent;->mFromIndex:I
 
+    .line 618
     iput v1, p0, Landroid/view/accessibility/AccessibilityEvent;->mAddedCount:I
 
+    .line 619
     iput v1, p0, Landroid/view/accessibility/AccessibilityEvent;->mRemovedCount:I
 
+    .line 620
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventTime:J
 
+    .line 621
     iput-object v2, p0, Landroid/view/accessibility/AccessibilityEvent;->mClassName:Ljava/lang/CharSequence;
 
+    .line 622
     iput-object v2, p0, Landroid/view/accessibility/AccessibilityEvent;->mPackageName:Ljava/lang/CharSequence;
 
+    .line 623
     iput-object v2, p0, Landroid/view/accessibility/AccessibilityEvent;->mContentDescription:Ljava/lang/CharSequence;
 
+    .line 624
     iput-object v2, p0, Landroid/view/accessibility/AccessibilityEvent;->mBeforeText:Ljava/lang/CharSequence;
 
+    .line 625
     iput-object v2, p0, Landroid/view/accessibility/AccessibilityEvent;->mParcelableData:Landroid/os/Parcelable;
 
+    .line 626
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mText:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 627
     return-void
 .end method
 
@@ -187,6 +208,7 @@
     .parameter "property"
 
     .prologue
+    .line 636
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBooleanProperties:I
 
     and-int/2addr v0, p1
@@ -208,17 +230,21 @@
     .locals 4
 
     .prologue
+    .line 575
     sget-object v1, Landroid/view/accessibility/AccessibilityEvent;->mPoolLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 576
     :try_start_0
     sget-object v2, Landroid/view/accessibility/AccessibilityEvent;->sPool:Landroid/view/accessibility/AccessibilityEvent;
 
     if-eqz v2, :cond_0
 
+    .line 577
     sget-object v0, Landroid/view/accessibility/AccessibilityEvent;->sPool:Landroid/view/accessibility/AccessibilityEvent;
 
+    .line 578
     .local v0, event:Landroid/view/accessibility/AccessibilityEvent;
     sget-object v2, Landroid/view/accessibility/AccessibilityEvent;->sPool:Landroid/view/accessibility/AccessibilityEvent;
 
@@ -226,6 +252,7 @@
 
     sput-object v2, Landroid/view/accessibility/AccessibilityEvent;->sPool:Landroid/view/accessibility/AccessibilityEvent;
 
+    .line 579
     sget v2, Landroid/view/accessibility/AccessibilityEvent;->sPoolSize:I
 
     const/4 v3, 0x1
@@ -234,18 +261,22 @@
 
     sput v2, Landroid/view/accessibility/AccessibilityEvent;->sPoolSize:I
 
+    .line 580
     const/4 v2, 0x0
 
     iput-object v2, v0, Landroid/view/accessibility/AccessibilityEvent;->mNext:Landroid/view/accessibility/AccessibilityEvent;
 
+    .line 581
     const/4 v2, 0x0
 
     iput-boolean v2, v0, Landroid/view/accessibility/AccessibilityEvent;->mIsInPool:Z
 
+    .line 582
     monitor-exit v1
 
     move-object v1, v0
 
+    .line 584
     .end local v0           #event:Landroid/view/accessibility/AccessibilityEvent;
     :goto_0
     return-object v1
@@ -261,6 +292,7 @@
 
     goto :goto_0
 
+    .line 585
     :catchall_0
     move-exception v2
 
@@ -276,13 +308,16 @@
     .parameter "eventType"
 
     .prologue
+    .line 563
     invoke-static {}, Landroid/view/accessibility/AccessibilityEvent;->obtain()Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object v0
 
+    .line 564
     .local v0, event:Landroid/view/accessibility/AccessibilityEvent;
     invoke-virtual {v0, p0}, Landroid/view/accessibility/AccessibilityEvent;->setEventType(I)V
 
+    .line 565
     return-object v0
 .end method
 
@@ -292,17 +327,21 @@
     .parameter "value"
 
     .prologue
+    .line 646
     if-eqz p2, :cond_0
 
+    .line 647
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBooleanProperties:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBooleanProperties:I
 
+    .line 651
     :goto_0
     return-void
 
+    .line 649
     :cond_0
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBooleanProperties:I
 
@@ -321,6 +360,7 @@
     .locals 1
 
     .prologue
+    .line 693
     const/4 v0, 0x0
 
     return v0
@@ -330,6 +370,7 @@
     .locals 1
 
     .prologue
+    .line 407
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mAddedCount:I
 
     return v0
@@ -339,6 +380,7 @@
     .locals 1
 
     .prologue
+    .line 507
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBeforeText:Ljava/lang/CharSequence;
 
     return-object v0
@@ -348,6 +390,7 @@
     .locals 1
 
     .prologue
+    .line 461
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mClassName:Ljava/lang/CharSequence;
 
     return-object v0
@@ -357,6 +400,7 @@
     .locals 1
 
     .prologue
+    .line 525
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mContentDescription:Ljava/lang/CharSequence;
 
     return-object v0
@@ -366,6 +410,7 @@
     .locals 1
 
     .prologue
+    .line 371
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mCurrentItemIndex:I
 
     return v0
@@ -375,6 +420,7 @@
     .locals 2
 
     .prologue
+    .line 443
     iget-wide v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventTime:J
 
     return-wide v0
@@ -384,6 +430,7 @@
     .locals 1
 
     .prologue
+    .line 335
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventType:I
 
     return v0
@@ -393,6 +440,7 @@
     .locals 1
 
     .prologue
+    .line 389
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mFromIndex:I
 
     return v0
@@ -402,6 +450,7 @@
     .locals 1
 
     .prologue
+    .line 353
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mItemCount:I
 
     return v0
@@ -411,6 +460,7 @@
     .locals 1
 
     .prologue
+    .line 479
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mPackageName:Ljava/lang/CharSequence;
 
     return-object v0
@@ -420,6 +470,7 @@
     .locals 1
 
     .prologue
+    .line 543
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mParcelableData:Landroid/os/Parcelable;
 
     return-object v0
@@ -429,6 +480,7 @@
     .locals 1
 
     .prologue
+    .line 425
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mRemovedCount:I
 
     return v0
@@ -447,6 +499,7 @@
     .end annotation
 
     .prologue
+    .line 498
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mText:Ljava/util/List;
 
     return-object v0
@@ -459,54 +512,63 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 659
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventType:I
 
+    .line 660
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBooleanProperties:I
 
+    .line 661
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mCurrentItemIndex:I
 
+    .line 662
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mItemCount:I
 
+    .line 663
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mFromIndex:I
 
+    .line 664
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mAddedCount:I
 
+    .line 665
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mRemovedCount:I
 
+    .line 666
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventTime:J
 
+    .line 667
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -517,6 +579,7 @@
 
     iput-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mClassName:Ljava/lang/CharSequence;
 
+    .line 668
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -527,6 +590,7 @@
 
     iput-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mPackageName:Ljava/lang/CharSequence;
 
+    .line 669
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -537,6 +601,7 @@
 
     iput-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mContentDescription:Ljava/lang/CharSequence;
 
+    .line 670
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -547,16 +612,19 @@
 
     iput-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBeforeText:Ljava/lang/CharSequence;
 
+    .line 671
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mParcelableData:Landroid/os/Parcelable;
 
+    .line 672
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mText:Ljava/util/List;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
+    .line 673
     return-void
 .end method
 
@@ -564,6 +632,7 @@
     .locals 1
 
     .prologue
+    .line 263
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/view/accessibility/AccessibilityEvent;->getBooleanProperty(I)Z
@@ -577,6 +646,7 @@
     .locals 1
 
     .prologue
+    .line 281
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/view/accessibility/AccessibilityEvent;->getBooleanProperty(I)Z
@@ -590,6 +660,7 @@
     .locals 1
 
     .prologue
+    .line 326
     const/16 v0, 0x80
 
     invoke-direct {p0, v0}, Landroid/view/accessibility/AccessibilityEvent;->getBooleanProperty(I)Z
@@ -603,6 +674,7 @@
     .locals 1
 
     .prologue
+    .line 299
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/view/accessibility/AccessibilityEvent;->getBooleanProperty(I)Z
@@ -616,20 +688,25 @@
     .locals 3
 
     .prologue
+    .line 594
     iget-boolean v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mIsInPool:Z
 
     if-eqz v0, :cond_0
 
+    .line 607
     :goto_0
     return-void
 
+    .line 598
     :cond_0
     invoke-direct {p0}, Landroid/view/accessibility/AccessibilityEvent;->clear()V
 
+    .line 599
     sget-object v0, Landroid/view/accessibility/AccessibilityEvent;->mPoolLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 600
     :try_start_0
     sget v1, Landroid/view/accessibility/AccessibilityEvent;->sPoolSize:I
 
@@ -637,22 +714,27 @@
 
     if-gt v1, v2, :cond_1
 
+    .line 601
     sget-object v1, Landroid/view/accessibility/AccessibilityEvent;->sPool:Landroid/view/accessibility/AccessibilityEvent;
 
     iput-object v1, p0, Landroid/view/accessibility/AccessibilityEvent;->mNext:Landroid/view/accessibility/AccessibilityEvent;
 
+    .line 602
     sput-object p0, Landroid/view/accessibility/AccessibilityEvent;->sPool:Landroid/view/accessibility/AccessibilityEvent;
 
+    .line 603
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/view/accessibility/AccessibilityEvent;->mIsInPool:Z
 
+    .line 604
     sget v1, Landroid/view/accessibility/AccessibilityEvent;->sPoolSize:I
 
     add-int/lit8 v1, v1, 0x1
 
     sput v1, Landroid/view/accessibility/AccessibilityEvent;->sPoolSize:I
 
+    .line 606
     :cond_1
     monitor-exit v0
 
@@ -673,8 +755,10 @@
     .parameter "addedCount"
 
     .prologue
+    .line 416
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mAddedCount:I
 
+    .line 417
     return-void
 .end method
 
@@ -683,8 +767,10 @@
     .parameter "beforeText"
 
     .prologue
+    .line 516
     iput-object p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mBeforeText:Ljava/lang/CharSequence;
 
+    .line 517
     return-void
 .end method
 
@@ -693,10 +779,12 @@
     .parameter "isChecked"
 
     .prologue
+    .line 272
     const/4 v0, 0x1
 
     invoke-direct {p0, v0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setBooleanProperty(IZ)V
 
+    .line 273
     return-void
 .end method
 
@@ -705,8 +793,10 @@
     .parameter "className"
 
     .prologue
+    .line 470
     iput-object p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mClassName:Ljava/lang/CharSequence;
 
+    .line 471
     return-void
 .end method
 
@@ -715,8 +805,10 @@
     .parameter "contentDescription"
 
     .prologue
+    .line 534
     iput-object p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mContentDescription:Ljava/lang/CharSequence;
 
+    .line 535
     return-void
 .end method
 
@@ -725,8 +817,10 @@
     .parameter "currentItemIndex"
 
     .prologue
+    .line 380
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mCurrentItemIndex:I
 
+    .line 381
     return-void
 .end method
 
@@ -735,10 +829,12 @@
     .parameter "isEnabled"
 
     .prologue
+    .line 290
     const/4 v0, 0x2
 
     invoke-direct {p0, v0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setBooleanProperty(IZ)V
 
+    .line 291
     return-void
 .end method
 
@@ -747,8 +843,10 @@
     .parameter "eventTime"
 
     .prologue
+    .line 452
     iput-wide p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventTime:J
 
+    .line 453
     return-void
 .end method
 
@@ -757,8 +855,10 @@
     .parameter "eventType"
 
     .prologue
+    .line 344
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventType:I
 
+    .line 345
     return-void
 .end method
 
@@ -767,8 +867,10 @@
     .parameter "fromIndex"
 
     .prologue
+    .line 398
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mFromIndex:I
 
+    .line 399
     return-void
 .end method
 
@@ -777,10 +879,12 @@
     .parameter "isFullScreen"
 
     .prologue
+    .line 317
     const/16 v0, 0x80
 
     invoke-direct {p0, v0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setBooleanProperty(IZ)V
 
+    .line 318
     return-void
 .end method
 
@@ -789,8 +893,10 @@
     .parameter "itemCount"
 
     .prologue
+    .line 362
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mItemCount:I
 
+    .line 363
     return-void
 .end method
 
@@ -799,8 +905,10 @@
     .parameter "packageName"
 
     .prologue
+    .line 488
     iput-object p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mPackageName:Ljava/lang/CharSequence;
 
+    .line 489
     return-void
 .end method
 
@@ -809,8 +917,10 @@
     .parameter "parcelableData"
 
     .prologue
+    .line 552
     iput-object p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mParcelableData:Landroid/os/Parcelable;
 
+    .line 553
     return-void
 .end method
 
@@ -819,10 +929,12 @@
     .parameter "isPassword"
 
     .prologue
+    .line 308
     const/4 v0, 0x4
 
     invoke-direct {p0, v0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setBooleanProperty(IZ)V
 
+    .line 309
     return-void
 .end method
 
@@ -831,8 +943,10 @@
     .parameter "removedCount"
 
     .prologue
+    .line 434
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mRemovedCount:I
 
+    .line 435
     return-void
 .end method
 
@@ -840,10 +954,12 @@
     .locals 4
 
     .prologue
+    .line 698
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 699
     .local v0, builder:Ljava/lang/StringBuilder;
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -851,6 +967,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 700
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -873,6 +990,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 701
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -895,6 +1013,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 702
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -917,6 +1036,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 703
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -939,6 +1059,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 704
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -961,6 +1082,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 705
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -983,6 +1105,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 706
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1005,6 +1128,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 707
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1027,6 +1151,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 708
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1051,6 +1176,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 709
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1075,6 +1201,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 710
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1099,6 +1226,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 711
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1123,6 +1251,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 712
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1145,6 +1274,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 713
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1167,6 +1297,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 714
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1189,6 +1320,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 715
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1211,6 +1343,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 716
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1233,6 +1366,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 717
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1248,61 +1382,76 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 676
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 677
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBooleanProperties:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 678
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mCurrentItemIndex:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 679
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mItemCount:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 680
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mFromIndex:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 681
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mAddedCount:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 682
     iget v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mRemovedCount:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 683
     iget-wide v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 684
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mClassName:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, v2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
+    .line 685
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mPackageName:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, v2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
+    .line 686
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mContentDescription:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, v2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
+    .line 687
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mBeforeText:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, v2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
+    .line 688
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mParcelableData:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 689
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mText:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
+    .line 690
     return-void
 .end method

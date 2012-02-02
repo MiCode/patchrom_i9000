@@ -47,10 +47,12 @@
 
     const-string v5, "112,911"
 
+    .line 39
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/internal/telephony/gsm/EccTable;->updated:Z
 
+    .line 296
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x64
@@ -59,6 +61,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
+    .line 313
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -73,6 +76,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 316
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -87,6 +91,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 319
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -101,6 +106,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 320
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -115,6 +121,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 321
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -129,6 +136,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 324
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -143,6 +151,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 327
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -157,6 +166,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 329
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -171,6 +181,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 332
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -185,6 +196,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 335
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -199,6 +211,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 336
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -213,6 +226,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 339
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -227,6 +241,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 342
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -241,6 +256,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 343
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -255,6 +271,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 344
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -269,6 +286,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 345
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -283,6 +301,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 346
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -297,6 +316,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 349
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -311,6 +331,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 352
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -325,6 +346,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 356
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -339,6 +361,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 361
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -353,6 +376,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 366
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -367,6 +391,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 372
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -381,6 +406,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 373
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -395,6 +421,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 378
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -409,6 +436,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 382
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -423,6 +451,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 383
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -437,6 +466,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 384
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -451,6 +481,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 385
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -465,6 +496,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 386
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -479,6 +511,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 387
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -493,6 +526,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 388
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -507,6 +541,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 389
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -521,6 +556,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 390
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -535,6 +571,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 391
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -549,6 +586,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 392
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -563,6 +601,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 393
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -577,6 +616,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 394
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -591,6 +631,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 395
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -605,6 +646,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 396
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -619,6 +661,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 397
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -633,6 +676,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 398
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -647,6 +691,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 399
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -661,6 +706,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 400
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -675,6 +721,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 401
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -689,6 +736,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 402
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -703,6 +751,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 405
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -717,6 +766,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 408
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -731,6 +781,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 412
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -745,6 +796,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 415
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -759,6 +811,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 418
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -773,6 +826,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 420
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -787,6 +841,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 423
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -801,6 +856,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 424
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -815,6 +871,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 425
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -829,6 +886,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 428
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -843,6 +901,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 429
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -857,6 +916,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 430
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -871,6 +931,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 433
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -885,6 +946,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 436
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -899,10 +961,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 530
     sget-object v0, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
+    .line 531
     return-void
 .end method
 
@@ -910,8 +974,10 @@
     .locals 0
 
     .prologue
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     return-void
 .end method
 
@@ -921,25 +987,32 @@
     .parameter "withSIM"
 
     .prologue
+    .line 99
     invoke-static {p0}, Lcom/android/internal/telephony/gsm/EccTable;->entryForPLMN(Ljava/lang/String;)Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
 
     move-result-object v0
 
+    .line 101
     .local v0, entry:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
     if-nez v0, :cond_0
 
+    .line 102
     const-string v1, ""
 
+    .line 107
     :goto_0
     return-object v1
 
+    .line 104
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 105
     iget-object v1, v0, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->emergencyNumberWithSIM:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 107
     :cond_1
     iget-object v1, v0, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->emergencyNumberWithoutSIM:Ljava/lang/String;
 
@@ -955,15 +1028,19 @@
 
     const/4 v3, 0x0
 
+    .line 64
     const/4 v0, 0x0
 
+    .line 68
     .local v0, index:I
     if-eqz p0, :cond_1
 
+    .line 69
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
 
     invoke-direct {v1, p0, v3, v3}, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 71
     .local v1, m:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
     sget-object v2, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
@@ -971,14 +1048,17 @@
 
     move-result v0
 
+    .line 73
     if-gez v0, :cond_1
 
+    .line 74
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-le v2, v4, :cond_0
 
+    .line 75
     new-instance v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
 
     .end local v1           #m:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -990,6 +1070,7 @@
 
     invoke-direct {v1, v2, v3, v3}, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 77
     .restart local v1       #m:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
     sget-object v2, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
@@ -997,11 +1078,14 @@
 
     move-result v0
 
+    .line 80
     :cond_0
     if-gez v0, :cond_1
 
+    .line 81
     const/4 v0, 0x0
 
+    .line 86
     .end local v1           #m:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
     :cond_1
     sget-object v2, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
@@ -1020,6 +1104,7 @@
     .locals 0
 
     .prologue
+    .line 293
     return-void
 .end method
 
@@ -1028,24 +1113,30 @@
     .parameter "customerSpec"
 
     .prologue
-    const-string v13, "updateEccTable() Exception : "
+    const-string/jumbo v13, "updateEccTable() Exception : "
 
     const-string v12, "GSM"
 
+    .line 178
     const/4 v6, 0x0
 
+    .line 179
     .local v6, reader:Ljava/io/BufferedReader;
     const/4 v8, 0x0
 
+    .line 180
     .local v8, str:Ljava/lang/String;
     const/4 v5, 0x0
 
+    .line 181
     .local v5, plmn:Ljava/lang/String;
     const/4 v2, 0x0
 
+    .line 182
     .local v2, emergencyNumberWithSIM:Ljava/lang/String;
     const/4 v3, 0x0
 
+    .line 186
     .local v3, emergencyNumberWithoutSIM:Ljava/lang/String;
     :try_start_0
     sget-boolean v9, Lcom/android/internal/telephony/gsm/EccTable;->updated:Z
@@ -1058,21 +1149,26 @@
 
     if-nez p0, :cond_2
 
+    .line 266
     :cond_0
     if-eqz v6, :cond_1
 
+    .line 267
     :try_start_1
     throw v6
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 274
     :cond_1
     :goto_0
     return-void
 
+    .line 269
     :catch_0
     move-exception v1
 
+    .line 271
     .local v1, e:Ljava/lang/Exception;
     const-string v9, "GSM"
 
@@ -1080,7 +1176,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "updateEccTable() Exception : "
+    const-string/jumbo v10, "updateEccTable() Exception : "
 
     invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1098,6 +1194,7 @@
 
     goto :goto_0
 
+    .line 193
     .end local v1           #e:Ljava/lang/Exception;
     :cond_2
     :try_start_2
@@ -1113,12 +1210,15 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_9
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
 
+    .line 194
     .end local v6           #reader:Ljava/io/BufferedReader;
     .local v7, reader:Ljava/io/BufferedReader;
     if-nez v7, :cond_4
 
+    .line 266
     if-eqz v7, :cond_3
 
+    .line 267
     :try_start_3
     invoke-virtual {v7}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -1128,15 +1228,18 @@
     :goto_1
     move-object v6, v7
 
+    .line 272
     .end local v7           #reader:Ljava/io/BufferedReader;
     .restart local v6       #reader:Ljava/io/BufferedReader;
     goto :goto_0
 
+    .line 269
     .end local v6           #reader:Ljava/io/BufferedReader;
     .restart local v7       #reader:Ljava/io/BufferedReader;
     :catch_1
     move-exception v1
 
+    .line 271
     .restart local v1       #e:Ljava/lang/Exception;
     const-string v9, "GSM"
 
@@ -1144,7 +1247,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "updateEccTable() Exception : "
+    const-string/jumbo v10, "updateEccTable() Exception : "
 
     invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1162,6 +1265,7 @@
 
     goto :goto_1
 
+    .line 198
     .end local v1           #e:Ljava/lang/Exception;
     :cond_4
     :try_start_4
@@ -1173,6 +1277,7 @@
 
     move-result-object v0
 
+    .line 199
     .local v0, conventionalSpec:[Ljava/lang/String;
     array-length v9, v0
 
@@ -1180,18 +1285,22 @@
 
     if-ne v9, v10, :cond_7
 
+    .line 201
     const/4 v9, 0x0
 
     aget-object v2, v0, v9
 
+    .line 202
     const/4 v9, 0x1
 
     aget-object v3, v0, v9
 
+    .line 203
     const-string v9, ""
 
     invoke-static {v9, v2, v3}, Lcom/android/internal/telephony/gsm/EccTable;->updateEmergencyNumbersForPLMN(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
+    .line 247
     :cond_5
     const/4 v9, 0x1
 
@@ -1201,8 +1310,10 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_2
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_8
 
+    .line 266
     if-eqz v7, :cond_6
 
+    .line 267
     :try_start_5
     invoke-virtual {v7}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -1211,10 +1322,12 @@
     :cond_6
     move-object v6, v7
 
+    .line 272
     .end local v7           #reader:Ljava/io/BufferedReader;
     .restart local v6       #reader:Ljava/io/BufferedReader;
     goto :goto_0
 
+    .line 206
     .end local v6           #reader:Ljava/io/BufferedReader;
     .restart local v7       #reader:Ljava/io/BufferedReader;
     :cond_7
@@ -1226,29 +1339,39 @@
 
     if-eqz v8, :cond_5
 
+    .line 207
     const/4 v2, 0x0
 
+    .line 208
     const/4 v3, 0x0
 
+    .line 211
     move-object v5, v8
 
+    .line 218
     invoke-virtual {v7}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v8
 
+    .line 219
     if-eqz v8, :cond_8
 
+    .line 221
     move-object v2, v8
 
+    .line 229
     :cond_8
     invoke-virtual {v7}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v8
 
+    .line 230
     if-eqz v8, :cond_9
 
+    .line 232
     move-object v3, v8
 
+    .line 239
     :cond_9
     invoke-static {v5, v2, v3}, Lcom/android/internal/telephony/gsm/EccTable;->updateEmergencyNumbersForPLMN(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     :try_end_6
@@ -1258,17 +1381,20 @@
 
     goto :goto_2
 
+    .line 250
     .end local v0           #conventionalSpec:[Ljava/lang/String;
     :catch_2
     move-exception v9
 
     move-object v6, v7
 
+    .line 266
     .end local v7           #reader:Ljava/io/BufferedReader;
     .restart local v6       #reader:Ljava/io/BufferedReader;
     :goto_3
     if-eqz v6, :cond_1
 
+    .line 267
     :try_start_7
     invoke-virtual {v6}, Ljava/io/BufferedReader;->close()V
     :try_end_7
@@ -1276,9 +1402,11 @@
 
     goto/16 :goto_0
 
+    .line 269
     :catch_3
     move-exception v1
 
+    .line 271
     .restart local v1       #e:Ljava/lang/Exception;
     const-string v9, "GSM"
 
@@ -1286,7 +1414,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "updateEccTable() Exception : "
+    const-string/jumbo v10, "updateEccTable() Exception : "
 
     invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1304,6 +1432,7 @@
 
     goto/16 :goto_0
 
+    .line 269
     .end local v1           #e:Ljava/lang/Exception;
     .end local v6           #reader:Ljava/io/BufferedReader;
     .restart local v0       #conventionalSpec:[Ljava/lang/String;
@@ -1311,6 +1440,7 @@
     :catch_4
     move-exception v1
 
+    .line 271
     .restart local v1       #e:Ljava/lang/Exception;
     const-string v9, "GSM"
 
@@ -1318,7 +1448,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "updateEccTable() Exception : "
+    const-string/jumbo v10, "updateEccTable() Exception : "
 
     invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1336,10 +1466,12 @@
 
     move-object v6, v7
 
+    .line 273
     .end local v7           #reader:Ljava/io/BufferedReader;
     .restart local v6       #reader:Ljava/io/BufferedReader;
     goto/16 :goto_0
 
+    .line 257
     .end local v0           #conventionalSpec:[Ljava/lang/String;
     .end local v1           #e:Ljava/lang/Exception;
     :catch_5
@@ -1347,6 +1479,7 @@
 
     move-object v4, v9
 
+    .line 259
     .local v4, ioe:Ljava/io/IOException;
     :goto_4
     :try_start_8
@@ -1356,7 +1489,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, "updateEccTable() IOException : "
+    const-string/jumbo v11, "updateEccTable() IOException : "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1374,8 +1507,10 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
+    .line 266
     if-eqz v6, :cond_1
 
+    .line 267
     :try_start_9
     invoke-virtual {v6}, Ljava/io/BufferedReader;->close()V
     :try_end_9
@@ -1383,9 +1518,11 @@
 
     goto/16 :goto_0
 
+    .line 269
     :catch_6
     move-exception v1
 
+    .line 271
     .restart local v1       #e:Ljava/lang/Exception;
     const-string v9, "GSM"
 
@@ -1393,7 +1530,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "updateEccTable() Exception : "
+    const-string/jumbo v10, "updateEccTable() Exception : "
 
     invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1411,26 +1548,32 @@
 
     goto/16 :goto_0
 
+    .line 264
     .end local v1           #e:Ljava/lang/Exception;
     .end local v4           #ioe:Ljava/io/IOException;
     :catchall_0
     move-exception v9
 
+    .line 266
     :goto_5
     if-eqz v6, :cond_a
 
+    .line 267
     :try_start_a
     invoke-virtual {v6}, Ljava/io/BufferedReader;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_7
 
+    .line 272
     :cond_a
     :goto_6
     throw v9
 
+    .line 269
     :catch_7
     move-exception v1
 
+    .line 271
     .restart local v1       #e:Ljava/lang/Exception;
     const-string v10, "GSM"
 
@@ -1438,7 +1581,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, "updateEccTable() Exception : "
+    const-string/jumbo v11, "updateEccTable() Exception : "
 
     invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1456,6 +1599,7 @@
 
     goto :goto_6
 
+    .line 264
     .end local v1           #e:Ljava/lang/Exception;
     .end local v6           #reader:Ljava/io/BufferedReader;
     .restart local v7       #reader:Ljava/io/BufferedReader;
@@ -1468,6 +1612,7 @@
     .restart local v6       #reader:Ljava/io/BufferedReader;
     goto :goto_5
 
+    .line 257
     .end local v6           #reader:Ljava/io/BufferedReader;
     .restart local v7       #reader:Ljava/io/BufferedReader;
     :catch_8
@@ -1481,6 +1626,7 @@
     .restart local v6       #reader:Ljava/io/BufferedReader;
     goto :goto_4
 
+    .line 250
     :catch_9
     move-exception v9
 
@@ -1500,18 +1646,22 @@
 
     const/4 v5, 0x0
 
+    .line 119
     if-nez p0, :cond_0
 
     move v4, v6
 
+    .line 172
     :goto_0
     return v4
 
+    .line 122
     :cond_0
     new-instance v2, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
 
     invoke-direct {v2, p0, v5, v5}, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 124
     .local v2, m:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
     sget-object v4, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
@@ -1519,6 +1669,7 @@
 
     move-result v3
 
+    .line 126
     .local v3, updateIndex:I
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1532,14 +1683,18 @@
 
     if-eqz v4, :cond_4
 
+    .line 127
     :cond_1
     const/4 v0, 0x0
 
+    .line 129
     .local v0, defaultIndex:I
     if-lez v3, :cond_6
 
+    .line 130
     move v0, v3
 
+    .line 139
     :cond_2
     :goto_1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1548,6 +1703,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 140
     sget-object v4, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1558,6 +1714,7 @@
 
     iget-object p1, v4, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->emergencyNumberWithSIM:Ljava/lang/String;
 
+    .line 142
     :cond_3
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1565,6 +1722,7 @@
 
     if-eqz v4, :cond_4
 
+    .line 143
     sget-object v4, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1575,10 +1733,12 @@
 
     iget-object p2, v4, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->emergencyNumberWithoutSIM:Ljava/lang/String;
 
+    .line 154
     .end local v0           #defaultIndex:I
     :cond_4
     if-gez v3, :cond_8
 
+    .line 155
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -1594,8 +1754,10 @@
     :cond_5
     move v4, v6
 
+    .line 156
     goto :goto_0
 
+    .line 131
     .restart local v0       #defaultIndex:I
     :cond_6
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1604,6 +1766,7 @@
 
     if-le v4, v7, :cond_2
 
+    .line 132
     new-instance v2, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
 
     .end local v2           #m:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
@@ -1613,6 +1776,7 @@
 
     invoke-direct {v2, v4, v5, v5}, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 133
     .restart local v2       #m:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
     sget-object v4, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
@@ -1620,12 +1784,15 @@
 
     move-result v0
 
+    .line 135
     if-gez v0, :cond_2
 
+    .line 136
     const/4 v0, 0x0
 
     goto :goto_1
 
+    .line 158
     .end local v0           #defaultIndex:I
     :cond_7
     sget-object v4, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
@@ -1636,15 +1803,18 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 160
     sget-object v4, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
     invoke-static {v4}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
+    .line 172
     :goto_2
     const/4 v4, 0x1
 
     goto :goto_0
 
+    .line 162
     :cond_8
     sget-object v4, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 
@@ -1654,6 +1824,7 @@
 
     check-cast v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
 
+    .line 164
     .local v1, entry:Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1661,8 +1832,10 @@
 
     if-nez v4, :cond_9
 
+    .line 165
     iput-object p1, v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->emergencyNumberWithSIM:Ljava/lang/String;
 
+    .line 166
     :cond_9
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1670,8 +1843,10 @@
 
     if-nez v4, :cond_a
 
+    .line 167
     iput-object p2, v1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->emergencyNumberWithoutSIM:Ljava/lang/String;
 
+    .line 169
     :cond_a
     sget-object v4, Lcom/android/internal/telephony/gsm/EccTable;->table:Ljava/util/ArrayList;
 

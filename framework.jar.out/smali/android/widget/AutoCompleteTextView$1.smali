@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 1116
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$1;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,6 +40,7 @@
     .parameter "intent"
 
     .prologue
+    .line 1119
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -51,6 +53,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1120
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$1;->this$0:Landroid/widget/AutoCompleteTextView;
 
     #getter for: Landroid/widget/AutoCompleteTextView;->mPopup:Landroid/widget/PopupWindow;
@@ -64,12 +67,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 1121
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$1;->this$0:Landroid/widget/AutoCompleteTextView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->ensureImeVisible(Z)V
 
+    .line 1124
     :cond_0
     return-void
 .end method

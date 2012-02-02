@@ -14,6 +14,7 @@
     .prologue
     const/16 v3, 0x26
 
+    .line 8
     const/4 v0, 0x6
 
     new-array v0, v0, [[B
@@ -399,6 +400,7 @@
     .locals 0
 
     .prologue
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

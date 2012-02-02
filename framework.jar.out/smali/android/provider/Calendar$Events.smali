@@ -42,6 +42,7 @@
 
     const/4 v2, 0x0
 
+    .line 800
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "_sync_account"
@@ -54,6 +55,7 @@
 
     sput-object v0, Landroid/provider/Calendar$Events;->FETCH_ENTRY_COLUMNS:[Ljava/lang/String;
 
+    .line 803
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -84,6 +86,7 @@
 
     sput-object v0, Landroid/provider/Calendar$Events;->ATTENDEES_COLUMNS:[Ljava/lang/String;
 
+    .line 833
     const-string v0, "content://com.android.calendar/events"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -92,6 +95,7 @@
 
     sput-object v0, Landroid/provider/Calendar$Events;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 836
     const-string v0, "content://com.android.calendar/deleted_events"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -107,6 +111,7 @@
     .locals 0
 
     .prologue
+    .line 798
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -118,17 +123,21 @@
     .parameter "propertyName"
 
     .prologue
+    .line 822
     invoke-virtual {p0, p1}, Landroid/pim/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Landroid/pim/ICalendar$Property;
 
     move-result-object v0
 
+    .line 824
     .local v0, property:Landroid/pim/ICalendar$Property;
     if-eqz v0, :cond_0
 
+    .line 825
     invoke-virtual {v0}, Landroid/pim/ICalendar$Property;->getValue()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 827
     :goto_0
     return-object v1
 
@@ -146,6 +155,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 811
     sget-object v1, Landroid/provider/Calendar$Events;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v5, ""
@@ -171,6 +181,7 @@
     .parameter "orderBy"
 
     .prologue
+    .line 816
     sget-object v1, Landroid/provider/Calendar$Events;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

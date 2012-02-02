@@ -15,12 +15,15 @@
     .locals 1
 
     .prologue
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     const/high16 v0, 0x4040
 
     iput v0, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
+    .line 35
     return-void
 .end method
 
@@ -29,14 +32,17 @@
     .parameter "tension"
 
     .prologue
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     const/high16 v0, 0x3fc0
 
     mul-float/2addr v0, p1
 
     iput v0, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
+    .line 44
     return-void
 .end method
 
@@ -46,12 +52,15 @@
     .parameter "extraTension"
 
     .prologue
+    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 55
     mul-float v0, p1, p2
 
     iput v0, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
+    .line 56
     return-void
 .end method
 
@@ -61,14 +70,17 @@
     .parameter "attrs"
 
     .prologue
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 59
     sget-object v1, Lcom/android/internal/R$styleable;->AnticipateOvershootInterpolator:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
+    .line 61
     .local v0, a:Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
@@ -90,8 +102,10 @@
 
     iput v1, p0, Landroid/view/animation/AnticipateOvershootInterpolator;->mTension:F
 
+    .line 64
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 65
     return-void
 .end method
 
@@ -101,6 +115,7 @@
     .parameter "s"
 
     .prologue
+    .line 68
     mul-float v0, p0, p0
 
     const/high16 v1, 0x3f80
@@ -122,6 +137,7 @@
     .parameter "s"
 
     .prologue
+    .line 72
     mul-float v0, p0, p0
 
     const/high16 v1, 0x3f80
@@ -148,6 +164,7 @@
 
     const/high16 v2, 0x4000
 
+    .line 80
     cmpg-float v0, p1, v3
 
     if-gez v0, :cond_0
@@ -162,6 +179,7 @@
 
     mul-float/2addr v0, v3
 
+    .line 81
     :goto_0
     return v0
 

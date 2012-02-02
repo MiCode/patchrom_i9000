@@ -48,6 +48,7 @@
 
     const/4 v2, 0x0
 
+    .line 27
     new-instance v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
     const-string v1, "UNKNOWN"
@@ -56,6 +57,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;->UNKNOWN:Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
+    .line 28
     new-instance v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
     const-string v1, "AVAILABLE"
@@ -64,6 +66,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;->AVAILABLE:Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
+    .line 29
     new-instance v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
     const-string v1, "CURRENT"
@@ -72,6 +75,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;->CURRENT:Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
+    .line 30
     new-instance v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
     const-string v1, "FORBIDDEN"
@@ -80,6 +84,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;->FORBIDDEN:Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
+    .line 26
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/telephony/gsm/NetworkInfo$State;
@@ -116,6 +121,7 @@
     .end annotation
 
     .prologue
+    .line 26
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -126,6 +132,7 @@
     .parameter "name"
 
     .prologue
+    .line 26
     const-class v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -142,6 +149,7 @@
     .locals 1
 
     .prologue
+    .line 26
     sget-object v0, Lcom/android/internal/telephony/gsm/NetworkInfo$State;->$VALUES:[Lcom/android/internal/telephony/gsm/NetworkInfo$State;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/gsm/NetworkInfo$State;->clone()Ljava/lang/Object;

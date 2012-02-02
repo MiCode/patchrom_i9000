@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 130
     iput-object p1, p0, Lcom/android/internal/app/HeavyWeightSwitcherActivity$2;->this$0:Lcom/android/internal/app/HeavyWeightSwitcherActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "v"
 
     .prologue
+    .line 133
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -50,6 +52,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 137
     :goto_0
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/app/HeavyWeightSwitcherActivity$2;->this$0:Lcom/android/internal/app/HeavyWeightSwitcherActivity;
@@ -58,6 +61,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 138
     iget-object v0, p0, Lcom/android/internal/app/HeavyWeightSwitcherActivity$2;->this$0:Lcom/android/internal/app/HeavyWeightSwitcherActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/HeavyWeightSwitcherActivity$2;->this$0:Lcom/android/internal/app/HeavyWeightSwitcherActivity;
@@ -78,13 +82,16 @@
     :try_end_1
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 147
     :goto_1
     iget-object v0, p0, Lcom/android/internal/app/HeavyWeightSwitcherActivity$2;->this$0:Lcom/android/internal/app/HeavyWeightSwitcherActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/HeavyWeightSwitcherActivity;->finish()V
 
+    .line 148
     return-void
 
+    .line 142
     :cond_0
     :try_start_2
     iget-object v0, p0, Lcom/android/internal/app/HeavyWeightSwitcherActivity$2;->this$0:Lcom/android/internal/app/HeavyWeightSwitcherActivity;
@@ -109,11 +116,13 @@
 
     goto :goto_1
 
+    .line 144
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
+    .line 145
     .local v7, ex:Landroid/content/IntentSender$SendIntentException;
     const-string v0, "HeavyWeightSwitcherActivity"
 
@@ -123,6 +132,7 @@
 
     goto :goto_1
 
+    .line 134
     .end local v7           #ex:Landroid/content/IntentSender$SendIntentException;
     :catch_1
     move-exception v0

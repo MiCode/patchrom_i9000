@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 542
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,17 +46,21 @@
 
     const/high16 v3, 0x3f00
 
+    .line 544
     const/4 v0, 0x0
 
+    .line 546
     .local v0, ret:F
     if-eqz p1, :cond_3
 
+    .line 547
     const v1, 0x3e926e98
 
     cmpg-float v1, p2, v1
 
     if-gez v1, :cond_1
 
+    .line 548
     const/high16 v1, 0x4060
 
     mul-float/2addr v1, p2
@@ -70,17 +75,21 @@
 
     sub-float v0, v6, v1
 
+    .line 572
     :goto_0
     cmpl-float v1, v0, v6
 
     if-lez v1, :cond_7
 
+    .line 573
     const/high16 v0, 0x3f80
 
+    .line 577
     :cond_0
     :goto_1
     return v0
 
+    .line 549
     :cond_1
     const v1, 0x3f249ba6
 
@@ -88,6 +97,7 @@
 
     if-gez v1, :cond_2
 
+    .line 550
     const v1, 0x3e926e98
 
     sub-float v1, p2, v1
@@ -108,6 +118,7 @@
 
     goto :goto_0
 
+    .line 553
     :cond_2
     const v1, 0x3f249ba6
 
@@ -131,11 +142,13 @@
 
     goto :goto_0
 
+    .line 557
     :cond_3
     cmpg-float v1, p2, v2
 
     if-gez v1, :cond_4
 
+    .line 558
     const/high16 v1, 0x4090
 
     mul-float/2addr v1, p2
@@ -150,6 +163,7 @@
 
     goto :goto_0
 
+    .line 559
     :cond_4
     const v1, 0x3ee353f8
 
@@ -157,6 +171,7 @@
 
     if-gez v1, :cond_5
 
+    .line 560
     sub-float v1, p2, v2
 
     const/high16 v2, 0x4090
@@ -175,6 +190,7 @@
 
     goto :goto_0
 
+    .line 562
     :cond_5
     const v1, 0x3f38d4fe
 
@@ -182,6 +198,7 @@
 
     if-gez v1, :cond_6
 
+    .line 563
     const v1, 0x3ee353f8
 
     sub-float v1, p2, v1
@@ -202,6 +219,7 @@
 
     goto :goto_0
 
+    .line 566
     :cond_6
     const v1, 0x3f38d4fe
 
@@ -225,6 +243,7 @@
 
     goto/16 :goto_0
 
+    .line 574
     :cond_7
     const/4 v1, 0x0
 
@@ -232,6 +251,7 @@
 
     if-gez v1, :cond_0
 
+    .line 575
     const/4 v0, 0x0
 
     goto/16 :goto_1

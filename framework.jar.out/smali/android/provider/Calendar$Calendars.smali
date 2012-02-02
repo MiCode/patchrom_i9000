@@ -45,6 +45,7 @@
     .locals 1
 
     .prologue
+    .line 247
     const-string v0, "content://com.android.calendar/calendars"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -60,6 +61,7 @@
     .locals 0
 
     .prologue
+    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,6 +74,7 @@
     .parameter "selectionArgs"
 
     .prologue
+    .line 227
     sget-object v0, Landroid/provider/Calendar$Calendars;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v0, p1, p2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
@@ -87,6 +90,7 @@
     .parameter "account"
 
     .prologue
+    .line 239
     const-string v0, "_sync_account=? AND _sync_account_type=?"
 
     const/4 v1, 0x2
@@ -120,6 +124,7 @@
     .parameter "orderBy"
 
     .prologue
+    .line 214
     sget-object v1, Landroid/provider/Calendar$Calendars;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

@@ -26,6 +26,7 @@
     .locals 0
 
     .prologue
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,5 +40,6 @@
     .parameter "state"
 
     .prologue
+    .line 84
     return-void
 .end method

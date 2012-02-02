@@ -21,14 +21,19 @@
     .parameter "srcName"
 
     .prologue
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 47
     iput-object p1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
+    .line 48
     iput-object p2, p0, Landroid/graphics/NinePatch;->mChunk:[B
 
+    .line 49
     iput-object p3, p0, Landroid/graphics/NinePatch;->mSrcName:Ljava/lang/String;
 
+    .line 50
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->ni()I
@@ -37,6 +42,7 @@
 
     invoke-static {v0, p2}, Landroid/graphics/NinePatch;->validateNinePatchChunk(I[B)V
 
+    .line 51
     return-void
 .end method
 
@@ -45,24 +51,30 @@
     .parameter "patch"
 
     .prologue
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 57
     iget-object v0, p1, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     iput-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
+    .line 58
     iget-object v0, p1, Landroid/graphics/NinePatch;->mChunk:[B
 
     iput-object v0, p0, Landroid/graphics/NinePatch;->mChunk:[B
 
+    .line 59
     iget-object v0, p1, Landroid/graphics/NinePatch;->mSrcName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/graphics/NinePatch;->mSrcName:Ljava/lang/String;
 
+    .line 60
     iget-object v0, p1, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_0
 
+    .line 61
     new-instance v0, Landroid/graphics/Paint;
 
     iget-object v1, p1, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
@@ -71,6 +83,7 @@
 
     iput-object v0, p0, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
+    .line 63
     :cond_0
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
@@ -82,6 +95,7 @@
 
     invoke-static {v0, v1}, Landroid/graphics/NinePatch;->validateNinePatchChunk(I[B)V
 
+    .line 64
     return-void
 .end method
 
@@ -108,6 +122,7 @@
     .parameter "location"
 
     .prologue
+    .line 90
     iget v0, p1, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget-object v1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
@@ -139,8 +154,10 @@
 
     invoke-static/range {v0 .. v6}, Landroid/graphics/NinePatch;->nativeDraw(ILandroid/graphics/Rect;I[BIII)V
 
+    .line 94
     return-void
 
+    .line 90
     :cond_0
     const/4 v1, 0x0
 
@@ -156,6 +173,7 @@
     .parameter "paint"
 
     .prologue
+    .line 104
     iget v0, p1, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget-object v1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
@@ -183,8 +201,10 @@
 
     invoke-static/range {v0 .. v6}, Landroid/graphics/NinePatch;->nativeDraw(ILandroid/graphics/Rect;I[BIII)V
 
+    .line 107
     return-void
 
+    .line 104
     :cond_0
     const/4 v1, 0x0
 
@@ -199,6 +219,7 @@
     .parameter "location"
 
     .prologue
+    .line 77
     iget v0, p1, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget-object v1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
@@ -230,8 +251,10 @@
 
     invoke-static/range {v0 .. v6}, Landroid/graphics/NinePatch;->nativeDraw(ILandroid/graphics/RectF;I[BIII)V
 
+    .line 81
     return-void
 
+    .line 77
     :cond_0
     const/4 v1, 0x0
 
@@ -244,6 +267,7 @@
     .locals 1
 
     .prologue
+    .line 114
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     iget v0, v0, Landroid/graphics/Bitmap;->mDensity:I
@@ -255,6 +279,7 @@
     .locals 1
 
     .prologue
+    .line 122
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
@@ -269,6 +294,7 @@
     .parameter "location"
 
     .prologue
+    .line 130
     iget-object v1, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->ni()I
@@ -281,6 +307,7 @@
 
     move-result v0
 
+    .line 131
     .local v0, r:I
     if-eqz v0, :cond_0
 
@@ -301,6 +328,7 @@
     .locals 1
 
     .prologue
+    .line 118
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -314,6 +342,7 @@
     .locals 1
 
     .prologue
+    .line 126
     iget-object v0, p0, Landroid/graphics/NinePatch;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->hasAlpha()Z
@@ -328,7 +357,9 @@
     .parameter "p"
 
     .prologue
+    .line 67
     iput-object p1, p0, Landroid/graphics/NinePatch;->mPaint:Landroid/graphics/Paint;
 
+    .line 68
     return-void
 .end method

@@ -13,10 +13,13 @@
     .parameter "context"
 
     .prologue
+    .line 658
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
+    .line 659
     iput-object p1, p0, Lcom/android/server/DemoThread;->mContext:Landroid/content/Context;
 
+    .line 660
     return-void
 .end method
 
@@ -26,6 +29,7 @@
     .locals 10
 
     .prologue
+    .line 666
     :try_start_0
     iget-object v0, p0, Lcom/android/server/DemoThread;->mContext:Landroid/content/Context;
 
@@ -47,6 +51,7 @@
 
     move-result-object v6
 
+    .line 667
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_2
 
@@ -60,19 +65,24 @@
 
     move v9, v0
 
+    .line 668
     .local v9, hasData:Z
     :goto_0
     if-eqz v6, :cond_0
 
+    .line 669
     invoke-interface {v6}, Landroid/database/Cursor;->deactivate()V
 
+    .line 671
     :cond_0
     if-nez v9, :cond_1
 
+    .line 672
     new-instance v7, Lcom/android/server/DemoDataSet;
 
     invoke-direct {v7}, Lcom/android/server/DemoDataSet;-><init>()V
 
+    .line 673
     .local v7, dataset:Lcom/android/server/DemoDataSet;
     iget-object v0, p0, Lcom/android/server/DemoThread;->mContext:Landroid/content/Context;
 
@@ -80,6 +90,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 679
     .end local v6           #c:Landroid/database/Cursor;
     .end local v7           #dataset:Lcom/android/server/DemoDataSet;
     .end local v9           #hasData:Z
@@ -87,6 +98,7 @@
     :goto_1
     return-void
 
+    .line 667
     .restart local v6       #c:Landroid/database/Cursor;
     :cond_2
     const/4 v0, 0x0
@@ -95,12 +107,14 @@
 
     goto :goto_0
 
+    .line 675
     .end local v6           #c:Landroid/database/Cursor;
     :catch_0
     move-exception v0
 
     move-object v8, v0
 
+    .line 676
     .local v8, e:Ljava/lang/Throwable;
     const-string v0, "SystemServer"
 

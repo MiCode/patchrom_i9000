@@ -35,19 +35,27 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 92
     iput-object v0, p0, Landroid/drm/mobile2/DCFHeaderInfo$DCFHeaderVersionTwo;->author:Ljava/lang/String;
 
+    .line 93
     iput-object v0, p0, Landroid/drm/mobile2/DCFHeaderInfo$DCFHeaderVersionTwo;->copyRight:Ljava/lang/String;
 
+    .line 94
     iput-object v0, p0, Landroid/drm/mobile2/DCFHeaderInfo$DCFHeaderVersionTwo;->description:Ljava/lang/String;
 
+    .line 95
     iput-object v0, p0, Landroid/drm/mobile2/DCFHeaderInfo$DCFHeaderVersionTwo;->iconUrl:Ljava/lang/String;
 
+    .line 96
     iput-object v0, p0, Landroid/drm/mobile2/DCFHeaderInfo$DCFHeaderVersionTwo;->infoUrl:Ljava/lang/String;
 
+    .line 97
     iput-object v0, p0, Landroid/drm/mobile2/DCFHeaderInfo$DCFHeaderVersionTwo;->title:Ljava/lang/String;
 
+    .line 90
     return-void
 .end method

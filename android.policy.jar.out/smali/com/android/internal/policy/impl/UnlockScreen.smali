@@ -106,10 +106,12 @@
     .locals 1
 
     .prologue
+    .line 112
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryInfoState:I
 
+    .line 114
     const/4 v0, -0x1
 
     sput v0, Lcom/android/internal/policy/impl/UnlockScreen;->mPlugedState:I
@@ -132,68 +134,92 @@
 
     const/4 v5, 0x0
 
+    .line 175
     invoke-direct {p0, p1}, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;-><init>(Landroid/content/Context;)V
 
+    .line 65
     iput v5, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFailedPatternAttemptsSinceLastTimeout:I
 
+    .line 66
     iput v5, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mTotalFailedPatternAttempts:I
 
+    .line 67
     iput-object v7, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCountdownTimer:Landroid/os/CountDownTimer;
 
+    .line 86
     iput-boolean v5, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mShowingBatteryInfo:Z
 
+    .line 89
     iput-boolean v5, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mPluggedIn:Z
 
+    .line 92
     const/16 v3, 0x64
 
     iput v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryLevel:I
 
+    .line 94
     iput-object v7, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mNextAlarm:Ljava/lang/String;
 
+    .line 96
     iput-object v7, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mInstructions:Ljava/lang/String;
 
+    .line 107
     iput v5, p0, Lcom/android/internal/policy/impl/UnlockScreen;->BATTERY_INFO_NOT_DISPLAY:I
 
+    .line 108
     iput v6, p0, Lcom/android/internal/policy/impl/UnlockScreen;->BATTERY_INFO_CHARGING:I
 
+    .line 109
     const/4 v3, 0x2
 
     iput v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->BATTERY_INFO_FULL:I
 
+    .line 110
     const/4 v3, 0x3
 
     iput v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->BATTERY_INFO_OVERHEAT:I
 
+    .line 111
     const/4 v3, 0x4
 
     iput v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->BATTERY_INFO_DEAD:I
 
+    .line 115
     iput v6, p0, Lcom/android/internal/policy/impl/UnlockScreen;->PLUG_IN:I
 
+    .line 116
     iput v5, p0, Lcom/android/internal/policy/impl/UnlockScreen;->PLUG_OUT:I
 
+    .line 124
     const-wide/16 v3, -0x1b58
 
     iput-wide v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLastPokeTime:J
 
+    .line 129
     new-instance v3, Lcom/android/internal/policy/impl/UnlockScreen$1;
 
     invoke-direct {v3, p0}, Lcom/android/internal/policy/impl/UnlockScreen$1;-><init>(Lcom/android/internal/policy/impl/UnlockScreen;)V
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCancelPatternRunnable:Ljava/lang/Runnable;
 
+    .line 176
     iput-object p2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
+    .line 177
     iput-object p3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
+    .line 178
     iput-object p4, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
+    .line 179
     iput p5, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mTotalFailedPatternAttempts:I
 
+    .line 180
     rem-int/lit8 v3, p5, 0x5
 
     iput v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFailedPatternAttemptsSinceLastTimeout:I
 
+    .line 197
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v3
@@ -202,6 +228,7 @@
 
     invoke-virtual {v3, v4, p0, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
+    .line 199
     const v3, 0x10201f0
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -212,6 +239,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCarrier:Landroid/widget/TextView;
 
+    .line 200
     const v3, 0x102005c
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -222,6 +250,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mDate:Landroid/widget/TextView;
 
+    .line 202
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -234,8 +263,10 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mDateFormatString:Ljava/lang/String;
 
+    .line 203
     invoke-direct {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->refreshTimeAndDateDisplay()V
 
+    .line 205
     const v3, 0x10201fb
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -246,6 +277,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
+    .line 206
     const v3, 0x10201ff
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -256,6 +288,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatusSep:Landroid/widget/TextView;
 
+    .line 207
     const v3, 0x10201fc
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -266,8 +299,10 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
+    .line 209
     invoke-direct {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->resetStatusInfo()V
 
+    .line 212
     const v3, 0x1020205
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -278,6 +313,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
+    .line 214
     const v3, 0x1020200
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -288,6 +324,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFooterNormal:Landroid/view/ViewGroup;
 
+    .line 215
     const v3, 0x1020202
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -298,10 +335,12 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFooterForgotPattern:Landroid/view/ViewGroup;
 
+    .line 218
     new-instance v1, Lcom/android/internal/policy/impl/UnlockScreen$2;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/UnlockScreen$2;-><init>(Lcom/android/internal/policy/impl/UnlockScreen;)V
 
+    .line 224
     .local v1, emergencyClick:Landroid/view/View$OnClickListener;
     const v3, 0x1020201
 
@@ -311,11 +350,14 @@
 
     check-cast v0, Landroid/widget/Button;
 
+    .line 225
     .local v0, emergencyAlone:Landroid/widget/Button;
     invoke-virtual {v0, v5}, Landroid/widget/Button;->setFocusable(Z)V
 
+    .line 226
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 227
     const v3, 0x1020204
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -324,11 +366,14 @@
 
     check-cast v2, Landroid/widget/Button;
 
+    .line 228
     .local v2, emergencyTogether:Landroid/widget/Button;
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setFocusable(Z)V
 
+    .line 229
     invoke-virtual {v2, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 231
     const v3, 0x1020203
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->findViewById(I)Landroid/view/View;
@@ -339,12 +384,14 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mForgotPatternButton:Landroid/widget/Button;
 
+    .line 232
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mForgotPatternButton:Landroid/widget/Button;
 
     const v4, 0x1040339
 
     invoke-virtual {v3, v4}, Landroid/widget/Button;->setText(I)V
 
+    .line 233
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mForgotPatternButton:Landroid/widget/Button;
 
     new-instance v4, Lcom/android/internal/policy/impl/UnlockScreen$3;
@@ -353,18 +400,22 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 242
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->setDefaultTouchRecepient(Landroid/view/View;)V
 
+    .line 244
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {v3, v5}, Lcom/android/internal/widget/LockPatternView;->setSaveEnabled(Z)V
 
+    .line 245
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {v3, v5}, Lcom/android/internal/widget/LockPatternView;->setFocusable(Z)V
 
+    .line 246
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     new-instance v4, Lcom/android/internal/policy/impl/UnlockScreen$UnlockPatternListener;
@@ -373,6 +424,7 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/LockPatternView;->setOnPatternListener(Lcom/android/internal/widget/LockPatternView$OnPatternListener;)V
 
+    .line 249
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     iget-object v4, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -388,6 +440,7 @@
     :goto_0
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/LockPatternView;->setInStealthMode(Z)V
 
+    .line 252
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     iget-object v4, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -398,34 +451,43 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/LockPatternView;->setTactileFeedbackEnabled(Z)V
 
+    .line 255
     sget-object v3, Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;->Normal:Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;
 
     invoke-direct {p0, v3}, Lcom/android/internal/policy/impl/UnlockScreen;->updateFooter(Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;)V
 
+    .line 257
     invoke-virtual {p3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->isInPortrait()Z
 
     move-result v3
 
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCreatedInPortrait:Z
 
+    .line 258
     invoke-virtual {p3, p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerInfoCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoCallback;)V
 
+    .line 259
     invoke-virtual {p3, p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerSimStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$SimStateCallback;)V
 
+    .line 260
     invoke-virtual {p3, p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerConfigurationChangeCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$ConfigurationChangeCallback;)V
 
+    .line 261
     invoke-virtual {p0, v6}, Lcom/android/internal/policy/impl/UnlockScreen;->setFocusableInTouchMode(Z)V
 
+    .line 264
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCarrier:Landroid/widget/TextView;
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setSelected(Z)V
 
+    .line 265
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCarrier:Landroid/widget/TextView;
 
     const/4 v4, -0x1
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 268
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCarrier:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
@@ -446,11 +508,13 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 272
     return-void
 
     :cond_0
     move v4, v5
 
+    .line 249
     goto :goto_0
 .end method
 
@@ -459,6 +523,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     return-object v0
@@ -469,6 +534,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
     return-object v0
@@ -479,6 +545,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mEnableFallback:Z
 
     return v0
@@ -490,6 +557,7 @@
     .parameter "x1"
 
     .prologue
+    .line 49
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/UnlockScreen;->updateFooter(Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;)V
 
     return-void
@@ -500,6 +568,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCancelPatternRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -510,6 +579,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object v0
@@ -521,6 +591,7 @@
     .parameter "x1"
 
     .prologue
+    .line 49
     iput-object p1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mInstructions:Ljava/lang/String;
 
     return-object p1
@@ -531,6 +602,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     invoke-direct {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->updateStatusLines()V
 
     return-void
@@ -541,6 +613,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     iget v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mTotalFailedPatternAttempts:I
 
     add-int/lit8 v1, v0, 0x1
@@ -555,6 +628,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     iget v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFailedPatternAttemptsSinceLastTimeout:I
 
     return v0
@@ -566,6 +640,7 @@
     .parameter "x1"
 
     .prologue
+    .line 49
     iput p1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFailedPatternAttemptsSinceLastTimeout:I
 
     return p1
@@ -576,6 +651,7 @@
     .parameter "x0"
 
     .prologue
+    .line 49
     iget v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFailedPatternAttemptsSinceLastTimeout:I
 
     add-int/lit8 v1, v0, 0x1
@@ -591,6 +667,7 @@
     .parameter "x1"
 
     .prologue
+    .line 49
     invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/impl/UnlockScreen;->handleAttemptLockout(J)V
 
     return-void
@@ -601,20 +678,24 @@
     .parameter "elapsedRealtimeDeadline"
 
     .prologue
+    .line 568
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternView;->clearPattern()V
 
+    .line 569
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternView;->setEnabled(Z)V
 
+    .line 570
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
+    .line 571
     .local v6, elapsedRealtime:J
     new-instance v0, Lcom/android/internal/policy/impl/UnlockScreen$4;
 
@@ -632,6 +713,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCountdownTimer:Landroid/os/CountDownTimer;
 
+    .line 596
     return-void
 .end method
 
@@ -639,6 +721,7 @@
     .locals 3
 
     .prologue
+    .line 367
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mDate:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mDateFormatString:Ljava/lang/String;
@@ -653,6 +736,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 368
     return-void
 .end method
 
@@ -660,10 +744,12 @@
     .locals 1
 
     .prologue
+    .line 280
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mInstructions:Ljava/lang/String;
 
+    .line 281
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->shouldShowBatteryInfo()Z
@@ -672,6 +758,7 @@
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mShowingBatteryInfo:Z
 
+    .line 282
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->isDevicePluggedIn()Z
@@ -680,6 +767,7 @@
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mPluggedIn:Z
 
+    .line 283
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getBatteryLevel()I
@@ -688,6 +776,7 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryLevel:I
 
+    .line 285
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getBatteryInfoState()I
@@ -696,6 +785,7 @@
 
     sput v0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryInfoState:I
 
+    .line 286
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getBatteryPlugedState()I
@@ -704,6 +794,7 @@
 
     sput v0, Lcom/android/internal/policy/impl/UnlockScreen;->mPlugedState:I
 
+    .line 288
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils;->getNextAlarm()Ljava/lang/String;
@@ -712,8 +803,10 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mNextAlarm:Ljava/lang/String;
 
+    .line 289
     invoke-direct {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->updateStatusLines()V
 
+    .line 290
     return-void
 .end method
 
@@ -726,6 +819,7 @@
 
     const/16 v2, 0x8
 
+    .line 144
     sget-object v0, Lcom/android/internal/policy/impl/UnlockScreen$5;->$SwitchMap$com$android$internal$policy$impl$UnlockScreen$FooterMode:[I
 
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;->ordinal()I
@@ -736,46 +830,55 @@
 
     packed-switch v0, :pswitch_data_0
 
+    .line 158
     :goto_0
     return-void
 
+    .line 146
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFooterNormal:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
+    .line 147
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFooterForgotPattern:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     goto :goto_0
 
+    .line 150
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFooterNormal:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
+    .line 151
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFooterForgotPattern:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
+    .line 152
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mForgotPatternButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setVisibility(I)V
 
     goto :goto_0
 
+    .line 155
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFooterNormal:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
+    .line 156
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mFooterForgotPattern:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     goto :goto_0
 
+    .line 144
     nop
 
     :pswitch_data_0
@@ -800,16 +903,19 @@
 
     const/4 v5, 0x0
 
+    .line 293
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mInstructions:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
+    .line 295
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mInstructions:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 296
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mInstructions:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -818,26 +924,32 @@
 
     if-eqz v0, :cond_0
 
+    .line 297
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5, v5, v5, v5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
+    .line 303
     :goto_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 304
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatusSep:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 305
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 363
     :goto_1
     return-void
 
+    .line 299
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
@@ -847,6 +959,7 @@
 
     goto :goto_0
 
+    .line 306
     :cond_1
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mShowingBatteryInfo:Z
 
@@ -860,17 +973,20 @@
 
     if-eq v0, v3, :cond_8
 
+    .line 308
     :cond_2
     sget v0, Lcom/android/internal/policy/impl/UnlockScreen;->mPlugedState:I
 
     if-ne v0, v3, :cond_7
 
+    .line 309
     sget v0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryInfoState:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_3
 
+    .line 310
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->getContext()Landroid/content/Context;
@@ -885,25 +1001,30 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 323
     :goto_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {v0, v8, v5, v5, v5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
+    .line 325
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 326
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatusSep:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 327
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_1
 
+    .line 311
     :cond_3
     sget v0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryInfoState:I
 
@@ -911,6 +1032,7 @@
 
     if-ne v0, v1, :cond_4
 
+    .line 312
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->getContext()Landroid/content/Context;
@@ -927,6 +1049,7 @@
 
     goto :goto_2
 
+    .line 314
     :cond_4
     iget v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryLevel:I
 
@@ -936,6 +1059,7 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryLevel:I
 
+    .line 318
     :cond_5
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
@@ -963,6 +1087,7 @@
 
     goto :goto_2
 
+    .line 315
     :cond_6
     iget v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryLevel:I
 
@@ -970,6 +1095,7 @@
 
     goto/16 :goto_1
 
+    .line 321
     :cond_7
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
@@ -987,6 +1113,7 @@
 
     goto :goto_2
 
+    .line 329
     :cond_8
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mNextAlarm:Ljava/lang/String;
 
@@ -996,32 +1123,38 @@
 
     if-nez v0, :cond_9
 
+    .line 331
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mNextAlarm:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 332
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     const v1, 0x108002e
 
     invoke-virtual {v0, v1, v5, v5, v5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
+    .line 334
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 335
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatusSep:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 336
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_1
 
+    .line 337
     :cond_9
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mNextAlarm:Ljava/lang/String;
 
@@ -1031,18 +1164,21 @@
 
     if-eqz v0, :cond_b
 
+    .line 339
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mNextAlarm:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 340
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatusSep:Landroid/widget/TextView;
 
     const-string v1, "|"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 341
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->getContext()Landroid/content/Context;
@@ -1071,35 +1207,42 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 344
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     const v1, 0x108002e
 
     invoke-virtual {v0, v1, v5, v5, v5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
+    .line 345
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mPluggedIn:Z
 
     if-eqz v0, :cond_a
 
+    .line 346
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
     invoke-virtual {v0, v8, v5, v5, v5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
+    .line 351
     :goto_3
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 352
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatusSep:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 353
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_1
 
+    .line 348
     :cond_a
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
@@ -1107,6 +1250,7 @@
 
     goto :goto_3
 
+    .line 356
     :cond_b
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
@@ -1114,20 +1258,24 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
+    .line 357
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     const v1, 0x108001f
 
     invoke-virtual {v0, v1, v5, v5, v5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
+    .line 359
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus1:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 360
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatusSep:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 361
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mStatus2:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
@@ -1141,10 +1289,12 @@
     .locals 1
 
     .prologue
+    .line 504
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->removeCallback(Ljava/lang/Object;)V
 
+    .line 505
     return-void
 .end method
 
@@ -1153,10 +1303,12 @@
     .parameter "ev"
 
     .prologue
+    .line 376
     invoke-super {p0, p1}, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
+    .line 377
     .local v0, result:Z
     if-eqz v0, :cond_0
 
@@ -1174,12 +1326,14 @@
 
     if-lez v1, :cond_0
 
+    .line 380
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLastPokeTime:J
 
+    .line 382
     :cond_0
     return v0
 .end method
@@ -1188,6 +1342,7 @@
     .locals 1
 
     .prologue
+    .line 458
     const/4 v0, 0x0
 
     return v0
@@ -1198,6 +1353,7 @@
     .parameter "isKeyboardOpen"
 
     .prologue
+    .line 454
     return-void
 .end method
 
@@ -1206,6 +1362,7 @@
     .parameter "inPortrait"
 
     .prologue
+    .line 447
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1214,15 +1371,18 @@
 
     move-result-object v0
 
+    .line 448
     .local v0, newConfig:Landroid/content/res/Configuration;
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCreatedInPortrait:Z
 
     if-eq p1, v1, :cond_0
 
+    .line 449
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
     invoke-interface {v1, v0}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->recreateMe(Landroid/content/res/Configuration;)V
 
+    .line 451
     :cond_0
     return-void
 .end method
@@ -1231,18 +1391,22 @@
     .locals 1
 
     .prologue
+    .line 463
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCountdownTimer:Landroid/os/CountDownTimer;
 
     if-eqz v0, :cond_0
 
+    .line 464
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCountdownTimer:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
 
+    .line 465
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCountdownTimer:Landroid/os/CountDownTimer;
 
+    .line 467
     :cond_0
     return-void
 .end method
@@ -1252,6 +1416,7 @@
     .parameter "newState"
 
     .prologue
+    .line 600
     return-void
 .end method
 
@@ -1262,14 +1427,19 @@
     .parameter "batteryLevel"
 
     .prologue
+    .line 390
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mShowingBatteryInfo:Z
 
+    .line 391
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mPluggedIn:Z
 
+    .line 392
     iput p3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryLevel:I
 
+    .line 393
     invoke-direct {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->updateStatusLines()V
 
+    .line 394
     return-void
 .end method
 
@@ -1281,8 +1451,10 @@
     .parameter "batteryStatus"
 
     .prologue
+    .line 418
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/UnlockScreen;->onRefreshBatteryInfo(ZZI)V
 
+    .line 419
     return-void
 .end method
 
@@ -1292,6 +1464,7 @@
     .parameter "spn"
 
     .prologue
+    .line 428
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCarrier:Landroid/widget/TextView;
 
     invoke-static {p1, p2}, Lcom/android/internal/policy/impl/LockScreen;->getCarrierString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -1300,6 +1473,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 429
     return-void
 .end method
 
@@ -1307,22 +1481,27 @@
     .locals 4
 
     .prologue
+    .line 472
     invoke-direct {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->resetStatusInfo()V
 
+    .line 475
     iget-object v2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {v2}, Lcom/android/internal/widget/LockPatternView;->enableInput()V
 
+    .line 476
     iget-object v2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lcom/android/internal/widget/LockPatternView;->setEnabled(Z)V
 
+    .line 477
     iget-object v2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {v2}, Lcom/android/internal/widget/LockPatternView;->clearPattern()V
 
+    .line 480
     iget-object v2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mForgotPatternButton:Landroid/widget/Button;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
@@ -1338,12 +1517,14 @@
     :goto_0
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setVisibility(I)V
 
+    .line 484
     iget-object v2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v2}, Lcom/android/internal/widget/LockPatternUtils;->getLockoutAttemptDeadline()J
 
     move-result-wide v0
 
+    .line 485
     .local v0, deadline:J
     const-wide/16 v2, 0x0
 
@@ -1351,8 +1532,10 @@
 
     if-eqz v2, :cond_0
 
+    .line 486
     invoke-direct {p0, v0, v1}, Lcom/android/internal/policy/impl/UnlockScreen;->handleAttemptLockout(J)V
 
+    .line 494
     :cond_0
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mEnableFallback:Z
 
@@ -1364,19 +1547,23 @@
 
     if-lt v2, v3, :cond_2
 
+    .line 496
     sget-object v2, Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;->ForgotLockPattern:Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;
 
     invoke-direct {p0, v2}, Lcom/android/internal/policy/impl/UnlockScreen;->updateFooter(Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;)V
 
+    .line 500
     :goto_1
     return-void
 
+    .line 480
     .end local v0           #deadline:J
     :cond_1
     const/4 v3, 0x4
 
     goto :goto_0
 
+    .line 498
     .restart local v0       #deadline:J
     :cond_2
     sget-object v2, Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;->Normal:Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;
@@ -1391,6 +1578,7 @@
     .parameter "state"
 
     .prologue
+    .line 434
     return-void
 .end method
 
@@ -1399,6 +1587,7 @@
     .parameter "simState"
 
     .prologue
+    .line 440
     return-void
 .end method
 
@@ -1406,8 +1595,10 @@
     .locals 0
 
     .prologue
+    .line 423
     invoke-direct {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->refreshTimeAndDateDisplay()V
 
+    .line 424
     return-void
 .end method
 
@@ -1421,38 +1612,49 @@
 
     const/4 v2, 0x1
 
+    .line 399
     sput p1, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryInfoState:I
 
+    .line 400
     iput p2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryLevel:I
 
+    .line 401
     sget v0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryInfoState:I
 
     if-nez v0, :cond_1
 
+    .line 402
     iget v0, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mBatteryLevel:I
 
     const/16 v1, 0x14
 
     if-ge v0, v1, :cond_0
 
+    .line 403
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mShowingBatteryInfo:Z
 
+    .line 406
     :goto_0
     sput v3, Lcom/android/internal/policy/impl/UnlockScreen;->mPlugedState:I
 
+    .line 413
     :goto_1
     invoke-direct {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->updateStatusLines()V
 
+    .line 414
     return-void
 
+    .line 405
     :cond_0
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mShowingBatteryInfo:Z
 
     goto :goto_0
 
+    .line 409
     :cond_1
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mShowingBatteryInfo:Z
 
+    .line 410
     sput v2, Lcom/android/internal/policy/impl/UnlockScreen;->mPlugedState:I
 
     goto :goto_1
@@ -1463,12 +1665,16 @@
     .parameter "hasWindowFocus"
 
     .prologue
+    .line 509
     invoke-super {p0, p1}, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;->onWindowFocusChanged(Z)V
 
+    .line 510
     if-eqz p1, :cond_0
 
+    .line 512
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/UnlockScreen;->onResume()V
 
+    .line 514
     :cond_0
     return-void
 .end method
@@ -1478,7 +1684,9 @@
     .parameter "state"
 
     .prologue
+    .line 276
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/UnlockScreen;->mEnableFallback:Z
 
+    .line 277
     return-void
 .end method

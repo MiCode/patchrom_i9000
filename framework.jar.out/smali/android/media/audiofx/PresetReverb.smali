@@ -58,22 +58,27 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 136
     sget-object v0, Landroid/media/audiofx/PresetReverb;->EFFECT_TYPE_PRESET_REVERB:Ljava/util/UUID;
 
     sget-object v1, Landroid/media/audiofx/PresetReverb;->EFFECT_TYPE_NULL:Ljava/util/UUID;
 
     invoke-direct {p0, v0, v1, p1, p2}, Landroid/media/audiofx/AudioEffect;-><init>(Ljava/util/UUID;Ljava/util/UUID;II)V
 
+    .line 106
     iput-object v2, p0, Landroid/media/audiofx/PresetReverb;->mParamListener:Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;
 
+    .line 111
     iput-object v2, p0, Landroid/media/audiofx/PresetReverb;->mBaseParamListener:Landroid/media/audiofx/PresetReverb$BaseParameterListener;
 
+    .line 116
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/media/audiofx/PresetReverb;->mParamListenerLock:Ljava/lang/Object;
 
+    .line 137
     return-void
 .end method
 
@@ -82,6 +87,7 @@
     .parameter "x0"
 
     .prologue
+    .line 61
     iget-object v0, p0, Landroid/media/audiofx/PresetReverb;->mParamListenerLock:Ljava/lang/Object;
 
     return-object v0
@@ -92,6 +98,7 @@
     .parameter "x0"
 
     .prologue
+    .line 61
     iget-object v0, p0, Landroid/media/audiofx/PresetReverb;->mParamListener:Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;
 
     return-object v0
@@ -112,10 +119,12 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 164
     const/4 v1, 0x1
 
     new-array v0, v1, [S
 
+    .line 165
     .local v0, value:[S
     invoke-virtual {p0, v2, v0}, Landroid/media/audiofx/PresetReverb;->getParameter(I[S)I
 
@@ -123,6 +132,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/PresetReverb;->checkStatus(I)V
 
+    .line 166
     aget-short v1, v0, v2
 
     return v1
@@ -141,15 +151,18 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 292
     new-instance v0, Landroid/media/audiofx/PresetReverb$Settings;
 
     invoke-direct {v0}, Landroid/media/audiofx/PresetReverb$Settings;-><init>()V
 
+    .line 293
     .local v0, settings:Landroid/media/audiofx/PresetReverb$Settings;
     const/4 v2, 0x1
 
     new-array v1, v2, [S
 
+    .line 294
     .local v1, value:[S
     invoke-virtual {p0, v3, v1}, Landroid/media/audiofx/PresetReverb;->getParameter(I[S)I
 
@@ -157,10 +170,12 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/PresetReverb;->checkStatus(I)V
 
+    .line 295
     aget-short v2, v1, v3
 
     iput-short v2, v0, Landroid/media/audiofx/PresetReverb$Settings;->preset:S
 
+    .line 296
     return-object v0
 .end method
 
@@ -169,17 +184,21 @@
     .parameter "listener"
 
     .prologue
+    .line 224
     iget-object v0, p0, Landroid/media/audiofx/PresetReverb;->mParamListenerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 225
     :try_start_0
     iget-object v1, p0, Landroid/media/audiofx/PresetReverb;->mParamListener:Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;
 
     if-nez v1, :cond_0
 
+    .line 226
     iput-object p1, p0, Landroid/media/audiofx/PresetReverb;->mParamListener:Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;
 
+    .line 227
     new-instance v1, Landroid/media/audiofx/PresetReverb$BaseParameterListener;
 
     const/4 v2, 0x0
@@ -188,15 +207,19 @@
 
     iput-object v1, p0, Landroid/media/audiofx/PresetReverb;->mBaseParamListener:Landroid/media/audiofx/PresetReverb$BaseParameterListener;
 
+    .line 228
     iget-object v1, p0, Landroid/media/audiofx/PresetReverb;->mBaseParamListener:Landroid/media/audiofx/PresetReverb$BaseParameterListener;
 
     invoke-super {p0, v1}, Landroid/media/audiofx/AudioEffect;->setParameterListener(Landroid/media/audiofx/AudioEffect$OnParameterChangeListener;)V
 
+    .line 230
     :cond_0
     monitor-exit v0
 
+    .line 231
     return-void
 
+    .line 230
     :catchall_0
     move-exception v1
 
@@ -219,6 +242,7 @@
     .end annotation
 
     .prologue
+    .line 152
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/PresetReverb;->setParameter(IS)I
@@ -227,6 +251,7 @@
 
     invoke-virtual {p0, v0}, Landroid/media/audiofx/PresetReverb;->checkStatus(I)V
 
+    .line 153
     return-void
 .end method
 
@@ -242,6 +267,7 @@
     .end annotation
 
     .prologue
+    .line 309
     const/4 v0, 0x0
 
     iget-short v1, p1, Landroid/media/audiofx/PresetReverb$Settings;->preset:S
@@ -252,5 +278,6 @@
 
     invoke-virtual {p0, v0}, Landroid/media/audiofx/PresetReverb;->checkStatus(I)V
 
+    .line 310
     return-void
 .end method

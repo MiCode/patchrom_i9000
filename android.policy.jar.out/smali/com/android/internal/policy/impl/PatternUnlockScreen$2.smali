@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 227
     iput-object p1, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$2;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "v"
 
     .prologue
+    .line 229
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$2;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PatternUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
@@ -50,6 +52,7 @@
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->pokeWakelock()V
 
+    .line 230
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$2;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PatternUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
@@ -59,5 +62,6 @@
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->takeEmergencyCallAction()V
 
+    .line 231
     return-void
 .end method

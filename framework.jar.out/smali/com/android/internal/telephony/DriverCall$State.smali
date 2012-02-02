@@ -54,6 +54,7 @@
 
     const/4 v3, 0x0
 
+    .line 32
     new-instance v0, Lcom/android/internal/telephony/DriverCall$State;
 
     const-string v1, "ACTIVE"
@@ -62,6 +63,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DriverCall$State;->ACTIVE:Lcom/android/internal/telephony/DriverCall$State;
 
+    .line 33
     new-instance v0, Lcom/android/internal/telephony/DriverCall$State;
 
     const-string v1, "HOLDING"
@@ -70,6 +72,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DriverCall$State;->HOLDING:Lcom/android/internal/telephony/DriverCall$State;
 
+    .line 34
     new-instance v0, Lcom/android/internal/telephony/DriverCall$State;
 
     const-string v1, "DIALING"
@@ -78,6 +81,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DriverCall$State;->DIALING:Lcom/android/internal/telephony/DriverCall$State;
 
+    .line 35
     new-instance v0, Lcom/android/internal/telephony/DriverCall$State;
 
     const-string v1, "ALERTING"
@@ -86,6 +90,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DriverCall$State;->ALERTING:Lcom/android/internal/telephony/DriverCall$State;
 
+    .line 36
     new-instance v0, Lcom/android/internal/telephony/DriverCall$State;
 
     const-string v1, "INCOMING"
@@ -94,6 +99,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DriverCall$State;->INCOMING:Lcom/android/internal/telephony/DriverCall$State;
 
+    .line 37
     new-instance v0, Lcom/android/internal/telephony/DriverCall$State;
 
     const-string v1, "WAITING"
@@ -104,6 +110,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DriverCall$State;->WAITING:Lcom/android/internal/telephony/DriverCall$State;
 
+    .line 31
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/telephony/DriverCall$State;
@@ -150,6 +157,7 @@
     .end annotation
 
     .prologue
+    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -160,6 +168,7 @@
     .parameter "name"
 
     .prologue
+    .line 31
     const-class v0, Lcom/android/internal/telephony/DriverCall$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -176,6 +185,7 @@
     .locals 1
 
     .prologue
+    .line 31
     sget-object v0, Lcom/android/internal/telephony/DriverCall$State;->$VALUES:[Lcom/android/internal/telephony/DriverCall$State;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/DriverCall$State;->clone()Ljava/lang/Object;

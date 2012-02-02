@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1019
     iput-object p1, p0, Landroid/inputmethodservice/KeyboardView$3;->this$0:Landroid/inputmethodservice/KeyboardView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "keyCodes"
 
     .prologue
+    .line 1021
     iget-object v0, p0, Landroid/inputmethodservice/KeyboardView$3;->this$0:Landroid/inputmethodservice/KeyboardView;
 
     #getter for: Landroid/inputmethodservice/KeyboardView;->mKeyboardActionListener:Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;
@@ -51,11 +53,13 @@
 
     invoke-interface {v0, p1, p2}, Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;->onKey(I[I)V
 
+    .line 1022
     iget-object v0, p0, Landroid/inputmethodservice/KeyboardView$3;->this$0:Landroid/inputmethodservice/KeyboardView;
 
     #calls: Landroid/inputmethodservice/KeyboardView;->dismissPopupKeyboard()V
     invoke-static {v0}, Landroid/inputmethodservice/KeyboardView;->access$1400(Landroid/inputmethodservice/KeyboardView;)V
 
+    .line 1023
     return-void
 .end method
 
@@ -64,6 +68,7 @@
     .parameter "primaryCode"
 
     .prologue
+    .line 1035
     iget-object v0, p0, Landroid/inputmethodservice/KeyboardView$3;->this$0:Landroid/inputmethodservice/KeyboardView;
 
     #getter for: Landroid/inputmethodservice/KeyboardView;->mKeyboardActionListener:Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;
@@ -73,6 +78,7 @@
 
     invoke-interface {v0, p1}, Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;->onPress(I)V
 
+    .line 1036
     return-void
 .end method
 
@@ -81,6 +87,7 @@
     .parameter "primaryCode"
 
     .prologue
+    .line 1038
     iget-object v0, p0, Landroid/inputmethodservice/KeyboardView$3;->this$0:Landroid/inputmethodservice/KeyboardView;
 
     #getter for: Landroid/inputmethodservice/KeyboardView;->mKeyboardActionListener:Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;
@@ -90,6 +97,7 @@
 
     invoke-interface {v0, p1}, Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;->onRelease(I)V
 
+    .line 1039
     return-void
 .end method
 
@@ -98,6 +106,7 @@
     .parameter "text"
 
     .prologue
+    .line 1026
     iget-object v0, p0, Landroid/inputmethodservice/KeyboardView$3;->this$0:Landroid/inputmethodservice/KeyboardView;
 
     #getter for: Landroid/inputmethodservice/KeyboardView;->mKeyboardActionListener:Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;
@@ -107,11 +116,13 @@
 
     invoke-interface {v0, p1}, Landroid/inputmethodservice/KeyboardView$OnKeyboardActionListener;->onText(Ljava/lang/CharSequence;)V
 
+    .line 1027
     iget-object v0, p0, Landroid/inputmethodservice/KeyboardView$3;->this$0:Landroid/inputmethodservice/KeyboardView;
 
     #calls: Landroid/inputmethodservice/KeyboardView;->dismissPopupKeyboard()V
     invoke-static {v0}, Landroid/inputmethodservice/KeyboardView;->access$1400(Landroid/inputmethodservice/KeyboardView;)V
 
+    .line 1028
     return-void
 .end method
 
@@ -119,6 +130,7 @@
     .locals 0
 
     .prologue
+    .line 1033
     return-void
 .end method
 
@@ -126,6 +138,7 @@
     .locals 0
 
     .prologue
+    .line 1030
     return-void
 .end method
 
@@ -133,6 +146,7 @@
     .locals 0
 
     .prologue
+    .line 1031
     return-void
 .end method
 
@@ -140,5 +154,6 @@
     .locals 0
 
     .prologue
+    .line 1032
     return-void
 .end method

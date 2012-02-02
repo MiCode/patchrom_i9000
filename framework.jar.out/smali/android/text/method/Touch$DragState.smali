@@ -40,15 +40,21 @@
     .parameter "scrollY"
 
     .prologue
+    .line 208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 209
     iput p1, p0, Landroid/text/method/Touch$DragState;->mX:F
 
+    .line 210
     iput p2, p0, Landroid/text/method/Touch$DragState;->mY:F
 
+    .line 211
     iput p3, p0, Landroid/text/method/Touch$DragState;->mScrollX:I
 
+    .line 212
     iput p4, p0, Landroid/text/method/Touch$DragState;->mScrollY:I
 
+    .line 213
     return-void
 .end method

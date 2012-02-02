@@ -52,10 +52,12 @@
     .parameter
 
     .prologue
+    .line 271
     iput-object p1, p0, Landroid/widget/TextView$Drawables;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 272
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V

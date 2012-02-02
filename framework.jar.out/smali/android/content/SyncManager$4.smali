@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 243
     iput-object p1, p0, Landroid/content/SyncManager$4;->this$0:Landroid/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -47,6 +48,7 @@
 
     const-string v5, "SyncManager"
 
+    .line 245
     const-string v3, "networkInfo"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -55,6 +57,7 @@
 
     check-cast v0, Landroid/net/NetworkInfo;
 
+    .line 247
     .local v0, networkInfo:Landroid/net/NetworkInfo;
     if-nez v0, :cond_4
 
@@ -62,6 +65,7 @@
 
     move-object v1, v3
 
+    .line 249
     .local v1, state:Landroid/net/NetworkInfo$State;
     :goto_0
     const-string v3, "SyncManager"
@@ -72,13 +76,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 250
     const-string v3, "SyncManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "received connectivity action.  network info: "
+    const-string/jumbo v4, "received connectivity action.  network info: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -94,6 +99,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 261
     :cond_0
     iget-object v3, p0, Landroid/content/SyncManager$4;->this$0:Landroid/content/SyncManager;
 
@@ -102,6 +108,7 @@
 
     move-result v2
 
+    .line 262
     .local v2, wasConnected:Z
     sget-object v3, Landroid/content/SyncManager$8;->$SwitchMap$android$net$NetworkInfo$State:[I
 
@@ -113,6 +120,7 @@
 
     packed-switch v3, :pswitch_data_0
 
+    .line 276
     :goto_1
     iget-object v3, p0, Landroid/content/SyncManager$4;->this$0:Landroid/content/SyncManager;
 
@@ -123,8 +131,10 @@
 
     if-eqz v3, :cond_3
 
+    .line 277
     if-nez v2, :cond_2
 
+    .line 278
     const-string v3, "SyncManager"
 
     invoke-static {v5, v8}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -133,12 +143,14 @@
 
     if-eqz v3, :cond_1
 
+    .line 279
     const-string v3, "SyncManager"
 
     const-string v3, "Reconnection detected: clearing all backoffs"
 
     invoke-static {v5, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 281
     :cond_1
     iget-object v3, p0, Landroid/content/SyncManager$4;->this$0:Landroid/content/SyncManager;
 
@@ -149,15 +161,18 @@
 
     invoke-virtual {v3}, Landroid/content/SyncStorageEngine;->clearAllBackoffs()V
 
+    .line 283
     :cond_2
     iget-object v3, p0, Landroid/content/SyncManager$4;->this$0:Landroid/content/SyncManager;
 
     #calls: Landroid/content/SyncManager;->sendCheckAlarmsMessage()V
     invoke-static {v3}, Landroid/content/SyncManager;->access$100(Landroid/content/SyncManager;)V
 
+    .line 285
     :cond_3
     return-void
 
+    .line 247
     .end local v1           #state:Landroid/net/NetworkInfo$State;
     .end local v2           #wasConnected:Z
     :cond_4
@@ -169,6 +184,7 @@
 
     goto :goto_0
 
+    .line 264
     .restart local v1       #state:Landroid/net/NetworkInfo$State;
     .restart local v2       #wasConnected:Z
     :pswitch_0
@@ -179,6 +195,7 @@
 
     goto :goto_1
 
+    .line 267
     :pswitch_1
     const-string v3, "noConnectivity"
 
@@ -188,6 +205,7 @@
 
     if-eqz v3, :cond_5
 
+    .line 268
     iget-object v3, p0, Landroid/content/SyncManager$4;->this$0:Landroid/content/SyncManager;
 
     #setter for: Landroid/content/SyncManager;->mDataConnectionIsConnected:Z
@@ -195,6 +213,7 @@
 
     goto :goto_1
 
+    .line 270
     :cond_5
     iget-object v3, p0, Landroid/content/SyncManager$4;->this$0:Landroid/content/SyncManager;
 
@@ -203,6 +222,7 @@
 
     goto :goto_1
 
+    .line 262
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

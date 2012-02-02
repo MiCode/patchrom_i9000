@@ -12,6 +12,7 @@
     .locals 0
 
     .prologue
+    .line 120
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;-><init>()V
 
     return-void
@@ -30,8 +31,10 @@
 
     const-string v3, "BluetoothProxyManager"
 
+    .line 80
     if-nez p0, :cond_0
 
+    .line 81
     const-string v0, "BluetoothProxyManager"
 
     const-string v0, "Unable to get service proxy. Invalid name"
@@ -40,9 +43,11 @@
 
     move v0, v2
 
+    .line 110
     :goto_0
     return v0
 
+    .line 86
     :cond_0
     invoke-static {p1, p0}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceEnabled(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -50,6 +55,7 @@
 
     if-nez v0, :cond_1
 
+    .line 87
     const-string v0, "BluetoothProxyManager"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -80,8 +86,10 @@
 
     move v0, v2
 
+    .line 89
     goto :goto_0
 
+    .line 92
     :cond_1
     const-string v0, "bluetooth_bpp_service"
 
@@ -91,12 +99,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 93
     invoke-static {p1, p2}, Lcom/broadcom/bt/service/bpp/BluetoothPrinter;->getProxy(Landroid/content/Context;Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;)Z
 
     move-result v0
 
     goto :goto_0
 
+    .line 94
     :cond_2
     const-string v0, "bluetooth_dun"
 
@@ -106,12 +116,14 @@
 
     if-eqz v0, :cond_3
 
+    .line 95
     invoke-static {p1, p2}, Lcom/broadcom/bt/service/dun/BluetoothDUN;->getProxy(Landroid/content/Context;Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;)Z
 
     move-result v0
 
     goto :goto_0
 
+    .line 96
     :cond_3
     const-string v0, "bluetooth_ftp"
 
@@ -121,12 +133,14 @@
 
     if-eqz v0, :cond_4
 
+    .line 97
     invoke-static {p1, p2}, Lcom/broadcom/bt/service/ftp/BluetoothFTP;->getProxy(Landroid/content/Context;Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;)Z
 
     move-result v0
 
     goto :goto_0
 
+    .line 98
     :cond_4
     const-string v0, "bluetooth_fm_receiver_service"
 
@@ -136,12 +150,14 @@
 
     if-eqz v0, :cond_5
 
+    .line 99
     invoke-static {p1, p2}, Lcom/broadcom/bt/service/fm/FmReceiver;->getProxy(Landroid/content/Context;Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;)Z
 
     move-result v0
 
     goto :goto_0
 
+    .line 100
     :cond_5
     const-string v0, "bluetooth_opp_service"
 
@@ -151,12 +167,14 @@
 
     if-eqz v0, :cond_6
 
+    .line 101
     invoke-static {p1, p2}, Lcom/broadcom/bt/service/opp/BluetoothOPP;->getProxy(Landroid/content/Context;Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;)Z
 
     move-result v0
 
     goto :goto_0
 
+    .line 102
     :cond_6
     const-string v0, "bluetooth_pbap"
 
@@ -166,12 +184,14 @@
 
     if-eqz v0, :cond_7
 
+    .line 103
     invoke-static {p1, p2}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->getProxy(Landroid/content/Context;Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;)Z
 
     move-result v0
 
     goto :goto_0
 
+    .line 104
     :cond_7
     const-string v0, "bluetooth_sap"
 
@@ -181,12 +201,14 @@
 
     if-eqz v0, :cond_8
 
+    .line 105
     invoke-static {p1, p2}, Lcom/broadcom/bt/service/sap/BluetoothSAP;->getProxy(Landroid/content/Context;Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;)Z
 
     move-result v0
 
     goto/16 :goto_0
 
+    .line 106
     :cond_8
     const-string v0, "bluetooth_test"
 
@@ -196,12 +218,14 @@
 
     if-eqz v0, :cond_9
 
+    .line 107
     invoke-static {p1, p2}, Lcom/broadcom/bt/service/test/BluetoothTestMode;->getProxy(Landroid/content/Context;Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;)Z
 
     move-result v0
 
     goto/16 :goto_0
 
+    .line 109
     :cond_9
     const-string v0, "BluetoothProxyManager"
 
@@ -227,5 +251,6 @@
 
     move v0, v2
 
+    .line 110
     goto/16 :goto_0
 .end method

@@ -24,12 +24,14 @@
     .locals 1
 
     .prologue
+    .line 142
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 
+    .line 143
     const/16 v0, 0x18
 
     new-array v0, v0, [C
@@ -43,6 +45,7 @@
     .locals 0
 
     .prologue
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,6 +59,7 @@
     .parameter "zeropad"
 
     .prologue
+    .line 146
     const/16 v0, 0x63
 
     if-gt p0, v0, :cond_0
@@ -66,12 +70,15 @@
 
     if-lt p3, v0, :cond_1
 
+    .line 147
     :cond_0
     add-int/lit8 v0, p1, 0x3
 
+    .line 155
     :goto_0
     return v0
 
+    .line 149
     :cond_1
     const/16 v0, 0x9
 
@@ -83,21 +90,25 @@
 
     if-lt p3, v0, :cond_3
 
+    .line 150
     :cond_2
     add-int/lit8 v0, p1, 0x2
 
     goto :goto_0
 
+    .line 152
     :cond_3
     if-nez p2, :cond_4
 
     if-lez p0, :cond_5
 
+    .line 153
     :cond_4
     add-int/lit8 v0, p1, 0x1
 
     goto :goto_0
 
+    .line 155
     :cond_5
     const/4 v0, 0x0
 
@@ -111,19 +122,23 @@
     .parameter "pw"
 
     .prologue
+    .line 276
     const-wide/16 v0, 0x0
 
     cmp-long v0, p0, v0
 
     if-nez v0, :cond_0
 
+    .line 277
     const-string v0, "--"
 
     invoke-virtual {p4, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 281
     :goto_0
     return-void
 
+    .line 280
     :cond_0
     sub-long v0, p0, p2
 
@@ -140,10 +155,12 @@
     .parameter "pw"
 
     .prologue
+    .line 271
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;I)V
 
+    .line 272
     return-void
 .end method
 
@@ -154,15 +171,18 @@
     .parameter "fieldLen"
 
     .prologue
+    .line 263
     sget-object v1, Landroid/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 264
     :try_start_0
     invoke-static {p0, p1, p3}, Landroid/util/TimeUtils;->formatDurationLocked(JI)I
 
     move-result v0
 
+    .line 265
     .local v0, len:I
     new-instance v2, Ljava/lang/String;
 
@@ -174,10 +194,13 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 266
     monitor-exit v1
 
+    .line 267
     return-void
 
+    .line 266
     .end local v0           #len:I
     :catchall_0
     move-exception v2
@@ -195,10 +218,12 @@
     .parameter "builder"
 
     .prologue
+    .line 255
     sget-object v1, Landroid/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 256
     const/4 v2, 0x0
 
     :try_start_0
@@ -206,6 +231,7 @@
 
     move-result v0
 
+    .line 257
     .local v0, len:I
     sget-object v2, Landroid/util/TimeUtils;->sFormatStr:[C
 
@@ -213,10 +239,13 @@
 
     invoke-virtual {p2, v2, v3, v0}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
+    .line 258
     monitor-exit v1
 
+    .line 259
     return-void
 
+    .line 258
     .end local v0           #len:I
     :catchall_0
     move-exception v2
@@ -234,6 +263,7 @@
     .parameter "fieldLen"
 
     .prologue
+    .line 183
     sget-object v4, Landroid/util/TimeUtils;->sFormatStr:[C
 
     array-length v4, v4
@@ -244,6 +274,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 184
     move/from16 v0, p2
 
     new-array v0, v0, [C
@@ -252,9 +283,11 @@
 
     sput-object v4, Landroid/util/TimeUtils;->sFormatStr:[C
 
+    .line 187
     :cond_0
     sget-object v4, Landroid/util/TimeUtils;->sFormatStr:[C
 
+    .line 189
     .local v4, formatStr:[C
     const-wide/16 v5, 0x0
 
@@ -262,11 +295,14 @@
 
     if-nez v5, :cond_2
 
+    .line 190
     const/4 v7, 0x0
 
+    .line 191
     .local v7, pos:I
     add-int/lit8 p2, p2, -0x1
 
+    .line 192
     .end local p0
     :goto_0
     move v0, v7
@@ -275,22 +311,27 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 193
     const/16 p0, 0x20
 
     aput-char p0, v4, v7
 
     goto :goto_0
 
+    .line 195
     :cond_1
     const/16 p0, 0x30
 
     aput-char p0, v4, v7
 
+    .line 196
     add-int/lit8 p0, v7, 0x1
 
+    .line 250
     :goto_1
     return p0
 
+    .line 200
     .end local v7           #pos:I
     .restart local p0
     :cond_2
@@ -300,11 +341,13 @@
 
     if-lez v5, :cond_5
 
+    .line 201
     const/16 v5, 0x2b
 
     .local v5, prefix:C
     move v8, v5
 
+    .line 207
     .end local v5           #prefix:C
     .local v8, prefix:C
     :goto_2
@@ -314,6 +357,7 @@
 
     long-to-int v14, v5
 
+    .line 208
     .local v14, millis:I
     const-wide/16 v5, 0x3e8
 
@@ -336,6 +380,7 @@
 
     move v6, v0
 
+    .line 209
     .local v6, seconds:I
     const/4 v5, 0x0
 
@@ -345,32 +390,38 @@
     .local p0, hours:I
     const/16 p1, 0x0
 
+    .line 211
     .local p1, minutes:I
     const v7, 0x15180
 
     if-le v6, v7, :cond_3
 
+    .line 212
     const v5, 0x15180
 
     div-int v5, v6, v5
 
+    .line 213
     const v7, 0x15180
 
     mul-int/2addr v7, v5
 
     sub-int/2addr v6, v7
 
+    .line 215
     :cond_3
     const/16 v7, 0xe10
 
     if-le v6, v7, :cond_4
 
+    .line 216
     move v0, v6
 
     div-int/lit16 v0, v0, 0xe10
 
     move/from16 p0, v0
 
+    .line 217
     move/from16 v0, p0
 
     mul-int/lit16 v0, v0, 0xe10
@@ -379,27 +430,33 @@
 
     sub-int/2addr v6, v7
 
+    .line 219
     :cond_4
     const/16 v7, 0x3c
 
     if-le v6, v7, :cond_13
 
+    .line 220
     div-int/lit8 p1, v6, 0x3c
 
+    .line 221
     mul-int/lit8 v7, p1, 0x3c
 
     sub-int/2addr v6, v7
 
     move v15, v6
 
+    .line 224
     .end local v6           #seconds:I
     .local v15, seconds:I
     :goto_3
     const/4 v7, 0x0
 
+    .line 226
     .restart local v7       #pos:I
     if-eqz p2, :cond_a
 
+    .line 227
     const/4 v6, 0x1
 
     const/4 v9, 0x0
@@ -410,6 +467,7 @@
 
     move-result v6
 
+    .line 228
     .local v6, myLen:I
     const/4 v9, 0x1
 
@@ -434,6 +492,7 @@
 
     add-int/2addr v6, v9
 
+    .line 229
     const/4 v9, 0x1
 
     if-lez v6, :cond_7
@@ -457,6 +516,7 @@
 
     add-int/2addr v6, v9
 
+    .line 230
     const/4 v9, 0x1
 
     if-lez v6, :cond_8
@@ -472,6 +532,7 @@
 
     add-int/2addr v6, v9
 
+    .line 231
     const/4 v9, 0x2
 
     const/4 v10, 0x1
@@ -489,6 +550,7 @@
 
     add-int/2addr v6, v9
 
+    .line 232
     :goto_8
     move v0, v6
 
@@ -496,16 +558,20 @@
 
     if-ge v0, v1, :cond_a
 
+    .line 233
     const/16 v9, 0x20
 
     aput-char v9, v4, v7
 
+    .line 234
     add-int/lit8 v7, v7, 0x1
 
+    .line 235
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_8
 
+    .line 203
     .end local v5           #days:I
     .end local v6           #myLen:I
     .end local v7           #pos:I
@@ -517,6 +583,7 @@
     :cond_5
     const/16 v5, 0x2d
 
+    .line 204
     .local v5, prefix:C
     move-wide/from16 v0, p0
 
@@ -530,6 +597,7 @@
     .restart local v8       #prefix:C
     goto/16 :goto_2
 
+    .line 228
     .local v5, days:I
     .restart local v6       #myLen:I
     .restart local v7       #pos:I
@@ -542,29 +610,36 @@
 
     goto :goto_4
 
+    .line 229
     :cond_7
     const/4 v10, 0x0
 
     goto :goto_5
 
+    .line 230
     :cond_8
     const/4 v10, 0x0
 
     goto :goto_6
 
+    .line 231
     :cond_9
     const/4 v11, 0x0
 
     goto :goto_7
 
+    .line 239
     .end local v6           #myLen:I
     :cond_a
     aput-char v8, v4, v7
 
+    .line 240
     add-int/lit8 v7, v7, 0x1
 
+    .line 242
     move/from16 v16, v7
 
+    .line 243
     .local v16, start:I
     if-eqz p2, :cond_b
 
@@ -572,6 +647,7 @@
 
     move/from16 v17, v6
 
+    .line 244
     .local v17, zeropad:Z
     :goto_9
     const/16 v6, 0x64
@@ -585,6 +661,7 @@
     .end local v8           #prefix:C
     move-result v7
 
+    .line 245
     const/16 v10, 0x68
 
     move v0, v7
@@ -616,6 +693,7 @@
 
     move-result v7
 
+    .line 246
     const/16 v10, 0x6d
 
     move v0, v7
@@ -647,6 +725,7 @@
 
     move-result v7
 
+    .line 247
     const/16 v10, 0x73
 
     move v0, v7
@@ -677,6 +756,7 @@
 
     move-result v7
 
+    .line 248
     const/16 v10, 0x6d
 
     const/4 v12, 0x1
@@ -704,14 +784,17 @@
 
     move-result v7
 
+    .line 249
     const/16 p0, 0x73
 
     aput-char p0, v4, v7
 
+    .line 250
     add-int/lit8 p0, v7, 0x1
 
     goto/16 :goto_1
 
+    .line 243
     .end local v17           #zeropad:Z
     .restart local v5       #days:I
     .restart local v8       #prefix:C
@@ -723,6 +806,7 @@
 
     goto :goto_9
 
+    .line 245
     .end local v8           #prefix:C
     .restart local v17       #zeropad:Z
     :cond_c
@@ -740,6 +824,7 @@
 
     goto :goto_b
 
+    .line 246
     :cond_e
     const/16 p0, 0x0
 
@@ -755,6 +840,7 @@
 
     goto :goto_d
 
+    .line 247
     :cond_10
     const/16 p0, 0x0
 
@@ -769,6 +855,7 @@
 
     goto :goto_f
 
+    .line 248
     :cond_12
     const/16 p0, 0x0
 
@@ -800,27 +887,33 @@
     .parameter "country"
 
     .prologue
+    .line 45
     if-nez p4, :cond_0
 
+    .line 46
     const/4 p0, 0x0
 
+    .line 111
     .end local p0
     .end local p1
     .end local p2
     :goto_0
     return-object p0
 
+    .line 49
     .restart local p0
     .restart local p1
     .restart local p2
     :cond_0
     const/4 v0, 0x0
 
+    .line 51
     .local v0, best:Ljava/util/TimeZone;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
 
+    .line 52
     .local v1, r:Landroid/content/res/Resources;
     const v2, 0x10b000c
 
@@ -828,50 +921,59 @@
 
     move-result-object v7
 
+    .line 53
     .local v7, parser:Landroid/content/res/XmlResourceParser;
     new-instance v6, Ljava/util/Date;
 
     invoke-direct {v6, p2, p3}, Ljava/util/Date;-><init>(J)V
 
+    .line 55
     .local v6, d:Ljava/util/Date;
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v2
 
+    .line 56
     .local v2, current:Ljava/util/TimeZone;
     invoke-virtual {v2}, Ljava/util/TimeZone;->getID()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 57
     .local v4, currentName:Ljava/lang/String;
     invoke-virtual {v2, p2, p3}, Ljava/util/TimeZone;->getOffset(J)I
 
     move-result v5
 
+    .line 58
     .local v5, currentOffset:I
     invoke-virtual {v2, v6}, Ljava/util/TimeZone;->inDaylightTime(Ljava/util/Date;)Z
 
     move-result v3
 
+    .line 61
     .local v3, currentDst:Z
     :try_start_0
-    const-string v1, "timezones"
+    const-string/jumbo v1, "timezones"
 
     .end local v1           #r:Landroid/content/res/Resources;
     invoke-static {v7, v1}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
+    .line 64
     :cond_1
     :goto_1
     invoke-static {v7}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
+    .line 66
     invoke-interface {v7}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 67
     .local v1, element:Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    const-string v8, "timezone"
+    const-string/jumbo v8, "timezone"
 
     invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_0
@@ -884,15 +986,18 @@
     .end local v1           #element:Ljava/lang/String;
     if-nez v1, :cond_3
 
+    .line 108
     :cond_2
     invoke-interface {v7}, Landroid/content/res/XmlResourceParser;->close()V
 
     move-object p0, v0
 
+    .line 109
     .end local v0           #best:Ljava/util/TimeZone;
     .local p0, best:Ljava/util/TimeZone;
     goto :goto_0
 
+    .line 71
     .restart local v0       #best:Ljava/util/TimeZone;
     .local p0, offset:I
     :cond_3
@@ -905,6 +1010,7 @@
 
     move-result-object v1
 
+    .line 73
     .local v1, code:Ljava/lang/String;
     invoke-virtual {p4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -913,6 +1019,7 @@
     .end local v1           #code:Ljava/lang/String;
     if-eqz v1, :cond_1
 
+    .line 74
     invoke-interface {v7}, Landroid/content/res/XmlResourceParser;->next()I
 
     move-result v1
@@ -921,10 +1028,12 @@
 
     if-ne v1, v8, :cond_1
 
+    .line 75
     invoke-interface {v7}, Landroid/content/res/XmlResourceParser;->getText()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 81
     .local v1, maybe:Ljava/lang/String;
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_1
@@ -936,24 +1045,29 @@
 
     if-eqz v8, :cond_4
 
+    .line 82
     if-ne v5, p0, :cond_4
 
     if-ne v3, p1, :cond_4
 
+    .line 108
     invoke-interface {v7}, Landroid/content/res/XmlResourceParser;->close()V
 
     move-object p0, v2
 
     goto :goto_0
 
+    .line 92
     :cond_4
     if-nez v0, :cond_1
 
+    .line 93
     :try_start_2
     invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object v1
 
+    .line 95
     .local v1, tz:Ljava/util/TimeZone;
     invoke-virtual {v1, p2, p3}, Ljava/util/TimeZone;->getOffset(J)I
 
@@ -971,10 +1085,12 @@
 
     if-ne v8, p1, :cond_1
 
+    .line 97
     move-object v0, v1
 
     goto :goto_1
 
+    .line 103
     .end local v1           #tz:Ljava/util/TimeZone;
     :catch_0
     move-exception p0
@@ -983,6 +1099,7 @@
 
     move-object p0, v0
 
+    .line 104
     .end local v0           #best:Ljava/util/TimeZone;
     .local p0, best:Ljava/util/TimeZone;
     .local p1, e:Lorg/xmlpull/v1/XmlPullParserException;
@@ -996,10 +1113,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 108
     invoke-interface {v7}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
 
+    .line 105
     .restart local v0       #best:Ljava/util/TimeZone;
     .local p0, offset:I
     .local p1, dst:Z
@@ -1011,6 +1130,7 @@
 
     move-object p0, v0
 
+    .line 106
     .end local v0           #best:Ljava/util/TimeZone;
     .local p0, best:Ljava/util/TimeZone;
     .local p1, e:Ljava/io/IOException;
@@ -1024,6 +1144,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 108
     invoke-interface {v7}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
@@ -1058,6 +1179,7 @@
     .locals 1
 
     .prologue
+    .line 132
     invoke-static {}, Lorg/apache/harmony/luni/internal/util/ZoneInfoDB;->getVersion()Ljava/lang/String;
 
     move-result-object v0
@@ -1075,13 +1197,16 @@
     .parameter "zeropad"
 
     .prologue
+    .line 160
     if-nez p4, :cond_0
 
     if-lez p1, :cond_7
 
+    .line 161
     :cond_0
     move v1, p3
 
+    .line 162
     .local v1, startPos:I
     if-eqz p4, :cond_1
 
@@ -1094,9 +1219,11 @@
 
     if-le p1, v2, :cond_3
 
+    .line 163
     :cond_2
     div-int/lit8 v0, p1, 0x64
 
+    .line 164
     .local v0, dig:I
     add-int/lit8 v2, v0, 0x30
 
@@ -1104,12 +1231,15 @@
 
     aput-char v2, p0, p3
 
+    .line 165
     add-int/lit8 p3, p3, 0x1
 
+    .line 166
     mul-int/lit8 v2, v0, 0x64
 
     sub-int/2addr p1, v2
 
+    .line 168
     .end local v0           #dig:I
     :cond_3
     if-eqz p4, :cond_4
@@ -1125,9 +1255,11 @@
 
     if-eq v1, p3, :cond_6
 
+    .line 169
     :cond_5
     div-int/lit8 v0, p1, 0xa
 
+    .line 170
     .restart local v0       #dig:I
     add-int/lit8 v2, v0, 0x30
 
@@ -1135,12 +1267,15 @@
 
     aput-char v2, p0, p3
 
+    .line 171
     add-int/lit8 p3, p3, 0x1
 
+    .line 172
     mul-int/lit8 v2, v0, 0xa
 
     sub-int/2addr p1, v2
 
+    .line 174
     .end local v0           #dig:I
     :cond_6
     add-int/lit8 v2, p1, 0x30
@@ -1149,12 +1284,16 @@
 
     aput-char v2, p0, p3
 
+    .line 175
     add-int/lit8 p3, p3, 0x1
 
+    .line 176
     aput-char p2, p0, p3
 
+    .line 177
     add-int/lit8 p3, p3, 0x1
 
+    .line 179
     .end local v1           #startPos:I
     :cond_7
     return p3

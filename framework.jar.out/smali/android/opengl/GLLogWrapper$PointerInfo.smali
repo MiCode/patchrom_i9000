@@ -34,10 +34,12 @@
     .parameter
 
     .prologue
+    .line 3467
     iput-object p1, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->this$0:Landroid/opengl/GLLogWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3468
     return-void
 .end method
 
@@ -50,18 +52,24 @@
     .parameter "pointer"
 
     .prologue
+    .line 3470
     iput-object p1, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->this$0:Landroid/opengl/GLLogWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3471
     iput p2, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->mSize:I
 
+    .line 3472
     iput p3, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->mType:I
 
+    .line 3473
     iput p4, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->mStride:I
 
+    .line 3474
     iput-object p5, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->mPointer:Ljava/nio/Buffer;
 
+    .line 3475
     return-void
 .end method
 
@@ -71,6 +79,7 @@
     .locals 3
 
     .prologue
+    .line 3499
     iget-object v0, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->mPointer:Ljava/nio/Buffer;
 
     if-nez v0, :cond_0
@@ -80,8 +89,10 @@
     :goto_0
     iput-object v0, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->mTempByteBuffer:Ljava/nio/ByteBuffer;
 
+    .line 3500
     return-void
 
+    .line 3499
     :cond_0
     iget-object v0, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->this$0:Landroid/opengl/GLLogWrapper;
 
@@ -101,6 +112,7 @@
     .locals 2
 
     .prologue
+    .line 3495
     iget v0, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->mStride:I
 
     if-lez v0, :cond_0
@@ -133,14 +145,17 @@
 
     const/4 v0, 0x1
 
+    .line 3478
     sparse-switch p1, :sswitch_data_0
 
+    .line 3490
     const/4 v0, 0x0
 
     :goto_0
     :sswitch_0
     return v0
 
+    .line 3484
     :sswitch_1
     const/4 v0, 0x2
 
@@ -149,13 +164,16 @@
     :sswitch_2
     move v0, v1
 
+    .line 3486
     goto :goto_0
 
     :sswitch_3
     move v0, v1
 
+    .line 3488
     goto :goto_0
 
+    .line 3478
     nop
 
     :sswitch_data_0
@@ -172,9 +190,11 @@
     .locals 1
 
     .prologue
+    .line 3503
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/opengl/GLLogWrapper$PointerInfo;->mTempByteBuffer:Ljava/nio/ByteBuffer;
 
+    .line 3504
     return-void
 .end method

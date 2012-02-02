@@ -12,6 +12,7 @@
     .locals 0
 
     .prologue
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,11 +23,14 @@
     .parameter "path"
 
     .prologue
+    .line 26
     const/4 v0, 0x0
 
+    .line 27
     .local v0, result:Z
     if-eqz p0, :cond_0
 
+    .line 28
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -35,6 +39,7 @@
 
     move-result v0
 
+    .line 30
     :cond_0
     return v0
 .end method
@@ -44,6 +49,7 @@
     .parameter "path"
 
     .prologue
+    .line 17
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -60,17 +66,21 @@
     .parameter "path"
 
     .prologue
+    .line 39
     const/4 v0, 0x0
 
+    .line 40
     .local v0, result:Z
     if-eqz p0, :cond_0
 
+    .line 41
     invoke-static {p0}, Landroid/drm/mobile2/DrmUtils;->checkForFileorDirectoryExists(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 42
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -79,10 +89,12 @@
 
     move-result v0
 
+    .line 47
     :cond_0
     :goto_0
     return v0
 
+    .line 44
     :cond_1
     const-string v1, "DrmUtils"
 

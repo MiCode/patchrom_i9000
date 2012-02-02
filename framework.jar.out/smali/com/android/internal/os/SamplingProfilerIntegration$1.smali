@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 97
     iput-object p1, p0, Lcom/android/internal/os/SamplingProfilerIntegration$1;->val$name:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,19 +43,23 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 99
     const-string v0, "/sdcard/snapshots"
 
+    .line 100
     .local v0, dir:Ljava/lang/String;
     sget-boolean v1, Lcom/android/internal/os/SamplingProfilerIntegration;->dirMade:Z
 
     if-nez v1, :cond_0
 
+    .line 101
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
+    .line 102
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -65,10 +70,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 103
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/internal/os/SamplingProfilerIntegration;->dirMade:Z
 
+    .line 110
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/os/SamplingProfilerIntegration$1;->val$name:Ljava/lang/String;
@@ -78,11 +85,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 112
     sput-boolean v2, Lcom/android/internal/os/SamplingProfilerIntegration;->pending:Z
 
+    .line 114
     :goto_0
     return-void
 
+    .line 105
     :cond_1
     const-string v1, "SamplingProfilerIntegration"
 
@@ -114,6 +124,7 @@
 
     goto :goto_0
 
+    .line 112
     :catchall_0
     move-exception v1
 

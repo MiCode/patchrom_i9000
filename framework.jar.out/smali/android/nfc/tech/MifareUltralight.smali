@@ -32,19 +32,23 @@
     .end annotation
 
     .prologue
+    .line 96
     const/16 v1, 0x9
 
     invoke-direct {p0, p1, v1}, Landroid/nfc/tech/BasicTagTechnology;-><init>(Landroid/nfc/Tag;I)V
 
+    .line 99
     invoke-static {p1}, Landroid/nfc/tech/NfcA;->get(Landroid/nfc/Tag;)Landroid/nfc/tech/NfcA;
 
     move-result-object v0
 
+    .line 101
     .local v0, a:Landroid/nfc/tech/NfcA;
     const/4 v1, -0x1
 
     iput v1, p0, Landroid/nfc/tech/MifareUltralight;->mType:I
 
+    .line 103
     invoke-virtual {v0}, Landroid/nfc/tech/NfcA;->getSak()S
 
     move-result v1
@@ -63,10 +67,12 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 107
     const/4 v1, 0x1
 
     iput v1, p0, Landroid/nfc/tech/MifareUltralight;->mType:I
 
+    .line 109
     :cond_0
     return-void
 .end method
@@ -78,6 +84,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 86
     const/16 v1, 0x9
 
     invoke-virtual {p0, v1}, Landroid/nfc/Tag;->hasTech(I)Z
@@ -88,9 +95,11 @@
 
     move-object v1, v2
 
+    .line 90
     :goto_0
     return-object v1
 
+    .line 88
     :cond_0
     :try_start_0
     new-instance v1, Landroid/nfc/tech/MifareUltralight;
@@ -101,6 +110,7 @@
 
     goto :goto_0
 
+    .line 89
     :catch_0
     move-exception v1
 
@@ -109,6 +119,7 @@
     .local v0, e:Landroid/os/RemoteException;
     move-object v1, v2
 
+    .line 90
     goto :goto_0
 .end method
 
@@ -117,12 +128,14 @@
     .parameter "pageIndex"
 
     .prologue
+    .line 211
     if-ltz p0, :cond_0
 
     const/16 v0, 0x100
 
     if-lt p0, v0, :cond_1
 
+    .line 212
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -130,7 +143,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "page out of bounds: "
+    const-string/jumbo v2, "page out of bounds: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -148,6 +161,7 @@
 
     throw v0
 
+    .line 214
     :cond_1
     return-void
 .end method
@@ -163,6 +177,7 @@
     .end annotation
 
     .prologue
+    .line 58
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->close()V
 
     return-void
@@ -177,6 +192,7 @@
     .end annotation
 
     .prologue
+    .line 58
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->connect()V
 
     return-void
@@ -186,6 +202,7 @@
     .locals 1
 
     .prologue
+    .line 58
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->getTag()Landroid/nfc/Tag;
 
     move-result-object v0
@@ -197,6 +214,7 @@
     .locals 1
 
     .prologue
+    .line 123
     iget v0, p0, Landroid/nfc/tech/MifareUltralight;->mType:I
 
     return v0
@@ -206,6 +224,7 @@
     .locals 1
 
     .prologue
+    .line 58
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->isConnected()Z
 
     move-result v0
@@ -225,10 +244,13 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 150
     invoke-static {p1}, Landroid/nfc/tech/MifareUltralight;->validatePageIndex(I)V
 
+    .line 151
     invoke-virtual {p0}, Landroid/nfc/tech/MifareUltralight;->checkConnected()V
 
+    .line 153
     const/4 v1, 0x2
 
     new-array v0, v1, [B
@@ -243,6 +265,7 @@
 
     aput-byte v2, v0, v1
 
+    .line 154
     .local v0, cmd:[B
     invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/MifareUltralight;->transceive([BZ)[B
 
@@ -260,6 +283,7 @@
     .end annotation
 
     .prologue
+    .line 58
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->reconnect()V
 
     return-void
@@ -275,6 +299,7 @@
     .end annotation
 
     .prologue
+    .line 202
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/MifareUltralight;->transceive([BZ)[B
@@ -297,34 +322,42 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 175
     invoke-static {p1}, Landroid/nfc/tech/MifareUltralight;->validatePageIndex(I)V
 
+    .line 176
     invoke-virtual {p0}, Landroid/nfc/tech/MifareUltralight;->checkConnected()V
 
+    .line 178
     array-length v1, p2
 
     add-int/lit8 v1, v1, 0x2
 
     new-array v0, v1, [B
 
+    .line 179
     .local v0, cmd:[B
     const/16 v1, -0x5e
 
     aput-byte v1, v0, v3
 
+    .line 180
     const/4 v1, 0x1
 
     int-to-byte v2, p1
 
     aput-byte v2, v0, v1
 
+    .line 181
     const/4 v1, 0x2
 
     array-length v2, p2
 
     invoke-static {p2, v3, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 183
     invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/MifareUltralight;->transceive([BZ)[B
 
+    .line 184
     return-void
 .end method

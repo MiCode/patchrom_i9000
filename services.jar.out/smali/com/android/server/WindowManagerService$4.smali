@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 4806
     iput-object p1, p0, Lcom/android/server/WindowManagerService$4;->this$0:Lcom/android/server/WindowManagerService;
 
     iput-object p2, p0, Lcom/android/server/WindowManagerService$4;->val$watcherBinder:Landroid/os/IBinder;
@@ -45,12 +46,14 @@
     .locals 5
 
     .prologue
+    .line 4808
     iget-object v2, p0, Lcom/android/server/WindowManagerService$4;->this$0:Lcom/android/server/WindowManagerService;
 
     iget-object v3, v2, Lcom/android/server/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v3
 
+    .line 4809
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -66,6 +69,7 @@
 
     if-ge v0, v2, :cond_2
 
+    .line 4810
     iget-object v4, p0, Lcom/android/server/WindowManagerService$4;->val$watcherBinder:Landroid/os/IBinder;
 
     iget-object v2, p0, Lcom/android/server/WindowManagerService$4;->this$0:Lcom/android/server/WindowManagerService;
@@ -84,6 +88,7 @@
 
     if-ne v4, v2, :cond_1
 
+    .line 4811
     iget-object v2, p0, Lcom/android/server/WindowManagerService$4;->this$0:Lcom/android/server/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/WindowManagerService;->mRotationWatchers:Ljava/util/ArrayList;
@@ -94,9 +99,11 @@
 
     check-cast v1, Landroid/view/IRotationWatcher;
 
+    .line 4812
     .local v1, removed:Landroid/view/IRotationWatcher;
     if-eqz v1, :cond_0
 
+    .line 4813
     invoke-interface {v1}, Landroid/view/IRotationWatcher;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -105,20 +112,25 @@
 
     invoke-interface {v2, p0, v4}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
+    .line 4815
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
+    .line 4809
     .end local v1           #removed:Landroid/view/IRotationWatcher;
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 4818
     :cond_2
     monitor-exit v3
 
+    .line 4819
     return-void
 
+    .line 4818
     :catchall_0
     move-exception v2
 

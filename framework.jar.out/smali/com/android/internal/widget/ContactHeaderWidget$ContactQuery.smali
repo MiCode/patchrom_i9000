@@ -45,6 +45,7 @@
     .locals 3
 
     .prologue
+    .line 97
     const/16 v0, 0xb
 
     new-array v0, v0, [Ljava/lang/String;
@@ -63,7 +64,7 @@
 
     const/4 v1, 0x2
 
-    const-string v2, "photo_id"
+    const-string/jumbo v2, "photo_id"
 
     aput-object v2, v0, v1
 
@@ -75,13 +76,13 @@
 
     const/4 v1, 0x4
 
-    const-string v2, "phonetic_name"
+    const-string/jumbo v2, "phonetic_name"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string v2, "starred"
+    const-string/jumbo v2, "starred"
 
     aput-object v2, v0, v1
 

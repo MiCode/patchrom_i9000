@@ -17,6 +17,7 @@
     .locals 8
 
     .prologue
+    .line 36
     const/4 v5, 0x7
 
     new-array v5, v5, [Ljava/lang/String;
@@ -65,6 +66,7 @@
 
     sput-object v5, Lcom/android/internal/policy/impl/Policy;->preload_classes:[Ljava/lang/String;
 
+    .line 49
     sget-object v0, Lcom/android/internal/policy/impl/Policy;->preload_classes:[Ljava/lang/String;
 
     .local v0, arr$:[Ljava/lang/String;
@@ -79,20 +81,24 @@
 
     aget-object v4, v0, v2
 
+    .line 51
     .local v4, s:Ljava/lang/String;
     :try_start_0
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 49
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 52
     :catch_0
     move-exception v1
 
+    .line 53
     .local v1, ex:Ljava/lang/ClassNotFoundException;
     const-string v5, "PhonePolicy"
 
@@ -118,6 +124,7 @@
 
     goto :goto_1
 
+    .line 56
     .end local v1           #ex:Ljava/lang/ClassNotFoundException;
     .end local v4           #s:Ljava/lang/String;
     :cond_0
@@ -128,6 +135,7 @@
     .locals 0
 
     .prologue
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -140,6 +148,7 @@
     .parameter "x0"
 
     .prologue
+    .line 33
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/Policy;->makeNewLayoutInflater(Landroid/content/Context;)Lcom/android/internal/policy/impl/PhoneLayoutInflater;
 
     move-result-object v0
@@ -152,6 +161,7 @@
     .parameter "context"
 
     .prologue
+    .line 63
     new-instance v0, Lcom/android/internal/policy/impl/PhoneLayoutInflater;
 
     invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/PhoneLayoutInflater;-><init>(Landroid/content/Context;)V
@@ -164,6 +174,7 @@
     .parameter "x0"
 
     .prologue
+    .line 33
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/Policy;->makeNewWindow(Landroid/content/Context;)Lcom/android/internal/policy/impl/PhoneWindow;
 
     move-result-object v0
@@ -176,6 +187,7 @@
     .parameter "context"
 
     .prologue
+    .line 59
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/PhoneWindow;-><init>(Landroid/content/Context;)V
@@ -187,6 +199,7 @@
     .locals 1
 
     .prologue
+    .line 33
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/Policy;->makeNewWindowManager()Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     move-result-object v0

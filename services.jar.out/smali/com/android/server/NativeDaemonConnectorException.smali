@@ -14,12 +14,15 @@
     .locals 1
 
     .prologue
+    .line 27
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
+    .line 24
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/NativeDaemonConnectorException;->mCode:I
 
+    .line 27
     return-void
 .end method
 
@@ -30,6 +33,7 @@
     .parameter "error"
 
     .prologue
+    .line 36
     const-string v0, "Cmd {%s} failed with code %d : {%s}"
 
     const/4 v1, 0x3
@@ -58,14 +62,18 @@
 
     invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
+    .line 24
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/NativeDaemonConnectorException;->mCode:I
 
+    .line 37
     iput p1, p0, Lcom/android/server/NativeDaemonConnectorException;->mCode:I
 
+    .line 38
     iput-object p2, p0, Lcom/android/server/NativeDaemonConnectorException;->mCmd:Ljava/lang/String;
 
+    .line 39
     return-void
 .end method
 
@@ -74,12 +82,15 @@
     .parameter "error"
 
     .prologue
+    .line 31
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
+    .line 24
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/NativeDaemonConnectorException;->mCode:I
 
+    .line 32
     return-void
 .end method
 
@@ -89,6 +100,7 @@
     .locals 1
 
     .prologue
+    .line 46
     iget-object v0, p0, Lcom/android/server/NativeDaemonConnectorException;->mCmd:Ljava/lang/String;
 
     return-object v0
@@ -98,6 +110,7 @@
     .locals 1
 
     .prologue
+    .line 42
     iget v0, p0, Lcom/android/server/NativeDaemonConnectorException;->mCode:I
 
     return v0

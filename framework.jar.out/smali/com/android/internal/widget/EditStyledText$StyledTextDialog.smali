@@ -47,12 +47,15 @@
     .parameter "est"
 
     .prologue
+    .line 1278
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->this$0:Lcom/android/internal/widget/EditStyledText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1279
     iput-object p2, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mEST:Lcom/android/internal/widget/EditStyledText;
 
+    .line 1280
     return-void
 .end method
 
@@ -61,6 +64,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1265
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->onShowForegroundColorAlertDialog()V
 
     return-void
@@ -71,6 +75,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1265
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->onShowBackgroundColorAlertDialog()V
 
     return-void
@@ -81,6 +86,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1265
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->onShowSizeAlertDialog()V
 
     return-void
@@ -91,6 +97,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1265
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->onShowAlignAlertDialog()V
 
     return-void
@@ -104,10 +111,12 @@
 
     const-string v2, "EditStyledText"
 
+    .line 1351
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     if-nez v0, :cond_0
 
+    .line 1352
     const-string v0, "EditStyledText"
 
     const-string v0, "--- builder is null."
@@ -116,14 +125,17 @@
 
     move v0, v1
 
+    .line 1358
     :goto_0
     return v0
 
+    .line 1354
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mAlignTitle:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_1
 
+    .line 1355
     const-string v0, "EditStyledText"
 
     const-string v0, "--- align alert params are null."
@@ -132,8 +144,10 @@
 
     move v0, v1
 
+    .line 1356
     goto :goto_0
 
+    .line 1358
     :cond_1
     const/4 v0, 0x1
 
@@ -148,10 +162,12 @@
 
     const-string v3, "EditStyledText"
 
+    .line 1312
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     if-nez v0, :cond_0
 
+    .line 1313
     const-string v0, "EditStyledText"
 
     const-string v0, "--- builder is null."
@@ -160,9 +176,11 @@
 
     move v0, v2
 
+    .line 1324
     :goto_0
     return v0
 
+    .line 1315
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mColorTitle:Ljava/lang/CharSequence;
 
@@ -176,6 +194,7 @@
 
     if-nez v0, :cond_2
 
+    .line 1317
     :cond_1
     const-string v0, "EditStyledText"
 
@@ -185,8 +204,10 @@
 
     move v0, v2
 
+    .line 1318
     goto :goto_0
 
+    .line 1319
     :cond_2
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mColorNames:[Ljava/lang/CharSequence;
 
@@ -198,6 +219,7 @@
 
     if-eq v0, v1, :cond_3
 
+    .line 1320
     const-string v0, "EditStyledText"
 
     const-string v0, "--- the length of color alert params are different."
@@ -206,8 +228,10 @@
 
     move v0, v2
 
+    .line 1322
     goto :goto_0
 
+    .line 1324
     :cond_3
     const/4 v0, 0x1
 
@@ -222,10 +246,12 @@
 
     const-string v3, "EditStyledText"
 
+    .line 1331
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     if-nez v0, :cond_0
 
+    .line 1332
     const-string v0, "EditStyledText"
 
     const-string v0, "--- builder is null."
@@ -234,9 +260,11 @@
 
     move v0, v2
 
+    .line 1344
     :goto_0
     return v0
 
+    .line 1334
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mSizeTitle:Ljava/lang/CharSequence;
 
@@ -254,6 +282,7 @@
 
     if-nez v0, :cond_2
 
+    .line 1336
     :cond_1
     const-string v0, "EditStyledText"
 
@@ -263,8 +292,10 @@
 
     move v0, v2
 
+    .line 1337
     goto :goto_0
 
+    .line 1338
     :cond_2
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mSizeNames:[Ljava/lang/CharSequence;
 
@@ -286,6 +317,7 @@
 
     if-eq v0, v1, :cond_3
 
+    .line 1340
     const-string v0, "EditStyledText"
 
     const-string v0, "--- the length of size alert params are different."
@@ -294,8 +326,10 @@
 
     move v0, v2
 
+    .line 1342
     goto :goto_0
 
+    .line 1344
     :cond_3
     const/4 v0, 0x1
 
@@ -306,15 +340,18 @@
     .locals 3
 
     .prologue
+    .line 1431
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->checkAlignAlertParams()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 1459
     :goto_0
     return-void
 
+    .line 1434
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
@@ -322,12 +359,14 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
+    .line 1435
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
+    .line 1436
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mAlignNames:[Ljava/lang/CharSequence;
@@ -338,6 +377,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
+    .line 1458
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
@@ -349,15 +389,18 @@
     .locals 3
 
     .prologue
+    .line 1387
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->checkColorAlertParams()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 1403
     :goto_0
     return-void
 
+    .line 1390
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
@@ -365,12 +408,14 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
+    .line 1391
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
+    .line 1392
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mColorNames:[Ljava/lang/CharSequence;
@@ -381,6 +426,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
+    .line 1402
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
@@ -392,15 +438,18 @@
     .locals 3
 
     .prologue
+    .line 1365
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->checkColorAlertParams()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 1381
     :goto_0
     return-void
 
+    .line 1368
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
@@ -408,12 +457,14 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
+    .line 1369
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
+    .line 1370
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mColorNames:[Ljava/lang/CharSequence;
@@ -424,6 +475,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
+    .line 1380
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
@@ -435,15 +487,18 @@
     .locals 3
 
     .prologue
+    .line 1409
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->checkSizeAlertParams()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 1425
     :goto_0
     return-void
 
+    .line 1412
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
@@ -451,12 +506,14 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
+    .line 1413
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
+    .line 1414
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mSizeNames:[Ljava/lang/CharSequence;
@@ -467,6 +524,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
+    .line 1424
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
@@ -482,10 +540,13 @@
     .parameter "alignnames"
 
     .prologue
+    .line 1304
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mAlignTitle:Ljava/lang/CharSequence;
 
+    .line 1305
     iput-object p2, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mAlignNames:[Ljava/lang/CharSequence;
 
+    .line 1306
     return-void
 .end method
 
@@ -494,8 +555,10 @@
     .parameter "builder"
 
     .prologue
+    .line 1283
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mBuilder:Landroid/app/AlertDialog$Builder;
 
+    .line 1284
     return-void
 .end method
 
@@ -506,12 +569,16 @@
     .parameter "colorints"
 
     .prologue
+    .line 1288
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mColorTitle:Ljava/lang/CharSequence;
 
+    .line 1289
     iput-object p2, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mColorNames:[Ljava/lang/CharSequence;
 
+    .line 1290
     iput-object p3, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mColorInts:[Ljava/lang/CharSequence;
 
+    .line 1291
     return-void
 .end method
 
@@ -523,13 +590,18 @@
     .parameter "sizesendints"
 
     .prologue
+    .line 1296
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mSizeTitle:Ljava/lang/CharSequence;
 
+    .line 1297
     iput-object p2, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mSizeNames:[Ljava/lang/CharSequence;
 
+    .line 1298
     iput-object p3, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mSizeDisplayInts:[Ljava/lang/CharSequence;
 
+    .line 1299
     iput-object p4, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mSizeSendInts:[Ljava/lang/CharSequence;
 
+    .line 1300
     return-void
 .end method

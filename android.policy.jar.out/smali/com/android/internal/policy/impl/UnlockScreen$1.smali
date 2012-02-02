@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 129
     iput-object p1, p0, Lcom/android/internal/policy/impl/UnlockScreen$1;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .locals 1
 
     .prologue
+    .line 131
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$1;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
@@ -49,5 +51,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternView;->clearPattern()V
 
+    .line 132
     return-void
 .end method

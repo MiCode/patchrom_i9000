@@ -27,14 +27,17 @@
     .parameter "type"
 
     .prologue
+    .line 733
     iput-object p1, p0, Lcom/android/server/VibratorService$SettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
+    .line 734
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
+    .line 736
     #getter for: Lcom/android/server/VibratorService;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {p1}, Lcom/android/server/VibratorService;->access$1200(Lcom/android/server/VibratorService;)Landroid/content/ContentResolver;
 
@@ -55,8 +58,10 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
+    .line 738
     iput p2, p0, Lcom/android/server/VibratorService$SettingsObserver;->mType:I
 
+    .line 739
     return-void
 .end method
 
@@ -69,8 +74,10 @@
     .prologue
     const/4 v5, 0x7
 
+    .line 743
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
+    .line 745
     iget-object v0, p0, Lcom/android/server/VibratorService$SettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
     #getter for: Lcom/android/server/VibratorService;->mVibe:Lcom/immersion/android/ImmVibe;
@@ -80,14 +87,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 746
     iget v0, p0, Lcom/android/server/VibratorService$SettingsObserver;->mType:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 765
     :cond_0
     :goto_0
     return-void
 
+    .line 749
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/VibratorService$SettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
@@ -125,6 +135,7 @@
 
     goto :goto_0
 
+    .line 754
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/VibratorService$SettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
@@ -164,6 +175,7 @@
 
     goto :goto_0
 
+    .line 759
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/VibratorService$SettingsObserver;->this$0:Lcom/android/server/VibratorService;
 
@@ -203,6 +215,7 @@
 
     goto :goto_0
 
+    .line 746
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

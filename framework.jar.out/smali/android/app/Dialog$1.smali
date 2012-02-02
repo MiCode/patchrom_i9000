@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 109
     iput-object p1, p0, Landroid/app/Dialog$1;->this$0:Landroid/app/Dialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +41,12 @@
     .locals 1
 
     .prologue
+    .line 111
     iget-object v0, p0, Landroid/app/Dialog$1;->this$0:Landroid/app/Dialog;
 
     #calls: Landroid/app/Dialog;->dismissDialog()V
     invoke-static {v0}, Landroid/app/Dialog;->access$000(Landroid/app/Dialog;)V
 
+    .line 112
     return-void
 .end method

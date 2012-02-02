@@ -32,6 +32,7 @@
     .locals 2
 
     .prologue
+    .line 48
     new-instance v0, Landroid/accounts/AccountAuthenticatorCache$MySerializer;
 
     const/4 v1, 0x0
@@ -50,6 +51,7 @@
     .prologue
     const-string v2, "android.accounts.AccountAuthenticator"
 
+    .line 51
     const-string v0, "android.accounts.AccountAuthenticator"
 
     const-string v0, "android.accounts.AccountAuthenticator"
@@ -66,6 +68,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/content/pm/RegisteredServicesCache;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/XmlSerializerAndParser;)V
 
+    .line 54
     return-void
 .end method
 
@@ -78,6 +81,7 @@
     .parameter "attrs"
 
     .prologue
+    .line 58
     sget-object v3, Lcom/android/internal/R$styleable;->AccountAuthenticator:[I
 
     move-object/from16 v0, p1
@@ -90,6 +94,7 @@
 
     move-result-object v16
 
+    .line 61
     .local v16, sa:Landroid/content/res/TypedArray;
     const/4 v3, 0x2
 
@@ -102,6 +107,7 @@
 
     move-result-object v4
 
+    .line 63
     .local v4, accountType:Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -117,6 +123,7 @@
 
     move-result v6
 
+    .line 65
     .local v6, labelId:I
     const/4 v3, 0x1
 
@@ -132,6 +139,7 @@
 
     move-result v7
 
+    .line 67
     .local v7, iconId:I
     const/4 v3, 0x3
 
@@ -147,6 +155,7 @@
 
     move-result v8
 
+    .line 69
     .local v8, smallIconId:I
     const/4 v3, 0x4
 
@@ -164,9 +173,11 @@
 
     move-result v9
 
+    .line 72
     .local v9, prefId:I
     const/4 v10, 0x0
 
+    .line 78
     .local v10, customTokens:Z
     :try_start_1
     move-object/from16 v0, p0
@@ -179,6 +190,7 @@
 
     move-result-object v13
 
+    .line 79
     .local v13, pm:Landroid/content/pm/PackageManager;
     new-instance v3, Landroid/content/Intent;
 
@@ -192,6 +204,7 @@
 
     move-result-object v15
 
+    .line 82
     .local v15, resolveInfos:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v15}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -212,6 +225,7 @@
 
     check-cast v14, Landroid/content/pm/ResolveInfo;
 
+    .line 83
     .local v14, resolveInfo:Landroid/content/pm/ResolveInfo;
     move-object v0, v14
 
@@ -219,6 +233,7 @@
 
     move-object/from16 v17, v0
 
+    .line 84
     .local v17, si:Landroid/content/pm/ServiceInfo;
     move-object/from16 v0, v17
 
@@ -236,6 +251,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 87
     move-object/from16 v0, v17
 
     iget-object v0, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
@@ -251,13 +267,16 @@
 
     move-result-object v11
 
+    .line 89
     .local v11, ctString:Ljava/lang/Object;
     if-eqz v11, :cond_0
 
+    .line 90
     const/4 v10, 0x1
 
     goto :goto_0
 
+    .line 93
     .end local v11           #ctString:Ljava/lang/Object;
     .end local v12           #i$:Ljava/util/Iterator;
     .end local v13           #pm:Landroid/content/pm/PackageManager;
@@ -269,6 +288,7 @@
 
     move-object/from16 v18, v3
 
+    .line 97
     .local v18, t:Ljava/lang/Throwable;
     :try_start_2
     const-string v3, "Account"
@@ -297,6 +317,7 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 100
     .end local v18           #t:Ljava/lang/Throwable;
     :cond_1
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -307,11 +328,14 @@
 
     if-eqz v3, :cond_2
 
+    .line 101
     const/4 v3, 0x0
 
+    .line 106
     :goto_1
     invoke-virtual/range {v16 .. v16}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 103
     return-object v3
 
     :cond_2
@@ -326,6 +350,7 @@
 
     goto :goto_1
 
+    .line 106
     .end local v4           #accountType:Ljava/lang/String;
     .end local v6           #labelId:I
     .end local v7           #iconId:I
@@ -347,6 +372,7 @@
     .parameter "x2"
 
     .prologue
+    .line 45
     invoke-virtual {p0, p1, p2, p3}, Landroid/accounts/AccountAuthenticatorCache;->parseServiceAttributes(Landroid/content/res/Resources;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/accounts/AuthenticatorDescription;
 
     move-result-object v0

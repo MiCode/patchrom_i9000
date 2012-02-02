@@ -20,16 +20,19 @@
     .locals 2
 
     .prologue
+    .line 15
     const-string v0, "fmradio_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
+    .line 16
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "FMRadio lib loaded"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 17
     return-void
 .end method
 
@@ -38,10 +41,13 @@
     .parameter "service"
 
     .prologue
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
     sput-object p1, Lcom/android/server/FMPlayerNative;->mService:Lcom/android/server/FMRadioService;
 
+    .line 23
     return-void
 .end method
 
@@ -50,6 +56,7 @@
     .parameter "af"
 
     .prologue
+    .line 63
     sget-object v0, Lcom/android/server/FMPlayerNative;->mService:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v0}, Lcom/android/server/FMRadioService;->isAFEnable()Z
@@ -58,9 +65,11 @@
 
     if-nez v0, :cond_0
 
+    .line 67
     :goto_0
     return-void
 
+    .line 65
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -82,6 +91,7 @@
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 66
     sget-object v0, Lcom/android/server/FMPlayerNative;->mService:Lcom/android/server/FMRadioService;
 
     const/16 v1, 0xe
@@ -99,6 +109,7 @@
     .locals 3
 
     .prologue
+    .line 51
     sget-object v0, Lcom/android/server/FMPlayerNative;->mService:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v0}, Lcom/android/server/FMRadioService;->isAFEnable()Z
@@ -107,14 +118,17 @@
 
     if-nez v0, :cond_0
 
+    .line 55
     :goto_0
     return-void
 
+    .line 53
     :cond_0
     const-string v0, "NotifyAFStarted :"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 54
     sget-object v0, Lcom/android/server/FMPlayerNative;->mService:Lcom/android/server/FMRadioService;
 
     const/16 v1, 0xd
@@ -131,6 +145,7 @@
     .parameter "ob"
 
     .prologue
+    .line 39
     sget-object v0, Lcom/android/server/FMPlayerNative;->mService:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v0}, Lcom/android/server/FMRadioService;->isRDSEnable()Z
@@ -139,9 +154,11 @@
 
     if-nez v0, :cond_0
 
+    .line 44
     :goto_0
     return-void
 
+    .line 41
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -163,6 +180,7 @@
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 43
     sget-object v0, Lcom/android/server/FMPlayerNative;->mService:Lcom/android/server/FMRadioService;
 
     const/16 v1, 0xa
@@ -201,12 +219,15 @@
     .end annotation
 
     .prologue
+    .line 27
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 28
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/FMPlayerNative;->mService:Lcom/android/server/FMRadioService;
 
+    .line 29
     return-void
 .end method
 

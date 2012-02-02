@@ -73,12 +73,16 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 75
     iput-object v0, p0, Landroid/webkit/WebStorage;->mHandler:Landroid/os/Handler;
 
+    .line 76
     iput-object v0, p0, Landroid/webkit/WebStorage;->mUIHandler:Landroid/os/Handler;
 
+    .line 78
     return-void
 .end method
 
@@ -88,6 +92,7 @@
     .parameter "x1"
 
     .prologue
+    .line 33
     invoke-static {p0, p1, p2}, Landroid/webkit/WebStorage;->nativeSetQuotaForOrigin(Ljava/lang/String;J)V
 
     return-void
@@ -98,6 +103,7 @@
     .parameter "x0"
 
     .prologue
+    .line 33
     invoke-static {p0}, Landroid/webkit/WebStorage;->nativeDeleteOrigin(Ljava/lang/String;)V
 
     return-void
@@ -107,6 +113,7 @@
     .locals 0
 
     .prologue
+    .line 33
     invoke-static {}, Landroid/webkit/WebStorage;->nativeDeleteAllData()V
 
     return-void
@@ -117,6 +124,7 @@
     .parameter "x0"
 
     .prologue
+    .line 33
     invoke-direct {p0}, Landroid/webkit/WebStorage;->syncValues()V
 
     return-void
@@ -127,6 +135,7 @@
     .parameter "x0"
 
     .prologue
+    .line 33
     iget-object v0, p0, Landroid/webkit/WebStorage;->mOrigins:Ljava/util/Map;
 
     return-object v0
@@ -138,6 +147,7 @@
     .parameter "x1"
 
     .prologue
+    .line 33
     invoke-direct {p0, p1}, Landroid/webkit/WebStorage;->postUIMessage(Landroid/os/Message;)V
 
     return-void
@@ -147,16 +157,19 @@
     .locals 1
 
     .prologue
+    .line 374
     sget-object v0, Landroid/webkit/WebStorage;->sWebStorage:Landroid/webkit/WebStorage;
 
     if-nez v0, :cond_0
 
+    .line 375
     new-instance v0, Landroid/webkit/WebStorage;
 
     invoke-direct {v0}, Landroid/webkit/WebStorage;-><init>()V
 
     sput-object v0, Landroid/webkit/WebStorage;->sWebStorage:Landroid/webkit/WebStorage;
 
+    .line 377
     :cond_0
     sget-object v0, Landroid/webkit/WebStorage;->sWebStorage:Landroid/webkit/WebStorage;
 
@@ -189,6 +202,7 @@
     .parameter "msg"
 
     .prologue
+    .line 355
     monitor-enter p0
 
     :try_start_0
@@ -196,17 +210,20 @@
 
     if-eqz v0, :cond_0
 
+    .line 356
     iget-object v0, p0, Landroid/webkit/WebStorage;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 358
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 355
     :catchall_0
     move-exception v0
 
@@ -220,14 +237,17 @@
     .parameter "msg"
 
     .prologue
+    .line 364
     iget-object v0, p0, Landroid/webkit/WebStorage;->mUIHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
+    .line 365
     iget-object v0, p0, Landroid/webkit/WebStorage;->mUIHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 367
     :cond_0
     return-void
 .end method
@@ -236,10 +256,12 @@
     .locals 8
 
     .prologue
+    .line 397
     invoke-static {}, Landroid/webkit/WebStorage;->nativeGetOrigins()Ljava/util/Set;
 
     move-result-object v7
 
+    .line 398
     .local v7, tmp:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/HashMap;
 
@@ -247,6 +269,7 @@
 
     iput-object v2, p0, Landroid/webkit/WebStorage;->mOrigins:Ljava/util/Map;
 
+    .line 399
     invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -265,6 +288,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 400
     .local v1, origin:Ljava/lang/String;
     new-instance v0, Landroid/webkit/WebStorage$Origin;
 
@@ -278,6 +302,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/webkit/WebStorage$Origin;-><init>(Ljava/lang/String;JJ)V
 
+    .line 403
     .local v0, website:Landroid/webkit/WebStorage$Origin;
     iget-object v2, p0, Landroid/webkit/WebStorage;->mOrigins:Ljava/util/Map;
 
@@ -285,6 +310,7 @@
 
     goto :goto_0
 
+    .line 405
     .end local v0           #website:Landroid/webkit/WebStorage$Origin;
     .end local v1           #origin:Ljava/lang/String;
     :cond_0
@@ -297,6 +323,7 @@
     .locals 1
 
     .prologue
+    .line 150
     monitor-enter p0
 
     :try_start_0
@@ -304,6 +331,7 @@
 
     if-nez v0, :cond_0
 
+    .line 151
     new-instance v0, Landroid/webkit/WebStorage$2;
 
     invoke-direct {v0, p0}, Landroid/webkit/WebStorage$2;-><init>(Landroid/webkit/WebStorage;)V
@@ -312,11 +340,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 217
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 150
     :catchall_0
     move-exception v0
 
@@ -329,16 +359,19 @@
     .locals 1
 
     .prologue
+    .line 116
     iget-object v0, p0, Landroid/webkit/WebStorage;->mUIHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
+    .line 117
     new-instance v0, Landroid/webkit/WebStorage$1;
 
     invoke-direct {v0, p0}, Landroid/webkit/WebStorage$1;-><init>(Landroid/webkit/WebStorage;)V
 
     iput-object v0, p0, Landroid/webkit/WebStorage;->mUIHandler:Landroid/os/Handler;
 
+    .line 143
     :cond_0
     return-void
 .end method
@@ -347,6 +380,7 @@
     .locals 2
 
     .prologue
+    .line 335
     const-string v0, "WebViewCoreThread"
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -363,11 +397,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 336
     invoke-static {}, Landroid/webkit/WebStorage;->nativeDeleteAllData()V
 
+    .line 340
     :goto_0
     return-void
 
+    .line 338
     :cond_0
     const/4 v0, 0x0
 
@@ -387,8 +424,10 @@
     .parameter "origin"
 
     .prologue
+    .line 321
     if-eqz p1, :cond_0
 
+    .line 322
     const-string v0, "WebViewCoreThread"
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -405,12 +444,15 @@
 
     if-eqz v0, :cond_1
 
+    .line 323
     invoke-static {p1}, Landroid/webkit/WebStorage;->nativeDeleteOrigin(Ljava/lang/String;)V
 
+    .line 329
     :cond_0
     :goto_0
     return-void
 
+    .line 325
     :cond_1
     const/4 v0, 0x0
 
@@ -443,9 +485,11 @@
     .end annotation
 
     .prologue
+    .line 235
     .local p1, callback:Landroid/webkit/ValueCallback;,"Landroid/webkit/ValueCallback<Ljava/util/Map;>;"
     if-eqz p1, :cond_0
 
+    .line 236
     const-string v0, "WebViewCoreThread"
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -462,16 +506,20 @@
 
     if-eqz v0, :cond_1
 
+    .line 237
     invoke-direct {p0}, Landroid/webkit/WebStorage;->syncValues()V
 
+    .line 238
     iget-object v0, p0, Landroid/webkit/WebStorage;->mOrigins:Ljava/util/Map;
 
     invoke-interface {p1, v0}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
 
+    .line 243
     :cond_0
     :goto_0
     return-void
 
+    .line 240
     :cond_1
     const/4 v0, 0x0
 
@@ -499,6 +547,7 @@
     .end annotation
 
     .prologue
+    .line 250
     const-string v0, "WebViewCoreThread"
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -515,14 +564,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 251
     invoke-virtual {p0}, Landroid/webkit/WebStorage;->update()V
 
+    .line 252
     iget-object v0, p0, Landroid/webkit/WebStorage;->mOrigins:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v0
 
+    .line 254
     :goto_0
     return-object v0
 
@@ -551,18 +603,23 @@
     .local p2, callback:Landroid/webkit/ValueCallback;,"Landroid/webkit/ValueCallback<Ljava/lang/Long;>;"
     const/4 v4, 0x0
 
+    .line 284
     if-nez p2, :cond_0
 
+    .line 301
     :goto_0
     return-void
 
+    .line 287
     :cond_0
     if-nez p1, :cond_1
 
+    .line 288
     invoke-interface {p2, v4}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 291
     :cond_1
     const-string v2, "WebViewCoreThread"
 
@@ -580,8 +637,10 @@
 
     if-eqz v2, :cond_2
 
+    .line 292
     invoke-direct {p0}, Landroid/webkit/WebStorage;->syncValues()V
 
+    .line 293
     iget-object v2, p0, Landroid/webkit/WebStorage;->mOrigins:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -590,6 +649,7 @@
 
     check-cast v1, Landroid/webkit/WebStorage$Origin;
 
+    .line 294
     .local v1, website:Landroid/webkit/WebStorage$Origin;
     new-instance v2, Ljava/lang/Long;
 
@@ -603,21 +663,25 @@
 
     goto :goto_0
 
+    .line 296
     .end local v1           #website:Landroid/webkit/WebStorage$Origin;
     :cond_2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 297
     .local v0, values:Ljava/util/HashMap;
-    const-string v2, "origin"
+    const-string/jumbo v2, "origin"
 
     invoke-virtual {v0, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 298
     const-string v2, "callback"
 
     invoke-virtual {v0, v2, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 299
     const/4 v2, 0x6
 
     invoke-static {v4, v2, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
@@ -648,18 +712,23 @@
     .local p2, callback:Landroid/webkit/ValueCallback;,"Landroid/webkit/ValueCallback<Ljava/lang/Long;>;"
     const/4 v4, 0x0
 
+    .line 261
     if-nez p2, :cond_0
 
+    .line 278
     :goto_0
     return-void
 
+    .line 264
     :cond_0
     if-nez p1, :cond_1
 
+    .line 265
     invoke-interface {p2, v4}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 268
     :cond_1
     const-string v2, "WebViewCoreThread"
 
@@ -677,8 +746,10 @@
 
     if-eqz v2, :cond_2
 
+    .line 269
     invoke-direct {p0}, Landroid/webkit/WebStorage;->syncValues()V
 
+    .line 270
     iget-object v2, p0, Landroid/webkit/WebStorage;->mOrigins:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -687,6 +758,7 @@
 
     check-cast v1, Landroid/webkit/WebStorage$Origin;
 
+    .line 271
     .local v1, website:Landroid/webkit/WebStorage$Origin;
     new-instance v2, Ljava/lang/Long;
 
@@ -700,21 +772,25 @@
 
     goto :goto_0
 
+    .line 273
     .end local v1           #website:Landroid/webkit/WebStorage$Origin;
     :cond_2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 274
     .local v0, values:Ljava/util/HashMap;
-    const-string v2, "origin"
+    const-string/jumbo v2, "origin"
 
     invoke-virtual {v0, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 275
     const-string v2, "callback"
 
     invoke-virtual {v0, v2, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 276
     const/4 v2, 0x5
 
     invoke-static {v4, v2, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
@@ -731,8 +807,10 @@
     .parameter "size"
 
     .prologue
+    .line 348
     invoke-static {p1, p2}, Landroid/webkit/WebStorage;->nativeSetAppCacheMaximumSize(J)V
 
+    .line 349
     return-void
 .end method
 
@@ -742,8 +820,10 @@
     .parameter "quota"
 
     .prologue
+    .line 307
     if-eqz p1, :cond_0
 
+    .line 308
     const-string v0, "WebViewCoreThread"
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -760,12 +840,15 @@
 
     if-eqz v0, :cond_1
 
+    .line 309
     invoke-static {p1, p2, p3}, Landroid/webkit/WebStorage;->nativeSetQuotaForOrigin(Ljava/lang/String;J)V
 
+    .line 315
     :cond_0
     :goto_0
     return-void
 
+    .line 311
     :cond_1
     const/4 v0, 0x0
 
@@ -788,6 +871,7 @@
     .locals 2
 
     .prologue
+    .line 385
     const-string v0, "WebViewCoreThread"
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -804,11 +888,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 386
     invoke-direct {p0}, Landroid/webkit/WebStorage;->syncValues()V
 
+    .line 390
     :goto_0
     return-void
 
+    .line 388
     :cond_0
     const/4 v0, 0x0
 

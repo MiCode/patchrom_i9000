@@ -38,6 +38,7 @@
     .locals 3
 
     .prologue
+    .line 1312
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -50,6 +51,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Threads;->ID_PROJECTION:[Ljava/lang/String;
 
+    .line 1314
     const-string v0, "content://mms-sms/threadID"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -58,6 +60,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Threads;->THREAD_ID_CONTENT_URI:Landroid/net/Uri;
 
+    .line 1316
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "conversations"
@@ -68,9 +71,10 @@
 
     sput-object v0, Landroid/provider/Telephony$Threads;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 1318
     sget-object v0, Landroid/provider/Telephony$Threads;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v1, "obsolete"
+    const-string/jumbo v1, "obsolete"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -85,8 +89,10 @@
     .locals 0
 
     .prologue
+    .line 1325
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1326
     return-void
 .end method
 
@@ -96,13 +102,16 @@
     .parameter "recipient"
 
     .prologue
+    .line 1334
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 1336
     .local v0, recipients:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 1337
     invoke-static {p0, v0}, Landroid/provider/Telephony$Threads;->getOrCreateThreadId(Landroid/content/Context;Ljava/util/Set;)J
 
     move-result-wide v1
@@ -131,12 +140,14 @@
 
     const-string v11, "Telephony"
 
+    .line 1352
     sget-object v0, Landroid/provider/Telephony$Threads;->THREAD_ID_CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v10
 
+    .line 1354
     .local v10, uriBuilder:Landroid/net/Uri$Builder;
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -156,6 +167,7 @@
 
     check-cast v9, Ljava/lang/String;
 
+    .line 1355
     .local v9, recipient:Ljava/lang/String;
     invoke-static {v9}, Landroid/provider/Telephony$Mms;->isEmailAddress(Ljava/lang/String;)Z
 
@@ -163,23 +175,27 @@
 
     if-eqz v0, :cond_0
 
+    .line 1356
     invoke-static {v9}, Landroid/provider/Telephony$Mms;->extractAddrSpec(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
+    .line 1359
     :cond_0
-    const-string v0, "recipient"
+    const-string/jumbo v0, "recipient"
 
     invoke-virtual {v10, v0, v9}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     goto :goto_0
 
+    .line 1362
     .end local v9           #recipient:Ljava/lang/String;
     :cond_1
     invoke-virtual {v10}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v2
 
+    .line 1365
     .local v2, uri:Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -197,6 +213,7 @@
 
     move-result-object v7
 
+    .line 1368
     .local v7, cursor:Landroid/database/Cursor;
     const-string v0, "Telephony"
 
@@ -224,8 +241,10 @@
 
     invoke-static {v11, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1370
     if-eqz v7, :cond_3
 
+    .line 1372
     :try_start_0
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -233,6 +252,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 1373
     const/4 v0, 0x0
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getLong(I)J
@@ -241,10 +261,12 @@
 
     move-result-wide v0
 
+    .line 1378
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     return-wide v0
 
+    .line 1375
     :cond_2
     :try_start_1
     const-string v0, "Telephony"
@@ -255,8 +277,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 1378
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
+    .line 1382
     :cond_3
     const-string v0, "Telephony"
 
@@ -284,6 +308,7 @@
 
     invoke-static {v11, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1383
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unable to find or allocate a thread ID."
@@ -292,6 +317,7 @@
 
     throw v0
 
+    .line 1378
     :catchall_0
     move-exception v0
 

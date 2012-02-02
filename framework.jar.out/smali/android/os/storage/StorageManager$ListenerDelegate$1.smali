@@ -28,6 +28,7 @@
     .parameter
 
     .prologue
+    .line 279
     iput-object p1, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->this$1:Landroid/os/storage/StorageManager$ListenerDelegate;
 
     iput-object p3, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->val$this$0:Landroid/os/storage/StorageManager;
@@ -44,10 +45,12 @@
     .parameter "msg"
 
     .prologue
+    .line 282
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/storage/StorageManager$StorageEvent;
 
+    .line 284
     .local v1, e:Landroid/os/storage/StorageManager$StorageEvent;
     iget v3, p1, Landroid/os/Message;->what:I
 
@@ -55,12 +58,14 @@
 
     if-ne v3, v4, :cond_0
 
+    .line 285
     move-object v0, v1
 
     check-cast v0, Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
 
     move-object v2, v0
 
+    .line 286
     .local v2, ev:Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
     iget-object v3, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->this$1:Landroid/os/storage/StorageManager$ListenerDelegate;
 
@@ -70,10 +75,12 @@
 
     invoke-virtual {v3, v4}, Landroid/os/storage/StorageEventListener;->onUsbMassStorageConnectionChanged(Z)V
 
+    .line 296
     .end local v2           #ev:Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
     :goto_0
     return-void
 
+    .line 287
     :cond_0
     iget v3, p1, Landroid/os/Message;->what:I
 
@@ -81,12 +88,14 @@
 
     if-ne v3, v4, :cond_1
 
+    .line 288
     move-object v0, v1
 
     check-cast v0, Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
 
     move-object v2, v0
 
+    .line 289
     .local v2, ev:Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
     iget-object v3, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->this$1:Landroid/os/storage/StorageManager$ListenerDelegate;
 
@@ -102,6 +111,7 @@
 
     goto :goto_0
 
+    .line 290
     .end local v2           #ev:Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
     :cond_1
     iget v3, p1, Landroid/os/Message;->what:I
@@ -110,12 +120,14 @@
 
     if-ne v3, v4, :cond_2
 
+    .line 291
     move-object v0, v1
 
     check-cast v0, Landroid/os/storage/StorageManager$UsbStorageStateChangedStorageEvent;
 
     move-object v2, v0
 
+    .line 292
     .local v2, ev:Landroid/os/storage/StorageManager$UsbStorageStateChangedStorageEvent;
     iget-object v3, p0, Landroid/os/storage/StorageManager$ListenerDelegate$1;->this$1:Landroid/os/storage/StorageManager$ListenerDelegate;
 
@@ -131,6 +143,7 @@
 
     goto :goto_0
 
+    .line 294
     .end local v2           #ev:Landroid/os/storage/StorageManager$UsbStorageStateChangedStorageEvent;
     :cond_2
     const-string v3, "StorageManager"

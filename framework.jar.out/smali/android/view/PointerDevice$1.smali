@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 254
     iput-object p1, p0, Landroid/view/PointerDevice$1;->this$0:Landroid/view/PointerDevice;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,8 +43,10 @@
     .parameter "finishedCallback"
 
     .prologue
+    .line 256
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
+    .line 257
     return-void
 .end method
 
@@ -53,6 +56,7 @@
     .parameter "finishedCallback"
 
     .prologue
+    .line 260
     iget-object v0, p0, Landroid/view/PointerDevice$1;->this$0:Landroid/view/PointerDevice;
 
     iget-object v1, p0, Landroid/view/PointerDevice$1;->this$0:Landroid/view/PointerDevice;
@@ -61,7 +65,9 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/view/PointerDevice;->onNewEvent(Landroid/view/MotionEvent;Landroid/content/res/CompatibilityInfo$Translator;)V
 
+    .line 261
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
+    .line 262
     return-void
 .end method

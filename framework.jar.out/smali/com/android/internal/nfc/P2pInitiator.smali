@@ -18,12 +18,16 @@
     .parameter "handle"
 
     .prologue
+    .line 46
     invoke-direct {p0}, Lcom/android/internal/nfc/P2pDevice;-><init>()V
 
+    .line 47
     iput-object p1, p0, Lcom/android/internal/nfc/P2pInitiator;->mService:Landroid/nfc/IP2pInitiator;
 
+    .line 48
     iput p2, p0, Lcom/android/internal/nfc/P2pDevice;->mHandle:I
 
+    .line 49
     return-void
 .end method
 
@@ -33,6 +37,7 @@
     .locals 3
 
     .prologue
+    .line 92
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/nfc/P2pInitiator;->mService:Landroid/nfc/IP2pInitiator;
 
@@ -44,14 +49,17 @@
 
     move-result-object v1
 
+    .line 95
     :goto_0
     return-object v1
 
+    .line 93
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 94
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "P2pInitiator"
 
@@ -59,6 +67,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 95
     const/4 v1, 0x0
 
     goto :goto_0
@@ -68,6 +77,7 @@
     .locals 1
 
     .prologue
+    .line 101
     const/4 v0, 0x1
 
     return v0
@@ -82,6 +92,7 @@
     .end annotation
 
     .prologue
+    .line 60
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/nfc/P2pInitiator;->mService:Landroid/nfc/IP2pInitiator;
 
@@ -91,9 +102,11 @@
 
     move-result-object v1
 
+    .line 61
     .local v1, result:[B
     if-nez v1, :cond_0
 
+    .line 62
     new-instance v2, Ljava/io/IOException;
 
     const-string v3, "Tag has been lost"
@@ -104,12 +117,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 65
     .end local v1           #result:[B
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 66
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "P2pInitiator"
 
@@ -117,6 +132,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 67
     const/4 v2, 0x0
 
     .end local v0           #e:Landroid/os/RemoteException;
@@ -127,6 +143,7 @@
     :cond_0
     move-object v2, v1
 
+    .line 64
     goto :goto_0
 .end method
 
@@ -140,6 +157,7 @@
     .end annotation
 
     .prologue
+    .line 80
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/nfc/P2pInitiator;->mService:Landroid/nfc/IP2pInitiator;
 
@@ -149,9 +167,11 @@
 
     move-result v1
 
+    .line 81
     .local v1, isSuccess:Z
     if-nez v1, :cond_0
 
+    .line 82
     new-instance v2, Ljava/io/IOException;
 
     const-string v3, "Tag has been lost"
@@ -162,12 +182,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 84
     .end local v1           #isSuccess:Z
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 85
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "P2pInitiator"
 
@@ -175,6 +197,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 87
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     return-void

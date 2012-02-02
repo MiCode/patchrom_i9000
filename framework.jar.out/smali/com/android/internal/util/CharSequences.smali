@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +20,7 @@
     .parameter "another"
 
     .prologue
+    .line 119
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v4
@@ -28,12 +30,14 @@
 
     move-result v0
 
+    .line 120
     .local v0, anotherLen:I
     const/4 v5, 0x0
 
     .local v5, myPos:I
     const/4 v1, 0x0
 
+    .line 121
     .local v1, anotherPos:I
     if-ge v4, v0, :cond_0
 
@@ -47,11 +51,13 @@
     .local v2, anotherPos:I
     move v6, v5
 
+    .line 123
     .end local v5           #myPos:I
     .local v6, myPos:I
     :goto_1
     if-ge v6, v3, :cond_1
 
+    .line 124
     add-int/lit8 v5, v6, 0x1
 
     .end local v6           #myPos:I
@@ -83,6 +89,7 @@
 
     move v8, v7
 
+    .line 129
     .end local v7           #result:I
     :goto_2
     return v8
@@ -91,8 +98,10 @@
     :cond_0
     move v3, v0
 
+    .line 121
     goto :goto_0
 
+    .line 129
     .end local v1           #anotherPos:I
     .end local v5           #myPos:I
     .restart local v2       #anotherPos:I
@@ -132,6 +141,7 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 97
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
@@ -144,14 +154,17 @@
 
     move v2, v4
 
+    .line 107
     :goto_0
     return v2
 
+    .line 101
     :cond_0
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
+    .line 102
     .local v1, length:I
     const/4 v0, 0x0
 
@@ -159,6 +172,7 @@
     :goto_1
     if-ge v0, v1, :cond_2
 
+    .line 103
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -171,13 +185,16 @@
 
     move v2, v4
 
+    .line 104
     goto :goto_0
 
+    .line 102
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
+    .line 107
     :cond_2
     const/4 v2, 0x1
 
@@ -189,6 +206,7 @@
     .parameter "bytes"
 
     .prologue
+    .line 31
     new-instance v0, Lcom/android/internal/util/CharSequences$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/util/CharSequences$1;-><init>([B)V
@@ -203,10 +221,12 @@
     .parameter "end"
 
     .prologue
+    .line 63
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/android/internal/util/CharSequences;->validate(III)V
 
+    .line 64
     new-instance v0, Lcom/android/internal/util/CharSequences$2;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/internal/util/CharSequences$2;-><init>([BII)V
@@ -221,6 +241,7 @@
     .parameter "length"
 
     .prologue
+    .line 87
     if-gez p0, :cond_0
 
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
@@ -229,6 +250,7 @@
 
     throw v0
 
+    .line 88
     :cond_0
     if-gez p1, :cond_1
 
@@ -238,6 +260,7 @@
 
     throw v0
 
+    .line 89
     :cond_1
     if-le p1, p2, :cond_2
 
@@ -247,6 +270,7 @@
 
     throw v0
 
+    .line 90
     :cond_2
     if-le p0, p1, :cond_3
 
@@ -256,6 +280,7 @@
 
     throw v0
 
+    .line 91
     :cond_3
     return-void
 .end method

@@ -8,8 +8,10 @@
     .locals 0
 
     .prologue
+    .line 28
     invoke-direct {p0}, Landroid/pim/vcard/exception/VCardException;-><init>()V
 
+    .line 29
     return-void
 .end method
 
@@ -18,7 +20,9 @@
     .parameter "message"
 
     .prologue
+    .line 31
     invoke-direct {p0, p1}, Landroid/pim/vcard/exception/VCardException;-><init>(Ljava/lang/String;)V
 
+    .line 32
     return-void
 .end method

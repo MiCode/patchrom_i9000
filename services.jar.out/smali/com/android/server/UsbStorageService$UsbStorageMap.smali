@@ -31,20 +31,25 @@
     .parameter "label"
 
     .prologue
+    .line 89
     iput-object p1, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->this$0:Lcom/android/server/UsbStorageService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 90
     iput-object p2, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->label:Ljava/lang/String;
 
+    .line 91
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
 
+    .line 92
     const-string v0, "unmounted"
 
     iput-object v0, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->state:Ljava/lang/String;
 
+    .line 93
     return-void
 .end method
 
@@ -56,16 +61,21 @@
     .parameter "state"
 
     .prologue
+    .line 83
     iput-object p1, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->this$0:Lcom/android/server/UsbStorageService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 84
     iput-object p2, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->label:Ljava/lang/String;
 
+    .line 85
     iput-object p3, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
 
+    .line 86
     iput-object p4, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->state:Ljava/lang/String;
 
+    .line 87
     return-void
 .end method
 
@@ -76,16 +86,19 @@
     .parameter "obj"
 
     .prologue
+    .line 100
     instance-of v2, p1, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
     if-eqz v2, :cond_0
 
+    .line 101
     move-object v0, p1
 
     check-cast v0, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
     move-object v1, v0
 
+    .line 103
     .local v1, tmp:Lcom/android/server/UsbStorageService$UsbStorageMap;
     iget-object v2, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->label:Ljava/lang/String;
 
@@ -95,6 +108,7 @@
 
     move-result v2
 
+    .line 105
     .end local v1           #tmp:Lcom/android/server/UsbStorageService$UsbStorageMap;
     :goto_0
     return v2
@@ -109,6 +123,7 @@
     .locals 1
 
     .prologue
+    .line 108
     iget-object v0, p0, Lcom/android/server/UsbStorageService$UsbStorageMap;->label:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I

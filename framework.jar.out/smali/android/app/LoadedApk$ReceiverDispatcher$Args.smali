@@ -39,6 +39,7 @@
     .parameter
 
     .prologue
+    .line 663
     iput-object p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,6 +53,7 @@
     .parameter "x1"
 
     .prologue
+    .line 663
     iput-object p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurIntent:Landroid/content/Intent;
 
     return-object p1
@@ -62,6 +64,7 @@
     .parameter "x0"
 
     .prologue
+    .line 663
     iget v0, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurCode:I
 
     return v0
@@ -73,6 +76,7 @@
     .parameter "x1"
 
     .prologue
+    .line 663
     iput p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurCode:I
 
     return p1
@@ -83,6 +87,7 @@
     .parameter "x0"
 
     .prologue
+    .line 663
     iget-object v0, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurData:Ljava/lang/String;
 
     return-object v0
@@ -94,6 +99,7 @@
     .parameter "x1"
 
     .prologue
+    .line 663
     iput-object p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurData:Ljava/lang/String;
 
     return-object p1
@@ -104,6 +110,7 @@
     .parameter "x0"
 
     .prologue
+    .line 663
     iget-object v0, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurMap:Landroid/os/Bundle;
 
     return-object v0
@@ -115,6 +122,7 @@
     .parameter "x1"
 
     .prologue
+    .line 663
     iput-object p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurMap:Landroid/os/Bundle;
 
     return-object p1
@@ -126,6 +134,7 @@
     .parameter "x1"
 
     .prologue
+    .line 663
     iput-boolean p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurOrdered:Z
 
     return p1
@@ -137,6 +146,7 @@
     .parameter "x1"
 
     .prologue
+    .line 663
     iput-boolean p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurSticky:Z
 
     return p1
@@ -148,25 +158,31 @@
     .locals 10
 
     .prologue
+    .line 672
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
 
     iget-object v9, v1, Landroid/app/LoadedApk$ReceiverDispatcher;->mReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 681
     .local v9, receiver:Landroid/content/BroadcastReceiver;
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
+    .line 682
     .local v0, mgr:Landroid/app/IActivityManager;
     iget-object v8, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurIntent:Landroid/content/Intent;
 
+    .line 683
     .local v8, intent:Landroid/content/Intent;
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurIntent:Landroid/content/Intent;
 
+    .line 685
     if-nez v9, :cond_1
 
+    .line 686
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
 
     iget-boolean v1, v1, Landroid/app/LoadedApk$ReceiverDispatcher;->mRegistered:Z
@@ -177,6 +193,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 690
     :try_start_0
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
 
@@ -194,10 +211,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_3
 
+    .line 739
     :cond_0
     :goto_0
     return-void
 
+    .line 699
     :cond_1
     :try_start_1
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
@@ -212,22 +231,27 @@
 
     move-result-object v6
 
+    .line 700
     .local v6, cl:Ljava/lang/ClassLoader;
     invoke-virtual {v8, v6}, Landroid/content/Intent;->setExtrasClassLoader(Ljava/lang/ClassLoader;)V
 
+    .line 701
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurMap:Landroid/os/Bundle;
 
     if-eqz v1, :cond_2
 
+    .line 702
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurMap:Landroid/os/Bundle;
 
     invoke-virtual {v1, v6}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
+    .line 704
     :cond_2
     const/4 v1, 0x1
 
     invoke-virtual {v9, v1}, Landroid/content/BroadcastReceiver;->setOrderedHint(Z)V
 
+    .line 705
     iget v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurCode:I
 
     iget-object v2, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurData:Ljava/lang/String;
@@ -236,16 +260,20 @@
 
     invoke-virtual {v9, v1, v2, v3}, Landroid/content/BroadcastReceiver;->setResult(ILjava/lang/String;Landroid/os/Bundle;)V
 
+    .line 706
     invoke-virtual {v9}, Landroid/content/BroadcastReceiver;->clearAbortBroadcast()V
 
+    .line 707
     iget-boolean v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurOrdered:Z
 
     invoke-virtual {v9, v1}, Landroid/content/BroadcastReceiver;->setOrderedHint(Z)V
 
+    .line 708
     iget-boolean v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->mCurSticky:Z
 
     invoke-virtual {v9, v1}, Landroid/content/BroadcastReceiver;->setInitialStickyHint(Z)V
 
+    .line 709
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
 
     iget-object v1, v1, Landroid/app/LoadedApk$ReceiverDispatcher;->mContext:Landroid/content/Context;
@@ -254,6 +282,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 727
     .end local v6           #cl:Ljava/lang/ClassLoader;
     :cond_3
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
@@ -266,6 +295,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 731
     :try_start_2
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
 
@@ -295,16 +325,19 @@
 
     goto :goto_0
 
+    .line 736
     :catch_0
     move-exception v1
 
     goto :goto_0
 
+    .line 710
     :catch_1
     move-exception v1
 
     move-object v7, v1
 
+    .line 711
     .local v7, e:Ljava/lang/Exception;
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
 
@@ -316,6 +349,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 715
     :try_start_3
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
 
@@ -333,6 +367,7 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
 
+    .line 720
     :cond_4
     :goto_1
     iget-object v1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
@@ -355,6 +390,7 @@
 
     if-nez v1, :cond_3
 
+    .line 722
     :cond_5
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -394,11 +430,13 @@
 
     throw v1
 
+    .line 717
     :catch_2
     move-exception v1
 
     goto :goto_1
 
+    .line 692
     .end local v7           #e:Ljava/lang/Exception;
     :catch_3
     move-exception v1

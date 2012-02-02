@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 128
     iput-object p1, p0, Lcom/android/server/UsbStorageService$1;->this$0:Lcom/android/server/UsbStorageService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,6 +38,7 @@
     .locals 2
 
     .prologue
+    .line 130
     iget-object v0, p0, Lcom/android/server/UsbStorageService$1;->this$0:Lcom/android/server/UsbStorageService;
 
     const/4 v1, 0x1
@@ -44,5 +46,6 @@
     #setter for: Lcom/android/server/UsbStorageService;->mReady:Z
     invoke-static {v0, v1}, Lcom/android/server/UsbStorageService;->access$002(Lcom/android/server/UsbStorageService;Z)Z
 
+    .line 131
     return-void
 .end method

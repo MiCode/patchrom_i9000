@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 3628
     iput-object p1, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +42,14 @@
     .parameter "newConfig"
 
     .prologue
+    .line 3630
     iget-object v0, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     iget-object v0, v0, Landroid/app/ActivityThread;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v0
 
+    .line 3634
     :try_start_0
     iget-object v1, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
@@ -56,6 +59,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 3637
     iget-object v1, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     iget-object v1, v1, Landroid/app/ActivityThread;->mPendingConfiguration:Landroid/content/res/Configuration;
@@ -72,11 +76,13 @@
 
     if-eqz v1, :cond_1
 
+    .line 3639
     :cond_0
     iget-object v1, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     iput-object p1, v1, Landroid/app/ActivityThread;->mPendingConfiguration:Landroid/content/res/Configuration;
 
+    .line 3641
     iget-object v1, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     const/16 v2, 0x76
@@ -84,11 +90,14 @@
     #calls: Landroid/app/ActivityThread;->queueOrSendMessage(ILjava/lang/Object;)V
     invoke-static {v1, v2, p1}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;)V
 
+    .line 3644
     :cond_1
     monitor-exit v0
 
+    .line 3645
     return-void
 
+    .line 3644
     :catchall_0
     move-exception v1
 
@@ -103,5 +112,6 @@
     .locals 0
 
     .prologue
+    .line 3647
     return-void
 .end method

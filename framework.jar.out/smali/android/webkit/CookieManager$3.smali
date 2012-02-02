@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 550
     iput-object p1, p0, Landroid/webkit/CookieManager$3;->this$0:Landroid/webkit/CookieManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +41,18 @@
     .locals 12
 
     .prologue
+    .line 552
     iget-object v7, p0, Landroid/webkit/CookieManager$3;->this$0:Landroid/webkit/CookieManager;
 
     monitor-enter v7
 
+    .line 553
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
 
+    .line 554
     .local v5, now:J
     iget-object v8, p0, Landroid/webkit/CookieManager$3;->this$0:Landroid/webkit/CookieManager;
 
@@ -61,11 +65,13 @@
 
     move-result-object v1
 
+    .line 555
     .local v1, cookieList:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;>;"
     invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
+    .line 556
     .local v4, listIter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;>;"
     :cond_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -74,17 +80,20 @@
 
     if-eqz v8, :cond_2
 
+    .line 557
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/ArrayList;
 
+    .line 558
     .local v3, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
+    .line 559
     .local v2, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/webkit/CookieManager$Cookie;>;"
     :cond_1
     :goto_0
@@ -94,12 +103,14 @@
 
     if-eqz v8, :cond_0
 
+    .line 560
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/webkit/CookieManager$Cookie;
 
+    .line 563
     .local v0, cookie:Landroid/webkit/CookieManager$Cookie;
     iget-wide v8, v0, Landroid/webkit/CookieManager$Cookie;->expires:J
 
@@ -115,10 +126,12 @@
 
     if-gez v8, :cond_1
 
+    .line 564
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
+    .line 569
     .end local v0           #cookie:Landroid/webkit/CookieManager$Cookie;
     .end local v1           #cookieList:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;>;"
     .end local v2           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/webkit/CookieManager$Cookie;>;"
@@ -134,6 +147,7 @@
 
     throw v8
 
+    .line 568
     .restart local v1       #cookieList:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;>;"
     .restart local v4       #listIter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;>;"
     .restart local v5       #now:J
@@ -145,9 +159,11 @@
 
     invoke-virtual {v8, v5, v6}, Landroid/webkit/CookieSyncManager;->clearExpiredCookies(J)V
 
+    .line 569
     monitor-exit v7
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 570
     return-void
 .end method

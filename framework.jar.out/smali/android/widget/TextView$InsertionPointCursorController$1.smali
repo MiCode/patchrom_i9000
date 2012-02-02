@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 8358
     iput-object p1, p0, Landroid/widget/TextView$InsertionPointCursorController$1;->this$1:Landroid/widget/TextView$InsertionPointCursorController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,9 +41,11 @@
     .locals 1
 
     .prologue
+    .line 8360
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController$1;->this$1:Landroid/widget/TextView$InsertionPointCursorController;
 
     invoke-virtual {v0}, Landroid/widget/TextView$InsertionPointCursorController;->hide()V
 
+    .line 8361
     return-void
 .end method

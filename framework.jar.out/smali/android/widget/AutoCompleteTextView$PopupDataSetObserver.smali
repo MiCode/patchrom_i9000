@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 1711
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1711
     invoke-direct {p0, p1}, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;-><init>(Landroid/widget/AutoCompleteTextView;)V
 
     return-void
@@ -48,6 +50,7 @@
     .locals 2
 
     .prologue
+    .line 1714
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->isPopupShowing()Z
@@ -56,14 +59,17 @@
 
     if-eqz v0, :cond_1
 
+    .line 1716
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->showDropDown()V
 
+    .line 1731
     :cond_0
     :goto_0
     return-void
 
+    .line 1717
     :cond_1
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
@@ -74,6 +80,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1722
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     new-instance v1, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver$1;
@@ -89,6 +96,7 @@
     .locals 1
 
     .prologue
+    .line 1735
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     #getter for: Landroid/widget/AutoCompleteTextView;->mDropDownAlwaysVisible:Z
@@ -98,10 +106,12 @@
 
     if-nez v0, :cond_0
 
+    .line 1738
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->dismissDropDown()V
 
+    .line 1740
     :cond_0
     return-void
 .end method

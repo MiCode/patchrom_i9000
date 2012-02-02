@@ -43,14 +43,19 @@
     .parameter "emergencyNumberWithoutSIM"
 
     .prologue
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 50
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->plmn:Ljava/lang/String;
 
+    .line 51
     iput-object p2, p0, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->emergencyNumberWithSIM:Ljava/lang/String;
 
+    .line 52
     iput-object p3, p0, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->emergencyNumberWithoutSIM:Ljava/lang/String;
 
+    .line 53
     return-void
 .end method
 
@@ -61,6 +66,7 @@
     .parameter "o"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->plmn:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;->plmn:Ljava/lang/String;
@@ -77,6 +83,7 @@
     .parameter "x0"
 
     .prologue
+    .line 43
     check-cast p1, Lcom/android/internal/telephony/gsm/EccTable$EccEntry;
 
     .end local p1

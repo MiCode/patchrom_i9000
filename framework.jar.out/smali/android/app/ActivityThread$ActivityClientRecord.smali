@@ -97,20 +97,28 @@
 
     const/4 v0, 0x0
 
+    .line 223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 224
     iput-object v1, p0, Landroid/app/ActivityThread$ActivityClientRecord;->parent:Landroid/app/Activity;
 
+    .line 225
     iput-object v1, p0, Landroid/app/ActivityThread$ActivityClientRecord;->embeddedID:Ljava/lang/String;
 
+    .line 226
     iput-boolean v0, p0, Landroid/app/ActivityThread$ActivityClientRecord;->paused:Z
 
+    .line 227
     iput-boolean v0, p0, Landroid/app/ActivityThread$ActivityClientRecord;->stopped:Z
 
+    .line 228
     iput-boolean v0, p0, Landroid/app/ActivityThread$ActivityClientRecord;->hideForNow:Z
 
+    .line 229
     iput-object v1, p0, Landroid/app/ActivityThread$ActivityClientRecord;->nextIdle:Landroid/app/ActivityThread$ActivityClientRecord;
 
+    .line 230
     return-void
 .end method
 
@@ -120,12 +128,14 @@
     .locals 3
 
     .prologue
+    .line 233
     iget-object v1, p0, Landroid/app/ActivityThread$ActivityClientRecord;->intent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
+    .line 234
     .local v0, componentName:Landroid/content/ComponentName;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -176,7 +186,7 @@
 
     move-result-object v1
 
-    const-string v2, "}"
+    const-string/jumbo v2, "}"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

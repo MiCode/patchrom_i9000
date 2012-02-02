@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 129
     iput-object p1, p0, Landroid/webkit/GeolocationPermissions$2;->this$0:Landroid/webkit/GeolocationPermissions;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -42,14 +43,17 @@
 
     const-string v7, "callback"
 
+    .line 133
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
+    .line 162
     .end local p0
     :goto_0
     return-void
 
+    .line 135
     .restart local p0
     :pswitch_0
     #calls: Landroid/webkit/GeolocationPermissions;->nativeGetOrigins()Ljava/util/Set;
@@ -57,25 +61,30 @@
 
     move-result-object v3
 
+    .line 136
     .local v3, origins:Ljava/util/Set;
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/webkit/ValueCallback;
 
+    .line 137
     .local v1, callback:Landroid/webkit/ValueCallback;
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
+    .line 138
     .local v5, values:Ljava/util/Map;
     const-string v6, "callback"
 
     invoke-interface {v5, v7, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v6, "origins"
+    .line 139
+    const-string/jumbo v6, "origins"
 
     invoke-interface {v5, v6, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 140
     iget-object v6, p0, Landroid/webkit/GeolocationPermissions$2;->this$0:Landroid/webkit/GeolocationPermissions;
 
     const/4 v7, 0x0
@@ -89,6 +98,7 @@
 
     goto :goto_0
 
+    .line 143
     .end local v1           #callback:Landroid/webkit/ValueCallback;
     .end local v3           #origins:Ljava/util/Set;
     .end local v5           #values:Ljava/util/Map;
@@ -97,8 +107,9 @@
 
     check-cast v5, Ljava/util/Map;
 
+    .line 144
     .restart local v5       #values:Ljava/util/Map;
-    const-string v6, "origin"
+    const-string/jumbo v6, "origin"
 
     invoke-interface {v5, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -106,6 +117,7 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 145
     .local v2, origin:Ljava/lang/String;
     const-string v6, "callback"
 
@@ -115,22 +127,26 @@
 
     check-cast v1, Landroid/webkit/ValueCallback;
 
+    .line 146
     .restart local v1       #callback:Landroid/webkit/ValueCallback;
     #calls: Landroid/webkit/GeolocationPermissions;->nativeGetAllowed(Ljava/lang/String;)Z
     invoke-static {v2}, Landroid/webkit/GeolocationPermissions;->access$200(Ljava/lang/String;)Z
 
     move-result v0
 
+    .line 147
     .local v0, allowed:Z
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
+    .line 148
     .local v4, retValues:Ljava/util/Map;
     const-string v6, "callback"
 
     invoke-interface {v4, v7, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 149
     const-string v6, "allowed"
 
     new-instance v7, Ljava/lang/Boolean;
@@ -139,6 +155,7 @@
 
     invoke-interface {v4, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 150
     iget-object v6, p0, Landroid/webkit/GeolocationPermissions$2;->this$0:Landroid/webkit/GeolocationPermissions;
 
     const/4 v7, 0x1
@@ -152,6 +169,7 @@
 
     goto :goto_0
 
+    .line 153
     .end local v0           #allowed:Z
     .end local v1           #callback:Landroid/webkit/ValueCallback;
     .end local v2           #origin:Ljava/lang/String;
@@ -168,6 +186,7 @@
 
     goto :goto_0
 
+    .line 156
     .restart local p0
     :pswitch_3
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -180,6 +199,7 @@
 
     goto :goto_0
 
+    .line 159
     .restart local p0
     :pswitch_4
     #calls: Landroid/webkit/GeolocationPermissions;->nativeClearAll()V
@@ -187,6 +207,7 @@
 
     goto :goto_0
 
+    .line 133
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

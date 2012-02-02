@@ -57,12 +57,16 @@
     .parameter "windowManagerService"
 
     .prologue
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 113
     iput-object p1, p0, Lcom/android/server/InputManager;->mContext:Landroid/content/Context;
 
+    .line 114
     iput-object p2, p0, Lcom/android/server/InputManager;->mWindowManagerService:Lcom/android/server/WindowManagerService;
 
+    .line 116
     new-instance v0, Lcom/android/server/InputManager$Callbacks;
 
     const/4 v1, 0x0
@@ -71,8 +75,10 @@
 
     iput-object v0, p0, Lcom/android/server/InputManager;->mCallbacks:Lcom/android/server/InputManager$Callbacks;
 
+    .line 118
     invoke-direct {p0}, Lcom/android/server/InputManager;->init()V
 
+    .line 119
     return-void
 .end method
 
@@ -81,6 +87,7 @@
     .parameter "x0"
 
     .prologue
+    .line 51
     iget-object v0, p0, Lcom/android/server/InputManager;->mWindowManagerService:Lcom/android/server/WindowManagerService;
 
     return-object v0
@@ -91,6 +98,7 @@
     .parameter "x0"
 
     .prologue
+    .line 51
     iget-object v0, p0, Lcom/android/server/InputManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -100,16 +108,19 @@
     .locals 2
 
     .prologue
+    .line 122
     const-string v0, "InputManager"
 
     const-string v1, "Initializing input manager"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 123
     iget-object v0, p0, Lcom/android/server/InputManager;->mCallbacks:Lcom/android/server/InputManager$Callbacks;
 
     invoke-static {v0}, Lcom/android/server/InputManager;->nativeInit(Lcom/android/server/InputManager$Callbacks;)V
 
+    .line 124
     return-void
 .end method
 
@@ -174,15 +185,19 @@
     .parameter "pw"
 
     .prologue
+    .line 332
     invoke-static {}, Lcom/android/server/InputManager;->nativeDump()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 333
     .local v0, dumpStr:Ljava/lang/String;
     if-eqz v0, :cond_0
 
+    .line 334
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 336
     :cond_0
     return-void
 .end method
@@ -192,8 +207,10 @@
     .parameter "config"
 
     .prologue
+    .line 154
     if-nez p1, :cond_0
 
+    .line 155
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "config must not be null."
@@ -202,9 +219,11 @@
 
     throw v0
 
+    .line 158
     :cond_0
     invoke-static {p1}, Lcom/android/server/InputManager;->nativeGetInputConfiguration(Landroid/content/res/Configuration;)V
 
+    .line 159
     return-void
 .end method
 
@@ -213,6 +232,7 @@
     .parameter "deviceId"
 
     .prologue
+    .line 308
     invoke-static {p1}, Lcom/android/server/InputManager;->nativeGetInputDevice(I)Landroid/view/InputDevice;
 
     move-result-object v0
@@ -224,6 +244,7 @@
     .locals 1
 
     .prologue
+    .line 316
     invoke-static {}, Lcom/android/server/InputManager;->nativeGetInputDeviceIds()[I
 
     move-result-object v0
@@ -238,6 +259,7 @@
     .parameter "keyCode"
 
     .prologue
+    .line 171
     invoke-static {p1, p2, p3}, Lcom/android/server/InputManager;->nativeGetKeyCodeState(III)I
 
     move-result v0
@@ -252,6 +274,7 @@
     .parameter "scanCode"
 
     .prologue
+    .line 184
     invoke-static {p1, p2, p3}, Lcom/android/server/InputManager;->nativeGetScanCodeState(III)I
 
     move-result v0
@@ -266,6 +289,7 @@
     .parameter "switchCode"
 
     .prologue
+    .line 197
     invoke-static {p1, p2, p3}, Lcom/android/server/InputManager;->nativeGetSwitchState(III)I
 
     move-result v0
@@ -281,8 +305,10 @@
     .parameter "keyExists"
 
     .prologue
+    .line 213
     if-nez p3, :cond_0
 
+    .line 214
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "keyCodes must not be null."
@@ -291,6 +317,7 @@
 
     throw v0
 
+    .line 216
     :cond_0
     if-eqz p4, :cond_1
 
@@ -300,6 +327,7 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 217
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -309,6 +337,7 @@
 
     throw v0
 
+    .line 221
     :cond_2
     invoke-static {p1, p2, p3, p4}, Lcom/android/server/InputManager;->nativeHasKeys(II[I[Z)Z
 
@@ -326,8 +355,10 @@
     .parameter "timeoutMillis"
 
     .prologue
+    .line 289
     if-nez p1, :cond_0
 
+    .line 290
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "event must not be null"
@@ -336,11 +367,13 @@
 
     throw v0
 
+    .line 292
     :cond_0
     if-ltz p2, :cond_1
 
     if-gez p3, :cond_2
 
+    .line 293
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -350,9 +383,11 @@
 
     throw v0
 
+    .line 295
     :cond_2
     if-gtz p5, :cond_3
 
+    .line 296
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "timeoutMillis must be positive"
@@ -361,6 +396,7 @@
 
     throw v0
 
+    .line 299
     :cond_3
     invoke-static {p1, p2, p3, p4, p5}, Lcom/android/server/InputManager;->nativeInjectInputEvent(Landroid/view/InputEvent;IIII)I
 
@@ -378,8 +414,10 @@
 
     const/4 v2, 0x0
 
+    .line 230
     if-nez p1, :cond_0
 
+    .line 231
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "inputChannelName must not be null."
@@ -388,20 +426,24 @@
 
     throw v1
 
+    .line 234
     :cond_0
     invoke-static {p1}, Landroid/view/InputChannel;->openInputChannelPair(Ljava/lang/String;)[Landroid/view/InputChannel;
 
     move-result-object v0
 
+    .line 235
     .local v0, inputChannels:[Landroid/view/InputChannel;
     aget-object v1, v0, v2
 
     invoke-static {v1, v3}, Lcom/android/server/InputManager;->nativeRegisterInputChannel(Landroid/view/InputChannel;Z)V
 
+    .line 236
     aget-object v1, v0, v2
 
     invoke-virtual {v1}, Landroid/view/InputChannel;->dispose()V
 
+    .line 237
     aget-object v1, v0, v3
 
     return-object v1
@@ -412,8 +454,10 @@
     .parameter "inputChannel"
 
     .prologue
+    .line 245
     if-nez p1, :cond_0
 
+    .line 246
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "inputChannel must not be null."
@@ -422,11 +466,13 @@
 
     throw v0
 
+    .line 249
     :cond_0
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/InputManager;->nativeRegisterInputChannel(Landroid/view/InputChannel;Z)V
 
+    .line 250
     return-void
 .end method
 
@@ -436,12 +482,14 @@
     .parameter "rotation"
 
     .prologue
+    .line 143
     if-ltz p2, :cond_0
 
     const/4 v0, 0x3
 
     if-le p2, v0, :cond_1
 
+    .line 144
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -451,9 +499,11 @@
 
     throw v0
 
+    .line 150
     :cond_1
     invoke-static {p1, p2}, Lcom/android/server/InputManager;->nativeSetDisplayOrientation(II)V
 
+    .line 151
     return-void
 .end method
 
@@ -464,10 +514,12 @@
     .parameter "height"
 
     .prologue
+    .line 132
     if-lez p2, :cond_0
 
     if-gtz p3, :cond_1
 
+    .line 133
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -477,9 +529,11 @@
 
     throw v0
 
+    .line 139
     :cond_1
     invoke-static {p1, p2, p3}, Lcom/android/server/InputManager;->nativeSetDisplaySize(III)V
 
+    .line 140
     return-void
 .end method
 
@@ -488,8 +542,10 @@
     .parameter "application"
 
     .prologue
+    .line 324
     invoke-static {p1}, Lcom/android/server/InputManager;->nativeSetFocusedApplication(Lcom/android/server/InputApplication;)V
 
+    .line 325
     return-void
 .end method
 
@@ -499,8 +555,10 @@
     .parameter "frozen"
 
     .prologue
+    .line 328
     invoke-static {p1, p2}, Lcom/android/server/InputManager;->nativeSetInputDispatchMode(ZZ)V
 
+    .line 329
     return-void
 .end method
 
@@ -509,8 +567,10 @@
     .parameter "windows"
 
     .prologue
+    .line 320
     invoke-static {p1}, Lcom/android/server/InputManager;->nativeSetInputWindows([Lcom/android/server/InputWindow;)V
 
+    .line 321
     return-void
 .end method
 
@@ -518,14 +578,17 @@
     .locals 2
 
     .prologue
+    .line 127
     const-string v0, "InputManager"
 
     const-string v1, "Starting input manager"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 128
     invoke-static {}, Lcom/android/server/InputManager;->nativeStart()V
 
+    .line 129
     return-void
 .end method
 
@@ -534,8 +597,10 @@
     .parameter "inputChannel"
 
     .prologue
+    .line 257
     if-nez p1, :cond_0
 
+    .line 258
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "inputChannel must not be null."
@@ -544,8 +609,10 @@
 
     throw v0
 
+    .line 261
     :cond_0
     invoke-static {p1}, Lcom/android/server/InputManager;->nativeUnregisterInputChannel(Landroid/view/InputChannel;)V
 
+    .line 262
     return-void
 .end method

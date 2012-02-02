@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1135
     iput-object p1, p0, Landroid/widget/Gallery$2;->this$0:Landroid/widget/Gallery;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +41,12 @@
     .locals 1
 
     .prologue
+    .line 1137
     iget-object v0, p0, Landroid/widget/Gallery$2;->this$0:Landroid/widget/Gallery;
 
     #calls: Landroid/widget/Gallery;->dispatchUnpress()V
     invoke-static {v0}, Landroid/widget/Gallery;->access$300(Landroid/widget/Gallery;)V
 
+    .line 1138
     return-void
 .end method

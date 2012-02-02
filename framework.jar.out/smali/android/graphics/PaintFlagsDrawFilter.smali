@@ -10,14 +10,17 @@
     .parameter "setBits"
 
     .prologue
+    .line 29
     invoke-direct {p0}, Landroid/graphics/DrawFilter;-><init>()V
 
+    .line 32
     invoke-static {p1, p2}, Landroid/graphics/PaintFlagsDrawFilter;->nativeConstructor(II)I
 
     move-result v0
 
     iput v0, p0, Landroid/graphics/DrawFilter;->mNativeInt:I
 
+    .line 33
     return-void
 .end method
 

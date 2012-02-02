@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 82
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/FastDorm$1;->this$0:Lcom/android/internal/telephony/gsm/FastDorm;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,10 +46,12 @@
 
     const-string v3, "FastDormancy"
 
+    .line 85
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 86
     .local v0, action:Ljava/lang/String;
     const-string v1, "FastDormancy"
 
@@ -72,6 +75,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 88
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,6 +84,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 89
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/FastDorm$1;->this$0:Lcom/android/internal/telephony/gsm/FastDorm;
 
     const/4 v2, 0x1
@@ -87,6 +92,7 @@
     #setter for: Lcom/android/internal/telephony/gsm/FastDorm;->mIsScreenOn:Z
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gsm/FastDorm;->access$002(Lcom/android/internal/telephony/gsm/FastDorm;Z)Z
 
+    .line 90
     const-string v1, "FastDormancy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -116,6 +122,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 92
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
@@ -126,6 +133,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 93
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/FastDorm$1;->this$0:Lcom/android/internal/telephony/gsm/FastDorm;
 
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/FastDorm$1;->this$0:Lcom/android/internal/telephony/gsm/FastDorm;
@@ -138,6 +146,7 @@
     #setter for: Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gsm/FastDorm;->access$102(Lcom/android/internal/telephony/gsm/FastDorm;I)I
 
+    .line 94
     const-string v1, "FastDormancy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -167,10 +176,12 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 105
     :cond_0
     :goto_0
     return-void
 
+    .line 96
     :cond_1
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -180,6 +191,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 97
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/FastDorm$1;->this$0:Lcom/android/internal/telephony/gsm/FastDorm;
 
     const/4 v2, 0x0
@@ -187,6 +199,7 @@
     #setter for: Lcom/android/internal/telephony/gsm/FastDorm;->mIsScreenOn:Z
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gsm/FastDorm;->access$002(Lcom/android/internal/telephony/gsm/FastDorm;Z)Z
 
+    .line 98
     const-string v1, "FastDormancy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -216,6 +229,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 100
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
@@ -226,6 +240,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 101
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/FastDorm$1;->this$0:Lcom/android/internal/telephony/gsm/FastDorm;
 
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/FastDorm$1;->this$0:Lcom/android/internal/telephony/gsm/FastDorm;
@@ -238,6 +253,7 @@
     #setter for: Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gsm/FastDorm;->access$302(Lcom/android/internal/telephony/gsm/FastDorm;I)I
 
+    .line 102
     const-string v1, "FastDormancy"
 
     new-instance v1, Ljava/lang/StringBuilder;

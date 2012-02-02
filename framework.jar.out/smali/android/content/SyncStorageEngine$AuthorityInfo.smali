@@ -56,32 +56,42 @@
     .prologue
     const-wide/16 v1, -0x1
 
+    .line 185
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 186
     iput-object p1, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->account:Landroid/accounts/Account;
 
+    .line 187
     iput-object p2, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->authority:Ljava/lang/String;
 
+    .line 188
     iput p3, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->ident:I
 
+    .line 189
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->enabled:Z
 
+    .line 190
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->syncable:I
 
+    .line 191
     iput-wide v1, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->backoffTime:J
 
+    .line 192
     iput-wide v1, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->backoffDelay:J
 
+    .line 193
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
+    .line 194
     iget-object v0, p0, Landroid/content/SyncStorageEngine$AuthorityInfo;->periodicSyncs:Ljava/util/ArrayList;
 
     new-instance v1, Landroid/os/Bundle;
@@ -100,5 +110,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 195
     return-void
 .end method

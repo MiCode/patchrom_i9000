@@ -190,92 +190,111 @@
 
     const/4 v4, 0x0
 
+    .line 488
     invoke-direct {p0}, Lcom/samsung/media/fmradio/internal/IFMPlayer$Stub;-><init>()V
 
+    .line 90
     iput v5, p0, Lcom/android/server/FMRadioService;->mBand:I
 
+    .line 96
     iput-boolean v4, p0, Lcom/android/server/FMRadioService;->mIsHeadsetPlugged:Z
 
+    .line 97
     iput-boolean v4, p0, Lcom/android/server/FMRadioService;->mIsTvOutPlugged:Z
 
+    .line 98
     const-wide/16 v2, -0x2
 
     iput-wide v2, p0, Lcom/android/server/FMRadioService;->mNeedResumeToFreq:J
 
+    .line 110
     new-instance v2, Lcom/android/server/FMRadioService$1;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$1;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mVolumeEventReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 125
     new-instance v2, Lcom/android/server/FMRadioService$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$2;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 193
     new-instance v2, Lcom/android/server/FMRadioService$3;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$3;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mButtonReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 205
     new-instance v2, Lcom/android/server/FMRadioService$4;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$4;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mMusicCommandRec:Landroid/content/BroadcastReceiver;
 
+    .line 218
     new-instance v2, Lcom/android/server/FMRadioService$5;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$5;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
+    .line 274
     new-instance v2, Lcom/android/server/FMRadioService$6;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$6;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mPhoneAudioResetListener:Landroid/content/BroadcastReceiver;
 
+    .line 314
     new-instance v2, Lcom/android/server/FMRadioService$7;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$7;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mHandler:Landroid/os/Handler;
 
+    .line 335
     new-instance v2, Lcom/android/server/FMRadioService$8;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$8;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mPhoneListener:Landroid/telephony/PhoneStateListener;
 
+    .line 386
     new-instance v2, Lcom/android/server/FMRadioService$9;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$9;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mSystemReceiver1:Landroid/content/BroadcastReceiver;
 
+    .line 407
     new-instance v2, Lcom/android/server/FMRadioService$10;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$10;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mSystemReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 424
     new-instance v2, Lcom/android/server/FMRadioService$11;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMRadioService$11;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mLowBatteryReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 489
     iput-object p1, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
+    .line 490
     new-instance v2, Lcom/android/server/FMPlayerNative;
 
     invoke-direct {v2, p0}, Lcom/android/server/FMPlayerNative;-><init>(Lcom/android/server/FMRadioService;)V
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
+    .line 491
     const-string v2, "power"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -286,6 +305,7 @@
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mPowerManager:Landroid/os/PowerManager;
 
+    .line 492
     const-string v2, "phone"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -296,6 +316,7 @@
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
+    .line 494
     const-string v2, "audio"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -306,6 +327,7 @@
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
 
+    .line 496
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mPowerManager:Landroid/os/PowerManager;
 
     const-string v3, "FMRadio Service"
@@ -316,34 +338,41 @@
 
     iput-object v2, p0, Lcom/android/server/FMRadioService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
+    .line 500
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 501
     .local v0, intentFilter:Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.HEADSET_PLUG"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 505
     const-string v2, "android.intent.action.TVOUT_PLUG"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 506
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 509
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v2, "android.media.VOLUME_CHANGED_ACTION"
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 510
     .local v1, intentFilterVol:Landroid/content/IntentFilter;
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mVolumeEventReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 513
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -363,6 +392,7 @@
     :goto_0
     iput-boolean v2, p0, Lcom/android/server/FMRadioService;->mAirPlaneEnabled:Z
 
+    .line 515
     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -387,6 +417,7 @@
 
     invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 516
     new-instance v0, Landroid/content/IntentFilter;
 
     .end local v0           #intentFilter:Landroid/content/IntentFilter;
@@ -394,11 +425,13 @@
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 517
     .restart local v0       #intentFilter:Landroid/content/IntentFilter;
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 519
     new-instance v0, Landroid/content/IntentFilter;
 
     .end local v0           #intentFilter:Landroid/content/IntentFilter;
@@ -406,20 +439,25 @@
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 520
     .restart local v0       #intentFilter:Landroid/content/IntentFilter;
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mButtonReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 522
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->registerSystemListener()V
 
+    .line 523
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->registerTelephonyListener()V
 
+    .line 524
     return-void
 
     :cond_0
     move v2, v4
 
+    .line 513
     goto :goto_0
 .end method
 
@@ -428,6 +466,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsHeadsetPlugged:Z
 
     return v0
@@ -439,6 +478,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-boolean p1, p0, Lcom/android/server/FMRadioService;->mIsHeadsetPlugged:Z
 
     return p1
@@ -449,6 +489,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsTestMode:Z
 
     return v0
@@ -459,6 +500,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsphoneCall:Z
 
     return v0
@@ -470,6 +512,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-boolean p1, p0, Lcom/android/server/FMRadioService;->mIsphoneCall:Z
 
     return p1
@@ -480,6 +523,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-wide v0, p0, Lcom/android/server/FMRadioService;->mResumeVol:J
 
     return-wide v0
@@ -491,6 +535,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-wide p1, p0, Lcom/android/server/FMRadioService;->mResumeVol:J
 
     return-wide p1
@@ -501,6 +546,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-wide v0, p0, Lcom/android/server/FMRadioService;->mCurrentResumeVol:J
 
     return-wide v0
@@ -512,6 +558,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-wide p1, p0, Lcom/android/server/FMRadioService;->mCurrentResumeVol:J
 
     return-wide p1
@@ -522,6 +569,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     return-object v0
@@ -534,6 +582,7 @@
     .parameter "x2"
 
     .prologue
+    .line 35
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/FMRadioService;->queueUpdate(IJ)V
 
     return-void
@@ -544,6 +593,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
     return v0
@@ -555,6 +605,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-boolean p1, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
     return p1
@@ -565,6 +616,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
 
     return-object v0
@@ -576,6 +628,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-object p1, p0, Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
 
     return-object p1
@@ -586,6 +639,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-wide v0, p0, Lcom/android/server/FMRadioService;->mScanFreq:J
 
     return-wide v0
@@ -597,6 +651,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-wide p1, p0, Lcom/android/server/FMRadioService;->mScanFreq:J
 
     return-wide p1
@@ -607,6 +662,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsSpeakerOn:Z
 
     return v0
@@ -618,6 +674,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-boolean p1, p0, Lcom/android/server/FMRadioService;->mIsSpeakerOn:Z
 
     return p1
@@ -629,6 +686,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-boolean p1, p0, Lcom/android/server/FMRadioService;->mIsBatteryLow:Z
 
     return p1
@@ -639,6 +697,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
 
     return-object v0
@@ -649,6 +708,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget v0, p0, Lcom/android/server/FMRadioService;->mBand:I
 
     return v0
@@ -659,6 +719,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget v0, p0, Lcom/android/server/FMRadioService;->mScanVolume:I
 
     return v0
@@ -670,6 +731,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput p1, p0, Lcom/android/server/FMRadioService;->mScanVolume:I
 
     return p1
@@ -680,6 +742,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPowerManager:Landroid/os/PowerManager;
 
     return-object v0
@@ -690,6 +753,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -700,6 +764,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsOn:Z
 
     return v0
@@ -713,6 +778,7 @@
     .parameter "x3"
 
     .prologue
+    .line 35
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/FMRadioService;->offInternal(ZIZ)Z
 
     move-result v0
@@ -725,6 +791,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mAirPlaneEnabled:Z
 
     return v0
@@ -736,6 +803,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-boolean p1, p0, Lcom/android/server/FMRadioService;->mAirPlaneEnabled:Z
 
     return p1
@@ -746,6 +814,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsTvOutPlugged:Z
 
     return v0
@@ -757,6 +826,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-boolean p1, p0, Lcom/android/server/FMRadioService;->mIsTvOutPlugged:Z
 
     return p1
@@ -767,6 +837,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsMute:Z
 
     return v0
@@ -777,6 +848,7 @@
     .parameter "x0"
 
     .prologue
+    .line 35
     iget-wide v0, p0, Lcom/android/server/FMRadioService;->mNeedResumeToFreq:J
 
     return-wide v0
@@ -788,6 +860,7 @@
     .parameter "x1"
 
     .prologue
+    .line 35
     iput-wide p1, p0, Lcom/android/server/FMRadioService;->mNeedResumeToFreq:J
 
     return-wide p1
@@ -797,6 +870,7 @@
     .locals 1
 
     .prologue
+    .line 857
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -805,14 +879,17 @@
 
     if-nez v0, :cond_0
 
+    .line 858
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
+    .line 859
     const-string v0, "Lock is held"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 861
     :cond_0
     return-void
 .end method
@@ -821,6 +898,7 @@
     .locals 1
 
     .prologue
+    .line 1011
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mAFEnable:Z
 
     if-nez v0, :cond_0
@@ -829,12 +907,15 @@
 
     if-nez v0, :cond_0
 
+    .line 1012
     const-string v0, "AF and RDS is off. release the wake lock"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1013
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->releaseWakeLock()V
 
+    .line 1015
     :cond_0
     return-void
 .end method
@@ -844,12 +925,15 @@
     .parameter "longObArray"
 
     .prologue
+    .line 1186
     if-eqz p1, :cond_1
 
+    .line 1187
     array-length v2, p1
 
     new-array v1, v2, [J
 
+    .line 1188
     .local v1, longArray:[J
     const/4 v0, 0x0
 
@@ -859,6 +943,7 @@
 
     if-ge v0, v2, :cond_0
 
+    .line 1189
     aget-object v2, p1, v0
 
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
@@ -867,6 +952,7 @@
 
     aput-wide v2, v1, v0
 
+    .line 1188
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -874,6 +960,7 @@
     :cond_0
     move-object v2, v1
 
+    .line 1194
     .end local v0           #i:I
     .end local v1           #longArray:[J
     :goto_1
@@ -890,10 +977,12 @@
     .parameter "str"
 
     .prologue
+    .line 485
     const-string v0, "FMRadioService"
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 486
     return-void
 .end method
 
@@ -908,6 +997,7 @@
 
     const/4 v3, 0x0
 
+    .line 870
     monitor-enter p0
 
     :try_start_0
@@ -919,66 +1009,82 @@
 
     move v1, v4
 
+    .line 900
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 874
     :cond_0
     const/4 v1, 0x0
 
     :try_start_1
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsOn:Z
 
+    .line 875
     if-eqz p1, :cond_2
 
+    .line 876
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/media/AudioManager;->setMode(I)V
 
+    .line 877
     const-string v1, "Setting mode to NORMAL"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 881
     :goto_1
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v1}, Lcom/android/server/FMPlayerNative;->off()V
 
+    .line 882
     const-string v1, "off returned from native"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 883
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mRDSEnable:Z
 
+    .line 884
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mAFEnable:Z
 
+    .line 885
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsMute:Z
 
+    .line 886
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsTestMode:Z
 
+    .line 887
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->unRegisterMusicCommandRec()V
 
+    .line 888
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->unRegisterBatteryListener()V
 
+    .line 889
     if-eqz p3, :cond_1
 
+    .line 890
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
 
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     invoke-virtual {v1, v2}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
+    .line 891
     :cond_1
     const/4 v1, 0x6
 
@@ -991,6 +1097,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 898
     :try_start_2
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->releaseWakeLock()V
     :try_end_2
@@ -998,8 +1105,10 @@
 
     move v1, v4
 
+    .line 892
     goto :goto_0
 
+    .line 879
     :cond_2
     :try_start_3
     const-string v1, "Not Setting mode to NORMAL"
@@ -1011,24 +1120,29 @@
 
     goto :goto_1
 
+    .line 894
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 895
     .local v0, e:Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 898
     :try_start_5
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->releaseWakeLock()V
 
     move v1, v3
 
+    .line 900
     goto :goto_0
 
+    .line 898
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -1039,6 +1153,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 870
     :catchall_1
     move-exception v1
 
@@ -1053,6 +1168,7 @@
     .parameter "delay"
 
     .prologue
+    .line 465
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1089,23 +1205,28 @@
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 466
     const/16 v0, 0xc8
 
     if-ne p1, v0, :cond_0
 
+    .line 467
     const-string v0, "queueUpdate ## VOLUME_FADEIN"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 468
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 470
     :cond_0
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
+    .line 471
     return-void
 .end method
 
@@ -1113,29 +1234,35 @@
     .locals 3
 
     .prologue
+    .line 528
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 529
     .local v0, intentFilterBattery:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BATTERY_LOW"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 530
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 531
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mLowBatteryReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 532
     const-string v1, "registering low battery listener"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 533
     return-void
 .end method
 
@@ -1143,14 +1270,17 @@
     .locals 5
 
     .prologue
+    .line 788
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->sendStopMusicCommandBroadcast()V
 
+    .line 789
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "com.android.music.musicservicecommand"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 790
     .local v0, intentFilter:Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
@@ -1158,10 +1288,12 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 791
     const-string v1, "music command reciever registered"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 792
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
 
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
@@ -1172,10 +1304,12 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I
 
+    .line 793
     const-string v1, "AudioFocusListener registered"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 795
     return-void
 .end method
 
@@ -1183,45 +1317,54 @@
     .locals 3
 
     .prologue
+    .line 541
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 542
     .local v0, intentSystemFilter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.ACTION_SHUTDOWN"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 543
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mSystemReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 545
     new-instance v0, Landroid/content/IntentFilter;
 
     .end local v0           #intentSystemFilter:Landroid/content/IntentFilter;
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 546
     .restart local v0       #intentSystemFilter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 547
     const-string v1, "android.intent.action.PACKAGE_RESTARTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 548
     const-string v1, "package"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
+    .line 549
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mSystemReceiver1:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 550
     return-void
 .end method
 
@@ -1229,10 +1372,12 @@
     .locals 6
 
     .prologue
+    .line 806
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
+    .line 808
     .local v0, id:J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/FMRadioService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -1245,14 +1390,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 810
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 812
     new-instance v2, Landroid/content/IntentFilter;
 
     const-string v3, "com.android.phone.COMPLETE_AUDIO_RESET_AFTER_CALL_END"
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 813
     .local v2, intentFilter:Landroid/content/IntentFilter;
     iget-object v3, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
@@ -1260,12 +1408,15 @@
 
     invoke-virtual {v3, v4, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 815
     const-string v3, "registering telephony listener"
 
     invoke-static {v3}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 816
     return-void
 
+    .line 810
     .end local v2           #intentFilter:Landroid/content/IntentFilter;
     :catchall_0
     move-exception v3
@@ -1279,6 +1430,7 @@
     .locals 1
 
     .prologue
+    .line 849
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1287,14 +1439,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 850
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
+    .line 851
     const-string v0, "Lock is released"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 853
     :cond_0
     return-void
 .end method
@@ -1304,6 +1459,7 @@
     .parameter "listener"
 
     .prologue
+    .line 913
     iget-object v3, p0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
 
     if-eqz v3, :cond_0
@@ -1316,15 +1472,18 @@
 
     if-nez v3, :cond_1
 
+    .line 926
     :cond_0
     :goto_0
     return-void
 
+    .line 916
     :cond_1
     iget-object v3, p0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
 
     monitor-enter v3
 
+    .line 917
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1338,6 +1497,7 @@
 
     if-ge v1, v4, :cond_3
 
+    .line 918
     iget-object v4, p0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
 
     invoke-virtual {v4, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -1346,6 +1506,7 @@
 
     check-cast v2, Lcom/android/server/FMRadioService$ListenerRecord;
 
+    .line 919
     .local v2, record:Lcom/android/server/FMRadioService$ListenerRecord;
     iget-object v4, v2, Lcom/android/server/FMRadioService$ListenerRecord;->mBinder:Landroid/os/IBinder;
 
@@ -1355,6 +1516,7 @@
 
     if-ne v4, v5, :cond_2
 
+    .line 920
     iget-object v4, p0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
 
     invoke-virtual {v4, v1}, Ljava/util/Vector;->remove(I)Ljava/lang/Object;
@@ -1363,6 +1525,7 @@
 
     check-cast v0, Lcom/android/server/FMRadioService$ListenerRecord;
 
+    .line 921
     .local v0, delRecord:Lcom/android/server/FMRadioService$ListenerRecord;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1384,10 +1547,12 @@
 
     invoke-static {v4}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 922
     monitor-exit v3
 
     goto :goto_0
 
+    .line 925
     .end local v0           #delRecord:Lcom/android/server/FMRadioService$ListenerRecord;
     .end local v2           #record:Lcom/android/server/FMRadioService$ListenerRecord;
     :catchall_0
@@ -1399,12 +1564,14 @@
 
     throw v4
 
+    .line 917
     .restart local v2       #record:Lcom/android/server/FMRadioService$ListenerRecord;
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 925
     .end local v2           #record:Lcom/android/server/FMRadioService$ListenerRecord;
     :cond_3
     :try_start_1
@@ -1419,12 +1586,14 @@
     .locals 3
 
     .prologue
+    .line 798
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.music.musicservicecommand"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 799
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "command"
 
@@ -1432,20 +1601,24 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 800
     const-string v1, "from"
 
     const-string v2, "com.sec.android.app.fm"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 801
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 802
     const-string v1, "music command stop sent .."
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 803
     return-void
 .end method
 
@@ -1453,16 +1626,19 @@
     .locals 2
 
     .prologue
+    .line 536
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mLowBatteryReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 537
     const-string v0, "unregistering low battery listener"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 538
     return-void
 .end method
 
@@ -1470,16 +1646,19 @@
     .locals 2
 
     .prologue
+    .line 908
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mMusicCommandRec:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 909
     const-string v0, "music command reciever un-registered"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 910
     return-void
 .end method
 
@@ -1487,10 +1666,12 @@
     .locals 5
 
     .prologue
+    .line 819
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
+    .line 821
     .local v0, id:J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -1503,20 +1684,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 823
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 825
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/server/FMRadioService;->mPhoneAudioResetListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 826
     const-string v2, "unregistering telephony listener"
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 827
     return-void
 
+    .line 823
     :catchall_0
     move-exception v2
 
@@ -1529,12 +1715,14 @@
     .locals 2
 
     .prologue
+    .line 553
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mSystemReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 554
     return-void
 .end method
 
@@ -1542,6 +1730,7 @@
     .locals 5
 
     .prologue
+    .line 657
     const-string v3, "battery"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1550,14 +1739,17 @@
 
     check-cast v1, Lcom/android/server/BatteryService;
 
+    .line 658
     .local v1, betteryService:Lcom/android/server/BatteryService;
     invoke-virtual {v1}, Lcom/android/server/BatteryService;->getBatteryLevel()I
 
     move-result v0
 
+    .line 661
     .local v0, battLevel:I
     const/16 v2, 0xa
 
+    .line 662
     .local v2, mLowBatteryWarningLevel:I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1603,6 +1795,7 @@
 
     invoke-static {v3}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 664
     if-gt v0, v2, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/BatteryService;->isPowered()Z
@@ -1611,22 +1804,27 @@
 
     if-nez v3, :cond_0
 
+    .line 666
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/FMRadioService;->mIsBatteryLow:Z
 
+    .line 667
     const-string v3, "Battery is low"
 
     invoke-static {v3}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 672
     :goto_0
     return-void
 
+    .line 669
     :cond_0
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/FMRadioService;->mIsBatteryLow:Z
 
+    .line 670
     const-string v3, "Battery is ok"
 
     invoke-static {v3}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
@@ -1640,10 +1838,12 @@
     .locals 1
 
     .prologue
+    .line 1035
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->cancelAFSwitching()V
 
+    .line 1036
     return-void
 .end method
 
@@ -1653,19 +1853,23 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 947
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
     if-eqz v1, :cond_0
 
+    .line 948
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
+    .line 949
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v1}, Lcom/android/server/FMPlayerNative;->cancelSeek()V
 
+    .line 950
     const/4 v1, 0x4
 
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
@@ -1682,16 +1886,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 952
     const/4 v1, 0x1
 
+    .line 961
     :goto_0
     return v1
 
+    .line 958
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 959
     .local v0, e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1699,6 +1907,7 @@
     :cond_0
     move v1, v4
 
+    .line 961
     goto :goto_0
 .end method
 
@@ -1706,10 +1915,12 @@
     .locals 1
 
     .prologue
+    .line 632
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->cancelSeek()V
 
+    .line 633
     return-void
 .end method
 
@@ -1717,16 +1928,20 @@
     .locals 1
 
     .prologue
+    .line 1005
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService;->mAFEnable:Z
 
+    .line 1006
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->disableAF()V
 
+    .line 1007
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->checkForWakeLockRelease()V
 
+    .line 1008
     return-void
 .end method
 
@@ -1734,22 +1949,27 @@
     .locals 2
 
     .prologue
+    .line 988
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService;->mRDSEnable:Z
 
+    .line 989
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->disableRDS()V
 
+    .line 990
     const/16 v0, 0xc
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 991
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->checkForWakeLockRelease()V
 
+    .line 992
     return-void
 .end method
 
@@ -1757,26 +1977,32 @@
     .locals 1
 
     .prologue
+    .line 995
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mAFEnable:Z
 
     if-eqz v0, :cond_0
 
+    .line 996
     const-string v0, "AF is already enabled"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1002
     :goto_0
     return-void
 
+    .line 999
     :cond_0
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->enableAF()V
 
+    .line 1000
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService;->mAFEnable:Z
 
+    .line 1001
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->acquireWakeLock()V
 
     goto :goto_0
@@ -1786,32 +2012,39 @@
     .locals 2
 
     .prologue
+    .line 977
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mRDSEnable:Z
 
     if-eqz v0, :cond_0
 
+    .line 978
     const-string v0, "RDS is already enabled"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 985
     :goto_0
     return-void
 
+    .line 981
     :cond_0
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->enableRDS()V
 
+    .line 982
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService;->mRDSEnable:Z
 
+    .line 983
     const/16 v0, 0xb
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 984
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->acquireWakeLock()V
 
     goto :goto_0
@@ -1826,8 +2059,10 @@
     .end annotation
 
     .prologue
+    .line 1234
     invoke-super {p0}, Lcom/samsung/media/fmradio/internal/IFMPlayer$Stub;->finalize()V
 
+    .line 1236
     :try_start_0
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -1841,48 +2076,60 @@
 
     if-eqz v0, :cond_0
 
+    .line 1237
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
+    .line 1239
     :cond_0
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->unRegisterTelephonyListener()V
 
+    .line 1240
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->unregisterSystemListener()V
 
+    .line 1241
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
+    .line 1242
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/FMRadioService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
+    .line 1243
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/FMRadioService;->mPowerManager:Landroid/os/PowerManager;
 
+    .line 1244
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
 
+    .line 1245
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
+    .line 1246
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
 
+    .line 1248
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
     :try_end_0
     .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1252
     :goto_0
     return-void
 
+    .line 1249
     :catch_0
     move-exception v0
 
@@ -1893,6 +2140,7 @@
     .locals 1
 
     .prologue
+    .line 1230
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->getCnt_th()I
@@ -1906,6 +2154,7 @@
     .locals 2
 
     .prologue
+    .line 679
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->getCurrentChannel()J
@@ -1919,6 +2168,7 @@
     .locals 2
 
     .prologue
+    .line 942
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->getCurrentRSSI()J
@@ -1932,6 +2182,7 @@
     .locals 3
 
     .prologue
+    .line 614
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
@@ -1944,6 +2195,7 @@
 
     check-cast v0, [Ljava/lang/Long;
 
+    .line 615
     .local v0, arryL:[Ljava/lang/Long;
     invoke-direct {p0, v0}, Lcom/android/server/FMRadioService;->convertToPrimitives([Ljava/lang/Long;)[J
 
@@ -1956,6 +2208,7 @@
     .locals 2
 
     .prologue
+    .line 845
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->getMaxVolume()J
@@ -1969,6 +2222,7 @@
     .locals 1
 
     .prologue
+    .line 1222
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->getRSSI_th()I
@@ -1982,6 +2236,7 @@
     .locals 1
 
     .prologue
+    .line 1226
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->getSNR_th()I
@@ -1995,6 +2250,7 @@
     .locals 2
 
     .prologue
+    .line 841
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->getVolume()J
@@ -2008,6 +2264,7 @@
     .locals 1
 
     .prologue
+    .line 1031
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mAFEnable:Z
 
     return v0
@@ -2017,6 +2274,7 @@
     .locals 1
 
     .prologue
+    .line 675
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mAirPlaneEnabled:Z
 
     return v0
@@ -2026,8 +2284,10 @@
     .locals 1
 
     .prologue
+    .line 652
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->updateBatteryLowFlag()V
 
+    .line 653
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsBatteryLow:Z
 
     return v0
@@ -2037,12 +2297,15 @@
     .locals 1
 
     .prologue
+    .line 637
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
     if-eqz v0, :cond_0
 
+    .line 638
     const/4 v0, 0x1
 
+    .line 640
     :goto_0
     return v0
 
@@ -2056,6 +2319,7 @@
     .locals 1
 
     .prologue
+    .line 644
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsHeadsetPlugged:Z
 
     return v0
@@ -2065,6 +2329,7 @@
     .locals 1
 
     .prologue
+    .line 865
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsOn:Z
 
     return v0
@@ -2074,6 +2339,7 @@
     .locals 1
 
     .prologue
+    .line 1027
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mRDSEnable:Z
 
     return v0
@@ -2083,6 +2349,7 @@
     .locals 1
 
     .prologue
+    .line 938
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
     return v0
@@ -2092,6 +2359,7 @@
     .locals 1
 
     .prologue
+    .line 648
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsTvOutPlugged:Z
 
     return v0
@@ -2102,24 +2370,30 @@
     .parameter "value"
 
     .prologue
+    .line 603
     if-eqz p1, :cond_0
 
+    .line 604
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->muteOn()V
 
+    .line 605
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsMute:Z
 
+    .line 610
     :goto_0
     return-void
 
+    .line 607
     :cond_0
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->muteOff()V
 
+    .line 608
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsMute:Z
@@ -2133,6 +2407,7 @@
     .parameter "data"
 
     .prologue
+    .line 1070
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/FMRadioService;->mIsOn:Z
@@ -2149,6 +2424,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 1071
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
@@ -2159,10 +2435,12 @@
 
     invoke-virtual {v11, v12}, Landroid/media/AudioManager;->setMode(I)V
 
+    .line 1072
     const-string v11, "AudioMode set the MODE_FM_RADIO"
 
     invoke-static {v11}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1075
     :cond_0
     move-object/from16 v0, p0
 
@@ -2184,10 +2462,12 @@
 
     if-nez v11, :cond_2
 
+    .line 1183
     :cond_1
     :goto_0
     return-void
 
+    .line 1079
     :cond_2
     move-object/from16 v0, p0
 
@@ -2197,6 +2477,7 @@
 
     monitor-enter v11
 
+    .line 1080
     :try_start_0
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -2228,6 +2509,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1081
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -2238,6 +2520,7 @@
 
     move-result v10
 
+    .line 1082
     .local v10, size:I
     const/4 v12, 0x1
 
@@ -2247,6 +2530,7 @@
     :goto_1
     if-ltz v7, :cond_3
 
+    .line 1083
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -2269,13 +2553,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1085
     packed-switch p1, :pswitch_data_0
 
+    .line 1082
     :goto_2
     add-int/lit8 v7, v7, -0x1
 
     goto :goto_1
 
+    .line 1088
     :pswitch_0
     :try_start_1
     new-instance v12, Ljava/lang/StringBuilder;
@@ -2326,6 +2613,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1089
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -2347,15 +2635,18 @@
 
     goto :goto_2
 
+    .line 1174
     :catch_0
     move-exception v12
 
     move-object v3, v12
 
+    .line 1175
     .local v3, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 1176
     const-string v12, "FMRadioService"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -2402,6 +2693,7 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1177
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -2422,6 +2714,7 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/FMRadioService;->remove(Lcom/samsung/media/fmradio/internal/IFMEventListener;)V
 
+    .line 1178
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -2444,6 +2737,7 @@
 
     goto/16 :goto_2
 
+    .line 1182
     .end local v3           #e:Ljava/lang/Exception;
     .end local v7           #i:I
     .end local v10           #size:I
@@ -2456,6 +2750,7 @@
 
     throw v12
 
+    .line 1093
     .restart local v7       #i:I
     .restart local v10       #size:I
     :pswitch_1
@@ -2508,6 +2803,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1094
     move-object/from16 v0, p2
 
     check-cast v0, Ljava/lang/Integer;
@@ -2518,6 +2814,7 @@
 
     move-result v9
 
+    .line 1095
     .local v9, reasonCode:I
     move-object/from16 v0, p0
 
@@ -2537,6 +2834,7 @@
 
     goto/16 :goto_2
 
+    .line 1100
     .end local v9           #reasonCode:I
     :pswitch_2
     move-object/from16 v0, p2
@@ -2549,6 +2847,7 @@
 
     move-result-wide v4
 
+    .line 1101
     .local v4, freq:J
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -2608,6 +2907,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1102
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -2626,6 +2926,7 @@
 
     goto/16 :goto_2
 
+    .line 1106
     .end local v4           #freq:J
     :pswitch_3
     new-instance v12, Ljava/lang/StringBuilder;
@@ -2676,6 +2977,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1107
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -2694,6 +2996,7 @@
 
     goto/16 :goto_2
 
+    .line 1111
     :pswitch_4
     move-object/from16 v0, p2
 
@@ -2703,6 +3006,7 @@
 
     check-cast v2, [Ljava/lang/Long;
 
+    .line 1112
     .local v2, Ifreq:[Ljava/lang/Long;
     move-object/from16 v0, p0
 
@@ -2712,6 +3016,7 @@
 
     move-result-object v6
 
+    .line 1113
     .local v6, freqArry:[J
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -2774,6 +3079,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1114
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -2792,6 +3098,7 @@
 
     goto/16 :goto_2
 
+    .line 1118
     .end local v6           #freqArry:[J
     :pswitch_5
     move-object/from16 v0, p2
@@ -2802,6 +3109,7 @@
 
     check-cast v2, [Ljava/lang/Long;
 
+    .line 1119
     .restart local v2       #Ifreq:[Ljava/lang/Long;
     move-object/from16 v0, p0
 
@@ -2811,6 +3119,7 @@
 
     move-result-object v6
 
+    .line 1120
     .restart local v6       #freqArry:[J
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -2873,6 +3182,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1121
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -2891,6 +3201,7 @@
 
     goto/16 :goto_2
 
+    .line 1125
     .end local v6           #freqArry:[J
     :pswitch_6
     move-object/from16 v0, p2
@@ -2903,6 +3214,7 @@
 
     move-result-wide v4
 
+    .line 1126
     .restart local v4       #freq:J
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -2962,6 +3274,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1127
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -2980,6 +3293,7 @@
 
     goto/16 :goto_2
 
+    .line 1131
     .end local v4           #freq:J
     :pswitch_7
     new-instance v12, Ljava/lang/StringBuilder;
@@ -3030,6 +3344,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1132
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -3048,6 +3363,7 @@
 
     goto/16 :goto_2
 
+    .line 1136
     :pswitch_8
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -3097,6 +3413,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1137
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -3115,6 +3432,7 @@
 
     goto/16 :goto_2
 
+    .line 1141
     :pswitch_9
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -3164,12 +3482,14 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1142
     move-object/from16 v0, p2
 
     check-cast v0, Lcom/android/server/FMPlayerNative$RDSData;
 
     move-object v8, v0
 
+    .line 1143
     .local v8, rdsData:Lcom/android/server/FMPlayerNative$RDSData;
     move-object/from16 v0, p0
 
@@ -3199,6 +3519,7 @@
 
     goto/16 :goto_2
 
+    .line 1149
     .end local v8           #rdsData:Lcom/android/server/FMPlayerNative$RDSData;
     :pswitch_a
     new-instance v12, Ljava/lang/StringBuilder;
@@ -3249,6 +3570,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1150
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -3267,6 +3589,7 @@
 
     goto/16 :goto_2
 
+    .line 1154
     :pswitch_b
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -3316,6 +3639,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1155
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -3334,6 +3658,7 @@
 
     goto/16 :goto_2
 
+    .line 1159
     :pswitch_c
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -3383,6 +3708,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1160
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
@@ -3401,6 +3727,7 @@
 
     goto/16 :goto_2
 
+    .line 1164
     :pswitch_d
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -3450,6 +3777,7 @@
 
     invoke-static {v12}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1165
     move-object/from16 v0, p2
 
     check-cast v0, Ljava/lang/Long;
@@ -3460,6 +3788,7 @@
 
     move-result-wide v4
 
+    .line 1166
     .restart local v4       #freq:J
     move-object/from16 v0, p0
 
@@ -3482,6 +3811,7 @@
 
     goto/16 :goto_2
 
+    .line 1182
     .end local v4           #freq:J
     :cond_3
     :try_start_4
@@ -3491,6 +3821,7 @@
 
     goto/16 :goto_0
 
+    .line 1085
     nop
 
     :pswitch_data_0
@@ -3518,6 +3849,7 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 904
     const/4 v0, 0x0
 
     invoke-direct {p0, v1, v0, v1}, Lcom/android/server/FMRadioService;->offInternal(ZIZ)Z
@@ -3535,6 +3867,7 @@
 
     const/4 v5, 0x0
 
+    .line 744
     monitor-enter p0
 
     :try_start_0
@@ -3546,11 +3879,13 @@
 
     move v1, v5
 
+    .line 784
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 746
     :cond_0
     :try_start_1
     iget-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsTvOutPlugged:Z
@@ -3559,8 +3894,10 @@
 
     move v1, v5
 
+    .line 747
     goto :goto_0
 
+    .line 749
     :cond_1
     iget-boolean v1, p0, Lcom/android/server/FMRadioService;->mAirPlaneEnabled:Z
 
@@ -3568,19 +3905,24 @@
 
     move v1, v5
 
+    .line 750
     goto :goto_0
 
+    .line 751
     :cond_2
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->updateBatteryLowFlag()V
 
+    .line 753
     iget-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsBatteryLow:Z
 
     if-eqz v1, :cond_3
 
     move v1, v5
 
+    .line 754
     goto :goto_0
 
+    .line 756
     :cond_3
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -3603,8 +3945,10 @@
     :cond_4
     move v1, v5
 
+    .line 758
     goto :goto_0
 
+    .line 760
     :cond_5
     iget-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsOn:Z
     :try_end_1
@@ -3614,8 +3958,10 @@
 
     move v1, v6
 
+    .line 761
     goto :goto_0
 
+    .line 763
     :cond_6
     :try_start_2
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
@@ -3630,32 +3976,40 @@
 
     if-lez v1, :cond_7
 
+    .line 764
     const-string v1, "on returned from native"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 766
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsOn:Z
 
+    .line 767
     const/4 v1, 0x5
 
     const/4 v2, 0x0
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 768
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->registerMusicCommandRec()V
 
+    .line 769
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->registerBatteryListener()V
 
+    .line 770
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/android/server/FMRadioService;->mute(Z)V
 
     move v1, v6
 
+    .line 774
     goto :goto_0
 
+    .line 777
     :cond_7
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->releaseWakeLock()V
     :try_end_2
@@ -3664,25 +4018,31 @@
 
     move v1, v5
 
+    .line 778
     goto :goto_0
 
+    .line 780
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 781
     .local v0, e:Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 782
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->releaseWakeLock()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move v1, v5
 
+    .line 784
     goto :goto_0
 
+    .line 744
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -3700,6 +4060,7 @@
 
     const/4 v5, 0x0
 
+    .line 704
     monitor-enter p0
 
     :try_start_0
@@ -3711,11 +4072,13 @@
 
     move v1, v5
 
+    .line 740
     :goto_0
     monitor-exit p0
 
     return v1
 
+    .line 707
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -3739,8 +4102,10 @@
     :cond_1
     move v1, v5
 
+    .line 709
     goto :goto_0
 
+    .line 711
     :cond_2
     iget-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsOn:Z
     :try_end_1
@@ -3750,8 +4115,10 @@
 
     move v1, v6
 
+    .line 712
     goto :goto_0
 
+    .line 719
     :cond_3
     :try_start_2
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
@@ -3766,38 +4133,47 @@
 
     if-lez v1, :cond_4
 
+    .line 721
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsOn:Z
 
+    .line 722
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/FMRadioService;->mIsTestMode:Z
 
+    .line 723
     const/4 v1, 0x5
 
     const/4 v2, 0x0
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 724
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->registerMusicCommandRec()V
 
+    .line 725
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/android/server/FMRadioService;->mute(Z)V
 
+    .line 726
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/media/AudioManager;->setMode(I)V
 
+    .line 727
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->registerBatteryListener()V
 
     move v1, v6
 
+    .line 730
     goto :goto_0
 
+    .line 733
     :cond_4
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->releaseWakeLock()V
     :try_end_2
@@ -3806,25 +4182,31 @@
 
     move v1, v5
 
+    .line 734
     goto :goto_0
 
+    .line 736
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 737
     .local v0, e:Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 738
     invoke-direct {p0}, Lcom/android/server/FMRadioService;->releaseWakeLock()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move v1, v5
 
+    .line 740
     goto :goto_0
 
+    .line 704
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -3839,6 +4221,7 @@
     .parameter "listener"
 
     .prologue
+    .line 694
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3859,8 +4242,10 @@
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 695
     invoke-direct {p0, p1}, Lcom/android/server/FMRadioService;->remove(Lcom/samsung/media/fmradio/internal/IFMEventListener;)V
 
+    .line 696
     return-void
 .end method
 
@@ -3868,18 +4253,22 @@
     .locals 1
 
     .prologue
+    .line 930
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
     if-eqz v0, :cond_0
 
+    .line 935
     :goto_0
     return-void
 
+    .line 932
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/FMRadioService;->mScanProgress:Z
 
+    .line 934
     new-instance v0, Lcom/android/server/FMRadioService$ScanThread;
 
     invoke-direct {v0, p0}, Lcom/android/server/FMRadioService$ScanThread;-><init>(Lcom/android/server/FMRadioService;)V
@@ -3893,6 +4282,7 @@
     .locals 2
 
     .prologue
+    .line 973
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->searchDown()J
@@ -3906,16 +4296,19 @@
     .locals 2
 
     .prologue
+    .line 966
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsOn:Z
 
     if-eqz v0, :cond_0
 
+    .line 967
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0}, Lcom/android/server/FMPlayerNative;->searchUp()J
 
     move-result-wide v0
 
+    .line 968
     :goto_0
     return-wide v0
 
@@ -3929,12 +4322,14 @@
     .locals 4
 
     .prologue
+    .line 625
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v2}, Lcom/android/server/FMPlayerNative;->seekDown()J
 
     move-result-wide v0
 
+    .line 626
     .local v0, freq:J
     const/4 v2, 0x7
 
@@ -3944,6 +4339,7 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 627
     return-wide v0
 .end method
 
@@ -3951,12 +4347,14 @@
     .locals 4
 
     .prologue
+    .line 619
     iget-object v2, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v2}, Lcom/android/server/FMPlayerNative;->seekUp()J
 
     move-result-wide v0
 
+    .line 620
     .local v0, freq:J
     const/4 v2, 0x7
 
@@ -3966,6 +4364,7 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 621
     return-wide v0
 .end method
 
@@ -3974,12 +4373,15 @@
     .parameter "band"
 
     .prologue
+    .line 1018
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1}, Lcom/android/server/FMPlayerNative;->setBand(I)V
 
+    .line 1019
     iput p1, p0, Lcom/android/server/FMRadioService;->mBand:I
 
+    .line 1020
     return-void
 .end method
 
@@ -3988,10 +4390,12 @@
     .parameter "spacing"
 
     .prologue
+    .line 1023
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1}, Lcom/android/server/FMPlayerNative;->setChannelSpacing(I)V
 
+    .line 1024
     return-void
 .end method
 
@@ -4000,10 +4404,12 @@
     .parameter "value"
 
     .prologue
+    .line 1218
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1}, Lcom/android/server/FMPlayerNative;->setCnt_th(I)V
 
+    .line 1219
     return-void
 .end method
 
@@ -4012,10 +4418,12 @@
     .parameter "value"
 
     .prologue
+    .line 1198
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/FMPlayerNative;->setDEConstant(J)V
 
+    .line 1199
     return-void
 .end method
 
@@ -4024,6 +4432,7 @@
     .parameter "listener"
 
     .prologue
+    .line 683
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4044,16 +4453,19 @@
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 684
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
 
     if-nez v1, :cond_0
 
+    .line 685
     new-instance v1, Ljava/util/Vector;
 
     invoke-direct {v1}, Ljava/util/Vector;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
 
+    .line 687
     :cond_0
     new-instance v0, Lcom/android/server/FMRadioService$ListenerRecord;
 
@@ -4063,11 +4475,13 @@
 
     invoke-direct {v0, p1, v1}, Lcom/android/server/FMRadioService$ListenerRecord;-><init>(Lcom/samsung/media/fmradio/internal/IFMEventListener;Landroid/os/IBinder;)V
 
+    .line 689
     .local v0, record:Lcom/android/server/FMRadioService$ListenerRecord;
     iget-object v1, p0, Lcom/android/server/FMRadioService;->mListeners:Ljava/util/Vector;
 
     invoke-virtual {v1, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
+    .line 690
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4094,6 +4508,7 @@
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 691
     return-void
 .end method
 
@@ -4102,10 +4517,12 @@
     .parameter "value"
 
     .prologue
+    .line 1210
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1}, Lcom/android/server/FMPlayerNative;->setRSSI_th(I)V
 
+    .line 1211
     return-void
 .end method
 
@@ -4114,10 +4531,12 @@
     .parameter "value"
 
     .prologue
+    .line 1214
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1}, Lcom/android/server/FMPlayerNative;->setSNR_th(I)V
 
+    .line 1215
     return-void
 .end method
 
@@ -4126,10 +4545,12 @@
     .parameter "value"
 
     .prologue
+    .line 1202
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/FMPlayerNative;->setSeekRSSI(J)V
 
+    .line 1203
     return-void
 .end method
 
@@ -4138,10 +4559,12 @@
     .parameter "value"
 
     .prologue
+    .line 1206
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/FMPlayerNative;->setSeekSNR(J)V
 
+    .line 1207
     return-void
 .end method
 
@@ -4150,17 +4573,21 @@
     .parameter "val"
 
     .prologue
+    .line 1039
     if-eqz p1, :cond_0
 
+    .line 1040
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/server/FMPlayerNative;->setStereo(I)V
 
+    .line 1043
     :goto_0
     return-void
 
+    .line 1042
     :cond_0
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
@@ -4176,35 +4603,43 @@
     .parameter "val"
 
     .prologue
+    .line 830
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/FMPlayerNative;->setVolume(J)V
 
+    .line 831
     iput-wide p1, p0, Lcom/android/server/FMRadioService;->mResumeVol:J
 
+    .line 832
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-gtz v0, :cond_1
 
+    .line 833
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/FMRadioService;->mute(Z)V
 
+    .line 838
     :cond_0
     :goto_0
     return-void
 
+    .line 834
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/FMRadioService;->mIsMute:Z
 
     if-eqz v0, :cond_0
 
+    .line 835
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/FMRadioService;->mute(Z)V
 
+    .line 836
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/FMPlayerNative;->setVolume(J)V
@@ -4217,10 +4652,12 @@
     .parameter "freq"
 
     .prologue
+    .line 597
     iget-object v0, p0, Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/FMPlayerNative;->tune(J)V
 
+    .line 598
     const/4 v0, 0x7
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -4229,5 +4666,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 600
     return-void
 .end method

@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .parameter "x0"
 
     .prologue
+    .line 120
     invoke-direct {p0}, Landroid/widget/RemoteViews$Action;-><init>()V
 
     return-void
@@ -51,6 +53,7 @@
     .locals 1
 
     .prologue
+    .line 124
     const/4 v0, 0x0
 
     return v0

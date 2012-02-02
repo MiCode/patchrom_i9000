@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 1111
     iput-object p1, p0, Lcom/android/server/WifiWatchdogService$2;->this$0:Lcom/android/server/WifiWatchdogService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,6 +37,7 @@
     .parameter "info"
 
     .prologue
+    .line 1131
     sget-object v1, Lcom/android/server/WifiWatchdogService$3;->$SwitchMap$android$net$NetworkInfo$State:[I
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
@@ -50,10 +52,12 @@
 
     packed-switch v1, :pswitch_data_0
 
+    .line 1150
     :cond_0
     :goto_0
     return-void
 
+    .line 1133
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/WifiWatchdogService$2;->this$0:Lcom/android/server/WifiWatchdogService;
 
@@ -66,6 +70,7 @@
 
     move-result-object v0
 
+    .line 1134
     .local v0, wifiInfo:Landroid/net/wifi/WifiInfo;
     invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
 
@@ -79,6 +84,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 1143
     iget-object v1, p0, Lcom/android/server/WifiWatchdogService$2;->this$0:Lcom/android/server/WifiWatchdogService;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
@@ -94,6 +100,7 @@
 
     goto :goto_0
 
+    .line 1147
     .end local v0           #wifiInfo:Landroid/net/wifi/WifiInfo;
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/WifiWatchdogService$2;->this$0:Lcom/android/server/WifiWatchdogService;
@@ -103,6 +110,7 @@
 
     goto :goto_0
 
+    .line 1131
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -115,24 +123,29 @@
     .parameter "wifiState"
 
     .prologue
+    .line 1153
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
+    .line 1154
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$2;->this$0:Lcom/android/server/WifiWatchdogService;
 
     #calls: Lcom/android/server/WifiWatchdogService;->quit()V
     invoke-static {v0}, Lcom/android/server/WifiWatchdogService;->access$1800(Lcom/android/server/WifiWatchdogService;)V
 
+    .line 1158
     :cond_0
     :goto_0
     return-void
 
+    .line 1155
     :cond_1
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_0
 
+    .line 1156
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$2;->this$0:Lcom/android/server/WifiWatchdogService;
 
     #calls: Lcom/android/server/WifiWatchdogService;->onEnabled()V
@@ -149,10 +162,12 @@
     .parameter "intent"
 
     .prologue
+    .line 1115
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 1116
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.net.wifi.STATE_CHANGE"
 
@@ -162,6 +177,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 1117
     const-string v1, "networkInfo"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -172,10 +188,12 @@
 
     invoke-direct {p0, v1}, Lcom/android/server/WifiWatchdogService$2;->handleNetworkStateChanged(Landroid/net/NetworkInfo;)V
 
+    .line 1123
     :cond_0
     :goto_0
     return-void
 
+    .line 1119
     :cond_1
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -185,6 +203,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 1120
     const-string v1, "wifi_state"
 
     const/4 v2, 0x4

@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 138
     iput-object p1, p0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -42,14 +43,17 @@
 
     const/4 v4, 0x0
 
+    .line 142
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
+    .line 152
     :cond_0
     :goto_0
     return-void
 
+    .line 145
     :pswitch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -74,6 +78,7 @@
     #calls: Landroid/server/BluetoothA2dpService;->log(Ljava/lang/String;)V
     invoke-static {v1}, Landroid/server/BluetoothA2dpService;->access$800(Ljava/lang/String;)V
 
+    .line 146
     iget-object v1, p0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
 
     iget v2, p1, Landroid/os/Message;->arg1:I
@@ -92,6 +97,7 @@
 
     if-nez v1, :cond_0
 
+    .line 147
     iget-object v1, p0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
 
     #getter for: Landroid/server/BluetoothA2dpService;->mHandler:Landroid/os/Handler;
@@ -107,6 +113,7 @@
 
     move-result-object v0
 
+    .line 148
     .local v0, msg1:Landroid/os/Message;
     iget-object v1, p0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
 
@@ -125,8 +132,10 @@
     :cond_1
     move v2, v4
 
+    .line 146
     goto :goto_1
 
+    .line 142
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

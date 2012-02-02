@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 311
     iput-object p1, p0, Landroid/inputmethodservice/InputMethodService$1;->this$0:Landroid/inputmethodservice/InputMethodService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,6 +40,7 @@
     .parameter "intent"
 
     .prologue
+    .line 313
     iget-object v1, p0, Landroid/inputmethodservice/InputMethodService$1;->this$0:Landroid/inputmethodservice/InputMethodService;
 
     invoke-virtual {v1}, Landroid/inputmethodservice/InputMethodService;->getResources()Landroid/content/res/Resources;
@@ -49,6 +51,7 @@
 
     move-result-object v0
 
+    .line 314
     .local v0, config:Landroid/content/res/Configuration;
     iget v1, v0, Landroid/content/res/Configuration;->orientation:I
 
@@ -64,11 +67,13 @@
 
     if-eqz v1, :cond_0
 
+    .line 315
     iget-object v1, p0, Landroid/inputmethodservice/InputMethodService$1;->this$0:Landroid/inputmethodservice/InputMethodService;
 
     #calls: Landroid/inputmethodservice/InputMethodService;->handleClose()V
     invoke-static {v1}, Landroid/inputmethodservice/InputMethodService;->access$000(Landroid/inputmethodservice/InputMethodService;)V
 
+    .line 317
     :cond_0
     return-void
 .end method

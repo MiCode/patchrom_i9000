@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 720
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
     return-void
@@ -30,9 +31,11 @@
     .locals 1
 
     .prologue
+    .line 723
     const-string v0, "system_server"
 
     invoke-static {v0}, Lcom/android/internal/os/SamplingProfilerIntegration;->writeSnapshot(Ljava/lang/String;)V
 
+    .line 724
     return-void
 .end method

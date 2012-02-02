@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 6178
     iput-object p1, p0, Lcom/android/server/PackageManagerService$6;->this$0:Lcom/android/server/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "name"
 
     .prologue
+    .line 6180
     const-string v0, "vmdl"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z

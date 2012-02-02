@@ -24,10 +24,13 @@
     .parameter
 
     .prologue
+    .line 249
     iput-object p1, p0, Landroid/view/GestureDetector$GestureHandler;->this$0:Landroid/view/GestureDetector;
 
+    .line 250
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
+    .line 251
     return-void
 .end method
 
@@ -37,14 +40,17 @@
     .parameter "handler"
 
     .prologue
+    .line 253
     iput-object p1, p0, Landroid/view/GestureDetector$GestureHandler;->this$0:Landroid/view/GestureDetector;
 
+    .line 254
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 255
     return-void
 .end method
 
@@ -55,10 +61,12 @@
     .parameter "msg"
 
     .prologue
+    .line 259
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 276
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,6 +91,7 @@
 
     throw v0
 
+    .line 261
     :pswitch_0
     iget-object v0, p0, Landroid/view/GestureDetector$GestureHandler;->this$0:Landroid/view/GestureDetector;
 
@@ -100,10 +109,12 @@
 
     invoke-interface {v0, v1}, Landroid/view/GestureDetector$OnGestureListener;->onShowPress(Landroid/view/MotionEvent;)V
 
+    .line 278
     :cond_0
     :goto_0
     return-void
 
+    .line 265
     :pswitch_1
     iget-object v0, p0, Landroid/view/GestureDetector$GestureHandler;->this$0:Landroid/view/GestureDetector;
 
@@ -112,6 +123,7 @@
 
     goto :goto_0
 
+    .line 270
     :pswitch_2
     iget-object v0, p0, Landroid/view/GestureDetector$GestureHandler;->this$0:Landroid/view/GestureDetector;
 
@@ -131,6 +143,7 @@
 
     if-nez v0, :cond_0
 
+    .line 271
     iget-object v0, p0, Landroid/view/GestureDetector$GestureHandler;->this$0:Landroid/view/GestureDetector;
 
     #getter for: Landroid/view/GestureDetector;->mDoubleTapListener:Landroid/view/GestureDetector$OnDoubleTapListener;
@@ -149,6 +162,7 @@
 
     goto :goto_0
 
+    .line 259
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

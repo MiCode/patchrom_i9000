@@ -35,24 +35,30 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 79
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
+    .line 80
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/SslErrorHandler;->mLoaderQueue:Ljava/util/LinkedList;
 
+    .line 81
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/SslErrorHandler;->mSslPrefTable:Landroid/os/Bundle;
 
+    .line 84
     iput-object v1, p0, Landroid/webkit/SslErrorHandler;->mOriginHandler:Landroid/webkit/SslErrorHandler;
 
+    .line 85
     iput-object v1, p0, Landroid/webkit/SslErrorHandler;->mLoadListener:Landroid/webkit/LoadListener;
 
+    .line 86
     return-void
 .end method
 
@@ -62,12 +68,16 @@
     .parameter "listener"
 
     .prologue
+    .line 91
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
+    .line 92
     iput-object p1, p0, Landroid/webkit/SslErrorHandler;->mOriginHandler:Landroid/webkit/SslErrorHandler;
 
+    .line 93
     iput-object p2, p0, Landroid/webkit/SslErrorHandler;->mLoadListener:Landroid/webkit/LoadListener;
 
+    .line 94
     return-void
 .end method
 
@@ -77,6 +87,7 @@
     .prologue
     const/4 v4, 0x1
 
+    .line 186
     monitor-enter p0
 
     :try_start_0
@@ -88,15 +99,18 @@
 
     check-cast v1, Landroid/webkit/LoadListener;
 
+    .line 187
     .local v1, loader:Landroid/webkit/LoadListener;
     if-eqz v1, :cond_2
 
+    .line 189
     invoke-virtual {v1}, Landroid/webkit/LoadListener;->cancelled()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 192
     iget-object v3, p0, Landroid/webkit/SslErrorHandler;->mLoaderQueue:Ljava/util/LinkedList;
 
     invoke-virtual {v3, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
@@ -105,17 +119,20 @@
 
     move v3, v4
 
+    .line 217
     :goto_0
     monitor-exit p0
 
     return v3
 
+    .line 196
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/webkit/LoadListener;->sslError()Landroid/net/http/SslError;
 
     move-result-object v0
 
+    .line 205
     .local v0, error:Landroid/net/http/SslError;
     invoke-virtual {p0, v1, v0}, Landroid/webkit/SslErrorHandler;->checkSslPrefTable(Landroid/webkit/LoadListener;Landroid/net/http/SslError;)Z
 
@@ -123,14 +140,17 @@
 
     if-eqz v3, :cond_1
 
+    .line 206
     iget-object v3, p0, Landroid/webkit/SslErrorHandler;->mLoaderQueue:Ljava/util/LinkedList;
 
     invoke-virtual {v3, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
     move v3, v4
 
+    .line 207
     goto :goto_0
 
+    .line 212
     :cond_1
     invoke-virtual {v1}, Landroid/webkit/LoadListener;->getFrame()Landroid/webkit/BrowserFrame;
 
@@ -140,6 +160,7 @@
 
     move-result-object v2
 
+    .line 213
     .local v2, proxy:Landroid/webkit/CallbackProxy;
     new-instance v3, Landroid/webkit/SslErrorHandler;
 
@@ -149,6 +170,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 217
     .end local v0           #error:Landroid/net/http/SslError;
     .end local v2           #proxy:Landroid/webkit/CallbackProxy;
     :cond_2
@@ -156,6 +178,7 @@
 
     goto :goto_0
 
+    .line 186
     .end local v1           #loader:Landroid/webkit/LoadListener;
     :catchall_0
     move-exception v3
@@ -173,6 +196,7 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 234
     iget-object v0, p0, Landroid/webkit/SslErrorHandler;->mOriginHandler:Landroid/webkit/SslErrorHandler;
 
     iget-object v1, p0, Landroid/webkit/SslErrorHandler;->mOriginHandler:Landroid/webkit/SslErrorHandler;
@@ -187,6 +211,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/SslErrorHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 237
     return-void
 .end method
 
@@ -198,6 +223,7 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 156
     monitor-enter p0
 
     :try_start_0
@@ -205,11 +231,13 @@
 
     move-result-object v0
 
+    .line 157
     .local v0, host:Ljava/lang/String;
     invoke-virtual {p2}, Landroid/net/http/SslError;->getPrimaryError()I
 
     move-result v1
 
+    .line 163
     .local v1, primary:I
     iget-object v2, p0, Landroid/webkit/SslErrorHandler;->mSslPrefTable:Landroid/os/Bundle;
 
@@ -219,6 +247,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 164
     iget-object v2, p0, Landroid/webkit/SslErrorHandler;->mSslPrefTable:Landroid/os/Bundle;
 
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -227,6 +256,7 @@
 
     if-gt v1, v2, :cond_0
 
+    .line 165
     const/4 v2, 0x1
 
     invoke-virtual {p0, p1, p2, v2}, Landroid/webkit/SslErrorHandler;->handleSslErrorResponse(Landroid/webkit/LoadListener;Landroid/net/http/SslError;Z)V
@@ -235,6 +265,7 @@
 
     move v2, v3
 
+    .line 169
     :goto_0
     monitor-exit p0
 
@@ -245,6 +276,7 @@
 
     goto :goto_0
 
+    .line 156
     .end local v0           #host:Ljava/lang/String;
     .end local v1           #primary:I
     :catchall_0
@@ -259,6 +291,7 @@
     .locals 1
 
     .prologue
+    .line 130
     monitor-enter p0
 
     :try_start_0
@@ -268,10 +301,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 131
     monitor-exit p0
 
     return-void
 
+    .line 130
     :catchall_0
     move-exception v0
 
@@ -284,6 +319,7 @@
     .locals 1
 
     .prologue
+    .line 177
     :cond_0
     invoke-direct {p0}, Landroid/webkit/SslErrorHandler;->processNextLoader()Z
 
@@ -291,6 +327,7 @@
 
     if-nez v0, :cond_0
 
+    .line 178
     return-void
 .end method
 
@@ -301,21 +338,26 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 63
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
+    .line 74
     :goto_0
     return-void
 
+    .line 65
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/webkit/LoadListener;
 
+    .line 66
     .local v0, loader:Landroid/webkit/LoadListener;
     monitor-enter p0
 
+    .line 67
     :try_start_0
     invoke-virtual {v0}, Landroid/webkit/LoadListener;->sslError()Landroid/net/http/SslError;
 
@@ -330,12 +372,15 @@
     :goto_1
     invoke-virtual {p0, v0, v1, v2}, Landroid/webkit/SslErrorHandler;->handleSslErrorResponse(Landroid/webkit/LoadListener;Landroid/net/http/SslError;Z)V
 
+    .line 69
     iget-object v1, p0, Landroid/webkit/SslErrorHandler;->mLoaderQueue:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
+    .line 70
     invoke-virtual {p0}, Landroid/webkit/SslErrorHandler;->fastProcessQueuedSslErrors()V
 
+    .line 71
     monitor-exit p0
 
     goto :goto_0
@@ -349,11 +394,13 @@
 
     throw v1
 
+    .line 67
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_1
 
+    .line 63
     nop
 
     :pswitch_data_0
@@ -367,6 +414,7 @@
     .parameter "loader"
 
     .prologue
+    .line 142
     monitor-enter p0
 
     :try_start_0
@@ -376,10 +424,12 @@
 
     if-nez v0, :cond_0
 
+    .line 143
     iget-object v0, p0, Landroid/webkit/SslErrorHandler;->mLoaderQueue:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
 
+    .line 144
     iget-object v0, p0, Landroid/webkit/SslErrorHandler;->mLoaderQueue:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->peek()Ljava/lang/Object;
@@ -388,15 +438,18 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 145
     invoke-virtual {p0}, Landroid/webkit/SslErrorHandler;->fastProcessQueuedSslErrors()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 148
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 142
     :catchall_0
     move-exception v0
 
@@ -412,6 +465,7 @@
     .parameter "proceed"
 
     .prologue
+    .line 255
     monitor-enter p0
 
     :try_start_0
@@ -421,17 +475,21 @@
 
     if-nez v3, :cond_2
 
+    .line 256
     if-eqz p3, :cond_1
 
+    .line 258
     invoke-virtual {p2}, Landroid/net/http/SslError;->getPrimaryError()I
 
     move-result v2
 
+    .line 259
     .local v2, primary:I
     invoke-virtual {p1}, Landroid/webkit/LoadListener;->host()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 264
     .local v1, host:Ljava/lang/String;
     iget-object v3, p0, Landroid/webkit/SslErrorHandler;->mSslPrefTable:Landroid/os/Bundle;
 
@@ -439,6 +497,7 @@
 
     move-result v0
 
+    .line 265
     .local v0, hasKey:Z
     if-eqz v0, :cond_0
 
@@ -450,11 +509,13 @@
 
     if-le v2, v3, :cond_1
 
+    .line 267
     :cond_0
     iget-object v3, p0, Landroid/webkit/SslErrorHandler;->mSslPrefTable:Landroid/os/Bundle;
 
     invoke-virtual {v3, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 270
     .end local v0           #hasKey:Z
     .end local v1           #host:Ljava/lang/String;
     .end local v2           #primary:I
@@ -463,11 +524,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 272
     :cond_2
     monitor-exit p0
 
     return-void
 
+    .line 255
     :catchall_0
     move-exception v3
 
@@ -480,6 +543,7 @@
     .locals 6
 
     .prologue
+    .line 224
     iget-object v0, p0, Landroid/webkit/SslErrorHandler;->mOriginHandler:Landroid/webkit/SslErrorHandler;
 
     iget-object v1, p0, Landroid/webkit/SslErrorHandler;->mOriginHandler:Landroid/webkit/SslErrorHandler;
@@ -498,6 +562,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/SslErrorHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 227
     return-void
 .end method
 
@@ -506,8 +571,9 @@
     .parameter "inState"
 
     .prologue
-    const-string v1, "ssl-error-handler"
+    const-string/jumbo v1, "ssl-error-handler"
 
+    .line 115
     monitor-enter p0
 
     if-eqz p1, :cond_1
@@ -516,20 +582,24 @@
 
     move v0, v1
 
+    .line 116
     .local v0, success:Z
     :goto_0
     if-eqz v0, :cond_0
 
+    .line 117
     :try_start_0
-    const-string v1, "ssl-error-handler"
+    const-string/jumbo v1, "ssl-error-handler"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
+    .line 118
     if-eqz v0, :cond_0
 
-    const-string v1, "ssl-error-handler"
+    .line 119
+    const-string/jumbo v1, "ssl-error-handler"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -539,11 +609,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 123
     :cond_0
     monitor-exit p0
 
     return v0
 
+    .line 115
     .end local v0           #success:Z
     :cond_1
     const/4 v1, 0x0
@@ -566,6 +638,7 @@
     .parameter "outState"
 
     .prologue
+    .line 101
     monitor-enter p0
 
     if-eqz p1, :cond_1
@@ -574,12 +647,14 @@
 
     move v0, v1
 
+    .line 102
     .local v0, success:Z
     :goto_0
     if-eqz v0, :cond_0
 
+    .line 104
     :try_start_0
-    const-string v1, "ssl-error-handler"
+    const-string/jumbo v1, "ssl-error-handler"
 
     iget-object v2, p0, Landroid/webkit/SslErrorHandler;->mSslPrefTable:Landroid/os/Bundle;
 
@@ -587,11 +662,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 107
     :cond_0
     monitor-exit p0
 
     return v0
 
+    .line 101
     .end local v0           #success:Z
     :cond_1
     const/4 v1, 0x0

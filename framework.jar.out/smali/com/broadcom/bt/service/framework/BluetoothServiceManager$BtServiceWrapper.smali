@@ -27,12 +27,16 @@
     .parameter "isStarted"
 
     .prologue
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 106
     iput-object p1, p0, Lcom/broadcom/bt/service/framework/BluetoothServiceManager$BtServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
 
+    .line 107
     iput-boolean p2, p0, Lcom/broadcom/bt/service/framework/BluetoothServiceManager$BtServiceWrapper;->mIsStarted:Z
 
+    .line 108
     return-void
 .end method
 
@@ -41,6 +45,7 @@
     .parameter "x0"
 
     .prologue
+    .line 101
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BluetoothServiceManager$BtServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
 
     return-object v0
@@ -51,6 +56,7 @@
     .parameter "x0"
 
     .prologue
+    .line 101
     iget-boolean v0, p0, Lcom/broadcom/bt/service/framework/BluetoothServiceManager$BtServiceWrapper;->mIsStarted:Z
 
     return v0
@@ -62,6 +68,7 @@
     .parameter "x1"
 
     .prologue
+    .line 101
     iput-boolean p1, p0, Lcom/broadcom/bt/service/framework/BluetoothServiceManager$BtServiceWrapper;->mIsStarted:Z
 
     return p1

@@ -18,19 +18,24 @@
     .parameter "dtfmString"
 
     .prologue
+    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 237
     iput p1, p0, Lcom/android/internal/telephony/gsm/stk/DtmfString;->dtmfStringLength:I
 
+    .line 238
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p2}, Ljava/lang/String;-><init>([B)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/stk/DtmfString;->dtfmString:Ljava/lang/String;
 
+    .line 239
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/stk/DtmfString;->pointer:I
 
+    .line 240
     return-void
 .end method

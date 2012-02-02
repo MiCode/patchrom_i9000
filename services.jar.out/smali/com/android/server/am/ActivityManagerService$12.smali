@@ -37,6 +37,7 @@
     .parameter
 
     .prologue
+    .line 7539
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,12 +57,14 @@
 
     const/4 v2, -0x1
 
+    .line 7542
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->setAdj:I
 
     iget v1, p2, Lcom/android/server/am/ProcessRecord;->setAdj:I
 
     if-eq v0, v1, :cond_1
 
+    .line 7543
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->setAdj:I
 
     iget v1, p2, Lcom/android/server/am/ProcessRecord;->setAdj:I
@@ -70,14 +73,17 @@
 
     move v0, v2
 
+    .line 7554
     :goto_0
     return v0
 
     :cond_0
     move v0, v3
 
+    .line 7543
     goto :goto_0
 
+    .line 7545
     :cond_1
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->setSchedGroup:I
 
@@ -85,6 +91,7 @@
 
     if-eq v0, v1, :cond_3
 
+    .line 7546
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->setSchedGroup:I
 
     iget v1, p2, Lcom/android/server/am/ProcessRecord;->setSchedGroup:I
@@ -100,6 +107,7 @@
 
     goto :goto_0
 
+    .line 7548
     :cond_3
     iget-boolean v0, p1, Lcom/android/server/am/ProcessRecord;->keeping:Z
 
@@ -107,6 +115,7 @@
 
     if-eq v0, v1, :cond_5
 
+    .line 7549
     iget-boolean v0, p1, Lcom/android/server/am/ProcessRecord;->keeping:Z
 
     if-eqz v0, :cond_4
@@ -120,6 +129,7 @@
 
     goto :goto_0
 
+    .line 7551
     :cond_5
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->pid:I
 
@@ -127,6 +137,7 @@
 
     if-eq v0, v1, :cond_7
 
+    .line 7552
     iget v0, p1, Lcom/android/server/am/ProcessRecord;->pid:I
 
     iget v1, p2, Lcom/android/server/am/ProcessRecord;->pid:I
@@ -142,6 +153,7 @@
 
     goto :goto_0
 
+    .line 7554
     :cond_7
     const/4 v0, 0x0
 
@@ -154,6 +166,7 @@
     .parameter "x1"
 
     .prologue
+    .line 7539
     check-cast p1, Lcom/android/server/am/ProcessRecord;
 
     .end local p1

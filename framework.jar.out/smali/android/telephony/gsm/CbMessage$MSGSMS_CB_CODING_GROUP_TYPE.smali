@@ -70,6 +70,7 @@
 
     const/4 v3, 0x0
 
+    .line 59
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_SM_GENERAL_DCS"
@@ -78,6 +79,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_SM_GENERAL_DCS:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 60
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_CB_GENERAL_LANG"
@@ -86,6 +88,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_CB_GENERAL_LANG:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 61
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_CB_ALPHA"
@@ -94,6 +97,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_CB_ALPHA:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 62
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_CB_RES1"
@@ -102,6 +106,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_CB_RES1:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 63
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_CB_RES2"
@@ -110,6 +115,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_CB_RES2:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 64
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_SM_AUTO_DELETION"
@@ -120,6 +126,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_SM_AUTO_DELETION:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 68
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_CB_GENERAL_DCS"
@@ -130,6 +137,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_CB_GENERAL_DCS:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 69
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_SM_WAITING_DISCARD"
@@ -140,6 +148,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_SM_WAITING_DISCARD:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 70
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_SM_WAITING_STORE"
@@ -150,6 +159,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_SM_WAITING_STORE:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 71
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_SM_WAITING_STORE_UCS2"
@@ -160,6 +170,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_SM_WAITING_STORE_UCS2:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 72
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_CB_WAP"
@@ -170,6 +181,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_CB_WAP:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 73
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_SM_CLASS_CODING"
@@ -180,6 +192,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_SM_CLASS_CODING:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 74
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_CB_CLASS_CODING"
@@ -190,6 +203,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_CB_CLASS_CODING:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 76
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     const-string v1, "MSGSMS_CB_CODGRP_MAX"
@@ -200,6 +214,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->MSGSMS_CB_CODGRP_MAX:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
+    .line 58
     const/16 v0, 0xe
 
     new-array v0, v0, [Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
@@ -294,6 +309,7 @@
     .end annotation
 
     .prologue
+    .line 58
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -304,6 +320,7 @@
     .parameter "name"
 
     .prologue
+    .line 58
     const-class v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -320,6 +337,7 @@
     .locals 1
 
     .prologue
+    .line 58
     sget-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->$VALUES:[Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;
 
     invoke-virtual {v0}, [Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CODING_GROUP_TYPE;->clone()Ljava/lang/Object;

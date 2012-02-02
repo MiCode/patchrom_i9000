@@ -12,6 +12,7 @@
     .locals 0
 
     .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,9 +32,11 @@
     .end annotation
 
     .prologue
+    .line 34
     iget v0, p0, Landroid/graphics/Xfermode;->native_instance:I
 
     invoke-static {v0}, Landroid/graphics/Xfermode;->finalizer(I)V
 
+    .line 35
     return-void
 .end method

@@ -42,28 +42,37 @@
 
     const/4 v1, -0x1
 
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     const-string v0, "FastDormancy"
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->LOG_TAG:Ljava/lang/String;
 
+    .line 57
     const/16 v0, 0x1388
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
+    .line 58
     iput v1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
+    .line 59
     iput v1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
+    .line 61
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIsScreenOn:Z
 
+    .line 62
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOnPolicy:Z
 
+    .line 63
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOffPolicy:Z
 
+    .line 73
     return-void
 .end method
 
@@ -78,60 +87,75 @@
 
     const-string v3, "FastDormancy"
 
+    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     const-string v0, "FastDormancy"
 
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/FastDorm;->LOG_TAG:Ljava/lang/String;
 
+    .line 57
     const/16 v0, 0x1388
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
+    .line 58
     iput v1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
+    .line 59
     iput v1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
+    .line 61
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIsScreenOn:Z
 
+    .line 62
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOnPolicy:Z
 
+    .line 63
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOffPolicy:Z
 
+    .line 76
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->phone:Lcom/android/internal/telephony/PhoneBase;
 
+    .line 77
     const-string v0, "FastDormancy"
 
     const-string v0, "[FD] FastDormancy Constructor No plmn"
 
     invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 79
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIntentFilter:Landroid/content/IntentFilter;
 
+    .line 80
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 81
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 82
     new-instance v0, Lcom/android/internal/telephony/gsm/FastDorm$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/gsm/FastDorm$1;-><init>(Lcom/android/internal/telephony/gsm/FastDorm;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mFastDormancyLCDRcvr:Landroid/content/BroadcastReceiver;
 
+    .line 108
     invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -142,6 +166,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 109
     return-void
 .end method
 
@@ -157,30 +182,40 @@
 
     const-string v3, "FastDormancy"
 
+    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     const-string v0, "FastDormancy"
 
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/FastDorm;->LOG_TAG:Ljava/lang/String;
 
+    .line 57
     const/16 v0, 0x1388
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
+    .line 58
     iput v1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
+    .line 59
     iput v1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
+    .line 61
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIsScreenOn:Z
 
+    .line 62
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOnPolicy:Z
 
+    .line 63
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOffPolicy:Z
 
+    .line 112
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->phone:Lcom/android/internal/telephony/PhoneBase;
 
+    .line 113
     const-string v0, "FastDormancy"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -203,6 +238,7 @@
 
     invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 114
     return-void
 .end method
 
@@ -211,6 +247,7 @@
     .parameter "x0"
 
     .prologue
+    .line 51
     iget-boolean v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIsScreenOn:Z
 
     return v0
@@ -222,6 +259,7 @@
     .parameter "x1"
 
     .prologue
+    .line 51
     iput-boolean p1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIsScreenOn:Z
 
     return p1
@@ -232,6 +270,7 @@
     .parameter "x0"
 
     .prologue
+    .line 51
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
     return v0
@@ -243,6 +282,7 @@
     .parameter "x1"
 
     .prologue
+    .line 51
     iput p1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
     return p1
@@ -253,6 +293,7 @@
     .parameter "x0"
 
     .prologue
+    .line 51
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
     return v0
@@ -263,6 +304,7 @@
     .parameter "x0"
 
     .prologue
+    .line 51
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
     return v0
@@ -274,6 +316,7 @@
     .parameter "x1"
 
     .prologue
+    .line 51
     iput p1, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
     return p1
@@ -292,6 +335,7 @@
 
     const-string v8, "FastDormancy"
 
+    .line 127
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -316,6 +360,7 @@
 
     move-result-object v3
 
+    .line 128
     .local v3, selection:Ljava/lang/String;
     const-string v0, "FastDormancy"
 
@@ -339,8 +384,10 @@
 
     invoke-static {v8, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 129
     const/4 v6, 0x0
 
+    .line 132
     .local v6, cursor:Landroid/database/Cursor;
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->phone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -362,26 +409,31 @@
 
     move-result-object v6
 
+    .line 139
     if-eqz v6, :cond_4
 
+    .line 140
     const-string v0, "FastDormancy"
 
     const-string v0, "[FD] (cursor != null) "
 
     invoke-static {v8, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 141
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 142
     const-string v0, "FastDormancy"
 
     const-string v0, "[FD] (cursor.moveToFirst()) "
 
     invoke-static {v8, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 145
     const-string v0, "dormancy"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -392,8 +444,9 @@
 
     move-result-object v7
 
+    .line 147
     .local v7, fd_value:Ljava/lang/String;
-    const-string v0, "on"
+    const-string/jumbo v0, "on"
 
     invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -401,18 +454,21 @@
 
     if-eqz v0, :cond_2
 
+    .line 148
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
+    .line 152
     :cond_0
     :goto_0
     iput-boolean v9, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOffPolicy:Z
 
     iput-boolean v9, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOnPolicy:Z
 
+    .line 170
     const-string v0, "FastDormancy"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -485,6 +541,7 @@
 
     invoke-static {v8, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 178
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
     if-nez v0, :cond_1
@@ -493,16 +550,20 @@
 
     if-nez v0, :cond_1
 
+    .line 180
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
+    .line 181
     iput-boolean v10, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOnPolicy:Z
 
+    .line 182
     iput-boolean v10, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOffPolicy:Z
 
+    .line 183
     const-string v0, "FastDormancy"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -527,17 +588,20 @@
 
     invoke-static {v8, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 198
     .end local v7           #fd_value:Ljava/lang/String;
     :cond_1
     :goto_1
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
+    .line 209
     :goto_2
     return-void
 
+    .line 149
     .restart local v7       #fd_value:Ljava/lang/String;
     :cond_2
-    const-string v0, "off"
+    const-string/jumbo v0, "off"
 
     invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -545,26 +609,32 @@
 
     if-eqz v0, :cond_0
 
+    .line 150
     iput v10, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
     iput v10, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
     goto/16 :goto_0
 
+    .line 190
     .end local v7           #fd_value:Ljava/lang/String;
     :cond_3
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
+    .line 191
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
+    .line 192
     iput-boolean v9, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOnPolicy:Z
 
+    .line 193
     iput-boolean v9, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOffPolicy:Z
 
+    .line 194
     const-string v0, "FastDormancy"
 
     const-string v0, "[FD] By default FD, !(cursor.moveToFirst()) "
@@ -573,19 +643,24 @@
 
     goto :goto_1
 
+    .line 202
     :cond_4
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
+    .line 203
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
+    .line 204
     iput-boolean v9, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOnPolicy:Z
 
+    .line 205
     iput-boolean v9, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOffPolicy:Z
 
+    .line 206
     const-string v0, "FastDormancy"
 
     const-string v0, "[FD] By default FD, No Cursor "
@@ -601,6 +676,7 @@
     .locals 2
 
     .prologue
+    .line 117
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->phone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
@@ -611,12 +687,14 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 118
     const-string v0, "FastDormancy"
 
     const-string v1, "[FD] FastDormancy Constructor closed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 119
     return-void
 .end method
 
@@ -624,6 +702,7 @@
     .locals 1
 
     .prologue
+    .line 273
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mDefaultDormTime:I
 
     return v0
@@ -642,19 +721,24 @@
 
     const-string v6, "FastDormancy"
 
+    .line 212
     const-string v3, "FastDormancy"
 
     const-string v3, "[FD] ON default: true"
 
     invoke-static {v6, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 213
     const/4 v1, 0x0
 
+    .line 217
     .local v1, mDormFlag:Z
     const/4 v1, 0x1
 
+    .line 223
     if-nez p1, :cond_0
 
+    .line 224
     const-string v3, "FastDormancy"
 
     const-string v3, "[FD]: No op numeric"
@@ -663,9 +747,11 @@
 
     move v3, v1
 
+    .line 269
     :goto_0
     return v3
 
+    .line 229
     :cond_0
     const-string v3, "45001"
 
@@ -675,6 +761,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 230
     const-string v3, "FastDormancy"
 
     const-string v3, "[FD]: Now Samsung Test Bed"
@@ -683,8 +770,10 @@
 
     move v3, v7
 
+    .line 231
     goto :goto_0
 
+    .line 238
     :cond_1
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/FastDorm;->phone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -700,6 +789,7 @@
 
     move-result-object v2
 
+    .line 240
     .local v2, preferences:Landroid/content/SharedPreferences;
     if-eqz v2, :cond_3
 
@@ -711,17 +801,20 @@
 
     if-eqz v3, :cond_3
 
+    .line 243
     const-string v3, "fdormancy.key.state"
 
     invoke-interface {v2, v9, v8}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
+    .line 247
     .local v0, fdState:Z
     if-eqz v0, :cond_2
 
     move v1, v8
 
+    .line 249
     :goto_1
     const-string v3, "FastDormancy"
 
@@ -753,44 +846,54 @@
 
     move v3, v1
 
+    .line 250
     goto :goto_0
 
     :cond_2
     move v1, v7
 
+    .line 247
     goto :goto_1
 
+    .line 254
     .end local v0           #fdState:Z
     :cond_3
     iget-boolean v3, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mIsScreenOn:Z
 
     if-eqz v3, :cond_5
 
+    .line 255
     iget-boolean v3, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOnPolicy:Z
 
     if-eqz v3, :cond_4
 
+    .line 256
     const/4 v1, 0x1
 
     :goto_2
     move v3, v1
 
+    .line 269
     goto :goto_0
 
+    .line 258
     :cond_4
     const/4 v1, 0x0
 
     goto :goto_2
 
+    .line 261
     :cond_5
     iget-boolean v3, p0, Lcom/android/internal/telephony/gsm/FastDorm;->dormLCDOffPolicy:Z
 
     if-eqz v3, :cond_6
 
+    .line 262
     const/4 v1, 0x1
 
     goto :goto_2
 
+    .line 264
     :cond_6
     const/4 v1, 0x0
 
@@ -801,6 +904,7 @@
     .locals 1
 
     .prologue
+    .line 281
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOffDormTime:I
 
     return v0
@@ -810,6 +914,7 @@
     .locals 1
 
     .prologue
+    .line 277
     iget v0, p0, Lcom/android/internal/telephony/gsm/FastDorm;->mScreenOnDormTime:I
 
     return v0
@@ -820,7 +925,9 @@
     .parameter "plmn"
 
     .prologue
+    .line 122
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/gsm/FastDorm;->setDormancyTime(Ljava/lang/String;)V
 
+    .line 123
     return-void
 .end method

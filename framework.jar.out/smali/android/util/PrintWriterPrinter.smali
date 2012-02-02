@@ -16,10 +16,13 @@
     .parameter "pw"
 
     .prologue
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     iput-object p1, p0, Landroid/util/PrintWriterPrinter;->mPW:Ljava/io/PrintWriter;
 
+    .line 35
     return-void
 .end method
 
@@ -30,9 +33,11 @@
     .parameter "x"
 
     .prologue
+    .line 38
     iget-object v0, p0, Landroid/util/PrintWriterPrinter;->mPW:Ljava/io/PrintWriter;
 
     invoke-virtual {v0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 39
     return-void
 .end method

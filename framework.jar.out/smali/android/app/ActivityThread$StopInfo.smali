@@ -25,6 +25,7 @@
     .locals 0
 
     .prologue
+    .line 2384
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
     .parameter "x0"
 
     .prologue
+    .line 2384
     invoke-direct {p0}, Landroid/app/ActivityThread$StopInfo;-><init>()V
 
     return-void

@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 508
     iput-object p1, p0, Lcom/android/server/EncryptService$MountCallBackBinderListener;->this$0:Lcom/android/server/EncryptService;
 
     invoke-direct {p0}, Landroid/os/storage/IMountCallBackListener$Stub;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 508
     invoke-direct {p0, p1}, Lcom/android/server/EncryptService$MountCallBackBinderListener;-><init>(Lcom/android/server/EncryptService;)V
 
     return-void
@@ -49,6 +51,7 @@
     .parameter "path"
 
     .prologue
+    .line 545
     return-void
 .end method
 
@@ -57,6 +60,7 @@
     .parameter "path"
 
     .prologue
+    .line 548
     return-void
 .end method
 
@@ -70,6 +74,7 @@
 
     const-string v4, ", LatestError="
 
+    .line 514
     const-string v1, "EncryptService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -136,8 +141,10 @@
 
     invoke-static {v5, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 516
     if-eqz p1, :cond_1
 
+    .line 518
     invoke-static {}, Landroid/os/Environment;->isUsbHostStorageInsalled()Z
 
     move-result v1
@@ -158,11 +165,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 521
     const/16 v1, -0x64
 
+    .line 539
     :goto_0
     return v1
 
+    .line 523
     :cond_0
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectorySd()Ljava/io/File;
 
@@ -210,13 +220,16 @@
 
     if-nez v1, :cond_1
 
+    .line 528
     const/4 v1, -0x6
 
     goto :goto_0
 
+    .line 532
     :cond_1
     const/16 v0, -0x64
 
+    .line 534
     .local v0, nRet:I
     iget-object v1, p0, Lcom/android/server/EncryptService$MountCallBackBinderListener;->this$0:Lcom/android/server/EncryptService;
 
@@ -228,6 +241,7 @@
 
     move-result v0
 
+    .line 537
     const-string v1, "EncryptService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -322,5 +336,6 @@
 
     move v1, v0
 
+    .line 539
     goto/16 :goto_0
 .end method

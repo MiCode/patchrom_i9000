@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1237
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextConverter$1;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextConverter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +46,7 @@
 
     const-string v9, "EditStyledText"
 
+    .line 1239
     const-string v5, "EditStyledText"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -67,6 +69,7 @@
 
     invoke-static {v9, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1240
     const-string v5, "content://"
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -75,10 +78,12 @@
 
     if-eqz v5, :cond_0
 
+    .line 1241
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
 
+    .line 1243
     .local v4, uri:Landroid/net/Uri;
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/widget/EditStyledText$StyledTextConverter$1;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextConverter;
@@ -100,11 +105,13 @@
 
     move-result-object v3
 
+    .line 1244
     .local v3, is:Ljava/io/InputStream;
     invoke-static {v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
+    .line 1245
     .local v0, bitmap:Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -122,6 +129,7 @@
 
     invoke-direct {v1, v5, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
+    .line 1247
     .local v1, drawable:Landroid/graphics/drawable/Drawable;
     const/4 v5, 0x0
 
@@ -137,12 +145,14 @@
 
     invoke-virtual {v1, v5, v6, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 1250
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-object v5, v1
 
+    .line 1258
     .end local v0           #bitmap:Landroid/graphics/Bitmap;
     .end local v1           #drawable:Landroid/graphics/drawable/Drawable;
     .end local v3           #is:Ljava/io/InputStream;
@@ -150,12 +160,14 @@
     :goto_0
     return-object v5
 
+    .line 1252
     .restart local v4       #uri:Landroid/net/Uri;
     :catch_0
     move-exception v5
 
     move-object v2, v5
 
+    .line 1253
     .local v2, e:Ljava/lang/Exception;
     const-string v5, "EditStyledText"
 
@@ -181,8 +193,10 @@
 
     move-object v5, v10
 
+    .line 1254
     goto :goto_0
 
+    .line 1257
     .end local v2           #e:Ljava/lang/Exception;
     .end local v4           #uri:Landroid/net/Uri;
     :cond_0
@@ -210,5 +224,6 @@
 
     move-object v5, v10
 
+    .line 1258
     goto :goto_0
 .end method

@@ -18,15 +18,18 @@
     .locals 1
 
     .prologue
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Landroid/os/Vibrator;->mToken:Landroid/os/Binder;
 
-    const-string v0, "vibrator"
+    .line 36
+    const-string/jumbo v0, "vibrator"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -38,6 +41,7 @@
 
     iput-object v0, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
+    .line 38
     return-void
 .end method
 
@@ -47,13 +51,16 @@
     .locals 2
 
     .prologue
+    .line 107
     iget-object v0, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v0, :cond_0
 
+    .line 115
     :goto_0
     return-void
 
+    .line 112
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
@@ -66,6 +73,7 @@
 
     goto :goto_0
 
+    .line 113
     :catch_0
     move-exception v0
 
@@ -76,6 +84,7 @@
     .locals 3
 
     .prologue
+    .line 163
     :try_start_0
     iget-object v1, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
@@ -83,14 +92,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 167
     :goto_0
     return-void
 
+    .line 164
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 165
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -106,6 +118,7 @@
     .parameter "magnitude"
 
     .prologue
+    .line 156
     :try_start_0
     iget-object v0, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
@@ -113,9 +126,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 159
     :goto_0
     return-void
 
+    .line 157
     :catch_0
     move-exception v0
 
@@ -127,10 +142,12 @@
     .parameter "milliseconds"
 
     .prologue
+    .line 47
     const/4 v0, -0x1
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/os/Vibrator;->vibrate(JI)V
 
+    .line 48
     return-void
 .end method
 
@@ -142,19 +159,23 @@
     .prologue
     const-string v3, "Vibrator"
 
+    .line 58
     iget-object v1, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v1, :cond_0
 
+    .line 59
     const-string v1, "Vibrator"
 
     const-string v1, "Failed to vibrate; no vibrator service."
 
     invoke-static {v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 67
     :goto_0
     return-void
 
+    .line 63
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
@@ -167,11 +188,13 @@
 
     goto :goto_0
 
+    .line 64
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 65
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -190,24 +213,29 @@
     .prologue
     const-string v3, "Vibrator"
 
+    .line 84
     iget-object v1, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
     if-nez v1, :cond_0
 
+    .line 85
     const-string v1, "Vibrator"
 
     const-string v1, "Failed to vibrate; no vibrator service."
 
     invoke-static {v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 100
     :goto_0
     return-void
 
+    .line 91
     :cond_0
     array-length v1, p1
 
     if-ge p2, v1, :cond_1
 
+    .line 93
     :try_start_0
     iget-object v1, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
@@ -219,11 +247,13 @@
 
     goto :goto_0
 
+    .line 94
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 95
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "Vibrator"
 
@@ -233,6 +263,7 @@
 
     goto :goto_0
 
+    .line 98
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_1
     new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
@@ -247,6 +278,7 @@
     .parameter "type"
 
     .prologue
+    .line 142
     :try_start_0
     iget-object v0, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
@@ -254,9 +286,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 145
     :goto_0
     return-void
 
+    .line 143
     :catch_0
     move-exception v0
 
@@ -268,10 +302,12 @@
     .parameter "type"
 
     .prologue
+    .line 119
     const/4 v0, -0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/os/Vibrator;->vibrateImmVibe(II)V
 
+    .line 120
     return-void
 .end method
 
@@ -281,6 +317,7 @@
     .parameter "magnitude"
 
     .prologue
+    .line 124
     :try_start_0
     iget-object v0, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
@@ -288,9 +325,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 127
     :goto_0
     return-void
 
+    .line 125
     :catch_0
     move-exception v0
 
@@ -302,10 +341,12 @@
     .parameter "pattern"
 
     .prologue
+    .line 130
     const/4 v0, -0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/os/Vibrator;->vibrateImmVibe([BI)V
 
+    .line 131
     return-void
 .end method
 
@@ -315,6 +356,7 @@
     .parameter "magnitude"
 
     .prologue
+    .line 135
     :try_start_0
     iget-object v0, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
@@ -322,9 +364,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 138
     :goto_0
     return-void
 
+    .line 136
     :catch_0
     move-exception v0
 
@@ -336,6 +380,7 @@
     .parameter "type"
 
     .prologue
+    .line 149
     :try_start_0
     iget-object v0, p0, Landroid/os/Vibrator;->mService:Landroid/os/IVibratorService;
 
@@ -343,9 +388,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 152
     :goto_0
     return-void
 
+    .line 150
     :catch_0
     move-exception v0
 

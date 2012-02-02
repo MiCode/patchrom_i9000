@@ -28,6 +28,7 @@
     .parameter
 
     .prologue
+    .line 162
     iput-object p1, p0, Landroid/renderscript/Type$Builder$Entry;->this$0:Landroid/renderscript/Type$Builder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

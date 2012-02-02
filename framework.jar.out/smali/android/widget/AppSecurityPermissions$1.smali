@@ -23,6 +23,7 @@
     .locals 3
 
     .prologue
+    .line 347
     invoke-static {}, Landroid/widget/AppSecurityPermissions$State;->values()[Landroid/widget/AppSecurityPermissions$State;
 
     move-result-object v0

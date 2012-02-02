@@ -148,12 +148,16 @@
 
     const/4 v0, 0x0
 
+    .line 60
     sput-object v0, Landroid/webkit/WebViewDatabase;->mInstance:Landroid/webkit/WebViewDatabase;
 
+    .line 62
     sput-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
+    .line 63
     sput-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
+    .line 71
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -162,7 +166,7 @@
 
     aput-object v1, v0, v3
 
-    const-string v1, "password"
+    const-string/jumbo v1, "password"
 
     aput-object v1, v0, v4
 
@@ -186,6 +190,7 @@
 
     sput-object v0, Landroid/webkit/WebViewDatabase;->mTableNames:[Ljava/lang/String;
 
+    .line 89
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -201,32 +206,38 @@
     .locals 1
 
     .prologue
+    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 66
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebViewDatabase;->mCookieLock:Ljava/lang/Object;
 
+    .line 67
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebViewDatabase;->mPasswordLock:Ljava/lang/Object;
 
+    .line 68
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebViewDatabase;->mFormLock:Ljava/lang/Object;
 
+    .line 69
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebViewDatabase;->mHttpAuthLock:Ljava/lang/Object;
 
+    .line 179
     return-void
 .end method
 
@@ -234,22 +245,26 @@
     .locals 2
 
     .prologue
+    .line 377
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_0
 
+    .line 378
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "CREATE TABLE cache (_id INTEGER PRIMARY KEY, url TEXT, filepath TEXT, lastmodify TEXT, etag TEXT, expires INTEGER, expiresstring TEXT, mimetype TEXT, encoding TEXT,httpstatus INTEGER, location TEXT, contentlength INTEGER, contentdisposition TEXT, crossdomain TEXT, UNIQUE (url) ON CONFLICT REPLACE);"
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 390
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "CREATE INDEX cacheUrlIndex ON cache (url)"
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 393
     :cond_0
     return-void
 .end method
@@ -259,10 +274,11 @@
     .parameter "context"
 
     .prologue
-    const-string v1, "webviewCache.db"
+    const-string/jumbo v1, "webviewCache.db"
 
-    const-string v1, "webview.db"
+    const-string/jumbo v1, "webview.db"
 
+    .line 182
     const-class v1, Landroid/webkit/WebViewDatabase;
 
     monitor-enter v1
@@ -272,6 +288,7 @@
 
     if-nez v2, :cond_5
 
+    .line 183
     new-instance v2, Landroid/webkit/WebViewDatabase;
 
     invoke-direct {v2}, Landroid/webkit/WebViewDatabase;-><init>()V
@@ -280,8 +297,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 185
     :try_start_1
-    const-string v2, "webview.db"
+    const-string/jumbo v2, "webview.db"
 
     const/4 v3, 0x0
 
@@ -296,6 +314,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 197
     :cond_0
     :goto_0
     :try_start_2
@@ -313,31 +332,37 @@
 
     if-eq v2, v3, :cond_1
 
+    .line 198
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 200
     :try_start_3
     invoke-static {}, Landroid/webkit/WebViewDatabase;->upgradeDatabase()V
 
+    .line 201
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 203
     :try_start_4
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
+    .line 207
     :cond_1
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v2, :cond_2
 
+    .line 210
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     const/4 v3, 0x0
@@ -346,9 +371,10 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 214
     :cond_2
     :try_start_5
-    const-string v2, "webviewCache.db"
+    const-string/jumbo v2, "webviewCache.db"
 
     const/4 v3, 0x0
 
@@ -363,6 +389,7 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_5 .. :try_end_5} :catch_1
 
+    .line 226
     :cond_3
     :goto_1
     :try_start_6
@@ -380,47 +407,57 @@
 
     if-eq v2, v3, :cond_4
 
+    .line 228
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
+    .line 230
     :try_start_7
     invoke-static {}, Landroid/webkit/WebViewDatabase;->upgradeCacheDatabase()V
 
+    .line 231
     invoke-static {}, Landroid/webkit/WebViewDatabase;->bootstrapCacheDatabase()V
 
+    .line 232
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    .line 234
     :try_start_8
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
+    .line 239
     invoke-static {}, Landroid/webkit/CacheManager;->removeAllCacheFiles()Z
 
+    .line 242
     :cond_4
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v2, :cond_5
 
+    .line 244
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "PRAGMA read_uncommitted = true;"
 
     invoke-virtual {v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 248
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->setLockingEnabled(Z)V
 
+    .line 251
     new-instance v2, Landroid/database/DatabaseUtils$InsertHelper;
 
     sget-object v3, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -431,9 +468,10 @@
 
     sput-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
+    .line 253
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
-    const-string v3, "url"
+    const-string/jumbo v3, "url"
 
     invoke-virtual {v2, v3}, Landroid/database/DatabaseUtils$InsertHelper;->getColumnIndex(Ljava/lang/String;)I
 
@@ -441,6 +479,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheUrlColIndex:I
 
+    .line 255
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "filepath"
@@ -451,6 +490,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheFilePathColIndex:I
 
+    .line 257
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "lastmodify"
@@ -461,6 +501,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheLastModifyColIndex:I
 
+    .line 259
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "etag"
@@ -471,6 +512,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheETagColIndex:I
 
+    .line 261
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "expires"
@@ -481,6 +523,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheExpiresColIndex:I
 
+    .line 263
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "expiresstring"
@@ -491,6 +534,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheExpiresStringColIndex:I
 
+    .line 265
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "mimetype"
@@ -501,6 +545,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheMimeTypeColIndex:I
 
+    .line 267
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "encoding"
@@ -511,6 +556,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheEncodingColIndex:I
 
+    .line 269
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "httpstatus"
@@ -521,6 +567,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheHttpStatusColIndex:I
 
+    .line 271
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "location"
@@ -531,6 +578,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheLocationColIndex:I
 
+    .line 273
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "contentlength"
@@ -541,6 +589,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheContentLengthColIndex:I
 
+    .line 275
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "contentdisposition"
@@ -551,6 +600,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheContentDispositionColIndex:I
 
+    .line 277
     sget-object v2, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     const-string v3, "crossdomain"
@@ -561,6 +611,7 @@
 
     sput v2, Landroid/webkit/WebViewDatabase;->mCacheCrossDomainColIndex:I
 
+    .line 282
     :cond_5
     sget-object v2, Landroid/webkit/WebViewDatabase;->mInstance:Landroid/webkit/WebViewDatabase;
     :try_end_8
@@ -570,14 +621,16 @@
 
     return-object v2
 
+    .line 187
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 189
     .local v0, e:Landroid/database/sqlite/SQLiteException;
     :try_start_9
-    const-string v2, "webview.db"
+    const-string/jumbo v2, "webview.db"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->deleteDatabase(Ljava/lang/String;)Z
 
@@ -585,7 +638,8 @@
 
     if-eqz v2, :cond_0
 
-    const-string v2, "webview.db"
+    .line 190
+    const-string/jumbo v2, "webview.db"
 
     const/4 v3, 0x0
 
@@ -601,6 +655,7 @@
 
     goto/16 :goto_0
 
+    .line 182
     .end local v0           #e:Landroid/database/sqlite/SQLiteException;
     :catchall_0
     move-exception v2
@@ -609,6 +664,7 @@
 
     throw v2
 
+    .line 203
     :catchall_1
     move-exception v2
 
@@ -619,13 +675,15 @@
 
     throw v2
 
+    .line 216
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
+    .line 218
     .restart local v0       #e:Landroid/database/sqlite/SQLiteException;
-    const-string v2, "webviewCache.db"
+    const-string/jumbo v2, "webviewCache.db"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->deleteDatabase(Ljava/lang/String;)Z
 
@@ -633,7 +691,8 @@
 
     if-eqz v2, :cond_3
 
-    const-string v2, "webviewCache.db"
+    .line 219
+    const-string/jumbo v2, "webviewCache.db"
 
     const/4 v3, 0x0
 
@@ -647,6 +706,7 @@
 
     goto/16 :goto_1
 
+    .line 234
     .end local v0           #e:Landroid/database/sqlite/SQLiteException;
     :catchall_2
     move-exception v2
@@ -669,21 +729,26 @@
 
     const/4 v11, 0x0
 
+    .line 396
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
     move v0, v11
 
+    .line 411
     :goto_0
     return v0
 
+    .line 400
     :cond_0
     const/4 v8, 0x0
 
+    .line 401
     .local v8, cursor:Landroid/database/Cursor;
     const/4 v10, 0x0
 
+    .line 403
     .local v10, ret:Z
     :try_start_0
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -708,6 +773,7 @@
 
     move-result-object v8
 
+    .line 405
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -719,6 +785,7 @@
 
     move v10, v12
 
+    .line 409
     :goto_1
     if-eqz v8, :cond_1
 
@@ -728,21 +795,25 @@
     :goto_2
     move v0, v10
 
+    .line 411
     goto :goto_0
 
     :cond_2
     move v10, v11
 
+    .line 405
     goto :goto_1
 
+    .line 406
     :catch_0
     move-exception v0
 
     move-object v9, v0
 
+    .line 407
     .local v9, e:Ljava/lang/IllegalStateException;
     :try_start_1
-    const-string v0, "webviewdatabase"
+    const-string/jumbo v0, "webviewdatabase"
 
     const-string v1, "hasEntries"
 
@@ -750,6 +821,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 409
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
@@ -772,16 +844,19 @@
     .locals 4
 
     .prologue
+    .line 366
     sget-object v1, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->getVersion()I
 
     move-result v0
 
+    .line 367
     .local v0, oldVersion:I
     if-eqz v0, :cond_0
 
-    const-string v1, "webviewdatabase"
+    .line 368
+    const-string/jumbo v1, "webviewdatabase"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -821,6 +896,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 372
     :cond_0
     sget-object v1, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -828,12 +904,14 @@
 
     invoke-virtual {v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 373
     sget-object v1, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->setVersion(I)V
 
+    .line 374
     return-void
 .end method
 
@@ -851,16 +929,19 @@
 
     const-string v7, " TEXT, "
 
+    .line 286
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->getVersion()I
 
     move-result v2
 
+    .line 287
     .local v2, oldVersion:I
     if-eqz v2, :cond_0
 
-    const-string v3, "webviewdatabase"
+    .line 288
+    const-string/jumbo v3, "webviewdatabase"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -900,6 +981,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 292
     :cond_0
     const/16 v3, 0x8
 
@@ -908,6 +990,7 @@
     :cond_1
     const/4 v1, 0x0
 
+    .line 293
     .local v1, justPasswords:Z
     const/16 v3, 0x9
 
@@ -917,10 +1000,12 @@
 
     move v0, v3
 
+    .line 294
     .local v0, justAuth:Z
     :goto_0
     if-eqz v0, :cond_3
 
+    .line 295
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -949,6 +1034,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 297
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1001,7 +1087,7 @@
 
     move-result-object v4
 
-    const-string v5, "realm"
+    const-string/jumbo v5, "realm"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1013,7 +1099,7 @@
 
     move-result-object v4
 
-    const-string v5, "username"
+    const-string/jumbo v5, "username"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1025,7 +1111,7 @@
 
     move-result-object v4
 
-    const-string v5, "password"
+    const-string/jumbo v5, "password"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1055,7 +1141,7 @@
 
     move-result-object v4
 
-    const-string v5, "realm"
+    const-string/jumbo v5, "realm"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1073,9 +1159,11 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 363
     :goto_1
     return-void
 
+    .line 293
     .end local v0           #justAuth:Z
     :cond_2
     const/4 v3, 0x0
@@ -1084,10 +1172,12 @@
 
     goto/16 :goto_0
 
+    .line 307
     .restart local v0       #justAuth:Z
     :cond_3
     if-nez v1, :cond_4
 
+    .line 308
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1116,12 +1206,14 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 310
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v4, "DROP TABLE IF EXISTS cache"
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 311
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1150,6 +1242,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 313
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1178,6 +1271,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 315
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1206,6 +1300,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 318
     :cond_4
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1235,14 +1330,17 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 321
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     const/16 v4, 0xa
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->setVersion(I)V
 
+    .line 323
     if-nez v1, :cond_5
 
+    .line 325
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1295,7 +1393,7 @@
 
     move-result-object v4
 
-    const-string v5, "value"
+    const-string/jumbo v5, "value"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1319,7 +1417,7 @@
 
     move-result-object v4
 
-    const-string v5, "path"
+    const-string/jumbo v5, "path"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1343,7 +1441,7 @@
 
     move-result-object v4
 
-    const-string v5, "secure"
+    const-string/jumbo v5, "secure"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1367,6 +1465,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 331
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1401,6 +1500,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 335
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1441,7 +1541,7 @@
 
     move-result-object v4
 
-    const-string v5, "url"
+    const-string/jumbo v5, "url"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1465,6 +1565,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 340
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1505,7 +1606,7 @@
 
     move-result-object v4
 
-    const-string v5, "urlid"
+    const-string/jumbo v5, "urlid"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1529,7 +1630,7 @@
 
     move-result-object v4
 
-    const-string v5, "value"
+    const-string/jumbo v5, "value"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1547,7 +1648,7 @@
 
     move-result-object v4
 
-    const-string v5, "urlid"
+    const-string/jumbo v5, "urlid"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1571,7 +1672,7 @@
 
     move-result-object v4
 
-    const-string v5, "value"
+    const-string/jumbo v5, "value"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1589,6 +1690,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 348
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1641,7 +1743,7 @@
 
     move-result-object v4
 
-    const-string v5, "realm"
+    const-string/jumbo v5, "realm"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1653,7 +1755,7 @@
 
     move-result-object v4
 
-    const-string v5, "username"
+    const-string/jumbo v5, "username"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1665,7 +1767,7 @@
 
     move-result-object v4
 
-    const-string v5, "password"
+    const-string/jumbo v5, "password"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1695,7 +1797,7 @@
 
     move-result-object v4
 
-    const-string v5, "realm"
+    const-string/jumbo v5, "realm"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1713,6 +1815,7 @@
 
     invoke-virtual {v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 357
     :cond_5
     sget-object v3, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1766,7 +1869,7 @@
 
     move-result-object v4
 
-    const-string v5, "username"
+    const-string/jumbo v5, "username"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1778,7 +1881,7 @@
 
     move-result-object v4
 
-    const-string v5, "password"
+    const-string/jumbo v5, "password"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1808,7 +1911,7 @@
 
     move-result-object v4
 
-    const-string v5, "username"
+    const-string/jumbo v5, "username"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1837,27 +1940,32 @@
     .parameter "c"
 
     .prologue
+    .line 678
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_1
 
+    .line 698
     :cond_0
     :goto_0
     return-void
 
+    .line 682
     :cond_1
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     invoke-virtual {v0}, Landroid/database/DatabaseUtils$InsertHelper;->prepareForInsert()V
 
+    .line 683
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheUrlColIndex:I
 
     invoke-virtual {v0, v1, p1}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 684
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheFilePathColIndex:I
@@ -1866,6 +1974,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 685
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheLastModifyColIndex:I
@@ -1874,6 +1983,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 686
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheETagColIndex:I
@@ -1882,6 +1992,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 687
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheExpiresColIndex:I
@@ -1890,6 +2001,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/database/DatabaseUtils$InsertHelper;->bind(IJ)V
 
+    .line 688
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheExpiresStringColIndex:I
@@ -1898,6 +2010,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 689
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheMimeTypeColIndex:I
@@ -1906,6 +2019,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 690
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheEncodingColIndex:I
@@ -1914,6 +2028,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 691
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheHttpStatusColIndex:I
@@ -1922,6 +2037,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(II)V
 
+    .line 692
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheLocationColIndex:I
@@ -1930,6 +2046,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 693
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheContentLengthColIndex:I
@@ -1938,6 +2055,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/database/DatabaseUtils$InsertHelper;->bind(IJ)V
 
+    .line 694
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheContentDispositionColIndex:I
@@ -1946,6 +2064,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 696
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     sget v1, Landroid/webkit/WebViewDatabase;->mCacheCrossDomainColIndex:I
@@ -1954,6 +2073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->bind(ILjava/lang/String;)V
 
+    .line 697
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
     invoke-virtual {v0}, Landroid/database/DatabaseUtils$InsertHelper;->execute()J
@@ -1966,6 +2086,7 @@
     .parameter "cookie"
 
     .prologue
+    .line 504
     iget-object v1, p1, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -1982,20 +2103,24 @@
 
     if-nez v1, :cond_1
 
+    .line 521
     :cond_0
     :goto_0
     return-void
 
+    .line 509
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebViewDatabase;->mCookieLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 510
     :try_start_0
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
+    .line 511
     .local v0, cookieVal:Landroid/content/ContentValues;
     const-string v2, "domain"
 
@@ -2003,24 +2128,28 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "path"
+    .line 512
+    const-string/jumbo v2, "path"
 
     iget-object v3, p1, Landroid/webkit/CookieManager$Cookie;->path:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 513
     const-string v2, "name"
 
     iget-object v3, p1, Landroid/webkit/CookieManager$Cookie;->name:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "value"
+    .line 514
+    const-string/jumbo v2, "value"
 
     iget-object v3, p1, Landroid/webkit/CookieManager$Cookie;->value:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 515
     iget-wide v2, p1, Landroid/webkit/CookieManager$Cookie;->expires:J
 
     const-wide/16 v4, -0x1
@@ -2029,6 +2158,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 516
     const-string v2, "expires"
 
     iget-wide v3, p1, Landroid/webkit/CookieManager$Cookie;->expires:J
@@ -2039,8 +2169,9 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
+    .line 518
     :cond_2
-    const-string v2, "secure"
+    const-string/jumbo v2, "secure"
 
     iget-boolean v3, p1, Landroid/webkit/CookieManager$Cookie;->secure:Z
 
@@ -2050,6 +2181,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
+    .line 519
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     sget-object v3, Landroid/webkit/WebViewDatabase;->mTableNames:[Ljava/lang/String;
@@ -2062,6 +2194,7 @@
 
     invoke-virtual {v2, v3, v4, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
+    .line 520
     monitor-exit v1
 
     goto :goto_0
@@ -2083,13 +2216,16 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 704
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
+    .line 709
     :goto_0
     return-void
 
+    .line 708
     :cond_0
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2104,18 +2240,22 @@
     .locals 5
 
     .prologue
+    .line 538
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
+    .line 545
     :goto_0
     return-void
 
+    .line 542
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebViewDatabase;->mCookieLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 543
     :try_start_0
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2131,6 +2271,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 544
     monitor-exit v0
 
     goto :goto_0
@@ -2150,21 +2291,26 @@
     .parameter "now"
 
     .prologue
+    .line 568
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v1, :cond_0
 
+    .line 577
     :goto_0
     return-void
 
+    .line 572
     :cond_0
     const-string v0, "expires <= ?"
 
+    .line 573
     .local v0, expires:Ljava/lang/String;
     iget-object v1, p0, Landroid/webkit/WebViewDatabase;->mCookieLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 574
     :try_start_0
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2190,6 +2336,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 576
     monitor-exit v1
 
     goto :goto_0
@@ -2208,18 +2355,22 @@
     .locals 5
 
     .prologue
+    .line 1163
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
+    .line 1171
     :goto_0
     return-void
 
+    .line 1167
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebViewDatabase;->mFormLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 1168
     :try_start_0
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2235,6 +2386,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 1169
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     sget-object v2, Landroid/webkit/WebViewDatabase;->mTableNames:[Ljava/lang/String;
@@ -2249,6 +2401,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 1170
     monitor-exit v0
 
     goto :goto_0
@@ -2267,18 +2420,22 @@
     .locals 5
 
     .prologue
+    .line 1003
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
+    .line 1010
     :goto_0
     return-void
 
+    .line 1007
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebViewDatabase;->mHttpAuthLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 1008
     :try_start_0
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2294,6 +2451,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 1009
     monitor-exit v0
 
     goto :goto_0
@@ -2312,21 +2470,26 @@
     .locals 6
 
     .prologue
+    .line 551
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v1, :cond_0
 
+    .line 560
     :goto_0
     return-void
 
+    .line 555
     :cond_0
     const-string v0, "expires ISNULL"
 
+    .line 556
     .local v0, sessionExpired:Ljava/lang/String;
     iget-object v1, p0, Landroid/webkit/WebViewDatabase;->mCookieLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 557
     :try_start_0
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2342,6 +2505,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 559
     monitor-exit v1
 
     goto :goto_0
@@ -2360,18 +2524,22 @@
     .locals 5
 
     .prologue
+    .line 906
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
+    .line 913
     :goto_0
     return-void
 
+    .line 910
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebViewDatabase;->mPasswordLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 911
     :try_start_0
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2387,6 +2555,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 912
     monitor-exit v0
 
     goto :goto_0
@@ -2408,24 +2577,29 @@
     .parameter "name"
 
     .prologue
+    .line 485
     if-eqz p1, :cond_0
 
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v1, :cond_1
 
+    .line 496
     :cond_0
     :goto_0
     return-void
 
+    .line 489
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebViewDatabase;->mCookieLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 490
     :try_start_0
     const-string v0, "(domain == ?) AND (path == ?) AND (name == ?)"
 
+    .line 493
     .local v0, where:Ljava/lang/String;
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2455,6 +2629,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 495
     monitor-exit v1
 
     goto :goto_0
@@ -2476,6 +2651,7 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 600
     sget v0, Landroid/webkit/WebViewDatabase;->mCacheTransactionRefcount:I
 
     sub-int/2addr v0, v3
@@ -2484,6 +2660,7 @@
 
     if-nez v0, :cond_1
 
+    .line 601
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -2506,7 +2683,8 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "webviewdatabase"
+    .line 603
+    const-string/jumbo v0, "webviewdatabase"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2536,6 +2714,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 608
     :cond_0
     :try_start_0
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -2544,15 +2723,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 610
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     move v0, v3
 
+    .line 614
     :goto_0
     return v0
 
+    .line 610
     :catchall_0
     move-exception v0
 
@@ -2562,6 +2744,7 @@
 
     throw v0
 
+    .line 614
     :cond_1
     const/4 v0, 0x0
 
@@ -2581,11 +2764,14 @@
     .end annotation
 
     .prologue
+    .line 805
     const/4 v2, 0x0
 
+    .line 806
     .local v2, pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
+    .line 808
     .local v0, cursor:Landroid/database/Cursor;
     :try_start_0
     sget-object v4, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -2598,6 +2784,7 @@
 
     move-result-object v0
 
+    .line 810
     if-eqz v0, :cond_1
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
@@ -2606,6 +2793,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 811
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
@@ -2617,6 +2805,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 813
     .end local v2           #pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local v3, pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_0
@@ -2629,6 +2818,7 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 814
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -2640,6 +2830,7 @@
 
     move-object v2, v3
 
+    .line 819
     .end local v3           #pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     .restart local v2       #pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_1
@@ -2647,19 +2838,22 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
+    .line 821
     :cond_2
     :goto_0
     return-object v2
 
+    .line 816
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 817
     .local v1, e:Ljava/lang/IllegalStateException;
     :goto_1
     :try_start_2
-    const-string v4, "webviewdatabase"
+    const-string/jumbo v4, "webviewdatabase"
 
     const-string v5, "getAllCacheFileNames"
 
@@ -2667,6 +2861,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 819
     if-eqz v0, :cond_2
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
@@ -2696,6 +2891,7 @@
     .restart local v2       #pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     goto :goto_2
 
+    .line 816
     .end local v2           #pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     .restart local v3       #pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :catch_1
@@ -2717,6 +2913,7 @@
     .prologue
     const/4 v8, 0x0
 
+    .line 624
     if-eqz p1, :cond_0
 
     sget-object v4, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -2726,15 +2923,19 @@
     :cond_0
     move-object v4, v8
 
+    .line 655
     :goto_0
     return-object v4
 
+    .line 628
     :cond_1
     const/4 v0, 0x0
 
+    .line 629
     .local v0, cursor:Landroid/database/Cursor;
     const-string v2, "SELECT filepath, lastmodify, etag, expires, expiresstring, mimetype, encoding, httpstatus, location, contentlength, contentdisposition, crossdomain FROM cache WHERE url = ?"
 
+    .line 633
     .local v2, query:Ljava/lang/String;
     :try_start_0
     sget-object v4, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -2753,16 +2954,19 @@
 
     move-result-object v0
 
+    .line 634
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
+    .line 635
     new-instance v3, Landroid/webkit/CacheManager$CacheResult;
 
     invoke-direct {v3}, Landroid/webkit/CacheManager$CacheResult;-><init>()V
 
+    .line 636
     .local v3, ret:Landroid/webkit/CacheManager$CacheResult;
     const/4 v4, 0x0
 
@@ -2772,6 +2976,7 @@
 
     iput-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->localPath:Ljava/lang/String;
 
+    .line 637
     const/4 v4, 0x1
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2780,6 +2985,7 @@
 
     iput-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->lastModified:Ljava/lang/String;
 
+    .line 638
     const/4 v4, 0x2
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2788,6 +2994,7 @@
 
     iput-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->etag:Ljava/lang/String;
 
+    .line 639
     const/4 v4, 0x3
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getLong(I)J
@@ -2796,6 +3003,7 @@
 
     iput-wide v4, v3, Landroid/webkit/CacheManager$CacheResult;->expires:J
 
+    .line 640
     const/4 v4, 0x4
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2804,6 +3012,7 @@
 
     iput-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->expiresString:Ljava/lang/String;
 
+    .line 641
     const/4 v4, 0x5
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2812,6 +3021,7 @@
 
     iput-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->mimeType:Ljava/lang/String;
 
+    .line 642
     const/4 v4, 0x6
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2820,6 +3030,7 @@
 
     iput-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->encoding:Ljava/lang/String;
 
+    .line 643
     const/4 v4, 0x7
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getInt(I)I
@@ -2828,6 +3039,7 @@
 
     iput v4, v3, Landroid/webkit/CacheManager$CacheResult;->httpStatusCode:I
 
+    .line 644
     const/16 v4, 0x8
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2836,6 +3048,7 @@
 
     iput-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->location:Ljava/lang/String;
 
+    .line 645
     const/16 v4, 0x9
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getLong(I)J
@@ -2844,6 +3057,7 @@
 
     iput-wide v4, v3, Landroid/webkit/CacheManager$CacheResult;->contentLength:J
 
+    .line 646
     const/16 v4, 0xa
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2852,6 +3066,7 @@
 
     iput-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->contentdisposition:Ljava/lang/String;
 
+    .line 647
     const/16 v4, 0xb
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2863,6 +3078,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 653
     if-eqz v0, :cond_2
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
@@ -2882,16 +3098,19 @@
     :goto_1
     move-object v4, v8
 
+    .line 655
     goto/16 :goto_0
 
+    .line 650
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 651
     .local v1, e:Ljava/lang/IllegalStateException;
     :try_start_1
-    const-string v4, "webviewdatabase"
+    const-string/jumbo v4, "webviewdatabase"
 
     const-string v5, "getCache"
 
@@ -2899,6 +3118,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 653
     if-eqz v0, :cond_4
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
@@ -2921,24 +3141,31 @@
     .locals 8
 
     .prologue
+    .line 731
     sget-object v5, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v5, :cond_0
 
+    .line 732
     const-wide/16 v5, 0x0
 
+    .line 747
     :goto_0
     return-wide v5
 
+    .line 734
     :cond_0
     const-wide/16 v3, 0x0
 
+    .line 735
     .local v3, size:J
     const/4 v0, 0x0
 
+    .line 736
     .local v0, cursor:Landroid/database/Cursor;
     const-string v2, "SELECT SUM(contentlength) as sum FROM cache"
 
+    .line 738
     .local v2, query:Ljava/lang/String;
     :try_start_0
     sget-object v5, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -2951,12 +3178,14 @@
 
     move-result-object v0
 
+    .line 739
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
+    .line 740
     const/4 v5, 0x0
 
     invoke-interface {v0, v5}, Landroid/database/Cursor;->getLong(I)J
@@ -2966,6 +3195,7 @@
 
     move-result-wide v3
 
+    .line 745
     :cond_1
     if-eqz v0, :cond_2
 
@@ -2975,16 +3205,19 @@
     :goto_1
     move-wide v5, v3
 
+    .line 747
     goto :goto_0
 
+    .line 742
     :catch_0
     move-exception v5
 
     move-object v1, v5
 
+    .line 743
     .local v1, e:Ljava/lang/IllegalStateException;
     :try_start_1
-    const-string v5, "webviewdatabase"
+    const-string/jumbo v5, "webviewdatabase"
 
     const-string v6, "getCacheTotalSize"
 
@@ -2992,6 +3225,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 745
     if-eqz v0, :cond_2
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
@@ -3026,10 +3260,12 @@
     .end annotation
 
     .prologue
+    .line 425
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
+    .line 426
     .local v15, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/webkit/CookieManager$Cookie;>;"
     if-eqz p1, :cond_0
 
@@ -3037,10 +3273,12 @@
 
     if-nez v2, :cond_1
 
+    .line 471
     :cond_0
     :goto_0
     return-object v15
 
+    .line 430
     :cond_1
     move-object/from16 v0, p0
 
@@ -3050,6 +3288,7 @@
 
     monitor-enter v21
 
+    .line 431
     const/4 v2, 0x7
 
     :try_start_0
@@ -3069,7 +3308,7 @@
 
     const/4 v2, 0x2
 
-    const-string v3, "path"
+    const-string/jumbo v3, "path"
 
     aput-object v3, v4, v2
 
@@ -3081,7 +3320,7 @@
 
     const/4 v2, 0x4
 
-    const-string v3, "value"
+    const-string/jumbo v3, "value"
 
     aput-object v3, v4, v2
 
@@ -3093,18 +3332,21 @@
 
     const/4 v2, 0x6
 
-    const-string v3, "secure"
+    const-string/jumbo v3, "secure"
 
     aput-object v3, v4, v2
 
+    .line 436
     .local v4, columns:[Ljava/lang/String;
     const-string v19, "(domain GLOB \'*\' || ?)"
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 438
     .local v19, selection:Ljava/lang/String;
     const/4 v11, 0x0
 
+    .line 440
     .local v11, cursor:Landroid/database/Cursor;
     :try_start_1
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -3135,25 +3377,29 @@
 
     move-result-object v11
 
+    .line 443
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
+    .line 444
     const-string v2, "domain"
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v12
 
+    .line 445
     .local v12, domainCol:I
-    const-string v2, "path"
+    const-string/jumbo v2, "path"
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v17
 
+    .line 446
     .local v17, pathCol:I
     const-string v2, "name"
 
@@ -3161,13 +3407,15 @@
 
     move-result v16
 
+    .line 447
     .local v16, nameCol:I
-    const-string v2, "value"
+    const-string/jumbo v2, "value"
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v20
 
+    .line 448
     .local v20, valueCol:I
     const-string v2, "expires"
 
@@ -3175,19 +3423,22 @@
 
     move-result v14
 
+    .line 449
     .local v14, expiresCol:I
-    const-string v2, "secure"
+    const-string/jumbo v2, "secure"
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v18
 
+    .line 451
     .local v18, secureCol:I
     :cond_2
     new-instance v10, Landroid/webkit/CookieManager$Cookie;
 
     invoke-direct {v10}, Landroid/webkit/CookieManager$Cookie;-><init>()V
 
+    .line 452
     .local v10, cookie:Landroid/webkit/CookieManager$Cookie;
     invoke-interface {v11, v12}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -3195,6 +3446,7 @@
 
     iput-object v2, v10, Landroid/webkit/CookieManager$Cookie;->domain:Ljava/lang/String;
 
+    .line 453
     move-object v0, v11
 
     move/from16 v1, v17
@@ -3205,6 +3457,7 @@
 
     iput-object v2, v10, Landroid/webkit/CookieManager$Cookie;->path:Ljava/lang/String;
 
+    .line 454
     move-object v0, v11
 
     move/from16 v1, v16
@@ -3215,6 +3468,7 @@
 
     iput-object v2, v10, Landroid/webkit/CookieManager$Cookie;->name:Ljava/lang/String;
 
+    .line 455
     move-object v0, v11
 
     move/from16 v1, v20
@@ -3225,16 +3479,19 @@
 
     iput-object v2, v10, Landroid/webkit/CookieManager$Cookie;->value:Ljava/lang/String;
 
+    .line 456
     invoke-interface {v11, v14}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
+    .line 457
     const-wide/16 v2, -0x1
 
     iput-wide v2, v10, Landroid/webkit/CookieManager$Cookie;->expires:J
 
+    .line 461
     :goto_1
     move-object v0, v11
 
@@ -3251,12 +3508,15 @@
     :goto_2
     iput-boolean v2, v10, Landroid/webkit/CookieManager$Cookie;->secure:Z
 
+    .line 462
     const/4 v2, 0x1
 
     iput-byte v2, v10, Landroid/webkit/CookieManager$Cookie;->mode:B
 
+    .line 463
     invoke-virtual {v15, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 464
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -3266,6 +3526,7 @@
 
     if-nez v2, :cond_2
 
+    .line 469
     .end local v10           #cookie:Landroid/webkit/CookieManager$Cookie;
     .end local v12           #domainCol:I
     .end local v14           #expiresCol:I
@@ -3279,12 +3540,14 @@
     :try_start_2
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
+    .line 471
     :cond_4
     :goto_3
     monitor-exit v21
 
     goto/16 :goto_0
 
+    .line 472
     .end local v4           #columns:[Ljava/lang/String;
     .end local v11           #cursor:Landroid/database/Cursor;
     .end local v19           #selection:Ljava/lang/String;
@@ -3297,6 +3560,7 @@
 
     throw v2
 
+    .line 459
     .restart local v4       #columns:[Ljava/lang/String;
     .restart local v10       #cookie:Landroid/webkit/CookieManager$Cookie;
     .restart local v11       #cursor:Landroid/database/Cursor;
@@ -3320,6 +3584,7 @@
 
     goto :goto_1
 
+    .line 466
     .end local v10           #cookie:Landroid/webkit/CookieManager$Cookie;
     .end local v12           #domainCol:I
     .end local v14           #expiresCol:I
@@ -3332,9 +3597,10 @@
 
     move-object v13, v2
 
+    .line 467
     .local v13, e:Ljava/lang/IllegalStateException;
     :try_start_4
-    const-string v2, "webviewdatabase"
+    const-string/jumbo v2, "webviewdatabase"
 
     const-string v3, "getCookiesForDomain"
 
@@ -3342,6 +3608,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 469
     if-eqz v11, :cond_4
 
     :try_start_5
@@ -3349,6 +3616,7 @@
 
     goto :goto_3
 
+    .line 461
     .end local v13           #e:Ljava/lang/IllegalStateException;
     .restart local v10       #cookie:Landroid/webkit/CookieManager$Cookie;
     .restart local v12       #domainCol:I
@@ -3362,6 +3630,7 @@
 
     goto :goto_2
 
+    .line 469
     .end local v10           #cookie:Landroid/webkit/CookieManager$Cookie;
     .end local v12           #domainCol:I
     .end local v14           #expiresCol:I
@@ -3400,10 +3669,12 @@
     .end annotation
 
     .prologue
+    .line 1087
     new-instance v21, Ljava/util/ArrayList;
 
     invoke-direct/range {v21 .. v21}, Ljava/util/ArrayList;-><init>()V
 
+    .line 1088
     .local v21, values:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
@@ -3413,13 +3684,16 @@
 
     if-nez v2, :cond_1
 
+    .line 1144
     :cond_0
     :goto_0
     return-object v21
 
+    .line 1094
     :cond_1
     const/4 v10, 0x0
 
+    .line 1096
     .local v10, aURL:Ljava/net/URL;
     :try_start_0
     new-instance v11, Ljava/net/URL;
@@ -3432,6 +3706,7 @@
     :try_end_0
     .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1097
     .end local v10           #aURL:Ljava/net/URL;
     .local v11, aURL:Ljava/net/URL;
     :try_start_1
@@ -3478,14 +3753,17 @@
     .local v16, finalurl:Ljava/lang/String;
     move-object v10, v11
 
+    .line 1107
     .end local v11           #aURL:Ljava/net/URL;
     .restart local v10       #aURL:Ljava/net/URL;
     :goto_1
     const-string v17, "(url == ?)"
 
+    .line 1108
     .local v17, urlSelection:Ljava/lang/String;
     const-string v14, "(urlid == ?) AND (name == ?)"
 
+    .line 1110
     .local v14, dataSelection:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3496,8 +3774,10 @@
     .end local v10           #aURL:Ljava/net/URL;
     monitor-enter v10
 
+    .line 1111
     const/4 v12, 0x0
 
+    .line 1113
     .local v12, cursor:Landroid/database/Cursor;
     :try_start_2
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -3530,12 +3810,14 @@
 
     move-result-object v12
 
+    .line 1116
     invoke-interface {v12}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
+    .line 1117
     const-string v2, "_id"
 
     invoke-interface {v12, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3549,9 +3831,11 @@
 
     move-result-wide v18
 
+    .line 1118
     .local v18, urlid:J
     const/4 v13, 0x0
 
+    .line 1120
     .local v13, dataCursor:Landroid/database/Cursor;
     :try_start_3
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -3574,7 +3858,7 @@
 
     const/4 v5, 0x1
 
-    const-string v6, "value"
+    const-string/jumbo v6, "value"
 
     aput-object v6, v4, v5
 
@@ -3606,18 +3890,21 @@
 
     move-result-object v13
 
+    .line 1126
     invoke-interface {v13}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    const-string v2, "value"
+    .line 1127
+    const-string/jumbo v2, "value"
 
     invoke-interface {v13, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v20
 
+    .line 1130
     .local v20, valueCol:I
     :cond_2
     move-object v0, v13
@@ -3634,6 +3921,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 1131
     invoke-interface {v13}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -3643,6 +3931,7 @@
 
     if-nez v2, :cond_2
 
+    .line 1136
     .end local v20           #valueCol:I
     :cond_3
     if-eqz v13, :cond_4
@@ -3653,6 +3942,7 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
     .catch Ljava/lang/IllegalStateException; {:try_start_4 .. :try_end_4} :catch_2
 
+    .line 1142
     .end local v13           #dataCursor:Landroid/database/Cursor;
     .end local v18           #urlid:J
     :cond_4
@@ -3662,12 +3952,14 @@
     :try_start_5
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
+    .line 1144
     :cond_5
     :goto_3
     monitor-exit v10
 
     goto/16 :goto_0
 
+    .line 1145
     :catchall_0
     move-exception v2
 
@@ -3677,6 +3969,7 @@
 
     throw v2
 
+    .line 1098
     .end local v12           #cursor:Landroid/database/Cursor;
     .end local v14           #dataSelection:Ljava/lang/String;
     .end local v16           #finalurl:Ljava/lang/String;
@@ -3687,19 +3980,22 @@
 
     move-object v15, v2
 
+    .line 1099
     .local v15, e:Ljava/net/MalformedURLException;
     :goto_4
-    const-string v2, "webviewdatabase"
+    const-string/jumbo v2, "webviewdatabase"
 
     const-string v3, "Failed in getFormData"
 
     invoke-static {v2, v3, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 1100
     move-object/from16 v16, p1
 
     .restart local v16       #finalurl:Ljava/lang/String;
     goto/16 :goto_1
 
+    .line 1133
     .end local v10           #aURL:Ljava/net/URL;
     .end local v15           #e:Ljava/net/MalformedURLException;
     .restart local v12       #cursor:Landroid/database/Cursor;
@@ -3712,9 +4008,10 @@
 
     move-object v15, v2
 
+    .line 1134
     .local v15, e:Ljava/lang/IllegalStateException;
     :try_start_6
-    const-string v2, "webviewdatabase"
+    const-string/jumbo v2, "webviewdatabase"
 
     const-string v3, "getFormData dataCursor"
 
@@ -3722,6 +4019,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
+    .line 1136
     if-eqz v13, :cond_4
 
     :try_start_7
@@ -3732,6 +4030,7 @@
 
     goto :goto_2
 
+    .line 1139
     .end local v13           #dataCursor:Landroid/database/Cursor;
     .end local v15           #e:Ljava/lang/IllegalStateException;
     .end local v18           #urlid:J
@@ -3740,9 +4039,10 @@
 
     move-object v15, v2
 
+    .line 1140
     .restart local v15       #e:Ljava/lang/IllegalStateException;
     :try_start_8
-    const-string v2, "webviewdatabase"
+    const-string/jumbo v2, "webviewdatabase"
 
     const-string v3, "getFormData cursor"
 
@@ -3750,6 +4050,7 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
+    .line 1142
     if-eqz v12, :cond_5
 
     :try_start_9
@@ -3759,6 +4060,7 @@
 
     goto :goto_3
 
+    .line 1136
     .end local v15           #e:Ljava/lang/IllegalStateException;
     .restart local v13       #dataCursor:Landroid/database/Cursor;
     .restart local v18       #urlid:J
@@ -3776,6 +4078,7 @@
     .catchall {:try_start_a .. :try_end_a} :catchall_2
     .catch Ljava/lang/IllegalStateException; {:try_start_a .. :try_end_a} :catch_2
 
+    .line 1142
     .end local v13           #dataCursor:Landroid/database/Cursor;
     .end local v18           #urlid:J
     :catchall_2
@@ -3791,6 +4094,7 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
+    .line 1098
     .end local v12           #cursor:Landroid/database/Cursor;
     .end local v14           #dataSelection:Ljava/lang/String;
     .end local v16           #finalurl:Ljava/lang/String;
@@ -3822,8 +4126,9 @@
 
     const/4 v1, 0x0
 
-    const-string v6, "password"
+    const-string/jumbo v6, "password"
 
+    .line 956
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -3835,33 +4140,40 @@
     :cond_0
     move-object v0, v1
 
+    .line 984
     :goto_0
     return-object v0
 
+    .line 960
     :cond_1
     new-array v2, v5, [Ljava/lang/String;
 
-    const-string v0, "username"
+    const-string/jumbo v0, "username"
 
     aput-object v0, v2, v3
 
-    const-string v0, "password"
+    const-string/jumbo v0, "password"
 
     aput-object v6, v2, v4
 
+    .line 963
     .local v2, columns:[Ljava/lang/String;
     const-string v11, "(host == ?) AND (realm == ?)"
 
+    .line 965
     .local v11, selection:Ljava/lang/String;
     iget-object v12, p0, Landroid/webkit/WebViewDatabase;->mHttpAuthLock:Ljava/lang/Object;
 
     monitor-enter v12
 
+    .line 966
     const/4 v10, 0x0
 
+    .line 967
     .local v10, ret:[Ljava/lang/String;
     const/4 v8, 0x0
 
+    .line 969
     .local v8, cursor:Landroid/database/Cursor;
     :try_start_0
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -3896,19 +4208,22 @@
 
     move-result-object v8
 
+    .line 972
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 973
     const/4 v0, 0x2
 
     new-array v10, v0, [Ljava/lang/String;
 
+    .line 974
     const/4 v0, 0x0
 
-    const-string v1, "username"
+    const-string/jumbo v1, "username"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -3920,9 +4235,10 @@
 
     aput-object v1, v10, v0
 
+    .line 976
     const/4 v0, 0x1
 
-    const-string v1, "password"
+    const-string/jumbo v1, "password"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -3937,12 +4253,14 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 982
     :cond_2
     if-eqz v8, :cond_3
 
     :try_start_1
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
+    .line 984
     :cond_3
     :goto_1
     monitor-exit v12
@@ -3953,14 +4271,16 @@
 
     goto :goto_0
 
+    .line 979
     :catch_0
     move-exception v0
 
     move-object v9, v0
 
+    .line 980
     .local v9, e:Ljava/lang/IllegalStateException;
     :try_start_2
-    const-string v0, "webviewdatabase"
+    const-string/jumbo v0, "webviewdatabase"
 
     const-string v1, "getHttpAuthUsernamePassword"
 
@@ -3968,6 +4288,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 982
     if-eqz v8, :cond_3
 
     :try_start_3
@@ -3975,6 +4296,7 @@
 
     goto :goto_1
 
+    .line 985
     .end local v9           #e:Ljava/lang/IllegalStateException;
     :catchall_0
     move-exception v0
@@ -3985,6 +4307,7 @@
 
     throw v0
 
+    .line 982
     :catchall_1
     move-exception v0
 
@@ -4012,8 +4335,9 @@
 
     const/4 v1, 0x1
 
-    const-string v6, "password"
+    const-string/jumbo v6, "password"
 
+    .line 860
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -4023,33 +4347,40 @@
     :cond_0
     move-object v0, v3
 
+    .line 887
     :goto_0
     return-object v0
 
+    .line 864
     :cond_1
     new-array v2, v5, [Ljava/lang/String;
 
-    const-string v0, "username"
+    const-string/jumbo v0, "username"
 
     aput-object v0, v2, v4
 
-    const-string v0, "password"
+    const-string/jumbo v0, "password"
 
     aput-object v6, v2, v1
 
+    .line 867
     .local v2, columns:[Ljava/lang/String;
     const-string v11, "(host == ?)"
 
+    .line 868
     .local v11, selection:Ljava/lang/String;
     iget-object v12, p0, Landroid/webkit/WebViewDatabase;->mPasswordLock:Ljava/lang/Object;
 
     monitor-enter v12
 
+    .line 869
     const/4 v10, 0x0
 
+    .line 870
     .local v10, ret:[Ljava/lang/String;
     const/4 v8, 0x0
 
+    .line 872
     .local v8, cursor:Landroid/database/Cursor;
     :try_start_0
     sget-object v0, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -4080,19 +4411,22 @@
 
     move-result-object v8
 
+    .line 875
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 876
     const/4 v0, 0x2
 
     new-array v10, v0, [Ljava/lang/String;
 
+    .line 877
     const/4 v0, 0x0
 
-    const-string v1, "username"
+    const-string/jumbo v1, "username"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -4104,9 +4438,10 @@
 
     aput-object v1, v10, v0
 
+    .line 879
     const/4 v0, 0x1
 
-    const-string v1, "password"
+    const-string/jumbo v1, "password"
 
     invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -4121,12 +4456,14 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 885
     :cond_2
     if-eqz v8, :cond_3
 
     :try_start_1
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
+    .line 887
     :cond_3
     :goto_1
     monitor-exit v12
@@ -4137,14 +4474,16 @@
 
     goto :goto_0
 
+    .line 882
     :catch_0
     move-exception v0
 
     move-object v9, v0
 
+    .line 883
     .local v9, e:Ljava/lang/IllegalStateException;
     :try_start_2
-    const-string v0, "webviewdatabase"
+    const-string/jumbo v0, "webviewdatabase"
 
     const-string v1, "getUsernamePassword"
 
@@ -4152,6 +4491,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 885
     if-eqz v8, :cond_3
 
     :try_start_3
@@ -4159,6 +4499,7 @@
 
     goto :goto_1
 
+    .line 888
     .end local v9           #e:Ljava/lang/IllegalStateException;
     :catchall_0
     move-exception v0
@@ -4169,6 +4510,7 @@
 
     throw v0
 
+    .line 885
     :catchall_1
     move-exception v0
 
@@ -4191,21 +4533,26 @@
 
     const/4 v11, 0x0
 
+    .line 712
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
     move v0, v11
 
+    .line 727
     :goto_0
     return v0
 
+    .line 716
     :cond_0
     const/4 v8, 0x0
 
+    .line 717
     .local v8, cursor:Landroid/database/Cursor;
     const/4 v10, 0x0
 
+    .line 719
     .local v10, ret:Z
     :try_start_0
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -4228,6 +4575,7 @@
 
     move-result-object v8
 
+    .line 721
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -4239,6 +4587,7 @@
 
     move v10, v12
 
+    .line 725
     :goto_1
     if-eqz v8, :cond_1
 
@@ -4248,21 +4597,25 @@
     :goto_2
     move v0, v10
 
+    .line 727
     goto :goto_0
 
     :cond_2
     move v10, v11
 
+    .line 721
     goto :goto_1
 
+    .line 722
     :catch_0
     move-exception v0
 
     move-object v9, v0
 
+    .line 723
     .local v9, e:Ljava/lang/IllegalStateException;
     :try_start_1
-    const-string v0, "webviewdatabase"
+    const-string/jumbo v0, "webviewdatabase"
 
     const-string v1, "hasCache"
 
@@ -4270,6 +4623,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 725
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
@@ -4292,10 +4646,12 @@
     .locals 2
 
     .prologue
+    .line 529
     iget-object v0, p0, Landroid/webkit/WebViewDatabase;->mCookieLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 530
     const/4 v1, 0x0
 
     :try_start_0
@@ -4307,6 +4663,7 @@
 
     return v1
 
+    .line 531
     :catchall_0
     move-exception v1
 
@@ -4321,10 +4678,12 @@
     .locals 2
 
     .prologue
+    .line 1154
     iget-object v0, p0, Landroid/webkit/WebViewDatabase;->mFormLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 1155
     const/4 v1, 0x2
 
     :try_start_0
@@ -4336,6 +4695,7 @@
 
     return v1
 
+    .line 1156
     :catchall_0
     move-exception v1
 
@@ -4350,10 +4710,12 @@
     .locals 2
 
     .prologue
+    .line 994
     iget-object v0, p0, Landroid/webkit/WebViewDatabase;->mHttpAuthLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 995
     const/4 v1, 0x4
 
     :try_start_0
@@ -4365,6 +4727,7 @@
 
     return v1
 
+    .line 996
     :catchall_0
     move-exception v1
 
@@ -4379,10 +4742,12 @@
     .locals 2
 
     .prologue
+    .line 897
     iget-object v0, p0, Landroid/webkit/WebViewDatabase;->mPasswordLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 898
     const/4 v1, 0x1
 
     :try_start_0
@@ -4394,6 +4759,7 @@
 
     return v1
 
+    .line 899
     :catchall_0
     move-exception v1
 
@@ -4409,16 +4775,19 @@
     .parameter "url"
 
     .prologue
+    .line 664
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_1
 
+    .line 669
     :cond_0
     :goto_0
     return-void
 
+    .line 668
     :cond_1
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -4454,6 +4823,7 @@
     .end annotation
 
     .prologue
+    .line 1024
     .local p2, formdata:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
@@ -4463,15 +4833,18 @@
 
     if-nez v4, :cond_1
 
+    .line 1077
     .end local p0
     :cond_0
     :goto_0
     return-void
 
+    .line 1030
     .restart local p0
     :cond_1
     const/4 v12, 0x0
 
+    .line 1032
     .local v12, aURL:Ljava/net/URL;
     :try_start_0
     new-instance v13, Ljava/net/URL;
@@ -4484,6 +4857,7 @@
     :try_end_0
     .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1033
     .end local v12           #aURL:Ljava/net/URL;
     .local v13, aURL:Ljava/net/URL;
     :try_start_1
@@ -4530,11 +4904,13 @@
     .local v18, finalurl:Ljava/lang/String;
     move-object v12, v13
 
+    .line 1043
     .end local v13           #aURL:Ljava/net/URL;
     .restart local v12       #aURL:Ljava/net/URL;
     :goto_1
     const-string v21, "(url == ?)"
 
+    .line 1044
     .local v21, selection:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -4545,11 +4921,14 @@
     .end local v12           #aURL:Ljava/net/URL;
     monitor-enter v12
 
+    .line 1045
     const-wide/16 v23, -0x1
 
+    .line 1046
     .local v23, urlid:J
     const/4 v15, 0x0
 
+    .line 1048
     .local v15, cursor:Landroid/database/Cursor;
     :try_start_2
     sget-object v4, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -4582,12 +4961,14 @@
 
     move-result-object v15
 
+    .line 1051
     invoke-interface {v15}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
+    .line 1052
     const-string v4, "_id"
 
     invoke-interface {v15, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -4601,12 +4982,14 @@
 
     move-result-wide v23
 
+    .line 1062
     :goto_2
     if-eqz v15, :cond_2
 
     :try_start_3
     invoke-interface {v15}, Landroid/database/Cursor;->close()V
 
+    .line 1064
     :cond_2
     :goto_3
     const-wide/16 v4, 0x0
@@ -4615,22 +4998,26 @@
 
     if-ltz v4, :cond_5
 
+    .line 1065
     invoke-virtual/range {p2 .. p2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v22
 
+    .line 1066
     .local v22, set:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-interface/range {v22 .. v22}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v19
 
+    .line 1067
     .local v19, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     new-instance v20, Landroid/content/ContentValues;
 
     invoke-direct/range {v20 .. v20}, Landroid/content/ContentValues;-><init>()V
 
+    .line 1068
     .local v20, map:Landroid/content/ContentValues;
-    const-string v4, "urlid"
+    const-string/jumbo v4, "urlid"
 
     invoke-static/range {v23 .. v24}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -4644,6 +5031,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
+    .line 1069
     .end local p0
     :goto_4
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->hasNext()Z
@@ -4652,12 +5040,14 @@
 
     if-eqz v4, :cond_5
 
+    .line 1070
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v17
 
     check-cast v17, Ljava/util/Map$Entry;
 
+    .line 1071
     .local v17, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v4, "name"
 
@@ -4675,7 +5065,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "value"
+    .line 1072
+    const-string/jumbo v4, "value"
 
     invoke-interface/range {v17 .. v17}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -4691,6 +5082,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 1073
     sget-object v4, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     sget-object v5, Landroid/webkit/WebViewDatabase;->mTableNames:[Ljava/lang/String;
@@ -4713,6 +5105,7 @@
 
     goto :goto_4
 
+    .line 1076
     .end local v17           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v19           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     .end local v20           #map:Landroid/content/ContentValues;
@@ -4726,6 +5119,7 @@
 
     throw v4
 
+    .line 1034
     .end local v15           #cursor:Landroid/database/Cursor;
     .end local v18           #finalurl:Ljava/lang/String;
     .end local v21           #selection:Ljava/lang/String;
@@ -4737,9 +5131,10 @@
 
     move-object/from16 v16, v4
 
+    .line 1035
     .local v16, e:Ljava/net/MalformedURLException;
     :goto_5
-    const-string v4, "webviewdatabase"
+    const-string/jumbo v4, "webviewdatabase"
 
     const-string v5, "Failed in setFormData"
 
@@ -4751,11 +5146,13 @@
 
     invoke-static {v0, v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 1036
     move-object/from16 v18, p1
 
     .restart local v18       #finalurl:Ljava/lang/String;
     goto/16 :goto_1
 
+    .line 1054
     .end local v12           #aURL:Ljava/net/URL;
     .end local v16           #e:Ljava/net/MalformedURLException;
     .restart local v15       #cursor:Landroid/database/Cursor;
@@ -4767,8 +5164,9 @@
 
     invoke-direct {v14}, Landroid/content/ContentValues;-><init>()V
 
+    .line 1055
     .local v14, c:Landroid/content/ContentValues;
-    const-string v4, "url"
+    const-string/jumbo v4, "url"
 
     move-object v0, v14
 
@@ -4778,6 +5176,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 1056
     sget-object v4, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     sget-object v5, Landroid/webkit/WebViewDatabase;->mTableNames:[Ljava/lang/String;
@@ -4797,17 +5196,19 @@
 
     goto/16 :goto_2
 
+    .line 1059
     .end local v14           #c:Landroid/content/ContentValues;
     :catch_1
     move-exception v4
 
     move-object/from16 v16, v4
 
+    .line 1060
     .local v16, e:Ljava/lang/IllegalStateException;
     :try_start_5
-    const-string v4, "webviewdatabase"
+    const-string/jumbo v4, "webviewdatabase"
 
-    const-string v5, "setFormData"
+    const-string/jumbo v5, "setFormData"
 
     move-object v0, v4
 
@@ -4819,6 +5220,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 1062
     if-eqz v15, :cond_2
 
     :try_start_6
@@ -4837,6 +5239,7 @@
     :cond_4
     throw v4
 
+    .line 1076
     .end local p0
     :cond_5
     monitor-exit v12
@@ -4845,6 +5248,7 @@
 
     goto/16 :goto_0
 
+    .line 1034
     .end local v15           #cursor:Landroid/database/Cursor;
     .end local v18           #finalurl:Ljava/lang/String;
     .end local v21           #selection:Ljava/lang/String;
@@ -4873,6 +5277,7 @@
     .prologue
     const-string v1, "host"
 
+    .line 931
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -4881,37 +5286,45 @@
 
     if-nez v1, :cond_1
 
+    .line 944
     :cond_0
     :goto_0
     return-void
 
+    .line 935
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebViewDatabase;->mHttpAuthLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 936
     :try_start_0
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
+    .line 937
     .local v0, c:Landroid/content/ContentValues;
     const-string v2, "host"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "realm"
+    .line 938
+    const-string/jumbo v2, "realm"
 
     invoke-virtual {v0, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "username"
+    .line 939
+    const-string/jumbo v2, "username"
 
     invoke-virtual {v0, v2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "password"
+    .line 940
+    const-string/jumbo v2, "password"
 
     invoke-virtual {v0, v2, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 941
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     sget-object v3, Landroid/webkit/WebViewDatabase;->mTableNames:[Ljava/lang/String;
@@ -4924,6 +5337,7 @@
 
     invoke-virtual {v2, v3, v4, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
+    .line 943
     monitor-exit v1
 
     goto :goto_0
@@ -4948,39 +5362,47 @@
     .prologue
     const-string v1, "host"
 
+    .line 838
     if-eqz p1, :cond_0
 
     sget-object v1, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v1, :cond_1
 
+    .line 850
     :cond_0
     :goto_0
     return-void
 
+    .line 842
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebViewDatabase;->mPasswordLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 843
     :try_start_0
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
+    .line 844
     .local v0, c:Landroid/content/ContentValues;
     const-string v2, "host"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "username"
+    .line 845
+    const-string/jumbo v2, "username"
 
     invoke-virtual {v0, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "password"
+    .line 846
+    const-string/jumbo v2, "password"
 
     invoke-virtual {v0, v2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 847
     sget-object v2, Landroid/webkit/WebViewDatabase;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     sget-object v3, Landroid/webkit/WebViewDatabase;->mTableNames:[Ljava/lang/String;
@@ -4993,6 +5415,7 @@
 
     invoke-virtual {v2, v3, v4, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
+    .line 849
     monitor-exit v1
 
     goto :goto_0
@@ -5014,6 +5437,7 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 585
     sget v0, Landroid/webkit/WebViewDatabase;->mCacheTransactionRefcount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -5022,6 +5446,7 @@
 
     if-ne v0, v3, :cond_1
 
+    .line 586
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -5044,13 +5469,14 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "webviewdatabase"
+    .line 588
+    const-string/jumbo v0, "webviewdatabase"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "startCacheTransaction should be called from WebViewWorkerThread instead of from "
+    const-string/jumbo v2, "startCacheTransaction should be called from WebViewWorkerThread instead of from "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5074,6 +5500,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 592
     :cond_0
     sget-object v0, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -5081,6 +5508,7 @@
 
     move v0, v3
 
+    .line 595
     :goto_0
     return v0
 
@@ -5104,18 +5532,22 @@
     .end annotation
 
     .prologue
+    .line 751
     new-instance v9, Ljava/util/ArrayList;
 
     const/16 v13, 0x64
 
     invoke-direct {v9, v13}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 752
     .local v9, pathList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
+    .line 753
     .local v1, cursor:Landroid/database/Cursor;
     const-string v11, "SELECT contentlength, filepath FROM cache ORDER BY expires ASC"
 
+    .line 755
     .local v11, query:Ljava/lang/String;
     :try_start_0
     sget-object v13, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -5128,14 +5560,17 @@
 
     move-result-object v1
 
+    .line 756
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v13
 
     if-eqz v13, :cond_4
 
+    .line 757
     const/16 v0, 0x64
 
+    .line 758
     .local v0, batchSize:I
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -5147,25 +5582,30 @@
 
     invoke-direct {v10, v13}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 759
     .local v10, pathStr:Ljava/lang/StringBuilder;
     const-string v13, "DELETE FROM cache WHERE filepath IN (?"
 
     invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 760
     const/4 v4, 0x1
 
     .local v4, i:I
     :goto_0
     if-ge v4, v0, :cond_0
 
+    .line 761
     const-string v13, ", ?"
 
     invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 760
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
+    .line 763
     :cond_0
     const-string v13, ")"
 
@@ -5174,8 +5614,10 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 764
     const/4 v12, 0x0
 
+    .line 766
     .local v12, statement:Landroid/database/sqlite/SQLiteStatement;
     :try_start_1
     sget-object v13, Landroid/webkit/WebViewDatabase;->mCacheDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -5188,11 +5630,13 @@
 
     move-result-object v12
 
+    .line 769
     const/4 v5, 0x1
 
     .local v5, index:I
     move v6, v5
 
+    .line 771
     .end local v5           #index:I
     .local v6, index:I
     :goto_1
@@ -5202,6 +5646,7 @@
 
     move-result-wide v7
 
+    .line 772
     .local v7, length:J
     const-wide/16 v13, 0x0
 
@@ -5211,6 +5656,7 @@
 
     move v5, v6
 
+    .line 784
     .end local v6           #index:I
     .restart local v5       #index:I
     :cond_1
@@ -5227,16 +5673,19 @@
 
     if-gtz v13, :cond_9
 
+    .line 785
     :cond_2
     const/4 v13, 0x1
 
     if-le v5, v13, :cond_3
 
+    .line 788
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteStatement;->execute()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 793
     :cond_3
     if-eqz v12, :cond_4
 
@@ -5246,6 +5695,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 799
     .end local v0           #batchSize:I
     .end local v4           #i:I
     .end local v5           #index:I
@@ -5258,10 +5708,12 @@
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
+    .line 801
     :cond_5
     :goto_4
     return-object v9
 
+    .line 775
     .restart local v0       #batchSize:I
     .restart local v4       #i:I
     .restart local v6       #index:I
@@ -5271,6 +5723,7 @@
     :cond_6
     sub-long p1, p1, v7
 
+    .line 776
     const/4 v13, 0x1
 
     :try_start_3
@@ -5278,28 +5731,35 @@
 
     move-result-object v3
 
+    .line 777
     .local v3, filePath:Ljava/lang/String;
     invoke-virtual {v12, v6, v3}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
+    .line 778
     invoke-virtual {v9, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 779
     add-int/lit8 v5, v6, 0x1
 
     .end local v6           #index:I
     .restart local v5       #index:I
     if-ne v6, v0, :cond_1
 
+    .line 780
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
+    .line 781
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_0
 
+    .line 782
     const/4 v5, 0x1
 
     goto :goto_2
 
+    .line 790
     .end local v3           #filePath:Ljava/lang/String;
     .end local v5           #index:I
     .end local v7           #length:J
@@ -5308,16 +5768,18 @@
 
     move-object v2, v13
 
+    .line 791
     .local v2, e:Ljava/lang/IllegalStateException;
     :try_start_4
-    const-string v13, "webviewdatabase"
+    const-string/jumbo v13, "webviewdatabase"
 
-    const-string v14, "trimCache SQLiteStatement"
+    const-string/jumbo v14, "trimCache SQLiteStatement"
 
     invoke-static {v13, v14, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 793
     if-eqz v12, :cond_4
 
     :try_start_5
@@ -5328,6 +5790,7 @@
 
     goto :goto_3
 
+    .line 796
     .end local v0           #batchSize:I
     .end local v2           #e:Ljava/lang/IllegalStateException;
     .end local v4           #i:I
@@ -5338,22 +5801,25 @@
 
     move-object v2, v13
 
+    .line 797
     .restart local v2       #e:Ljava/lang/IllegalStateException;
     :try_start_6
-    const-string v13, "webviewdatabase"
+    const-string/jumbo v13, "webviewdatabase"
 
-    const-string v14, "trimCache Cursor"
+    const-string/jumbo v14, "trimCache Cursor"
 
     invoke-static {v13, v14, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
+    .line 799
     if-eqz v1, :cond_5
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_4
 
+    .line 793
     .end local v2           #e:Ljava/lang/IllegalStateException;
     .restart local v0       #batchSize:I
     .restart local v4       #i:I
@@ -5373,6 +5839,7 @@
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
     .catch Ljava/lang/IllegalStateException; {:try_start_7 .. :try_end_7} :catch_1
 
+    .line 799
     .end local v0           #batchSize:I
     .end local v4           #i:I
     .end local v10           #pathStr:Ljava/lang/StringBuilder;

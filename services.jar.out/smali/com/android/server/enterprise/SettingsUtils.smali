@@ -18,6 +18,7 @@
     .locals 1
 
     .prologue
+    .line 28
     const-string v0, "content://com.android.email.provider/account"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -26,6 +27,7 @@
 
     sput-object v0, Lcom/android/server/enterprise/SettingsUtils;->ACCOUNT_CONTENT_URI:Landroid/net/Uri;
 
+    .line 29
     const-string v0, "content://com.android.email.provider/hostauth"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -34,6 +36,7 @@
 
     sput-object v0, Lcom/android/server/enterprise/SettingsUtils;->HOST_AUTH_CONTENT_URI:Landroid/net/Uri;
 
+    .line 32
     const-string v0, "content://com.android.email.provider/accountcb"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -49,6 +52,7 @@
     .locals 0
 
     .prologue
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -92,12 +96,14 @@
     .parameter "mContext"
 
     .prologue
+    .line 393
     const-class v40, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v40
 
     const-wide/16 v36, -0x1
 
+    .line 394
     .local v36, accountId:J
     :try_start_0
     const-string v5, "SettingsUtils"
@@ -162,80 +168,99 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 397
     invoke-static/range {p0 .. p0}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 398
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 399
     invoke-static/range {p2 .. p2}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 400
     invoke-static/range {p3 .. p3}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
+    .line 401
     invoke-static/range {p7 .. p7}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p7
 
+    .line 402
     invoke-static/range {p8 .. p8}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p8
 
+    .line 403
     invoke-static/range {p9 .. p9}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p9
 
+    .line 405
     invoke-static/range {p12 .. p12}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p12
 
+    .line 406
     invoke-static/range {p13 .. p13}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p13
 
+    .line 407
     invoke-static/range {p18 .. p18}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p18
 
+    .line 408
     invoke-static/range {p19 .. p19}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p19
 
+    .line 409
     invoke-static/range {p20 .. p20}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p20
 
+    .line 411
     invoke-static/range {p21 .. p21}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p21
 
+    .line 412
     invoke-static/range {p22 .. p22}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p22
 
+    .line 413
     invoke-static/range {p27 .. p27}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p27
 
+    .line 414
     invoke-static/range {p28 .. p28}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p28
 
+    .line 415
     invoke-static/range {p29 .. p29}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p29
 
+    .line 417
     if-eqz p31, :cond_a
 
     const/4 v5, 0x0
 
     move v13, v5
 
+    .line 418
     .local v13, inComingServerAuthFlags:I
     :goto_2
     if-eqz p31, :cond_b
@@ -244,10 +269,12 @@
 
     move/from16 v16, v5
 
+    .line 419
     .local v16, outGoingServerAuthFlags:I
     :goto_3
     const/16 v24, 0x0
 
+    .line 420
     .local v24, compatibilityUuid:Ljava/lang/String;
     if-eqz p31, :cond_c
 
@@ -255,19 +282,24 @@
 
     move/from16 v22, v5
 
+    .line 421
     .local v22, settingsFlags:I
     :goto_4
     const/16 v29, 0x0
 
+    .line 422
     .local v29, securityFlags:I
     const/16 v28, 0x0
 
+    .line 423
     .local v28, newMessageCount:I
     const/16 v30, 0x0
 
+    .line 424
     .local v30, securitySyncKey:Ljava/lang/String;
     const/16 v23, 0x0
 
+    .line 426
     .local v23, syncKey:Ljava/lang/String;
     if-eqz p0, :cond_7
 
@@ -354,6 +386,7 @@
 
     if-le v0, v1, :cond_d
 
+    .line 432
     :cond_7
     const-string p0, "SettingsUtils"
 
@@ -388,6 +421,7 @@
     .local p0, accountId:J
     move-wide/from16 p2, v36
 
+    .line 545
     .end local p0           #accountId:J
     .end local p3
     .end local p5
@@ -404,6 +438,7 @@
 
     return-wide p2
 
+    .line 394
     .end local v8           #inComingServerAuthFlags:I
     .end local v12           #outGoingServerAuthFlags:I
     .end local v15           #syncKey:Ljava/lang/String;
@@ -437,6 +472,7 @@
 
     goto/16 :goto_1
 
+    .line 417
     :cond_a
     move-object/from16 v0, p32
 
@@ -450,6 +486,7 @@
 
     goto :goto_2
 
+    .line 418
     .restart local v13       #inComingServerAuthFlags:I
     :cond_b
     move-object/from16 v0, p32
@@ -464,6 +501,7 @@
 
     goto/16 :goto_3
 
+    .line 420
     .restart local v16       #outGoingServerAuthFlags:I
     .restart local v24       #compatibilityUuid:Ljava/lang/String;
     :cond_c
@@ -477,6 +515,7 @@
 
     goto/16 :goto_4
 
+    .line 436
     .restart local v22       #settingsFlags:I
     .restart local v23       #syncKey:Ljava/lang/String;
     .restart local v28       #newMessageCount:I
@@ -499,6 +538,7 @@
 
     if-ne v0, v1, :cond_e
 
+    .line 437
     const-string p0, "SettingsUtils"
 
     .end local p0           #displayName:Ljava/lang/String;
@@ -530,11 +570,13 @@
     .local p0, accountId:J
     move-wide/from16 p2, v36
 
+    .line 439
     .end local p0           #accountId:J
     .end local p3
     .local p2, accountId:J
     goto :goto_5
 
+    .line 442
     .end local v8           #inComingServerAuthFlags:I
     .end local v12           #outGoingServerAuthFlags:I
     .end local v15           #syncKey:Ljava/lang/String;
@@ -564,6 +606,7 @@
 
     if-ne v0, v1, :cond_f
 
+    .line 443
     const-string p0, "SettingsUtils"
 
     .end local p0           #displayName:Ljava/lang/String;
@@ -595,11 +638,13 @@
     .local p0, accountId:J
     move-wide/from16 p2, v36
 
+    .line 444
     .end local p0           #accountId:J
     .end local p3
     .local p2, accountId:J
     goto :goto_5
 
+    .line 447
     .end local v8           #inComingServerAuthFlags:I
     .end local v12           #outGoingServerAuthFlags:I
     .end local v15           #syncKey:Ljava/lang/String;
@@ -629,6 +674,7 @@
 
     if-ne v0, v1, :cond_10
 
+    .line 448
     const-string p0, "SettingsUtils"
 
     .end local p0           #displayName:Ljava/lang/String;
@@ -660,11 +706,13 @@
     .local p0, accountId:J
     move-wide/from16 p2, v36
 
+    .line 449
     .end local p0           #accountId:J
     .end local p3
     .local p2, accountId:J
     goto/16 :goto_5
 
+    .line 452
     .end local v8           #inComingServerAuthFlags:I
     .end local v12           #outGoingServerAuthFlags:I
     .end local v15           #syncKey:Ljava/lang/String;
@@ -680,15 +728,19 @@
     :cond_10
     const-wide/16 v5, -0x1
 
+    .line 453
     .local v5, accountsRowId:J
     const-wide/16 v11, -0x1
 
+    .line 454
     .local v11, inComingRowId:J
     const-wide/16 v20, -0x1
 
+    .line 456
     .local v20, outGoingRowId:J
     if-eqz p30, :cond_30
 
+    .line 457
     const-string v6, "com.android.exchange"
 
     if-eqz p19, :cond_19
@@ -712,6 +764,7 @@
     .restart local v5       #accountsRowId:J
     move-wide/from16 v38, v5
 
+    .line 460
     .end local v5           #accountsRowId:J
     .local v38, accountsRowId:J
     :goto_7
@@ -726,6 +779,7 @@
     :cond_11
     if-nez p30, :cond_2f
 
+    .line 462
     :cond_12
     if-eqz p31, :cond_1a
 
@@ -746,13 +800,16 @@
 
     move-result v8
 
+    .line 463
     .end local v13           #inComingServerAuthFlags:I
     .restart local v8       #inComingServerAuthFlags:I
     const/16 p15, 0x0
 
+    .line 464
     .local p15, easLogin:Ljava/lang/String;
     if-eqz p3, :cond_1b
 
+    .line 465
     new-instance p15, Ljava/lang/StringBuilder;
 
     .end local p15           #easLogin:Ljava/lang/String;
@@ -785,6 +842,7 @@
 
     move-result-object p15
 
+    .line 471
     .restart local p15       #easLogin:Ljava/lang/String;
     :goto_9
     if-eqz p30, :cond_1c
@@ -826,6 +884,7 @@
     .end local v11           #inComingRowId:J
     move-result-wide p16
 
+    .line 473
     .end local p17
     .local p16, inComingRowId:J
     const-wide/16 v5, -0x1
@@ -834,6 +893,7 @@
 
     if-eqz p14, :cond_2e
 
+    .line 475
     if-eqz p31, :cond_1f
 
     const/16 p14, 0x4
@@ -853,6 +913,7 @@
 
     move-result v12
 
+    .line 477
     .end local v16           #outGoingServerAuthFlags:I
     .restart local v12       #outGoingServerAuthFlags:I
     if-eqz p30, :cond_20
@@ -892,6 +953,7 @@
 
     move-result-wide v20
 
+    .line 480
     :goto_11
     const-wide/16 p14, -0x1
 
@@ -905,24 +967,32 @@
 
     if-eqz p14, :cond_2d
 
+    .line 481
     if-eqz p30, :cond_2c
 
+    .line 482
     if-eqz p31, :cond_23
 
+    .line 484
     const-string v15, "0"
 
+    .line 489
     .end local v23           #syncKey:Ljava/lang/String;
     .restart local v15       #syncKey:Ljava/lang/String;
     :goto_12
     const/16 v26, 0x0
 
+    .line 490
     .local v26, ringtoneUri:Ljava/lang/String;
     if-eqz p31, :cond_24
 
+    .line 492
     const-string v26, "content://settings/system/notification_sound"
 
+    .line 493
     const/16 v22, 0x1
 
+    .line 494
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object p14
@@ -931,6 +1001,7 @@
 
     move-result-object v24
 
+    .line 501
     :goto_13
     const/16 p14, 0x1
 
@@ -940,8 +1011,10 @@
 
     if-ne v0, v1, :cond_25
 
+    .line 502
     or-int/lit8 v22, v22, 0x2
 
+    .line 506
     .end local p10
     :cond_13
     :goto_14
@@ -953,6 +1026,7 @@
 
     if-ne v0, v1, :cond_26
 
+    .line 507
     or-int/lit8 v22, v22, 0x40
 
     .end local p11
@@ -984,12 +1058,14 @@
 
     move-object/from16 v35, p33
 
+    .line 511
     invoke-static/range {v13 .. v35}, Lcom/android/server/enterprise/SettingsUtils;->insertAccountTableRow(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJIBLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ZZLandroid/app/enterprise/Account;Landroid/content/Context;)J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-wide p4
 
+    .line 513
     .end local v36           #accountId:J
     .end local p5
     .local p4, accountId:J
@@ -999,6 +1075,7 @@
 
     if-eqz p0, :cond_15
 
+    .line 514
     .end local p0           #displayName:Ljava/lang/String;
     const/16 p0, 0x1
 
@@ -1008,6 +1085,7 @@
 
     if-ne v0, v1, :cond_15
 
+    .line 515
     :try_start_2
     move-wide/from16 v0, p4
 
@@ -1018,6 +1096,7 @@
     :cond_15
     move-wide/from16 p10, p16
 
+    .line 519
     .end local v26           #ringtoneUri:Ljava/lang/String;
     .end local p15           #easLogin:Ljava/lang/String;
     .end local p16           #inComingRowId:J
@@ -1029,6 +1108,7 @@
 
     if-nez p0, :cond_28
 
+    .line 520
     const-string p0, "SettingsUtils"
 
     new-instance p6, Ljava/lang/StringBuilder;
@@ -1087,8 +1167,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 523
     if-eqz p31, :cond_18
 
+    .line 524
     const-string p0, "SettingsUtils"
 
     const-string p6, "createNewAccount : Starting redundant data cleanup... if any...!!!"
@@ -1099,18 +1181,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 525
     const-wide/16 p14, -0x1
 
     cmp-long p0, p14, v38
 
     if-eqz p0, :cond_16
 
+    .line 526
     move-wide/from16 v0, v38
 
     move-object/from16 v2, p33
 
     invoke-static {v0, v1, v2}, Lcom/android/server/enterprise/SettingsUtils;->deleteAccountsTableRow(JLandroid/content/Context;)Z
 
+    .line 529
     :cond_16
     const-wide/16 p14, -0x1
 
@@ -1118,12 +1203,14 @@
 
     if-eqz p0, :cond_17
 
+    .line 530
     move-wide/from16 v0, p10
 
     move-object/from16 v2, p33
 
     invoke-static {v0, v1, v2}, Lcom/android/server/enterprise/SettingsUtils;->deleteHostAuthTableRow(JLandroid/content/Context;)Z
 
+    .line 533
     :cond_17
     const-wide/16 p10, -0x1
 
@@ -1131,6 +1218,7 @@
 
     if-eqz p0, :cond_18
 
+    .line 534
     .end local p10           #inComingRowId:J
     move-wide/from16 v0, v20
 
@@ -1149,6 +1237,7 @@
     .local p0, accountId:J
     move-wide/from16 p2, p4
 
+    .line 545
     .end local p0           #accountId:J
     .end local p3
     .local p2, accountId:J
@@ -1180,6 +1269,7 @@
     :cond_19
     move-object/from16 v7, p28
 
+    .line 457
     goto/16 :goto_6
 
     .end local v5           #accountsRowId:J
@@ -1187,8 +1277,10 @@
     :cond_1a
     move v5, v13
 
+    .line 462
     goto/16 :goto_8
 
+    .line 468
     .end local v13           #inComingServerAuthFlags:I
     .restart local v8       #inComingServerAuthFlags:I
     .local p15, easLogin:Ljava/lang/String;
@@ -1201,6 +1293,7 @@
     :cond_1c
     move-object/from16 v5, p12
 
+    .line 471
     goto/16 :goto_a
 
     :cond_1d
@@ -1220,6 +1313,7 @@
     :cond_1f
     move/from16 p14, v16
 
+    .line 475
     goto/16 :goto_d
 
     .end local v16           #outGoingServerAuthFlags:I
@@ -1227,6 +1321,7 @@
     :cond_20
     move-object/from16 v9, p21
 
+    .line 477
     goto/16 :goto_e
 
     :cond_21
@@ -1239,6 +1334,7 @@
 
     goto/16 :goto_10
 
+    .line 486
     :cond_23
     :try_start_3
     move-object/from16 v0, p32
@@ -1251,6 +1347,7 @@
     .restart local v15       #syncKey:Ljava/lang/String;
     goto/16 :goto_12
 
+    .line 497
     .restart local v26       #ringtoneUri:Ljava/lang/String;
     :cond_24
     move-object/from16 v0, p32
@@ -1259,12 +1356,14 @@
 
     move-object/from16 v26, v0
 
+    .line 498
     move-object/from16 v0, p32
 
     iget v0, v0, Landroid/app/enterprise/Account;->mFlags:I
 
     move/from16 v22, v0
 
+    .line 499
     move-object/from16 v0, p32
 
     iget-object v0, v0, Landroid/app/enterprise/Account;->mCompatibilityUuid:Ljava/lang/String;
@@ -1275,6 +1374,7 @@
 
     goto/16 :goto_13
 
+    .line 503
     :cond_25
     const/16 p10, 0x2
 
@@ -1286,11 +1386,13 @@
 
     if-ne v0, v1, :cond_13
 
+    .line 504
     .end local p10           #emailNotificationVibrateAlways:B
     xor-int/lit8 v22, v22, 0x2
 
     goto/16 :goto_14
 
+    .line 508
     :cond_26
     const/16 p10, 0x40
 
@@ -1302,11 +1404,13 @@
 
     if-ne v0, v1, :cond_14
 
+    .line 509
     .end local p11
     xor-int/lit8 v22, v22, 0x40
 
     goto/16 :goto_15
 
+    .line 520
     .end local v26           #ringtoneUri:Ljava/lang/String;
     .end local v36           #accountId:J
     .end local p0           #displayName:Ljava/lang/String;
@@ -1322,10 +1426,12 @@
 
     goto/16 :goto_17
 
+    .line 538
     .restart local p6
     :cond_28
     if-eqz p31, :cond_29
 
+    .line 539
     new-instance p0, Landroid/content/Intent;
 
     const-string p6, "com.android.email.ENABLE_MESSAGECOMPOSE"
@@ -1337,6 +1443,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 540
     .local p0, intent:Landroid/content/Intent;
     move-object/from16 v0, p33
 
@@ -1344,6 +1451,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 542
     .end local p0           #intent:Landroid/content/Intent;
     :cond_29
     const-string p0, "SettingsUtils"
@@ -1459,6 +1567,7 @@
 
     goto/16 :goto_18
 
+    .line 393
     :catchall_0
     move-exception p0
 
@@ -1477,6 +1586,7 @@
 
     throw p0
 
+    .line 542
     .restart local v8       #inComingServerAuthFlags:I
     .restart local v12       #outGoingServerAuthFlags:I
     .restart local v15       #syncKey:Ljava/lang/String;
@@ -1500,6 +1610,7 @@
 
     goto :goto_1a
 
+    .line 393
     .end local v8           #inComingServerAuthFlags:I
     .end local v12           #outGoingServerAuthFlags:I
     .end local v15           #syncKey:Ljava/lang/String;
@@ -1647,12 +1758,14 @@
     .parameter "mContext"
 
     .prologue
+    .line 873
     const-class v9, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v9
 
     const/4 v2, 0x0
 
+    .line 874
     .local v2, rowCount:I
     const-wide/16 v0, 0x1
 
@@ -1660,6 +1773,7 @@
 
     if-lez v0, :cond_0
 
+    .line 875
     :try_start_0
     const-string p0, "SettingsUtils"
 
@@ -1670,12 +1784,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 876
     const/4 p0, 0x0
 
     move p1, p0
 
     move p0, v2
 
+    .line 931
     .end local v2           #rowCount:I
     .end local p2
     .local p0, rowCount:I
@@ -1684,18 +1800,22 @@
 
     return p1
 
+    .line 878
     .restart local v2       #rowCount:I
     .local p0, accountId:J
     .restart local p2
     :cond_0
     const/4 v0, 0x0
 
+    .line 879
     .local v0, ac:Landroid/app/enterprise/Account;
     const/4 v1, 0x0
 
+    .line 880
     .local v1, found:Z
     const/4 v4, 0x0
 
+    .line 882
     .local v4, isEas:Z
     :try_start_1
     invoke-static {p0, p1, p2}, Lcom/android/server/enterprise/SettingsUtils;->getAccountDetails(JLandroid/content/Context;)Landroid/app/enterprise/Account;
@@ -1705,6 +1825,7 @@
 
     move-result-object v0
 
+    .line 883
     if-eqz v0, :cond_9
 
     move v3, v1
@@ -1717,11 +1838,13 @@
     .local v6, ac:Landroid/app/enterprise/Account;
     move v5, v2
 
+    .line 886
     .end local v2           #rowCount:I
     .local v5, rowCount:I
     :goto_1
     const/4 v0, 0x0
 
+    .line 887
     .local v0, accountType:Ljava/lang/String;
     :try_start_2
     iget-object v1, v6, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
@@ -1736,10 +1859,13 @@
 
     if-eqz v1, :cond_2
 
+    .line 888
     const-string v0, "com.android.exchange"
 
+    .line 889
     const/4 v4, 0x1
 
+    .line 895
     :goto_2
     iget-object v1, v6, Landroid/app/enterprise/Account;->mEmailAddress:Ljava/lang/String;
 
@@ -1747,6 +1873,7 @@
 
     move-result-wide v1
 
+    .line 896
     .local v1, accountsRowId:J
     const-wide/16 v7, -0x1
 
@@ -1754,18 +1881,22 @@
 
     if-eqz v7, :cond_1
 
+    .line 897
     invoke-static {v1, v2, p2}, Lcom/android/server/enterprise/SettingsUtils;->deleteAccountsTableRow(JLandroid/content/Context;)Z
 
+    .line 900
     :cond_1
     iget-wide v1, v6, Landroid/app/enterprise/Account;->mHostAuthKeyRecv:J
 
     .end local v1           #accountsRowId:J
     invoke-static {v1, v2, p2}, Lcom/android/server/enterprise/SettingsUtils;->deleteHostAuthTableRow(JLandroid/content/Context;)Z
 
+    .line 902
     iget-wide v1, v6, Landroid/app/enterprise/Account;->mHostAuthKeySend:J
 
     invoke-static {v1, v2, p2}, Lcom/android/server/enterprise/SettingsUtils;->deleteHostAuthTableRow(JLandroid/content/Context;)Z
 
+    .line 905
     iget v1, v6, Landroid/app/enterprise/Account;->mId:I
 
     int-to-long v1, v1
@@ -1781,17 +1912,21 @@
     .local v0, found:Z
     move v7, v0
 
+    .line 910
     .end local v0           #found:Z
     .local v7, found:Z
     :goto_3
     add-int/lit8 v8, v5, 0x1
 
+    .line 912
     .end local v5           #rowCount:I
     .local v8, rowCount:I
     if-eqz v7, :cond_5
 
+    .line 913
     if-eqz v4, :cond_3
 
+    .line 914
     :try_start_3
     iget-object v0, v6, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
@@ -1801,6 +1936,7 @@
 
     move-result-object v1
 
+    .line 915
     .local v1, ret:[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -1828,6 +1964,7 @@
 
     move-result-wide p0
 
+    .line 919
     :goto_4
     const-wide/16 v0, -0x1
 
@@ -1845,6 +1982,7 @@
     .local p2, ac:Landroid/app/enterprise/Account;
     move v1, v8
 
+    .line 931
     .end local v8           #rowCount:I
     .local v1, rowCount:I
     :goto_5
@@ -1862,6 +2000,7 @@
     .local p0, rowCount:I
     goto :goto_0
 
+    .line 891
     .local v0, accountType:Ljava/lang/String;
     .restart local v3       #found:Z
     .restart local v5       #rowCount:I
@@ -1873,9 +2012,11 @@
 
     goto :goto_2
 
+    .line 907
     :catch_0
     move-exception v1
 
+    .line 908
     .local v1, e:Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
@@ -1889,6 +2030,7 @@
     .restart local v7       #found:Z
     goto :goto_3
 
+    .line 917
     .end local v0           #accountType:Ljava/lang/String;
     .end local v1           #e:Ljava/lang/Exception;
     .end local v5           #rowCount:I
@@ -1917,6 +2059,7 @@
 
     goto :goto_4
 
+    .line 921
     :cond_4
     invoke-static {p0, p1, p2}, Lcom/android/server/enterprise/SettingsUtils;->getAccountDetails(JLandroid/content/Context;)Landroid/app/enterprise/Account;
     :try_end_5
@@ -1925,6 +2068,7 @@
 
     move-result-object v0
 
+    .line 922
     .end local v6           #ac:Landroid/app/enterprise/Account;
     .local v0, ac:Landroid/app/enterprise/Account;
     if-nez v0, :cond_6
@@ -1939,6 +2083,7 @@
     .local v1, rowCount:I
     move v0, v7
 
+    .line 923
     .end local v7           #found:Z
     .local v0, found:Z
     goto :goto_5
@@ -1952,6 +2097,7 @@
     :cond_5
     move-object v0, v6
 
+    .line 926
     .end local v6           #ac:Landroid/app/enterprise/Account;
     .local v0, ac:Landroid/app/enterprise/Account;
     :cond_6
@@ -1971,6 +2117,7 @@
     .local v0, found:Z
     goto :goto_5
 
+    .line 928
     .local v0, ac:Landroid/app/enterprise/Account;
     .local v1, found:Z
     .restart local v2       #rowCount:I
@@ -1986,6 +2133,7 @@
     .local p2, ac:Landroid/app/enterprise/Account;
     move-object v0, v10
 
+    .line 929
     .local v0, e:Ljava/lang/Exception;
     :goto_7
     :try_start_6
@@ -2003,11 +2151,13 @@
     .local v1, rowCount:I
     goto :goto_5
 
+    .line 931
     :cond_7
     const/4 p0, 0x0
 
     goto :goto_6
 
+    .line 873
     .end local v0           #found:Z
     .end local v1           #rowCount:I
     .end local v4           #isEas:Z
@@ -2028,6 +2178,7 @@
 
     throw p1
 
+    .line 928
     .local v0, accountType:Ljava/lang/String;
     .local v1, e:Ljava/lang/Exception;
     .restart local v3       #found:Z
@@ -2081,6 +2232,7 @@
     .local p2, ac:Landroid/app/enterprise/Account;
     goto :goto_7
 
+    .line 873
     .end local v1           #found:Z
     .end local v2           #rowCount:I
     .restart local v0       #accountType:Ljava/lang/String;
@@ -2166,12 +2318,14 @@
 
     const-string v3, "SettingsUtils"
 
+    .line 963
     const-class v3, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v3
 
     const/4 v1, -0x1
 
+    .line 964
     .local v1, rowCount:I
     const-wide/16 v4, 0x1
 
@@ -2179,6 +2333,7 @@
 
     if-lez v4, :cond_0
 
+    .line 965
     :try_start_0
     const-string v4, "SettingsUtils"
 
@@ -2190,11 +2345,13 @@
 
     move v4, v7
 
+    .line 975
     :goto_0
     monitor-exit v3
 
     return v4
 
+    .line 969
     :cond_0
     :try_start_1
     sget-object v4, Lcom/android/server/enterprise/SettingsUtils;->ACCOUNT_CONTENT_URI:Landroid/net/Uri;
@@ -2203,6 +2360,7 @@
 
     move-result-object v2
 
+    .line 970
     .local v2, uri:Landroid/net/Uri;
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2216,6 +2374,7 @@
 
     move-result v1
 
+    .line 971
     const-string v4, "SettingsUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2241,6 +2400,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 975
     .end local v2           #uri:Landroid/net/Uri;
     :goto_1
     if-lez v1, :cond_1
@@ -2249,11 +2409,13 @@
 
     goto :goto_0
 
+    .line 972
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
+    .line 973
     .local v0, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -2262,6 +2424,7 @@
 
     goto :goto_1
 
+    .line 963
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v4
@@ -2273,6 +2436,7 @@
     :cond_1
     move v4, v7
 
+    .line 975
     goto :goto_0
 .end method
 
@@ -2288,12 +2452,14 @@
 
     const-string v4, "SettingsUtils"
 
+    .line 630
     const-class v4, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v4
 
     const/4 v0, 0x0
 
+    .line 631
     .local v0, accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     const-wide/16 v5, 0x1
 
@@ -2301,6 +2467,7 @@
 
     if-lez v5, :cond_0
 
+    .line 632
     :try_start_0
     const-string v5, "SettingsUtils"
 
@@ -2312,15 +2479,18 @@
 
     move v5, v8
 
+    .line 651
     :goto_0
     monitor-exit v4
 
     return v5
 
+    .line 636
     :cond_0
     :try_start_1
     const-string v1, "/data/system/accounts.db"
 
+    .line 637
     .local v1, accountsDBPath:Ljava/lang/String;
     const/4 v5, 0x0
 
@@ -2330,6 +2500,7 @@
 
     move-result-object v0
 
+    .line 639
     const-string v5, "accounts"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2356,9 +2527,11 @@
 
     move-result v3
 
+    .line 640
     .local v3, rowCount:I
     if-lez v3, :cond_2
 
+    .line 641
     :goto_1
     const-string v5, "SettingsUtils"
 
@@ -2385,13 +2558,16 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 647
     if-eqz v0, :cond_1
 
+    .line 648
     :try_start_2
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 651
     .end local v1           #accountsDBPath:Ljava/lang/String;
     .end local v3           #rowCount:I
     :cond_1
@@ -2409,8 +2585,10 @@
     :cond_2
     move-wide p0, v9
 
+    .line 640
     goto :goto_1
 
+    .line 643
     .end local v1           #accountsDBPath:Ljava/lang/String;
     .end local v3           #rowCount:I
     :catch_0
@@ -2418,16 +2596,20 @@
 
     move-object v2, v5
 
+    .line 644
     .local v2, e:Ljava/lang/Exception;
     const-wide/16 p0, -0x1
 
+    .line 645
     :try_start_3
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 647
     if-eqz v0, :cond_1
 
+    .line 648
     :try_start_4
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_4
@@ -2435,6 +2617,7 @@
 
     goto :goto_2
 
+    .line 630
     .end local v2           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v5
@@ -2443,14 +2626,17 @@
 
     throw v5
 
+    .line 647
     :catchall_1
     move-exception v5
 
     if-eqz v0, :cond_3
 
+    .line 648
     :try_start_5
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
+    .line 647
     :cond_3
     throw v5
     :try_end_5
@@ -2459,6 +2645,7 @@
     :cond_4
     move v5, v8
 
+    .line 651
     goto :goto_0
 .end method
 
@@ -2472,12 +2659,14 @@
 
     const-string v3, "SettingsUtils"
 
+    .line 941
     const-class v3, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v3
 
     const/4 v1, -0x1
 
+    .line 942
     .local v1, rowCount:I
     const-wide/16 v4, 0x1
 
@@ -2485,6 +2674,7 @@
 
     if-lez v4, :cond_0
 
+    .line 943
     :try_start_0
     const-string v4, "SettingsUtils"
 
@@ -2496,11 +2686,13 @@
 
     move v4, v7
 
+    .line 953
     :goto_0
     monitor-exit v3
 
     return v4
 
+    .line 947
     :cond_0
     :try_start_1
     sget-object v4, Lcom/android/server/enterprise/SettingsUtils;->HOST_AUTH_CONTENT_URI:Landroid/net/Uri;
@@ -2509,6 +2701,7 @@
 
     move-result-object v2
 
+    .line 948
     .local v2, uri:Landroid/net/Uri;
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2522,6 +2715,7 @@
 
     move-result v1
 
+    .line 949
     const-string v4, "SettingsUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2547,6 +2741,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 953
     .end local v2           #uri:Landroid/net/Uri;
     :goto_1
     if-lez v1, :cond_1
@@ -2555,11 +2750,13 @@
 
     goto :goto_0
 
+    .line 950
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
+    .line 951
     .local v0, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -2568,6 +2765,7 @@
 
     goto :goto_1
 
+    .line 941
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v4
@@ -2579,6 +2777,7 @@
     :cond_1
     move v4, v7
 
+    .line 953
     goto :goto_0
 .end method
 
@@ -2592,6 +2791,7 @@
 
     const/4 v3, 0x0
 
+    .line 299
     const-class v1, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v1
@@ -2605,35 +2805,42 @@
 
     move-result-object v0
 
+    .line 300
     .local v0, easDomainAndUser:[Ljava/lang/String;
     iget-object v2, p0, Landroid/app/enterprise/Account;->mDisplayName:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mDisplayName:Ljava/lang/String;
 
+    .line 301
     iget-object v2, p0, Landroid/app/enterprise/Account;->mEmailAddress:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
+    .line 302
     const/4 v2, 0x1
 
     aget-object v2, v0, v2
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mEasUser:Ljava/lang/String;
 
+    .line 303
     const/4 v2, 0x0
 
     aget-object v2, v0, v2
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mEasDomain:Ljava/lang/String;
 
+    .line 304
     iget v2, p0, Landroid/app/enterprise/Account;->mSyncLookback:I
 
     iput v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mSyncLookback:I
 
+    .line 305
     iget v2, p0, Landroid/app/enterprise/Account;->mSyncInterval:I
 
     iput v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mSyncInterval:I
 
+    .line 306
     iget-boolean v2, p0, Landroid/app/enterprise/Account;->mIsDefault:Z
 
     if-eqz v2, :cond_0
@@ -2645,18 +2852,22 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mIsDefault:B
 
+    .line 307
     iget-object v2, p0, Landroid/app/enterprise/Account;->mSenderName:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mSenderName:Ljava/lang/String;
 
+    .line 308
     iget-object v2, p0, Landroid/app/enterprise/Account;->mProtocolVersion:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mProtocolVersion:Ljava/lang/String;
 
+    .line 309
     iget-object v2, p0, Landroid/app/enterprise/Account;->mSignature:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mSignature:Ljava/lang/String;
 
+    .line 311
     iget-boolean v2, p0, Landroid/app/enterprise/Account;->mEmailNotificationVibrateAlways:Z
 
     if-eqz v2, :cond_1
@@ -2668,6 +2879,7 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateAlways:B
 
+    .line 312
     iget-boolean v2, p0, Landroid/app/enterprise/Account;->mEmailNotificationVibrateWhenSilent:Z
 
     if-eqz v2, :cond_2
@@ -2679,24 +2891,28 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateWhenSilent:B
 
+    .line 314
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mProtocol:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingProtocol:Ljava/lang/String;
 
+    .line 315
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mAddress:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAddress:Ljava/lang/String;
 
+    .line 316
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget v2, v2, Landroid/app/enterprise/HostAuth;->mPort:I
 
     iput v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPort:I
 
+    .line 317
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget-boolean v2, v2, Landroid/app/enterprise/HostAuth;->mUseSSL:Z
@@ -2710,6 +2926,7 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseSSL:B
 
+    .line 318
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget-boolean v2, v2, Landroid/app/enterprise/HostAuth;->mUseTLS:Z
@@ -2723,6 +2940,7 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseTLS:B
 
+    .line 319
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget-boolean v2, v2, Landroid/app/enterprise/HostAuth;->mAcceptAllCertificates:Z
@@ -2736,42 +2954,49 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAcceptAllCertificates:B
 
+    .line 320
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mLogin:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerLogin:Ljava/lang/String;
 
+    .line 321
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mPassword:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPassword:Ljava/lang/String;
 
+    .line 322
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mDomain:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPathPrefix:Ljava/lang/String;
 
+    .line 324
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mProtocol:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingProtocol:Ljava/lang/String;
 
+    .line 325
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mAddress:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAddress:Ljava/lang/String;
 
+    .line 326
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget v2, v2, Landroid/app/enterprise/HostAuth;->mPort:I
 
     iput v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPort:I
 
+    .line 327
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget-boolean v2, v2, Landroid/app/enterprise/HostAuth;->mUseSSL:Z
@@ -2785,6 +3010,7 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseSSL:B
 
+    .line 328
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget-boolean v2, v2, Landroid/app/enterprise/HostAuth;->mUseTLS:Z
@@ -2798,6 +3024,7 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseTLS:B
 
+    .line 329
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget-boolean v2, v2, Landroid/app/enterprise/HostAuth;->mAcceptAllCertificates:Z
@@ -2811,18 +3038,21 @@
 
     iput-byte v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAcceptAllCertificates:B
 
+    .line 330
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mLogin:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerLogin:Ljava/lang/String;
 
+    .line 331
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mPassword:Ljava/lang/String;
 
     iput-object v2, p1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPassword:Ljava/lang/String;
 
+    .line 332
     iget-object v2, p0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
 
     iget-object v2, v2, Landroid/app/enterprise/HostAuth;->mDomain:Ljava/lang/String;
@@ -2831,6 +3061,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 333
     monitor-exit v1
 
     return-void
@@ -2838,48 +3069,58 @@
     :cond_0
     move v2, v3
 
+    .line 306
     goto/16 :goto_0
 
     :cond_1
     move v2, v3
 
+    .line 311
     goto/16 :goto_1
 
     :cond_2
     move v2, v3
 
+    .line 312
     goto/16 :goto_2
 
     :cond_3
     move v2, v3
 
+    .line 317
     goto :goto_3
 
     :cond_4
     move v2, v3
 
+    .line 318
     goto :goto_4
 
     :cond_5
     move v2, v3
 
+    .line 319
     goto :goto_5
 
     :cond_6
     move v2, v3
 
+    .line 327
     goto :goto_6
 
     :cond_7
     move v2, v3
 
+    .line 328
     goto :goto_7
 
     :cond_8
     move v2, v3
 
+    .line 329
     goto :goto_8
 
+    .line 299
     .end local v0           #easDomainAndUser:[Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -2903,15 +3144,18 @@
 
     const-string v0, "_id"
 
+    .line 1071
     const-class v9, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v9
 
     const/4 v6, 0x0
 
+    .line 1072
     .local v6, ac:Landroid/app/enterprise/Account;
     const/4 v8, 0x0
 
+    .line 1074
     .local v8, c:Landroid/database/Cursor;
     const/16 v0, 0x13
 
@@ -3034,6 +3278,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 1080
     .local v2, ID_PROJECTION:[Ljava/lang/String;
     :try_start_1
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3068,6 +3313,7 @@
 
     move-result-object v8
 
+    .line 1081
     const-string v0, "SettingsUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3094,20 +3340,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1082
     invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
+    .line 1083
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
+    .line 1084
     new-instance v7, Landroid/app/enterprise/Account;
 
     invoke-direct {v7}, Landroid/app/enterprise/Account;-><init>()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 1085
     .end local v6           #ac:Landroid/app/enterprise/Account;
     .local v7, ac:Landroid/app/enterprise/Account;
     :try_start_2
@@ -3123,6 +3373,7 @@
 
     iput v0, v7, Landroid/app/enterprise/Account;->mId:I
 
+    .line 1086
     const-string v0, "displayName"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3135,6 +3386,7 @@
 
     iput-object v0, v7, Landroid/app/enterprise/Account;->mDisplayName:Ljava/lang/String;
 
+    .line 1087
     const-string v0, "emailAddress"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3147,6 +3399,7 @@
 
     iput-object v0, v7, Landroid/app/enterprise/Account;->mEmailAddress:Ljava/lang/String;
 
+    .line 1088
     const-string v0, "syncKey"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3159,6 +3412,7 @@
 
     iput-object v0, v7, Landroid/app/enterprise/Account;->mSyncKey:Ljava/lang/String;
 
+    .line 1089
     const-string v0, "syncLookback"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3171,6 +3425,7 @@
 
     iput v0, v7, Landroid/app/enterprise/Account;->mSyncLookback:I
 
+    .line 1091
     const-string v0, "offPeakSchedule"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3183,6 +3438,7 @@
 
     iput v0, v7, Landroid/app/enterprise/Account;->mSyncInterval:I
 
+    .line 1092
     const-string v0, "hostAuthKeyRecv"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3195,6 +3451,7 @@
 
     iput-wide v0, v7, Landroid/app/enterprise/Account;->mHostAuthKeyRecv:J
 
+    .line 1093
     const-string v0, "hostAuthKeySend"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3207,6 +3464,7 @@
 
     iput-wide v0, v7, Landroid/app/enterprise/Account;->mHostAuthKeySend:J
 
+    .line 1094
     const-string v0, "flags"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3219,6 +3477,7 @@
 
     iput v0, v7, Landroid/app/enterprise/Account;->mFlags:I
 
+    .line 1095
     iget v0, v7, Landroid/app/enterprise/Account;->mFlags:I
 
     and-int/lit8 v0, v0, 0x2
@@ -3230,6 +3489,7 @@
     :goto_0
     iput-boolean v0, v7, Landroid/app/enterprise/Account;->mEmailNotificationVibrateAlways:Z
 
+    .line 1096
     const/16 v0, 0x40
 
     iget v1, v7, Landroid/app/enterprise/Account;->mFlags:I
@@ -3243,6 +3503,7 @@
     :goto_1
     iput-boolean v0, v7, Landroid/app/enterprise/Account;->mEmailNotificationVibrateWhenSilent:Z
 
+    .line 1097
     const-string v0, "isDefault"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3260,6 +3521,7 @@
     :goto_2
     iput-boolean v0, v7, Landroid/app/enterprise/Account;->mIsDefault:Z
 
+    .line 1098
     const-string v0, "compatibilityUuid"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3272,6 +3534,7 @@
 
     iput-object v0, v7, Landroid/app/enterprise/Account;->mCompatibilityUuid:Ljava/lang/String;
 
+    .line 1099
     const-string v0, "senderName"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3284,6 +3547,7 @@
 
     iput-object v0, v7, Landroid/app/enterprise/Account;->mSenderName:Ljava/lang/String;
 
+    .line 1100
     const-string v0, "ringtoneUri"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3296,6 +3560,7 @@
 
     iput-object v0, v7, Landroid/app/enterprise/Account;->mRingtoneUri:Ljava/lang/String;
 
+    .line 1101
     const-string v0, "protocolVersion"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3308,6 +3573,7 @@
 
     iput-object v0, v7, Landroid/app/enterprise/Account;->mProtocolVersion:Ljava/lang/String;
 
+    .line 1102
     const-string v0, "newMessageCount"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3320,6 +3586,7 @@
 
     iput v0, v7, Landroid/app/enterprise/Account;->mNewMessageCount:I
 
+    .line 1103
     const-string v0, "securityFlags"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3332,6 +3599,7 @@
 
     iput v0, v7, Landroid/app/enterprise/Account;->mSecurityFlags:I
 
+    .line 1104
     const-string v0, "securitySyncKey"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3344,6 +3612,7 @@
 
     iput-object v0, v7, Landroid/app/enterprise/Account;->mSecuritySyncKey:Ljava/lang/String;
 
+    .line 1105
     const-string v0, "signature"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3360,16 +3629,19 @@
 
     move-object v6, v7
 
+    .line 1108
     .end local v7           #ac:Landroid/app/enterprise/Account;
     .restart local v6       #ac:Landroid/app/enterprise/Account;
     :cond_0
     if-eqz v8, :cond_1
 
+    .line 1109
     :try_start_3
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 1111
     :cond_1
     monitor-exit v9
 
@@ -3380,18 +3652,22 @@
     :cond_2
     move v0, v11
 
+    .line 1095
     goto/16 :goto_0
 
     :cond_3
     move v0, v11
 
+    .line 1096
     goto :goto_1
 
     :cond_4
     move v0, v11
 
+    .line 1097
     goto :goto_2
 
+    .line 1108
     .end local v7           #ac:Landroid/app/enterprise/Account;
     .restart local v6       #ac:Landroid/app/enterprise/Account;
     :catchall_0
@@ -3400,14 +3676,17 @@
     :goto_3
     if-eqz v8, :cond_5
 
+    .line 1109
     :try_start_4
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
+    .line 1108
     :cond_5
     throw v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 1071
     .end local v2           #ID_PROJECTION:[Ljava/lang/String;
     :catchall_1
     move-exception v0
@@ -3416,6 +3695,7 @@
 
     throw v0
 
+    .line 1108
     .end local v6           #ac:Landroid/app/enterprise/Account;
     .restart local v2       #ID_PROJECTION:[Ljava/lang/String;
     .restart local v7       #ac:Landroid/app/enterprise/Account;
@@ -3435,25 +3715,31 @@
     .parameter "mContext"
 
     .prologue
+    .line 1050
     const-class v3, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v3
 
     const/4 v0, 0x0
 
+    .line 1051
     .local v0, ac:Landroid/app/enterprise/Account;
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/android/server/enterprise/SettingsUtils;->getAccount(JLandroid/content/Context;)Landroid/app/enterprise/Account;
 
     move-result-object v0
 
+    .line 1052
     if-eqz v0, :cond_1
 
+    .line 1053
     const/4 v1, 0x0
 
+    .line 1054
     .local v1, haRecv:Landroid/app/enterprise/HostAuth;
     const/4 v2, 0x0
 
+    .line 1055
     .local v2, haSend:Landroid/app/enterprise/HostAuth;
     iget-wide v4, v0, Landroid/app/enterprise/Account;->mHostAuthKeyRecv:J
 
@@ -3461,25 +3747,31 @@
 
     move-result-object v1
 
+    .line 1056
     if-eqz v1, :cond_0
 
+    .line 1057
     iget-wide v4, v0, Landroid/app/enterprise/Account;->mHostAuthKeySend:J
 
     invoke-static {v4, v5, p2}, Lcom/android/server/enterprise/SettingsUtils;->getHostAuth(JLandroid/content/Context;)Landroid/app/enterprise/HostAuth;
 
     move-result-object v2
 
+    .line 1059
     :cond_0
     if-eqz v1, :cond_2
 
     if-eqz v2, :cond_2
 
+    .line 1060
     iput-object v1, v0, Landroid/app/enterprise/Account;->mHostAuthRecv:Landroid/app/enterprise/HostAuth;
 
+    .line 1061
     iput-object v2, v0, Landroid/app/enterprise/Account;->mHostAuthSend:Landroid/app/enterprise/HostAuth;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1067
     .end local v1           #haRecv:Landroid/app/enterprise/HostAuth;
     .end local v2           #haSend:Landroid/app/enterprise/HostAuth;
     :cond_1
@@ -3488,6 +3780,7 @@
 
     return-object v0
 
+    .line 1064
     .restart local v1       #haRecv:Landroid/app/enterprise/HostAuth;
     .restart local v2       #haSend:Landroid/app/enterprise/HostAuth;
     :cond_2
@@ -3495,6 +3788,7 @@
 
     goto :goto_0
 
+    .line 1050
     .end local v1           #haRecv:Landroid/app/enterprise/HostAuth;
     .end local v2           #haSend:Landroid/app/enterprise/HostAuth;
     :catchall_0
@@ -3515,39 +3809,47 @@
     .parameter "mContext"
 
     .prologue
+    .line 987
     const-class v13, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v13
 
     const-wide/16 v8, -0x1
 
+    .line 988
     .local v8, accountId:J
     const/4 v10, 0x0
 
+    .line 990
     .local v10, c:Landroid/database/Cursor;
     :try_start_0
     invoke-static {p0}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 991
     invoke-static {p1}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 992
     invoke-static/range {p2 .. p2}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 993
     invoke-static/range {p3 .. p3}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
+    .line 995
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
     if-nez p3, :cond_1
 
+    .line 996
     :cond_0
     const-string p0, "SettingsUtils"
 
@@ -3574,6 +3876,7 @@
     .local p2, accountId:J
     move-wide/from16 p4, v8
 
+    .line 1040
     .end local p2           #accountId:J
     .end local p5
     .local p4, accountId:J
@@ -3582,6 +3885,7 @@
 
     return-wide p4
 
+    .line 999
     .restart local v8       #accountId:J
     .restart local v10       #c:Landroid/database/Cursor;
     .local p0, easDomain:Ljava/lang/String;
@@ -3594,6 +3898,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 1000
     :try_start_1
     new-instance p4, Ljava/lang/StringBuilder;
 
@@ -3627,6 +3932,7 @@
 
     move-result-object p1
 
+    .line 1002
     :cond_2
     const/4 p0, 0x1
 
@@ -3638,6 +3944,7 @@
 
     aput-object p4, v4, p0
 
+    .line 1006
     .local v4, ID_PROJECTION:[Ljava/lang/String;
     const/4 p0, 0x3
 
@@ -3657,9 +3964,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
+    .line 1009
     .local v6, selectionArgs:[Ljava/lang/String;
     const-wide/16 v11, -0x1
 
+    .line 1011
     .local v11, hostAuthId:J
     :try_start_2
     invoke-virtual/range {p5 .. p5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3678,6 +3987,7 @@
 
     move-result-object p0
 
+    .line 1012
     .end local v10           #c:Landroid/database/Cursor;
     .local p0, c:Landroid/database/Cursor;
     :try_start_3
@@ -3711,12 +4021,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1013
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result p4
 
     if-eqz p4, :cond_9
 
+    .line 1014
     const-string p4, "_id"
 
     move-object v0, p0
@@ -3743,23 +4055,28 @@
 
     move-wide v2, v0
 
+    .line 1017
     .end local v11           #hostAuthId:J
     .local v2, hostAuthId:J
     :goto_1
     if-eqz p0, :cond_3
 
+    .line 1018
     :try_start_4
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
+    .line 1020
     :cond_3
     const/4 p0, 0x0
 
+    .line 1022
     const-wide/16 v10, -0x1
 
     cmp-long p4, v10, v2
 
     if-eqz p4, :cond_8
 
+    .line 1023
     const/16 p4, 0x1
 
     move/from16 v0, p4
@@ -3775,6 +4092,7 @@
 
     aput-object v5, v4, p4
 
+    .line 1026
     .restart local v4       #ID_PROJECTION:[Ljava/lang/String;
     const/16 p4, 0x2
 
@@ -3804,6 +4122,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 1030
     .restart local v6       #selectionArgs:[Ljava/lang/String;
     :try_start_5
     invoke-virtual/range {p5 .. p5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3820,6 +4139,7 @@
 
     move-result-object p0
 
+    .line 1031
     const-string p4, "SettingsUtils"
 
     new-instance p5, Ljava/lang/StringBuilder;
@@ -3855,12 +4175,14 @@
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1032
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result p4
 
     if-eqz p4, :cond_7
 
+    .line 1033
     const-string p4, "_id"
 
     move-object v0, p0
@@ -3887,11 +4209,13 @@
 
     move-wide/from16 p4, v0
 
+    .line 1036
     .end local v8           #accountId:J
     .local p4, accountId:J
     :goto_2
     if-eqz p0, :cond_4
 
+    .line 1037
     :try_start_6
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_6
@@ -3906,10 +4230,12 @@
     :goto_3
     move-wide/from16 p4, p2
 
+    .line 1040
     .end local p2           #accountId:J
     .restart local p4       #accountId:J
     goto/16 :goto_0
 
+    .line 1017
     .end local p0           #c:Landroid/database/Cursor;
     .end local p4           #accountId:J
     .restart local v8       #accountId:J
@@ -3930,14 +4256,17 @@
     :goto_4
     if-eqz p0, :cond_5
 
+    .line 1018
     :try_start_7
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
+    .line 1017
     :cond_5
     throw p4
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
+    .line 987
     .end local v4           #ID_PROJECTION:[Ljava/lang/String;
     .end local v6           #selectionArgs:[Ljava/lang/String;
     .end local v11           #hostAuthId:J
@@ -3956,6 +4285,7 @@
 
     throw v2
 
+    .line 1036
     .end local p4           #accountId:J
     .restart local v4       #ID_PROJECTION:[Ljava/lang/String;
     .restart local v6       #selectionArgs:[Ljava/lang/String;
@@ -3965,14 +4295,17 @@
 
     if-eqz p0, :cond_6
 
+    .line 1037
     :try_start_8
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
+    .line 1036
     :cond_6
     throw p4
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
+    .line 1017
     .restart local v11       #hostAuthId:J
     .restart local p5
     :catchall_3
@@ -3980,6 +4313,7 @@
 
     goto :goto_4
 
+    .line 987
     .end local v4           #ID_PROJECTION:[Ljava/lang/String;
     .end local v6           #selectionArgs:[Ljava/lang/String;
     .end local v11           #hostAuthId:J
@@ -4049,35 +4383,43 @@
     .parameter "mContext"
 
     .prologue
+    .line 655
     const-class v5, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v5
 
     const/4 p2, 0x0
 
+    .line 656
     .local p2, accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     const/4 v2, 0x0
 
+    .line 657
     .local v2, cr:Landroid/database/Cursor;
     const-wide/16 v3, -0x1
 
+    .line 658
     .local v3, rowId:J
     :try_start_0
     invoke-static {p0}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 659
     invoke-static {p1}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     move-result-object p1
 
+    .line 661
     if-eqz p0, :cond_c
 
+    .line 663
     :try_start_1
     const-string v0, "/data/system/accounts.db"
 
+    .line 664
     .local v0, accountsDBPath:Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -4087,8 +4429,10 @@
 
     move-result-object p2
 
+    .line 665
     const-wide/16 v0, -0x1
 
+    .line 667
     .local v0, accountsDBRowId:J
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4145,6 +4489,7 @@
 
     move-result-object v2
 
+    .line 668
     const-string v6, "SettingsUtils"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -4206,14 +4551,17 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 669
     invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 
     move-result v6
 
     if-lez v6, :cond_1
 
+    .line 670
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
+    .line 671
     const/4 v0, 0x0
 
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
@@ -4221,17 +4569,21 @@
     .end local v0           #accountsDBRowId:J
     move-result-wide v0
 
+    .line 672
     .restart local v0       #accountsDBRowId:J
     if-eqz v2, :cond_0
 
+    .line 673
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 674
     :cond_0
     const/4 v2, 0x0
 
+    .line 676
     :cond_1
     const-wide/16 v6, -0x1
 
@@ -4239,8 +4591,10 @@
 
     if-eqz v6, :cond_6
 
+    .line 677
     move-wide v0, v0
 
+    .line 678
     .end local v3           #rowId:J
     .local v0, rowId:J
     :try_start_2
@@ -4270,15 +4624,19 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 686
     :goto_2
     if-eqz v2, :cond_2
 
+    .line 687
     :try_start_3
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
+    .line 688
     :cond_2
     if-eqz p2, :cond_3
 
+    .line 689
     invoke-virtual {p2}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_6
@@ -4290,6 +4648,7 @@
     .local p1, cr:Landroid/database/Cursor;
     move-object p0, p2
 
+    .line 695
     .end local p2           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .local p0, accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     :goto_3
@@ -4297,6 +4656,7 @@
 
     return-wide v0
 
+    .line 667
     .local v0, accountsDBRowId:J
     .restart local v2       #cr:Landroid/database/Cursor;
     .restart local v3       #rowId:J
@@ -4309,11 +4669,13 @@
 
     goto/16 :goto_0
 
+    .line 668
     :cond_5
     const-string v8, ""
 
     goto :goto_1
 
+    .line 680
     :cond_6
     const-string v0, "SettingsUtils"
 
@@ -4380,6 +4742,7 @@
 
     goto :goto_4
 
+    .line 682
     :catch_0
     move-exception p0
 
@@ -4395,25 +4758,31 @@
     .local p2, cr:Landroid/database/Cursor;
     move-wide v1, v3
 
+    .line 683
     .end local v3           #rowId:J
     .local v0, e:Ljava/lang/Exception;
     .local v1, rowId:J
     :goto_5
     const-wide/16 v1, -0x1
 
+    .line 684
     :try_start_5
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
+    .line 686
     if-eqz p2, :cond_8
 
+    .line 687
     :try_start_6
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
+    .line 688
     :cond_8
     if-eqz p0, :cond_9
 
+    .line 689
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_5
@@ -4429,10 +4798,12 @@
     .local v10, rowId:J
     move-wide v0, v10
 
+    .line 691
     .end local v10           #rowId:J
     .local v0, rowId:J
     goto :goto_3
 
+    .line 686
     .end local v0           #rowId:J
     .end local p0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v2       #cr:Landroid/database/Cursor;
@@ -4461,19 +4832,24 @@
     :goto_6
     if-eqz p2, :cond_a
 
+    .line 687
     :try_start_7
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
+    .line 688
     :cond_a
     if-eqz p0, :cond_b
 
+    .line 689
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
+    .line 686
     :cond_b
     throw v2
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
+    .line 655
     :catchall_1
     move-exception v2
 
@@ -4482,6 +4858,7 @@
 
     throw v2
 
+    .line 693
     .end local v0           #rowId:J
     .restart local v2       #cr:Landroid/database/Cursor;
     .restart local v3       #rowId:J
@@ -4512,6 +4889,7 @@
     .local p0, accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     goto :goto_3
 
+    .line 686
     .end local p0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v2       #cr:Landroid/database/Cursor;
     .local p1, accountType:Ljava/lang/String;
@@ -4552,6 +4930,7 @@
 
     goto :goto_6
 
+    .line 682
     .end local p0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v2       #cr:Landroid/database/Cursor;
     .local p2, accountsDB:Landroid/database/sqlite/SQLiteDatabase;
@@ -4580,6 +4959,7 @@
 
     goto :goto_5
 
+    .line 655
     .end local v1           #rowId:J
     .end local p0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v2       #cr:Landroid/database/Cursor;
@@ -4659,6 +5039,7 @@
 
     const-string v2, "\\"
 
+    .line 336
     const-class v2, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v2
@@ -4680,13 +5061,16 @@
 
     aput-object v4, v0, v3
 
+    .line 339
     .local v0, easDomainAndUser:[Ljava/lang/String;
     invoke-static {p0}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 340
     if-eqz p0, :cond_0
 
+    .line 341
     const-string v3, "\\"
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -4695,6 +5079,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 342
     const-string v3, "\\"
 
     invoke-static {v3}, Ljava/util/regex/Matcher;->quoteReplacement(Ljava/lang/String;)Ljava/lang/String;
@@ -4705,6 +5090,7 @@
 
     move-result-object v1
 
+    .line 343
     .local v1, sp:[Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -4712,10 +5098,12 @@
 
     if-lez v3, :cond_0
 
+    .line 344
     array-length v3, v1
 
     if-ne v6, v3, :cond_1
 
+    .line 345
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -4728,6 +5116,7 @@
 
     aput-object v4, v0, v3
 
+    .line 346
     const/4 v3, 0x1
 
     const/4 v4, 0x1
@@ -4742,6 +5131,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 356
     .end local v1           #sp:[Ljava/lang/String;
     :cond_0
     :goto_0
@@ -4749,6 +5139,7 @@
 
     return-object v0
 
+    .line 347
     .restart local v1       #sp:[Ljava/lang/String;
     :cond_1
     :try_start_1
@@ -4756,6 +5147,7 @@
 
     if-ne v5, v3, :cond_0
 
+    .line 348
     const/4 v3, 0x1
 
     const/4 v4, 0x0
@@ -4772,6 +5164,7 @@
 
     goto :goto_0
 
+    .line 336
     .end local v0           #easDomainAndUser:[Ljava/lang/String;
     .end local v1           #sp:[Ljava/lang/String;
     :catchall_0
@@ -4781,6 +5174,7 @@
 
     throw v3
 
+    .line 353
     .restart local v0       #easDomainAndUser:[Ljava/lang/String;
     :cond_2
     const/4 v3, 0x1
@@ -4799,15 +5193,18 @@
     .parameter "mContext"
 
     .prologue
+    .line 1115
     const-class v8, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v8
 
     const/4 v7, 0x0
 
+    .line 1116
     .local v7, hAuth:Landroid/app/enterprise/HostAuth;
     const/4 v6, 0x0
 
+    .line 1118
     .local v6, c:Landroid/database/Cursor;
     const/16 v0, 0x9
 
@@ -4870,6 +5267,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
+    .line 1122
     .local v2, ID_PROJECTION:[Ljava/lang/String;
     :try_start_1
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4908,6 +5306,7 @@
 
     move-result-object p0
 
+    .line 1123
     .end local v6           #c:Landroid/database/Cursor;
     .local p0, c:Landroid/database/Cursor;
     :try_start_2
@@ -4937,20 +5336,24 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1124
     invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
 
     move-result p1
 
     if-lez p1, :cond_5
 
+    .line 1125
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
+    .line 1126
     new-instance p1, Landroid/app/enterprise/HostAuth;
 
     invoke-direct {p1}, Landroid/app/enterprise/HostAuth;-><init>()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
+    .line 1127
     .end local v7           #hAuth:Landroid/app/enterprise/HostAuth;
     .local p1, hAuth:Landroid/app/enterprise/HostAuth;
     :try_start_3
@@ -4966,6 +5369,7 @@
 
     iput p2, p1, Landroid/app/enterprise/HostAuth;->mId:I
 
+    .line 1128
     const-string p2, "protocol"
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -4978,6 +5382,7 @@
 
     iput-object p2, p1, Landroid/app/enterprise/HostAuth;->mProtocol:Ljava/lang/String;
 
+    .line 1129
     const-string p2, "address"
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -4990,6 +5395,7 @@
 
     iput-object p2, p1, Landroid/app/enterprise/HostAuth;->mAddress:Ljava/lang/String;
 
+    .line 1130
     const-string p2, "port"
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -5002,6 +5408,7 @@
 
     iput p2, p1, Landroid/app/enterprise/HostAuth;->mPort:I
 
+    .line 1131
     const-string p2, "flags"
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -5014,6 +5421,7 @@
 
     iput p2, p1, Landroid/app/enterprise/HostAuth;->mFlags:I
 
+    .line 1132
     const/4 p2, 0x1
 
     iget v0, p1, Landroid/app/enterprise/HostAuth;->mFlags:I
@@ -5027,6 +5435,7 @@
     :goto_0
     iput-boolean p2, p1, Landroid/app/enterprise/HostAuth;->mUseSSL:Z
 
+    .line 1133
     const/4 p2, 0x2
 
     iget v0, p1, Landroid/app/enterprise/HostAuth;->mFlags:I
@@ -5040,6 +5449,7 @@
     :goto_1
     iput-boolean p2, p1, Landroid/app/enterprise/HostAuth;->mUseTLS:Z
 
+    .line 1134
     const/16 p2, 0x8
 
     iget v0, p1, Landroid/app/enterprise/HostAuth;->mFlags:I
@@ -5053,6 +5463,7 @@
     :goto_2
     iput-boolean p2, p1, Landroid/app/enterprise/HostAuth;->mAcceptAllCertificates:Z
 
+    .line 1135
     const-string p2, "login"
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -5065,6 +5476,7 @@
 
     iput-object p2, p1, Landroid/app/enterprise/HostAuth;->mLogin:Ljava/lang/String;
 
+    .line 1136
     const-string p2, "password"
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -5077,6 +5489,7 @@
 
     iput-object p2, p1, Landroid/app/enterprise/HostAuth;->mPassword:Ljava/lang/String;
 
+    .line 1137
     const-string p2, "domain"
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -5089,6 +5502,7 @@
 
     iput-object p2, p1, Landroid/app/enterprise/HostAuth;->mDomain:Ljava/lang/String;
 
+    .line 1138
     const-string p2, "accountKey"
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -5105,34 +5519,41 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
+    .line 1141
     :goto_3
     if-eqz p0, :cond_0
 
+    .line 1142
     :try_start_4
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 1144
     :cond_0
     monitor-exit v8
 
     return-object p1
 
+    .line 1132
     :cond_1
     const/4 p2, 0x0
 
     goto :goto_0
 
+    .line 1133
     :cond_2
     const/4 p2, 0x0
 
     goto :goto_1
 
+    .line 1134
     :cond_3
     const/4 p2, 0x0
 
     goto :goto_2
 
+    .line 1141
     .end local p0           #c:Landroid/database/Cursor;
     .end local p1           #hAuth:Landroid/app/enterprise/HostAuth;
     .restart local v6       #c:Landroid/database/Cursor;
@@ -5153,14 +5574,17 @@
     :goto_4
     if-eqz p0, :cond_4
 
+    .line 1142
     :try_start_5
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
+    .line 1141
     :cond_4
     throw p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 1115
     :catchall_1
     move-exception p2
 
@@ -5170,6 +5594,7 @@
 
     throw p2
 
+    .line 1141
     .end local p1           #hAuth:Landroid/app/enterprise/HostAuth;
     .restart local v2       #ID_PROJECTION:[Ljava/lang/String;
     .restart local v7       #hAuth:Landroid/app/enterprise/HostAuth;
@@ -5189,6 +5614,7 @@
 
     goto :goto_4
 
+    .line 1115
     .end local v2           #ID_PROJECTION:[Ljava/lang/String;
     .end local p1           #hAuth:Landroid/app/enterprise/HostAuth;
     .restart local v6       #c:Landroid/database/Cursor;
@@ -5234,44 +5660,55 @@
     .prologue
     const/4 v4, 0x1
 
+    .line 566
     const-class v1, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v1
 
     move v0, p0
 
+    .line 569
     .local v0, flag:I
     if-ne v4, p1, :cond_3
 
+    .line 570
     or-int/lit8 v0, v0, 0x1
 
+    .line 575
     :cond_0
     :goto_0
     if-ne v4, p2, :cond_4
 
+    .line 576
     or-int/lit8 v0, v0, 0x2
 
+    .line 581
     :cond_1
     :goto_1
     if-ne v4, p3, :cond_5
 
+    .line 582
     or-int/lit8 v0, v0, 0x8
 
+    .line 586
     :cond_2
     :goto_2
     monitor-exit v1
 
     return v0
 
+    .line 571
     :cond_3
     and-int/lit8 v2, v0, 0x1
 
     if-ne v4, v2, :cond_0
 
+    .line 572
     xor-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 577
     :cond_4
     const/4 v2, 0x2
 
@@ -5279,10 +5716,12 @@
 
     if-ne v2, v3, :cond_1
 
+    .line 578
     xor-int/lit8 v0, v0, 0x2
 
     goto :goto_1
 
+    .line 583
     :cond_5
     const/16 v2, 0x8
 
@@ -5290,6 +5729,7 @@
 
     if-ne v2, v3, :cond_2
 
+    .line 584
     xor-int/lit8 v0, v0, 0x8
 
     goto :goto_2
@@ -5302,6 +5742,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 76
     const-class v1, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v1
@@ -5310,11 +5751,13 @@
 
     move-object v2, v3
 
+    .line 80
     :goto_0
     monitor-exit v1
 
     return-object v2
 
+    .line 76
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -5339,11 +5782,13 @@
 
     goto :goto_0
 
+    .line 77
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 78
     .local v0, e:Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -5352,8 +5797,10 @@
 
     move-object v2, v3
 
+    .line 80
     goto :goto_0
 
+    .line 76
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v2
@@ -5388,54 +5835,67 @@
     .parameter "mContext"
 
     .prologue
+    .line 707
     const-class v7, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v7
 
     const-wide/16 v5, -0x1
 
+    .line 709
     .local v5, rowId:J
     :try_start_0
     invoke-static {p0}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 710
     invoke-static {p1}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 711
     invoke-static {p2}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 712
     invoke-static/range {p11 .. p11}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p11
 
+    .line 713
     invoke-static/range {p12 .. p12}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p12
 
+    .line 714
     invoke-static/range {p13 .. p13}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p13
 
+    .line 715
     invoke-static/range {p14 .. p14}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p14
 
+    .line 716
     invoke-static/range {p17 .. p17}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p17
 
+    .line 717
     invoke-static/range {p18 .. p18}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p18
 
+    .line 719
     if-nez p0, :cond_0
 
+    .line 720
     move-object p0, p1
 
+    .line 722
     :cond_0
     if-eqz p0, :cond_1
 
@@ -5461,6 +5921,7 @@
 
     if-lez v8, :cond_2
 
+    .line 724
     :cond_1
     const-string p0, "SettingsUtils"
 
@@ -5479,6 +5940,7 @@
     .local p0, rowId:J
     move-wide p2, v5
 
+    .line 803
     .end local p0           #rowId:J
     .end local p4
     .end local p5
@@ -5490,6 +5952,7 @@
 
     return-wide p2
 
+    .line 727
     .restart local v5       #rowId:J
     .local p0, displayName:Ljava/lang/String;
     .restart local p1
@@ -5504,6 +5967,7 @@
 
     if-nez p14, :cond_3
 
+    .line 728
     :try_start_1
     const-string p0, "SettingsUtils"
 
@@ -5520,10 +5984,12 @@
     .local p0, rowId:J
     move-wide p2, v5
 
+    .line 729
     .end local p0           #rowId:J
     .local p2, rowId:J
     goto :goto_0
 
+    .line 731
     .restart local v5       #rowId:J
     .local p0, displayName:Ljava/lang/String;
     .restart local p1
@@ -5534,6 +6000,7 @@
 
     if-nez p12, :cond_4
 
+    .line 732
     const-string p0, "SettingsUtils"
 
     .end local p0           #displayName:Ljava/lang/String;
@@ -5549,10 +6016,12 @@
     .local p0, rowId:J
     move-wide p2, v5
 
+    .line 733
     .end local p0           #rowId:J
     .local p2, rowId:J
     goto :goto_0
 
+    .line 736
     .restart local v5       #rowId:J
     .local p0, displayName:Ljava/lang/String;
     .restart local p1
@@ -5561,13 +6030,16 @@
     :cond_4
     const/16 p15, 0x0
 
+    .line 737
     const/16 p16, 0x0
 
+    .line 739
     new-instance p19, Landroid/content/ContentValues;
 
     .end local p19
     invoke-direct/range {p19 .. p19}, Landroid/content/ContentValues;-><init>()V
 
+    .line 741
     .local p19, values:Landroid/content/ContentValues;
     const-string v8, "displayName"
 
@@ -5579,6 +6051,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 742
     const-string p0, "emailAddress"
 
     .end local p0           #displayName:Ljava/lang/String;
@@ -5590,8 +6063,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 743
     if-eqz p2, :cond_5
 
+    .line 744
     const-string p0, "syncKey"
 
     move-object/from16 v0, p19
@@ -5602,6 +6077,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 745
     :cond_5
     const-string p0, "syncLookback"
 
@@ -5618,6 +6094,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 746
     const-string p0, "syncInterval"
 
     invoke-static {p4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -5632,6 +6109,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 747
     const-string p0, "offPeakSchedule"
 
     invoke-static {p4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -5646,6 +6124,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 748
     const-string p0, "hostAuthKeyRecv"
 
     move-wide/from16 v0, p5
@@ -5666,6 +6145,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 749
     const-string p0, "hostAuthKeySend"
 
     move-wide/from16 v0, p7
@@ -5686,6 +6166,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 750
     const-string p0, "flags"
 
     invoke-static/range {p9 .. p9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5700,6 +6181,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 751
     const-string p0, "isDefault"
 
     const/4 p3, 0x1
@@ -5725,6 +6207,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 752
     const-string p0, "compatibilityUuid"
 
     move-object/from16 v0, p19
@@ -5735,8 +6218,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 753
     if-eqz p12, :cond_6
 
+    .line 754
     const-string p0, "senderName"
 
     move-object/from16 v0, p19
@@ -5747,6 +6232,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 755
     :cond_6
     const-string p0, "ringtoneUri"
 
@@ -5758,8 +6244,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 756
     if-eqz p14, :cond_7
 
+    .line 757
     const-string p0, "protocolVersion"
 
     move-object/from16 v0, p19
@@ -5770,9 +6258,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 758
     :cond_7
     if-eqz p20, :cond_8
 
+    .line 759
     const-string p0, "newMessageCount"
 
     invoke-static/range {p15 .. p15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5787,6 +6277,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 760
     const-string p0, "securityFlags"
 
     invoke-static/range {p16 .. p16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5801,9 +6292,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 762
     :cond_8
     if-eqz p17, :cond_9
 
+    .line 763
     const-string p0, "securitySyncKey"
 
     move-object/from16 v0, p19
@@ -5814,9 +6307,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 764
     :cond_9
     if-eqz p18, :cond_a
 
+    .line 765
     const-string p0, "signature"
 
     move-object/from16 v0, p19
@@ -5827,6 +6322,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 767
     :cond_a
     invoke-virtual/range {p19 .. p19}, Landroid/content/ContentValues;->size()I
     :try_end_1
@@ -5836,8 +6332,10 @@
 
     if-lez p0, :cond_e
 
+    .line 769
     if-eqz p20, :cond_c
 
+    .line 770
     :try_start_2
     invoke-virtual/range {p22 .. p22}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -5855,6 +6353,7 @@
 
     move-result-object p0
 
+    .line 771
     .local p0, newRowUri:Landroid/net/Uri;
     const-string p3, "SettingsUtils"
 
@@ -5884,6 +6383,7 @@
 
     invoke-static {p3, p4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 772
     invoke-static {p0}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -5891,6 +6391,7 @@
 
     move-result-wide p3
 
+    .line 775
     .end local v5           #rowId:J
     .local p3, rowId:J
     :try_start_3
@@ -5902,6 +6403,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
+    .line 776
     .end local p19           #values:Landroid/content/ContentValues;
     .local p0, values:Landroid/content/ContentValues;
     :try_start_4
@@ -5919,6 +6421,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 777
     const-string p5, "sevenAccountKey"
 
     const/16 p6, 0x0
@@ -5935,6 +6438,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 778
     const-string p5, "timeLimit"
 
     const/16 p6, 0x0
@@ -5951,6 +6455,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 779
     const-string p5, "sizeLimit"
 
     const/16 p6, 0x0
@@ -5967,6 +6472,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 780
     const-string p5, "typeMsg"
 
     const/16 p6, 0x0
@@ -5983,6 +6489,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 781
     const-string p5, "peakTime"
 
     const/16 p6, 0x0
@@ -5999,6 +6506,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 782
     const-string p5, "offPeakTime"
 
     const/16 p6, 0x0
@@ -6015,6 +6523,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 783
     const-string p5, "days"
 
     const-string p6, ""
@@ -6027,6 +6536,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 784
     const-string p5, "peakStartTime"
 
     const-string p6, ""
@@ -6039,6 +6549,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 785
     const-string p5, "peakEndTime"
 
     const-string p6, ""
@@ -6051,6 +6562,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 786
     const-string p5, "whileRoaming"
 
     const/16 p6, 0x0
@@ -6067,6 +6579,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 787
     const-string p5, "attachmentEnabled"
 
     const/16 p6, 0x0
@@ -6083,6 +6596,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 788
     invoke-virtual/range {p22 .. p22}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p5
@@ -6100,6 +6614,7 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
 
+    .line 797
     :goto_2
     :try_start_5
     const-string p5, "SettingsUtils"
@@ -6144,10 +6659,12 @@
     :goto_3
     move-wide p2, p0
 
+    .line 803
     .end local p0           #rowId:J
     .local p2, rowId:J
     goto/16 :goto_0
 
+    .line 751
     .restart local v5       #rowId:J
     .restart local p1
     .local p2, syncKey:Ljava/lang/String;
@@ -6160,6 +6677,7 @@
 
     goto/16 :goto_1
 
+    .line 790
     .end local v5           #rowId:J
     .end local p4
     .end local p5
@@ -6169,6 +6687,7 @@
 
     move-object/from16 p5, p19
 
+    .line 791
     .end local p19           #values:Landroid/content/ContentValues;
     .local p0, e:Ljava/lang/Exception;
     .local p5, values:Landroid/content/ContentValues;
@@ -6185,6 +6704,7 @@
     .local p0, values:Landroid/content/ContentValues;
     goto :goto_2
 
+    .line 794
     .end local p0           #values:Landroid/content/ContentValues;
     .end local p3           #rowId:J
     .restart local v5       #rowId:J
@@ -6241,6 +6761,7 @@
 
     move-result p0
 
+    .line 795
     .local p0, rowCount:I
     if-lez p0, :cond_d
 
@@ -6274,6 +6795,7 @@
 
     goto :goto_5
 
+    .line 798
     .end local p0           #rowCount:I
     :catch_1
     move-exception p0
@@ -6284,6 +6806,7 @@
     .local p5, values:Landroid/content/ContentValues;
     move-wide p3, v5
 
+    .line 799
     .end local v5           #rowId:J
     .end local p7
     .local p0, e:Ljava/lang/Exception;
@@ -6291,6 +6814,7 @@
     :goto_6
     const-wide/16 p3, -0x1
 
+    .line 800
     :try_start_8
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_8
@@ -6307,6 +6831,7 @@
     .local p0, rowId:J
     goto :goto_3
 
+    .line 707
     .end local p0           #rowId:J
     .restart local v5       #rowId:J
     .restart local p1
@@ -6325,6 +6850,7 @@
 
     throw p0
 
+    .line 798
     .local p0, e:Ljava/lang/Exception;
     .restart local p5       #values:Landroid/content/ContentValues;
     .restart local p7
@@ -6349,6 +6875,7 @@
 
     goto :goto_6
 
+    .line 790
     .end local p5           #values:Landroid/content/ContentValues;
     .restart local p0       #values:Landroid/content/ContentValues;
     .restart local p7
@@ -6365,6 +6892,7 @@
 
     goto :goto_4
 
+    .line 707
     .end local p5           #values:Landroid/content/ContentValues;
     .end local p7
     :catchall_1
@@ -6401,58 +6929,70 @@
     .parameter "mContext"
 
     .prologue
+    .line 590
     const-class v4, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v4
 
     const/4 v0, 0x0
 
+    .line 591
     .local v0, accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     const-wide/16 v1, -0x1
 
+    .line 592
     .local v1, rowId:J
     :try_start_0
     invoke-static {p0}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 593
     invoke-static {p1}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 594
     invoke-static {p2}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_5
 
     move-result-object p2
 
+    .line 596
     if-eqz p0, :cond_5
 
     if-eqz p1, :cond_5
 
     if-eqz p2, :cond_5
 
+    .line 598
     :try_start_1
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
+    .line 599
     .local v3, values:Landroid/content/ContentValues;
     const-string v5, "name"
 
     invoke-virtual {v3, v5, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 600
     const-string p0, "type"
 
     .end local p0
     invoke-virtual {v3, p0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 601
     const-string p0, "password"
 
     invoke-virtual {v3, p0, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 603
     const-string p0, "/data/system/accounts.db"
 
+    .line 604
     .local p0, accountsDBPath:Ljava/lang/String;
     const/4 v5, 0x0
 
@@ -6465,10 +7005,12 @@
 
     move-result-object p0
 
+    .line 605
     .end local v0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .local p0, accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     if-eqz p3, :cond_1
 
+    .line 606
     :try_start_2
     const-string p3, "accounts"
 
@@ -6483,6 +7025,7 @@
 
     move-result-wide p3
 
+    .line 614
     .end local v1           #rowId:J
     .end local p5
     .local p3, rowId:J
@@ -6513,8 +7056,10 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
+    .line 619
     if-eqz p0, :cond_0
 
+    .line 620
     :try_start_4
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_4
@@ -6523,6 +7068,7 @@
     :cond_0
     move-wide p1, p3
 
+    .line 626
     .end local v3           #values:Landroid/content/ContentValues;
     .end local p2
     .end local p3           #rowId:J
@@ -6532,6 +7078,7 @@
 
     return-wide p1
 
+    .line 608
     .restart local v1       #rowId:J
     .restart local v3       #values:Landroid/content/ContentValues;
     .local p1, type:Ljava/lang/String;
@@ -6551,6 +7098,7 @@
 
     move-result-wide p3
 
+    .line 609
     .local p3, accountsDBRowId:J
     const-wide/16 v5, -0x1
 
@@ -6558,6 +7106,7 @@
 
     if-eqz p5, :cond_6
 
+    .line 610
     .end local p5
     const-string p5, "accounts"
 
@@ -6588,6 +7137,7 @@
 
     move-result p5
 
+    .line 611
     .local p5, rowCount:I
     if-lez p5, :cond_2
 
@@ -6603,6 +7153,7 @@
 
     goto :goto_2
 
+    .line 615
     .end local v3           #values:Landroid/content/ContentValues;
     .end local p0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v0       #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
@@ -6621,19 +7172,23 @@
     .local p4, rowId:J
     move-object p0, v0
 
+    .line 616
     .end local v0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local p0       #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .local p3, e:Ljava/lang/Exception;
     :goto_3
     const-wide/16 p4, -0x1
 
+    .line 617
     :try_start_6
     invoke-virtual {p3}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
+    .line 619
     if-eqz p0, :cond_3
 
+    .line 620
     :try_start_7
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_7
@@ -6642,11 +7197,13 @@
     :cond_3
     move-wide p1, p4
 
+    .line 622
     .end local p2
     .end local p4           #rowId:J
     .local p1, rowId:J
     goto :goto_1
 
+    .line 619
     .end local p0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v0       #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v1       #rowId:J
@@ -6673,14 +7230,17 @@
     :goto_4
     if-eqz p0, :cond_4
 
+    .line 620
     :try_start_8
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
+    .line 619
     :cond_4
     throw p5
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
+    .line 590
     :catchall_1
     move-exception p5
 
@@ -6689,6 +7249,7 @@
 
     throw p5
 
+    .line 624
     .restart local v0       #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v1       #rowId:J
     .local p0, name:Ljava/lang/String;
@@ -6718,6 +7279,7 @@
     .local p0, accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     goto :goto_1
 
+    .line 619
     .end local p4           #existingAccInfo:Landroid/app/enterprise/Account;
     .end local p5           #mContext:Landroid/content/Context;
     .restart local v1       #rowId:J
@@ -6760,6 +7322,7 @@
 
     goto :goto_4
 
+    .line 615
     .end local p3           #rowId:J
     .restart local v1       #rowId:J
     .restart local v3       #values:Landroid/content/ContentValues;
@@ -6791,6 +7354,7 @@
 
     goto :goto_3
 
+    .line 590
     .end local v3           #values:Landroid/content/ContentValues;
     .end local p0           #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
     .restart local v0       #accountsDB:Landroid/database/sqlite/SQLiteDatabase;
@@ -6857,37 +7421,45 @@
     .parameter "mContext"
 
     .prologue
+    .line 808
     const-class v9, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v9
 
     const-wide/16 v6, -0x1
 
+    .line 809
     .local v6, rowId:J
     const/4 v5, 0x0
 
+    .line 810
     .local v5, inputdataError:Z
     :try_start_0
     invoke-static {p0}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 811
     invoke-static {p1}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 812
     invoke-static {p4}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 
+    .line 813
     invoke-static/range {p5 .. p5}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p5
 
+    .line 814
     invoke-static/range {p6 .. p6}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p6
 
+    .line 816
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -6896,6 +7468,7 @@
 
     if-nez p5, :cond_1
 
+    .line 817
     :cond_0
     const-string p0, "SettingsUtils"
 
@@ -6922,6 +7495,7 @@
     .local p4, rowId:J
     move-wide/from16 p6, v6
 
+    .line 863
     .end local p1
     .end local p4           #rowId:J
     .end local p8
@@ -6933,6 +7507,7 @@
 
     return-wide p6
 
+    .line 820
     .restart local v5       #inputdataError:Z
     .restart local v6       #rowId:J
     .local p0, protocol:Ljava/lang/String;
@@ -6947,11 +7522,14 @@
     :cond_1
     if-gez p3, :cond_2
 
+    .line 821
     const/4 p3, 0x0
 
+    .line 822
     :cond_2
     if-gtz p2, :cond_3
 
+    .line 823
     :try_start_1
     const-string v8, "eas"
 
@@ -6963,27 +7541,33 @@
 
     if-eqz v8, :cond_5
 
+    .line 824
     const/4 p2, 0x0
 
+    .line 830
     :cond_3
     :goto_1
     if-nez v5, :cond_9
 
+    .line 831
     :try_start_2
     new-instance v8, Landroid/content/ContentValues;
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
+    .line 833
     .local v8, values:Landroid/content/ContentValues;
     const-string v10, "protocol"
 
     invoke-virtual {v8, v10, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 834
     const-string p0, "address"
 
     .end local p0           #protocol:Ljava/lang/String;
     invoke-virtual {v8, p0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 835
     const-string p0, "port"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6992,6 +7576,7 @@
 
     invoke-virtual {v8, p0, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 836
     const-string p0, "flags"
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -7000,10 +7585,12 @@
 
     invoke-virtual {v8, p0, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 837
     const-string p0, "login"
 
     invoke-virtual {v8, p0, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 838
     const-string p0, "password"
 
     move-object v0, v8
@@ -7014,8 +7601,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 839
     if-eqz p6, :cond_4
 
+    .line 840
     const-string p0, "domain"
 
     move-object v0, v8
@@ -7026,6 +7615,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 842
     :cond_4
     const-string p0, "accountKey"
 
@@ -7037,6 +7627,7 @@
 
     invoke-virtual {v8, p0, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 844
     invoke-virtual {v8}, Landroid/content/ContentValues;->size()I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -7045,8 +7636,10 @@
 
     if-lez p0, :cond_a
 
+    .line 846
     if-eqz p7, :cond_6
 
+    .line 847
     :try_start_3
     invoke-virtual/range {p10 .. p10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -7065,6 +7658,7 @@
 
     move-result-object p0
 
+    .line 848
     .local p0, newRowUri:Landroid/net/Uri;
     invoke-static {p0}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
     :try_end_3
@@ -7073,6 +7667,7 @@
 
     move-result-wide p7
 
+    .line 854
     .end local v6           #rowId:J
     .end local p0           #newRowUri:Landroid/net/Uri;
     .end local p8
@@ -7132,10 +7727,12 @@
     .local p6, rowId:J
     move p0, v5
 
+    .line 863
     .end local v5           #inputdataError:Z
     .local p0, inputdataError:Z
     goto/16 :goto_0
 
+    .line 826
     .restart local v5       #inputdataError:Z
     .restart local v6       #rowId:J
     .local p0, protocol:Ljava/lang/String;
@@ -7152,6 +7749,7 @@
 
     goto/16 :goto_1
 
+    .line 850
     .end local p0           #protocol:Ljava/lang/String;
     .restart local v8       #values:Landroid/content/ContentValues;
     :cond_6
@@ -7166,6 +7764,7 @@
 
     iget p0, p0, Landroid/app/enterprise/HostAuth;->mId:I
 
+    .line 851
     .local p0, existingHostAuthRowId:I
     :goto_4
     invoke-virtual/range {p10 .. p10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7216,6 +7815,7 @@
 
     move-result p7
 
+    .line 852
     .local p7, rowCount:I
     if-lez p7, :cond_8
 
@@ -7231,6 +7831,7 @@
     .local p7, rowId:J
     goto :goto_2
 
+    .line 850
     .restart local v6       #rowId:J
     .local p7, isInsertOP:Z
     .restart local p8
@@ -7250,6 +7851,7 @@
 
     goto :goto_4
 
+    .line 852
     .end local p8
     .end local p9
     .end local p10
@@ -7260,6 +7862,7 @@
 
     goto :goto_5
 
+    .line 855
     .end local p0           #existingHostAuthRowId:I
     .end local p7           #rowCount:I
     :catch_0
@@ -7267,12 +7870,14 @@
 
     move-wide/from16 p7, v6
 
+    .line 856
     .end local v6           #rowId:J
     .local p0, e:Ljava/lang/Exception;
     .local p7, rowId:J
     :goto_6
     const-wide/16 p7, -0x1
 
+    .line 857
     :try_start_6
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_6
@@ -7285,6 +7890,7 @@
     .local p0, rowId:J
     goto :goto_3
 
+    .line 861
     .end local v8           #values:Landroid/content/ContentValues;
     .restart local v6       #rowId:J
     .local p0, protocol:Ljava/lang/String;
@@ -7317,6 +7923,7 @@
     .local p0, rowId:J
     goto :goto_3
 
+    .line 808
     .end local p0           #rowId:J
     .restart local v6       #rowId:J
     .restart local p1
@@ -7341,6 +7948,7 @@
 
     throw p9
 
+    .line 855
     .end local p0           #inputdataError:Z
     .restart local v5       #inputdataError:Z
     .restart local v8       #values:Landroid/content/ContentValues;
@@ -7349,6 +7957,7 @@
 
     goto :goto_6
 
+    .line 808
     .end local v8           #values:Landroid/content/ContentValues;
     .end local p7           #rowId:J
     .restart local v6       #rowId:J
@@ -7389,12 +7998,14 @@
     .prologue
     const/4 v10, 0x1
 
+    .line 548
     const-class v7, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v7
 
     const/4 v3, 0x0
 
+    .line 549
     .local v3, isValid:Z
     :try_start_0
     invoke-static {p0}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
@@ -7403,13 +8014,16 @@
 
     move-result-object p0
 
+    .line 550
     if-eqz p0, :cond_0
 
+    .line 552
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v6
 
+    .line 553
     .local v6, len:I
     const/16 v8, 0x40
 
@@ -7417,6 +8031,7 @@
 
     move-result v1
 
+    .line 554
     .local v1, firstAt:I
     const/16 v8, 0x40
 
@@ -7424,6 +8039,7 @@
 
     move-result v4
 
+    .line 555
     .local v4, lastAt:I
     const/16 v8, 0x2e
 
@@ -7433,6 +8049,7 @@
 
     move-result v2
 
+    .line 556
     .local v2, firstDot:I
     const/16 v8, 0x2e
 
@@ -7443,6 +8060,7 @@
 
     move-result v5
 
+    .line 557
     .local v5, lastDot:I
     if-lez v1, :cond_1
 
@@ -7460,6 +8078,7 @@
 
     move v3, v10
 
+    .line 562
     .end local v1           #firstAt:I
     .end local v2           #firstDot:I
     .end local v4           #lastAt:I
@@ -7471,6 +8090,7 @@
 
     return v3
 
+    .line 557
     .restart local v1       #firstAt:I
     .restart local v2       #firstDot:I
     .restart local v4       #lastAt:I
@@ -7483,6 +8103,7 @@
 
     goto :goto_0
 
+    .line 558
     .end local v1           #firstAt:I
     .end local v2           #firstDot:I
     .end local v4           #lastAt:I
@@ -7493,6 +8114,7 @@
 
     move-object v0, v8
 
+    .line 559
     .local v0, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -7501,6 +8123,7 @@
 
     goto :goto_0
 
+    .line 548
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v8
@@ -7545,12 +8168,14 @@
     .parameter "accountMData"
 
     .prologue
+    .line 199
     const-class v2, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v2
 
     if-eqz p0, :cond_0
 
+    .line 200
     :try_start_0
     move-object v0, p0
 
@@ -7558,38 +8183,46 @@
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mDisplayName:Ljava/lang/String;
 
+    .line 201
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 202
     move-object v0, p1
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
+    .line 203
     :cond_1
     if-eqz p2, :cond_2
 
+    .line 204
     move-object v0, p2
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEasUser:Ljava/lang/String;
 
+    .line 205
     :cond_2
     if-eqz p3, :cond_3
 
+    .line 206
     move-object v0, p3
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEasDomain:Ljava/lang/String;
 
+    .line 207
     :cond_3
     const/16 p0, -0x64
 
     if-eq p0, p4, :cond_4
 
+    .line 208
     .end local p0
     move v0, p4
 
@@ -7597,70 +8230,84 @@
 
     iput v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mSyncLookback:I
 
+    .line 209
     :cond_4
     const/16 p0, -0x64
 
     if-eq p0, p5, :cond_5
 
+    .line 210
     move v0, p5
 
     move-object/from16 v1, p30
 
     iput v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mSyncInterval:I
 
+    .line 211
     :cond_5
     const/16 p0, -0x64
 
     if-eq p0, p6, :cond_6
 
+    .line 212
     move v0, p6
 
     move-object/from16 v1, p30
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mIsDefault:B
 
+    .line 213
     :cond_6
     if-eqz p7, :cond_7
 
+    .line 214
     move-object v0, p7
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mSenderName:Ljava/lang/String;
 
+    .line 215
     :cond_7
     if-eqz p8, :cond_8
 
+    .line 216
     move-object v0, p8
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mProtocolVersion:Ljava/lang/String;
 
+    .line 217
     :cond_8
     if-eqz p9, :cond_9
 
+    .line 218
     move-object v0, p9
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mSignature:Ljava/lang/String;
 
+    .line 219
     :cond_9
     const/16 p0, -0x64
 
     if-eq p0, p11, :cond_a
 
+    .line 220
     move v0, p11
 
     move-object/from16 v1, p30
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateWhenSilent:B
 
+    .line 221
     const/4 p0, 0x1
 
     if-ne p0, p11, :cond_a
 
+    .line 222
     const/4 p0, 0x0
 
     move v0, p0
@@ -7669,15 +8316,18 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateAlways:B
 
+    .line 224
     :cond_a
     const/16 p0, -0x64
 
     if-eq p0, p10, :cond_c
 
+    .line 225
     const/4 p0, 0x1
 
     if-ne p0, p10, :cond_b
 
+    .line 226
     const/4 p0, 0x0
 
     move v0, p0
@@ -7686,6 +8336,7 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateWhenSilent:B
 
+    .line 227
     :cond_b
     move v0, p10
 
@@ -7693,24 +8344,29 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateAlways:B
 
+    .line 231
     :cond_c
     if-eqz p12, :cond_d
 
+    .line 232
     move-object v0, p12
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingProtocol:Ljava/lang/String;
 
+    .line 233
     :cond_d
     if-eqz p13, :cond_e
 
+    .line 234
     move-object/from16 v0, p13
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAddress:Ljava/lang/String;
 
+    .line 235
     :cond_e
     const/16 p0, -0x64
 
@@ -7720,12 +8376,14 @@
 
     if-eq v0, v1, :cond_f
 
+    .line 236
     move/from16 v0, p14
 
     move-object/from16 v1, p30
 
     iput v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPort:I
 
+    .line 238
     :cond_f
     const/16 p0, -0x64
 
@@ -7735,12 +8393,14 @@
 
     if-eq v0, v1, :cond_10
 
+    .line 239
     move/from16 v0, p15
 
     move-object/from16 v1, p30
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseSSL:B
 
+    .line 240
     const/4 p0, 0x1
 
     move v0, p0
@@ -7749,6 +8409,7 @@
 
     if-ne v0, v1, :cond_10
 
+    .line 241
     const/4 p0, 0x0
 
     move v0, p0
@@ -7757,6 +8418,7 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseTLS:B
 
+    .line 243
     :cond_10
     const/16 p0, -0x64
 
@@ -7766,12 +8428,14 @@
 
     if-eq v0, v1, :cond_11
 
+    .line 244
     move/from16 v0, p16
 
     move-object/from16 v1, p30
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseTLS:B
 
+    .line 245
     const/4 p0, 0x1
 
     move v0, p0
@@ -7780,6 +8444,7 @@
 
     if-ne v0, v1, :cond_11
 
+    .line 246
     const/4 p0, 0x0
 
     move v0, p0
@@ -7788,6 +8453,7 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseSSL:B
 
+    .line 248
     :cond_11
     const/16 p0, -0x64
 
@@ -7797,12 +8463,14 @@
 
     if-eq v0, v1, :cond_12
 
+    .line 249
     move/from16 v0, p17
 
     move-object/from16 v1, p30
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAcceptAllCertificates:B
 
+    .line 251
     :cond_12
     move-object/from16 v0, p30
 
@@ -7820,6 +8488,7 @@
 
     if-nez p0, :cond_13
 
+    .line 252
     const/4 p0, 0x0
 
     move v0, p0
@@ -7828,51 +8497,62 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAcceptAllCertificates:B
 
+    .line 255
     :cond_13
     if-eqz p18, :cond_14
 
+    .line 256
     move-object/from16 v0, p18
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerLogin:Ljava/lang/String;
 
+    .line 257
     :cond_14
     if-eqz p19, :cond_15
 
+    .line 258
     move-object/from16 v0, p19
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPassword:Ljava/lang/String;
 
+    .line 259
     :cond_15
     if-eqz p20, :cond_16
 
+    .line 260
     move-object/from16 v0, p20
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPathPrefix:Ljava/lang/String;
 
+    .line 262
     :cond_16
     if-eqz p21, :cond_17
 
+    .line 263
     move-object/from16 v0, p21
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingProtocol:Ljava/lang/String;
 
+    .line 264
     :cond_17
     if-eqz p22, :cond_18
 
+    .line 265
     move-object/from16 v0, p22
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAddress:Ljava/lang/String;
 
+    .line 266
     :cond_18
     const/16 p0, -0x64
 
@@ -7882,12 +8562,14 @@
 
     if-eq v0, v1, :cond_19
 
+    .line 267
     move/from16 v0, p23
 
     move-object/from16 v1, p30
 
     iput v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPort:I
 
+    .line 269
     :cond_19
     const/16 p0, -0x64
 
@@ -7897,12 +8579,14 @@
 
     if-eq v0, v1, :cond_1a
 
+    .line 270
     move/from16 v0, p24
 
     move-object/from16 v1, p30
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseSSL:B
 
+    .line 271
     const/4 p0, 0x1
 
     move v0, p0
@@ -7911,6 +8595,7 @@
 
     if-ne v0, v1, :cond_1a
 
+    .line 272
     const/4 p0, 0x0
 
     move v0, p0
@@ -7919,6 +8604,7 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseTLS:B
 
+    .line 274
     :cond_1a
     const/16 p0, -0x64
 
@@ -7928,12 +8614,14 @@
 
     if-eq v0, v1, :cond_1b
 
+    .line 275
     move/from16 v0, p25
 
     move-object/from16 v1, p30
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseTLS:B
 
+    .line 276
     const/4 p0, 0x1
 
     move v0, p0
@@ -7942,6 +8630,7 @@
 
     if-ne v0, v1, :cond_1b
 
+    .line 277
     const/4 p0, 0x0
 
     move v0, p0
@@ -7950,6 +8639,7 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseSSL:B
 
+    .line 279
     :cond_1b
     const/16 p0, -0x64
 
@@ -7959,12 +8649,14 @@
 
     if-eq v0, v1, :cond_1c
 
+    .line 280
     move/from16 v0, p26
 
     move-object/from16 v1, p30
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAcceptAllCertificates:B
 
+    .line 282
     :cond_1c
     move-object/from16 v0, p30
 
@@ -7982,6 +8674,7 @@
 
     if-nez p0, :cond_1d
 
+    .line 283
     const/4 p0, 0x0
 
     move v0, p0
@@ -7990,27 +8683,33 @@
 
     iput-byte v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAcceptAllCertificates:B
 
+    .line 286
     :cond_1d
     if-eqz p27, :cond_1e
 
+    .line 287
     move-object/from16 v0, p27
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerLogin:Ljava/lang/String;
 
+    .line 288
     :cond_1e
     if-eqz p28, :cond_1f
 
+    .line 289
     move-object/from16 v0, p28
 
     move-object/from16 v1, p30
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPassword:Ljava/lang/String;
 
+    .line 290
     :cond_1f
     if-eqz p29, :cond_20
 
+    .line 291
     move-object/from16 v0, p29
 
     move-object/from16 v1, p30
@@ -8019,11 +8718,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 292
     :cond_20
     monitor-exit v2
 
     return-void
 
+    .line 199
     :catchall_0
     move-exception p0
 
@@ -8037,6 +8738,7 @@
     .parameter "mContext"
 
     .prologue
+    .line 60
     const-class v4, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v4
@@ -8044,19 +8746,24 @@
     :try_start_0
     const-string v2, "android.accounts.LOGIN_ACCOUNTS_CHANGED"
 
+    .line 61
     .local v2, LOGIN_ACCOUNTS_CHANGED_ACTION:Ljava/lang/String;
     const/high16 v1, 0x1000
 
+    .line 62
     .local v1, FLAG_RECEIVER_REGISTERED_ONLY_BEFORE_BOOT:I
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 63
     .local v0, ACCOUNTS_CHANGED_INTENT:Landroid/content/Intent;
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
+    .line 64
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 66
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -8069,6 +8776,7 @@
 
     invoke-virtual {v5, v6, v7, v8}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;Z)V
 
+    .line 67
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -8084,6 +8792,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 71
     .end local v0           #ACCOUNTS_CHANGED_INTENT:Landroid/content/Intent;
     .end local v1           #FLAG_RECEIVER_REGISTERED_ONLY_BEFORE_BOOT:I
     .end local v2           #LOGIN_ACCOUNTS_CHANGED_ACTION:Ljava/lang/String;
@@ -8097,15 +8806,18 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 72
     monitor-exit v4
 
     return-void
 
+    .line 68
     :catch_0
     move-exception v5
 
     move-object v3, v5
 
+    .line 69
     .local v3, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
@@ -8114,6 +8826,7 @@
 
     goto :goto_0
 
+    .line 60
     .end local v3           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v5
@@ -8137,12 +8850,14 @@
 
     const-string v6, "SettingsUtils"
 
+    .line 35
     const-class v6, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter v6
 
     const/4 v2, 0x0
 
+    .line 36
     .local v2, success:Z
     const-wide/16 v7, 0x1
 
@@ -8150,6 +8865,7 @@
 
     if-lez v7, :cond_0
 
+    .line 37
     :try_start_0
     const-string v7, "SettingsUtils"
 
@@ -8161,6 +8877,7 @@
 
     move v3, v2
 
+    .line 55
     .end local v2           #success:Z
     .local v3, success:I
     :goto_0
@@ -8168,6 +8885,7 @@
 
     return v3
 
+    .line 40
     .end local v3           #success:I
     .restart local v2       #success:Z
     :cond_0
@@ -8176,6 +8894,7 @@
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
+    .line 41
     .local v4, values:Landroid/content/ContentValues;
     const-string v7, "isDefault"
 
@@ -8189,6 +8908,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 44
     :try_start_2
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -8204,6 +8924,7 @@
 
     move-result v0
 
+    .line 45
     .local v0, count:I
     const-string v7, "SettingsUtils"
 
@@ -8227,6 +8948,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 46
     new-instance v5, Landroid/content/ContentValues;
 
     invoke-direct {v5}, Landroid/content/ContentValues;-><init>()V
@@ -8234,6 +8956,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
+    .line 47
     .end local v4           #values:Landroid/content/ContentValues;
     .local v5, values:Landroid/content/ContentValues;
     :try_start_3
@@ -8247,6 +8970,7 @@
 
     invoke-virtual {v5, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 48
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
@@ -8277,6 +9001,7 @@
 
     move-result v0
 
+    .line 49
     const-string v7, "SettingsUtils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -8302,6 +9027,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
+    .line 50
     if-lez v0, :cond_1
 
     move v2, v12
@@ -8315,6 +9041,7 @@
     :goto_2
     move v3, v2
 
+    .line 55
     .restart local v3       #success:I
     goto :goto_0
 
@@ -8325,8 +9052,10 @@
     :cond_1
     move v2, v11
 
+    .line 50
     goto :goto_1
 
+    .line 51
     .end local v0           #count:I
     .end local v5           #values:Landroid/content/ContentValues;
     .restart local v4       #values:Landroid/content/ContentValues;
@@ -8335,10 +9064,12 @@
 
     move-object v1, v7
 
+    .line 52
     .local v1, e:Ljava/lang/Exception;
     :goto_3
     const/4 v2, 0x0
 
+    .line 53
     :try_start_4
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
@@ -8346,6 +9077,7 @@
 
     goto :goto_2
 
+    .line 35
     .end local v1           #e:Ljava/lang/Exception;
     .end local v4           #values:Landroid/content/ContentValues;
     :catchall_0
@@ -8355,6 +9087,7 @@
 
     throw v7
 
+    .line 51
     .restart local v0       #count:I
     .restart local v5       #values:Landroid/content/ContentValues;
     :catch_1
@@ -8407,6 +9140,7 @@
     .parameter "mContext"
 
     .prologue
+    .line 89
     const-class p33, Lcom/android/server/enterprise/SettingsUtils;
 
     monitor-enter p33
@@ -8460,8 +9194,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 91
     const-wide/16 v3, -0x1
 
+    .line 92
     .local v3, invalidAccId:J
     const-wide/16 v3, 0x1
 
@@ -8469,6 +9205,7 @@
 
     if-lez v3, :cond_1
 
+    .line 93
     .end local v3           #invalidAccId:J
     const-string p0, "SettingsUtils"
 
@@ -8479,13 +9216,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 94
     const-wide/16 p0, -0x1
 
+    .line 157
     :goto_1
     monitor-exit p33
 
     return-wide p0
 
+    .line 89
     .restart local p0
     :cond_0
     :try_start_1
@@ -8493,6 +9233,7 @@
 
     goto :goto_0
 
+    .line 98
     :cond_1
     const/4 v3, 0x1
 
@@ -8510,6 +9251,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 99
     const-string p0, "SettingsUtils"
 
     .end local p0
@@ -8517,10 +9259,12 @@
 
     invoke-static/range {p0 .. p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 101
     const-wide/16 p0, -0x1
 
     goto :goto_1
 
+    .line 104
     .restart local p0
     :cond_2
     const/4 v3, 0x1
@@ -8539,6 +9283,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 105
     const-string p0, "SettingsUtils"
 
     .end local p0
@@ -8546,10 +9291,12 @@
 
     invoke-static/range {p0 .. p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 106
     const-wide/16 p0, -0x1
 
     goto :goto_1
 
+    .line 109
     .restart local p0
     :cond_3
     const/4 v3, 0x1
@@ -8568,6 +9315,7 @@
 
     if-ne v0, v1, :cond_4
 
+    .line 110
     const-string p0, "SettingsUtils"
 
     .end local p0
@@ -8575,10 +9323,12 @@
 
     invoke-static/range {p0 .. p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 111
     const-wide/16 p0, -0x1
 
     goto :goto_1
 
+    .line 114
     .restart local p0
     :cond_4
     move-wide/from16 v0, p0
@@ -8589,9 +9339,11 @@
 
     move-result-object v66
 
+    .line 115
     .local v66, ac:Landroid/app/enterprise/Account;
     if-nez v66, :cond_5
 
+    .line 116
     const-string p0, "SettingsUtils"
 
     .end local p0
@@ -8599,84 +9351,104 @@
 
     invoke-static/range {p0 .. p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 117
     const-wide/16 p0, -0x1
 
     goto :goto_1
 
+    .line 120
     .restart local p0
     :cond_5
     invoke-static/range {p2 .. p2}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 121
     invoke-static/range {p3 .. p3}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
+    .line 122
     invoke-static/range {p4 .. p4}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 
+    .line 123
     invoke-static/range {p5 .. p5}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p5
 
+    .line 124
     invoke-static/range {p9 .. p9}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p9
 
+    .line 125
     invoke-static/range {p10 .. p10}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p10
 
+    .line 126
     invoke-static/range {p11 .. p11}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p11
 
+    .line 128
     invoke-static/range {p14 .. p14}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p14
 
+    .line 129
     invoke-static/range {p15 .. p15}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p15
 
+    .line 130
     invoke-static/range {p20 .. p20}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p20
 
+    .line 131
     invoke-static/range {p21 .. p21}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p21
 
+    .line 132
     invoke-static/range {p22 .. p22}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p22
 
+    .line 134
     invoke-static/range {p23 .. p23}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p23
 
+    .line 135
     invoke-static/range {p24 .. p24}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p24
 
+    .line 136
     invoke-static/range {p29 .. p29}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p29
 
+    .line 137
     invoke-static/range {p30 .. p30}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p30
 
+    .line 138
     invoke-static/range {p31 .. p31}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p31
 
+    .line 141
     new-instance v33, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct/range {v33 .. v33}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 142
     .local v33, accountMData:Lcom/android/server/enterprise/AccountMetaData;
     move-object/from16 v0, v66
 
@@ -8744,8 +9516,10 @@
 
     move-object/from16 v32, p31
 
+    .line 145
     invoke-static/range {v3 .. v33}, Lcom/android/server/enterprise/SettingsUtils;->loadNewValuesInAccountMetaData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIBLjava/lang/String;Ljava/lang/String;Ljava/lang/String;BBLjava/lang/String;Ljava/lang/String;IBBBLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IBBBLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/server/enterprise/AccountMetaData;)V
 
+    .line 150
     move-object/from16 v0, v33
 
     iget-object v0, v0, Lcom/android/server/enterprise/AccountMetaData;->mDisplayName:Ljava/lang/String;
@@ -8938,8 +9712,10 @@
 
     move-result-wide p0
 
+    .line 157
     goto/16 :goto_1
 
+    .line 89
     .end local v33           #accountMData:Lcom/android/server/enterprise/AccountMetaData;
     .end local v66           #ac:Landroid/app/enterprise/Account;
     .end local p0

@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 2485
     iput-object p1, p0, Landroid/media/MediaScanner$1;->this$0:Landroid/media/MediaScanner;
 
     iput-object p2, p0, Landroid/media/MediaScanner$1;->val$existingFiles:Ljava/util/HashSet;
@@ -45,6 +46,7 @@
     .locals 7
 
     .prologue
+    .line 2488
     :try_start_0
     iget-object v4, p0, Landroid/media/MediaScanner$1;->val$existingFiles:Ljava/util/HashSet;
 
@@ -69,6 +71,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 2496
     .local v2, fileToDelete:Ljava/lang/String;
     :try_start_1
     iget-object v4, p0, Landroid/media/MediaScanner$1;->this$0:Landroid/media/MediaScanner;
@@ -82,12 +85,14 @@
 
     if-eq v4, v5, :cond_2
 
+    .line 2509
     .end local v2           #fileToDelete:Ljava/lang/String;
     .end local v3           #i$:Ljava/util/Iterator;
     :cond_1
     :goto_1
     return-void
 
+    .line 2499
     .restart local v2       #fileToDelete:Ljava/lang/String;
     .restart local v3       #i$:Ljava/util/Iterator;
     :cond_2
@@ -95,6 +100,7 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 2500
     .local v1, f:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -102,6 +108,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 2501
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
     :try_end_1
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
@@ -109,12 +116,14 @@
 
     goto :goto_0
 
+    .line 2503
     .end local v1           #f:Ljava/io/File;
     :catch_0
     move-exception v4
 
     goto :goto_0
 
+    .line 2506
     .end local v2           #fileToDelete:Ljava/lang/String;
     .end local v3           #i$:Ljava/util/Iterator;
     :catch_1
@@ -122,6 +131,7 @@
 
     move-object v0, v4
 
+    .line 2507
     .local v0, ex:Ljava/lang/Exception;
     sget-object v4, Ljava/lang/System;->out:Ljava/io/PrintStream;
 

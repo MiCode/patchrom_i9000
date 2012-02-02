@@ -35,20 +35,24 @@
     .parameter "clock"
 
     .prologue
+    .line 63
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 64
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/internal/widget/DigitalClock$TimeChangedReceiver;->mClock:Ljava/lang/ref/WeakReference;
 
+    .line 65
     invoke-virtual {p1}, Lcom/android/internal/widget/DigitalClock;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/widget/DigitalClock$TimeChangedReceiver;->mContext:Landroid/content/Context;
 
+    .line 66
     return-void
 .end method
 
@@ -60,6 +64,7 @@
     .parameter "intent"
 
     .prologue
+    .line 71
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -70,9 +75,11 @@
 
     move-result v1
 
+    .line 74
     .local v1, timezoneChanged:Z
     move-object v2, p2
 
+    .line 76
     .local v2, tmpIntent:Landroid/content/Intent;
     iget-object v3, p0, Lcom/android/internal/widget/DigitalClock$TimeChangedReceiver;->mClock:Ljava/lang/ref/WeakReference;
 
@@ -82,9 +89,11 @@
 
     check-cast v0, Lcom/android/internal/widget/DigitalClock;
 
+    .line 77
     .local v0, clock:Lcom/android/internal/widget/DigitalClock;
     if-eqz v0, :cond_0
 
+    .line 78
     #getter for: Lcom/android/internal/widget/DigitalClock;->mHandler:Landroid/os/Handler;
     invoke-static {v0}, Lcom/android/internal/widget/DigitalClock;->access$200(Lcom/android/internal/widget/DigitalClock;)Landroid/os/Handler;
 
@@ -96,9 +105,11 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 97
     :goto_0
     return-void
 
+    .line 92
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/widget/DigitalClock$TimeChangedReceiver;->mContext:Landroid/content/Context;
@@ -109,6 +120,7 @@
 
     goto :goto_0
 
+    .line 93
     :catch_0
     move-exception v3
 

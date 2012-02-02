@@ -161,24 +161,30 @@
 
     const-string v1, "BluetoothMAP"
 
+    .line 280
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;-><init>()V
 
+    .line 144
     iput-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
+    .line 145
     iput-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
 
+    .line 262
     new-instance v0, Lcom/broadcom/bt/service/map/BluetoothMAP$1;
 
     invoke-direct {v0, p0}, Lcom/broadcom/bt/service/map/BluetoothMAP$1;-><init>(Lcom/broadcom/bt/service/map/BluetoothMAP;)V
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 281
     const-string v0, "BluetoothMAP"
 
     const-string v0, "BluetoothMAP"
 
     invoke-static {v1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 282
     return-void
 .end method
 
@@ -188,6 +194,7 @@
     .parameter "cb"
 
     .prologue
+    .line 133
     const-string v1, "bluetooth_map"
 
     invoke-static {p0, v1}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceEnabled(Landroid/content/Context;Ljava/lang/String;)Z
@@ -196,22 +203,27 @@
 
     if-nez v1, :cond_0
 
+    .line 134
     const-string v1, "BluetoothMAP"
 
     const-string v2, "Unable to get proxy: service is not enabled."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 135
     const/4 v1, 0x0
 
+    .line 139
     :goto_0
     return v1
 
+    .line 137
     :cond_0
     new-instance v0, Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     invoke-direct {v0}, Lcom/broadcom/bt/service/map/BluetoothMAP;-><init>()V
 
+    .line 139
     .local v0, p:Lcom/broadcom/bt/service/map/BluetoothMAP;
     const-string v1, "com.broadcom.bt.app.system"
 
@@ -231,6 +243,7 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 118
     if-eq v1, p0, :cond_0
 
     const/4 v0, 0x2
@@ -259,17 +272,22 @@
     .parameter "className"
 
     .prologue
+    .line 285
     iput-object p1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
+    .line 286
     iput-object p2, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mProxyAvailCb:Lcom/broadcom/bt/service/framework/IBluetoothProxyCallback;
 
+    .line 287
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
+    .line 288
     .local v0, i:Landroid/content/Intent;
     invoke-virtual {v0, p3, p4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 289
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x1
@@ -290,12 +308,14 @@
     .prologue
     const-string v2, "BluetoothMAP"
 
+    .line 552
     const-string v1, "BluetoothMAP"
 
     const-string v1, "BluetoothMAP::disableProvider"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 555
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
 
@@ -303,14 +323,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 562
     :goto_0
     return-void
 
+    .line 557
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 559
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothMAP"
 
@@ -332,12 +355,14 @@
     .prologue
     const-string v2, "BluetoothMAP"
 
+    .line 538
     const-string v1, "BluetoothMAP"
 
     const-string v1, "BluetoothMAP::enableProvider"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 541
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
 
@@ -345,14 +370,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 548
     :goto_0
     return-void
 
+    .line 543
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 545
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BluetoothMAP"
 
@@ -375,12 +403,14 @@
 
     const-string v10, "BluetoothMAP"
 
+    .line 512
     const-string v5, "BluetoothMAP"
 
     const-string v5, "BluetoothMAP::enumRegisteredProviders"
 
     invoke-static {v10, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 516
     :try_start_0
     iget-object v5, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
 
@@ -388,11 +418,13 @@
 
     move-result-object v3
 
+    .line 517
     .local v3, providers:[Ljava/lang/String;
     array-length v5, v3
 
     new-array v4, v5, [Lcom/broadcom/bt/service/map/BluetoothMAP$RegisteredProvider;
 
+    .line 518
     .local v4, rp:[Lcom/broadcom/bt/service/map/BluetoothMAP$RegisteredProvider;
     const/4 v1, 0x0
 
@@ -402,6 +434,7 @@
 
     if-ge v1, v5, :cond_1
 
+    .line 520
     aget-object v5, v3, v1
 
     const-string v6, ":"
@@ -410,6 +443,7 @@
 
     move-result-object v2
 
+    .line 521
     .local v2, parts:[Ljava/lang/String;
     new-instance v5, Lcom/broadcom/bt/service/map/BluetoothMAP$RegisteredProvider;
 
@@ -417,6 +451,7 @@
 
     aput-object v5, v4, v1
 
+    .line 522
     aget-object v5, v4, v1
 
     const/4 v6, 0x0
@@ -425,6 +460,7 @@
 
     iput-object v6, v5, Lcom/broadcom/bt/service/map/BluetoothMAP$RegisteredProvider;->providerID:Ljava/lang/String;
 
+    .line 523
     aget-object v5, v4, v1
 
     const/4 v6, 0x1
@@ -433,6 +469,7 @@
 
     iput-object v6, v5, Lcom/broadcom/bt/service/map/BluetoothMAP$RegisteredProvider;->datasourceID:Ljava/lang/String;
 
+    .line 524
     aget-object v5, v4, v1
 
     const/4 v6, 0x2
@@ -441,6 +478,7 @@
 
     iput-object v6, v5, Lcom/broadcom/bt/service/map/BluetoothMAP$RegisteredProvider;->datasourceName:Ljava/lang/String;
 
+    .line 525
     aget-object v5, v4, v1
 
     const/4 v6, 0x3
@@ -462,6 +500,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 518
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -469,23 +508,27 @@
     :cond_0
     move v6, v8
 
+    .line 525
     goto :goto_1
 
     .end local v2           #parts:[Ljava/lang/String;
     :cond_1
     move-object v5, v4
 
+    .line 533
     .end local v1           #i:I
     .end local v3           #providers:[Ljava/lang/String;
     .end local v4           #rp:[Lcom/broadcom/bt/service/map/BluetoothMAP$RegisteredProvider;
     :goto_2
     return-object v5
 
+    .line 529
     :catch_0
     move-exception v5
 
     move-object v0, v5
 
+    .line 531
     .local v0, e:Landroid/os/RemoteException;
     const-string v5, "BluetoothMAP"
 
@@ -495,6 +538,7 @@
 
     invoke-static {v10, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 533
     const/4 v5, 0x0
 
     goto :goto_2
@@ -510,14 +554,17 @@
     .parameter "folder_info"
 
     .prologue
+    .line 408
     const-string v0, "BluetoothMAP"
 
     const-string v1, "BluetoothMAP::folderListingResponse"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 409
     const/4 v8, 0x0
 
+    .line 411
     .local v8, ret:I
     :try_start_0
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -538,14 +585,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 418
     :goto_0
     return v8
 
+    .line 413
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
+    .line 414
     .local v7, e:Landroid/os/RemoteException;
     const-string v0, "BluetoothMAP"
 
@@ -555,6 +605,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 415
     const/4 v8, 0x2
 
     goto :goto_0
@@ -570,14 +621,17 @@
     .parameter "msgFilePath"
 
     .prologue
+    .line 470
     const-string v0, "BluetoothMAP"
 
     const-string v1, "BluetoothMAP::getMsgResponse"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 472
     const/4 v8, 0x0
 
+    .line 474
     .local v8, ret:I
     :try_start_0
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -598,14 +652,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 481
     :goto_0
     return v8
 
+    .line 476
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
+    .line 477
     .local v7, e:Landroid/os/RemoteException;
     const-string v0, "BluetoothMAP"
 
@@ -615,6 +672,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 478
     const/4 v8, 0x2
 
     goto :goto_0
@@ -636,62 +694,80 @@
     .prologue
     const-string v3, "BluetoothMAP"
 
+    .line 312
     const-string v2, "BluetoothMAP"
 
     const-string v2, "BluetoothMAP::init"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 313
     const/4 v1, 0x0
 
+    .line 315
     .local v1, ret:I
     iput-object p2, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
+    .line 316
     iget-object v2, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
 
     if-nez v2, :cond_0
 
+    .line 317
     const-string v2, "BluetoothMAP"
 
     const-string v2, "BluetoothMAP::init - error getting map service"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 318
     const/4 v1, 0x1
 
+    .line 332
     :goto_0
     return v1
 
+    .line 320
     :cond_0
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 321
     .local v0, f:Landroid/content/IntentFilter;
     const-string v2, "com.broadcom.bt.service.map.DS_DISCOVER"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 322
     iget-object v2, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 323
     iput-byte p3, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mProviderType:B
 
+    .line 324
     iput-object p4, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mProviderId:Ljava/lang/String;
 
+    .line 325
     iput-object p5, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mProviderDisplayName:Ljava/lang/String;
 
+    .line 326
     iput-object p6, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mProviderDsId:Ljava/lang/String;
 
+    .line 327
     iput-object p7, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mProviderDsDisplayName:Ljava/lang/String;
 
+    .line 328
     iput-boolean p8, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mFeatureMessageFilter:Z
 
+    .line 329
     iput-boolean p9, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mfeatureMessageOffsetBrowsing:Z
 
+    .line 330
     iput-object p10, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mFolderMappings:[Ljava/lang/String;
 
     goto :goto_0
@@ -702,6 +778,7 @@
     .parameter "service"
 
     .prologue
+    .line 299
     :try_start_0
     invoke-static {p1}, Lcom/broadcom/bt/service/map/IMapService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/broadcom/bt/service/map/IMapService;
 
@@ -711,16 +788,20 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 300
     const/4 v1, 0x1
 
+    .line 303
     :goto_0
     return v1
 
+    .line 301
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 302
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothMAP"
 
@@ -728,6 +809,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 303
     const/4 v1, 0x0
 
     goto :goto_0
@@ -745,14 +827,17 @@
     .parameter "msgInfo"
 
     .prologue
+    .line 425
     const-string v0, "BluetoothMAP"
 
     const-string v1, "BluetoothMAP::msgListingResponse"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 426
     const/4 v10, 0x0
 
+    .line 428
     .local v10, ret:I
     :try_start_0
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -777,14 +862,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 435
     :goto_0
     return v10
 
+    .line 430
     :catch_0
     move-exception v0
 
     move-object v9, v0
 
+    .line 431
     .local v9, e:Landroid/os/RemoteException;
     const-string v0, "BluetoothMAP"
 
@@ -794,6 +882,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 432
     const/4 v10, 0x2
 
     goto :goto_0
@@ -809,14 +898,17 @@
     .parameter "msg_folder"
 
     .prologue
+    .line 440
     const-string v0, "BluetoothMAP"
 
     const-string v1, "BluetoothMAP::msgPushResponse"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 442
     const/4 v8, 0x0
 
+    .line 444
     .local v8, ret:I
     :try_start_0
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -837,14 +929,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 450
     :goto_0
     return v8
 
+    .line 445
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
+    .line 446
     .local v7, e:Landroid/os/RemoteException;
     const-string v0, "BluetoothMAP"
 
@@ -854,6 +949,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 447
     const/4 v8, 0x2
 
     goto :goto_0
@@ -870,14 +966,17 @@
     .parameter "msg_type"
 
     .prologue
+    .line 391
     const-string v0, "BluetoothMAP"
 
     const-string v1, "BluetoothMAP::notifyClient"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 394
     const/4 v9, 0x0
 
+    .line 396
     .local v9, ret:I
     :try_start_0
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -900,14 +999,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 403
     :goto_0
     return v9
 
+    .line 398
     :catch_0
     move-exception v0
 
     move-object v8, v0
 
+    .line 399
     .local v8, e:Landroid/os/RemoteException;
     const-string v0, "BluetoothMAP"
 
@@ -917,6 +1019,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 400
     const/4 v9, 0x2
 
     goto :goto_0
@@ -932,14 +1035,17 @@
     .prologue
     const-string v3, "BluetoothMAP"
 
+    .line 487
     const-string v2, "BluetoothMAP"
 
     const-string v2, "BluetoothMAP::notifyRegistrationResponse"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 489
     const/4 v1, 0x0
 
+    .line 491
     .local v1, ret:I
     :try_start_0
     iget-object v2, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -948,14 +1054,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 497
     :goto_0
     return v1
 
+    .line 492
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 493
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothMAP"
 
@@ -965,6 +1074,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 494
     const/4 v1, 0x2
 
     goto :goto_0
@@ -976,14 +1086,17 @@
     .prologue
     const-string v12, "BluetoothMAP"
 
+    .line 337
     const-string v0, "BluetoothMAP"
 
     const-string v0, "BluetoothMAP::registerDSProvider"
 
     invoke-static {v12, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 338
     const/4 v11, 0x0
 
+    .line 340
     .local v11, ret:I
     :try_start_0
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -1012,14 +1125,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 347
     :goto_0
     return v11
 
+    .line 343
     :catch_0
     move-exception v0
 
     move-object v10, v0
 
+    .line 344
     .local v10, e:Landroid/os/RemoteException;
     const-string v0, "BluetoothMAP"
 
@@ -1029,6 +1145,7 @@
 
     invoke-static {v12, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 345
     const/4 v11, 0x2
 
     goto :goto_0
@@ -1045,14 +1162,17 @@
     .parameter "msg_folder"
 
     .prologue
+    .line 455
     const-string v0, "BluetoothMAP"
 
     const-string v1, "BluetoothMAP::setMsgStatusResponse"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 457
     const/4 v9, 0x0
 
+    .line 459
     .local v9, ret:I
     :try_start_0
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -1075,14 +1195,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 465
     :goto_0
     return v9
 
+    .line 461
     :catch_0
     move-exception v0
 
     move-object v8, v0
 
+    .line 462
     .local v8, e:Landroid/os/RemoteException;
     const-string v0, "BluetoothMAP"
 
@@ -1092,6 +1215,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 463
     const/4 v9, 0x2
 
     goto :goto_0
@@ -1105,14 +1229,17 @@
     .prologue
     const-string v3, "BluetoothMAP"
 
+    .line 364
     const-string v2, "BluetoothMAP"
 
     const-string v2, "BluetoothMAP::startMSEInstance"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 365
     const/4 v1, 0x0
 
+    .line 367
     .local v1, ret:I
     :try_start_0
     iget-object v2, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -1121,14 +1248,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 373
     :goto_0
     return v1
 
+    .line 368
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 369
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothMAP"
 
@@ -1138,6 +1268,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 370
     const/4 v1, 0x2
 
     goto :goto_0
@@ -1151,14 +1282,17 @@
     .prologue
     const-string v3, "BluetoothMAP"
 
+    .line 377
     const-string v2, "BluetoothMAP"
 
     const-string v2, "BluetoothMAP::stopMSEInstance"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 378
     const/4 v1, 0x0
 
+    .line 380
     .local v1, ret:I
     :try_start_0
     iget-object v2, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -1167,14 +1301,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 386
     :goto_0
     return v1
 
+    .line 381
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 382
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothMAP"
 
@@ -1184,6 +1321,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 383
     const/4 v1, 0x2
 
     goto :goto_0
@@ -1197,14 +1335,17 @@
     .prologue
     const-string v3, "BluetoothMAP"
 
+    .line 351
     const-string v2, "BluetoothMAP"
 
     const-string v2, "BluetoothMAP::unregisterDSProvider"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 352
     const/4 v1, 0x0
 
+    .line 354
     .local v1, ret:I
     :try_start_0
     iget-object v2, p0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapService:Lcom/broadcom/bt/service/map/IMapService;
@@ -1213,14 +1354,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 360
     :goto_0
     return v1
 
+    .line 355
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 356
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BluetoothMAP"
 
@@ -1230,6 +1374,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 357
     const/4 v1, 0x2
 
     goto :goto_0

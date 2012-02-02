@@ -232,8 +232,10 @@
     .locals 0
 
     .prologue
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 48
     return-void
 .end method
 
@@ -448,22 +450,27 @@
 
     const/4 v1, 0x0
 
+    .line 1892
     new-instance v8, Landroid/content/pm/PackageParser;
 
     invoke-direct {v8, p1}, Landroid/content/pm/PackageParser;-><init>(Ljava/lang/String;)V
 
+    .line 1893
     .local v8, packageParser:Landroid/content/pm/PackageParser;
     new-instance v7, Landroid/util/DisplayMetrics;
 
     invoke-direct {v7}, Landroid/util/DisplayMetrics;-><init>()V
 
+    .line 1894
     .local v7, metrics:Landroid/util/DisplayMetrics;
     invoke-virtual {v7}, Landroid/util/DisplayMetrics;->setToDefaults()V
 
+    .line 1895
     new-instance v9, Ljava/io/File;
 
     invoke-direct {v9, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 1896
     .local v9, sourceFile:Ljava/io/File;
     const/4 v2, 0x0
 
@@ -471,9 +478,11 @@
 
     move-result-object v0
 
+    .line 1898
     .local v0, pkg:Landroid/content/pm/PackageParser$Package;
     if-nez v0, :cond_0
 
+    .line 1901
     :goto_0
     return-object v1
 

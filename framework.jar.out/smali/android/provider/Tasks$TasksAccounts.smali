@@ -43,6 +43,7 @@
     .locals 1
 
     .prologue
+    .line 289
     const-string v0, "content://tasks/TasksAccounts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -58,6 +59,7 @@
     .locals 0
 
     .prologue
+    .line 248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,6 +72,7 @@
     .parameter "selectionArgs"
 
     .prologue
+    .line 269
     sget-object v0, Landroid/provider/Tasks$TasksAccounts;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v0, p1, p2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
@@ -85,6 +88,7 @@
     .parameter "account"
 
     .prologue
+    .line 281
     const-string v0, "_sync_account=?"
 
     const/4 v1, 0x2
@@ -118,6 +122,7 @@
     .parameter "orderBy"
 
     .prologue
+    .line 256
     sget-object v1, Landroid/provider/Tasks$TasksAccounts;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

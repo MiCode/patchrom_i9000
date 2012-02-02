@@ -37,6 +37,7 @@
     .parameter
 
     .prologue
+    .line 980
     iput-object p1, p0, Landroid/view/ViewDebug$3;->val$view:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +52,7 @@
     .parameter "x0"
 
     .prologue
+    .line 980
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1
@@ -64,6 +66,7 @@
     .parameter "data"
 
     .prologue
+    .line 990
     return-void
 .end method
 
@@ -71,6 +74,7 @@
     .locals 1
 
     .prologue
+    .line 980
     invoke-virtual {p0}, Landroid/view/ViewDebug$3;->pre()[Ljava/lang/Void;
 
     move-result-object v0
@@ -82,6 +86,7 @@
     .locals 1
 
     .prologue
+    .line 982
     const/4 v0, 0x0
 
     return-object v0
@@ -92,6 +97,7 @@
     .parameter "x0"
 
     .prologue
+    .line 980
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1
@@ -105,6 +111,7 @@
     .parameter "data"
 
     .prologue
+    .line 986
     iget-object v0, p0, Landroid/view/ViewDebug$3;->val$view:Landroid/view/View;
 
     iget-object v1, p0, Landroid/view/ViewDebug$3;->val$view:Landroid/view/View;
@@ -125,5 +132,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
 
+    .line 987
     return-void
 .end method

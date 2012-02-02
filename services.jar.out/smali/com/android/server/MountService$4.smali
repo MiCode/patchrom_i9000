@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1047
     iput-object p1, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
     iput-object p2, p0, Lcom/android/server/MountService$4;->val$path:Ljava/lang/String;
@@ -46,6 +47,7 @@
 
     const-string v9, "MountService"
 
+    .line 1055
     :try_start_0
     iget-object v4, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
@@ -58,11 +60,13 @@
 
     move-result v0
 
+    .line 1056
     .local v0, Ret:I
     const/16 v4, -0x64
 
     if-eq v0, v4, :cond_1
 
+    .line 1057
     const-string v4, "MountService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -85,6 +89,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1058
     iget-object v4, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
     iget-object v5, p0, Lcom/android/server/MountService$4;->val$path:Ljava/lang/String;
@@ -94,11 +99,13 @@
     #calls: Lcom/android/server/MountService;->askPermissionFakedState(Ljava/lang/String;Ljava/lang/String;I)I
     invoke-static {v4, v5, v6, v0}, Lcom/android/server/MountService;->access$2200(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;I)I
 
+    .line 1084
     .end local v0           #Ret:I
     :cond_0
     :goto_0
     return-void
 
+    .line 1063
     .restart local v0       #Ret:I
     :cond_1
     iget-object v4, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
@@ -110,6 +117,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 1064
     const-string v4, "MountService"
 
     const-string v5, "Do not mount %s and prepare SharedVolume Mode"
@@ -130,6 +138,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1065
     iget-object v4, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
     iget-object v5, p0, Lcom/android/server/MountService$4;->val$path:Ljava/lang/String;
@@ -145,12 +154,14 @@
 
     goto :goto_0
 
+    .line 1081
     .end local v0           #Ret:I
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 1082
     .local v1, ex:Ljava/lang/Exception;
     const-string v4, "MountService"
 
@@ -160,6 +171,7 @@
 
     goto :goto_0
 
+    .line 1071
     .end local v1           #ex:Ljava/lang/Exception;
     .restart local v0       #Ret:I
     :cond_2
@@ -171,6 +183,7 @@
 
     if-ge v2, v4, :cond_4
 
+    .line 1072
     :try_start_1
     iget-object v4, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
@@ -187,6 +200,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 1073
     const-string v4, "MountService"
 
     const-string v5, "path : %s waiting over pending state "
@@ -207,15 +221,18 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1074
     const-wide/16 v4, 0x1f4
 
     invoke-static {v4, v5}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 1071
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
+    .line 1078
     :cond_4
     iget-object v4, p0, Lcom/android/server/MountService$4;->this$0:Lcom/android/server/MountService;
 
@@ -229,6 +246,7 @@
     .local v3, rc:I
     if-eqz v3, :cond_0
 
+    .line 1079
     const-string v4, "MountService"
 
     const-string v5, "Insertion mount failed (%d)"

@@ -36,6 +36,7 @@
     .parameter
 
     .prologue
+    .line 611
     iput-object p1, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iput p2, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->val$lv_percent:I
@@ -55,17 +56,22 @@
     .locals 14
 
     .prologue
+    .line 614
     const/4 v4, 0x0
 
+    .line 615
     .local v4, max:I
     const/4 v6, 0x0
 
+    .line 616
     .local v6, progress:I
     const/4 v3, 0x0
 
+    .line 617
     .local v3, id:I
     const/4 v1, 0x0
 
+    .line 619
     .local v1, iRes:Landroid/content/res/Resources;
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
@@ -85,10 +91,12 @@
 
     if-eqz v9, :cond_1
 
+    .line 688
     :cond_0
     :goto_0
     return-void
 
+    .line 624
     :cond_1
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
@@ -97,6 +105,7 @@
     #setter for: Lcom/android/server/EncryptService$CryptoNotification;->isWokingNotification:Z
     invoke-static {v9, v10}, Lcom/android/server/EncryptService$CryptoNotification;->access$502(Lcom/android/server/EncryptService$CryptoNotification;Z)Z
 
+    .line 626
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mCtx:Landroid/content/Context;
@@ -105,26 +114,31 @@
 
     move-result-object v1
 
+    .line 628
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget v10, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->val$lv_percent:I
 
     iput v10, v9, Lcom/android/server/EncryptService$CryptoNotification;->mPercent:I
 
+    .line 630
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->title:Ljava/lang/String;
 
     if-nez v9, :cond_2
 
+    .line 632
     iget-boolean v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->val$bCryptoPolicy:Z
 
     if-eqz v9, :cond_7
 
+    .line 634
     iget-boolean v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->val$bFirstStorage:Z
 
     if-nez v9, :cond_6
 
+    .line 635
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     const v10, 0x1040487
@@ -135,6 +149,7 @@
 
     iput-object v10, v9, Lcom/android/server/EncryptService$CryptoNotification;->title:Ljava/lang/String;
 
+    .line 648
     :cond_2
     :goto_1
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
@@ -143,6 +158,7 @@
 
     if-nez v9, :cond_3
 
+    .line 650
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v10, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
@@ -159,9 +175,11 @@
 
     iput-object v0, v9, Lcom/android/server/EncryptService$CryptoNotification;->mNotiManager:Landroid/app/NotificationManager;
 
+    .line 653
     :cond_3
     const/4 v2, 0x0
 
+    .line 655
     .local v2, icon:I
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
@@ -169,17 +187,21 @@
 
     if-nez v9, :cond_4
 
+    .line 657
     iget-boolean v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->val$bCryptoPolicy:Z
 
     if-eqz v9, :cond_9
 
+    .line 658
     const v2, 0x10803cf
 
+    .line 662
     :goto_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
 
+    .line 663
     .local v7, when:J
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
@@ -191,6 +213,7 @@
 
     iput-object v10, v9, Lcom/android/server/EncryptService$CryptoNotification;->mNotification:Landroid/app/Notification;
 
+    .line 664
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mNotification:Landroid/app/Notification;
@@ -201,6 +224,7 @@
 
     iput v10, v9, Landroid/app/Notification;->flags:I
 
+    .line 667
     .end local v7           #when:J
     :cond_4
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
@@ -209,10 +233,12 @@
 
     if-nez v9, :cond_5
 
+    .line 669
     new-instance v5, Landroid/content/Intent;
 
     invoke-direct {v5}, Landroid/content/Intent;-><init>()V
 
+    .line 670
     .local v5, notificationIntent:Landroid/content/Intent;
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
@@ -226,6 +252,7 @@
 
     move-result-object v0
 
+    .line 671
     .local v0, contentIntent:Landroid/app/PendingIntent;
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
@@ -245,6 +272,7 @@
 
     iput-object v10, v9, Lcom/android/server/EncryptService$CryptoNotification;->mContentView:Landroid/widget/RemoteViews;
 
+    .line 672
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mContentView:Landroid/widget/RemoteViews;
@@ -255,6 +283,7 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
+    .line 673
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mContentView:Landroid/widget/RemoteViews;
@@ -263,6 +292,7 @@
 
     invoke-virtual {v9, v10, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
+    .line 674
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mContentView:Landroid/widget/RemoteViews;
@@ -273,6 +303,7 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/widget/RemoteViews;->setTextColor(II)V
 
+    .line 675
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mContentView:Landroid/widget/RemoteViews;
@@ -283,6 +314,7 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/widget/RemoteViews;->setTextColor(II)V
 
+    .line 676
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mNotification:Landroid/app/Notification;
@@ -293,12 +325,14 @@
 
     iput-object v10, v9, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
+    .line 677
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mNotification:Landroid/app/Notification;
 
     iput-object v0, v9, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
 
+    .line 680
     .end local v0           #contentIntent:Landroid/app/PendingIntent;
     .end local v5           #notificationIntent:Landroid/content/Intent;
     :cond_5
@@ -338,6 +372,7 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
+    .line 681
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mContentView:Landroid/widget/RemoteViews;
@@ -350,6 +385,7 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
+    .line 683
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mContentView:Landroid/widget/RemoteViews;
@@ -366,6 +402,7 @@
 
     invoke-virtual {v9, v10, v11, v12, v13}, Landroid/widget/RemoteViews;->setProgressBar(IIIZ)V
 
+    .line 685
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     iget-object v9, v9, Lcom/android/server/EncryptService$CryptoNotification;->mNotiManager:Landroid/app/NotificationManager;
@@ -378,6 +415,7 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
+    .line 687
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     const/4 v10, 0x0
@@ -387,6 +425,7 @@
 
     goto/16 :goto_0
 
+    .line 637
     .end local v2           #icon:I
     :cond_6
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
@@ -401,11 +440,13 @@
 
     goto/16 :goto_1
 
+    .line 641
     :cond_7
     iget-boolean v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->val$bFirstStorage:Z
 
     if-nez v9, :cond_8
 
+    .line 642
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
     const v10, 0x1040489
@@ -418,6 +459,7 @@
 
     goto/16 :goto_1
 
+    .line 644
     :cond_8
     iget-object v9, p0, Lcom/android/server/EncryptService$CryptoNotification$1;->this$1:Lcom/android/server/EncryptService$CryptoNotification;
 
@@ -431,6 +473,7 @@
 
     goto/16 :goto_1
 
+    .line 660
     .restart local v2       #icon:I
     :cond_9
     const v2, 0x10803ce

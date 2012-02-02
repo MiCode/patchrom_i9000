@@ -17,6 +17,7 @@
     .locals 0
 
     .prologue
+    .line 31
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -28,8 +29,10 @@
     .locals 0
 
     .prologue
+    .line 54
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->finish()V
 
+    .line 55
     return-void
 .end method
 
@@ -37,14 +40,17 @@
     .locals 1
 
     .prologue
+    .line 60
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 61
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->finish()V
 
+    .line 63
     :cond_0
     return-void
 .end method
@@ -54,8 +60,10 @@
     .parameter "savedInstanceState"
 
     .prologue
+    .line 47
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    .line 49
     new-instance v0, Lcom/android/internal/app/AlertController;
 
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->getWindow()Landroid/view/Window;
@@ -66,12 +74,14 @@
 
     iput-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
+    .line 50
     new-instance v0, Lcom/android/internal/app/AlertController$AlertParams;
 
     invoke-direct {v0, p0}, Lcom/android/internal/app/AlertController$AlertParams;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
+    .line 51
     return-void
 .end method
 
@@ -81,6 +91,7 @@
     .parameter "event"
 
     .prologue
+    .line 79
     iget-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/app/AlertController;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -91,6 +102,7 @@
 
     const/4 v0, 0x1
 
+    .line 80
     :goto_0
     return v0
 
@@ -108,6 +120,7 @@
     .parameter "event"
 
     .prologue
+    .line 85
     iget-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/app/AlertController;->onKeyUp(ILandroid/view/KeyEvent;)Z
@@ -118,6 +131,7 @@
 
     const/4 v0, 0x1
 
+    .line 86
     :goto_0
     return v0
 
@@ -133,15 +147,18 @@
     .locals 2
 
     .prologue
+    .line 73
     iget-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v1, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/AlertController$AlertParams;->apply(Lcom/android/internal/app/AlertController;)V
 
+    .line 74
     iget-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0}, Lcom/android/internal/app/AlertController;->installContent()V
 
+    .line 75
     return-void
 .end method

@@ -37,6 +37,7 @@
     .locals 1
 
     .prologue
+    .line 40
     new-instance v0, Landroid/content/SyncAdaptersCache$MySerializer;
 
     invoke-direct {v0}, Landroid/content/SyncAdaptersCache$MySerializer;-><init>()V
@@ -53,11 +54,12 @@
     .prologue
     const-string v2, "android.content.SyncAdapter"
 
+    .line 43
     const-string v0, "android.content.SyncAdapter"
 
     const-string v0, "android.content.SyncAdapter"
 
-    const-string v4, "sync-adapter"
+    const-string/jumbo v4, "sync-adapter"
 
     sget-object v5, Landroid/content/SyncAdaptersCache;->sSerializer:Landroid/content/SyncAdaptersCache$MySerializer;
 
@@ -69,6 +71,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/content/pm/RegisteredServicesCache;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/XmlSerializerAndParser;)V
 
+    .line 44
     return-void
 .end method
 
@@ -81,12 +84,14 @@
     .parameter "attrs"
 
     .prologue
+    .line 48
     sget-object v5, Lcom/android/internal/R$styleable;->SyncAdapter:[I
 
     invoke-virtual {p1, p3, v5}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
+    .line 51
     .local v2, sa:Landroid/content/res/TypedArray;
     const/4 v5, 0x1
 
@@ -95,6 +100,7 @@
 
     move-result-object v1
 
+    .line 53
     .local v1, authority:Ljava/lang/String;
     const/4 v5, 0x0
 
@@ -104,19 +110,23 @@
 
     move-result-object v0
 
+    .line 55
     .local v0, accountType:Ljava/lang/String;
     if-eqz v1, :cond_0
 
     if-nez v0, :cond_1
 
+    .line 56
     :cond_0
     const/4 v5, 0x0
 
+    .line 65
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     :goto_0
     return-object v5
 
+    .line 58
     :cond_1
     const/4 v5, 0x2
 
@@ -127,6 +137,7 @@
 
     move-result v4
 
+    .line 60
     .local v4, userVisible:Z
     const/4 v5, 0x3
 
@@ -136,6 +147,7 @@
 
     move-result v3
 
+    .line 63
     .local v3, supportsUploading:Z
     new-instance v5, Landroid/content/SyncAdapterType;
 
@@ -143,6 +155,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 65
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     goto :goto_0
@@ -166,6 +179,7 @@
     .parameter "x2"
 
     .prologue
+    .line 34
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/SyncAdaptersCache;->parseServiceAttributes(Landroid/content/res/Resources;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/content/SyncAdapterType;
 
     move-result-object v0

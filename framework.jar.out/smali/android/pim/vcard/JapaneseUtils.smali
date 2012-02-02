@@ -22,22 +22,24 @@
     .locals 8
 
     .prologue
-    const-string v7, "\uff79"
+    const-string/jumbo v7, "\uff79"
 
-    const-string v6, "\uff76"
+    const-string/jumbo v6, "\uff76"
 
-    const-string v5, "\uff9c"
+    const-string/jumbo v5, "\uff9c"
 
-    const-string v4, "\uff74"
+    const-string/jumbo v4, "\uff74"
 
-    const-string v3, "\uff72"
+    const-string/jumbo v3, "\uff72"
 
+    .line 26
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
+    .line 30
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3001
@@ -46,10 +48,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff64"
+    const-string/jumbo v2, "\uff64"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 31
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3002
@@ -58,10 +61,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff61"
+    const-string/jumbo v2, "\uff61"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 32
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x300c
@@ -70,10 +74,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff62"
+    const-string/jumbo v2, "\uff62"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 33
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x300d
@@ -82,10 +87,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff63"
+    const-string/jumbo v2, "\uff63"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 34
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x301c
@@ -94,10 +100,11 @@
 
     move-result-object v1
 
-    const-string v2, "~"
+    const-string/jumbo v2, "~"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 35
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3041
@@ -106,10 +113,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff67"
+    const-string/jumbo v2, "\uff67"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 36
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3042
@@ -118,10 +126,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff71"
+    const-string/jumbo v2, "\uff71"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 37
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3043
@@ -130,10 +139,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff68"
+    const-string/jumbo v2, "\uff68"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 38
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3044
@@ -142,10 +152,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff72"
+    const-string/jumbo v2, "\uff72"
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 39
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3045
@@ -154,10 +165,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff69"
+    const-string/jumbo v2, "\uff69"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 40
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3046
@@ -166,10 +178,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff73"
+    const-string/jumbo v2, "\uff73"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 41
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3047
@@ -178,10 +191,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6a"
+    const-string/jumbo v2, "\uff6a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 42
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3048
@@ -190,10 +204,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff74"
+    const-string/jumbo v2, "\uff74"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 43
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3049
@@ -202,10 +217,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6b"
+    const-string/jumbo v2, "\uff6b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 44
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x304a
@@ -214,10 +230,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff75"
+    const-string/jumbo v2, "\uff75"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 45
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x304b
@@ -226,10 +243,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff76"
+    const-string/jumbo v2, "\uff76"
 
     invoke-interface {v0, v1, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 46
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x304c
@@ -238,10 +256,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff76\uff9e"
+    const-string/jumbo v2, "\uff76\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 47
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x304d
@@ -250,10 +269,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff77"
+    const-string/jumbo v2, "\uff77"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 48
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x304e
@@ -262,10 +282,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff77\uff9e"
+    const-string/jumbo v2, "\uff77\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 49
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x304f
@@ -274,10 +295,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff78"
+    const-string/jumbo v2, "\uff78"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 50
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3050
@@ -286,10 +308,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff78\uff9e"
+    const-string/jumbo v2, "\uff78\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 51
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3051
@@ -298,10 +321,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff79"
+    const-string/jumbo v2, "\uff79"
 
     invoke-interface {v0, v1, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 52
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3052
@@ -310,10 +334,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff79\uff9e"
+    const-string/jumbo v2, "\uff79\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 53
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3053
@@ -322,10 +347,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7a"
+    const-string/jumbo v2, "\uff7a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 54
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3054
@@ -334,10 +360,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7a\uff9e"
+    const-string/jumbo v2, "\uff7a\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 55
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3055
@@ -346,10 +373,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7b"
+    const-string/jumbo v2, "\uff7b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 56
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3056
@@ -358,10 +386,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7b\uff9e"
+    const-string/jumbo v2, "\uff7b\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 57
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3057
@@ -370,10 +399,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7c"
+    const-string/jumbo v2, "\uff7c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 58
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3058
@@ -382,10 +412,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7c\uff9e"
+    const-string/jumbo v2, "\uff7c\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 59
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3059
@@ -394,10 +425,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7d"
+    const-string/jumbo v2, "\uff7d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 60
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x305a
@@ -406,10 +438,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7d\uff9e"
+    const-string/jumbo v2, "\uff7d\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 61
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x305b
@@ -418,10 +451,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7e"
+    const-string/jumbo v2, "\uff7e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 62
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x305c
@@ -430,10 +464,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7e\uff9e"
+    const-string/jumbo v2, "\uff7e\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 63
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x305d
@@ -442,10 +477,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7f"
+    const-string/jumbo v2, "\uff7f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 64
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x305e
@@ -454,10 +490,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7f\uff9e"
+    const-string/jumbo v2, "\uff7f\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 65
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x305f
@@ -466,10 +503,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff80"
+    const-string/jumbo v2, "\uff80"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 66
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3060
@@ -478,10 +516,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff80\uff9e"
+    const-string/jumbo v2, "\uff80\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 67
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3061
@@ -490,10 +529,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff81"
+    const-string/jumbo v2, "\uff81"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 68
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3062
@@ -502,10 +542,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff81\uff9e"
+    const-string/jumbo v2, "\uff81\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 69
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3063
@@ -514,10 +555,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6f"
+    const-string/jumbo v2, "\uff6f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 70
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3064
@@ -526,10 +568,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff82"
+    const-string/jumbo v2, "\uff82"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 71
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3065
@@ -538,10 +581,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff82\uff9e"
+    const-string/jumbo v2, "\uff82\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 72
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3066
@@ -550,10 +594,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff83"
+    const-string/jumbo v2, "\uff83"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 73
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3067
@@ -562,10 +607,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff83\uff9e"
+    const-string/jumbo v2, "\uff83\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 74
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3068
@@ -574,10 +620,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff84"
+    const-string/jumbo v2, "\uff84"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 75
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3069
@@ -586,10 +633,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff84\uff9e"
+    const-string/jumbo v2, "\uff84\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 76
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x306a
@@ -598,10 +646,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff85"
+    const-string/jumbo v2, "\uff85"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 77
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x306b
@@ -610,10 +659,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff86"
+    const-string/jumbo v2, "\uff86"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 78
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x306c
@@ -622,10 +672,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff87"
+    const-string/jumbo v2, "\uff87"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 79
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x306d
@@ -634,10 +685,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff88"
+    const-string/jumbo v2, "\uff88"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 80
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x306e
@@ -646,10 +698,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff89"
+    const-string/jumbo v2, "\uff89"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 81
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x306f
@@ -658,10 +711,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8a"
+    const-string/jumbo v2, "\uff8a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 82
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3070
@@ -670,10 +724,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8a\uff9e"
+    const-string/jumbo v2, "\uff8a\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 83
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3071
@@ -682,10 +737,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8a\uff9f"
+    const-string/jumbo v2, "\uff8a\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 84
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3072
@@ -694,10 +750,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8b"
+    const-string/jumbo v2, "\uff8b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 85
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3073
@@ -706,10 +763,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8b\uff9e"
+    const-string/jumbo v2, "\uff8b\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 86
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3074
@@ -718,10 +776,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8b\uff9f"
+    const-string/jumbo v2, "\uff8b\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 87
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3075
@@ -730,10 +789,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8c"
+    const-string/jumbo v2, "\uff8c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 88
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3076
@@ -742,10 +802,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8c\uff9e"
+    const-string/jumbo v2, "\uff8c\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 89
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3077
@@ -754,10 +815,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8c\uff9f"
+    const-string/jumbo v2, "\uff8c\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 90
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3078
@@ -766,10 +828,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8d"
+    const-string/jumbo v2, "\uff8d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 91
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3079
@@ -778,10 +841,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8d\uff9e"
+    const-string/jumbo v2, "\uff8d\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 92
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x307a
@@ -790,10 +854,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8d\uff9f"
+    const-string/jumbo v2, "\uff8d\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 93
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x307b
@@ -802,10 +867,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8e"
+    const-string/jumbo v2, "\uff8e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 94
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x307c
@@ -814,10 +880,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8e\uff9e"
+    const-string/jumbo v2, "\uff8e\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 95
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x307d
@@ -826,10 +893,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8e\uff9f"
+    const-string/jumbo v2, "\uff8e\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 96
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x307e
@@ -838,10 +906,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8f"
+    const-string/jumbo v2, "\uff8f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 97
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x307f
@@ -850,10 +919,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff90"
+    const-string/jumbo v2, "\uff90"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 98
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3080
@@ -862,10 +932,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff91"
+    const-string/jumbo v2, "\uff91"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 99
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3081
@@ -874,10 +945,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff92"
+    const-string/jumbo v2, "\uff92"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 100
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3082
@@ -886,10 +958,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff93"
+    const-string/jumbo v2, "\uff93"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 101
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3083
@@ -898,10 +971,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6c"
+    const-string/jumbo v2, "\uff6c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 102
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3084
@@ -910,10 +984,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff94"
+    const-string/jumbo v2, "\uff94"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 103
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3085
@@ -922,10 +997,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6d"
+    const-string/jumbo v2, "\uff6d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 104
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3086
@@ -934,10 +1010,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff95"
+    const-string/jumbo v2, "\uff95"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 105
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3087
@@ -946,10 +1023,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6e"
+    const-string/jumbo v2, "\uff6e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 106
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3088
@@ -958,10 +1036,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff96"
+    const-string/jumbo v2, "\uff96"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 107
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3089
@@ -970,10 +1049,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff97"
+    const-string/jumbo v2, "\uff97"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 108
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x308a
@@ -982,10 +1062,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff98"
+    const-string/jumbo v2, "\uff98"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 109
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x308b
@@ -994,10 +1075,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff99"
+    const-string/jumbo v2, "\uff99"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 110
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x308c
@@ -1006,10 +1088,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9a"
+    const-string/jumbo v2, "\uff9a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 111
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x308d
@@ -1018,10 +1101,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9b"
+    const-string/jumbo v2, "\uff9b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 112
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x308e
@@ -1030,10 +1114,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9c"
+    const-string/jumbo v2, "\uff9c"
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 113
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x308f
@@ -1042,10 +1127,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9c"
+    const-string/jumbo v2, "\uff9c"
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 114
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3090
@@ -1054,10 +1140,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff72"
+    const-string/jumbo v2, "\uff72"
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 115
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3091
@@ -1066,10 +1153,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff74"
+    const-string/jumbo v2, "\uff74"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 116
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3092
@@ -1078,10 +1166,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff66"
+    const-string/jumbo v2, "\uff66"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 117
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x3093
@@ -1090,10 +1179,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9d"
+    const-string/jumbo v2, "\uff9d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 118
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x309b
@@ -1102,10 +1192,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9e"
+    const-string/jumbo v2, "\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 119
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x309c
@@ -1114,10 +1205,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9f"
+    const-string/jumbo v2, "\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 120
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a1
@@ -1126,10 +1218,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff67"
+    const-string/jumbo v2, "\uff67"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 121
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a2
@@ -1138,10 +1231,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff71"
+    const-string/jumbo v2, "\uff71"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 122
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a3
@@ -1150,10 +1244,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff68"
+    const-string/jumbo v2, "\uff68"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 123
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a4
@@ -1162,10 +1257,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff72"
+    const-string/jumbo v2, "\uff72"
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 124
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a5
@@ -1174,10 +1270,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff69"
+    const-string/jumbo v2, "\uff69"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 125
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a6
@@ -1186,10 +1283,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff73"
+    const-string/jumbo v2, "\uff73"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 126
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a7
@@ -1198,10 +1296,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6a"
+    const-string/jumbo v2, "\uff6a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 127
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a8
@@ -1210,10 +1309,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff74"
+    const-string/jumbo v2, "\uff74"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 128
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30a9
@@ -1222,10 +1322,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6b"
+    const-string/jumbo v2, "\uff6b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 129
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30aa
@@ -1234,10 +1335,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff75"
+    const-string/jumbo v2, "\uff75"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 130
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ab
@@ -1246,10 +1348,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff76"
+    const-string/jumbo v2, "\uff76"
 
     invoke-interface {v0, v1, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 131
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ac
@@ -1258,10 +1361,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff76\uff9e"
+    const-string/jumbo v2, "\uff76\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 132
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ad
@@ -1270,10 +1374,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff77"
+    const-string/jumbo v2, "\uff77"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 133
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ae
@@ -1282,10 +1387,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff77\uff9e"
+    const-string/jumbo v2, "\uff77\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 134
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30af
@@ -1294,10 +1400,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff78"
+    const-string/jumbo v2, "\uff78"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 135
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b0
@@ -1306,10 +1413,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff78\uff9e"
+    const-string/jumbo v2, "\uff78\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 136
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b1
@@ -1318,10 +1426,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff79"
+    const-string/jumbo v2, "\uff79"
 
     invoke-interface {v0, v1, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 137
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b2
@@ -1330,10 +1439,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff79\uff9e"
+    const-string/jumbo v2, "\uff79\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 138
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b3
@@ -1342,10 +1452,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7a"
+    const-string/jumbo v2, "\uff7a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 139
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b4
@@ -1354,10 +1465,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7a\uff9e"
+    const-string/jumbo v2, "\uff7a\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 140
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b5
@@ -1366,10 +1478,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7b"
+    const-string/jumbo v2, "\uff7b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 141
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b6
@@ -1378,10 +1491,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7b\uff9e"
+    const-string/jumbo v2, "\uff7b\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 142
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b7
@@ -1390,10 +1504,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7c"
+    const-string/jumbo v2, "\uff7c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 143
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b8
@@ -1402,10 +1517,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7c\uff9e"
+    const-string/jumbo v2, "\uff7c\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 144
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30b9
@@ -1414,10 +1530,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7d"
+    const-string/jumbo v2, "\uff7d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 145
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ba
@@ -1426,10 +1543,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7d\uff9e"
+    const-string/jumbo v2, "\uff7d\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 146
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30bb
@@ -1438,10 +1556,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7e"
+    const-string/jumbo v2, "\uff7e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 147
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30bc
@@ -1450,10 +1569,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7e\uff9e"
+    const-string/jumbo v2, "\uff7e\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 148
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30bd
@@ -1462,10 +1582,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7f"
+    const-string/jumbo v2, "\uff7f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 149
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30be
@@ -1474,10 +1595,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7f\uff9e"
+    const-string/jumbo v2, "\uff7f\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 150
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30bf
@@ -1486,10 +1608,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff80"
+    const-string/jumbo v2, "\uff80"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 151
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c0
@@ -1498,10 +1621,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff80\uff9e"
+    const-string/jumbo v2, "\uff80\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 152
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c1
@@ -1510,10 +1634,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff81"
+    const-string/jumbo v2, "\uff81"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 153
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c2
@@ -1522,10 +1647,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff81\uff9e"
+    const-string/jumbo v2, "\uff81\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 154
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c3
@@ -1534,10 +1660,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6f"
+    const-string/jumbo v2, "\uff6f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 155
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c4
@@ -1546,10 +1673,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff82"
+    const-string/jumbo v2, "\uff82"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 156
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c5
@@ -1558,10 +1686,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff82\uff9e"
+    const-string/jumbo v2, "\uff82\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 157
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c6
@@ -1570,10 +1699,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff83"
+    const-string/jumbo v2, "\uff83"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 158
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c7
@@ -1582,10 +1712,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff83\uff9e"
+    const-string/jumbo v2, "\uff83\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 159
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c8
@@ -1594,10 +1725,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff84"
+    const-string/jumbo v2, "\uff84"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 160
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30c9
@@ -1606,10 +1738,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff84\uff9e"
+    const-string/jumbo v2, "\uff84\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 161
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ca
@@ -1618,10 +1751,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff85"
+    const-string/jumbo v2, "\uff85"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 162
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30cb
@@ -1630,10 +1764,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff86"
+    const-string/jumbo v2, "\uff86"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 163
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30cc
@@ -1642,10 +1777,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff87"
+    const-string/jumbo v2, "\uff87"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 164
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30cd
@@ -1654,10 +1790,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff88"
+    const-string/jumbo v2, "\uff88"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 165
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ce
@@ -1666,10 +1803,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff89"
+    const-string/jumbo v2, "\uff89"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 166
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30cf
@@ -1678,10 +1816,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8a"
+    const-string/jumbo v2, "\uff8a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 167
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d0
@@ -1690,10 +1829,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8a\uff9e"
+    const-string/jumbo v2, "\uff8a\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 168
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d1
@@ -1702,10 +1842,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8a\uff9f"
+    const-string/jumbo v2, "\uff8a\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 169
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d2
@@ -1714,10 +1855,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8b"
+    const-string/jumbo v2, "\uff8b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 170
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d3
@@ -1726,10 +1868,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8b\uff9e"
+    const-string/jumbo v2, "\uff8b\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 171
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d4
@@ -1738,10 +1881,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8b\uff9f"
+    const-string/jumbo v2, "\uff8b\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 172
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d5
@@ -1750,10 +1894,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8c"
+    const-string/jumbo v2, "\uff8c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 173
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d6
@@ -1762,10 +1907,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8c\uff9e"
+    const-string/jumbo v2, "\uff8c\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 174
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d7
@@ -1774,10 +1920,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8c\uff9f"
+    const-string/jumbo v2, "\uff8c\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 175
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d8
@@ -1786,10 +1933,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8d"
+    const-string/jumbo v2, "\uff8d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 176
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30d9
@@ -1798,10 +1946,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8d\uff9e"
+    const-string/jumbo v2, "\uff8d\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 177
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30da
@@ -1810,10 +1959,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8d\uff9f"
+    const-string/jumbo v2, "\uff8d\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 178
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30db
@@ -1822,10 +1972,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8e"
+    const-string/jumbo v2, "\uff8e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 179
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30dc
@@ -1834,10 +1985,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8e\uff9e"
+    const-string/jumbo v2, "\uff8e\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 180
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30dd
@@ -1846,10 +1998,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8e\uff9f"
+    const-string/jumbo v2, "\uff8e\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 181
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30de
@@ -1858,10 +2011,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8f"
+    const-string/jumbo v2, "\uff8f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 182
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30df
@@ -1870,10 +2024,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff90"
+    const-string/jumbo v2, "\uff90"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 183
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e0
@@ -1882,10 +2037,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff91"
+    const-string/jumbo v2, "\uff91"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 184
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e1
@@ -1894,10 +2050,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff92"
+    const-string/jumbo v2, "\uff92"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 185
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e2
@@ -1906,10 +2063,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff93"
+    const-string/jumbo v2, "\uff93"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 186
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e3
@@ -1918,10 +2076,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6c"
+    const-string/jumbo v2, "\uff6c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 187
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e4
@@ -1930,10 +2089,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff94"
+    const-string/jumbo v2, "\uff94"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 188
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e5
@@ -1942,10 +2102,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6d"
+    const-string/jumbo v2, "\uff6d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 189
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e6
@@ -1954,10 +2115,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff95"
+    const-string/jumbo v2, "\uff95"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 190
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e7
@@ -1966,10 +2128,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6e"
+    const-string/jumbo v2, "\uff6e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 191
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e8
@@ -1978,10 +2141,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff96"
+    const-string/jumbo v2, "\uff96"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 192
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30e9
@@ -1990,10 +2154,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff97"
+    const-string/jumbo v2, "\uff97"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 193
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ea
@@ -2002,10 +2167,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff98"
+    const-string/jumbo v2, "\uff98"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 194
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30eb
@@ -2014,10 +2180,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff99"
+    const-string/jumbo v2, "\uff99"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 195
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ec
@@ -2026,10 +2193,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9a"
+    const-string/jumbo v2, "\uff9a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 196
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ed
@@ -2038,10 +2206,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9b"
+    const-string/jumbo v2, "\uff9b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 197
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ee
@@ -2050,10 +2219,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9c"
+    const-string/jumbo v2, "\uff9c"
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 198
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30ef
@@ -2062,10 +2232,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9c"
+    const-string/jumbo v2, "\uff9c"
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 199
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30f0
@@ -2074,10 +2245,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff72"
+    const-string/jumbo v2, "\uff72"
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 200
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30f1
@@ -2086,10 +2258,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff74"
+    const-string/jumbo v2, "\uff74"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 201
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30f2
@@ -2098,10 +2271,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff66"
+    const-string/jumbo v2, "\uff66"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 202
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30f3
@@ -2110,10 +2284,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9d"
+    const-string/jumbo v2, "\uff9d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 203
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30f4
@@ -2122,10 +2297,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff73\uff9e"
+    const-string/jumbo v2, "\uff73\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 204
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30f5
@@ -2134,10 +2310,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff76"
+    const-string/jumbo v2, "\uff76"
 
     invoke-interface {v0, v1, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 205
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30f6
@@ -2146,10 +2323,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff79"
+    const-string/jumbo v2, "\uff79"
 
     invoke-interface {v0, v1, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 206
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30fb
@@ -2158,10 +2336,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff65"
+    const-string/jumbo v2, "\uff65"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 207
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const/16 v1, 0x30fc
@@ -2170,10 +2349,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff70"
+    const-string/jumbo v2, "\uff70"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 208
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff01
@@ -2186,6 +2366,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 209
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff02
@@ -2198,6 +2379,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 210
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff03
@@ -2210,6 +2392,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 211
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff04
@@ -2222,6 +2405,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 212
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff05
@@ -2234,6 +2418,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 213
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff06
@@ -2246,6 +2431,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 214
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff07
@@ -2258,6 +2444,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 215
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff08
@@ -2270,6 +2457,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 216
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff09
@@ -2282,6 +2470,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 217
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff0a
@@ -2294,6 +2483,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 218
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff0b
@@ -2306,6 +2496,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 219
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff0c
@@ -2318,6 +2509,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 220
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff0d
@@ -2330,6 +2522,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 221
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff0e
@@ -2342,6 +2535,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 222
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff0f
@@ -2354,6 +2548,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 223
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff10
@@ -2366,6 +2561,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 224
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff11
@@ -2378,6 +2574,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 225
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff12
@@ -2390,6 +2587,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 226
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff13
@@ -2402,6 +2600,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 227
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff14
@@ -2414,6 +2613,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 228
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff15
@@ -2426,6 +2626,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 229
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff16
@@ -2438,6 +2639,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 230
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff17
@@ -2450,6 +2652,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 231
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff18
@@ -2462,6 +2665,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 232
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff19
@@ -2474,6 +2678,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 233
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff1a
@@ -2486,6 +2691,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 234
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff1b
@@ -2498,6 +2704,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 235
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff1c
@@ -2510,6 +2717,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 236
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff1d
@@ -2522,6 +2730,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 237
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff1e
@@ -2534,6 +2743,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 238
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff1f
@@ -2546,6 +2756,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 239
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff20
@@ -2558,6 +2769,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 240
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff21
@@ -2570,6 +2782,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 241
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff22
@@ -2582,6 +2795,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 242
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff23
@@ -2594,6 +2808,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 243
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff24
@@ -2606,6 +2821,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 244
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff25
@@ -2618,6 +2834,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 245
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff26
@@ -2630,6 +2847,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 246
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff27
@@ -2642,6 +2860,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 247
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff28
@@ -2654,6 +2873,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 248
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff29
@@ -2666,6 +2886,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 249
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff2a
@@ -2678,6 +2899,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 250
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff2b
@@ -2690,6 +2912,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 251
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff2c
@@ -2702,6 +2925,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 252
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff2d
@@ -2714,6 +2938,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 253
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff2e
@@ -2726,6 +2951,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 254
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff2f
@@ -2738,6 +2964,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 255
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff30
@@ -2750,6 +2977,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 256
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff31
@@ -2762,6 +2990,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 257
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff32
@@ -2774,6 +3003,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 258
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff33
@@ -2786,6 +3016,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 259
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff34
@@ -2798,6 +3029,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 260
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff35
@@ -2810,6 +3042,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 261
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff36
@@ -2822,6 +3055,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 262
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff37
@@ -2834,6 +3068,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 263
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff38
@@ -2846,6 +3081,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 264
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff39
@@ -2858,6 +3094,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 265
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff3a
@@ -2870,6 +3107,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 266
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff3b
@@ -2882,6 +3120,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 267
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff3c
@@ -2894,6 +3133,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 268
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff3d
@@ -2906,6 +3146,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 269
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff3e
@@ -2918,6 +3159,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 270
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff3f
@@ -2930,6 +3172,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 271
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff41
@@ -2942,6 +3185,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 272
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff42
@@ -2954,6 +3198,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 273
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff43
@@ -2966,6 +3211,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 274
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff44
@@ -2978,6 +3224,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 275
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff45
@@ -2990,6 +3237,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 276
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff46
@@ -3002,6 +3250,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 277
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff47
@@ -3014,6 +3263,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 278
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff48
@@ -3026,6 +3276,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 279
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff49
@@ -3038,6 +3289,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 280
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff4a
@@ -3050,6 +3302,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 281
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff4b
@@ -3062,6 +3315,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 282
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff4c
@@ -3074,6 +3328,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 283
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff4d
@@ -3086,6 +3341,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 284
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff4e
@@ -3098,6 +3354,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 285
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff4f
@@ -3106,10 +3363,11 @@
 
     move-result-object v1
 
-    const-string v2, "o"
+    const-string/jumbo v2, "o"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 286
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff50
@@ -3118,10 +3376,11 @@
 
     move-result-object v1
 
-    const-string v2, "p"
+    const-string/jumbo v2, "p"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 287
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff51
@@ -3130,10 +3389,11 @@
 
     move-result-object v1
 
-    const-string v2, "q"
+    const-string/jumbo v2, "q"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 288
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff52
@@ -3142,10 +3402,11 @@
 
     move-result-object v1
 
-    const-string v2, "r"
+    const-string/jumbo v2, "r"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 289
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff53
@@ -3154,10 +3415,11 @@
 
     move-result-object v1
 
-    const-string v2, "s"
+    const-string/jumbo v2, "s"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 290
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff54
@@ -3166,10 +3428,11 @@
 
     move-result-object v1
 
-    const-string v2, "t"
+    const-string/jumbo v2, "t"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 291
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff55
@@ -3178,10 +3441,11 @@
 
     move-result-object v1
 
-    const-string v2, "u"
+    const-string/jumbo v2, "u"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 292
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff56
@@ -3190,10 +3454,11 @@
 
     move-result-object v1
 
-    const-string v2, "v"
+    const-string/jumbo v2, "v"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 293
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff57
@@ -3202,10 +3467,11 @@
 
     move-result-object v1
 
-    const-string v2, "w"
+    const-string/jumbo v2, "w"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 294
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff58
@@ -3214,10 +3480,11 @@
 
     move-result-object v1
 
-    const-string v2, "x"
+    const-string/jumbo v2, "x"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 295
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff59
@@ -3226,10 +3493,11 @@
 
     move-result-object v1
 
-    const-string v2, "y"
+    const-string/jumbo v2, "y"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 296
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff5a
@@ -3238,10 +3506,11 @@
 
     move-result-object v1
 
-    const-string v2, "z"
+    const-string/jumbo v2, "z"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 297
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff5b
@@ -3250,10 +3519,11 @@
 
     move-result-object v1
 
-    const-string v2, "{"
+    const-string/jumbo v2, "{"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 298
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff5c
@@ -3262,10 +3532,11 @@
 
     move-result-object v1
 
-    const-string v2, "|"
+    const-string/jumbo v2, "|"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 299
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff5d
@@ -3274,10 +3545,11 @@
 
     move-result-object v1
 
-    const-string v2, "}"
+    const-string/jumbo v2, "}"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 300
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff5e
@@ -3286,10 +3558,11 @@
 
     move-result-object v1
 
-    const-string v2, "~"
+    const-string/jumbo v2, "~"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 301
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff61
@@ -3298,10 +3571,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff61"
+    const-string/jumbo v2, "\uff61"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 302
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff62
@@ -3310,10 +3584,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff62"
+    const-string/jumbo v2, "\uff62"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 303
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff63
@@ -3322,10 +3597,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff63"
+    const-string/jumbo v2, "\uff63"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 304
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff64
@@ -3334,10 +3610,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff64"
+    const-string/jumbo v2, "\uff64"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 305
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff65
@@ -3346,10 +3623,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff65"
+    const-string/jumbo v2, "\uff65"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 306
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff66
@@ -3358,10 +3636,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff66"
+    const-string/jumbo v2, "\uff66"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 307
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff67
@@ -3370,10 +3649,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff67"
+    const-string/jumbo v2, "\uff67"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 308
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff68
@@ -3382,10 +3662,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff68"
+    const-string/jumbo v2, "\uff68"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 309
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff69
@@ -3394,10 +3675,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff69"
+    const-string/jumbo v2, "\uff69"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 310
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff6a
@@ -3406,10 +3688,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6a"
+    const-string/jumbo v2, "\uff6a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 311
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff6b
@@ -3418,10 +3701,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6b"
+    const-string/jumbo v2, "\uff6b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 312
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff6c
@@ -3430,10 +3714,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6c"
+    const-string/jumbo v2, "\uff6c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 313
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff6d
@@ -3442,10 +3727,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6d"
+    const-string/jumbo v2, "\uff6d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 314
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff6e
@@ -3454,10 +3740,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6e"
+    const-string/jumbo v2, "\uff6e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 315
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff6f
@@ -3466,10 +3753,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff6f"
+    const-string/jumbo v2, "\uff6f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 316
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff70
@@ -3478,10 +3766,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff70"
+    const-string/jumbo v2, "\uff70"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 317
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff71
@@ -3490,10 +3779,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff71"
+    const-string/jumbo v2, "\uff71"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 318
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff72
@@ -3502,10 +3792,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff72"
+    const-string/jumbo v2, "\uff72"
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 319
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff73
@@ -3514,10 +3805,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff73"
+    const-string/jumbo v2, "\uff73"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 320
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff74
@@ -3526,10 +3818,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff74"
+    const-string/jumbo v2, "\uff74"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 321
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff75
@@ -3538,10 +3831,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff75"
+    const-string/jumbo v2, "\uff75"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 322
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff76
@@ -3550,10 +3844,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff76"
+    const-string/jumbo v2, "\uff76"
 
     invoke-interface {v0, v1, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 323
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff77
@@ -3562,10 +3857,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff77"
+    const-string/jumbo v2, "\uff77"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 324
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff78
@@ -3574,10 +3870,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff78"
+    const-string/jumbo v2, "\uff78"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 325
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff79
@@ -3586,10 +3883,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff79"
+    const-string/jumbo v2, "\uff79"
 
     invoke-interface {v0, v1, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 326
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff7a
@@ -3598,10 +3896,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7a"
+    const-string/jumbo v2, "\uff7a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 327
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff7b
@@ -3610,10 +3909,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7b"
+    const-string/jumbo v2, "\uff7b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 328
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff7c
@@ -3622,10 +3922,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7c"
+    const-string/jumbo v2, "\uff7c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 329
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff7d
@@ -3634,10 +3935,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7d"
+    const-string/jumbo v2, "\uff7d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 330
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff7e
@@ -3646,10 +3948,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7e"
+    const-string/jumbo v2, "\uff7e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 331
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff7f
@@ -3658,10 +3961,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff7f"
+    const-string/jumbo v2, "\uff7f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 332
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff80
@@ -3670,10 +3974,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff80"
+    const-string/jumbo v2, "\uff80"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 333
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff81
@@ -3682,10 +3987,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff81"
+    const-string/jumbo v2, "\uff81"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 334
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff82
@@ -3694,10 +4000,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff82"
+    const-string/jumbo v2, "\uff82"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 335
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff83
@@ -3706,10 +4013,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff83"
+    const-string/jumbo v2, "\uff83"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 336
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff84
@@ -3718,10 +4026,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff84"
+    const-string/jumbo v2, "\uff84"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 337
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff85
@@ -3730,10 +4039,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff85"
+    const-string/jumbo v2, "\uff85"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 338
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff86
@@ -3742,10 +4052,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff86"
+    const-string/jumbo v2, "\uff86"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 339
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff87
@@ -3754,10 +4065,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff87"
+    const-string/jumbo v2, "\uff87"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 340
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff88
@@ -3766,10 +4078,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff88"
+    const-string/jumbo v2, "\uff88"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 341
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff89
@@ -3778,10 +4091,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff89"
+    const-string/jumbo v2, "\uff89"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 342
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff8a
@@ -3790,10 +4104,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8a"
+    const-string/jumbo v2, "\uff8a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 343
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff8b
@@ -3802,10 +4117,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8b"
+    const-string/jumbo v2, "\uff8b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 344
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff8c
@@ -3814,10 +4130,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8c"
+    const-string/jumbo v2, "\uff8c"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 345
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff8d
@@ -3826,10 +4143,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8d"
+    const-string/jumbo v2, "\uff8d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 346
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff8e
@@ -3838,10 +4156,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8e"
+    const-string/jumbo v2, "\uff8e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 347
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff8f
@@ -3850,10 +4169,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff8f"
+    const-string/jumbo v2, "\uff8f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 348
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff90
@@ -3862,10 +4182,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff90"
+    const-string/jumbo v2, "\uff90"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 349
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff91
@@ -3874,10 +4195,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff91"
+    const-string/jumbo v2, "\uff91"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 350
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff92
@@ -3886,10 +4208,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff92"
+    const-string/jumbo v2, "\uff92"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 351
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff93
@@ -3898,10 +4221,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff93"
+    const-string/jumbo v2, "\uff93"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 352
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff94
@@ -3910,10 +4234,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff94"
+    const-string/jumbo v2, "\uff94"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 353
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff95
@@ -3922,10 +4247,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff95"
+    const-string/jumbo v2, "\uff95"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 354
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff96
@@ -3934,10 +4260,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff96"
+    const-string/jumbo v2, "\uff96"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 355
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff97
@@ -3946,10 +4273,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff97"
+    const-string/jumbo v2, "\uff97"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 356
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff98
@@ -3958,10 +4286,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff98"
+    const-string/jumbo v2, "\uff98"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 357
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff99
@@ -3970,10 +4299,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff99"
+    const-string/jumbo v2, "\uff99"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 358
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff9a
@@ -3982,10 +4312,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9a"
+    const-string/jumbo v2, "\uff9a"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 359
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff9b
@@ -3994,10 +4325,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9b"
+    const-string/jumbo v2, "\uff9b"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 360
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff9c
@@ -4006,10 +4338,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9c"
+    const-string/jumbo v2, "\uff9c"
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 361
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff9d
@@ -4018,10 +4351,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9d"
+    const-string/jumbo v2, "\uff9d"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 362
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff9e
@@ -4030,10 +4364,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9e"
+    const-string/jumbo v2, "\uff9e"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 363
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xff9f
@@ -4042,10 +4377,11 @@
 
     move-result-object v1
 
-    const-string v2, "\uff9f"
+    const-string/jumbo v2, "\uff9f"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 364
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     const v1, 0xffe5
@@ -4058,6 +4394,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 365
     return-void
 .end method
 
@@ -4065,6 +4402,7 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -4075,6 +4413,7 @@
     .parameter "ch"
 
     .prologue
+    .line 373
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
@@ -4087,6 +4426,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 374
     sget-object v0, Landroid/pim/vcard/JapaneseUtils;->sHalfWidthMap:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
@@ -4102,6 +4442,7 @@
 
     move-object v0, p0
 
+    .line 376
     :goto_0
     return-object v0
 

@@ -36,6 +36,7 @@
     .parameter
 
     .prologue
+    .line 6218
     iput-object p1, p0, Lcom/android/server/PackageManagerService$7;->this$0:Lcom/android/server/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/PackageManagerService$7;->val$packageName:Ljava/lang/String;
@@ -59,14 +60,17 @@
 
     const-string v7, "PackageManager"
 
+    .line 6220
     iget-object v3, p0, Lcom/android/server/PackageManagerService$7;->this$0:Lcom/android/server/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/PackageManagerService;->mHandler:Lcom/android/server/PackageManagerService$PackageHandler;
 
     invoke-virtual {v3, p0}, Lcom/android/server/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    .line 6222
     const/4 v2, 0x0
 
+    .line 6223
     .local v2, succeded:Z
     new-instance v0, Lcom/android/server/enterprise/ApplicationPolicy;
 
@@ -76,6 +80,7 @@
 
     invoke-direct {v0, v3}, Lcom/android/server/enterprise/ApplicationPolicy;-><init>(Landroid/content/Context;)V
 
+    .line 6224
     .local v0, dmAppMgr:Lcom/android/server/enterprise/ApplicationPolicy;
     iget-object v3, p0, Lcom/android/server/PackageManagerService$7;->val$packageName:Ljava/lang/String;
 
@@ -85,19 +90,23 @@
 
     if-nez v3, :cond_1
 
+    .line 6225
     const-string v3, "PackageManager"
 
     const-string v3, "This app uninstallation is not allowed"
 
     invoke-static {v7, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6226
     const/4 v2, 0x0
 
+    .line 6232
     :goto_0
     iget-object v3, p0, Lcom/android/server/PackageManagerService$7;->val$observer:Landroid/content/pm/IPackageDeleteObserver;
 
     if-eqz v3, :cond_0
 
+    .line 6234
     :try_start_0
     iget-object v3, p0, Lcom/android/server/PackageManagerService$7;->val$observer:Landroid/content/pm/IPackageDeleteObserver;
 
@@ -105,10 +114,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 6239
     :cond_0
     :goto_1
     return-void
 
+    .line 6229
     :cond_1
     iget-object v3, p0, Lcom/android/server/PackageManagerService$7;->this$0:Lcom/android/server/PackageManagerService;
 
@@ -123,11 +134,13 @@
 
     goto :goto_0
 
+    .line 6235
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 6236
     .local v1, e:Landroid/os/RemoteException;
     const-string v3, "PackageManager"
 

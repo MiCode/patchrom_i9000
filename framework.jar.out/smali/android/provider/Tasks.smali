@@ -54,6 +54,7 @@
     .locals 1
 
     .prologue
+    .line 64
     const-string v0, "content://tasks"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -62,6 +63,7 @@
 
     sput-object v0, Landroid/provider/Tasks;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 66
     const-string v0, "content://tasks/tasks"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -70,6 +72,7 @@
 
     sput-object v0, Landroid/provider/Tasks;->TASK_CONTENT_URI:Landroid/net/Uri;
 
+    .line 71
     const-string v0, "content://tasks/UpdatedTasks"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -78,6 +81,7 @@
 
     sput-object v0, Landroid/provider/Tasks;->UPDATED_CONTENT_URI:Landroid/net/Uri;
 
+    .line 74
     const-string v0, "content://tasks/DeletedTasks"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -86,6 +90,7 @@
 
     sput-object v0, Landroid/provider/Tasks;->DELETED_CONTENT_URI:Landroid/net/Uri;
 
+    .line 77
     const-string v0, "content://tasks/syncTasks"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -94,6 +99,7 @@
 
     sput-object v0, Landroid/provider/Tasks;->SYNCHED_TASKS_CONTENT_URI:Landroid/net/Uri;
 
+    .line 80
     const-string v0, "content://tasks/TasksAccounts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -109,7 +115,9 @@
     .locals 0
 
     .prologue
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 248
     return-void
 .end method

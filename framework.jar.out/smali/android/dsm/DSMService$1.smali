@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 699
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,35 +35,42 @@
     .parameter "location"
 
     .prologue
+    .line 701
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v5
 
+    .line 702
     .local v5, latitute:D
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v7
 
+    .line 703
     .local v7, longitude:D
     invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v1
 
+    .line 704
     .local v1, Altitute:D
     invoke-virtual {p1}, Landroid/location/Location;->getBearing()F
 
     move-result v3
 
+    .line 705
     .local v3, Bearing:F
     invoke-virtual {p1}, Landroid/location/Location;->getSpeed()F
 
     move-result v4
 
+    .line 706
     .local v4, Speed:F
     invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v0
 
+    .line 708
     .local v0, Accuracy:F
     const-string v9, "DSMSVC"
 
@@ -136,8 +144,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 710
     sput-object p1, Landroid/dsm/DSMService;->Gloc:Landroid/location/Location;
 
+    .line 711
     return-void
 .end method
 
@@ -146,6 +156,7 @@
     .parameter "provider"
 
     .prologue
+    .line 714
     return-void
 .end method
 
@@ -154,6 +165,7 @@
     .parameter "provider"
 
     .prologue
+    .line 717
     return-void
 .end method
 
@@ -164,5 +176,6 @@
     .parameter "extras"
 
     .prologue
+    .line 720
     return-void
 .end method

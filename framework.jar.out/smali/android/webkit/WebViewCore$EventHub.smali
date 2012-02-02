@@ -245,16 +245,19 @@
     .parameter
 
     .prologue
+    .line 1101
     iput-object p1, p0, Landroid/webkit/WebViewCore$EventHub;->this$0:Landroid/webkit/WebViewCore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1090
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
+    .line 1101
     return-void
 .end method
 
@@ -264,6 +267,7 @@
     .parameter "x1"
 
     .prologue
+    .line 943
     invoke-direct {p0, p1}, Landroid/webkit/WebViewCore$EventHub;-><init>(Landroid/webkit/WebViewCore;)V
 
     return-void
@@ -276,6 +280,7 @@
     .parameter "x2"
 
     .prologue
+    .line 943
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/WebViewCore$EventHub;->sendMessageDelayed(Landroid/os/Message;J)V
 
     return-void
@@ -287,6 +292,7 @@
     .parameter "x1"
 
     .prologue
+    .line 943
     invoke-direct {p0, p1}, Landroid/webkit/WebViewCore$EventHub;->removeMessages(I)V
 
     return-void
@@ -297,6 +303,7 @@
     .parameter "x0"
 
     .prologue
+    .line 943
     invoke-direct {p0}, Landroid/webkit/WebViewCore$EventHub;->removeMessages()V
 
     return-void
@@ -308,6 +315,7 @@
     .parameter "x1"
 
     .prologue
+    .line 943
     invoke-direct {p0, p1}, Landroid/webkit/WebViewCore$EventHub;->hasMessages(I)Z
 
     move-result v0
@@ -320,6 +328,7 @@
     .parameter "x0"
 
     .prologue
+    .line 943
     invoke-direct {p0}, Landroid/webkit/WebViewCore$EventHub;->blockMessages()V
 
     return-void
@@ -330,6 +339,7 @@
     .parameter "x0"
 
     .prologue
+    .line 943
     invoke-direct {p0}, Landroid/webkit/WebViewCore$EventHub;->transferMessages()V
 
     return-void
@@ -340,6 +350,7 @@
     .parameter "x0"
 
     .prologue
+    .line 943
     iget v0, p0, Landroid/webkit/WebViewCore$EventHub;->mSavedPriority:I
 
     return v0
@@ -351,6 +362,7 @@
     .parameter "x1"
 
     .prologue
+    .line 943
     iput p1, p0, Landroid/webkit/WebViewCore$EventHub;->mSavedPriority:I
 
     return p1
@@ -361,6 +373,7 @@
     .parameter "x0"
 
     .prologue
+    .line 943
     iget v0, p0, Landroid/webkit/WebViewCore$EventHub;->mTid:I
 
     return v0
@@ -372,6 +385,7 @@
     .parameter "x1"
 
     .prologue
+    .line 943
     invoke-direct {p0, p1}, Landroid/webkit/WebViewCore$EventHub;->sendMessage(Landroid/os/Message;)V
 
     return-void
@@ -383,6 +397,7 @@
     .parameter "x1"
 
     .prologue
+    .line 943
     invoke-direct {p0, p1}, Landroid/webkit/WebViewCore$EventHub;->sendMessageAtFrontOfQueue(Landroid/os/Message;)V
 
     return-void
@@ -392,6 +407,7 @@
     .locals 1
 
     .prologue
+    .line 2008
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -401,10 +417,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2009
     monitor-exit p0
 
     return-void
 
+    .line 2008
     :catchall_0
     move-exception v0
 
@@ -420,6 +438,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 1958
     monitor-enter p0
 
     :try_start_0
@@ -431,18 +450,21 @@
 
     move v0, v2
 
+    .line 1965
     :goto_0
     monitor-exit p0
 
     return v0
 
+    .line 1961
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    const-string v0, "webcore"
+    .line 1962
+    const-string/jumbo v0, "webcore"
 
     const-string v1, "hasMessages() is not supported in this case."
 
@@ -450,8 +472,10 @@
 
     move v0, v2
 
+    .line 1963
     goto :goto_0
 
+    .line 1965
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mHandler:Landroid/os/Handler;
 
@@ -463,6 +487,7 @@
 
     goto :goto_0
 
+    .line 1958
     :catchall_0
     move-exception v0
 
@@ -475,6 +500,7 @@
     .locals 2
 
     .prologue
+    .line 1995
     monitor-enter p0
 
     :try_start_0
@@ -485,6 +511,7 @@
     #setter for: Landroid/webkit/WebViewCore;->mDrawIsScheduled:Z
     invoke-static {v0, v1}, Landroid/webkit/WebViewCore;->access$9702(Landroid/webkit/WebViewCore;Z)Z
 
+    .line 1996
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->this$0:Landroid/webkit/WebViewCore;
 
     const/4 v1, 0x0
@@ -492,21 +519,25 @@
     #setter for: Landroid/webkit/WebViewCore;->mSplitPictureIsScheduled:Z
     invoke-static {v0, v1}, Landroid/webkit/WebViewCore;->access$8502(Landroid/webkit/WebViewCore;Z)Z
 
+    .line 1997
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
+    .line 1998
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2002
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 2000
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mHandler:Landroid/os/Handler;
@@ -519,6 +550,7 @@
 
     goto :goto_0
 
+    .line 1995
     :catchall_0
     move-exception v0
 
@@ -532,6 +564,7 @@
     .parameter "what"
 
     .prologue
+    .line 1944
     monitor-enter p0
 
     :try_start_0
@@ -541,16 +574,19 @@
 
     if-eqz v0, :cond_0
 
+    .line 1955
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 1947
     :cond_0
     const/16 v0, 0x82
 
     if-ne p1, v0, :cond_1
 
+    .line 1948
     :try_start_1
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->this$0:Landroid/webkit/WebViewCore;
 
@@ -559,12 +595,14 @@
     #setter for: Landroid/webkit/WebViewCore;->mDrawIsScheduled:Z
     invoke-static {v0, v1}, Landroid/webkit/WebViewCore;->access$9702(Landroid/webkit/WebViewCore;Z)Z
 
+    .line 1950
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_2
 
-    const-string v0, "webcore"
+    .line 1951
+    const-string/jumbo v0, "webcore"
 
     const-string v1, "Not supported in this case."
 
@@ -574,6 +612,7 @@
 
     goto :goto_0
 
+    .line 1944
     :catchall_0
     move-exception v0
 
@@ -581,6 +620,7 @@
 
     throw v0
 
+    .line 1953
     :cond_2
     :try_start_2
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mHandler:Landroid/os/Handler;
@@ -597,6 +637,7 @@
     .parameter "msg"
 
     .prologue
+    .line 1933
     monitor-enter p0
 
     :try_start_0
@@ -606,17 +647,20 @@
 
     if-eqz v0, :cond_0
 
+    .line 1941
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 1936
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
+    .line 1937
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -625,6 +669,7 @@
 
     goto :goto_0
 
+    .line 1933
     :catchall_0
     move-exception v0
 
@@ -632,6 +677,7 @@
 
     throw v0
 
+    .line 1939
     :cond_1
     :try_start_2
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mHandler:Landroid/os/Handler;
@@ -648,6 +694,7 @@
     .parameter "msg"
 
     .prologue
+    .line 1980
     monitor-enter p0
 
     :try_start_0
@@ -657,17 +704,20 @@
 
     if-eqz v0, :cond_0
 
+    .line 1988
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 1983
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
+    .line 1984
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -678,6 +728,7 @@
 
     goto :goto_0
 
+    .line 1980
     :catchall_0
     move-exception v0
 
@@ -685,6 +736,7 @@
 
     throw v0
 
+    .line 1986
     :cond_1
     :try_start_2
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mHandler:Landroid/os/Handler;
@@ -702,6 +754,7 @@
     .parameter "delay"
 
     .prologue
+    .line 1970
     monitor-enter p0
 
     :try_start_0
@@ -711,11 +764,13 @@
 
     if-eqz v0, :cond_0
 
+    .line 1974
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 1973
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/webkit/WebViewCore$EventHub;->mHandler:Landroid/os/Handler;
@@ -726,6 +781,7 @@
 
     goto :goto_0
 
+    .line 1970
     :catchall_0
     move-exception v0
 
@@ -738,12 +794,14 @@
     .locals 4
 
     .prologue
+    .line 1107
     invoke-static {}, Landroid/os/Process;->myTid()I
 
     move-result v2
 
     iput v2, p0, Landroid/webkit/WebViewCore$EventHub;->mTid:I
 
+    .line 1108
     iget v2, p0, Landroid/webkit/WebViewCore$EventHub;->mTid:I
 
     invoke-static {v2}, Landroid/os/Process;->getThreadPriority(I)I
@@ -752,14 +810,17 @@
 
     iput v2, p0, Landroid/webkit/WebViewCore$EventHub;->mSavedPriority:I
 
+    .line 1110
     new-instance v2, Landroid/webkit/WebViewCore$EventHub$1;
 
     invoke-direct {v2, p0}, Landroid/webkit/WebViewCore$EventHub$1;-><init>(Landroid/webkit/WebViewCore$EventHub;)V
 
     iput-object v2, p0, Landroid/webkit/WebViewCore$EventHub;->mHandler:Landroid/os/Handler;
 
+    .line 1920
     monitor-enter p0
 
+    .line 1921
     :try_start_0
     iget-object v2, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
@@ -767,6 +828,7 @@
 
     move-result v1
 
+    .line 1922
     .local v1, size:I
     const/4 v0, 0x0
 
@@ -774,6 +836,7 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
+    .line 1923
     iget-object v3, p0, Landroid/webkit/WebViewCore$EventHub;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
@@ -786,19 +849,24 @@
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 1922
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 1925
     :cond_0
     const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/webkit/WebViewCore$EventHub;->mMessages:Ljava/util/ArrayList;
 
+    .line 1926
     monitor-exit p0
 
+    .line 1927
     return-void
 
+    .line 1926
     .end local v0           #i:I
     .end local v1           #size:I
     :catchall_0

@@ -12,6 +12,7 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,9 +32,11 @@
     .end annotation
 
     .prologue
+    .line 31
     iget v0, p0, Landroid/graphics/DrawFilter;->mNativeInt:I
 
     invoke-static {v0}, Landroid/graphics/DrawFilter;->nativeDestructor(I)V
 
+    .line 32
     return-void
 .end method

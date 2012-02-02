@@ -27,12 +27,16 @@
     .parameter "isStarted"
 
     .prologue
+    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 86
     iput-object p1, p0, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
 
+    .line 87
     iput-boolean p2, p0, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
 
+    .line 88
     return-void
 .end method
 
@@ -41,6 +45,7 @@
     .parameter "x0"
 
     .prologue
+    .line 81
     iget-boolean v0, p0, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
 
     return v0
@@ -52,6 +57,7 @@
     .parameter "x1"
 
     .prologue
+    .line 81
     iput-boolean p1, p0, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
 
     return p1
@@ -62,6 +68,7 @@
     .parameter "x0"
 
     .prologue
+    .line 81
     iget-object v0, p0, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
 
     return-object v0

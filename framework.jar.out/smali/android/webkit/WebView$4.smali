@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 1709
     iput-object p1, p0, Landroid/webkit/WebView$4;->this$0:Landroid/webkit/WebView;
 
     iput-object p2, p0, Landroid/webkit/WebView$4;->val$neverRemember:Landroid/os/Message;
@@ -47,9 +48,11 @@
     .parameter "which"
 
     .prologue
+    .line 1711
     iget-object v0, p0, Landroid/webkit/WebView$4;->val$neverRemember:Landroid/os/Message;
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 1712
     return-void
 .end method

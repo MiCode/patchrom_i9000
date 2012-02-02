@@ -52,6 +52,7 @@
 
     const/4 v2, 0x0
 
+    .line 50
     new-instance v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
     const-string v1, "eMSGSMS_CB_MSG_CBS"
@@ -60,6 +61,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;->eMSGSMS_CB_MSG_CBS:Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
+    .line 51
     new-instance v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
     const-string v1, "eMSGSMS_CB_MSG_SCHEDULE"
@@ -68,6 +70,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;->eMSGSMS_CB_MSG_SCHEDULE:Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
+    .line 52
     new-instance v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
     const-string v1, "eMSGSMS_CB_MSG_CBS41"
@@ -76,6 +79,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;->eMSGSMS_CB_MSG_CBS41:Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
+    .line 53
     new-instance v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
     const-string v1, "eMSGSMS_CB_MSG_JAVACBS"
@@ -84,6 +88,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;->eMSGSMS_CB_MSG_JAVACBS:Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
+    .line 54
     new-instance v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
     const-string v1, "eMSGSMS_CB_MSG_INVALID"
@@ -92,6 +97,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;->eMSGSMS_CB_MSG_INVALID:Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
+    .line 49
     const/4 v0, 0x5
 
     new-array v0, v0, [Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
@@ -132,6 +138,7 @@
     .end annotation
 
     .prologue
+    .line 49
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,6 +149,7 @@
     .parameter "name"
 
     .prologue
+    .line 49
     const-class v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,6 +166,7 @@
     .locals 1
 
     .prologue
+    .line 49
     sget-object v0, Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;->$VALUES:[Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;
 
     invoke-virtual {v0}, [Landroid/telephony/gsm/CbMessage$EMSGSMS_CBMSG_TYPE;->clone()Ljava/lang/Object;

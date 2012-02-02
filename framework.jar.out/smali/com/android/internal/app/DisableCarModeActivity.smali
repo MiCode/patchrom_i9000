@@ -12,6 +12,7 @@
     .locals 0
 
     .prologue
+    .line 27
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -24,10 +25,12 @@
     .parameter "savedInstanceState"
 
     .prologue
+    .line 32
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    .line 34
     :try_start_0
-    const-string v2, "uimode"
+    const-string/jumbo v2, "uimode"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -37,6 +40,7 @@
 
     move-result-object v1
 
+    .line 36
     .local v1, uiModeManager:Landroid/app/IUiModeManager;
     const/4 v2, 0x1
 
@@ -44,17 +48,21 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 40
     .end local v1           #uiModeManager:Landroid/app/IUiModeManager;
     :goto_0
     invoke-virtual {p0}, Lcom/android/internal/app/DisableCarModeActivity;->finish()V
 
+    .line 41
     return-void
 
+    .line 37
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 38
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "DisableCarModeActivity"
 

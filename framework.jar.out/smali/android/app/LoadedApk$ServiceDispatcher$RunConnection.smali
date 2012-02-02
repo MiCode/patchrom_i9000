@@ -36,16 +36,21 @@
     .parameter "command"
 
     .prologue
+    .line 1073
     iput-object p1, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->this$0:Landroid/app/LoadedApk$ServiceDispatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1074
     iput-object p2, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->mName:Landroid/content/ComponentName;
 
+    .line 1075
     iput-object p3, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->mService:Landroid/os/IBinder;
 
+    .line 1076
     iput p4, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->mCommand:I
 
+    .line 1077
     return-void
 .end method
 
@@ -55,10 +60,12 @@
     .locals 3
 
     .prologue
+    .line 1080
     iget v0, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->mCommand:I
 
     if-nez v0, :cond_1
 
+    .line 1081
     iget-object v0, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->this$0:Landroid/app/LoadedApk$ServiceDispatcher;
 
     iget-object v1, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->mName:Landroid/content/ComponentName;
@@ -67,10 +74,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/LoadedApk$ServiceDispatcher;->doConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
 
+    .line 1085
     :cond_0
     :goto_0
     return-void
 
+    .line 1082
     :cond_1
     iget v0, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->mCommand:I
 
@@ -78,6 +87,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 1083
     iget-object v0, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->this$0:Landroid/app/LoadedApk$ServiceDispatcher;
 
     iget-object v1, p0, Landroid/app/LoadedApk$ServiceDispatcher$RunConnection;->mName:Landroid/content/ComponentName;

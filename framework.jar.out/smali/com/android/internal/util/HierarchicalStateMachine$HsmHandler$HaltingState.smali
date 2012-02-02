@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 522
     iput-object p1, p0, Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler$HaltingState;->this$0:Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler;
 
     invoke-direct {p0}, Lcom/android/internal/util/HierarchicalState;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 522
     invoke-direct {p0, p1}, Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler$HaltingState;-><init>(Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler;)V
 
     return-void
@@ -49,6 +51,7 @@
     .parameter "msg"
 
     .prologue
+    .line 525
     iget-object v0, p0, Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler$HaltingState;->this$0:Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler;
 
     #getter for: Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler;->mHsm:Lcom/android/internal/util/HierarchicalStateMachine;
@@ -58,6 +61,7 @@
 
     invoke-virtual {v0, p1}, Lcom/android/internal/util/HierarchicalStateMachine;->haltedProcessMessage(Landroid/os/Message;)V
 
+    .line 526
     const/4 v0, 0x1
 
     return v0

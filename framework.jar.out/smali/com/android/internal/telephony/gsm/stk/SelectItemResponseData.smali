@@ -13,10 +13,13 @@
     .parameter "id"
 
     .prologue
+    .line 39
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/stk/ResponseData;-><init>()V
 
+    .line 40
     iput p1, p0, Lcom/android/internal/telephony/gsm/stk/SelectItemResponseData;->id:I
 
+    .line 41
     return-void
 .end method
 
@@ -27,6 +30,7 @@
     .parameter "buf"
 
     .prologue
+    .line 46
     sget-object v1, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->ITEM_ID:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->value()I
@@ -35,16 +39,20 @@
 
     or-int/lit16 v0, v1, 0x80
 
+    .line 47
     .local v0, tag:I
     invoke-virtual {p1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
+    .line 48
     const/4 v1, 0x1
 
     invoke-virtual {p1, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
+    .line 49
     iget v1, p0, Lcom/android/internal/telephony/gsm/stk/SelectItemResponseData;->id:I
 
     invoke-virtual {p1, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
+    .line 50
     return-void
 .end method

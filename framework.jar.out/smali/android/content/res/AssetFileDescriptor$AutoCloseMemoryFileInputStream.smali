@@ -34,26 +34,30 @@
     .end annotation
 
     .prologue
+    .line 297
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
 
+    .line 298
     iput-object p1, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mParcelFd:Landroid/os/ParcelFileDescriptor;
 
+    .line 299
     new-instance v0, Landroid/os/MemoryFile;
 
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v1
 
-    const-string v2, "r"
+    const-string/jumbo v2, "r"
 
     invoke-direct {v0, v1, p2, v2}, Landroid/os/MemoryFile;-><init>(Ljava/io/FileDescriptor;ILjava/lang/String;)V
 
     iput-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mFile:Landroid/os/MemoryFile;
 
+    .line 300
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mFile:Landroid/os/MemoryFile;
 
     invoke-virtual {v0}, Landroid/os/MemoryFile;->getInputStream()Ljava/io/InputStream;
@@ -62,6 +66,7 @@
 
     iput-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mStream:Ljava/io/InputStream;
 
+    .line 301
     return-void
 .end method
 
@@ -76,6 +81,7 @@
     .end annotation
 
     .prologue
+    .line 305
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mStream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->available()I
@@ -94,18 +100,22 @@
     .end annotation
 
     .prologue
+    .line 310
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mParcelFd:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
 
+    .line 314
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mFile:Landroid/os/MemoryFile;
 
     invoke-virtual {v0}, Landroid/os/MemoryFile;->close()V
 
+    .line 315
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mStream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
+    .line 316
     return-void
 .end method
 
@@ -113,6 +123,7 @@
     .locals 1
 
     .prologue
+    .line 320
     const/4 v0, 0x0
 
     return-object v0
@@ -127,6 +138,7 @@
     .end annotation
 
     .prologue
+    .line 325
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mStream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -146,6 +158,7 @@
     .end annotation
 
     .prologue
+    .line 335
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mStream:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->read([B)I
@@ -167,6 +180,7 @@
     .end annotation
 
     .prologue
+    .line 330
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mStream:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
@@ -186,6 +200,7 @@
     .end annotation
 
     .prologue
+    .line 340
     iget-object v0, p0, Landroid/content/res/AssetFileDescriptor$AutoCloseMemoryFileInputStream;->mStream:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J

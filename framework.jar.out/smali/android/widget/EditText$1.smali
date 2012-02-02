@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 103
     iput-object p1, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -38,10 +39,12 @@
     .parameter "e"
 
     .prologue
+    .line 112
     iget-object v0, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->hideCursorControllerMenu()V
 
+    .line 114
     iget-object v0, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     const/4 v1, 0x0
@@ -49,6 +52,7 @@
     #calls: Landroid/widget/EditText;->sendTapNotificationToIME(Z)V
     invoke-static {v0, v1}, Landroid/widget/EditText;->access$000(Landroid/widget/EditText;Z)V
 
+    .line 115
     const/4 v0, 0x1
 
     return v0
@@ -61,10 +65,12 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 106
     iget-object v0, p0, Landroid/widget/EditText$1;->this$0:Landroid/widget/EditText;
 
     #calls: Landroid/widget/EditText;->sendTapNotificationToIME(Z)V
     invoke-static {v0, v1}, Landroid/widget/EditText;->access$000(Landroid/widget/EditText;Z)V
 
+    .line 107
     return v1
 .end method

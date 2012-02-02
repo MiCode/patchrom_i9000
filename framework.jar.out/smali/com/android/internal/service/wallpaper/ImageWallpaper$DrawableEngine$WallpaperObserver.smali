@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 78
     iput-object p1, p0, Lcom/android/internal/service/wallpaper/ImageWallpaper$DrawableEngine$WallpaperObserver;->this$1:Lcom/android/internal/service/wallpaper/ImageWallpaper$DrawableEngine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,15 +40,19 @@
     .parameter "intent"
 
     .prologue
+    .line 80
     iget-object v0, p0, Lcom/android/internal/service/wallpaper/ImageWallpaper$DrawableEngine$WallpaperObserver;->this$1:Lcom/android/internal/service/wallpaper/ImageWallpaper$DrawableEngine;
 
     invoke-virtual {v0}, Lcom/android/internal/service/wallpaper/ImageWallpaper$DrawableEngine;->updateWallpaper()V
 
+    .line 81
     iget-object v0, p0, Lcom/android/internal/service/wallpaper/ImageWallpaper$DrawableEngine$WallpaperObserver;->this$1:Lcom/android/internal/service/wallpaper/ImageWallpaper$DrawableEngine;
 
     invoke-virtual {v0}, Lcom/android/internal/service/wallpaper/ImageWallpaper$DrawableEngine;->drawFrame()V
 
+    .line 84
     invoke-static {}, Ljava/lang/System;->gc()V
 
+    .line 85
     return-void
 .end method

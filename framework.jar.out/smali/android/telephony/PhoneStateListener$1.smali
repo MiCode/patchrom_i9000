@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 297
     iput-object p1, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     invoke-direct {p0}, Lcom/android/internal/telephony/IPhoneStateListener$Stub;-><init>()V
@@ -40,6 +41,7 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 312
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -59,11 +61,13 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 314
     return-void
 
     :cond_0
     move v2, v4
 
+    .line 312
     goto :goto_0
 .end method
 
@@ -73,6 +77,7 @@
     .parameter "incomingNumber"
 
     .prologue
+    .line 322
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -87,6 +92,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 323
     return-void
 .end method
 
@@ -97,10 +103,12 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 317
     invoke-static {p1}, Landroid/telephony/CellLocation;->newFromBundle(Landroid/os/Bundle;)Landroid/telephony/CellLocation;
 
     move-result-object v0
 
+    .line 318
     .local v0, location:Landroid/telephony/CellLocation;
     iget-object v1, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
@@ -114,6 +122,7 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
+    .line 319
     return-void
 .end method
 
@@ -122,6 +131,7 @@
     .parameter "direction"
 
     .prologue
+    .line 331
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -138,6 +148,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 332
     return-void
 .end method
 
@@ -147,6 +158,7 @@
     .parameter "networkType"
 
     .prologue
+    .line 326
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -161,6 +173,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 328
     return-void
 .end method
 
@@ -169,6 +182,7 @@
     .parameter "direction"
 
     .prologue
+    .line 336
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -185,6 +199,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 337
     return-void
 .end method
 
@@ -194,6 +209,7 @@
     .parameter "networkType"
 
     .prologue
+    .line 340
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -208,6 +224,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 341
     return-void
 .end method
 
@@ -218,6 +235,7 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 307
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -237,11 +255,13 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 309
     return-void
 
     :cond_0
     move v2, v4
 
+    .line 307
     goto :goto_0
 .end method
 
@@ -252,6 +272,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 299
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -264,6 +285,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 300
     return-void
 .end method
 
@@ -272,6 +294,7 @@
     .parameter "asu"
 
     .prologue
+    .line 303
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -288,6 +311,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 304
     return-void
 .end method
 
@@ -298,6 +322,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 345
     iget-object v0, p0, Landroid/telephony/PhoneStateListener$1;->this$0:Landroid/telephony/PhoneStateListener;
 
     iget-object v0, v0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -310,5 +335,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 346
     return-void
 .end method

@@ -60,6 +60,7 @@
     .locals 0
 
     .prologue
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -71,9 +72,11 @@
     .locals 1
 
     .prologue
+    .line 81
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/InputWindow;->inputChannel:Landroid/view/InputChannel;
 
+    .line 82
     return-void
 .end method

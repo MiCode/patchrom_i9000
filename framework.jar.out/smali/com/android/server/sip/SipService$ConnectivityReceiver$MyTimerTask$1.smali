@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1105
     iput-object p1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask$1;->this$2:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +41,12 @@
     .locals 1
 
     .prologue
+    .line 1107
     iget-object v0, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask$1;->this$2:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
     #calls: Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;->realRun()V
     invoke-static {v0}, Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;->access$1800(Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;)V
 
+    .line 1108
     return-void
 .end method

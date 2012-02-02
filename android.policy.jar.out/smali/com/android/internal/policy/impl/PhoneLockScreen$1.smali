@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 228
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneLockScreen$1;->this$0:Lcom/android/internal/policy/impl/PhoneLockScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +43,14 @@
     .parameter "which"
 
     .prologue
+    .line 230
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.CALL_EMERGENCY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 231
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "tel"
 
@@ -74,10 +77,12 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
+    .line 232
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
+    .line 233
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneLockScreen$1;->this$0:Lcom/android/internal/policy/impl/PhoneLockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PhoneLockScreen;->mContext:Landroid/content/Context;
@@ -87,5 +92,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
+    .line 234
     return-void
 .end method

@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 210
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,14 +46,16 @@
 
     const/4 v6, 0x0
 
-    const-string v10, "true"
+    const-string/jumbo v10, "true"
 
     const-string v8, "gsm.dun.connected"
 
+    .line 214
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 215
     .local v0, action:Ljava/lang/String;
     const-string v4, "android.intent.action.SCREEN_ON"
 
@@ -62,19 +65,23 @@
 
     if-eqz v4, :cond_1
 
+    .line 216
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #setter for: Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->mIsScreenOn:Z
     invoke-static {v4, v7}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$102(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;Z)Z
 
+    .line 217
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->stopNetStatPoll()V
 
+    .line 218
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->startNetStatPoll()V
 
+    .line 219
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -129,6 +136,7 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 220
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #getter for: Lcom/android/internal/telephony/DataConnectionTracker;->mRetryMgr:Lcom/android/internal/telephony/RetryManager;
@@ -142,6 +150,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 221
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #getter for: Lcom/android/internal/telephony/DataConnectionTracker;->mRetryMgr:Lcom/android/internal/telephony/RetryManager;
@@ -151,13 +160,14 @@
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/RetryManager;->resetRetryCount()V
 
+    .line 222
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "resetRetryCount : "
+    const-string/jumbo v6, "resetRetryCount : "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -184,6 +194,7 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 223
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     iget-object v5, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -194,10 +205,12 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->sendMessage(Landroid/os/Message;)Z
 
+    .line 298
     :cond_0
     :goto_0
     return-void
 
+    .line 225
     :cond_1
     const-string v4, "android.intent.action.SCREEN_OFF"
 
@@ -207,21 +220,25 @@
 
     if-eqz v4, :cond_2
 
+    .line 226
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #setter for: Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->mIsScreenOn:Z
     invoke-static {v4, v6}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$102(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;Z)Z
 
+    .line 227
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->stopNetStatPoll()V
 
+    .line 228
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->startNetStatPoll()V
 
     goto :goto_0
 
+    .line 229
     :cond_2
     const-string v4, "com.android.internal.telephony.gprs-reconnect"
 
@@ -231,6 +248,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 230
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -260,6 +278,7 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 231
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     iget-object v5, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -272,6 +291,7 @@
 
     goto :goto_0
 
+    .line 232
     :cond_3
     const-string v4, "android.net.wifi.STATE_CHANGE"
 
@@ -281,6 +301,7 @@
 
     if-eqz v4, :cond_5
 
+    .line 233
     const-string v4, "networkInfo"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -289,6 +310,7 @@
 
     check-cast v3, Landroid/net/NetworkInfo;
 
+    .line 235
     .local v3, networkInfo:Landroid/net/NetworkInfo;
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
@@ -313,6 +335,7 @@
 
     goto :goto_1
 
+    .line 236
     .end local v3           #networkInfo:Landroid/net/NetworkInfo;
     :cond_5
     const-string v4, "android.net.wifi.WIFI_STATE_CHANGED"
@@ -323,7 +346,8 @@
 
     if-eqz v4, :cond_7
 
-    const-string v4, "wifi_state"
+    .line 237
+    const-string/jumbo v4, "wifi_state"
 
     const/4 v5, 0x4
 
@@ -337,10 +361,12 @@
 
     move v1, v7
 
+    .line 240
     .local v1, enabled:Z
     :goto_2
     if-nez v1, :cond_0
 
+    .line 243
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->mIsWifiConnected:Z
@@ -352,8 +378,10 @@
     :cond_6
     move v1, v6
 
+    .line 237
     goto :goto_2
 
+    .line 247
     :cond_7
     const-string v4, "android.net.action.DUN_ATTEMPTED"
 
@@ -363,18 +391,21 @@
 
     if-eqz v4, :cond_8
 
+    .line 248
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[Dial Up Network] DUN Call Attempted "
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 249
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     invoke-virtual {v4, v6}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->setDataEnabled(Z)Z
 
     goto/16 :goto_0
 
+    .line 251
     :cond_8
     const-string v4, "android.net.action.DUN_DISCONNECTED"
 
@@ -384,22 +415,26 @@
 
     if-eqz v4, :cond_9
 
+    .line 252
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[Dial Up Network] DUN Call Disconnected "
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 253
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     invoke-virtual {v4, v7}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->setDataEnabled(Z)Z
 
+    .line 255
     const-string v4, "gsm.dun.connected"
 
     const-string v4, "false"
 
     invoke-static {v8, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 256
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[ActiveSync] onReceive() gsm.dun.connected=false"
@@ -408,6 +443,7 @@
 
     goto/16 :goto_0
 
+    .line 261
     :cond_9
     const-string v4, "android.net.action.DUN_CONNECTED"
 
@@ -417,18 +453,21 @@
 
     if-eqz v4, :cond_a
 
+    .line 262
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[Dial Up Network] DUN Call Connected "
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 264
     const-string v4, "gsm.dun.connected"
 
-    const-string v4, "true"
+    const-string/jumbo v4, "true"
 
     invoke-static {v8, v10}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 265
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[ActiveSync] onReceive() gsm.dun.connected=true"
@@ -437,6 +476,7 @@
 
     goto/16 :goto_0
 
+    .line 268
     :cond_a
     const-string v4, "android.net.action.DUN_BLOCKED"
 
@@ -446,12 +486,14 @@
 
     if-eqz v4, :cond_b
 
+    .line 269
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[Dial Up Network] DUN Blocked "
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 271
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #calls: Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->showDialogOnInternetSharingBlockedByActiveSync()V
@@ -459,6 +501,7 @@
 
     goto/16 :goto_0
 
+    .line 274
     :cond_b
     const-string v4, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
@@ -468,12 +511,14 @@
 
     if-eqz v4, :cond_0
 
+    .line 275
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[ActiveSync] onReceive() ACTION_DEVICE_POLICY_MANAGER_STATE_CHANGED intent"
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 278
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #calls: Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->isInternetSharingBlockedByActiveSync()Z
@@ -483,18 +528,21 @@
 
     if-eqz v4, :cond_c
 
+    .line 279
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[ActiveSync] onReceive() Internet sharing has banned due to security policy."
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 282
     const-string v4, "gsm.dun.connected"
 
     invoke-static {v8}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 283
     .local v2, isDunConnected:Ljava/lang/String;
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
@@ -518,7 +566,8 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
-    const-string v4, "true"
+    .line 285
+    const-string/jumbo v4, "true"
 
     invoke-virtual {v2, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -526,17 +575,20 @@
 
     if-eqz v4, :cond_0
 
+    .line 286
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     const-string v5, "[ActiveSync] onReceive() Disconnect DUN"
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 287
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #calls: Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->showDialogOnInternetSharingBlockedByActiveSync()V
     invoke-static {v4}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$1000(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;)V
 
+    .line 288
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     #calls: Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->disconnectDun()V
@@ -544,6 +596,7 @@
 
     goto/16 :goto_0
 
+    .line 293
     .end local v2           #isDunConnected:Ljava/lang/String;
     :cond_c
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;

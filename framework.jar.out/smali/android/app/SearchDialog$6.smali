@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 931
     iput-object p1, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,6 +48,7 @@
 
     const/4 v5, 0x1
 
+    .line 934
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchable:Landroid/app/SearchableInfo;
@@ -58,9 +60,11 @@
 
     move v3, v6
 
+    .line 981
     :goto_0
     return v3
 
+    .line 946
     :cond_0
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
@@ -90,6 +94,7 @@
 
     if-eq v3, v4, :cond_1
 
+    .line 948
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
     #calls: Landroid/app/SearchDialog;->onSuggestionsKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
@@ -99,6 +104,7 @@
 
     goto :goto_0
 
+    .line 953
     :cond_1
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
@@ -114,6 +120,7 @@
 
     if-nez v3, :cond_4
 
+    .line 954
     const/16 v3, 0x42
 
     if-ne p2, v3, :cond_3
@@ -124,8 +131,10 @@
 
     if-ne v3, v5, :cond_3
 
+    .line 956
     invoke-virtual {p1}, Landroid/view/View;->cancelLongPress()V
 
+    .line 960
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchable:Landroid/app/SearchableInfo;
@@ -152,6 +161,7 @@
 
     if-ne v3, v4, :cond_2
 
+    .line 963
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
     iget-object v4, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
@@ -178,6 +188,7 @@
 
     move-result-object v2
 
+    .line 964
     .local v2, uri:Landroid/net/Uri;
     new-instance v1, Landroid/content/Intent;
 
@@ -185,11 +196,13 @@
 
     invoke-direct {v1, v3, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 965
     .local v1, intent:Landroid/content/Intent;
     const/high16 v3, 0x1000
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
+    .line 966
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
     #calls: Landroid/app/SearchDialog;->launchIntent(Landroid/content/Intent;)V
@@ -200,8 +213,10 @@
     :goto_1
     move v3, v5
 
+    .line 971
     goto :goto_0
 
+    .line 969
     :cond_2
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
@@ -209,6 +224,7 @@
 
     goto :goto_1
 
+    .line 973
     :cond_3
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -216,6 +232,7 @@
 
     if-nez v3, :cond_4
 
+    .line 974
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchable:Landroid/app/SearchableInfo;
@@ -227,6 +244,7 @@
 
     move-result-object v0
 
+    .line 975
     .local v0, actionKey:Landroid/app/SearchableInfo$ActionKeyInfo;
     if-eqz v0, :cond_4
 
@@ -236,6 +254,7 @@
 
     if-eqz v3, :cond_4
 
+    .line 976
     iget-object v3, p0, Landroid/app/SearchDialog$6;->this$0:Landroid/app/SearchDialog;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo$ActionKeyInfo;->getQueryActionMsg()Ljava/lang/String;
@@ -246,11 +265,13 @@
 
     move v3, v5
 
+    .line 977
     goto/16 :goto_0
 
     .end local v0           #actionKey:Landroid/app/SearchableInfo$ActionKeyInfo;
     :cond_4
     move v3, v6
 
+    .line 981
     goto/16 :goto_0
 .end method

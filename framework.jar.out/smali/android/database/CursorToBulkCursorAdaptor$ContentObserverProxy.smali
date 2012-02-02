@@ -25,12 +25,15 @@
     .parameter "recipient"
 
     .prologue
+    .line 49
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
+    .line 50
     iput-object p1, p0, Landroid/database/CursorToBulkCursorAdaptor$ContentObserverProxy;->mRemote:Landroid/database/IContentObserver;
 
+    .line 52
     :try_start_0
     invoke-interface {p1}, Landroid/database/IContentObserver;->asBinder()Landroid/os/IBinder;
 
@@ -42,9 +45,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 56
     :goto_0
     return-void
 
+    .line 53
     :catch_0
     move-exception v0
 
@@ -57,6 +62,7 @@
     .locals 1
 
     .prologue
+    .line 65
     const/4 v0, 0x0
 
     return v0
@@ -67,6 +73,7 @@
     .parameter "selfChange"
 
     .prologue
+    .line 71
     :try_start_0
     iget-object v0, p0, Landroid/database/CursorToBulkCursorAdaptor$ContentObserverProxy;->mRemote:Landroid/database/IContentObserver;
 
@@ -74,9 +81,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 75
     :goto_0
     return-void
 
+    .line 72
     :catch_0
     move-exception v0
 
@@ -88,6 +97,7 @@
     .parameter "recipient"
 
     .prologue
+    .line 59
     iget-object v0, p0, Landroid/database/CursorToBulkCursorAdaptor$ContentObserverProxy;->mRemote:Landroid/database/IContentObserver;
 
     invoke-interface {v0}, Landroid/database/IContentObserver;->asBinder()Landroid/os/IBinder;

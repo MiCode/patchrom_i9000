@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 966
     iput-object p1, p0, Lcom/android/server/TvOutService$2;->this$0:Lcom/android/server/TvOutService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,10 +44,12 @@
 
     const-string v3, "TvOut-Observer"
 
+    .line 969
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 970
     .local v0, action:Ljava/lang/String;
     const-string v1, "TvOut-Observer"
 
@@ -70,12 +73,14 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 971
     const-string v1, "TvOut-Observer"
 
     const-string v1, " tvOutSetImageString BroadcastReceiver  broadcast received"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 973
     const-string v1, "android.intent.action.locale.changed"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -84,17 +89,20 @@
 
     if-eqz v1, :cond_0
 
+    .line 974
     const-string v1, "TvOut-Observer"
 
     const-string v1, " tvOutSetImageString BroadcastReceiver  broadcast received"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 976
     iget-object v1, p0, Lcom/android/server/TvOutService$2;->this$0:Lcom/android/server/TvOutService;
 
     #calls: Lcom/android/server/TvOutService;->tvOutSetImageString()V
     invoke-static {v1}, Lcom/android/server/TvOutService;->access$500(Lcom/android/server/TvOutService;)V
 
+    .line 981
     :cond_0
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -104,24 +112,29 @@
 
     if-eqz v1, :cond_2
 
+    .line 982
     const-string v1, "TvOut-Observer"
 
     const-string v1, "ACTION_SCREEN_OFF"
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 983
     const/4 v1, 0x1
 
     invoke-static {v1}, Lcom/android/server/TvOutService;->access$602(Z)Z
 
+    .line 984
     iget-object v1, p0, Lcom/android/server/TvOutService$2;->this$0:Lcom/android/server/TvOutService;
 
     invoke-virtual {v1}, Lcom/android/server/TvOutService;->updateTVoutOnScreenOnOff()V
 
+    .line 990
     :cond_1
     :goto_0
     return-void
 
+    .line 985
     :cond_2
     const-string v1, "android.intent.action.SCREEN_ON"
 
@@ -131,16 +144,19 @@
 
     if-eqz v1, :cond_1
 
+    .line 986
     const-string v1, "TvOut-Observer"
 
     const-string v1, "ACTION_SCREEN_ON "
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 987
     const/4 v1, 0x0
 
     invoke-static {v1}, Lcom/android/server/TvOutService;->access$602(Z)Z
 
+    .line 988
     iget-object v1, p0, Lcom/android/server/TvOutService$2;->this$0:Lcom/android/server/TvOutService;
 
     invoke-virtual {v1}, Lcom/android/server/TvOutService;->updateTVoutOnScreenOnOff()V

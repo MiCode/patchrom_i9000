@@ -23,6 +23,7 @@
     .locals 3
 
     .prologue
+    .line 191
     invoke-static {}, Landroid/net/vpn/VpnType;->values()[Landroid/net/vpn/VpnType;
 
     move-result-object v0

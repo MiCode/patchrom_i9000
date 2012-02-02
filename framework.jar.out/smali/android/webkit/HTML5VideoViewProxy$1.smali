@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 484
     iput-object p1, p0, Landroid/webkit/HTML5VideoViewProxy$1;->this$0:Landroid/webkit/HTML5VideoViewProxy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,18 +39,22 @@
     .parameter "msg"
 
     .prologue
+    .line 487
     iget v5, p1, Landroid/os/Message;->what:I
 
     sparse-switch v5, :sswitch_data_0
 
+    .line 511
     :goto_0
     return-void
 
+    .line 489
     :sswitch_0
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/Map;
 
+    .line 490
     .local v2, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v5, "dur"
 
@@ -59,8 +64,9 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    .line 491
     .local v0, duration:Ljava/lang/Integer;
-    const-string v5, "width"
+    const-string/jumbo v5, "width"
 
     invoke-interface {v2, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -68,6 +74,7 @@
 
     check-cast v4, Ljava/lang/Integer;
 
+    .line 492
     .local v4, width:Ljava/lang/Integer;
     const-string v5, "height"
 
@@ -77,6 +84,7 @@
 
     check-cast v1, Ljava/lang/Integer;
 
+    .line 493
     .local v1, height:Ljava/lang/Integer;
     iget-object v5, p0, Landroid/webkit/HTML5VideoViewProxy$1;->this$0:Landroid/webkit/HTML5VideoViewProxy;
 
@@ -101,6 +109,7 @@
 
     goto :goto_0
 
+    .line 498
     .end local v0           #duration:Ljava/lang/Integer;
     .end local v1           #height:Ljava/lang/Integer;
     .end local v2           #map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
@@ -117,6 +126,7 @@
 
     goto :goto_0
 
+    .line 501
     :sswitch_2
     iget-object v5, p0, Landroid/webkit/HTML5VideoViewProxy$1;->this$0:Landroid/webkit/HTML5VideoViewProxy;
 
@@ -129,11 +139,13 @@
 
     goto :goto_0
 
+    .line 504
     :sswitch_3
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Landroid/graphics/Bitmap;
 
+    .line 505
     .local v3, poster:Landroid/graphics/Bitmap;
     iget-object v5, p0, Landroid/webkit/HTML5VideoViewProxy$1;->this$0:Landroid/webkit/HTML5VideoViewProxy;
 
@@ -146,6 +158,7 @@
 
     goto :goto_0
 
+    .line 508
     .end local v3           #poster:Landroid/graphics/Bitmap;
     :sswitch_4
     iget-object v5, p0, Landroid/webkit/HTML5VideoViewProxy$1;->this$0:Landroid/webkit/HTML5VideoViewProxy;
@@ -161,6 +174,7 @@
 
     goto :goto_0
 
+    .line 487
     nop
 
     :sswitch_data_0

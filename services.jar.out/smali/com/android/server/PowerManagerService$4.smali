@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1371
     iput-object p1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,6 +49,7 @@
 
     const/4 v5, 0x0
 
+    .line 1378
     :goto_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -58,6 +60,7 @@
 
     monitor-enter v0
 
+    .line 1379
     :try_start_0
     iget-object v1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -70,6 +73,7 @@
 
     aget v10, v1, v3
 
+    .line 1380
     .local v10, value:I
     iget-object v1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -82,6 +86,7 @@
 
     aget v11, v1, v3
 
+    .line 1381
     .local v11, why:I
     const/4 v8, 0x0
 
@@ -89,6 +94,7 @@
     :goto_1
     if-ge v8, v12, :cond_0
 
+    .line 1382
     iget-object v1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
@@ -109,6 +115,7 @@
 
     aput v3, v1, v8
 
+    .line 1383
     iget-object v1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mBroadcastWhy:[I
@@ -129,10 +136,12 @@
 
     aput v3, v1, v8
 
+    .line 1381
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
+    .line 1385
     :cond_0
     iget-object v1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -140,13 +149,16 @@
 
     move-result-object v9
 
+    .line 1386
     .local v9, policy:Landroid/view/WindowManagerPolicy;
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1387
     if-ne v10, v13, :cond_2
 
+    .line 1388
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -155,8 +167,10 @@
 
     iput-wide v3, v0, Lcom/android/server/PowerManagerService;->mScreenOnStart:J
 
+    .line 1390
     invoke-interface {v9}, Landroid/view/WindowManagerPolicy;->screenTurnedOn()V
 
+    .line 1392
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -166,6 +180,7 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 1400
     :goto_2
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -182,6 +197,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 1401
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
@@ -218,6 +234,7 @@
 
     goto/16 :goto_0
 
+    .line 1386
     .end local v8           #i:I
     .end local v9           #policy:Landroid/view/WindowManagerPolicy;
     .end local v10           #value:I
@@ -232,6 +249,7 @@
 
     throw v1
 
+    .line 1404
     .restart local v8       #i:I
     .restart local v9       #policy:Landroid/view/WindowManagerPolicy;
     .restart local v10       #value:I
@@ -246,6 +264,7 @@
 
     monitor-enter v0
 
+    .line 1405
     const/16 v1, 0xaa7
 
     const/4 v3, 0x2
@@ -282,6 +301,7 @@
 
     invoke-static {v1, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
+    .line 1407
     iget-object v1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
@@ -291,6 +311,7 @@
 
     invoke-virtual {v1}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
+    .line 1408
     monitor-exit v0
 
     goto/16 :goto_0
@@ -304,9 +325,11 @@
 
     throw v1
 
+    .line 1411
     :cond_2
     if-nez v10, :cond_4
 
+    .line 1412
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -315,8 +338,10 @@
 
     iput-wide v3, v0, Lcom/android/server/PowerManagerService;->mScreenOffStart:J
 
+    .line 1414
     invoke-interface {v9, v11}, Landroid/view/WindowManagerPolicy;->screenTurnedOff(I)V
 
+    .line 1416
     :try_start_4
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -326,6 +351,7 @@
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
 
+    .line 1421
     :goto_3
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -342,6 +368,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 1422
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
@@ -378,6 +405,7 @@
 
     goto/16 :goto_0
 
+    .line 1425
     :cond_3
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -388,6 +416,7 @@
 
     monitor-enter v0
 
+    .line 1426
     const/16 v1, 0xaa7
 
     const/4 v3, 0x2
@@ -424,6 +453,7 @@
 
     invoke-static {v1, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
+    .line 1428
     iget-object v1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
@@ -433,6 +463,7 @@
 
     invoke-virtual {v1}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
+    .line 1429
     monitor-exit v0
 
     goto/16 :goto_0
@@ -446,14 +477,17 @@
 
     throw v1
 
+    .line 1438
     :cond_4
     return-void
 
+    .line 1417
     :catch_0
     move-exception v0
 
     goto :goto_3
 
+    .line 1393
     :catch_1
     move-exception v0
 

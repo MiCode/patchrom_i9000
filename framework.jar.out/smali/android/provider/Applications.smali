@@ -32,6 +32,7 @@
     .locals 1
 
     .prologue
+    .line 41
     const-string v0, "content://applications"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -47,6 +48,7 @@
     .locals 0
 
     .prologue
+    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,6 +60,7 @@
     .parameter "className"
 
     .prologue
+    .line 111
     sget-object v0, Landroid/provider/Applications;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -93,13 +96,14 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 77
     sget-object v0, Landroid/provider/Applications;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    const-string v3, "search"
+    const-string/jumbo v3, "search"
 
     invoke-virtual {v0, v3}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -122,6 +126,7 @@
 
     move-object v5, v2
 
+    .line 78
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
@@ -138,13 +143,16 @@
 
     const-string v6, "applications"
 
+    .line 91
     if-nez p0, :cond_0
 
     move-object v3, v5
 
+    .line 99
     :goto_0
     return-object v3
 
+    .line 92
     :cond_0
     const-string v3, "content"
 
@@ -162,6 +170,7 @@
 
     goto :goto_0
 
+    .line 93
     :cond_1
     const-string v3, "applications"
 
@@ -179,11 +188,13 @@
 
     goto :goto_0
 
+    .line 94
     :cond_2
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v2
 
+    .line 95
     .local v2, pathSegments:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -197,6 +208,7 @@
 
     goto :goto_0
 
+    .line 96
     :cond_3
     const-string v3, "applications"
 
@@ -216,6 +228,7 @@
 
     goto :goto_0
 
+    .line 97
     :cond_4
     const/4 v3, 0x1
 
@@ -225,6 +238,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 98
     .local v1, packageName:Ljava/lang/String;
     const/4 v3, 0x2
 
@@ -234,6 +248,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 99
     .local v0, name:Ljava/lang/String;
     new-instance v3, Landroid/content/ComponentName;
 

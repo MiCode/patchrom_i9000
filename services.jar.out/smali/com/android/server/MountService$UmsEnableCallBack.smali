@@ -33,16 +33,22 @@
     .parameter "force"
 
     .prologue
+    .line 511
     iput-object p1, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
 
+    .line 512
     invoke-direct {p0, p1, p2, p4}, Lcom/android/server/MountService$UnmountCallBack;-><init>(Lcom/android/server/MountService;Ljava/lang/String;Z)V
 
+    .line 513
     iput-object p3, p0, Lcom/android/server/MountService$UmsEnableCallBack;->method:Ljava/lang/String;
 
+    .line 514
     iput-object p2, p0, Lcom/android/server/MountService$UmsEnableCallBack;->path:Ljava/lang/String;
 
+    .line 515
     iput-boolean p4, p0, Lcom/android/server/MountService$UmsEnableCallBack;->force:Z
 
+    .line 516
     return-void
 .end method
 
@@ -56,6 +62,7 @@
 
     const-string v4, "MountService"
 
+    .line 520
     const-string v2, "MountService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -80,8 +87,10 @@
 
     invoke-static {v4, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 522
     const/4 v0, 0x0
 
+    .line 524
     .local v0, rc:I
     iget-object v2, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
 
@@ -92,12 +101,15 @@
 
     move-result v0
 
+    .line 525
     if-eqz v0, :cond_0
 
+    .line 526
     const-wide/16 v2, 0x1f4
 
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 527
     iget-object v2, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
 
     iget-object v3, p0, Lcom/android/server/MountService$UmsEnableCallBack;->path:Ljava/lang/String;
@@ -106,6 +118,7 @@
 
     move-result-object v1
 
+    .line 528
     .local v1, status:Ljava/lang/String;
     const-string v2, "MountService"
 
@@ -135,6 +148,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 529
     const-string v2, "mounted"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -143,6 +157,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 530
     iget-object v2, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
 
     iget-object v3, p0, Lcom/android/server/MountService$UmsEnableCallBack;->path:Ljava/lang/String;
@@ -152,6 +167,7 @@
 
     move-result v0
 
+    .line 539
     .end local v1           #status:Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
@@ -163,9 +179,11 @@
     #calls: Lcom/android/server/MountService;->doShareUnshareVolume(Ljava/lang/String;Ljava/lang/String;Z)V
     invoke-static {v2, v3, v4, v5}, Lcom/android/server/MountService;->access$400(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;Z)V
 
+    .line 540
     :goto_0
     return-void
 
+    .line 533
     .restart local v1       #status:Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
@@ -175,6 +193,7 @@
     #calls: Lcom/android/server/MountService;->setUmsEnabling(Z)V
     invoke-static {v2, v3}, Lcom/android/server/MountService;->access$200(Lcom/android/server/MountService;Z)V
 
+    .line 534
     iget-object v2, p0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
 
     iget-object v3, p0, Lcom/android/server/MountService$UmsEnableCallBack;->path:Ljava/lang/String;

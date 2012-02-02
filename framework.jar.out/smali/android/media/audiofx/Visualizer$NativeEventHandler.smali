@@ -28,12 +28,16 @@
     .parameter "looper"
 
     .prologue
+    .line 461
     iput-object p1, p0, Landroid/media/audiofx/Visualizer$NativeEventHandler;->this$0:Landroid/media/audiofx/Visualizer;
 
+    .line 462
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 463
     iput-object p2, p0, Landroid/media/audiofx/Visualizer$NativeEventHandler;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
+    .line 464
     return-void
 .end method
 
@@ -44,17 +48,21 @@
     .parameter "msg"
 
     .prologue
+    .line 468
     iget-object v4, p0, Landroid/media/audiofx/Visualizer$NativeEventHandler;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
     if-nez v4, :cond_1
 
+    .line 491
     :cond_0
     :goto_0
     return-void
 
+    .line 471
     :cond_1
     const/4 v2, 0x0
 
+    .line 472
     .local v2, l:Landroid/media/audiofx/Visualizer$OnDataCaptureListener;
     iget-object v4, p0, Landroid/media/audiofx/Visualizer$NativeEventHandler;->this$0:Landroid/media/audiofx/Visualizer;
 
@@ -65,6 +73,7 @@
 
     monitor-enter v4
 
+    .line 473
     :try_start_0
     iget-object v5, p0, Landroid/media/audiofx/Visualizer$NativeEventHandler;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
@@ -73,12 +82,15 @@
 
     move-result-object v2
 
+    .line 474
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 476
     if-eqz v2, :cond_0
 
+    .line 477
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, [B
@@ -89,14 +101,17 @@
 
     move-object v1, v0
 
+    .line 478
     .local v1, data:[B
     iget v3, p1, Landroid/os/Message;->arg1:I
 
+    .line 479
     .local v3, samplingRate:I
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
+    .line 487
     const-string v4, "Visualizer-JAVA"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -123,6 +138,7 @@
 
     goto :goto_0
 
+    .line 474
     .end local v1           #data:[B
     .end local v3           #samplingRate:I
     :catchall_0
@@ -135,6 +151,7 @@
 
     throw v5
 
+    .line 481
     .restart local v1       #data:[B
     .restart local v3       #samplingRate:I
     :pswitch_0
@@ -144,6 +161,7 @@
 
     goto :goto_0
 
+    .line 484
     :pswitch_1
     iget-object v4, p0, Landroid/media/audiofx/Visualizer$NativeEventHandler;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
@@ -151,6 +169,7 @@
 
     goto :goto_0
 
+    .line 479
     nop
 
     :pswitch_data_0

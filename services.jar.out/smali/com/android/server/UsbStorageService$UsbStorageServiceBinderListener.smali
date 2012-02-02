@@ -30,12 +30,15 @@
     .parameter "listener"
 
     .prologue
+    .line 636
     iput-object p1, p0, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;->this$0:Lcom/android/server/UsbStorageService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 637
     iput-object p2, p0, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;->mListener:Landroid/os/storage/IUsbStorageServiceListener;
 
+    .line 639
     return-void
 .end method
 
@@ -45,12 +48,14 @@
     .locals 3
 
     .prologue
+    .line 642
     const-string v0, "UsbStorageService"
 
     const-string v1, "An IUsbStorageServiceListener has died!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 643
     iget-object v0, p0, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;->this$0:Lcom/android/server/UsbStorageService;
 
     #getter for: Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
@@ -60,6 +65,7 @@
 
     monitor-enter v0
 
+    .line 644
     :try_start_0
     iget-object v1, p0, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;->this$0:Lcom/android/server/UsbStorageService;
 
@@ -70,6 +76,7 @@
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 645
     iget-object v1, p0, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;->mListener:Landroid/os/storage/IUsbStorageServiceListener;
 
     invoke-interface {v1}, Landroid/os/storage/IUsbStorageServiceListener;->asBinder()Landroid/os/IBinder;
@@ -80,10 +87,13 @@
 
     invoke-interface {v1, p0, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
+    .line 646
     monitor-exit v0
 
+    .line 647
     return-void
 
+    .line 646
     :catchall_0
     move-exception v1
 

@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 95
     iput-object p1, p0, Lcom/android/internal/policy/impl/RecoveryPasswordScreen$1;->this$0:Lcom/android/internal/policy/impl/RecoveryPasswordScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .locals 2
 
     .prologue
+    .line 97
     iget-object v0, p0, Lcom/android/internal/policy/impl/RecoveryPasswordScreen$1;->this$0:Lcom/android/internal/policy/impl/RecoveryPasswordScreen;
 
     #getter for: Lcom/android/internal/policy/impl/RecoveryPasswordScreen;->mTitle:Landroid/widget/TextView;
@@ -51,5 +53,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
+    .line 98
     return-void
 .end method

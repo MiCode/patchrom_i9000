@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 245
     iput-object p1, p0, Lcom/android/server/UsbStorageService$4;->this$0:Lcom/android/server/UsbStorageService;
 
     iput-object p2, p0, Lcom/android/server/UsbStorageService$4;->val$path:Ljava/lang/String;
@@ -42,6 +43,7 @@
     .locals 4
 
     .prologue
+    .line 249
     :try_start_0
     iget-object v1, p0, Lcom/android/server/UsbStorageService$4;->this$0:Lcom/android/server/UsbStorageService;
 
@@ -50,6 +52,7 @@
     #calls: Lcom/android/server/UsbStorageService;->updatePartitionsList(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/server/UsbStorageService;->access$400(Lcom/android/server/UsbStorageService;Ljava/lang/String;)V
 
+    .line 250
     iget-object v1, p0, Lcom/android/server/UsbStorageService$4;->this$0:Lcom/android/server/UsbStorageService;
 
     iget-object v2, p0, Lcom/android/server/UsbStorageService$4;->val$path:Ljava/lang/String;
@@ -61,14 +64,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 254
     :goto_0
     return-void
 
+    .line 251
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 252
     .local v0, ex:Ljava/lang/Exception;
     const-string v1, "UsbStorageService"
 

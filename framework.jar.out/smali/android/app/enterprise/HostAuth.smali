@@ -74,6 +74,7 @@
     .locals 1
 
     .prologue
+    .line 73
     new-instance v0, Landroid/app/enterprise/HostAuth$1;
 
     invoke-direct {v0}, Landroid/app/enterprise/HostAuth$1;-><init>()V
@@ -89,14 +90,19 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 53
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mUseSSL:Z
 
+    .line 55
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mUseTLS:Z
 
+    .line 57
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mAcceptAllCertificates:Z
 
+    .line 60
     return-void
 .end method
 
@@ -107,16 +113,22 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 53
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mUseSSL:Z
 
+    .line 55
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mUseTLS:Z
 
+    .line 57
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mAcceptAllCertificates:Z
 
+    .line 85
     invoke-virtual {p0, p1}, Landroid/app/enterprise/HostAuth;->readFromParcel(Landroid/os/Parcel;)V
 
+    .line 86
     return-void
 .end method
 
@@ -126,6 +138,7 @@
     .parameter "x1"
 
     .prologue
+    .line 13
     invoke-direct {p0, p1}, Landroid/app/enterprise/HostAuth;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -137,6 +150,7 @@
     .locals 1
 
     .prologue
+    .line 70
     const/4 v0, 0x0
 
     return v0
@@ -151,36 +165,42 @@
 
     const/4 v2, 0x1
 
+    .line 101
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/enterprise/HostAuth;->mId:I
 
+    .line 102
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/enterprise/HostAuth;->mProtocol:Ljava/lang/String;
 
+    .line 103
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/enterprise/HostAuth;->mAddress:Ljava/lang/String;
 
+    .line 104
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/enterprise/HostAuth;->mPort:I
 
+    .line 105
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/enterprise/HostAuth;->mFlags:I
 
+    .line 106
     iget v0, p0, Landroid/app/enterprise/HostAuth;->mFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -192,6 +212,7 @@
     :goto_0
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mUseSSL:Z
 
+    .line 107
     const/4 v0, 0x2
 
     iget v1, p0, Landroid/app/enterprise/HostAuth;->mFlags:I
@@ -205,6 +226,7 @@
     :goto_1
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mUseTLS:Z
 
+    .line 108
     const/16 v0, 0x8
 
     iget v1, p0, Landroid/app/enterprise/HostAuth;->mFlags:I
@@ -218,45 +240,53 @@
     :goto_2
     iput-boolean v0, p0, Landroid/app/enterprise/HostAuth;->mAcceptAllCertificates:Z
 
+    .line 109
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/enterprise/HostAuth;->mLogin:Ljava/lang/String;
 
+    .line 110
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/enterprise/HostAuth;->mPassword:Ljava/lang/String;
 
+    .line 111
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/enterprise/HostAuth;->mDomain:Ljava/lang/String;
 
+    .line 112
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/app/enterprise/HostAuth;->mAccountKey:J
 
+    .line 113
     return-void
 
     :cond_0
     move v0, v3
 
+    .line 106
     goto :goto_0
 
     :cond_1
     move v0, v3
 
+    .line 107
     goto :goto_1
 
     :cond_2
     move v0, v3
 
+    .line 108
     goto :goto_2
 .end method
 
@@ -268,6 +298,7 @@
 
     const-string v2, " "
 
+    .line 63
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -290,7 +321,7 @@
 
     move-result-object v0
 
-    const-string v1, "protocol"
+    const-string/jumbo v1, "protocol"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -338,7 +369,7 @@
 
     move-result-object v0
 
-    const-string v1, "port"
+    const-string/jumbo v1, "port"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -410,7 +441,7 @@
 
     move-result-object v0
 
-    const-string v1, "password"
+    const-string/jumbo v1, "password"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -489,41 +520,51 @@
     .parameter "flag"
 
     .prologue
+    .line 89
     iget v0, p0, Landroid/app/enterprise/HostAuth;->mId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 90
     iget-object v0, p0, Landroid/app/enterprise/HostAuth;->mProtocol:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 91
     iget-object v0, p0, Landroid/app/enterprise/HostAuth;->mAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 92
     iget v0, p0, Landroid/app/enterprise/HostAuth;->mPort:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 93
     iget v0, p0, Landroid/app/enterprise/HostAuth;->mFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 94
     iget-object v0, p0, Landroid/app/enterprise/HostAuth;->mLogin:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 95
     iget-object v0, p0, Landroid/app/enterprise/HostAuth;->mPassword:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 96
     iget-object v0, p0, Landroid/app/enterprise/HostAuth;->mDomain:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 97
     iget-wide v0, p0, Landroid/app/enterprise/HostAuth;->mAccountKey:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 98
     return-void
 .end method

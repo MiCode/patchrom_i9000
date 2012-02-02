@@ -38,8 +38,10 @@
     .locals 0
 
     .prologue
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 100
     return-void
 .end method
 
@@ -48,38 +50,46 @@
     .parameter "quantity"
 
     .prologue
+    .line 45
     sparse-switch p0, :sswitch_data_0
 
+    .line 51
     const v0, 0x1000004
 
     :goto_0
     return v0
 
+    .line 46
     :sswitch_0
     const v0, 0x1000005
 
     goto :goto_0
 
+    .line 47
     :sswitch_1
     const v0, 0x1000006
 
     goto :goto_0
 
+    .line 48
     :sswitch_2
     const v0, 0x1000007
 
     goto :goto_0
 
+    .line 49
     :sswitch_3
     const v0, 0x1000008
 
     goto :goto_0
 
+    .line 50
     :sswitch_4
     const v0, 0x1000009
 
     goto :goto_0
 
+    .line 45
     nop
 
     :sswitch_data_0
@@ -99,10 +109,12 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 73
     invoke-virtual {p0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 74
     .local v0, lang:Ljava/lang/String;
     const-string v1, "cs"
 
@@ -112,6 +124,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 75
     sget-object v1, Landroid/content/res/PluralRules;->cs:Landroid/content/res/PluralRules;
 
     if-nez v1, :cond_0
@@ -122,12 +135,15 @@
 
     sput-object v1, Landroid/content/res/PluralRules;->cs:Landroid/content/res/PluralRules;
 
+    .line 76
     :cond_0
     sget-object v1, Landroid/content/res/PluralRules;->cs:Landroid/content/res/PluralRules;
 
+    .line 80
     :goto_0
     return-object v1
 
+    .line 79
     :cond_1
     sget-object v1, Landroid/content/res/PluralRules;->en:Landroid/content/res/PluralRules;
 
@@ -139,6 +155,7 @@
 
     sput-object v1, Landroid/content/res/PluralRules;->en:Landroid/content/res/PluralRules;
 
+    .line 80
     :cond_2
     sget-object v1, Landroid/content/res/PluralRules;->en:Landroid/content/res/PluralRules;
 
@@ -150,38 +167,46 @@
     .parameter "quantity"
 
     .prologue
+    .line 56
     sparse-switch p0, :sswitch_data_0
 
-    const-string v0, "other"
+    .line 68
+    const-string/jumbo v0, "other"
 
     :goto_0
     return-object v0
 
+    .line 58
     :sswitch_0
-    const-string v0, "zero"
+    const-string/jumbo v0, "zero"
 
     goto :goto_0
 
+    .line 60
     :sswitch_1
-    const-string v0, "one"
+    const-string/jumbo v0, "one"
 
     goto :goto_0
 
+    .line 62
     :sswitch_2
-    const-string v0, "two"
+    const-string/jumbo v0, "two"
 
     goto :goto_0
 
+    .line 64
     :sswitch_3
     const-string v0, "few"
 
     goto :goto_0
 
+    .line 66
     :sswitch_4
     const-string v0, "many"
 
     goto :goto_0
 
+    .line 56
     nop
 
     :sswitch_data_0
@@ -201,6 +226,7 @@
     .parameter "n"
 
     .prologue
+    .line 40
     invoke-virtual {p0, p1}, Landroid/content/res/PluralRules;->quantityForNumber(I)I
 
     move-result v0

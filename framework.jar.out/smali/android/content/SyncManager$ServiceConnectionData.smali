@@ -30,13 +30,17 @@
     .parameter "syncAdapter"
 
     .prologue
+    .line 1292
     iput-object p1, p0, Landroid/content/SyncManager$ServiceConnectionData;->this$0:Landroid/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1293
     iput-object p2, p0, Landroid/content/SyncManager$ServiceConnectionData;->activeSyncContext:Landroid/content/SyncManager$ActiveSyncContext;
 
+    .line 1294
     iput-object p3, p0, Landroid/content/SyncManager$ServiceConnectionData;->syncAdapter:Landroid/content/ISyncAdapter;
 
+    .line 1295
     return-void
 .end method

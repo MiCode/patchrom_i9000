@@ -36,18 +36,25 @@
     .parameter "isPrimary"
 
     .prologue
+    .line 376
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 377
     iput p1, p0, Landroid/pim/vcard/VCardEntry$ImData;->protocol:I
 
+    .line 378
     iput-object p2, p0, Landroid/pim/vcard/VCardEntry$ImData;->customProtocol:Ljava/lang/String;
 
+    .line 379
     iput p3, p0, Landroid/pim/vcard/VCardEntry$ImData;->type:I
 
+    .line 380
     iput-object p4, p0, Landroid/pim/vcard/VCardEntry$ImData;->data:Ljava/lang/String;
 
+    .line 381
     iput-boolean p5, p0, Landroid/pim/vcard/VCardEntry$ImData;->isPrimary:Z
 
+    .line 382
     return-void
 .end method
 
@@ -60,15 +67,18 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 386
     instance-of v2, p1, Landroid/pim/vcard/VCardEntry$ImData;
 
     if-nez v2, :cond_0
 
     move v2, v4
 
+    .line 390
     :goto_0
     return v2
 
+    .line 389
     :cond_0
     move-object v0, p1
 
@@ -76,6 +86,7 @@
 
     move-object v1, v0
 
+    .line 390
     .local v1, imData:Landroid/pim/vcard/VCardEntry$ImData;
     iget v2, p0, Landroid/pim/vcard/VCardEntry$ImData;->type:I
 
@@ -151,7 +162,8 @@
     .locals 4
 
     .prologue
-    const-string v0, "type: %d, protocol: %d, custom_protcol: %s, data: %s, isPrimary: %s"
+    .line 399
+    const-string/jumbo v0, "type: %d, protocol: %d, custom_protcol: %s, data: %s, isPrimary: %s"
 
     const/4 v1, 0x5
 

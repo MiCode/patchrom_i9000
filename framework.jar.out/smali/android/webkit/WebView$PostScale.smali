@@ -33,14 +33,19 @@
     .parameter "mode"
 
     .prologue
+    .line 6239
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6240
     iput-object p3, p0, Landroid/webkit/WebView$PostScale;->mZoomMode:Landroid/webkit/WebView$ZoomMode;
 
+    .line 6242
     iput-object p1, p0, Landroid/webkit/WebView$PostScale;->mWebView:Landroid/webkit/WebView;
 
+    .line 6243
     iput-boolean p2, p0, Landroid/webkit/WebView$PostScale;->mUpdateTextWrap:Z
 
+    .line 6244
     return-void
 .end method
 
@@ -50,6 +55,7 @@
     .locals 6
 
     .prologue
+    .line 6247
     iget-object v0, p0, Landroid/webkit/WebView$PostScale;->mWebView:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -59,6 +65,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 6250
     iget-object v0, p0, Landroid/webkit/WebView$PostScale;->mWebView:Landroid/webkit/WebView;
 
     iget-object v1, p0, Landroid/webkit/WebView$PostScale;->mWebView:Landroid/webkit/WebView;
@@ -79,6 +86,7 @@
     #calls: Landroid/webkit/WebView;->setNewZoomScale(FZZLandroid/webkit/WebView$ZoomMode;Landroid/webkit/OnPinchZoomListener$ZoomInfo;)V
     invoke-static/range {v0 .. v5}, Landroid/webkit/WebView;->access$1100(Landroid/webkit/WebView;FZZLandroid/webkit/WebView$ZoomMode;Landroid/webkit/OnPinchZoomListener$ZoomInfo;)V
 
+    .line 6255
     iget-object v0, p0, Landroid/webkit/WebView$PostScale;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -91,11 +99,13 @@
 
     if-eqz v0, :cond_0
 
+    .line 6256
     iget-object v0, p0, Landroid/webkit/WebView$PostScale;->mWebView:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->updateZoomButtonsEnabled()V
     invoke-static {v0}, Landroid/webkit/WebView;->access$100(Landroid/webkit/WebView;)V
 
+    .line 6259
     :cond_0
     return-void
 .end method

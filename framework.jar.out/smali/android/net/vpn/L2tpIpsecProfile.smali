@@ -18,6 +18,7 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Landroid/net/vpn/L2tpProfile;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
     .locals 1
 
     .prologue
+    .line 41
     iget-object v0, p0, Landroid/net/vpn/L2tpIpsecProfile;->mCaCertificate:Ljava/lang/String;
 
     return-object v0
@@ -38,6 +40,7 @@
     .locals 1
 
     .prologue
+    .line 33
     sget-object v0, Landroid/net/vpn/VpnType;->L2TP_IPSEC:Landroid/net/vpn/VpnType;
 
     return-object v0
@@ -47,6 +50,7 @@
     .locals 1
 
     .prologue
+    .line 49
     iget-object v0, p0, Landroid/net/vpn/L2tpIpsecProfile;->mUserCertificate:Ljava/lang/String;
 
     return-object v0
@@ -57,20 +61,24 @@
     .parameter "in"
 
     .prologue
+    .line 54
     invoke-super {p0, p1}, Landroid/net/vpn/L2tpProfile;->readFromParcel(Landroid/os/Parcel;)V
 
+    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/L2tpIpsecProfile;->mCaCertificate:Ljava/lang/String;
 
+    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/L2tpIpsecProfile;->mUserCertificate:Ljava/lang/String;
 
+    .line 57
     return-void
 .end method
 
@@ -79,8 +87,10 @@
     .parameter "name"
 
     .prologue
+    .line 37
     iput-object p1, p0, Landroid/net/vpn/L2tpIpsecProfile;->mCaCertificate:Ljava/lang/String;
 
+    .line 38
     return-void
 .end method
 
@@ -89,8 +99,10 @@
     .parameter "name"
 
     .prologue
+    .line 45
     iput-object p1, p0, Landroid/net/vpn/L2tpIpsecProfile;->mUserCertificate:Ljava/lang/String;
 
+    .line 46
     return-void
 .end method
 
@@ -100,15 +112,19 @@
     .parameter "flags"
 
     .prologue
+    .line 61
     invoke-super {p0, p1, p2}, Landroid/net/vpn/L2tpProfile;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 62
     iget-object v0, p0, Landroid/net/vpn/L2tpIpsecProfile;->mCaCertificate:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 63
     iget-object v0, p0, Landroid/net/vpn/L2tpIpsecProfile;->mUserCertificate:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 64
     return-void
 .end method

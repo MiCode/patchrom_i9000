@@ -39,6 +39,7 @@
     .parameter
 
     .prologue
+    .line 389
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockScreen$2;->this$0:Lcom/android/internal/policy/impl/LockScreen;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/LockScreen$2;->val$textView:Landroid/widget/TextView;
@@ -62,22 +63,26 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 391
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockScreen$2;->val$textView:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockScreen$2;->val$text:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 392
     iget v0, p0, Lcom/android/internal/policy/impl/LockScreen$2;->val$color:I
 
     if-eqz v0, :cond_0
 
+    .line 393
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockScreen$2;->val$textView:Landroid/widget/TextView;
 
     iget v1, p0, Lcom/android/internal/policy/impl/LockScreen$2;->val$color:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
+    .line 395
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockScreen$2;->val$textView:Landroid/widget/TextView;
 
@@ -85,5 +90,6 @@
 
     invoke-virtual {v0, v1, v2, v2, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
+    .line 396
     return-void
 .end method

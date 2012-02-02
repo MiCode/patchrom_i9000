@@ -220,10 +220,12 @@
     .locals 1
 
     .prologue
+    .line 398
     const-string v0, "ImmVibeJ"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
+    .line 399
     return-void
 .end method
 
@@ -231,16 +233,20 @@
     .locals 1
 
     .prologue
+    .line 394
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 447
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/immersion/android/ImmVibe;->m_hDevice:I
 
+    .line 448
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/immersion/android/ImmVibe;->m_bInitialized:Z
 
+    .line 395
     return-void
 .end method
 
@@ -389,8 +395,10 @@
     .parameter "hDeviceHandle"
 
     .prologue
+    .line 235
     invoke-direct {p0, p1}, Lcom/immersion/android/ImmVibe;->CloseDevice(I)V
 
+    .line 236
     return-void
 .end method
 
@@ -399,6 +407,7 @@
     .parameter "hDeviceHandle"
 
     .prologue
+    .line 335
     invoke-direct {p0, p1}, Lcom/immersion/android/ImmVibe;->CreateStreamingEffect(I)I
 
     move-result v0
@@ -411,8 +420,10 @@
     .parameter "strPathName"
 
     .prologue
+    .line 331
     invoke-direct {p0, p1}, Lcom/immersion/android/ImmVibe;->DeleteIVTFile(Ljava/lang/String;)V
 
+    .line 332
     return-void
 .end method
 
@@ -422,8 +433,10 @@
     .parameter "hEffectHandle"
 
     .prologue
+    .line 339
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->DestroyStreamingEffect(II)V
 
+    .line 340
     return-void
 .end method
 
@@ -433,6 +446,7 @@
     .parameter "nDevCapType"
 
     .prologue
+    .line 215
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetDeviceCapabilityBool(II)Z
 
     move-result v0
@@ -446,6 +460,7 @@
     .parameter "nDevCapType"
 
     .prologue
+    .line 219
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetDeviceCapabilityInt32(II)I
 
     move-result v0
@@ -459,6 +474,7 @@
     .parameter "nDevCapType"
 
     .prologue
+    .line 223
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetDeviceCapabilityString(II)Ljava/lang/String;
 
     move-result-object v0
@@ -470,6 +486,7 @@
     .locals 1
 
     .prologue
+    .line 207
     invoke-direct {p0}, Lcom/immersion/android/ImmVibe;->GetDeviceCount()I
 
     move-result v0
@@ -483,6 +500,7 @@
     .parameter "nDevPropType"
 
     .prologue
+    .line 239
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetDevicePropertyBool(II)Z
 
     move-result v0
@@ -496,6 +514,7 @@
     .parameter "nDevPropType"
 
     .prologue
+    .line 247
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetDevicePropertyInt32(II)I
 
     move-result v0
@@ -509,6 +528,7 @@
     .parameter "nDevPropType"
 
     .prologue
+    .line 255
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetDevicePropertyString(II)Ljava/lang/String;
 
     move-result-object v0
@@ -521,6 +541,7 @@
     .parameter "nDeviceIndex"
 
     .prologue
+    .line 211
     invoke-direct {p0, p1}, Lcom/immersion/android/ImmVibe;->GetDeviceState(I)I
 
     move-result v0
@@ -534,6 +555,7 @@
     .parameter "hEffectHandle"
 
     .prologue
+    .line 359
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetEffectState(II)I
 
     move-result v0
@@ -546,6 +568,7 @@
     .parameter "pIVT"
 
     .prologue
+    .line 263
     invoke-direct {p0, p1}, Lcom/immersion/android/ImmVibe;->GetIVTEffectCount([B)I
 
     move-result v0
@@ -559,6 +582,7 @@
     .parameter "nEffectIndex"
 
     .prologue
+    .line 363
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetIVTEffectDuration([BI)I
 
     move-result v0
@@ -572,6 +596,7 @@
     .parameter "strEffectName"
 
     .prologue
+    .line 271
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetIVTEffectIndexFromName([BLjava/lang/String;)I
 
     move-result v0
@@ -585,6 +610,7 @@
     .parameter "nEffectIndex"
 
     .prologue
+    .line 267
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetIVTEffectName([BI)Ljava/lang/String;
 
     move-result-object v0
@@ -598,6 +624,7 @@
     .parameter "nEffectIndex"
 
     .prologue
+    .line 275
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetIVTEffectType([BI)I
 
     move-result v0
@@ -618,8 +645,10 @@
     .parameter "nFadeLevel"
 
     .prologue
+    .line 295
     invoke-direct/range {p0 .. p9}, Lcom/immersion/android/ImmVibe;->GetIVTMagSweepEffectDefinition([BI[I[I[I[I[I[I[I)V
 
+    .line 296
     return-void
 .end method
 
@@ -637,8 +666,10 @@
     .parameter "pnFadeLevel"
 
     .prologue
+    .line 299
     invoke-direct/range {p0 .. p10}, Lcom/immersion/android/ImmVibe;->GetIVTPeriodicEffectDefinition([BI[I[I[I[I[I[I[I[I)V
 
+    .line 300
     return-void
 .end method
 
@@ -648,6 +679,7 @@
     .parameter "nBufferSize"
 
     .prologue
+    .line 367
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->GetIVTSize([BI)I
 
     move-result v0
@@ -659,8 +691,10 @@
     .locals 0
 
     .prologue
+    .line 387
     invoke-direct {p0}, Lcom/immersion/android/ImmVibe;->Initialize()V
 
+    .line 388
     return-void
 .end method
 
@@ -669,6 +703,7 @@
     .parameter "nBufferSize"
 
     .prologue
+    .line 371
     invoke-direct {p0, p1}, Lcom/immersion/android/ImmVibe;->InitializeIVTBuffer(I)[B
 
     move-result-object v0
@@ -684,6 +719,7 @@
     .parameter "pIVTElement"
 
     .prologue
+    .line 375
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/immersion/android/ImmVibe;->InsertIVTElement([BII[I)[B
 
     move-result-object v0
@@ -704,8 +740,10 @@
     .parameter "nFadeLevel"
 
     .prologue
+    .line 311
     invoke-direct/range {p0 .. p9}, Lcom/immersion/android/ImmVibe;->ModifyPlayingMagSweepEffect(IIIIIIIII)V
 
+    .line 312
     return-void
 .end method
 
@@ -723,8 +761,10 @@
     .parameter "nFadeLevel"
 
     .prologue
+    .line 315
     invoke-direct/range {p0 .. p10}, Lcom/immersion/android/ImmVibe;->ModifyPlayingPeriodicEffect(IIIIIIIIII)V
 
+    .line 316
     return-void
 .end method
 
@@ -735,6 +775,7 @@
     .parameter "strLicenseKey"
 
     .prologue
+    .line 231
     invoke-direct {p0, p1, p2, p3}, Lcom/immersion/android/ImmVibe;->OpenCompositeDevice([IILjava/lang/String;)I
 
     move-result v0
@@ -748,6 +789,7 @@
     .parameter "strLicenseKey"
 
     .prologue
+    .line 227
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->OpenDevice(ILjava/lang/String;)I
 
     move-result v0
@@ -761,8 +803,10 @@
     .parameter "hEffectHandle"
 
     .prologue
+    .line 351
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->PausePlayingEffect(II)V
 
+    .line 352
     return-void
 .end method
 
@@ -772,6 +816,7 @@
     .parameter "nEffectIndex"
 
     .prologue
+    .line 287
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/immersion/android/ImmVibe;->PlayBuiltInEffectRepeat(IIB)I
@@ -788,6 +833,7 @@
     .parameter "nRepeat"
 
     .prologue
+    .line 291
     invoke-direct {p0, p1, p2, p3}, Lcom/immersion/android/ImmVibe;->PlayBuiltInEffectRepeat(IIB)I
 
     move-result v0
@@ -802,6 +848,7 @@
     .parameter "nEffectIndex"
 
     .prologue
+    .line 279
     invoke-direct {p0, p1, p2, p3}, Lcom/immersion/android/ImmVibe;->PlayIVTEffect(I[BI)I
 
     move-result v0
@@ -817,6 +864,7 @@
     .parameter "nRepeat"
 
     .prologue
+    .line 283
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/immersion/android/ImmVibe;->PlayIVTEffectRepeat(I[BIB)I
 
     move-result v0
@@ -836,6 +884,7 @@
     .parameter "nFadeLevel"
 
     .prologue
+    .line 303
     invoke-direct/range {p0 .. p8}, Lcom/immersion/android/ImmVibe;->PlayMagSweepEffect(IIIIIIII)I
 
     move-result v0
@@ -856,6 +905,7 @@
     .parameter "nFadeLevel"
 
     .prologue
+    .line 307
     invoke-direct/range {p0 .. p9}, Lcom/immersion/android/ImmVibe;->PlayPeriodicEffect(IIIIIIIII)I
 
     move-result v0
@@ -871,8 +921,10 @@
     .parameter "nSize"
 
     .prologue
+    .line 343
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/immersion/android/ImmVibe;->PlayStreamingSample(II[BI)V
 
+    .line 344
     return-void
 .end method
 
@@ -885,8 +937,10 @@
     .parameter "nOffsetTime"
 
     .prologue
+    .line 347
     invoke-direct/range {p0 .. p5}, Lcom/immersion/android/ImmVibe;->PlayStreamingSampleWithOffset(II[BII)V
 
+    .line 348
     return-void
 .end method
 
@@ -898,6 +952,7 @@
     .parameter "nElementIndex"
 
     .prologue
+    .line 383
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/immersion/android/ImmVibe;->ReadIVTElement([BIII)[I
 
     move-result-object v0
@@ -913,6 +968,7 @@
     .parameter "nElementIndex"
 
     .prologue
+    .line 379
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/immersion/android/ImmVibe;->RemoveIVTElement([BIII)[B
 
     move-result-object v0
@@ -926,8 +982,10 @@
     .parameter "hEffectHandle"
 
     .prologue
+    .line 355
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->ResumePausedEffect(II)V
 
+    .line 356
     return-void
 .end method
 
@@ -937,8 +995,10 @@
     .parameter "strPathName"
 
     .prologue
+    .line 327
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->SaveIVTFile([BLjava/lang/String;)V
 
+    .line 328
     return-void
 .end method
 
@@ -949,8 +1009,10 @@
     .parameter "bDevPropValue"
 
     .prologue
+    .line 243
     invoke-direct {p0, p1, p2, p3}, Lcom/immersion/android/ImmVibe;->SetDevicePropertyBool(IIZ)V
 
+    .line 244
     return-void
 .end method
 
@@ -961,8 +1023,10 @@
     .parameter "nDevPropValue"
 
     .prologue
+    .line 251
     invoke-direct {p0, p1, p2, p3}, Lcom/immersion/android/ImmVibe;->SetDevicePropertyInt32(III)V
 
+    .line 252
     return-void
 .end method
 
@@ -973,8 +1037,10 @@
     .parameter "strDevPropValue"
 
     .prologue
+    .line 259
     invoke-direct {p0, p1, p2, p3}, Lcom/immersion/android/ImmVibe;->SetDevicePropertyString(IILjava/lang/String;)V
 
+    .line 260
     return-void
 .end method
 
@@ -983,8 +1049,10 @@
     .parameter "hDeviceHandle"
 
     .prologue
+    .line 323
     invoke-direct {p0, p1}, Lcom/immersion/android/ImmVibe;->StopAllPlayingEffects(I)V
 
+    .line 324
     return-void
 .end method
 
@@ -994,8 +1062,10 @@
     .parameter "hEffect"
 
     .prologue
+    .line 319
     invoke-direct {p0, p1, p2}, Lcom/immersion/android/ImmVibe;->StopPlayingEffect(II)V
 
+    .line 320
     return-void
 .end method
 
@@ -1003,7 +1073,9 @@
     .locals 0
 
     .prologue
+    .line 391
     invoke-direct {p0}, Lcom/immersion/android/ImmVibe;->Terminate()V
 
+    .line 392
     return-void
 .end method

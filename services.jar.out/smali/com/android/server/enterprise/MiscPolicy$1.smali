@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 733
     iput-object p1, p0, Lcom/android/server/enterprise/MiscPolicy$1;->this$0:Lcom/android/server/enterprise/MiscPolicy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,13 +39,16 @@
     .parameter "msg"
 
     .prologue
+    .line 736
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
+    .line 743
     :goto_0
     return-void
 
+    .line 739
     :pswitch_0
     new-instance v0, Landroid/content/Intent;
 
@@ -52,6 +56,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 740
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/enterprise/MiscPolicy$1;->this$0:Lcom/android/server/enterprise/MiscPolicy;
 
@@ -64,6 +69,7 @@
 
     goto :goto_0
 
+    .line 736
     nop
 
     :pswitch_data_0

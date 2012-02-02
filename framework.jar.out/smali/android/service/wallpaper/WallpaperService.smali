@@ -62,14 +62,17 @@
     .locals 1
 
     .prologue
+    .line 69
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
+    .line 103
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
+    .line 936
     return-void
 .end method
 
@@ -78,6 +81,7 @@
     .parameter "x0"
 
     .prologue
+    .line 69
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService;->mCallbackLooper:Landroid/os/Looper;
 
     return-object v0
@@ -88,6 +92,7 @@
     .parameter "x0"
 
     .prologue
+    .line 69
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     return-object v0
@@ -100,6 +105,7 @@
     .parameter "intent"
 
     .prologue
+    .line 970
     new-instance v0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;
 
     invoke-direct {v0, p0, p0}, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;-><init>(Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/WallpaperService;)V
@@ -111,8 +117,10 @@
     .locals 0
 
     .prologue
+    .line 952
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
+    .line 953
     return-void
 .end method
 
@@ -123,8 +131,10 @@
     .locals 2
 
     .prologue
+    .line 957
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
+    .line 958
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -137,6 +147,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 959
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -147,15 +158,18 @@
 
     invoke-virtual {v1}, Landroid/service/wallpaper/WallpaperService$Engine;->detach()V
 
+    .line 958
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 961
     :cond_0
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
+    .line 962
     return-void
 .end method
 
@@ -164,7 +178,9 @@
     .parameter "looper"
 
     .prologue
+    .line 983
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService;->mCallbackLooper:Landroid/os/Looper;
 
+    .line 984
     return-void
 .end method

@@ -76,6 +76,7 @@
     .locals 1
 
     .prologue
+    .line 66
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/gsm/stk/StkEventDownload$1;-><init>()V
@@ -90,22 +91,28 @@
     .parameter "event"
 
     .prologue
+    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 62
     const/16 v0, 0xfe
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mEvent:I
 
+    .line 63
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mLanguage:Ljava/lang/String;
 
+    .line 64
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mBrowserTerminationCause:I
 
+    .line 105
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->setEvent(I)V
 
+    .line 106
     return-void
 .end method
 
@@ -115,24 +122,31 @@
     .parameter "browserTerminationCause"
 
     .prologue
+    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 62
     const/16 v0, 0xfe
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mEvent:I
 
+    .line 63
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mLanguage:Ljava/lang/String;
 
+    .line 64
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mBrowserTerminationCause:I
 
+    .line 109
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->setEvent(I)V
 
+    .line 110
     invoke-virtual {p0, p2}, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->setBrowserTerminationCause(I)V
 
+    .line 111
     return-void
 .end method
 
@@ -142,24 +156,31 @@
     .parameter "language"
 
     .prologue
+    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 62
     const/16 v0, 0xfe
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mEvent:I
 
+    .line 63
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mLanguage:Ljava/lang/String;
 
+    .line 64
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mBrowserTerminationCause:I
 
+    .line 114
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->setEvent(I)V
 
+    .line 115
     invoke-virtual {p0, p2}, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->setLenguage(Ljava/lang/String;)V
 
+    .line 116
     return-void
 .end method
 
@@ -169,6 +190,7 @@
     .locals 1
 
     .prologue
+    .line 101
     const/4 v0, 0x0
 
     return v0
@@ -178,6 +200,7 @@
     .locals 1
 
     .prologue
+    .line 135
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mBrowserTerminationCause:I
 
     return v0
@@ -187,6 +210,7 @@
     .locals 1
 
     .prologue
+    .line 123
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mEvent:I
 
     return v0
@@ -196,6 +220,7 @@
     .locals 1
 
     .prologue
+    .line 131
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mLanguage:Ljava/lang/String;
 
     return-object v0
@@ -206,8 +231,10 @@
     .parameter "browserTerminationCause"
 
     .prologue
+    .line 139
     iput p1, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mBrowserTerminationCause:I
 
+    .line 140
     return-void
 .end method
 
@@ -216,8 +243,10 @@
     .parameter "event"
 
     .prologue
+    .line 119
     iput p1, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mEvent:I
 
+    .line 120
     return-void
 .end method
 
@@ -226,8 +255,10 @@
     .parameter "language"
 
     .prologue
+    .line 127
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mLanguage:Ljava/lang/String;
 
+    .line 128
     return-void
 .end method
 
@@ -237,17 +268,21 @@
     .parameter "flags"
 
     .prologue
+    .line 95
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mEvent:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 96
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mLanguage:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 97
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;->mBrowserTerminationCause:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 98
     return-void
 .end method

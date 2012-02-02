@@ -30,14 +30,18 @@
     .parameter "id"
 
     .prologue
+    .line 347
     iput-object p1, p0, Lcom/android/server/MountService$PackageInstalledMap;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 348
     iput-object p2, p0, Lcom/android/server/MountService$PackageInstalledMap;->InstalledPath:Ljava/lang/String;
 
+    .line 349
     iput-object p3, p0, Lcom/android/server/MountService$PackageInstalledMap;->id:Ljava/lang/String;
 
+    .line 350
     return-void
 .end method
 
@@ -50,16 +54,19 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 357
     instance-of v2, p1, Lcom/android/server/MountService$PackageInstalledMap;
 
     if-eqz v2, :cond_1
 
+    .line 359
     move-object v0, p1
 
     check-cast v0, Lcom/android/server/MountService$PackageInstalledMap;
 
     move-object v1, v0
 
+    .line 361
     .local v1, tmp:Lcom/android/server/MountService$PackageInstalledMap;
     iget-object v2, p0, Lcom/android/server/MountService$PackageInstalledMap;->InstalledPath:Ljava/lang/String;
 
@@ -83,6 +90,7 @@
 
     const/4 v2, 0x1
 
+    .line 364
     .end local v1           #tmp:Lcom/android/server/MountService$PackageInstalledMap;
     :goto_0
     return v2
@@ -91,12 +99,14 @@
     :cond_0
     move v2, v4
 
+    .line 361
     goto :goto_0
 
     .end local v1           #tmp:Lcom/android/server/MountService$PackageInstalledMap;
     :cond_1
     move v2, v4
 
+    .line 364
     goto :goto_0
 .end method
 
@@ -104,6 +114,7 @@
     .locals 1
 
     .prologue
+    .line 353
     iget-object v0, p0, Lcom/android/server/MountService$PackageInstalledMap;->InstalledPath:Ljava/lang/String;
 
     return-object v0
@@ -113,6 +124,7 @@
     .locals 2
 
     .prologue
+    .line 367
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

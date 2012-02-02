@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 99
     iput-object p1, p0, Landroid/os/storage/StorageManager$UsbStorageBinderListener;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {p0}, Landroid/os/storage/IUsbStorageServiceListener$Stub;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 99
     invoke-direct {p0, p1}, Landroid/os/storage/StorageManager$UsbStorageBinderListener;-><init>(Landroid/os/storage/StorageManager;)V
 
     return-void
@@ -51,6 +53,7 @@
     .parameter "newState"
 
     .prologue
+    .line 101
     iget-object v2, p0, Landroid/os/storage/StorageManager$UsbStorageBinderListener;->this$0:Landroid/os/storage/StorageManager;
 
     #getter for: Landroid/os/storage/StorageManager;->mListeners:Ljava/util/List;
@@ -62,6 +65,7 @@
 
     move-result v1
 
+    .line 102
     .local v1, size:I
     const/4 v0, 0x0
 
@@ -69,6 +73,7 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
+    .line 103
     iget-object v2, p0, Landroid/os/storage/StorageManager$UsbStorageBinderListener;->this$0:Landroid/os/storage/StorageManager;
 
     #getter for: Landroid/os/storage/StorageManager;->mListeners:Ljava/util/List;
@@ -84,10 +89,12 @@
 
     invoke-virtual {v2, p1, p2, p3}, Landroid/os/storage/StorageManager$ListenerDelegate;->sendUsbStorageStateChanged(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 102
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 105
     :cond_0
     return-void
 .end method

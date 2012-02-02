@@ -37,16 +37,22 @@
     .parameter "isPrimary"
 
     .prologue
+    .line 412
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 413
     iput p1, p0, Landroid/pim/vcard/VCardEntry$PhotoData;->type:I
 
+    .line 414
     iput-object p2, p0, Landroid/pim/vcard/VCardEntry$PhotoData;->formatName:Ljava/lang/String;
 
+    .line 415
     iput-object p3, p0, Landroid/pim/vcard/VCardEntry$PhotoData;->photoBytes:[B
 
+    .line 416
     iput-boolean p4, p0, Landroid/pim/vcard/VCardEntry$PhotoData;->isPrimary:Z
 
+    .line 417
     return-void
 .end method
 
@@ -59,15 +65,18 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 421
     instance-of v2, p1, Landroid/pim/vcard/VCardEntry$PhotoData;
 
     if-nez v2, :cond_0
 
     move v2, v4
 
+    .line 425
     :goto_0
     return v2
 
+    .line 424
     :cond_0
     move-object v0, p1
 
@@ -75,6 +84,7 @@
 
     move-object v1, v0
 
+    .line 425
     .local v1, photoData:Landroid/pim/vcard/VCardEntry$PhotoData;
     iget v2, p0, Landroid/pim/vcard/VCardEntry$PhotoData;->type:I
 
@@ -132,7 +142,8 @@
     .locals 4
 
     .prologue
-    const-string v0, "type: %d, format: %s: size: %d, isPrimary: %s"
+    .line 434
+    const-string/jumbo v0, "type: %d, format: %s: size: %d, isPrimary: %s"
 
     const/4 v1, 0x4
 

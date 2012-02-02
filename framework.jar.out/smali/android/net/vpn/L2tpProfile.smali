@@ -18,6 +18,7 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Landroid/net/vpn/VpnProfile;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
     .locals 1
 
     .prologue
+    .line 52
     iget-object v0, p0, Landroid/net/vpn/L2tpProfile;->mSecretString:Ljava/lang/String;
 
     return-object v0
@@ -38,6 +40,7 @@
     .locals 1
 
     .prologue
+    .line 33
     sget-object v0, Landroid/net/vpn/VpnType;->L2TP:Landroid/net/vpn/VpnType;
 
     return-object v0
@@ -47,6 +50,7 @@
     .locals 1
 
     .prologue
+    .line 44
     iget-boolean v0, p0, Landroid/net/vpn/L2tpProfile;->mSecret:Z
 
     return v0
@@ -57,8 +61,10 @@
     .parameter "in"
 
     .prologue
+    .line 57
     invoke-super {p0, p1}, Landroid/net/vpn/VpnProfile;->readFromParcel(Landroid/os/Parcel;)V
 
+    .line 58
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -70,14 +76,17 @@
     :goto_0
     iput-boolean v0, p0, Landroid/net/vpn/L2tpProfile;->mSecret:Z
 
+    .line 59
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/L2tpProfile;->mSecretString:Ljava/lang/String;
 
+    .line 60
     return-void
 
+    .line 58
     :cond_0
     const/4 v0, 0x0
 
@@ -89,8 +98,10 @@
     .parameter "enabled"
 
     .prologue
+    .line 40
     iput-boolean p1, p0, Landroid/net/vpn/L2tpProfile;->mSecret:Z
 
+    .line 41
     return-void
 .end method
 
@@ -99,8 +110,10 @@
     .parameter "secret"
 
     .prologue
+    .line 48
     iput-object p1, p0, Landroid/net/vpn/L2tpProfile;->mSecretString:Ljava/lang/String;
 
+    .line 49
     return-void
 .end method
 
@@ -110,8 +123,10 @@
     .parameter "flags"
 
     .prologue
+    .line 64
     invoke-super {p0, p1, p2}, Landroid/net/vpn/VpnProfile;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 65
     iget-boolean v0, p0, Landroid/net/vpn/L2tpProfile;->mSecret:Z
 
     if-eqz v0, :cond_0
@@ -121,12 +136,15 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 66
     iget-object v0, p0, Landroid/net/vpn/L2tpProfile;->mSecretString:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 67
     return-void
 
+    .line 65
     :cond_0
     const/4 v0, 0x0
 

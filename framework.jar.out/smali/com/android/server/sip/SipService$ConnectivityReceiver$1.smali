@@ -33,6 +33,7 @@
     .parameter
 
     .prologue
+    .line 1001
     iput-object p1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver$1;->this$1:Lcom/android/server/sip/SipService$ConnectivityReceiver;
 
     iput-object p2, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver$1;->val$context:Landroid/content/Context;
@@ -50,6 +51,7 @@
     .locals 3
 
     .prologue
+    .line 1003
     iget-object v0, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver$1;->this$1:Lcom/android/server/sip/SipService$ConnectivityReceiver;
 
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver$1;->val$context:Landroid/content/Context;
@@ -59,5 +61,6 @@
     #calls: Lcom/android/server/sip/SipService$ConnectivityReceiver;->onReceiveInternal(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/sip/SipService$ConnectivityReceiver;->access$1300(Lcom/android/server/sip/SipService$ConnectivityReceiver;Landroid/content/Context;Landroid/content/Intent;)V
 
+    .line 1004
     return-void
 .end method

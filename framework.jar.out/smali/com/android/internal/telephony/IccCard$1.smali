@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 712
     iput-object p1, p0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,8 +39,10 @@
     .parameter "msg"
 
     .prologue
+    .line 718
     const/4 v14, 0x7
 
+    .line 722
     .local v14, serviceClassX:I
     move-object/from16 v0, p1
 
@@ -125,6 +128,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 726
     :cond_0
     move-object/from16 v0, p0
 
@@ -138,6 +142,7 @@
 
     invoke-virtual/range {v16 .. v18}, Lcom/android/internal/telephony/IccCard;->getSimLockInfo(II)V
 
+    .line 727
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -150,6 +155,7 @@
 
     invoke-virtual/range {v16 .. v18}, Lcom/android/internal/telephony/IccCard;->getSimLockInfo(II)V
 
+    .line 730
     :cond_1
     const-string v16, "IccCard"
 
@@ -179,6 +185,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 733
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->what:I
@@ -187,6 +194,7 @@
 
     packed-switch v16, :pswitch_data_0
 
+    .line 943
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -225,12 +233,14 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 945
     .end local p0
     .end local p1
     :cond_2
     :goto_0
     return-void
 
+    .line 735
     .restart local p0
     .restart local p1
     :pswitch_0
@@ -248,6 +258,7 @@
 
     iput-object v0, v1, Lcom/android/internal/telephony/IccCard;->mState:Lcom/android/internal/telephony/IccCard$State;
 
+    .line 736
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -256,6 +267,7 @@
 
     invoke-virtual/range {v16 .. v16}, Lcom/android/internal/telephony/IccCard;->updateStateProperty()V
 
+    .line 737
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -270,6 +282,7 @@
 
     goto :goto_0
 
+    .line 741
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -282,6 +295,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->arForChangeToPUKState:Landroid/os/AsyncResult;
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$002(Lcom/android/internal/telephony/IccCard;Landroid/os/AsyncResult;)Landroid/os/AsyncResult;
 
+    .line 743
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -312,6 +326,7 @@
 
     invoke-interface/range {v16 .. v17}, Lcom/android/internal/telephony/CommandsInterface;->getIccCardStatus(Landroid/os/Message;)V
 
+    .line 744
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -356,6 +371,7 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/internal/telephony/CommandsInterface;->queryFacilityLock(Ljava/lang/String;Ljava/lang/String;ILandroid/os/Message;)V
 
+    .line 747
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -402,6 +418,7 @@
 
     goto/16 :goto_0
 
+    .line 753
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -414,6 +431,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->arForChangeToPUKState:Landroid/os/AsyncResult;
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$002(Lcom/android/internal/telephony/IccCard;Landroid/os/AsyncResult;)Landroid/os/AsyncResult;
 
+    .line 754
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -444,6 +462,7 @@
 
     invoke-interface/range {v16 .. v17}, Lcom/android/internal/telephony/CommandsInterface;->getIccCardStatus(Landroid/os/Message;)V
 
+    .line 755
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -490,6 +509,7 @@
 
     goto/16 :goto_0
 
+    .line 760
     :pswitch_3
     move-object/from16 v0, p1
 
@@ -499,6 +519,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 762
     .local v5, ar:Landroid/os/AsyncResult;
     move-object/from16 v0, p0
 
@@ -514,6 +535,7 @@
 
     goto/16 :goto_0
 
+    .line 768
     .end local v5           #ar:Landroid/os/AsyncResult;
     :pswitch_4
     move-object/from16 v0, p1
@@ -524,6 +546,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 770
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object v0, v5
 
@@ -550,6 +573,7 @@
 
     iput-object v0, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
+    .line 772
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -590,6 +614,7 @@
 
     goto/16 :goto_0
 
+    .line 781
     .end local v5           #ar:Landroid/os/AsyncResult;
     .restart local p1
     :pswitch_5
@@ -601,6 +626,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 782
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object/from16 v0, p0
 
@@ -614,6 +640,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/IccCard;->getIccCardStatusDone(Landroid/os/AsyncResult;)V
 
+    .line 783
     move-object v0, v5
 
     iget-object v0, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
@@ -627,6 +654,7 @@
 
     goto/16 :goto_0
 
+    .line 786
     .end local v5           #ar:Landroid/os/AsyncResult;
     .restart local p0
     :pswitch_6
@@ -638,6 +666,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 787
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object/from16 v0, p0
 
@@ -654,6 +683,7 @@
 
     goto/16 :goto_0
 
+    .line 790
     .end local v5           #ar:Landroid/os/AsyncResult;
     :pswitch_7
     move-object/from16 v0, p1
@@ -664,6 +694,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 791
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object/from16 v0, p0
 
@@ -680,6 +711,7 @@
 
     goto/16 :goto_0
 
+    .line 794
     .end local v5           #ar:Landroid/os/AsyncResult;
     :pswitch_8
     const-string v16, "IccCard"
@@ -688,6 +720,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 795
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -696,6 +729,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 796
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object v0, v5
 
@@ -705,6 +739,7 @@
 
     if-nez v16, :cond_4
 
+    .line 797
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -725,6 +760,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->mIccPinLocked:Z
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$302(Lcom/android/internal/telephony/IccCard;Z)Z
 
+    .line 798
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -777,6 +813,7 @@
     #calls: Lcom/android/internal/telephony/IccCard;->log(Ljava/lang/String;)V
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$500(Lcom/android/internal/telephony/IccCard;Ljava/lang/String;)V
 
+    .line 801
     :cond_3
     move-object/from16 v0, p0
 
@@ -789,6 +826,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->mRequestSetPINLock:Z
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$602(Lcom/android/internal/telephony/IccCard;Z)Z
 
+    .line 802
     move-object v0, v5
 
     iget-object v0, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
@@ -814,6 +852,7 @@
 
     iput-object v0, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
+    .line 804
     move-object v0, v5
 
     iget-object v0, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
@@ -826,6 +865,7 @@
 
     goto/16 :goto_0
 
+    .line 807
     .restart local p0
     :cond_4
     move-object/from16 v0, p0
@@ -866,6 +906,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 810
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -888,6 +929,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->arForChangeToPUKState:Landroid/os/AsyncResult;
     invoke-static {v0, v1}, Lcom/android/internal/telephony/IccCard;->access$002(Lcom/android/internal/telephony/IccCard;Landroid/os/AsyncResult;)Landroid/os/AsyncResult;
 
+    .line 811
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -920,6 +962,7 @@
 
     goto/16 :goto_0
 
+    .line 821
     .end local v5           #ar:Landroid/os/AsyncResult;
     .restart local p1
     :pswitch_9
@@ -931,6 +974,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 823
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object v0, v5
 
@@ -940,6 +984,7 @@
 
     if-nez v16, :cond_6
 
+    .line 824
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -960,6 +1005,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->mIccFdnEnabled:Z
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$702(Lcom/android/internal/telephony/IccCard;Z)Z
 
+    .line 825
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1012,6 +1058,7 @@
     #calls: Lcom/android/internal/telephony/IccCard;->log(Ljava/lang/String;)V
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$500(Lcom/android/internal/telephony/IccCard;Ljava/lang/String;)V
 
+    .line 831
     :cond_5
     :goto_1
     move-object v0, v5
@@ -1039,6 +1086,7 @@
 
     iput-object v0, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
+    .line 833
     move-object v0, v5
 
     iget-object v0, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
@@ -1049,6 +1097,7 @@
 
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->sendToTarget()V
 
+    .line 835
     new-instance v10, Landroid/content/Intent;
 
     const-string v16, "android.intent.action.FDN_MODE_CHANGED"
@@ -1059,6 +1108,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 836
     .local v10, intent:Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1084,6 +1134,7 @@
 
     goto/16 :goto_0
 
+    .line 828
     .end local v10           #intent:Landroid/content/Intent;
     .restart local p1
     :cond_6
@@ -1127,6 +1178,7 @@
 
     goto :goto_1
 
+    .line 840
     .end local v5           #ar:Landroid/os/AsyncResult;
     :pswitch_a
     move-object/from16 v0, p1
@@ -1137,6 +1189,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 841
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object v0, v5
 
@@ -1146,6 +1199,7 @@
 
     if-eqz v16, :cond_7
 
+    .line 842
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1184,6 +1238,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 845
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1195,6 +1250,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->arForChangeToPUKState:Landroid/os/AsyncResult;
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$002(Lcom/android/internal/telephony/IccCard;Landroid/os/AsyncResult;)Landroid/os/AsyncResult;
 
+    .line 846
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1225,6 +1281,7 @@
 
     invoke-interface/range {v16 .. v17}, Lcom/android/internal/telephony/CommandsInterface;->getIccCardStatus(Landroid/os/Message;)V
 
+    .line 849
     :cond_7
     move-object v0, v5
 
@@ -1251,6 +1308,7 @@
 
     iput-object v0, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
+    .line 851
     move-object v0, v5
 
     iget-object v0, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
@@ -1263,11 +1321,13 @@
 
     goto/16 :goto_0
 
+    .line 855
     .end local v5           #ar:Landroid/os/AsyncResult;
     .restart local p0
     :pswitch_b
     const/4 v8, 0x0
 
+    .line 859
     .local v8, eccString:Ljava/lang/StringBuffer;
     new-instance v8, Ljava/lang/StringBuffer;
 
@@ -1280,6 +1340,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
+    .line 864
     .restart local v8       #eccString:Ljava/lang/StringBuffer;
     move-object/from16 v0, p1
 
@@ -1296,6 +1357,7 @@
 
     move-object v5, v0
 
+    .line 866
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object v0, v5
 
@@ -1305,6 +1367,7 @@
 
     if-eqz v16, :cond_9
 
+    .line 867
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1321,6 +1384,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 868
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1334,6 +1398,7 @@
 
     if-nez v16, :cond_8
 
+    .line 869
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1374,6 +1439,7 @@
 
     invoke-virtual/range {v16 .. v18}, Lcom/android/internal/telephony/IccFileHandler;->loadEFTransparent(ILandroid/os/Message;)V
 
+    .line 871
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1387,6 +1453,7 @@
 
     goto/16 :goto_0
 
+    .line 873
     :cond_8
     move-object/from16 v0, p0
 
@@ -1407,6 +1474,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 875
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1418,6 +1486,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->mEmergencyNumber:Ljava/lang/String;
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$1002(Lcom/android/internal/telephony/IccCard;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 876
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1437,6 +1506,7 @@
 
     goto/16 :goto_0
 
+    .line 885
     .restart local p0
     :cond_9
     move-object/from16 v0, p0
@@ -1452,6 +1522,7 @@
 
     if-nez v16, :cond_c
 
+    .line 886
     move-object v0, v5
 
     iget-object v0, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -1466,6 +1537,7 @@
 
     move-object v7, v0
 
+    .line 888
     .local v7, datas:Ljava/util/ArrayList;,"Ljava/util/ArrayList<[B>;"
     const/4 v9, 0x0
 
@@ -1478,6 +1550,7 @@
     :goto_2
     if-ge v9, v13, :cond_f
 
+    .line 889
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1494,7 +1567,7 @@
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v18, "r "
+    const-string/jumbo v18, "r "
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1514,12 +1587,14 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 890
     invoke-virtual {v7, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, [B
 
+    .line 892
     .local v12, record:[B
     const/16 v16, 0x0
 
@@ -1535,6 +1610,7 @@
 
     move-result-object v15
 
+    .line 893
     .local v15, tempEccString:Ljava/lang/String;
     invoke-virtual {v15}, Ljava/lang/String;->length()I
 
@@ -1542,6 +1618,7 @@
 
     if-eqz v16, :cond_b
 
+    .line 894
     invoke-virtual {v8}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v16
@@ -1554,6 +1631,7 @@
 
     if-nez v16, :cond_a
 
+    .line 895
     const/16 v16, 0x2c
 
     move-object v0, v8
@@ -1562,9 +1640,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
+    .line 896
     :cond_a
     invoke-virtual {v8, v15}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 899
     const/16 v16, 0x2f
 
     move-object v0, v8
@@ -1573,6 +1653,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
+    .line 900
     move-object v0, v12
 
     array-length v0, v0
@@ -1601,11 +1682,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 888
     :cond_b
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
+    .line 904
     .end local v7           #datas:Ljava/util/ArrayList;,"Ljava/util/ArrayList<[B>;"
     .end local v9           #i:I
     .end local v12           #record:[B
@@ -1626,6 +1709,7 @@
 
     move-object v6, v0
 
+    .line 906
     .local v6, data:[B
     move-object v0, v6
 
@@ -1635,6 +1719,7 @@
 
     div-int/lit8 v11, v16, 0x3
 
+    .line 908
     .local v11, numOfEcc:I
     const/4 v9, 0x0
 
@@ -1642,6 +1727,7 @@
     :goto_3
     if-ge v9, v11, :cond_f
 
+    .line 909
     mul-int/lit8 v16, v9, 0x3
 
     const/16 v17, 0x3
@@ -1656,6 +1742,7 @@
 
     move-result-object v15
 
+    .line 910
     .restart local v15       #tempEccString:Ljava/lang/String;
     invoke-virtual {v15}, Ljava/lang/String;->length()I
 
@@ -1663,6 +1750,7 @@
 
     if-eqz v16, :cond_e
 
+    .line 911
     invoke-virtual {v8}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v16
@@ -1675,6 +1763,7 @@
 
     if-nez v16, :cond_d
 
+    .line 912
     const/16 v16, 0x2c
 
     move-object v0, v8
@@ -1683,14 +1772,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
+    .line 913
     :cond_d
     invoke-virtual {v8, v15}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 908
     :cond_e
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
+    .line 919
     .end local v6           #data:[B
     .end local v11           #numOfEcc:I
     .end local v15           #tempEccString:Ljava/lang/String;
@@ -1708,6 +1800,7 @@
     #setter for: Lcom/android/internal/telephony/IccCard;->mEmergencyNumber:Ljava/lang/String;
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/IccCard;->access$1002(Lcom/android/internal/telephony/IccCard;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 920
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
@@ -1727,6 +1820,7 @@
 
     goto/16 :goto_0
 
+    .line 930
     .end local v5           #ar:Landroid/os/AsyncResult;
     .end local v8           #eccString:Ljava/lang/StringBuffer;
     .end local v9           #i:I
@@ -1739,6 +1833,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 931
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1747,6 +1842,7 @@
 
     check-cast v5, Landroid/os/AsyncResult;
 
+    .line 932
     .restart local v5       #ar:Landroid/os/AsyncResult;
     move-object v0, v5
 
@@ -1756,6 +1852,7 @@
 
     if-eqz v16, :cond_10
 
+    .line 933
     const-string v16, "IccCard"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -1786,6 +1883,7 @@
 
     goto/16 :goto_0
 
+    .line 937
     :cond_10
     move-object/from16 v0, p0
 
@@ -1810,6 +1908,7 @@
 
     goto/16 :goto_0
 
+    .line 733
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2

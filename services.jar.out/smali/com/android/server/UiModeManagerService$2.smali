@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 191
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$2;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,6 +40,7 @@
     .parameter "intent"
 
     .prologue
+    .line 194
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$2;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/UiModeManagerService;->isDoingNightMode()Z
@@ -56,6 +58,7 @@
 
     if-nez v0, :cond_0
 
+    .line 195
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$2;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mHandler:Landroid/os/Handler;
@@ -67,6 +70,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
+    .line 197
     :cond_0
     return-void
 .end method

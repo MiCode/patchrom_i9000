@@ -44,20 +44,25 @@
     .parameter "mPeriod"
 
     .prologue
+    .line 295
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsCounter;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 296
     iput p2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsCounter;->mMaxAllowed:I
 
+    .line 297
     iput p3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsCounter;->mCheckPeriod:I
 
+    .line 298
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsCounter;->mSmsStamp:Ljava/util/HashMap;
 
+    .line 299
     return-void
 .end method
 
@@ -79,6 +84,7 @@
     .local p1, sent:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     const/4 v7, 0x0
 
+    .line 318
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -87,6 +93,7 @@
 
     move-result-object v0
 
+    .line 320
     .local v0, ct:Ljava/lang/Long;
     const-string v2, "SMSDispatcher"
 
@@ -108,7 +115,7 @@
 
     move-result-object v3
 
-    const-string v4, "time="
+    const-string/jumbo v4, "time="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -124,6 +131,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 322
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -155,10 +163,12 @@
 
     if-lez v2, :cond_0
 
+    .line 323
     invoke-virtual {p1, v7}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 327
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -170,21 +180,26 @@
 
     if-gt v2, v3, :cond_2
 
+    .line 328
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_1
     if-ge v1, p2, :cond_1
 
+    .line 329
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 328
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 331
     :cond_1
     const/4 v2, 0x1
 
+    .line 333
     .end local v1           #i:I
     :goto_2
     return v2
@@ -203,6 +218,7 @@
     .parameter "smsWaiting"
 
     .prologue
+    .line 310
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsCounter;->mSmsStamp:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -211,6 +227,7 @@
 
     if-nez v0, :cond_0
 
+    .line 311
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsCounter;->mSmsStamp:Ljava/util/HashMap;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -219,6 +236,7 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 314
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsCounter;->mSmsStamp:Ljava/util/HashMap;
 

@@ -27,12 +27,16 @@
     .parameter "duration"
 
     .prologue
+    .line 1404
     iput-object p1, p0, Lcom/android/server/sip/SipSessionGroup$RegisterCommand;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
+    .line 1405
     invoke-direct {p0, p1}, Ljava/util/EventObject;-><init>(Ljava/lang/Object;)V
 
+    .line 1406
     iput p2, p0, Lcom/android/server/sip/SipSessionGroup$RegisterCommand;->mDuration:I
 
+    .line 1407
     return-void
 .end method
 
@@ -42,6 +46,7 @@
     .locals 1
 
     .prologue
+    .line 1410
     iget v0, p0, Lcom/android/server/sip/SipSessionGroup$RegisterCommand;->mDuration:I
 
     return v0

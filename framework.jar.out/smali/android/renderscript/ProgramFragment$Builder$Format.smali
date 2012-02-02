@@ -54,6 +54,7 @@
 
     const/4 v2, 0x1
 
+    .line 82
     new-instance v0, Landroid/renderscript/ProgramFragment$Builder$Format;
 
     const-string v1, "ALPHA"
@@ -62,6 +63,7 @@
 
     sput-object v0, Landroid/renderscript/ProgramFragment$Builder$Format;->ALPHA:Landroid/renderscript/ProgramFragment$Builder$Format;
 
+    .line 83
     new-instance v0, Landroid/renderscript/ProgramFragment$Builder$Format;
 
     const-string v1, "LUMINANCE_ALPHA"
@@ -70,6 +72,7 @@
 
     sput-object v0, Landroid/renderscript/ProgramFragment$Builder$Format;->LUMINANCE_ALPHA:Landroid/renderscript/ProgramFragment$Builder$Format;
 
+    .line 84
     new-instance v0, Landroid/renderscript/ProgramFragment$Builder$Format;
 
     const-string v1, "RGB"
@@ -78,6 +81,7 @@
 
     sput-object v0, Landroid/renderscript/ProgramFragment$Builder$Format;->RGB:Landroid/renderscript/ProgramFragment$Builder$Format;
 
+    .line 85
     new-instance v0, Landroid/renderscript/ProgramFragment$Builder$Format;
 
     const-string v1, "RGBA"
@@ -86,6 +90,7 @@
 
     sput-object v0, Landroid/renderscript/ProgramFragment$Builder$Format;->RGBA:Landroid/renderscript/ProgramFragment$Builder$Format;
 
+    .line 81
     new-array v0, v6, [Landroid/renderscript/ProgramFragment$Builder$Format;
 
     sget-object v1, Landroid/renderscript/ProgramFragment$Builder$Format;->ALPHA:Landroid/renderscript/ProgramFragment$Builder$Format;
@@ -121,10 +126,13 @@
     .end annotation
 
     .prologue
+    .line 88
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 89
     iput p3, p0, Landroid/renderscript/ProgramFragment$Builder$Format;->mID:I
 
+    .line 90
     return-void
 .end method
 
@@ -133,6 +141,7 @@
     .parameter "name"
 
     .prologue
+    .line 81
     const-class v0, Landroid/renderscript/ProgramFragment$Builder$Format;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -149,6 +158,7 @@
     .locals 1
 
     .prologue
+    .line 81
     sget-object v0, Landroid/renderscript/ProgramFragment$Builder$Format;->$VALUES:[Landroid/renderscript/ProgramFragment$Builder$Format;
 
     invoke-virtual {v0}, [Landroid/renderscript/ProgramFragment$Builder$Format;->clone()Ljava/lang/Object;

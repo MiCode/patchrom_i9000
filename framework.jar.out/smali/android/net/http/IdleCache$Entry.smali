@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 32
     iput-object p1, p0, Landroid/net/http/IdleCache$Entry;->this$0:Landroid/net/http/IdleCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

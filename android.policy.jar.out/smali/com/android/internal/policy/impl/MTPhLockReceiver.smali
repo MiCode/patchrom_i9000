@@ -24,8 +24,10 @@
     .locals 1
 
     .prologue
+    .line 18
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 23
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -40,8 +42,10 @@
     .parameter "pwm"
 
     .prologue
+    .line 33
     sput-object p0, Lcom/android/internal/policy/impl/MTPhLockReceiver;->mPhoneWindowManager:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
+    .line 34
     return-void
 .end method
 
@@ -55,6 +59,7 @@
     .prologue
     const-string v2, "MTPhLockReceiver"
 
+    .line 39
     const-string v0, "MTPhLockReceiver"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -81,12 +86,14 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 41
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {v0, p1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/MTPhLockReceiver;->mLockUtils:Lcom/android/internal/widget/LockPatternUtils;
 
+    .line 43
     const-string v0, "com.samsung.MT.PHLOCK_ACTION"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -99,28 +106,33 @@
 
     if-eqz v0, :cond_1
 
+    .line 44
     const-string v0, "MTPhLockReceiver"
 
     const-string v0, "onReceive-MT.PHLOCK_ACTION"
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 45
     sget-object v0, Lcom/android/internal/policy/impl/MTPhLockReceiver;->mPhoneWindowManager:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->screenTurnedOff(I)V
 
+    .line 47
     sget-object v0, Lcom/android/internal/policy/impl/MTPhLockReceiver;->mPhoneWindowManager:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->enableKeyguard(Z)V
 
+    .line 59
     :cond_0
     :goto_0
     return-void
 
+    .line 51
     :cond_1
     const-string v0, "com.samsung.MT.DEACT_PHLOCK_ACTION"
 
@@ -134,12 +146,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 52
     const-string v0, "MTPhLockReceiver"
 
     const-string v0, "onReceive-MT.DEACT_PHLOCK_ACTION"
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 55
     sget-object v0, Lcom/android/internal/policy/impl/MTPhLockReceiver;->mPhoneWindowManager:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v1, 0x0

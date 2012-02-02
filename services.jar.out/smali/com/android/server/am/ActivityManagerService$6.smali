@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 3689
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,15 +44,18 @@
 
     const/4 v3, 0x0
 
+    .line 3692
     const-string v0, "android.intent.extra.PACKAGES"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v9
 
+    .line 3693
     .local v9, pkgs:[Ljava/lang/String;
     if-eqz v9, :cond_0
 
+    .line 3694
     move-object v6, v9
 
     .local v6, arr$:[Ljava/lang/String;
@@ -66,6 +70,7 @@
 
     aget-object v1, v6, v7
 
+    .line 3695
     .local v1, pkg:Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -80,8 +85,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 3696
     invoke-virtual {p0, v2}, Lcom/android/server/am/ActivityManagerService$6;->setResultCode(I)V
 
+    .line 3701
     .end local v1           #pkg:Ljava/lang/String;
     .end local v6           #arr$:[Ljava/lang/String;
     .end local v7           #i$:I
@@ -89,6 +96,7 @@
     :cond_0
     return-void
 
+    .line 3694
     .restart local v1       #pkg:Ljava/lang/String;
     .restart local v6       #arr$:[Ljava/lang/String;
     .restart local v7       #i$:I

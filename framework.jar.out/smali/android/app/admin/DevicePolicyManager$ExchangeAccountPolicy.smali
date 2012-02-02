@@ -36,10 +36,12 @@
     .parameter
 
     .prologue
+    .line 2395
     iput-object p1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->this$0:Landroid/app/admin/DevicePolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2396
     const-string v0, "eas_account_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -52,6 +54,7 @@
 
     iput-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
+    .line 2398
     return-void
 .end method
 
@@ -61,6 +64,7 @@
     .parameter "x1"
 
     .prologue
+    .line 2385
     invoke-direct {p0, p1}, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;-><init>(Landroid/app/admin/DevicePolicyManager;)V
 
     return-void
@@ -90,6 +94,7 @@
     .parameter "serverPathPrefix"
 
     .prologue
+    .line 2456
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
@@ -98,6 +103,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 2458
     :try_start_0
     move-object/from16 v0, p0
 
@@ -147,14 +153,17 @@
 
     move-result-wide v3
 
+    .line 2467
     :goto_0
     return-wide v3
 
+    .line 2463
     :catch_0
     move-exception v3
 
     move-object/from16 v22, v3
 
+    .line 2464
     .local v22, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -170,6 +179,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2467
     .end local v22           #e:Landroid/os/RemoteException;
     :cond_0
     const-wide/16 v3, -0x1
@@ -182,10 +192,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2912
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2914
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -195,14 +207,17 @@
 
     move-result v1
 
+    .line 2919
     :goto_0
     return v1
 
+    .line 2915
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2916
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -212,6 +227,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2919
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -224,10 +240,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2894
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2896
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -237,14 +255,17 @@
 
     move-result-object v1
 
+    .line 2901
     :goto_0
     return-object v1
 
+    .line 2897
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2898
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -254,6 +275,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2901
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -268,10 +290,12 @@
     .parameter "activeSyncHost"
 
     .prologue
+    .line 2876
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2878
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -281,14 +305,17 @@
 
     move-result-wide v1
 
+    .line 2883
     :goto_0
     return-wide v1
 
+    .line 2879
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2880
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -298,6 +325,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2883
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const-wide/16 v1, -0x1
@@ -311,12 +339,14 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    const-string v0, "setAccountBaseParameters : "
+    const-string/jumbo v0, "setAccountBaseParameters : "
 
+    .line 2926
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v0, :cond_1
 
+    .line 2928
     :try_start_0
     iget-wide v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mAccId:J
 
@@ -324,6 +354,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2930
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
     move-result-object v0
@@ -332,7 +363,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "setAccountBaseParameters : "
+    const-string/jumbo v2, "setAccountBaseParameters : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -350,6 +381,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2931
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
     move-result-object v0
@@ -358,7 +390,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "setAccountBaseParameters : "
+    const-string/jumbo v2, "setAccountBaseParameters : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -376,6 +408,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2932
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
     move-result-object v0
@@ -384,7 +417,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "setAccountBaseParameters : "
+    const-string/jumbo v2, "setAccountBaseParameters : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -402,6 +435,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2933
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
     move-result-object v0
@@ -410,7 +444,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "setAccountBaseParameters : "
+    const-string/jumbo v2, "setAccountBaseParameters : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -428,6 +462,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2934
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
     move-result-object v0
@@ -436,7 +471,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "setAccountBaseParameters : "
+    const-string/jumbo v2, "setAccountBaseParameters : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -454,6 +489,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2935
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mUser:Ljava/lang/String;
 
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mDomain:Ljava/lang/String;
@@ -468,6 +504,7 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->setAccountBaseParameters(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)J
 
+    .line 2936
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mHost:Ljava/lang/String;
@@ -478,10 +515,12 @@
 
     iput-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mUser:Ljava/lang/String;
 
+    .line 2937
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mAccId:J
 
+    .line 2939
     :cond_0
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -489,15 +528,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2944
     :cond_1
     :goto_0
     return-void
 
+    .line 2940
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
+    .line 2941
     .local v7, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -516,10 +558,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2606
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2608
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -529,14 +573,17 @@
 
     move-result v1
 
+    .line 2613
     :goto_0
     return v1
 
+    .line 2609
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2610
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -546,6 +593,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2613
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -562,10 +610,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2486
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v0, :cond_0
 
+    .line 2488
     :try_start_0
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -585,14 +635,17 @@
 
     move-result-wide v0
 
+    .line 2493
     :goto_0
     return-wide v0
 
+    .line 2489
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
+    .line 2490
     .local v7, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -602,6 +655,7 @@
 
     invoke-static {v0, v1, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2493
     .end local v7           #e:Landroid/os/RemoteException;
     :cond_0
     const-wide/16 v0, -0x1
@@ -615,10 +669,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2852
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2854
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -628,14 +684,17 @@
 
     move-result v1
 
+    .line 2859
     :goto_0
     return v1
 
+    .line 2855
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2856
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -645,6 +704,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2859
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -658,10 +718,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2627
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2629
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -671,14 +733,17 @@
 
     move-result v1
 
+    .line 2634
     :goto_0
     return v1
 
+    .line 2630
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2631
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -688,6 +753,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2634
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -700,10 +766,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2831
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2833
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -713,14 +781,17 @@
 
     move-result v1
 
+    .line 2838
     :goto_0
     return v1
 
+    .line 2834
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2835
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -730,6 +801,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2838
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -744,10 +816,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2956
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2958
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -755,15 +829,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2963
     :cond_0
     :goto_0
     return-void
 
+    .line 2959
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2960
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -782,14 +859,18 @@
     .parameter "accId"
 
     .prologue
+    .line 2667
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v0, :cond_0
 
+    .line 2669
     iput-object p1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mDomain:Ljava/lang/String;
 
+    .line 2670
     iput-wide p2, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mAccId:J
 
+    .line 2675
     :cond_0
     return-void
 .end method
@@ -800,14 +881,18 @@
     .parameter "accId"
 
     .prologue
+    .line 2544
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v0, :cond_0
 
+    .line 2546
     iput-object p1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mEmailAddress:Ljava/lang/String;
 
+    .line 2547
     iput-wide p2, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mAccId:J
 
+    .line 2552
     :cond_0
     const/4 v0, 0x0
 
@@ -820,14 +905,18 @@
     .parameter "accId"
 
     .prologue
+    .line 2505
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v0, :cond_0
 
+    .line 2507
     iput-object p1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mHost:Ljava/lang/String;
 
+    .line 2508
     iput-wide p2, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mAccId:J
 
+    .line 2513
     :cond_0
     return-void
 .end method
@@ -838,10 +927,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2687
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2689
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -851,14 +942,17 @@
 
     move-result v1
 
+    .line 2694
     :goto_0
     return v1
 
+    .line 2690
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2691
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -868,6 +962,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2694
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -881,10 +976,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2749
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2751
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -894,14 +991,17 @@
 
     move-result v1
 
+    .line 2756
     :goto_0
     return v1
 
+    .line 2752
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2753
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -911,6 +1011,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2756
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -924,10 +1025,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2707
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2709
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -937,14 +1040,17 @@
 
     move-result v1
 
+    .line 2714
     :goto_0
     return v1
 
+    .line 2710
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2711
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -954,6 +1060,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2714
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -967,10 +1074,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2565
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2567
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -980,14 +1089,17 @@
 
     move-result v1
 
+    .line 2572
     :goto_0
     return v1
 
+    .line 2568
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2569
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -997,6 +1109,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2572
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1010,10 +1123,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2793
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2795
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -1023,14 +1138,17 @@
 
     move-result v1
 
+    .line 2800
     :goto_0
     return v1
 
+    .line 2796
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2797
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -1040,6 +1158,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2800
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1053,10 +1172,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2813
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2815
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -1066,14 +1187,17 @@
 
     move-result v1
 
+    .line 2820
     :goto_0
     return v1
 
+    .line 2816
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2817
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -1083,6 +1207,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2820
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1096,10 +1221,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2727
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2729
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -1109,14 +1236,17 @@
 
     move-result v1
 
+    .line 2734
     :goto_0
     return v1
 
+    .line 2730
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2731
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -1126,6 +1256,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2734
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1139,10 +1270,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2648
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2650
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -1152,14 +1285,17 @@
 
     move-result v1
 
+    .line 2655
     :goto_0
     return v1
 
+    .line 2651
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2652
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -1169,6 +1305,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2655
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1182,10 +1319,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2773
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2775
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -1195,14 +1334,17 @@
 
     move-result v1
 
+    .line 2780
     :goto_0
     return v1
 
+    .line 2776
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2777
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -1212,6 +1354,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2780
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1225,10 +1368,12 @@
     .parameter "accId"
 
     .prologue
+    .line 2585
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 2587
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
@@ -1238,14 +1383,17 @@
 
     move-result v1
 
+    .line 2592
     :goto_0
     return v1
 
+    .line 2588
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 2589
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -1255,6 +1403,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 2592
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1268,14 +1417,18 @@
     .parameter "accId"
 
     .prologue
+    .line 2524
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mService:Landroid/app/enterprise/IExchangeAccountPolicy;
 
     if-eqz v0, :cond_0
 
+    .line 2526
     iput-object p1, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mUser:Ljava/lang/String;
 
+    .line 2527
     iput-wide p2, p0, Landroid/app/admin/DevicePolicyManager$ExchangeAccountPolicy;->mAccId:J
 
+    .line 2532
     :cond_0
     return-void
 .end method

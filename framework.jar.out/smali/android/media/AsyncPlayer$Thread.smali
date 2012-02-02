@@ -24,8 +24,10 @@
     .parameter
 
     .prologue
+    .line 81
     iput-object p1, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
+    .line 82
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,6 +53,7 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
+    .line 83
     return-void
 .end method
 
@@ -62,9 +65,11 @@
     .prologue
     const/4 v8, 0x0
 
+    .line 87
     :goto_0
     const/4 v1, 0x0
 
+    .line 89
     .local v1, cmd:Landroid/media/AsyncPlayer$Command;
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
@@ -75,6 +80,7 @@
 
     monitor-enter v5
 
+    .line 91
     :try_start_0
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
@@ -93,14 +99,17 @@
 
     move-object v1, v0
 
+    .line 92
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 94
     iget v4, v1, Landroid/media/AsyncPlayer$Command;->code:I
 
     packed-switch v4, :pswitch_data_0
 
+    .line 115
     :goto_1
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
@@ -111,6 +120,7 @@
 
     monitor-enter v4
 
+    .line 116
     :try_start_1
     iget-object v5, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
@@ -125,6 +135,7 @@
 
     if-nez v5, :cond_2
 
+    .line 121
     iget-object v5, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
     const/4 v6, 0x0
@@ -132,17 +143,20 @@
     #setter for: Landroid/media/AsyncPlayer;->mThread:Landroid/media/AsyncPlayer$Thread;
     invoke-static {v5, v6}, Landroid/media/AsyncPlayer;->access$402(Landroid/media/AsyncPlayer;Landroid/media/AsyncPlayer$Thread;)Landroid/media/AsyncPlayer$Thread;
 
+    .line 122
     iget-object v5, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
     #calls: Landroid/media/AsyncPlayer;->releaseWakeLock()V
     invoke-static {v5}, Landroid/media/AsyncPlayer;->access$500(Landroid/media/AsyncPlayer;)V
 
+    .line 123
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     return-void
 
+    .line 92
     :catchall_0
     move-exception v4
 
@@ -153,6 +167,7 @@
 
     throw v4
 
+    .line 97
     :pswitch_0
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
@@ -161,6 +176,7 @@
 
     goto :goto_1
 
+    .line 101
     :pswitch_1
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
@@ -171,6 +187,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 102
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
@@ -179,6 +196,7 @@
 
     sub-long v2, v4, v6
 
+    .line 103
     .local v2, delay:J
     const-wide/16 v4, 0x3e8
 
@@ -186,6 +204,7 @@
 
     if-lez v4, :cond_0
 
+    .line 104
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
     #getter for: Landroid/media/AsyncPlayer;->mTag:Ljava/lang/String;
@@ -219,6 +238,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 106
     :cond_0
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
@@ -229,6 +249,7 @@
 
     invoke-virtual {v4}, Landroid/media/MediaPlayer;->stop()V
 
+    .line 107
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
     #getter for: Landroid/media/AsyncPlayer;->mPlayer:Landroid/media/MediaPlayer;
@@ -238,6 +259,7 @@
 
     invoke-virtual {v4}, Landroid/media/MediaPlayer;->release()V
 
+    .line 108
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
 
     #setter for: Landroid/media/AsyncPlayer;->mPlayer:Landroid/media/MediaPlayer;
@@ -245,6 +267,7 @@
 
     goto :goto_1
 
+    .line 110
     .end local v2           #delay:J
     :cond_1
     iget-object v4, p0, Landroid/media/AsyncPlayer$Thread;->this$0:Landroid/media/AsyncPlayer;
@@ -260,6 +283,7 @@
 
     goto/16 :goto_1
 
+    .line 125
     :cond_2
     :try_start_3
     monitor-exit v4
@@ -275,6 +299,7 @@
 
     throw v5
 
+    .line 94
     nop
 
     :pswitch_data_0

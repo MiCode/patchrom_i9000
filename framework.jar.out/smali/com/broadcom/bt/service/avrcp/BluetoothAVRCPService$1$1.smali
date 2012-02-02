@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 90
     iput-object p1, p0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1$1;->this$1:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1;
 
     iput-object p2, p0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1$1;->val$PlayerName:Ljava/lang/String;
@@ -47,6 +48,7 @@
     .locals 4
 
     .prologue
+    .line 92
     iget-object v0, p0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1$1;->this$1:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1;->this$0:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
@@ -59,6 +61,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;->launchPlayer(Ljava/lang/String;I)V
 
+    .line 93
     const-string v0, "BluetoothAVRCPService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -113,5 +116,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 95
     return-void
 .end method

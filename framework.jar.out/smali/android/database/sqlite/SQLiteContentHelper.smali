@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,14 +26,17 @@
     .end annotation
 
     .prologue
+    .line 49
     :try_start_0
     invoke-static {p0, p1, p2}, Landroid/database/sqlite/SQLiteContentHelper;->simpleQueryForBlobMemoryFile(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[Ljava/lang/String;)Landroid/os/MemoryFile;
 
     move-result-object v1
 
+    .line 50
     .local v1, file:Landroid/os/MemoryFile;
     if-nez v1, :cond_0
 
+    .line 51
     new-instance v2, Ljava/io/FileNotFoundException;
 
     const-string v3, "No results."
@@ -43,12 +47,14 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 54
     .end local v1           #file:Landroid/os/MemoryFile;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 55
     .local v0, ex:Ljava/io/IOException;
     new-instance v2, Ljava/io/FileNotFoundException;
 
@@ -60,6 +66,7 @@
 
     throw v2
 
+    .line 53
     .end local v0           #ex:Ljava/io/IOException;
     .restart local v1       #file:Landroid/os/MemoryFile;
     :cond_0
@@ -87,18 +94,22 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 71
     invoke-virtual {p0, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
+    .line 72
     .local v1, cursor:Landroid/database/Cursor;
     if-nez v1, :cond_0
 
     move-object v3, v4
 
+    .line 88
     :goto_0
     return-object v3
 
+    .line 76
     :cond_0
     :try_start_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
@@ -109,12 +120,14 @@
 
     if-nez v3, :cond_1
 
+    .line 88
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     move-object v3, v4
 
     goto :goto_0
 
+    .line 79
     :cond_1
     const/4 v3, 0x0
 
@@ -125,15 +138,18 @@
 
     move-result-object v0
 
+    .line 80
     .local v0, bytes:[B
     if-nez v0, :cond_2
 
+    .line 88
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     move-object v3, v4
 
     goto :goto_0
 
+    .line 83
     :cond_2
     :try_start_2
     new-instance v2, Landroid/os/MemoryFile;
@@ -144,6 +160,7 @@
 
     invoke-direct {v2, v3, v4}, Landroid/os/MemoryFile;-><init>(Ljava/lang/String;I)V
 
+    .line 84
     .local v2, file:Landroid/os/MemoryFile;
     const/4 v3, 0x0
 
@@ -153,10 +170,12 @@
 
     invoke-virtual {v2, v0, v3, v4, v5}, Landroid/os/MemoryFile;->writeBytes([BIII)V
 
+    .line 85
     invoke-virtual {v2}, Landroid/os/MemoryFile;->deactivate()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 88
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     move-object v3, v2

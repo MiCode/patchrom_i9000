@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 533
     iput-object p1, p0, Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler$QuittingState;->this$0:Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler;
 
     invoke-direct {p0}, Lcom/android/internal/util/HierarchicalState;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 533
     invoke-direct {p0, p1}, Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler$QuittingState;-><init>(Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler;)V
 
     return-void
@@ -49,6 +51,7 @@
     .parameter "msg"
 
     .prologue
+    .line 536
     const/4 v0, 0x0
 
     return v0

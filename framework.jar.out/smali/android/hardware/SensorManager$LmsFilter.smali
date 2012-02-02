@@ -42,22 +42,27 @@
     .prologue
     const/16 v1, 0x18
 
+    .line 1870
     iput-object p1, p0, Landroid/hardware/SensorManager$LmsFilter;->this$0:Landroid/hardware/SensorManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1866
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/hardware/SensorManager$LmsFilter;->mV:[F
 
+    .line 1867
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/hardware/SensorManager$LmsFilter;->mT:[F
 
+    .line 1871
     const/16 v0, 0xc
 
     iput v0, p0, Landroid/hardware/SensorManager$LmsFilter;->mIndex:I
 
+    .line 1872
     return-void
 .end method
 
@@ -69,11 +74,14 @@
     .parameter "in"
 
     .prologue
+    .line 1875
     move/from16 v17, p3
 
+    .line 1876
     .local v17, v:F
     const v15, 0x3089705f
 
+    .line 1877
     .local v15, ns:F
     move-wide/from16 v0, p1
 
@@ -85,6 +93,7 @@
 
     mul-float v16, v19, v20
 
+    .line 1878
     .local v16, t:F
     move-object/from16 v0, p0
 
@@ -100,6 +109,7 @@
 
     aget v18, v19, v20
 
+    .line 1879
     .local v18, v1:F
     sub-float v19, v17, v18
 
@@ -109,10 +119,12 @@
 
     if-lez v19, :cond_2
 
+    .line 1880
     const/high16 v19, 0x43b4
 
     sub-float v17, v17, v19
 
+    .line 1888
     :cond_0
     :goto_0
     move-object/from16 v0, p0
@@ -129,6 +141,7 @@
 
     iput v0, v1, Landroid/hardware/SensorManager$LmsFilter;->mIndex:I
 
+    .line 1889
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/hardware/SensorManager$LmsFilter;->mIndex:I
@@ -143,6 +156,7 @@
 
     if-lt v0, v1, :cond_1
 
+    .line 1890
     const/16 v19, 0xc
 
     move/from16 v0, v19
@@ -151,6 +165,7 @@
 
     iput v0, v1, Landroid/hardware/SensorManager$LmsFilter;->mIndex:I
 
+    .line 1891
     :cond_1
     move-object/from16 v0, p0
 
@@ -166,6 +181,7 @@
 
     aput v17, v19, v20
 
+    .line 1892
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/hardware/SensorManager$LmsFilter;->mT:[F
@@ -180,6 +196,7 @@
 
     aput v16, v19, v20
 
+    .line 1893
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/hardware/SensorManager$LmsFilter;->mV:[F
@@ -198,6 +215,7 @@
 
     aput v17, v19, v20
 
+    .line 1894
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/hardware/SensorManager$LmsFilter;->mT:[F
@@ -216,6 +234,7 @@
 
     aput v16, v19, v20
 
+    .line 1900
     const/4 v6, 0x0
 
     .local v6, E:F
@@ -230,6 +249,7 @@
     .local v3, B:F
     move v2, v6
 
+    .line 1901
     .local v2, A:F
     const/4 v13, 0x0
 
@@ -243,6 +263,7 @@
 
     if-ge v0, v1, :cond_3
 
+    .line 1902
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/hardware/SensorManager$LmsFilter;->mIndex:I
@@ -255,6 +276,7 @@
 
     sub-int v14, v19, v13
 
+    .line 1903
     .local v14, j:I
     move-object/from16 v0, p0
 
@@ -264,6 +286,7 @@
 
     aget v8, v19, v14
 
+    .line 1904
     .local v8, Z:F
     const/high16 v19, 0x3f00
 
@@ -291,6 +314,7 @@
 
     sub-float v7, v19, v16
 
+    .line 1905
     .local v7, T:F
     move-object/from16 v0, p0
 
@@ -312,35 +336,43 @@
 
     sub-float v11, v19, v20
 
+    .line 1906
     .local v11, dT:F
     mul-float/2addr v11, v11
 
+    .line 1907
     mul-float v19, v8, v11
 
     add-float v2, v2, v19
 
+    .line 1908
     mul-float v19, v7, v11
 
     mul-float v19, v19, v7
 
     add-float v3, v3, v19
 
+    .line 1909
     mul-float v19, v7, v11
 
     add-float v4, v4, v19
 
+    .line 1910
     mul-float v19, v7, v11
 
     mul-float v19, v19, v8
 
     add-float v5, v5, v19
 
+    .line 1911
     add-float/2addr v6, v11
 
+    .line 1901
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_1
 
+    .line 1881
     .end local v2           #A:F
     .end local v3           #B:F
     .end local v4           #C:F
@@ -360,12 +392,14 @@
 
     if-lez v19, :cond_0
 
+    .line 1882
     const/high16 v19, 0x43b4
 
     add-float v17, v17, v19
 
     goto/16 :goto_0
 
+    .line 1913
     .restart local v2       #A:F
     .restart local v3       #B:F
     .restart local v4       #C:F
@@ -387,6 +421,7 @@
 
     div-float v10, v19, v20
 
+    .line 1914
     .local v10, b:F
     mul-float v19, v6, v10
 
@@ -394,6 +429,7 @@
 
     div-float v9, v19, v4
 
+    .line 1915
     .local v9, a:F
     const v19, 0x3da3d70a
 
@@ -401,11 +437,13 @@
 
     add-float v12, v10, v19
 
+    .line 1918
     .local v12, f:F
     const v19, 0x3b360b61
 
     mul-float v12, v12, v19
 
+    .line 1919
     const/16 v19, 0x0
 
     cmpl-float v19, v12, v19
@@ -421,6 +459,7 @@
 
     if-ltz v19, :cond_4
 
+    .line 1920
     const/high16 v19, 0x3f00
 
     add-float v19, v19, v12
@@ -447,6 +486,7 @@
 
     add-float v12, v19, v20
 
+    .line 1921
     :cond_4
     const/16 v19, 0x0
 
@@ -454,17 +494,21 @@
 
     if-gez v19, :cond_5
 
+    .line 1922
     const/high16 v19, 0x3f80
 
     add-float v12, v12, v19
 
+    .line 1923
     :cond_5
     const/high16 v19, 0x43b4
 
     mul-float v12, v12, v19
 
+    .line 1924
     return v12
 
+    .line 1919
     :cond_6
     move v0, v12
 

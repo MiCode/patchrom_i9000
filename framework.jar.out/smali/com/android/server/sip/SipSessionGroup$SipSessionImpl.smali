@@ -59,22 +59,28 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 435
     iput-object p1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     invoke-direct {p0}, Landroid/net/sip/ISipSession$Stub;-><init>()V
 
+    .line 387
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-direct {v0}, Lcom/android/server/sip/SipSessionListenerProxy;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
+    .line 388
     iput v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 399
     iput-boolean v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mReRegisterFlag:Z
 
+    .line 436
     invoke-virtual {p0, p2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->setListener(Landroid/net/sip/ISipSessionListener;)V
 
+    .line 437
     return-void
 .end method
 
@@ -85,6 +91,7 @@
     .parameter "x2"
 
     .prologue
+    .line 385
     invoke-direct {p0, p1, p2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(ILjava/lang/String;)V
 
     return-void
@@ -96,6 +103,7 @@
     .parameter "x1"
 
     .prologue
+    .line 385
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(Ljava/lang/Throwable;)V
 
     return-void
@@ -112,6 +120,7 @@
     .end annotation
 
     .prologue
+    .line 385
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->processCommand(Ljava/util/EventObject;)V
 
     return-void
@@ -121,18 +130,22 @@
     .locals 1
 
     .prologue
+    .line 1152
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mTimer:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;
 
     if-eqz v0, :cond_0
 
+    .line 1153
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mTimer:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;
 
     invoke-virtual {v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;->cancel()V
 
+    .line 1154
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mTimer:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;
 
+    .line 1156
     :cond_0
     return-void
 .end method
@@ -142,6 +155,7 @@
     .parameter "response"
 
     .prologue
+    .line 1159
     const-string v0, "%s (%d)"
 
     const/4 v1, 0x2
@@ -180,15 +194,18 @@
     .parameter "response"
 
     .prologue
+    .line 887
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getRealmFromResponse(Ljavax/sip/message/Response;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 888
     .local v0, realm:Ljava/lang/String;
     if-nez v0, :cond_0
 
     const-string v0, ""
 
+    .line 889
     :cond_0
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
@@ -231,6 +248,7 @@
     .parameter "command"
 
     .prologue
+    .line 511
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$1;
@@ -243,6 +261,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
+    .line 521
     return-void
 .end method
 
@@ -250,12 +269,15 @@
     .locals 1
 
     .prologue
+    .line 1171
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
+    .line 1172
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v0, p0}, Lcom/android/server/sip/SipSessionListenerProxy;->onCallEnded(Landroid/net/sip/ISipSession;)V
 
+    .line 1173
     return-void
 .end method
 
@@ -263,12 +285,15 @@
     .locals 1
 
     .prologue
+    .line 1181
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
+    .line 1182
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v0, p0}, Lcom/android/server/sip/SipSessionListenerProxy;->onCallBusy(Landroid/net/sip/ISipSession;)V
 
+    .line 1183
     return-void
 .end method
 
@@ -278,12 +303,15 @@
     .parameter "message"
 
     .prologue
+    .line 1176
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
+    .line 1177
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/sip/SipSessionListenerProxy;->onError(Landroid/net/sip/ISipSession;ILjava/lang/String;)V
 
+    .line 1178
     return-void
 .end method
 
@@ -291,22 +319,27 @@
     .locals 2
 
     .prologue
+    .line 1164
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 1165
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mInCall:Z
 
+    .line 1166
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->cancelSessionTimer()V
 
+    .line 1167
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerSessionDescription:Ljava/lang/String;
 
     invoke-virtual {v0, p0, v1}, Lcom/android/server/sip/SipSessionListenerProxy;->onCallEstablished(Landroid/net/sip/ISipSession;Ljava/lang/String;)V
 
+    .line 1168
     return-void
 .end method
 
@@ -314,6 +347,7 @@
     .locals 1
 
     .prologue
+    .line 893
     new-instance v0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$2;-><init>(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
@@ -326,37 +360,46 @@
     .parameter "responseStatusCode"
 
     .prologue
+    .line 1213
     sparse-switch p1, :sswitch_data_0
 
+    .line 1231
     const/16 v0, 0x1f4
 
     if-ge p1, v0, :cond_0
 
+    .line 1232
     const/4 v0, -0x4
 
+    .line 1234
     :goto_0
     return v0
 
+    .line 1220
     :sswitch_0
     const/4 v0, -0x7
 
     goto :goto_0
 
+    .line 1225
     :sswitch_1
     const/4 v0, -0x6
 
     goto :goto_0
 
+    .line 1228
     :sswitch_2
     const/4 v0, -0x5
 
     goto :goto_0
 
+    .line 1234
     :cond_0
     const/4 v0, -0x2
 
     goto :goto_0
 
+    .line 1213
     nop
 
     :sswitch_data_0
@@ -379,29 +422,36 @@
     .parameter "exception"
 
     .prologue
+    .line 1249
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 1250
     .local v0, message:Ljava/lang/String;
     instance-of v1, p1, Ljava/net/UnknownHostException;
 
     if-eqz v1, :cond_0
 
+    .line 1251
     const/16 v1, -0xc
 
+    .line 1255
     :goto_0
     return v1
 
+    .line 1252
     :cond_0
     instance-of v1, p1, Ljava/io/IOException;
 
     if-eqz v1, :cond_1
 
+    .line 1253
     const/4 v1, -0x1
 
     goto :goto_0
 
+    .line 1255
     :cond_1
     const/4 v1, -0x4
 
@@ -413,8 +463,10 @@
     .parameter "response"
 
     .prologue
+    .line 774
     const/16 v0, 0xe10
 
+    .line 775
     .local v0, expires:I
     const-string v2, "Expires"
 
@@ -424,6 +476,7 @@
 
     check-cast v1, Ljavax/sip/header/ExpiresHeader;
 
+    .line 777
     .local v1, expiresHeader:Ljavax/sip/header/ExpiresHeader;
     if-eqz v1, :cond_0
 
@@ -431,6 +484,7 @@
 
     move-result v0
 
+    .line 778
     :cond_0
     const-string v2, "Min-Expires"
 
@@ -441,9 +495,11 @@
     .end local v1           #expiresHeader:Ljavax/sip/header/ExpiresHeader;
     check-cast v1, Ljavax/sip/header/ExpiresHeader;
 
+    .line 780
     .restart local v1       #expiresHeader:Ljavax/sip/header/ExpiresHeader;
     if-eqz v1, :cond_1
 
+    .line 781
     invoke-interface {v1}, Ljavax/sip/header/ExpiresHeader;->getExpires()I
 
     move-result v2
@@ -452,6 +508,7 @@
 
     move-result v0
 
+    .line 783
     :cond_1
     return v0
 .end method
@@ -461,6 +518,7 @@
     .parameter "response"
 
     .prologue
+    .line 925
     const-string v2, "WWW-Authenticate"
 
     invoke-interface {p1, v2}, Ljavax/sip/message/Response;->getHeader(Ljava/lang/String;)Ljavax/sip/header/Header;
@@ -469,6 +527,7 @@
 
     check-cast v1, Lgov/nist/javax/sip/header/WWWAuthenticate;
 
+    .line 927
     .local v1, wwwAuth:Lgov/nist/javax/sip/header/WWWAuthenticate;
     if-eqz v1, :cond_0
 
@@ -476,9 +535,11 @@
 
     move-result-object v2
 
+    .line 930
     :goto_0
     return-object v2
 
+    .line 928
     :cond_0
     const-string v2, "Proxy-Authenticate"
 
@@ -488,6 +549,7 @@
 
     check-cast v0, Lgov/nist/javax/sip/header/ProxyAuthenticate;
 
+    .line 930
     .local v0, proxyAuth:Lgov/nist/javax/sip/header/ProxyAuthenticate;
     if-nez v0, :cond_1
 
@@ -508,6 +570,7 @@
     .parameter "response"
 
     .prologue
+    .line 823
     const-string v2, "Via"
 
     invoke-interface {p1, v2}, Ljavax/sip/message/Response;->getHeader(Ljava/lang/String;)Ljavax/sip/header/Header;
@@ -523,6 +586,7 @@
 
     move-object v1, v0
 
+    .line 825
     .local v1, viaHeader:Ljavax/sip/header/ViaHeader;
     if-nez v1, :cond_0
 
@@ -544,6 +608,7 @@
     .parameter "response"
 
     .prologue
+    .line 916
     const-string v2, "WWW-Authenticate"
 
     invoke-interface {p1, v2}, Ljavax/sip/message/Response;->getHeader(Ljava/lang/String;)Ljavax/sip/header/Header;
@@ -552,6 +617,7 @@
 
     check-cast v1, Lgov/nist/javax/sip/header/WWWAuthenticate;
 
+    .line 918
     .local v1, wwwAuth:Lgov/nist/javax/sip/header/WWWAuthenticate;
     if-eqz v1, :cond_0
 
@@ -559,9 +625,11 @@
 
     move-result-object v2
 
+    .line 921
     :goto_0
     return-object v2
 
+    .line 919
     :cond_0
     const-string v2, "Proxy-Authenticate"
 
@@ -571,6 +639,7 @@
 
     check-cast v0, Lgov/nist/javax/sip/header/ProxyAuthenticate;
 
+    .line 921
     .local v0, proxyAuth:Lgov/nist/javax/sip/header/ProxyAuthenticate;
     if-nez v0, :cond_1
 
@@ -591,22 +660,27 @@
     .parameter "exception"
 
     .prologue
+    .line 1240
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
+    .line 1241
     .local v0, cause:Ljava/lang/Throwable;
     :goto_0
     if-eqz v0, :cond_0
 
+    .line 1242
     move-object p1, v0
 
+    .line 1243
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 1245
     :cond_0
     return-object p1
 .end method
@@ -615,15 +689,18 @@
     .locals 1
 
     .prologue
+    .line 494
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
+    .line 496
     :goto_0
     return-object v0
 
+    .line 495
     :cond_0
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mServerTransaction:Ljavax/sip/ServerTransaction;
 
@@ -633,6 +710,7 @@
 
     goto :goto_0
 
+    .line 496
     :cond_1
     const/4 v0, 0x0
 
@@ -651,29 +729,35 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 858
     invoke-virtual {p1}, Ljavax/sip/ResponseEvent;->getResponse()Ljavax/sip/message/Response;
 
     move-result-object v1
 
+    .line 859
     .local v1, response:Ljavax/sip/message/Response;
     invoke-direct {p0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getNonceFromResponse(Ljavax/sip/message/Response;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 860
     .local v0, nonce:Ljava/lang/String;
     if-nez v0, :cond_0
 
+    .line 861
     const/4 v2, -0x2
 
-    const-string v3, "server does not provide challenge"
+    const-string/jumbo v3, "server does not provide challenge"
 
     invoke-direct {p0, v2, v3}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(ILjava/lang/String;)V
 
     move v2, v4
 
+    .line 882
     :goto_0
     return v2
 
+    .line 864
     :cond_0
     iget v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mAuthenticationRetryCount:I
 
@@ -681,6 +765,7 @@
 
     if-ge v2, v3, :cond_2
 
+    .line 865
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -698,6 +783,7 @@
 
     iput-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
+    .line 867
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
     invoke-interface {v2}, Ljavax/sip/ClientTransaction;->getDialog()Ljavax/sip/Dialog;
@@ -706,12 +792,14 @@
 
     iput-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
+    .line 868
     iget v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mAuthenticationRetryCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mAuthenticationRetryCount:I
 
+    .line 869
     #calls: Lcom/android/server/sip/SipSessionGroup;->isLoggable(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;Ljava/util/EventObject;)Z
     invoke-static {p0, p1}, Lcom/android/server/sip/SipSessionGroup;->access$200(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;Ljava/util/EventObject;)Z
 
@@ -719,6 +807,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 870
     const-string v2, "SipSession"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -743,11 +832,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 873
     :cond_1
     const/4 v2, 0x1
 
     goto :goto_0
 
+    .line 875
     :cond_2
     invoke-direct {p0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->crossDomainAuthenticationRequired(Ljavax/sip/message/Response;)Z
 
@@ -755,6 +846,7 @@
 
     if-eqz v2, :cond_3
 
+    .line 876
     const/16 v2, -0xb
 
     invoke-direct {p0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getRealmFromResponse(Ljavax/sip/message/Response;)Ljava/lang/String;
@@ -766,8 +858,10 @@
     :goto_1
     move v2, v4
 
+    .line 882
     goto :goto_0
 
+    .line 879
     :cond_3
     const/4 v2, -0x8
 
@@ -790,12 +884,14 @@
     .prologue
     const/4 v5, 0x1
 
+    .line 1115
     invoke-static {}, Lcom/android/server/sip/SipSessionGroup;->access$1600()Ljava/util/EventObject;
 
     move-result-object v2
 
     if-ne v2, p1, :cond_0
 
+    .line 1117
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -807,14 +903,17 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/sip/SipHelper;->sendBye(Ljavax/sip/Dialog;)V
 
+    .line 1118
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->endCallNormally()V
 
     move v2, v5
 
+    .line 1140
     .end local p1
     :goto_0
     return v2
 
+    .line 1120
     .restart local p1
     :cond_0
     const-string v2, "INVITE"
@@ -826,10 +925,12 @@
 
     if-eqz v2, :cond_1
 
+    .line 1122
     const/4 v2, 0x3
 
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 1123
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/RequestEvent;
@@ -838,6 +939,7 @@
 
     iput-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mInviteReceived:Ljavax/sip/RequestEvent;
 
+    .line 1124
     .local v1, event:Ljavax/sip/RequestEvent;
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
@@ -852,10 +954,12 @@
 
     iput-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerSessionDescription:Ljava/lang/String;
 
+    .line 1125
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mServerTransaction:Ljavax/sip/ServerTransaction;
 
+    .line 1126
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerProfile:Landroid/net/sip/SipProfile;
@@ -866,8 +970,10 @@
 
     move v2, v5
 
+    .line 1127
     goto :goto_0
 
+    .line 1128
     .end local v1           #event:Ljavax/sip/RequestEvent;
     :cond_1
     const-string v2, "BYE"
@@ -879,6 +985,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 1129
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -893,22 +1000,27 @@
 
     invoke-virtual {v2, p1, v3}, Lcom/android/server/sip/SipHelper;->sendResponse(Ljavax/sip/RequestEvent;I)V
 
+    .line 1130
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->endCallNormally()V
 
     move v2, v5
 
+    .line 1131
     goto :goto_0
 
+    .line 1132
     .restart local p1
     :cond_2
     instance-of v2, p1, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
 
     if-eqz v2, :cond_3
 
+    .line 1134
     const/4 v2, 0x5
 
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 1135
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -934,6 +1046,7 @@
 
     iput-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
+    .line 1137
     check-cast p1, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
 
     .end local p1
@@ -945,8 +1058,10 @@
 
     move v2, v5
 
+    .line 1138
     goto :goto_0
 
+    .line 1140
     .restart local p1
     :cond_3
     const/4 v2, 0x0
@@ -966,14 +1081,17 @@
     .prologue
     const/4 v7, 0x1
 
+    .line 970
     instance-of v2, p1, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
 
     if-eqz v2, :cond_0
 
+    .line 972
     const/4 v2, 0x4
 
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 973
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -1008,6 +1126,7 @@
 
     iput-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mServerTransaction:Ljavax/sip/ServerTransaction;
 
+    .line 977
     check-cast p1, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
 
     .end local p1
@@ -1019,9 +1138,11 @@
 
     move v2, v7
 
+    .line 992
     :goto_0
     return v2
 
+    .line 979
     .restart local p1
     :cond_0
     invoke-static {}, Lcom/android/server/sip/SipSessionGroup;->access$1600()Ljava/util/EventObject;
@@ -1030,6 +1151,7 @@
 
     if-ne v2, p1, :cond_1
 
+    .line 980
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -1043,12 +1165,15 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/sip/SipHelper;->sendInviteBusyHere(Ljavax/sip/RequestEvent;Ljavax/sip/ServerTransaction;)V
 
+    .line 982
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->endCallNormally()V
 
     move v2, v7
 
+    .line 983
     goto :goto_0
 
+    .line 984
     :cond_1
     const-string v2, "CANCEL"
 
@@ -1059,12 +1184,14 @@
 
     if-eqz v2, :cond_2
 
+    .line 985
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/RequestEvent;
 
     move-object v1, v0
 
+    .line 986
     .local v1, event:Ljavax/sip/RequestEvent;
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
@@ -1077,6 +1204,7 @@
 
     invoke-virtual {v2, v1, v3}, Lcom/android/server/sip/SipHelper;->sendResponse(Ljavax/sip/RequestEvent;I)V
 
+    .line 987
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -1094,12 +1222,15 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/sip/SipHelper;->sendInviteRequestTerminated(Ljavax/sip/message/Request;Ljavax/sip/ServerTransaction;)V
 
+    .line 989
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->endCallNormally()V
 
     move v2, v7
 
+    .line 990
     goto :goto_0
 
+    .line 992
     .end local v1           #event:Ljavax/sip/RequestEvent;
     :cond_2
     const/4 v2, 0x0
@@ -1119,6 +1250,7 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 998
     const-string v0, "ACK"
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->isRequestEvent(Ljava/lang/String;Ljava/util/EventObject;)Z
@@ -1128,13 +1260,16 @@
 
     if-eqz v0, :cond_0
 
+    .line 999
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->establishCall()V
 
     move v0, v1
 
+    .line 1006
     :goto_0
     return v0
 
+    .line 1001
     :cond_0
     const-string v0, "CANCEL"
 
@@ -1147,8 +1282,10 @@
 
     move v0, v1
 
+    .line 1004
     goto :goto_0
 
+    .line 1006
     :cond_1
     const/4 v0, 0x0
 
@@ -1164,6 +1301,7 @@
 
     const-string v5, "SipSession"
 
+    .line 704
     invoke-virtual {p1}, Ljavax/sip/TransactionTerminatedEvent;->isServerTransaction()Z
 
     move-result v2
@@ -1174,6 +1312,7 @@
 
     move-object v0, v2
 
+    .line 707
     .local v0, current:Ljavax/sip/Transaction;
     :goto_0
     invoke-virtual {p1}, Ljavax/sip/TransactionTerminatedEvent;->isServerTransaction()Z
@@ -1188,6 +1327,7 @@
 
     move-object v1, v2
 
+    .line 711
     .local v1, target:Ljavax/sip/Transaction;
     :goto_1
     if-eq v0, v1, :cond_2
@@ -1198,6 +1338,7 @@
 
     if-eq v2, v3, :cond_2
 
+    .line 712
     const-string v2, "SipSession"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1238,11 +1379,14 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 714
     const/4 v2, 0x0
 
+    .line 720
     :goto_2
     return v2
 
+    .line 704
     .end local v0           #current:Ljavax/sip/Transaction;
     .end local v1           #target:Ljavax/sip/Transaction;
     :cond_0
@@ -1252,6 +1396,7 @@
 
     goto :goto_0
 
+    .line 707
     .restart local v0       #current:Ljavax/sip/Transaction;
     :cond_1
     invoke-virtual {p1}, Ljavax/sip/TransactionTerminatedEvent;->getClientTransaction()Ljavax/sip/ClientTransaction;
@@ -1262,17 +1407,19 @@
 
     goto :goto_1
 
+    .line 715
     .restart local v1       #target:Ljavax/sip/Transaction;
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 716
     const-string v2, "SipSession"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "transaction terminated: "
+    const-string/jumbo v3, "transaction terminated: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1294,11 +1441,13 @@
 
     move v2, v4
 
+    .line 717
     goto :goto_2
 
     :cond_3
     move v2, v4
 
+    .line 720
     goto :goto_2
 .end method
 
@@ -1312,10 +1461,12 @@
     .end annotation
 
     .prologue
+    .line 787
     instance-of v0, p1, Lcom/android/server/sip/SipSessionGroup$OptionsCommand;
 
     if-eqz v0, :cond_0
 
+    .line 788
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -1340,6 +1491,7 @@
 
     iput-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
+    .line 790
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
     invoke-interface {v0}, Ljavax/sip/ClientTransaction;->getDialog()Ljavax/sip/Dialog;
@@ -1348,27 +1500,33 @@
 
     iput-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
+    .line 791
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->addSipSession(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
     invoke-static {v0, p0}, Lcom/android/server/sip/SipSessionGroup;->access$800(Lcom/android/server/sip/SipSessionGroup;Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
 
+    .line 792
     const/4 v0, 0x1
 
+    .line 796
     :goto_0
     return v0
 
+    .line 793
     :cond_0
     instance-of v0, p1, Ljavax/sip/ResponseEvent;
 
     if-eqz v0, :cond_1
 
+    .line 794
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->parseOptionsResult(Ljava/util/EventObject;)Z
 
     move-result v0
 
     goto :goto_0
 
+    .line 796
     :cond_1
     const/4 v0, 0x0
 
@@ -1381,22 +1539,28 @@
     .parameter "message"
 
     .prologue
+    .line 1186
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->cancelSessionTimer()V
 
+    .line 1187
     iget v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 1193
     invoke-direct {p0, p1, p2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->endCallOnError(ILjava/lang/String;)V
 
+    .line 1195
     :goto_0
     return-void
 
+    .line 1190
     :pswitch_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onRegistrationFailed(ILjava/lang/String;)V
 
     goto :goto_0
 
+    .line 1187
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1409,10 +1573,12 @@
     .parameter "exception"
 
     .prologue
+    .line 1199
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getRootCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p1
 
+    .line 1200
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getErrorCode(Ljava/lang/Throwable;)I
 
     move-result v0
@@ -1423,6 +1589,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(ILjava/lang/String;)V
 
+    .line 1201
     return-void
 .end method
 
@@ -1431,10 +1598,12 @@
     .parameter "response"
 
     .prologue
+    .line 1204
     invoke-interface {p1}, Ljavax/sip/message/Response;->getStatusCode()I
 
     move-result v0
 
+    .line 1205
     .local v0, statusCode:I
     iget-boolean v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mInCall:Z
 
@@ -1444,11 +1613,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 1206
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->endCallOnBusy()V
 
+    .line 1210
     :goto_0
     return-void
 
+    .line 1208
     :cond_0
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getErrorCode(I)I
 
@@ -1468,12 +1640,15 @@
     .parameter "duration"
 
     .prologue
+    .line 1260
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
+    .line 1261
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v0, p0, p1}, Lcom/android/server/sip/SipSessionListenerProxy;->onRegistrationDone(Landroid/net/sip/ISipSession;I)V
 
+    .line 1262
     return-void
 .end method
 
@@ -1483,12 +1658,15 @@
     .parameter "message"
 
     .prologue
+    .line 1265
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
+    .line 1266
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/android/server/sip/SipSessionListenerProxy;->onRegistrationFailed(Landroid/net/sip/ISipSession;ILjava/lang/String;)V
 
+    .line 1267
     return-void
 .end method
 
@@ -1497,10 +1675,12 @@
     .parameter "exception"
 
     .prologue
+    .line 1270
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getRootCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p1
 
+    .line 1271
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getErrorCode(Ljava/lang/Throwable;)I
 
     move-result v0
@@ -1511,6 +1691,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onRegistrationFailed(ILjava/lang/String;)V
 
+    .line 1273
     return-void
 .end method
 
@@ -1519,10 +1700,12 @@
     .parameter "response"
 
     .prologue
+    .line 1276
     invoke-interface {p1}, Ljavax/sip/message/Response;->getStatusCode()I
 
     move-result v0
 
+    .line 1277
     .local v0, statusCode:I
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getErrorCode(I)I
 
@@ -1534,6 +1717,7 @@
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onRegistrationFailed(ILjava/lang/String;)V
 
+    .line 1279
     return-void
 .end method
 
@@ -1553,6 +1737,7 @@
 
     const-string v7, "INVITE"
 
+    .line 1010
     const-string v4, "INVITE"
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->expectResponse(Ljava/lang/String;Ljava/util/EventObject;)Z
@@ -1562,39 +1747,47 @@
 
     if-eqz v4, :cond_4
 
+    .line 1011
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/ResponseEvent;
 
     move-object v1, v0
 
+    .line 1012
     .local v1, event:Ljavax/sip/ResponseEvent;
     invoke-virtual {v1}, Ljavax/sip/ResponseEvent;->getResponse()Ljavax/sip/message/Response;
 
     move-result-object v2
 
+    .line 1014
     .local v2, response:Ljavax/sip/message/Response;
     invoke-interface {v2}, Ljavax/sip/message/Response;->getStatusCode()I
 
     move-result v3
 
+    .line 1015
     .local v3, statusCode:I
     sparse-switch v3, :sswitch_data_0
 
+    .line 1044
     const/16 v4, 0x190
 
     if-lt v3, v4, :cond_2
 
+    .line 1046
     invoke-direct {p0, v2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(Ljavax/sip/message/Response;)V
 
     move v4, v6
 
+    .line 1071
     .end local v1           #event:Ljavax/sip/ResponseEvent;
     .end local v2           #response:Ljavax/sip/message/Response;
     .end local v3           #statusCode:I
     :goto_0
     return v4
 
+    .line 1022
     .restart local v1       #event:Ljavax/sip/ResponseEvent;
     .restart local v2       #response:Ljavax/sip/message/Response;
     .restart local v3       #statusCode:I
@@ -1605,12 +1798,15 @@
 
     if-ne v4, v5, :cond_0
 
+    .line 1023
     const/4 v4, 0x6
 
     iput v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 1024
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->cancelSessionTimer()V
 
+    .line 1025
     iget-object v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v4, p0}, Lcom/android/server/sip/SipSessionListenerProxy;->onRingingBack(Landroid/net/sip/ISipSession;)V
@@ -1618,8 +1814,10 @@
     :cond_0
     move v4, v6
 
+    .line 1027
     goto :goto_0
 
+    .line 1029
     :sswitch_1
     iget-object v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
@@ -1632,6 +1830,7 @@
 
     invoke-virtual {v4, v1, v5}, Lcom/android/server/sip/SipHelper;->sendInviteAck(Ljavax/sip/ResponseEvent;Ljavax/sip/Dialog;)V
 
+    .line 1030
     iget-object v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->extractContent(Ljavax/sip/message/Message;)Ljava/lang/String;
@@ -1641,12 +1840,15 @@
 
     iput-object v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerSessionDescription:Ljava/lang/String;
 
+    .line 1031
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->establishCall()V
 
     move v4, v6
 
+    .line 1032
     goto :goto_0
 
+    .line 1035
     :sswitch_2
     invoke-direct {p0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->handleAuthentication(Ljavax/sip/ResponseEvent;)Z
 
@@ -1654,6 +1856,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 1036
     iget-object v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->addSipSession(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
@@ -1662,13 +1865,16 @@
     :cond_1
     move v4, v6
 
+    .line 1038
     goto :goto_0
 
     :sswitch_3
     move v4, v6
 
+    .line 1042
     goto :goto_0
 
+    .line 1048
     :cond_2
     const/16 v4, 0x12c
 
@@ -1676,13 +1882,16 @@
 
     move v4, v5
 
+    .line 1054
     goto :goto_0
 
     :cond_3
     move v4, v6
 
+    .line 1051
     goto :goto_0
 
+    .line 1055
     .end local v1           #event:Ljavax/sip/ResponseEvent;
     .end local v2           #response:Ljavax/sip/message/Response;
     .end local v3           #statusCode:I
@@ -1693,10 +1902,12 @@
 
     if-ne v4, p1, :cond_5
 
+    .line 1059
     const/4 v4, 0x7
 
     iput v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 1060
     iget-object v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -1708,14 +1919,17 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/sip/SipHelper;->sendCancel(Ljavax/sip/ClientTransaction;)V
 
+    .line 1061
     const/4 v4, 0x3
 
     invoke-direct {p0, v4}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->startSessionTimer(I)V
 
     move v4, v6
 
+    .line 1062
     goto :goto_0
 
+    .line 1063
     :cond_5
     const-string v4, "INVITE"
 
@@ -1726,12 +1940,14 @@
 
     if-eqz v4, :cond_6
 
+    .line 1066
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/RequestEvent;
 
     move-object v1, v0
 
+    .line 1067
     .local v1, event:Ljavax/sip/RequestEvent;
     iget-object v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
@@ -1748,14 +1964,17 @@
 
     move v4, v6
 
+    .line 1069
     goto :goto_0
 
     .end local v1           #event:Ljavax/sip/RequestEvent;
     :cond_6
     move v4, v5
 
+    .line 1071
     goto :goto_0
 
+    .line 1015
     :sswitch_data_0
     .sparse-switch
         0xb4 -> :sswitch_0
@@ -1783,26 +2002,31 @@
 
     const/4 v5, 0x1
 
+    .line 1076
     instance-of v4, p1, Ljavax/sip/ResponseEvent;
 
     if-eqz v4, :cond_3
 
+    .line 1077
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/ResponseEvent;
 
     move-object v1, v0
 
+    .line 1078
     .local v1, event:Ljavax/sip/ResponseEvent;
     invoke-virtual {v1}, Ljavax/sip/ResponseEvent;->getResponse()Ljavax/sip/message/Response;
 
     move-result-object v2
 
+    .line 1079
     .local v2, response:Ljavax/sip/message/Response;
     invoke-interface {v2}, Ljavax/sip/message/Response;->getStatusCode()I
 
     move-result v3
 
+    .line 1080
     .local v3, statusCode:I
     const-string v4, "CANCEL"
 
@@ -1813,18 +2037,21 @@
 
     if-eqz v4, :cond_0
 
+    .line 1081
     const/16 v4, 0xc8
 
     if-ne v3, v4, :cond_1
 
     move v4, v5
 
+    .line 1109
     .end local v1           #event:Ljavax/sip/ResponseEvent;
     .end local v2           #response:Ljavax/sip/message/Response;
     .end local v3           #statusCode:I
     :goto_0
     return v4
 
+    .line 1085
     .restart local v1       #event:Ljavax/sip/ResponseEvent;
     .restart local v2       #response:Ljavax/sip/message/Response;
     .restart local v3       #statusCode:I
@@ -1838,38 +2065,48 @@
 
     if-eqz v4, :cond_2
 
+    .line 1086
     sparse-switch v3, :sswitch_data_0
 
+    .line 1098
     :cond_1
     const/16 v4, 0x190
 
     if-lt v3, v4, :cond_4
 
+    .line 1099
     invoke-direct {p0, v2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(Ljavax/sip/message/Response;)V
 
     move v4, v5
 
+    .line 1100
     goto :goto_0
 
+    .line 1088
     :sswitch_0
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->outgoingCall(Ljava/util/EventObject;)Z
 
     move v4, v5
 
+    .line 1089
     goto :goto_0
 
+    .line 1091
     :sswitch_1
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->endCallNormally()V
 
     move v4, v5
 
+    .line 1092
     goto :goto_0
 
     :cond_2
     move v4, v6
 
+    .line 1095
     goto :goto_0
 
+    .line 1102
     .end local v1           #event:Ljavax/sip/ResponseEvent;
     .end local v2           #response:Ljavax/sip/message/Response;
     .end local v3           #statusCode:I
@@ -1878,9 +2115,10 @@
 
     if-eqz v4, :cond_4
 
+    .line 1107
     new-instance v4, Ljavax/sip/SipException;
 
-    const-string v5, "timed out"
+    const-string/jumbo v5, "timed out"
 
     invoke-direct {v4, v5}, Ljavax/sip/SipException;-><init>(Ljava/lang/String;)V
 
@@ -1889,8 +2127,10 @@
     :cond_4
     move v4, v6
 
+    .line 1109
     goto :goto_0
 
+    .line 1086
     nop
 
     :sswitch_data_0
@@ -1911,6 +2151,7 @@
 
     const-string v8, "SipSession"
 
+    .line 800
     const-string v3, "OPTIONS"
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->expectResponse(Ljava/lang/String;Ljava/util/EventObject;)Z
@@ -1920,12 +2161,14 @@
 
     if-eqz v3, :cond_3
 
+    .line 801
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/ResponseEvent;
 
     move-object v1, v0
 
+    .line 802
     .local v1, event:Ljavax/sip/ResponseEvent;
     invoke-virtual {v1}, Ljavax/sip/ResponseEvent;->getResponse()Ljavax/sip/message/Response;
 
@@ -1935,27 +2178,32 @@
 
     move-result v2
 
+    .line 803
     .local v2, rPort:I
     const/4 v3, -0x1
 
     if-eq v2, v3, :cond_2
 
+    .line 804
     iget v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mRPort:I
 
     if-nez v3, :cond_0
 
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mRPort:I
 
+    .line 805
     :cond_0
     iget v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mRPort:I
 
     if-eq v3, v2, :cond_1
 
+    .line 806
     iput-boolean v6, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mReRegisterFlag:Z
 
+    .line 807
     const-string v3, "SipSession"
 
-    const-string v3, "rport is changed: %d <> %d"
+    const-string/jumbo v3, "rport is changed: %d <> %d"
 
     const/4 v4, 0x2
 
@@ -1981,25 +2229,29 @@
 
     invoke-static {v8, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 809
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mRPort:I
 
+    .line 816
     :cond_1
     :goto_0
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
     move v3, v6
 
+    .line 819
     .end local v1           #event:Ljavax/sip/ResponseEvent;
     .end local v2           #rPort:I
     :goto_1
     return v3
 
+    .line 814
     .restart local v1       #event:Ljavax/sip/ResponseEvent;
     .restart local v2       #rPort:I
     :cond_2
     const-string v3, "SipSession"
 
-    const-string v3, "peer did not respond rport"
+    const-string/jumbo v3, "peer did not respond rport"
 
     invoke-static {v8, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -2010,6 +2262,7 @@
     :cond_3
     move v3, v7
 
+    .line 819
     goto :goto_1
 .end method
 
@@ -2023,6 +2276,7 @@
     .end annotation
 
     .prologue
+    .line 590
     #calls: Lcom/android/server/sip/SipSessionGroup;->isLoggable(Ljava/util/EventObject;)Z
     invoke-static {p1}, Lcom/android/server/sip/SipSessionGroup;->access$1800(Ljava/util/EventObject;)Z
 
@@ -2036,7 +2290,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "process cmd: "
+    const-string/jumbo v2, "process cmd: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2052,6 +2306,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 591
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->process(Ljava/util/EventObject;)Z
 
@@ -2059,6 +2314,7 @@
 
     if-nez v0, :cond_1
 
+    .line 592
     const/16 v0, -0x9
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2081,6 +2337,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(ILjava/lang/String;)V
 
+    .line 596
     :cond_1
     return-void
 .end method
@@ -2090,6 +2347,7 @@
     .parameter "event"
 
     .prologue
+    .line 695
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
     invoke-virtual {p1}, Ljavax/sip/DialogTerminatedEvent;->getDialog()Ljavax/sip/Dialog;
@@ -2098,6 +2356,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 696
     new-instance v0, Ljavax/sip/SipException;
 
     const-string v1, "dialog terminated"
@@ -2106,9 +2365,11 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(Ljava/lang/Throwable;)V
 
+    .line 701
     :goto_0
     return-void
 
+    .line 698
     :cond_0
     const-string v0, "SipSession"
 
@@ -2165,6 +2426,7 @@
 
     const/4 v3, 0x1
 
+    .line 665
     const-string v1, "BYE"
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->isRequestEvent(Ljava/lang/String;Ljava/util/EventObject;)Z
@@ -2174,6 +2436,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 667
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -2186,13 +2449,16 @@
     .end local p1
     invoke-virtual {v1, p1, v2}, Lcom/android/server/sip/SipHelper;->sendResponse(Ljavax/sip/RequestEvent;I)V
 
+    .line 668
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->endCallNormally()V
 
     move v1, v3
 
+    .line 691
     :goto_0
     return v1
 
+    .line 670
     .restart local p1
     :cond_0
     const-string v1, "CANCEL"
@@ -2204,6 +2470,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 671
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -2220,14 +2487,17 @@
 
     move v1, v3
 
+    .line 673
     goto :goto_0
 
+    .line 674
     .restart local p1
     :cond_1
     instance-of v1, p1, Ljavax/sip/TransactionTerminatedEvent;
 
     if-eqz v1, :cond_3
 
+    .line 675
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/TransactionTerminatedEvent;
@@ -2240,10 +2510,12 @@
 
     if-eqz v1, :cond_5
 
+    .line 676
     instance-of v1, p1, Ljavax/sip/TimeoutEvent;
 
     if-eqz v1, :cond_2
 
+    .line 677
     check-cast p1, Ljavax/sip/TimeoutEvent;
 
     .end local p1
@@ -2252,8 +2524,10 @@
     :goto_1
     move v1, v3
 
+    .line 682
     goto :goto_0
 
+    .line 679
     .restart local p1
     :cond_2
     check-cast p1, Ljavax/sip/TransactionTerminatedEvent;
@@ -2263,6 +2537,7 @@
 
     goto :goto_1
 
+    .line 684
     .restart local p1
     :cond_3
     const-string v1, "OPTIONS"
@@ -2274,6 +2549,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 685
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -2288,14 +2564,17 @@
 
     move v1, v3
 
+    .line 686
     goto :goto_0
 
+    .line 687
     .restart local p1
     :cond_4
     instance-of v1, p1, Ljavax/sip/DialogTerminatedEvent;
 
     if-eqz v1, :cond_5
 
+    .line 688
     check-cast p1, Ljavax/sip/DialogTerminatedEvent;
 
     .end local p1
@@ -2303,8 +2582,10 @@
 
     move v1, v3
 
+    .line 689
     goto :goto_0
 
+    .line 691
     .restart local p1
     :cond_5
     const/4 v1, 0x0
@@ -2319,16 +2600,19 @@
     .prologue
     const-string v1, "SipSession"
 
+    .line 749
     const-string v0, "SipSession"
 
-    const-string v0, "processing Timeout..."
+    const-string/jumbo v0, "processing Timeout..."
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 750
     iget v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 768
     :pswitch_0
     const-string v0, "SipSession"
 
@@ -2336,18 +2620,22 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 771
     :goto_0
     return-void
 
+    .line 753
     :pswitch_1
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
+    .line 754
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v0, p0}, Lcom/android/server/sip/SipSessionListenerProxy;->onRegistrationTimeout(Landroid/net/sip/ISipSession;)V
 
     goto :goto_0
 
+    .line 760
     :pswitch_2
     const/4 v0, -0x5
 
@@ -2359,15 +2647,18 @@
 
     goto :goto_0
 
+    .line 763
     :pswitch_3
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
+    .line 764
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mReRegisterFlag:Z
 
     goto :goto_0
 
+    .line 750
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -2389,10 +2680,12 @@
     .prologue
     const-string v2, "SipSession"
 
+    .line 736
     iget v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
     sparse-switch v0, :sswitch_data_0
 
+    .line 742
     const-string v0, "SipSession"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2415,15 +2708,18 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 743
     const/4 v0, -0x3
 
-    const-string v1, "transaction terminated"
+    const-string/jumbo v1, "transaction terminated"
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(ILjava/lang/String;)V
 
+    .line 746
     :goto_0
     return-void
 
+    .line 739
     :sswitch_0
     const-string v0, "SipSession"
 
@@ -2433,6 +2729,7 @@
 
     goto :goto_0
 
+    .line 736
     nop
 
     :sswitch_data_0
@@ -2456,20 +2753,24 @@
 
     const/4 v8, 0x1
 
+    .line 935
     instance-of v3, p1, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
 
     if-eqz v3, :cond_0
 
+    .line 936
     const/4 v3, 0x5
 
     iput v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 937
     move-object v0, p1
 
     check-cast v0, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
 
     move-object v1, v0
 
+    .line 938
     .local v1, cmd:Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
     invoke-virtual {v1}, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->getPeerProfile()Landroid/net/sip/SipProfile;
 
@@ -2477,6 +2778,7 @@
 
     iput-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerProfile:Landroid/net/sip/SipProfile;
 
+    .line 939
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -2507,6 +2809,7 @@
 
     iput-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
+    .line 942
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
     invoke-interface {v3}, Ljavax/sip/ClientTransaction;->getDialog()Ljavax/sip/Dialog;
@@ -2515,36 +2818,43 @@
 
     iput-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
+    .line 943
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->addSipSession(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
     invoke-static {v3, p0}, Lcom/android/server/sip/SipSessionGroup;->access$800(Lcom/android/server/sip/SipSessionGroup;Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
 
+    .line 944
     invoke-virtual {v1}, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->getTimeout()I
 
     move-result v3
 
     invoke-direct {p0, v3}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->startSessionTimer(I)V
 
+    .line 945
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v3, p0}, Lcom/android/server/sip/SipSessionListenerProxy;->onCalling(Landroid/net/sip/ISipSession;)V
 
     move v3, v8
 
+    .line 965
     .end local v1           #cmd:Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
     .end local p1
     :goto_0
     return v3
 
+    .line 947
     .restart local p1
     :cond_0
     instance-of v3, p1, Lcom/android/server/sip/SipSessionGroup$RegisterCommand;
 
     if-eqz v3, :cond_1
 
+    .line 948
     iput v8, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 949
     check-cast p1, Lcom/android/server/sip/SipSessionGroup$RegisterCommand;
 
     .end local p1
@@ -2552,6 +2862,7 @@
 
     move-result v2
 
+    .line 950
     .local v2, duration:I
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
@@ -2577,6 +2888,7 @@
 
     iput-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
+    .line 952
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
     invoke-interface {v3}, Ljavax/sip/ClientTransaction;->getDialog()Ljavax/sip/Dialog;
@@ -2585,19 +2897,23 @@
 
     iput-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
+    .line 953
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->addSipSession(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
     invoke-static {v3, p0}, Lcom/android/server/sip/SipSessionGroup;->access$800(Lcom/android/server/sip/SipSessionGroup;Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
 
+    .line 954
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v3, p0}, Lcom/android/server/sip/SipSessionListenerProxy;->onRegistering(Landroid/net/sip/ISipSession;)V
 
     move v3, v8
 
+    .line 955
     goto :goto_0
 
+    .line 956
     .end local v2           #duration:I
     .restart local p1
     :cond_1
@@ -2607,10 +2923,12 @@
 
     if-ne v3, p1, :cond_2
 
+    .line 957
     const/4 v3, 0x2
 
     iput v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 958
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mSipHelper:Lcom/android/server/sip/SipHelper;
@@ -2635,6 +2953,7 @@
 
     iput-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
+    .line 960
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
     invoke-interface {v3}, Ljavax/sip/ClientTransaction;->getDialog()Ljavax/sip/Dialog;
@@ -2643,22 +2962,26 @@
 
     iput-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
+    .line 961
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->addSipSession(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
     invoke-static {v3, p0}, Lcom/android/server/sip/SipSessionGroup;->access$800(Lcom/android/server/sip/SipSessionGroup;Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
 
+    .line 962
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     invoke-virtual {v3, p0}, Lcom/android/server/sip/SipSessionListenerProxy;->onRegistering(Landroid/net/sip/ISipSession;)V
 
     move v3, v8
 
+    .line 963
     goto :goto_0
 
     :cond_2
     move v3, v6
 
+    .line 965
     goto :goto_0
 .end method
 
@@ -2674,6 +2997,7 @@
     .prologue
     const/4 v6, 0x1
 
+    .line 830
     const-string v5, "REGISTER"
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->expectResponse(Ljava/lang/String;Ljava/util/EventObject;)Z
@@ -2683,33 +3007,40 @@
 
     if-eqz v5, :cond_1
 
+    .line 831
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/ResponseEvent;
 
     move-object v1, v0
 
+    .line 832
     .local v1, event:Ljavax/sip/ResponseEvent;
     invoke-virtual {v1}, Ljavax/sip/ResponseEvent;->getResponse()Ljavax/sip/message/Response;
 
     move-result-object v2
 
+    .line 834
     .local v2, response:Ljavax/sip/message/Response;
     invoke-interface {v2}, Ljavax/sip/message/Response;->getStatusCode()I
 
     move-result v4
 
+    .line 835
     .local v4, statusCode:I
     sparse-switch v4, :sswitch_data_0
 
+    .line 847
     const/16 v5, 0x1f4
 
     if-lt v4, v5, :cond_1
 
+    .line 848
     invoke-direct {p0, v2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onRegistrationFailed(Ljavax/sip/message/Response;)V
 
     move v5, v6
 
+    .line 853
     .end local v1           #event:Ljavax/sip/ResponseEvent;
     .end local v2           #response:Ljavax/sip/message/Response;
     .end local v4           #statusCode:I
@@ -2717,6 +3048,7 @@
     :goto_0
     return v5
 
+    .line 837
     .restart local v1       #event:Ljavax/sip/ResponseEvent;
     .restart local v2       #response:Ljavax/sip/message/Response;
     .restart local v4       #statusCode:I
@@ -2724,6 +3056,7 @@
     :sswitch_0
     iget v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 838
     .local v3, state:I
     if-ne v3, v6, :cond_0
 
@@ -2743,22 +3076,27 @@
 
     move v5, v6
 
+    .line 841
     goto :goto_0
 
+    .line 838
     .restart local p1
     :cond_0
     const/4 v5, -0x1
 
     goto :goto_1
 
+    .line 844
     .end local v3           #state:I
     :sswitch_1
     invoke-direct {p0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->handleAuthentication(Ljavax/sip/ResponseEvent;)Z
 
     move v5, v6
 
+    .line 845
     goto :goto_0
 
+    .line 853
     .end local v1           #event:Ljavax/sip/ResponseEvent;
     .end local v2           #response:Ljavax/sip/message/Response;
     .end local v4           #statusCode:I
@@ -2767,6 +3105,7 @@
 
     goto :goto_0
 
+    .line 835
     nop
 
     :sswitch_data_0
@@ -2785,25 +3124,34 @@
 
     const/4 v1, 0x0
 
+    .line 444
     iput-boolean v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mInCall:Z
 
+    .line 445
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #calls: Lcom/android/server/sip/SipSessionGroup;->removeSipSession(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
     invoke-static {v0, p0}, Lcom/android/server/sip/SipSessionGroup;->access$1200(Lcom/android/server/sip/SipSessionGroup;Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
 
+    .line 446
     iput-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerProfile:Landroid/net/sip/SipProfile;
 
+    .line 447
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 448
     iput-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mInviteReceived:Ljavax/sip/RequestEvent;
 
+    .line 449
     iput-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerSessionDescription:Ljava/lang/String;
 
+    .line 450
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mRPort:I
 
+    .line 451
     iput v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mAuthenticationRetryCount:I
 
+    .line 453
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
     if-eqz v0, :cond_0
@@ -2812,9 +3160,11 @@
 
     invoke-interface {v0}, Ljavax/sip/Dialog;->delete()V
 
+    .line 454
     :cond_0
     iput-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
+    .line 457
     :try_start_0
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mServerTransaction:Ljavax/sip/ServerTransaction;
 
@@ -2826,10 +3176,12 @@
     :try_end_0
     .catch Ljavax/sip/ObjectInUseException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 461
     :cond_1
     :goto_0
     iput-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mServerTransaction:Ljavax/sip/ServerTransaction;
 
+    .line 464
     :try_start_1
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
@@ -2841,19 +3193,24 @@
     :try_end_1
     .catch Ljavax/sip/ObjectInUseException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 468
     :cond_2
     :goto_1
     iput-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mClientTransaction:Ljavax/sip/ClientTransaction;
 
+    .line 470
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->cancelSessionTimer()V
 
+    .line 471
     return-void
 
+    .line 465
     :catch_0
     move-exception v0
 
     goto :goto_1
 
+    .line 458
     :catch_1
     move-exception v0
 
@@ -2865,18 +3222,22 @@
     .parameter "timeout"
 
     .prologue
+    .line 1145
     if-lez p1, :cond_0
 
+    .line 1146
     new-instance v0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;
 
     invoke-direct {v0, p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;-><init>(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;)V
 
     iput-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mTimer:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;
 
+    .line 1147
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mTimer:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;
 
     invoke-virtual {v0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$SessionTimer;->start(I)V
 
+    .line 1149
     :cond_0
     return-void
 .end method
@@ -2886,23 +3247,28 @@
     .parameter "transaction"
 
     .prologue
+    .line 725
     if-nez p1, :cond_0
 
     const-string v3, "null"
 
+    .line 729
     :goto_0
     return-object v3
 
+    .line 726
     :cond_0
     invoke-interface {p1}, Ljavax/sip/Transaction;->getRequest()Ljavax/sip/message/Request;
 
     move-result-object v2
 
+    .line 727
     .local v2, request:Ljavax/sip/message/Request;
     invoke-interface {p1}, Ljavax/sip/Transaction;->getDialog()Ljavax/sip/Dialog;
 
     move-result-object v1
 
+    .line 728
     .local v1, dialog:Ljavax/sip/Dialog;
     const-string v3, "CSeq"
 
@@ -2912,8 +3278,9 @@
 
     check-cast v0, Ljavax/sip/header/CSeqHeader;
 
+    .line 729
     .local v0, cseq:Ljavax/sip/header/CSeqHeader;
-    const-string v3, "req=%s,%s,s=%s,ds=%s,"
+    const-string/jumbo v3, "req=%s,%s,s=%s,ds=%s,"
 
     const/4 v4, 0x4
 
@@ -2978,10 +3345,12 @@
     .parameter "timeout"
 
     .prologue
+    .line 530
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     monitor-enter v1
 
+    .line 531
     :try_start_0
     iget-object v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerProfile:Landroid/net/sip/SipProfile;
 
@@ -2991,9 +3360,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 539
     :goto_0
     return-void
 
+    .line 533
     :cond_0
     :try_start_1
     new-instance v2, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
@@ -3009,6 +3380,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljavax/sip/SipException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 538
     :goto_1
     :try_start_2
     monitor-exit v1
@@ -3024,11 +3396,13 @@
 
     throw v2
 
+    .line 535
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 536
     .local v0, e:Ljavax/sip/SipException;
     :try_start_3
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(Ljava/lang/Throwable;)V
@@ -3044,10 +3418,12 @@
     .parameter "timeout"
 
     .prologue
+    .line 546
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     monitor-enter v0
 
+    .line 547
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerProfile:Landroid/net/sip/SipProfile;
 
@@ -3055,9 +3431,11 @@
 
     monitor-exit v0
 
+    .line 551
     :goto_0
     return-void
 
+    .line 548
     :cond_0
     new-instance v1, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
 
@@ -3069,6 +3447,7 @@
 
     invoke-direct {p0, v1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->doCommandAsync(Ljava/util/EventObject;)V
 
+    .line 550
     monitor-exit v0
 
     goto :goto_0
@@ -3087,10 +3466,12 @@
     .locals 1
 
     .prologue
+    .line 566
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mReRegisterFlag:Z
 
+    .line 567
     return-void
 .end method
 
@@ -3098,6 +3479,7 @@
     .locals 3
 
     .prologue
+    .line 440
     new-instance v0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
 
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
@@ -3117,12 +3499,14 @@
     .locals 1
 
     .prologue
+    .line 542
     invoke-static {}, Lcom/android/server/sip/SipSessionGroup;->access$1600()Ljava/util/EventObject;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->doCommandAsync(Ljava/util/EventObject;)V
 
+    .line 543
     return-void
 .end method
 
@@ -3130,6 +3514,7 @@
     .locals 4
 
     .prologue
+    .line 600
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v0
@@ -3151,6 +3536,7 @@
     .locals 1
 
     .prologue
+    .line 490
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getTransaction()Ljavax/sip/Transaction;
 
     move-result-object v0
@@ -3166,6 +3552,7 @@
     .locals 1
 
     .prologue
+    .line 478
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mLocalIp:Ljava/lang/String;
@@ -3180,6 +3567,7 @@
     .locals 1
 
     .prologue
+    .line 482
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     #getter for: Lcom/android/server/sip/SipSessionGroup;->mLocalProfile:Landroid/net/sip/SipProfile;
@@ -3194,6 +3582,7 @@
     .locals 1
 
     .prologue
+    .line 486
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mPeerProfile:Landroid/net/sip/SipProfile;
 
     return-object v0
@@ -3203,6 +3592,7 @@
     .locals 1
 
     .prologue
+    .line 500
     iget v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
     return v0
@@ -3212,6 +3602,7 @@
     .locals 1
 
     .prologue
+    .line 474
     iget-boolean v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mInCall:Z
 
     return v0
@@ -3221,6 +3612,7 @@
     .locals 1
 
     .prologue
+    .line 562
     iget-boolean v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mReRegisterFlag:Z
 
     return v0
@@ -3233,6 +3625,7 @@
     .parameter "timeout"
 
     .prologue
+    .line 525
     new-instance v0, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;
 
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
@@ -3241,6 +3634,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->doCommandAsync(Ljava/util/EventObject;)V
 
+    .line 527
     return-void
 .end method
 
@@ -3256,6 +3650,7 @@
     .prologue
     const/4 v6, 0x0
 
+    .line 614
     #calls: Lcom/android/server/sip/SipSessionGroup;->isLoggable(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;Ljava/util/EventObject;)Z
     invoke-static {p0, p1}, Lcom/android/server/sip/SipSessionGroup;->access$200(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;Ljava/util/EventObject;)Z
 
@@ -3316,11 +3711,13 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 617
     :cond_0
     iget-object v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
     monitor-enter v4
 
+    .line 618
     :try_start_0
     iget-object v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
@@ -3334,17 +3731,21 @@
 
     move v3, v6
 
+    .line 660
     :goto_0
     return v3
 
+    .line 620
     :cond_1
     const/4 v1, 0x0
 
+    .line 621
     .local v1, dialog:Ljavax/sip/Dialog;
     instance-of v3, p1, Ljavax/sip/RequestEvent;
 
     if-eqz v3, :cond_5
 
+    .line 622
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/RequestEvent;
@@ -3355,19 +3756,23 @@
 
     move-result-object v1
 
+    .line 626
     :cond_2
     :goto_1
     if-eqz v1, :cond_3
 
     iput-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mDialog:Ljavax/sip/Dialog;
 
+    .line 630
     :cond_3
     iget v3, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
     packed-switch v3, :pswitch_data_0
 
+    .line 658
     const/4 v2, 0x0
 
+    .line 660
     .local v2, processed:Z
     :goto_2
     if-nez v2, :cond_4
@@ -3386,6 +3791,7 @@
 
     goto :goto_0
 
+    .line 661
     .end local v1           #dialog:Ljavax/sip/Dialog;
     .end local v2           #processed:Z
     :catchall_0
@@ -3397,6 +3803,7 @@
 
     throw v3
 
+    .line 623
     .restart local v1       #dialog:Ljavax/sip/Dialog;
     :cond_5
     :try_start_1
@@ -3404,6 +3811,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 624
     move-object v0, p1
 
     check-cast v0, Ljavax/sip/ResponseEvent;
@@ -3416,68 +3824,83 @@
 
     goto :goto_1
 
+    .line 633
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->registeringToReady(Ljava/util/EventObject;)Z
 
     move-result v2
 
+    .line 634
     .restart local v2       #processed:Z
     goto :goto_2
 
+    .line 636
     .end local v2           #processed:Z
     :pswitch_1
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->keepAliveProcess(Ljava/util/EventObject;)Z
 
     move-result v2
 
+    .line 637
     .restart local v2       #processed:Z
     goto :goto_2
 
+    .line 639
     .end local v2           #processed:Z
     :pswitch_2
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->readyForCall(Ljava/util/EventObject;)Z
 
     move-result v2
 
+    .line 640
     .restart local v2       #processed:Z
     goto :goto_2
 
+    .line 642
     .end local v2           #processed:Z
     :pswitch_3
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->incomingCall(Ljava/util/EventObject;)Z
 
     move-result v2
 
+    .line 643
     .restart local v2       #processed:Z
     goto :goto_2
 
+    .line 645
     .end local v2           #processed:Z
     :pswitch_4
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->incomingCallToInCall(Ljava/util/EventObject;)Z
 
     move-result v2
 
+    .line 646
     .restart local v2       #processed:Z
     goto :goto_2
 
+    .line 649
     .end local v2           #processed:Z
     :pswitch_5
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->outgoingCall(Ljava/util/EventObject;)Z
 
     move-result v2
 
+    .line 650
     .restart local v2       #processed:Z
     goto :goto_2
 
+    .line 652
     .end local v2           #processed:Z
     :pswitch_6
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->outgoingCallToReady(Ljava/util/EventObject;)Z
 
     move-result v2
 
+    .line 653
     .restart local v2       #processed:Z
     goto :goto_2
 
+    .line 655
     .end local v2           #processed:Z
     :pswitch_7
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->inCall(Ljava/util/EventObject;)Z
@@ -3486,14 +3909,17 @@
 
     move-result v2
 
+    .line 656
     .restart local v2       #processed:Z
     goto :goto_2
 
     :cond_6
     move v3, v6
 
+    .line 660
     goto :goto_3
 
+    .line 630
     nop
 
     :pswitch_data_0
@@ -3516,6 +3942,7 @@
     .parameter "duration"
 
     .prologue
+    .line 554
     new-instance v0, Lcom/android/server/sip/SipSessionGroup$RegisterCommand;
 
     iget-object v1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->this$0:Lcom/android/server/sip/SipSessionGroup;
@@ -3524,6 +3951,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->doCommandAsync(Ljava/util/EventObject;)V
 
+    .line 555
     return-void
 .end method
 
@@ -3535,8 +3963,10 @@
 
     const-string v5, "SipSession"
 
+    .line 570
     iput v4, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
+    .line 572
     :try_start_0
     new-instance v2, Lcom/android/server/sip/SipSessionGroup$OptionsCommand;
 
@@ -3546,6 +3976,7 @@
 
     invoke-direct {p0, v2}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->processCommand(Ljava/util/EventObject;)V
 
+    .line 573
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -3554,28 +3985,34 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 574
     iget v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
     if-eq v4, v2, :cond_2
 
+    .line 577
     :cond_0
     iget v2, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mState:I
 
     if-ne v4, v2, :cond_1
 
+    .line 579
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->reset()V
 
+    .line 580
     const-string v2, "SipSession"
 
     const-string v3, "no response from ping"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 587
     .end local v1           #i:I
     :cond_1
     :goto_1
     return-void
 
+    .line 575
     .restart local v1       #i:I
     :cond_2
     const-wide/16 v2, 0xc8
@@ -3585,35 +4022,40 @@
     .catch Ljavax/sip/SipException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 573
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 582
     .end local v1           #i:I
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 583
     .local v0, e:Ljavax/sip/SipException;
     const-string v2, "SipSession"
 
-    const-string v2, "sendKeepAlive failed"
+    const-string/jumbo v2, "sendKeepAlive failed"
 
     invoke-static {v5, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
 
+    .line 584
     .end local v0           #e:Ljavax/sip/SipException;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
+    .line 585
     .local v0, e:Ljava/lang/InterruptedException;
     const-string v2, "SipSession"
 
-    const-string v2, "sendKeepAlive interrupted"
+    const-string/jumbo v2, "sendKeepAlive interrupted"
 
     invoke-static {v5, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -3625,6 +4067,7 @@
     .parameter "listener"
 
     .prologue
+    .line 504
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->mProxy:Lcom/android/server/sip/SipSessionListenerProxy;
 
     instance-of v1, p1, Lcom/android/server/sip/SipSessionListenerProxy;
@@ -3641,12 +4084,14 @@
     :goto_0
     invoke-virtual {v0, v1}, Lcom/android/server/sip/SipSessionListenerProxy;->setListener(Landroid/net/sip/ISipSessionListener;)V
 
+    .line 507
     return-void
 
     .restart local p1
     :cond_0
     move-object v1, p1
 
+    .line 504
     goto :goto_0
 .end method
 
@@ -3654,11 +4099,13 @@
     .locals 4
 
     .prologue
+    .line 605
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 606
     .local v1, s:Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3700,15 +4147,18 @@
 
     move-result-object v2
 
+    .line 609
     .end local v1           #s:Ljava/lang/String;
     :goto_0
     return-object v2
 
+    .line 608
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 609
     .local v0, e:Ljava/lang/Throwable;
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -3721,11 +4171,13 @@
     .locals 1
 
     .prologue
+    .line 558
     invoke-static {}, Lcom/android/server/sip/SipSessionGroup;->access$1700()Ljava/util/EventObject;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->doCommandAsync(Ljava/util/EventObject;)V
 
+    .line 559
     return-void
 .end method

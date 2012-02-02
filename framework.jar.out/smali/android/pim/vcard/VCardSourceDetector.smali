@@ -93,6 +93,7 @@
 
     const/4 v3, 0x0
 
+    .line 45
     new-instance v0, Ljava/util/HashSet;
 
     const/4 v1, 0x5
@@ -127,6 +128,7 @@
 
     sput-object v0, Landroid/pim/vcard/VCardSourceDetector;->APPLE_SIGNS:Ljava/util/Set;
 
+    .line 49
     new-instance v0, Ljava/util/HashSet;
 
     new-array v1, v6, [Ljava/lang/String;
@@ -151,6 +153,7 @@
 
     sput-object v0, Landroid/pim/vcard/VCardSourceDetector;->JAPANESE_MOBILE_PHONE_SIGNS:Ljava/util/Set;
 
+    .line 52
     new-instance v0, Ljava/util/HashSet;
 
     new-array v1, v6, [Ljava/lang/String;
@@ -175,6 +178,7 @@
 
     sput-object v0, Landroid/pim/vcard/VCardSourceDetector;->WINDOWS_MOBILE_PHONE_SIGNS:Ljava/util/Set;
 
+    .line 57
     new-instance v0, Ljava/util/HashSet;
 
     const/4 v1, 0x6
@@ -215,6 +219,7 @@
 
     sput-object v0, Landroid/pim/vcard/VCardSourceDetector;->FOMA_SIGNS:Ljava/util/Set;
 
+    .line 60
     const-string v0, "X-SD-CHAR_CODE"
 
     sput-object v0, Landroid/pim/vcard/VCardSourceDetector;->TYPE_FOMA_CHARSET_SIGN:Ljava/lang/String;
@@ -228,12 +233,16 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 78
     iput v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
+    .line 80
     iput-boolean v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mNeedToParseVersion:Z
 
+    .line 81
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mVersion:I
@@ -247,6 +256,7 @@
     .locals 0
 
     .prologue
+    .line 91
     return-void
 .end method
 
@@ -254,6 +264,7 @@
     .locals 0
 
     .prologue
+    .line 105
     return-void
 .end method
 
@@ -261,6 +272,7 @@
     .locals 0
 
     .prologue
+    .line 102
     return-void
 .end method
 
@@ -268,6 +280,7 @@
     .locals 1
 
     .prologue
+    .line 191
     iget-object v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mSpecifiedCharset:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -276,31 +289,38 @@
 
     if-eqz v0, :cond_0
 
+    .line 192
     iget-object v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mSpecifiedCharset:Ljava/lang/String;
 
+    .line 202
     :goto_0
     return-object v0
 
+    .line 194
     :cond_0
     iget v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 202
     :pswitch_0
     const/4 v0, 0x0
 
     goto :goto_0
 
+    .line 198
     :pswitch_1
     const-string v0, "SHIFT_JIS"
 
     goto :goto_0
 
+    .line 200
     :pswitch_2
     const-string v0, "UTF-8"
 
     goto :goto_0
 
+    .line 194
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -314,29 +334,36 @@
     .locals 2
 
     .prologue
+    .line 162
     iget v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 170
     iget v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mVersion:I
 
     if-nez v0, :cond_0
 
+    .line 171
     const/high16 v0, -0x4000
 
+    .line 177
     :goto_0
     return v0
 
+    .line 164
     :pswitch_0
     const v0, 0x39000008
 
     goto :goto_0
 
+    .line 166
     :pswitch_1
     const v0, 0x18000008
 
     goto :goto_0
 
+    .line 172
     :cond_0
     iget v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mVersion:I
 
@@ -344,10 +371,12 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 173
     const v0, -0x3fffffff
 
     goto :goto_0
 
+    .line 174
     :cond_1
     iget v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mVersion:I
 
@@ -355,15 +384,18 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 175
     const v0, -0x3ffffffe
 
     goto :goto_0
 
+    .line 177
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
+    .line 162
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1
@@ -376,6 +408,7 @@
     .parameter "group"
 
     .prologue
+    .line 108
     return-void
 .end method
 
@@ -388,6 +421,7 @@
 
     const/4 v1, 0x1
 
+    .line 111
     const-string v0, "VERSION"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -396,12 +430,15 @@
 
     if-eqz v0, :cond_1
 
+    .line 112
     iput-boolean v1, p0, Landroid/pim/vcard/VCardSourceDetector;->mNeedToParseVersion:Z
 
+    .line 132
     :cond_0
     :goto_0
     return-void
 
+    .line 114
     :cond_1
     sget-object v0, Landroid/pim/vcard/VCardSourceDetector;->TYPE_FOMA_CHARSET_SIGN:Ljava/lang/String;
 
@@ -411,17 +448,21 @@
 
     if-eqz v0, :cond_2
 
+    .line 115
     iput v2, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
+    .line 117
     iput-boolean v1, p0, Landroid/pim/vcard/VCardSourceDetector;->mNeedToParseCharset:Z
 
     goto :goto_0
 
+    .line 120
     :cond_2
     iget v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
     if-nez v0, :cond_0
 
+    .line 123
     sget-object v0, Landroid/pim/vcard/VCardSourceDetector;->WINDOWS_MOBILE_PHONE_SIGNS:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -430,12 +471,14 @@
 
     if-eqz v0, :cond_3
 
+    .line 124
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
     goto :goto_0
 
+    .line 125
     :cond_3
     sget-object v0, Landroid/pim/vcard/VCardSourceDetector;->FOMA_SIGNS:Ljava/util/Set;
 
@@ -445,10 +488,12 @@
 
     if-eqz v0, :cond_4
 
+    .line 126
     iput v2, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
     goto :goto_0
 
+    .line 127
     :cond_4
     sget-object v0, Landroid/pim/vcard/VCardSourceDetector;->JAPANESE_MOBILE_PHONE_SIGNS:Ljava/util/Set;
 
@@ -458,12 +503,14 @@
 
     if-eqz v0, :cond_5
 
+    .line 128
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
     goto :goto_0
 
+    .line 129
     :cond_5
     sget-object v0, Landroid/pim/vcard/VCardSourceDetector;->APPLE_SIGNS:Ljava/util/Set;
 
@@ -473,6 +520,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 130
     iput v1, p0, Landroid/pim/vcard/VCardSourceDetector;->mParseType:I
 
     goto :goto_0
@@ -483,6 +531,7 @@
     .parameter "type"
 
     .prologue
+    .line 135
     return-void
 .end method
 
@@ -491,6 +540,7 @@
     .parameter "value"
 
     .prologue
+    .line 138
     return-void
 .end method
 
@@ -511,6 +561,7 @@
     .local p1, values:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
+    .line 141
     iget-boolean v1, p0, Landroid/pim/vcard/VCardSourceDetector;->mNeedToParseVersion:Z
 
     if-eqz v1, :cond_4
@@ -521,12 +572,14 @@
 
     if-lez v1, :cond_4
 
+    .line 142
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
+    .line 143
     .local v0, versionString:Ljava/lang/String;
     const-string v1, "2.1"
 
@@ -536,13 +589,16 @@
 
     if-eqz v1, :cond_1
 
+    .line 144
     iput v2, p0, Landroid/pim/vcard/VCardSourceDetector;->mVersion:I
 
+    .line 155
     .end local v0           #versionString:Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
+    .line 145
     .restart local v0       #versionString:Ljava/lang/String;
     :cond_1
     const-string v1, "3.0"
@@ -553,12 +609,14 @@
 
     if-eqz v1, :cond_2
 
+    .line 146
     const/4 v1, 0x1
 
     iput v1, p0, Landroid/pim/vcard/VCardSourceDetector;->mVersion:I
 
     goto :goto_0
 
+    .line 147
     :cond_2
     const-string v1, "4.0"
 
@@ -568,12 +626,14 @@
 
     if-eqz v1, :cond_3
 
+    .line 148
     const/4 v1, 0x2
 
     iput v1, p0, Landroid/pim/vcard/VCardSourceDetector;->mVersion:I
 
     goto :goto_0
 
+    .line 150
     :cond_3
     const-string v1, "VCardSourceDetector"
 
@@ -599,6 +659,7 @@
 
     goto :goto_0
 
+    .line 152
     .end local v0           #versionString:Ljava/lang/String;
     :cond_4
     iget-boolean v1, p0, Landroid/pim/vcard/VCardSourceDetector;->mNeedToParseCharset:Z
@@ -611,6 +672,7 @@
 
     if-lez v1, :cond_0
 
+    .line 153
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -626,6 +688,7 @@
     .locals 0
 
     .prologue
+    .line 88
     return-void
 .end method
 
@@ -633,6 +696,7 @@
     .locals 0
 
     .prologue
+    .line 94
     return-void
 .end method
 
@@ -642,9 +706,12 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 97
     iput-boolean v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mNeedToParseCharset:Z
 
+    .line 98
     iput-boolean v0, p0, Landroid/pim/vcard/VCardSourceDetector;->mNeedToParseVersion:Z
 
+    .line 99
     return-void
 .end method

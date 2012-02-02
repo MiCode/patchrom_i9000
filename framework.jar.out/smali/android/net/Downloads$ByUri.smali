@@ -27,6 +27,7 @@
     .locals 3
 
     .prologue
+    .line 323
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -45,7 +46,7 @@
 
     const/4 v1, 0x2
 
-    const-string v2, "total_bytes"
+    const-string/jumbo v2, "total_bytes"
 
     aput-object v2, v0, v1
 
@@ -58,6 +59,7 @@
     .locals 0
 
     .prologue
+    .line 208
     invoke-direct {p0}, Landroid/net/Downloads$DownloadBase;-><init>()V
 
     return-void
@@ -69,6 +71,7 @@
     .parameter "url"
 
     .prologue
+    .line 222
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -102,6 +105,7 @@
     .locals 1
 
     .prologue
+    .line 311
     const/4 v0, 0x1
 
     return v0
@@ -111,6 +115,7 @@
     .locals 1
 
     .prologue
+    .line 303
     const/4 v0, 0x0
 
     return v0
@@ -120,6 +125,7 @@
     .locals 1
 
     .prologue
+    .line 319
     const/4 v0, 0x2
 
     return v0
@@ -133,6 +139,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 333
     sget-object v0, Landroid/provider/Downloads$Impl;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -143,6 +150,7 @@
 
     move-result-object v1
 
+    .line 335
     .local v1, downloadUri:Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -168,14 +176,18 @@
     .parameter "redownload_threshold"
 
     .prologue
+    .line 238
     const/4 v3, 0x0
 
+    .line 239
     .local v3, result:Landroid/net/Downloads$StatusInfo;
     const/4 v2, 0x0
 
+    .line 240
     .local v2, hasFailedDownload:Z
     const-wide/16 v0, 0x0
 
+    .line 241
     .local v0, failedDownloadModificationTime:J
     invoke-static {p0, p1}, Landroid/net/Downloads$ByUri;->getCurrentOtaDownloads(Landroid/content/Context;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -184,6 +196,7 @@
     .local p0, c:Landroid/database/Cursor;
     move p1, v2
 
+    .line 243
     .end local v2           #hasFailedDownload:Z
     .local p1, hasFailedDownload:Z
     :goto_0
@@ -196,8 +209,10 @@
 
     if-eqz v2, :cond_5
 
+    .line 244
     if-nez v3, :cond_8
 
+    .line 245
     new-instance v2, Landroid/net/Downloads$StatusInfo;
 
     invoke-direct {v2}, Landroid/net/Downloads$StatusInfo;-><init>()V
@@ -208,6 +223,7 @@
     .local v2, result:Landroid/net/Downloads$StatusInfo;
     move-object v4, v2
 
+    .line 247
     .end local v2           #result:Landroid/net/Downloads$StatusInfo;
     .local v4, result:Landroid/net/Downloads$StatusInfo;
     :goto_1
@@ -217,6 +233,7 @@
 
     move-result v2
 
+    .line 248
     .local v2, status:I
     const/4 v3, 0x3
 
@@ -226,6 +243,7 @@
 
     if-ne v2, v3, :cond_3
 
+    .line 250
     :cond_0
     const/4 p2, 0x4
 
@@ -237,6 +255,7 @@
     :goto_2
     iput-boolean p2, v4, Landroid/net/Downloads$StatusInfo;->completed:Z
 
+    .line 251
     const/4 p2, 0x3
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -245,6 +264,7 @@
 
     iput-object p2, v4, Landroid/net/Downloads$StatusInfo;->filename:Ljava/lang/String;
 
+    .line 252
     const/4 p2, 0x0
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getLong(I)J
@@ -253,6 +273,7 @@
 
     iput-wide p2, v4, Landroid/net/Downloads$StatusInfo;->id:J
 
+    .line 253
     const/4 p2, 0x2
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getInt(I)I
@@ -261,6 +282,7 @@
 
     iput p2, v4, Landroid/net/Downloads$StatusInfo;->statusCode:I
 
+    .line 254
     const/4 p2, 0x5
 
     invoke-interface {p0, p2}, Landroid/database/Cursor;->getLong(I)J
@@ -271,8 +293,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 271
     if-eqz p0, :cond_1
 
+    .line 272
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     :cond_1
@@ -282,12 +306,14 @@
     .local p0, result:Landroid/net/Downloads$StatusInfo;
     move-object p1, v4
 
+    .line 275
     .end local v2           #status:I
     .end local p0           #result:Landroid/net/Downloads$StatusInfo;
     .local p1, result:Landroid/net/Downloads$StatusInfo;
     :goto_3
     return-object p1
 
+    .line 250
     .restart local v2       #status:I
     .restart local v4       #result:Landroid/net/Downloads$StatusInfo;
     .local p0, c:Landroid/database/Cursor;
@@ -297,6 +323,7 @@
 
     goto :goto_2
 
+    .line 258
     .restart local p2
     :cond_3
     const/4 v2, 0x4
@@ -307,6 +334,7 @@
     .end local v2           #status:I
     move-result-wide v2
 
+    .line 259
     .local v2, modTime:J
     if-eqz p1, :cond_4
 
@@ -316,19 +344,23 @@
 
     move-object v3, v4
 
+    .line 262
     .end local v2           #modTime:J
     .end local v4           #result:Landroid/net/Downloads$StatusInfo;
     .restart local v3       #result:Landroid/net/Downloads$StatusInfo;
     goto :goto_0
 
+    .line 265
     .end local v3           #result:Landroid/net/Downloads$StatusInfo;
     .restart local v2       #modTime:J
     .restart local v4       #result:Landroid/net/Downloads$StatusInfo;
     :cond_4
     const/4 p1, 0x1
 
+    .line 266
     move-wide v0, v2
 
+    .line 267
     const/4 v2, 0x2
 
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
@@ -338,6 +370,7 @@
 
     iput v2, v4, Landroid/net/Downloads$StatusInfo;->statusCode:I
 
+    .line 268
     const/4 v2, 0x5
 
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getLong(I)J
@@ -350,13 +383,16 @@
 
     move-object v3, v4
 
+    .line 269
     .end local v4           #result:Landroid/net/Downloads$StatusInfo;
     .restart local v3       #result:Landroid/net/Downloads$StatusInfo;
     goto :goto_0
 
+    .line 271
     :cond_5
     if-eqz p0, :cond_6
 
+    .line 272
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     :cond_6
@@ -366,10 +402,12 @@
     .local p0, result:Landroid/net/Downloads$StatusInfo;
     move-object p1, v3
 
+    .line 275
     .end local p0           #result:Landroid/net/Downloads$StatusInfo;
     .local p1, result:Landroid/net/Downloads$StatusInfo;
     goto :goto_3
 
+    .line 271
     .restart local v3       #result:Landroid/net/Downloads$StatusInfo;
     .local p0, c:Landroid/database/Cursor;
     .local p1, hasFailedDownload:Z
@@ -398,11 +436,13 @@
     :goto_4
     if-eqz p0, :cond_7
 
+    .line 272
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     :cond_7
     throw v1
 
+    .line 271
     .end local p3           #hasFailedDownload:Z
     .local v0, failedDownloadModificationTime:J
     .restart local v4       #result:Landroid/net/Downloads$StatusInfo;
@@ -450,6 +490,7 @@
     .parameter "notification_class"
 
     .prologue
+    .line 292
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -472,5 +513,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
+    .line 296
     return-void
 .end method

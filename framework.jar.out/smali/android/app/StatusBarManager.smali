@@ -29,17 +29,21 @@
     .parameter "context"
 
     .prologue
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 67
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Landroid/app/StatusBarManager;->mToken:Landroid/os/IBinder;
 
+    .line 70
     iput-object p1, p0, Landroid/app/StatusBarManager;->mContext:Landroid/content/Context;
 
-    const-string v0, "statusbar"
+    .line 71
+    const-string/jumbo v0, "statusbar"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -51,6 +55,7 @@
 
     iput-object v0, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
+    .line 73
     return-void
 .end method
 
@@ -60,6 +65,7 @@
     .locals 2
 
     .prologue
+    .line 105
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -67,13 +73,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 110
     return-void
 
+    .line 106
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 108
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -87,6 +96,7 @@
     .parameter "what"
 
     .prologue
+    .line 81
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -102,13 +112,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 86
     return-void
 
+    .line 82
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 84
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -121,6 +134,7 @@
     .locals 2
 
     .prologue
+    .line 93
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -128,13 +142,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 98
     return-void
 
+    .line 94
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 96
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -150,6 +167,7 @@
     .parameter "timeout"
 
     .prologue
+    .line 173
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -161,11 +179,13 @@
 
     return-object v1
 
+    .line 174
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 176
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -178,6 +198,7 @@
     .locals 2
 
     .prologue
+    .line 162
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -185,13 +206,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 167
     return-void
 
+    .line 163
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 165
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -205,6 +229,7 @@
     .parameter "slot"
 
     .prologue
+    .line 134
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -212,13 +237,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 139
     return-void
 
+    .line 135
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 137
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -234,6 +262,7 @@
     .parameter "iconLevel"
 
     .prologue
+    .line 114
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -247,13 +276,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 119
     return-void
 
+    .line 115
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 117
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -268,6 +300,7 @@
     .parameter "visible"
 
     .prologue
+    .line 143
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -275,13 +308,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 148
     return-void
 
+    .line 144
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 146
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -298,6 +334,7 @@
     .parameter "visible"
 
     .prologue
+    .line 124
     :try_start_0
     iget-object v0, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -319,13 +356,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 129
     return-void
 
+    .line 125
     :catch_0
     move-exception v0
 
     move-object v6, v0
 
+    .line 127
     .local v6, ex:Landroid/os/RemoteException;
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -338,6 +378,7 @@
     .locals 2
 
     .prologue
+    .line 153
     :try_start_0
     iget-object v1, p0, Landroid/app/StatusBarManager;->mService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -345,13 +386,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 158
     return-void
 
+    .line 154
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 156
     .local v0, ex:Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 

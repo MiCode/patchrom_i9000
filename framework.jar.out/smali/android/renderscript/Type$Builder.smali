@@ -37,12 +37,15 @@
     .parameter "e"
 
     .prologue
+    .line 167
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 168
     iget v0, p2, Landroid/renderscript/BaseObj;->mID:I
 
     if-nez v0, :cond_0
 
+    .line 169
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Invalid element."
@@ -51,17 +54,21 @@
 
     throw v0
 
+    .line 172
     :cond_0
     iput-object p1, p0, Landroid/renderscript/Type$Builder;->mRS:Landroid/renderscript/RenderScript;
 
+    .line 173
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/renderscript/Type$Builder$Entry;
 
     iput-object v0, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
+    .line 174
     iput-object p2, p0, Landroid/renderscript/Type$Builder;->mElement:Landroid/renderscript/Element;
 
+    .line 175
     return-void
 .end method
 
@@ -71,6 +78,7 @@
     .parameter "b"
 
     .prologue
+    .line 193
     const-class v3, Landroid/renderscript/Type$Builder;
 
     monitor-enter v3
@@ -82,6 +90,7 @@
 
     invoke-virtual {p0, v4}, Landroid/renderscript/RenderScript;->nTypeBegin(I)V
 
+    .line 194
     const/4 v0, 0x0
 
     .local v0, ct:I
@@ -90,10 +99,12 @@
 
     if-ge v0, v4, :cond_0
 
+    .line 195
     iget-object v4, p1, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     aget-object v1, v4, v0
 
+    .line 196
     .local v1, en:Landroid/renderscript/Type$Builder$Entry;
     iget-object v4, v1, Landroid/renderscript/Type$Builder$Entry;->mDim:Landroid/renderscript/Dimension;
 
@@ -103,16 +114,19 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/renderscript/RenderScript;->nTypeAdd(II)V
 
+    .line 194
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 198
     .end local v1           #en:Landroid/renderscript/Type$Builder$Entry;
     :cond_0
     invoke-virtual {p0}, Landroid/renderscript/RenderScript;->nTypeCreate()I
 
     move-result v2
 
+    .line 199
     .local v2, id:I
     new-instance v4, Landroid/renderscript/Type;
 
@@ -124,6 +138,7 @@
 
     return-object v4
 
+    .line 193
     .end local v0           #ct:I
     .end local v2           #id:I
     :catchall_0
@@ -144,10 +159,12 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 178
     const/4 v1, 0x1
 
     if-ge p2, v1, :cond_0
 
+    .line 179
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Values of less than 1 for Dimensions are not valid."
@@ -156,6 +173,7 @@
 
     throw v1
 
+    .line 181
     :cond_0
     iget-object v1, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
@@ -165,12 +183,14 @@
 
     if-lt v1, v2, :cond_1
 
+    .line 182
     iget v1, p0, Landroid/renderscript/Type$Builder;->mEntryCount:I
 
     add-int/lit8 v1, v1, 0x8
 
     new-array v0, v1, [Landroid/renderscript/Type$Builder$Entry;
 
+    .line 183
     .local v0, en:[Landroid/renderscript/Type$Builder$Entry;
     iget-object v1, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
@@ -180,8 +200,10 @@
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 184
     iput-object v0, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
+    .line 186
     .end local v0           #en:[Landroid/renderscript/Type$Builder$Entry;
     :cond_1
     iget-object v1, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
@@ -194,6 +216,7 @@
 
     aput-object v3, v1, v2
 
+    .line 187
     iget-object v1, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     iget v2, p0, Landroid/renderscript/Type$Builder;->mEntryCount:I
@@ -202,6 +225,7 @@
 
     iput-object p1, v1, Landroid/renderscript/Type$Builder$Entry;->mDim:Landroid/renderscript/Dimension;
 
+    .line 188
     iget-object v1, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     iget v2, p0, Landroid/renderscript/Type$Builder;->mEntryCount:I
@@ -210,12 +234,14 @@
 
     iput p2, v1, Landroid/renderscript/Type$Builder$Entry;->mValue:I
 
+    .line 189
     iget v1, p0, Landroid/renderscript/Type$Builder;->mEntryCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Landroid/renderscript/Type$Builder;->mEntryCount:I
 
+    .line 190
     return-void
 .end method
 
@@ -227,17 +253,20 @@
 
     const/4 v4, 0x0
 
+    .line 203
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-static {v2, p0}, Landroid/renderscript/Type$Builder;->internalCreate(Landroid/renderscript/RenderScript;Landroid/renderscript/Type$Builder;)Landroid/renderscript/Type;
 
     move-result-object v1
 
+    .line 204
     .local v1, t:Landroid/renderscript/Type;
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mElement:Landroid/renderscript/Element;
 
     iput-object v2, v1, Landroid/renderscript/Type;->mElement:Landroid/renderscript/Element;
 
+    .line 206
     const/4 v0, 0x0
 
     .local v0, ct:I
@@ -246,6 +275,7 @@
 
     if-ge v0, v2, :cond_7
 
+    .line 207
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     aget-object v2, v2, v0
@@ -256,6 +286,7 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 208
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     aget-object v2, v2, v0
@@ -264,6 +295,7 @@
 
     iput v2, v1, Landroid/renderscript/Type;->mDimX:I
 
+    .line 210
     :cond_0
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
@@ -275,6 +307,7 @@
 
     if-ne v2, v3, :cond_1
 
+    .line 211
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     aget-object v2, v2, v0
@@ -283,6 +316,7 @@
 
     iput v2, v1, Landroid/renderscript/Type;->mDimY:I
 
+    .line 213
     :cond_1
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
@@ -294,6 +328,7 @@
 
     if-ne v2, v3, :cond_2
 
+    .line 214
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     aget-object v2, v2, v0
@@ -302,6 +337,7 @@
 
     iput v2, v1, Landroid/renderscript/Type;->mDimZ:I
 
+    .line 216
     :cond_2
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
@@ -313,6 +349,7 @@
 
     if-ne v2, v3, :cond_3
 
+    .line 217
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     aget-object v2, v2, v0
@@ -326,6 +363,7 @@
     :goto_1
     iput-boolean v2, v1, Landroid/renderscript/Type;->mDimLOD:Z
 
+    .line 219
     :cond_3
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
@@ -337,6 +375,7 @@
 
     if-ne v2, v3, :cond_4
 
+    .line 220
     iget-object v2, p0, Landroid/renderscript/Type$Builder;->mEntries:[Landroid/renderscript/Type$Builder$Entry;
 
     aget-object v2, v2, v0
@@ -350,6 +389,7 @@
     :goto_2
     iput-boolean v2, v1, Landroid/renderscript/Type;->mDimFaces:Z
 
+    .line 206
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
@@ -358,15 +398,19 @@
     :cond_5
     move v2, v4
 
+    .line 217
     goto :goto_1
 
     :cond_6
     move v2, v4
 
+    .line 220
     goto :goto_2
 
+    .line 223
     :cond_7
     invoke-virtual {v1}, Landroid/renderscript/Type;->calcElementCount()V
 
+    .line 224
     return-object v1
 .end method

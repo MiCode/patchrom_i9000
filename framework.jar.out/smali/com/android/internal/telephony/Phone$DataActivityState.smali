@@ -52,6 +52,7 @@
 
     const/4 v2, 0x0
 
+    .line 93
     new-instance v0, Lcom/android/internal/telephony/Phone$DataActivityState;
 
     const-string v1, "NONE"
@@ -92,6 +93,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/Phone$DataActivityState;->DORMANT:Lcom/android/internal/telephony/Phone$DataActivityState;
 
+    .line 81
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/Phone$DataActivityState;
@@ -132,6 +134,7 @@
     .end annotation
 
     .prologue
+    .line 81
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,6 +145,7 @@
     .parameter "name"
 
     .prologue
+    .line 81
     const-class v0, Lcom/android/internal/telephony/Phone$DataActivityState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,6 +162,7 @@
     .locals 1
 
     .prologue
+    .line 81
     sget-object v0, Lcom/android/internal/telephony/Phone$DataActivityState;->$VALUES:[Lcom/android/internal/telephony/Phone$DataActivityState;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/Phone$DataActivityState;->clone()Ljava/lang/Object;

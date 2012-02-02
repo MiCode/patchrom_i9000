@@ -29,10 +29,13 @@
     .parameter "replacement"
 
     .prologue
+    .line 175
     invoke-direct {p0, p1, p2, p3}, Landroid/text/method/ReplacementTransformationMethod$ReplacementCharSequence;-><init>(Ljava/lang/CharSequence;[C[C)V
 
+    .line 176
     iput-object p1, p0, Landroid/text/method/ReplacementTransformationMethod$SpannedReplacementCharSequence;->mSpanned:Landroid/text/Spanned;
 
+    .line 177
     return-void
 .end method
 
@@ -43,6 +46,7 @@
     .parameter "tag"
 
     .prologue
+    .line 192
     iget-object v0, p0, Landroid/text/method/ReplacementTransformationMethod$SpannedReplacementCharSequence;->mSpanned:Landroid/text/Spanned;
 
     invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
@@ -57,6 +61,7 @@
     .parameter "tag"
 
     .prologue
+    .line 196
     iget-object v0, p0, Landroid/text/method/ReplacementTransformationMethod$SpannedReplacementCharSequence;->mSpanned:Landroid/text/Spanned;
 
     invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
@@ -71,6 +76,7 @@
     .parameter "tag"
 
     .prologue
+    .line 188
     iget-object v0, p0, Landroid/text/method/ReplacementTransformationMethod$SpannedReplacementCharSequence;->mSpanned:Landroid/text/Spanned;
 
     invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
@@ -96,6 +102,7 @@
     .end annotation
 
     .prologue
+    .line 184
     .local p3, type:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Landroid/text/method/ReplacementTransformationMethod$SpannedReplacementCharSequence;->mSpanned:Landroid/text/Spanned;
 
@@ -113,6 +120,7 @@
     .parameter "type"
 
     .prologue
+    .line 200
     iget-object v0, p0, Landroid/text/method/ReplacementTransformationMethod$SpannedReplacementCharSequence;->mSpanned:Landroid/text/Spanned;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/text/Spanned;->nextSpanTransition(IILjava/lang/Class;)I
@@ -128,6 +136,7 @@
     .parameter "end"
 
     .prologue
+    .line 180
     new-instance v0, Landroid/text/SpannedString;
 
     invoke-direct {v0, p0}, Landroid/text/SpannedString;-><init>(Ljava/lang/CharSequence;)V

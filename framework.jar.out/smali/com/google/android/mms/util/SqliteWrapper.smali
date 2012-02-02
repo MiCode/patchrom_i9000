@@ -14,8 +14,10 @@
     .locals 0
 
     .prologue
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     return-void
 .end method
 
@@ -25,12 +27,14 @@
     .parameter "e"
 
     .prologue
+    .line 60
     invoke-static {p1}, Lcom/google/android/mms/util/SqliteWrapper;->isLowMemory(Landroid/database/sqlite/SQLiteException;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 61
     const v0, 0x1040143
 
     const/4 v1, 0x0
@@ -41,8 +45,10 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
+    .line 66
     return-void
 
+    .line 64
     :cond_0
     throw p1
 .end method
@@ -56,6 +62,7 @@
     .parameter "selectionArgs"
 
     .prologue
+    .line 102
     :try_start_0
     invoke-virtual {p1, p2, p3, p4}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_0
@@ -63,12 +70,15 @@
 
     move-result v1
 
+    .line 106
     :goto_0
     return v1
 
+    .line 103
     :catch_0
     move-exception v0
 
+    .line 104
     .local v0, e:Landroid/database/sqlite/SQLiteException;
     const-string v1, "SqliteWrapper"
 
@@ -76,8 +86,10 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 105
     invoke-static {p0, v0}, Lcom/google/android/mms/util/SqliteWrapper;->checkSQLiteException(Landroid/content/Context;Landroid/database/sqlite/SQLiteException;)V
 
+    .line 106
     const/4 v1, -0x1
 
     goto :goto_0
@@ -91,6 +103,7 @@
     .parameter "values"
 
     .prologue
+    .line 113
     :try_start_0
     invoke-virtual {p1, p2, p3}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     :try_end_0
@@ -98,12 +111,15 @@
 
     move-result-object v1
 
+    .line 117
     :goto_0
     return-object v1
 
+    .line 114
     :catch_0
     move-exception v0
 
+    .line 115
     .local v0, e:Landroid/database/sqlite/SQLiteException;
     const-string v1, "SqliteWrapper"
 
@@ -111,8 +127,10 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 116
     invoke-static {p0, v0}, Lcom/google/android/mms/util/SqliteWrapper;->checkSQLiteException(Landroid/content/Context;Landroid/database/sqlite/SQLiteException;)V
 
+    .line 117
     const/4 v1, 0x0
 
     goto :goto_0
@@ -123,13 +141,17 @@
     .parameter "context"
 
     .prologue
+    .line 42
     if-nez p0, :cond_0
 
+    .line 43
     const/4 v2, 0x0
 
+    .line 51
     :goto_0
     return v2
 
+    .line 46
     :cond_0
     const-string v2, "activity"
 
@@ -139,14 +161,17 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
+    .line 48
     .local v0, am:Landroid/app/ActivityManager;
     new-instance v1, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v1}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
+    .line 49
     .local v1, outInfo:Landroid/app/ActivityManager$MemoryInfo;
     invoke-virtual {v0, v1}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
+    .line 51
     iget-boolean v2, v1, Landroid/app/ActivityManager$MemoryInfo;->lowMemory:Z
 
     goto :goto_0
@@ -157,11 +182,12 @@
     .parameter "e"
 
     .prologue
+    .line 56
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "unable to open database file"
+    const-string/jumbo v1, "unable to open database file"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -181,6 +207,7 @@
     .parameter "sortOrder"
 
     .prologue
+    .line 71
     :try_start_0
     invoke-virtual/range {p1 .. p6}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
@@ -188,12 +215,15 @@
 
     move-result-object v1
 
+    .line 75
     :goto_0
     return-object v1
 
+    .line 72
     :catch_0
     move-exception v0
 
+    .line 73
     .local v0, e:Landroid/database/sqlite/SQLiteException;
     const-string v1, "SqliteWrapper"
 
@@ -201,8 +231,10 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 74
     invoke-static {p0, v0}, Lcom/google/android/mms/util/SqliteWrapper;->checkSQLiteException(Landroid/content/Context;Landroid/database/sqlite/SQLiteException;)V
 
+    .line 75
     const/4 v1, 0x0
 
     goto :goto_0
@@ -214,6 +246,7 @@
     .parameter "cursor"
 
     .prologue
+    .line 81
     :try_start_0
     invoke-interface {p1}, Landroid/database/Cursor;->requery()Z
     :try_end_0
@@ -221,12 +254,15 @@
 
     move-result v1
 
+    .line 85
     :goto_0
     return v1
 
+    .line 82
     :catch_0
     move-exception v0
 
+    .line 83
     .local v0, e:Landroid/database/sqlite/SQLiteException;
     const-string v1, "SqliteWrapper"
 
@@ -234,8 +270,10 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 84
     invoke-static {p0, v0}, Lcom/google/android/mms/util/SqliteWrapper;->checkSQLiteException(Landroid/content/Context;Landroid/database/sqlite/SQLiteException;)V
 
+    .line 85
     const/4 v1, 0x0
 
     goto :goto_0
@@ -251,6 +289,7 @@
     .parameter "selectionArgs"
 
     .prologue
+    .line 91
     :try_start_0
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_0
@@ -258,12 +297,15 @@
 
     move-result v1
 
+    .line 95
     :goto_0
     return v1
 
+    .line 92
     :catch_0
     move-exception v0
 
+    .line 93
     .local v0, e:Landroid/database/sqlite/SQLiteException;
     const-string v1, "SqliteWrapper"
 
@@ -271,8 +313,10 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 94
     invoke-static {p0, v0}, Lcom/google/android/mms/util/SqliteWrapper;->checkSQLiteException(Landroid/content/Context;Landroid/database/sqlite/SQLiteException;)V
 
+    .line 95
     const/4 v1, -0x1
 
     goto :goto_0

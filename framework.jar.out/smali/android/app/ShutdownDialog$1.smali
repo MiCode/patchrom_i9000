@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 112
     iput-object p1, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,8 +41,10 @@
     .prologue
     const-string v9, "ShutdownDialog"
 
+    .line 115
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
+    .line 118
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     #getter for: Landroid/app/ShutdownDialog;->handle:I
@@ -60,9 +63,11 @@
 
     move-result v3
 
+    .line 119
     .local v3, ret:I
     if-ltz v3, :cond_4
 
+    .line 120
     const-string v4, "ShutdownDialog"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -85,6 +90,7 @@
 
     invoke-static {v9, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 121
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     iget-object v5, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
@@ -117,6 +123,7 @@
     #setter for: Landroid/app/ShutdownDialog;->mImages:Landroid/graphics/Bitmap;
     invoke-static {v4, v5}, Landroid/app/ShutdownDialog;->access$202(Landroid/app/ShutdownDialog;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
+    .line 123
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
@@ -128,6 +135,7 @@
 
     invoke-direct {v0, v4}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 124
     .local v0, drawable:Landroid/graphics/drawable/BitmapDrawable;
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
@@ -138,8 +146,10 @@
 
     invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 126
     if-nez v3, :cond_3
 
+    .line 127
     sget-object v4, Landroid/os/Build;->BOARD:Ljava/lang/String;
 
     const-string v5, "SHW-M180S"
@@ -150,8 +160,10 @@
 
     if-eqz v4, :cond_0
 
+    .line 129
     const/4 v2, 0x0
 
+    .line 130
     .local v2, lastImageFilePath:Ljava/lang/String;
     :try_start_0
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -174,8 +186,10 @@
 
     if-eqz v4, :cond_2
 
+    .line 131
     const-string v2, "//system/media/video/shutdown/shutdown_kor.png"
 
+    .line 135
     :goto_0
     const-string v4, "ShutdownDialog"
 
@@ -199,6 +213,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 136
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     invoke-static {v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
@@ -208,12 +223,14 @@
     #setter for: Landroid/app/ShutdownDialog;->mImages:Landroid/graphics/Bitmap;
     invoke-static {v4, v5}, Landroid/app/ShutdownDialog;->access$202(Landroid/app/ShutdownDialog;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
+    .line 137
     const-string v4, "ShutdownDialog"
 
     const-string v5, "Got mImage"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 138
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     #getter for: Landroid/app/ShutdownDialog;->mShutdownView:Landroid/widget/ImageView;
@@ -230,14 +247,16 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
+    .line 139
     const-string v4, "ShutdownDialog"
 
-    const-string v5, "set mImage"
+    const-string/jumbo v5, "set mImage"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 145
     .end local v2           #lastImageFilePath:Ljava/lang/String;
     :cond_0
     :goto_1
@@ -250,6 +269,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 146
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     #getter for: Landroid/app/ShutdownDialog;->mRunOnAnimationEnd:Ljava/lang/Runnable;
@@ -259,6 +279,7 @@
 
     invoke-interface {v4}, Ljava/lang/Runnable;->run()V
 
+    .line 148
     :cond_1
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
@@ -269,10 +290,12 @@
 
     invoke-static {v4}, Landroid/app/LibQmg;->qmgClose(I)I
 
+    .line 159
     .end local v0           #drawable:Landroid/graphics/drawable/BitmapDrawable;
     :goto_2
     return-void
 
+    .line 133
     .restart local v0       #drawable:Landroid/graphics/drawable/BitmapDrawable;
     .restart local v2       #lastImageFilePath:Ljava/lang/String;
     :cond_2
@@ -283,11 +306,13 @@
 
     goto :goto_0
 
+    .line 140
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 141
     .local v1, ex:Ljava/lang/Exception;
     const-string v4, "ShutdownDialog"
 
@@ -295,6 +320,7 @@
 
     invoke-static {v9, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 142
     const-string v4, "ShutdownDialog"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -305,6 +331,7 @@
 
     goto :goto_1
 
+    .line 151
     .end local v1           #ex:Ljava/lang/Exception;
     .end local v2           #lastImageFilePath:Ljava/lang/String;
     :cond_3
@@ -323,6 +350,7 @@
 
     goto :goto_2
 
+    .line 154
     .end local v0           #drawable:Landroid/graphics/drawable/BitmapDrawable;
     :cond_4
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
@@ -334,6 +362,7 @@
 
     if-eqz v4, :cond_5
 
+    .line 155
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 
     #getter for: Landroid/app/ShutdownDialog;->mRunOnAnimationEnd:Ljava/lang/Runnable;
@@ -343,6 +372,7 @@
 
     invoke-interface {v4}, Ljava/lang/Runnable;->run()V
 
+    .line 157
     :cond_5
     iget-object v4, p0, Landroid/app/ShutdownDialog$1;->this$0:Landroid/app/ShutdownDialog;
 

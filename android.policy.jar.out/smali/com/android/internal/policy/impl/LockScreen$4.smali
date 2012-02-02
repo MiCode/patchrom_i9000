@@ -25,6 +25,7 @@
     .locals 3
 
     .prologue
+    .line 573
     invoke-static {}, Lcom/android/internal/policy/impl/LockScreen$Status;->values()[Lcom/android/internal/policy/impl/LockScreen$Status;
 
     move-result-object v0
@@ -146,6 +147,7 @@
     :try_end_6
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_8
 
+    .line 543
     :goto_6
     invoke-static {}, Lcom/android/internal/telephony/IccCard$State;->values()[Lcom/android/internal/telephony/IccCard$State;
 
@@ -327,6 +329,7 @@
 
     goto :goto_7
 
+    .line 573
     :catch_8
     move-exception v0
 

@@ -30,18 +30,23 @@
     .parameter "looper"
 
     .prologue
+    .line 456
     iput-object p1, p0, Lsiso/vt/VTManager$EventHandler;->this$0:Lsiso/vt/VTManager;
 
+    .line 457
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 458
     iput-object p2, p0, Lsiso/vt/VTManager$EventHandler;->vtmanager:Lsiso/vt/VTManager;
 
+    .line 459
     iget-object v0, p0, Lsiso/vt/VTManager$EventHandler;->vtmanager:Lsiso/vt/VTManager;
 
     iget-object v0, v0, Lsiso/vt/VTManager;->mStackStateListener:Lsiso/vt/VTManager$VTStackStateListener;
 
     iput-object v0, p0, Lsiso/vt/VTManager$EventHandler;->listener:Lsiso/vt/VTManager$VTStackStateListener;
 
+    .line 462
     return-void
 .end method
 
@@ -54,18 +59,21 @@
     .prologue
     const-string v3, "EventHandler"
 
+    .line 468
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lsiso/vt/VTManager;
 
     iput-object v1, p0, Lsiso/vt/VTManager$EventHandler;->vtmanager:Lsiso/vt/VTManager;
 
+    .line 469
     iget-object v1, p0, Lsiso/vt/VTManager$EventHandler;->vtmanager:Lsiso/vt/VTManager;
 
     iget-object v1, v1, Lsiso/vt/VTManager;->mStackStateListener:Lsiso/vt/VTManager$VTStackStateListener;
 
     iput-object v1, p0, Lsiso/vt/VTManager$EventHandler;->listener:Lsiso/vt/VTManager$VTStackStateListener;
 
+    .line 470
     const-string v1, "EventHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -90,13 +98,14 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 471
     const-string v1, "EventHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "vtmanager.mStackStateListener is :: "
+    const-string/jumbo v2, "vtmanager.mStackStateListener is :: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -116,6 +125,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 472
     const-string v1, "EventHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -140,10 +150,12 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 473
     iget-object v1, p0, Lsiso/vt/VTManager$EventHandler;->listener:Lsiso/vt/VTManager$VTStackStateListener;
 
     if-eqz v1, :cond_0
 
+    .line 477
     :try_start_0
     iget-object v1, p0, Lsiso/vt/VTManager$EventHandler;->listener:Lsiso/vt/VTManager$VTStackStateListener;
 
@@ -167,15 +179,18 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 488
     :cond_0
     :goto_0
     return-void
 
+    .line 479
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 481
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v1, "Invalid String used on Vt Stack Event"
 
@@ -212,12 +227,14 @@
 
     goto :goto_0
 
+    .line 483
     .end local v0           #e:Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
+    .line 485
     .local v0, e:Ljava/lang/ArrayIndexOutOfBoundsException;
     const-string v1, "Out of Bound Index used on Vt Stack Event"
 

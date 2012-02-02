@@ -28,6 +28,7 @@
     .parameter
 
     .prologue
+    .line 139
     iput-object p1, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;
 
     iput-object p3, p0, Lcom/android/server/DropBoxManagerService$2;->val$context:Landroid/content/Context;
@@ -44,6 +45,7 @@
     .parameter "selfChange"
 
     .prologue
+    .line 141
     iget-object v0, p0, Lcom/android/server/DropBoxManagerService$2;->this$0:Lcom/android/server/DropBoxManagerService;
 
     #getter for: Lcom/android/server/DropBoxManagerService;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -60,5 +62,6 @@
     .end local p0
     invoke-virtual {v0, v1, p0}, Landroid/content/BroadcastReceiver;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
+    .line 142
     return-void
 .end method

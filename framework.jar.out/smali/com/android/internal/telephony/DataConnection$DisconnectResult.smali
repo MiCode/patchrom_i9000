@@ -30,14 +30,18 @@
     .parameter "connection"
 
     .prologue
+    .line 289
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnection$DisconnectResult;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 290
     iput-object p2, p0, Lcom/android/internal/telephony/DataConnection$DisconnectResult;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
+    .line 291
     iput-object p3, p0, Lcom/android/internal/telephony/DataConnection$DisconnectResult;->connection:Ljava/lang/Object;
 
+    .line 292
     return-void
 .end method
 
@@ -47,6 +51,7 @@
     .locals 1
 
     .prologue
+    .line 295
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$DisconnectResult;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
     return-object v0
@@ -56,6 +61,7 @@
     .locals 1
 
     .prologue
+    .line 299
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$DisconnectResult;->connection:Ljava/lang/Object;
 
     return-object v0

@@ -38,6 +38,7 @@
     .locals 3
 
     .prologue
+    .line 274
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -56,6 +57,7 @@
 
     sput-object v0, Landroid/provider/MediaStore$InternalThumbnails;->PROJECTION:[Ljava/lang/String;
 
+    .line 276
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -69,6 +71,7 @@
     .locals 0
 
     .prologue
+    .line 270
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -82,6 +85,7 @@
     .parameter "groupId"
 
     .prologue
+    .line 334
     invoke-virtual {p3}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -94,7 +98,7 @@
 
     move-result-object v0
 
-    const-string v2, "orig_id"
+    const-string/jumbo v2, "orig_id"
 
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -118,9 +122,11 @@
 
     move-result-object v1
 
+    .line 337
     .local v1, cancelUri:Landroid/net/Uri;
     const/4 v6, 0x0
 
+    .line 339
     .local v6, c:Landroid/database/Cursor;
     :try_start_0
     sget-object v2, Landroid/provider/MediaStore$InternalThumbnails;->PROJECTION:[Ljava/lang/String;
@@ -139,13 +145,16 @@
 
     move-result-object v6
 
+    .line 342
     if-eqz v6, :cond_0
 
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
+    .line 344
     :cond_0
     return-void
 
+    .line 342
     :catchall_0
     move-exception v0
 
@@ -165,11 +174,14 @@
     .parameter "options"
 
     .prologue
+    .line 280
     const/4 v0, 0x0
 
+    .line 281
     .local v0, bitmap:Landroid/graphics/Bitmap;
     const/4 v3, 0x0
 
+    .line 283
     .local v3, thumbUri:Landroid/net/Uri;
     const/4 v1, 0x0
 
@@ -178,6 +190,7 @@
 
     move-result-wide v1
 
+    .line 284
     .local v1, thumbId:J
     const/4 v4, 0x1
 
@@ -185,6 +198,7 @@
 
     move-result-object p0
 
+    .line 285
     .local p0, filePath:Ljava/lang/String;
     invoke-static {p1, v1, v2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
     :try_end_0
@@ -194,16 +208,18 @@
 
     move-result-object v1
 
+    .line 286
     .end local v3           #thumbUri:Landroid/net/Uri;
     .local v1, thumbUri:Landroid/net/Uri;
     :try_start_1
-    const-string p0, "r"
+    const-string/jumbo p0, "r"
 
     .end local p0           #filePath:Ljava/lang/String;
     invoke-virtual {p2, v1, p0}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p1
 
+    .line 297
     .local p1, pfdInput:Landroid/os/ParcelFileDescriptor;
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getStatSize()J
 
@@ -215,6 +231,7 @@
 
     if-lez p0, :cond_0
 
+    .line 298
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p0
@@ -230,6 +247,7 @@
     .end local p2
     move-result-object p0
 
+    .line 310
     .end local v0           #bitmap:Landroid/graphics/Bitmap;
     .local p0, bitmap:Landroid/graphics/Bitmap;
     :goto_0
@@ -242,12 +260,14 @@
 
     move-object p1, v1
 
+    .line 319
     .end local v1           #thumbUri:Landroid/net/Uri;
     .end local p3
     .local p1, thumbUri:Landroid/net/Uri;
     :goto_1
     return-object p0
 
+    .line 311
     .end local p0           #bitmap:Landroid/graphics/Bitmap;
     .restart local v0       #bitmap:Landroid/graphics/Bitmap;
     .restart local v3       #thumbUri:Landroid/net/Uri;
@@ -265,6 +285,7 @@
     .local p2, thumbUri:Landroid/net/Uri;
     move-object p0, v0
 
+    .line 312
     .end local v0           #bitmap:Landroid/graphics/Bitmap;
     .restart local p0       #bitmap:Landroid/graphics/Bitmap;
     .local p1, ex:Ljava/io/FileNotFoundException;
@@ -305,10 +326,12 @@
 
     move-object p1, p2
 
+    .line 318
     .end local p2           #thumbUri:Landroid/net/Uri;
     .local p1, thumbUri:Landroid/net/Uri;
     goto :goto_1
 
+    .line 313
     .end local p0           #bitmap:Landroid/graphics/Bitmap;
     .restart local v0       #bitmap:Landroid/graphics/Bitmap;
     .restart local v3       #thumbUri:Landroid/net/Uri;
@@ -326,6 +349,7 @@
     .local p2, thumbUri:Landroid/net/Uri;
     move-object p0, v0
 
+    .line 314
     .end local v0           #bitmap:Landroid/graphics/Bitmap;
     .restart local p0       #bitmap:Landroid/graphics/Bitmap;
     .local p1, ex:Ljava/io/IOException;
@@ -366,10 +390,12 @@
 
     move-object p1, p2
 
+    .line 318
     .end local p2           #thumbUri:Landroid/net/Uri;
     .local p1, thumbUri:Landroid/net/Uri;
     goto :goto_1
 
+    .line 315
     .end local p0           #bitmap:Landroid/graphics/Bitmap;
     .restart local v0       #bitmap:Landroid/graphics/Bitmap;
     .restart local v3       #thumbUri:Landroid/net/Uri;
@@ -387,6 +413,7 @@
     .local p2, thumbUri:Landroid/net/Uri;
     move-object p0, v0
 
+    .line 316
     .end local v0           #bitmap:Landroid/graphics/Bitmap;
     .restart local p0       #bitmap:Landroid/graphics/Bitmap;
     .local p1, ex:Ljava/lang/OutOfMemoryError;
@@ -431,6 +458,7 @@
     .local p1, thumbUri:Landroid/net/Uri;
     goto :goto_1
 
+    .line 315
     .end local p0           #bitmap:Landroid/graphics/Bitmap;
     .end local p1           #thumbUri:Landroid/net/Uri;
     .restart local v0       #bitmap:Landroid/graphics/Bitmap;
@@ -463,6 +491,7 @@
     .restart local p2       #thumbUri:Landroid/net/Uri;
     goto :goto_4
 
+    .line 313
     .end local p0           #bitmap:Landroid/graphics/Bitmap;
     .end local p1           #pfdInput:Landroid/os/ParcelFileDescriptor;
     .end local p2           #thumbUri:Landroid/net/Uri;
@@ -495,6 +524,7 @@
     .restart local p2       #thumbUri:Landroid/net/Uri;
     goto :goto_3
 
+    .line 311
     .end local p0           #bitmap:Landroid/graphics/Bitmap;
     .end local p1           #pfdInput:Landroid/os/ParcelFileDescriptor;
     .end local p2           #thumbUri:Landroid/net/Uri;
@@ -550,17 +580,22 @@
     .parameter "isVideo"
 
     .prologue
+    .line 362
     const/4 v13, 0x0
 
+    .line 363
     .local v13, bitmap:Landroid/graphics/Bitmap;
     const/4 v12, 0x0
 
+    .line 366
     .local v12, filePath:Ljava/lang/String;
     const/16 v21, 0x0
 
+    .line 367
     .local v21, saveMini:Z
     const/16 v23, 0x0
 
+    .line 368
     .local v23, thumbUri:Landroid/net/Uri;
     invoke-virtual/range {p7 .. p7}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
@@ -578,7 +613,7 @@
 
     move-result-object v5
 
-    const-string v6, "thumbnails"
+    const-string/jumbo v6, "thumbnails"
 
     const-string v7, "media"
 
@@ -590,11 +625,13 @@
 
     move-result-object v6
 
+    .line 377
     .local v6, uri:Landroid/net/Uri;
     invoke-static/range {p7 .. p7}, Landroid/media/MiniThumbFile;->instance(Landroid/net/Uri;)Landroid/media/MiniThumbFile;
 
     move-result-object v22
 
+    .line 378
     .local v22, thumbFile:Landroid/media/MiniThumbFile;
     move-object/from16 v0, v22
 
@@ -606,12 +643,15 @@
 
     move-result-wide v17
 
+    .line 384
     .local v17, magic:J
     const-wide/16 v14, 0x0
 
+    .line 385
     .local v14, mini_thumb_magic:J
     const/4 v11, 0x0
 
+    .line 387
     .local v11, c0:Landroid/database/Cursor;
     const/4 v5, 0x2
 
@@ -645,6 +685,7 @@
 
     move-result-object v5
 
+    .line 388
     .end local v11           #c0:Landroid/database/Cursor;
     .local v5, c0:Landroid/database/Cursor;
     if-eqz v5, :cond_26
@@ -656,6 +697,7 @@
 
     if-eqz v7, :cond_26
 
+    .line 389
     const/4 v7, 0x0
 
     invoke-interface {v5, v7}, Landroid/database/Cursor;->getLong(I)J
@@ -665,6 +707,7 @@
 
     move-result-wide v8
 
+    .line 390
     .end local v14           #mini_thumb_magic:J
     .local v8, mini_thumb_magic:J
     const/4 v7, 0x1
@@ -677,11 +720,13 @@
 
     move-result-object v7
 
+    .line 395
     .end local v12           #filePath:Ljava/lang/String;
     .local v7, filePath:Ljava/lang/String;
     :goto_0
     if-eqz v5, :cond_25
 
+    .line 396
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
     move-object v15, v5
@@ -694,6 +739,7 @@
     .local v19, mini_thumb_magic:J
     move-object/from16 v16, v7
 
+    .line 399
     .end local v7           #filePath:Ljava/lang/String;
     .local v16, filePath:Ljava/lang/String;
     :goto_1
@@ -707,6 +753,7 @@
 
     if-nez v5, :cond_22
 
+    .line 402
     const/4 v5, 0x3
 
     move/from16 v0, p5
@@ -715,16 +762,19 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 403
     sget-object p3, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBufLock:Ljava/lang/Object;
 
     .end local p3
     monitor-enter p3
 
+    .line 404
     :try_start_3
     sget-object p4, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBuf:[B
 
     if-nez p4, :cond_0
 
+    .line 405
     const/16 p4, 0x2710
 
     move/from16 v0, p4
@@ -735,6 +785,7 @@
 
     sput-object p4, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBuf:[B
 
+    .line 414
     :cond_0
     sget-object p4, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBuf:[B
 
@@ -753,6 +804,7 @@
     .end local p0
     if-eqz p0, :cond_23
 
+    .line 417
     sget-object p0, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBuf:[B
 
     const/16 p1, 0x0
@@ -772,10 +824,12 @@
 
     move-result-object p0
 
+    .line 418
     .end local v13           #bitmap:Landroid/graphics/Bitmap;
     .local p0, bitmap:Landroid/graphics/Bitmap;
     if-nez p0, :cond_1
 
+    .line 419
     :try_start_4
     const-string p1, "MediaStore"
 
@@ -783,6 +837,7 @@
 
     invoke-static/range {p1 .. p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 422
     :cond_1
     :goto_2
     monitor-exit p3
@@ -816,10 +871,12 @@
     .local p2, filePath:Ljava/lang/String;
     move-object/from16 v5, p0
 
+    .line 590
     .end local v6           #uri:Landroid/net/Uri;
     :goto_3
     return-object v5
 
+    .line 392
     .end local p2           #filePath:Ljava/lang/String;
     .restart local v6       #uri:Landroid/net/Uri;
     .restart local v11       #c0:Landroid/database/Cursor;
@@ -847,6 +904,7 @@
     .restart local v8       #mini_thumb_magic:J
     move-object v5, v11
 
+    .line 393
     .end local v11           #c0:Landroid/database/Cursor;
     .restart local v5       #c0:Landroid/database/Cursor;
     .local v7, ex:Landroid/database/sqlite/SQLiteException;
@@ -858,8 +916,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_18
 
+    .line 395
     if-eqz v5, :cond_24
 
+    .line 396
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
     move-object v15, v5
@@ -876,6 +936,7 @@
     .restart local v16       #filePath:Ljava/lang/String;
     goto :goto_1
 
+    .line 395
     .end local v7           #ex:Landroid/database/sqlite/SQLiteException;
     .end local v15           #c0:Landroid/database/Cursor;
     .end local v16           #filePath:Ljava/lang/String;
@@ -900,11 +961,13 @@
     :goto_5
     if-eqz p0, :cond_2
 
+    .line 396
     invoke-interface/range {p0 .. p0}, Landroid/database/Cursor;->close()V
 
     :cond_2
     throw p3
 
+    .line 422
     .end local v12           #filePath:Ljava/lang/String;
     .end local p0           #c0:Landroid/database/Cursor;
     .end local p1           #mini_thumb_magic:J
@@ -928,6 +991,7 @@
 
     throw p1
 
+    .line 424
     .restart local v13       #bitmap:Landroid/graphics/Bitmap;
     .local p0, cr:Landroid/content/ContentResolver;
     .local p1, origId:J
@@ -941,16 +1005,19 @@
 
     if-ne v0, v1, :cond_22
 
+    .line 425
     if-eqz p8, :cond_5
 
-    const-string v5, "video_id="
+    const-string/jumbo v5, "video_id="
 
     move-object v7, v5
 
+    .line 426
     .local v7, column:Ljava/lang/String;
     :goto_7
     const/4 v5, 0x0
 
+    .line 428
     .local v5, c:Landroid/database/Cursor;
     :try_start_7
     sget-object v9, Landroid/provider/MediaStore$InternalThumbnails;->PROJECTION:[Ljava/lang/String;
@@ -990,6 +1057,7 @@
 
     move-result-object v7
 
+    .line 429
     .end local v5           #c:Landroid/database/Cursor;
     .local v7, c:Landroid/database/Cursor;
     if-eqz v7, :cond_6
@@ -1001,6 +1069,7 @@
 
     if-eqz v5, :cond_6
 
+    .line 430
     move-object v0, v7
 
     move-object/from16 v1, p7
@@ -1015,10 +1084,12 @@
 
     move-result-object v5
 
+    .line 431
     .end local v13           #bitmap:Landroid/graphics/Bitmap;
     .local v5, bitmap:Landroid/graphics/Bitmap;
     if-eqz v5, :cond_7
 
+    .line 436
     if-eqz v7, :cond_4
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
@@ -1055,6 +1126,7 @@
     .local p0, bitmap:Landroid/graphics/Bitmap;
     goto :goto_3
 
+    .line 425
     .end local v7           #c:Landroid/database/Cursor;
     .end local p2           #filePath:Ljava/lang/String;
     .restart local v13       #bitmap:Landroid/graphics/Bitmap;
@@ -1082,6 +1154,7 @@
     :cond_6
     move-object v5, v13
 
+    .line 436
     .end local v13           #bitmap:Landroid/graphics/Bitmap;
     .restart local v5       #bitmap:Landroid/graphics/Bitmap;
     :cond_7
@@ -1089,11 +1162,13 @@
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
+    .line 441
     .end local v7           #c:Landroid/database/Cursor;
     :cond_8
     :goto_8
     const/4 v13, 0x0
 
+    .line 443
     .local v13, c:Landroid/database/Cursor;
     :try_start_9
     invoke-virtual/range {p7 .. p7}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -1108,7 +1183,7 @@
 
     move-result-object v7
 
-    const-string v8, "orig_id"
+    const-string/jumbo v8, "orig_id"
 
     invoke-static/range {p1 .. p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -1139,6 +1214,7 @@
 
     move-result-object v8
 
+    .line 446
     .local v8, blockingUri:Landroid/net/Uri;
     sget-object v9, Landroid/provider/MediaStore$InternalThumbnails;->PROJECTION:[Ljava/lang/String;
 
@@ -1159,12 +1235,14 @@
 
     move-result-object p4
 
+    .line 448
     .end local v13           #c:Landroid/database/Cursor;
     .local p4, c:Landroid/database/Cursor;
     if-nez p4, :cond_b
 
     const/16 p0, 0x0
 
+    .line 588
     .end local p0           #cr:Landroid/content/ContentResolver;
     if-eqz p4, :cond_9
 
@@ -1209,6 +1287,7 @@
     .local p0, bitmap:Landroid/graphics/Bitmap;
     goto/16 :goto_3
 
+    .line 436
     .end local v8           #blockingUri:Landroid/net/Uri;
     .end local p2           #filePath:Ljava/lang/String;
     .local v5, c:Landroid/database/Cursor;
@@ -1244,6 +1323,7 @@
     :cond_a
     throw p1
 
+    .line 451
     .end local v13           #bitmap:Landroid/graphics/Bitmap;
     .end local p3           #groupId:J
     .local v5, bitmap:Landroid/graphics/Bitmap;
@@ -1260,6 +1340,7 @@
 
     if-ne v0, v1, :cond_10
 
+    .line 478
     const/16 p3, 0x2
 
     :try_start_a
@@ -1299,6 +1380,7 @@
 
     move-result-object p3
 
+    .line 479
     .end local v15           #c0:Landroid/database/Cursor;
     .local p3, c0:Landroid/database/Cursor;
     if-eqz p3, :cond_21
@@ -1310,6 +1392,7 @@
 
     if-eqz p6, :cond_21
 
+    .line 480
     const/16 p6, 0x0
 
     move-object/from16 v0, p3
@@ -1323,6 +1406,7 @@
 
     move-result-wide v6
 
+    .line 481
     .end local v19           #mini_thumb_magic:J
     .local v6, mini_thumb_magic:J
     const/16 p6, 0x1
@@ -1339,11 +1423,13 @@
 
     move-result-object p6
 
+    .line 486
     .end local v16           #filePath:Ljava/lang/String;
     .local p6, filePath:Ljava/lang/String;
     :goto_a
     if-eqz p3, :cond_20
 
+    .line 487
     :try_start_d
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->close()V
     :try_end_d
@@ -1362,6 +1448,7 @@
     .local p7, filePath:Ljava/lang/String;
     move-object/from16 p6, p3
 
+    .line 490
     .end local p3           #c0:Landroid/database/Cursor;
     .local p6, c0:Landroid/database/Cursor;
     :goto_b
@@ -1371,6 +1458,7 @@
 
     if-eqz p3, :cond_1e
 
+    .line 491
     :try_start_e
     move-object/from16 v0, v22
 
@@ -1387,12 +1475,14 @@
 
     move-result-wide v6
 
+    .line 492
     .end local v17           #magic:J
     .local v6, magic:J
     cmp-long p3, v6, v8
 
     if-nez p3, :cond_1d
 
+    .line 493
     :try_start_f
     sget-object v10, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBufLock:Ljava/lang/Object;
 
@@ -1403,11 +1493,13 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_f .. :try_end_f} :catch_17
     .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_d
 
+    .line 494
     :try_start_10
     sget-object p3, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBuf:[B
 
     if-nez p3, :cond_c
 
+    .line 495
     const/16 p3, 0x2710
 
     move/from16 v0, p3
@@ -1418,6 +1510,7 @@
 
     sput-object p3, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBuf:[B
 
+    .line 497
     :cond_c
     sget-object p3, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBuf:[B
 
@@ -1435,6 +1528,7 @@
 
     if-eqz p3, :cond_1c
 
+    .line 498
     sget-object p3, Landroid/provider/MediaStore$InternalThumbnails;->sThumbBuf:[B
 
     const/4 v11, 0x0
@@ -1455,10 +1549,12 @@
 
     move-result-object p3
 
+    .line 499
     .end local v5           #bitmap:Landroid/graphics/Bitmap;
     .local p3, bitmap:Landroid/graphics/Bitmap;
     if-nez p3, :cond_d
 
+    .line 500
     :try_start_11
     const-string v5, "MediaStore"
 
@@ -1466,6 +1562,7 @@
 
     invoke-static {v5, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 503
     :cond_d
     :goto_c
     monitor-exit v10
@@ -1494,11 +1591,13 @@
     .local v7, mini_thumb_magic:J
     move/from16 v9, v21
 
+    .line 530
     .end local v21           #saveMini:Z
     .local v9, saveMini:Z
     :goto_d
     if-nez p3, :cond_19
 
+    .line 531
     :try_start_12
     const-string v11, "MediaStore"
 
@@ -1564,10 +1663,13 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_12 .. :try_end_12} :catch_1b
     .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_11
 
+    .line 554
     if-nez p7, :cond_12
 
+    .line 555
     const/16 p0, 0x0
 
+    .line 588
     .end local p0           #cr:Landroid/content/ContentResolver;
     if-eqz p4, :cond_e
 
@@ -1611,6 +1713,7 @@
     .local p3, magic:J
     goto/16 :goto_3
 
+    .line 483
     .end local p2           #filePath:Ljava/lang/String;
     .end local p3           #magic:J
     .local v5, bitmap:Landroid/graphics/Bitmap;
@@ -1639,6 +1742,7 @@
     .local v6, mini_thumb_magic:J
     move-object/from16 p3, v15
 
+    .line 484
     .end local v15           #c0:Landroid/database/Cursor;
     .local p3, c0:Landroid/database/Cursor;
     .local p6, ex:Landroid/database/sqlite/SQLiteException;
@@ -1655,8 +1759,10 @@
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_14
 
+    .line 486
     if-eqz p3, :cond_1f
 
+    .line 487
     :try_start_14
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->close()V
     :try_end_14
@@ -1679,6 +1785,7 @@
     .local p7, filePath:Ljava/lang/String;
     goto/16 :goto_b
 
+    .line 486
     .end local p6           #c0:Landroid/database/Cursor;
     .local v6, uri:Landroid/net/Uri;
     .local v8, blockingUri:Landroid/net/Uri;
@@ -1704,6 +1811,7 @@
     :goto_f
     if-eqz p0, :cond_f
 
+    .line 487
     :try_start_15
     invoke-interface/range {p0 .. p0}, Landroid/database/Cursor;->close()V
 
@@ -1715,6 +1823,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_15 .. :try_end_15} :catch_15
     .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_b
 
+    .line 581
     :catch_2
     move-exception p3
 
@@ -1749,6 +1858,7 @@
     .local p0, bitmap:Landroid/graphics/Bitmap;
     move/from16 v5, v21
 
+    .line 582
     .end local v8           #blockingUri:Landroid/net/Uri;
     .end local v21           #saveMini:Z
     .local v5, saveMini:Z
@@ -1765,6 +1875,7 @@
     :try_end_16
     .catchall {:try_start_16 .. :try_end_16} :catchall_10
 
+    .line 588
     if-eqz p1, :cond_17
 
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->close()V
@@ -1842,10 +1953,12 @@
     .local p5, mini_thumb_magic:J
     move/from16 p7, v27
 
+    .line 590
     .end local v27           #saveMini:Z
     .local p7, saveMini:Z
     goto/16 :goto_3
 
+    .line 503
     .end local p2           #filePath:Ljava/lang/String;
     .end local p3           #magic:J
     .local v5, bitmap:Landroid/graphics/Bitmap;
@@ -1884,6 +1997,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_18 .. :try_end_18} :catch_18
     .catch Ljava/io/IOException; {:try_start_18 .. :try_end_18} :catch_e
 
+    .line 581
     :catch_3
     move-exception p1
 
@@ -1920,6 +2034,7 @@
     .local p7, mini_thumb_magic:J
     goto :goto_10
 
+    .line 508
     .end local p2           #c0:Landroid/database/Cursor;
     .local v5, bitmap:Landroid/graphics/Bitmap;
     .local v6, uri:Landroid/net/Uri;
@@ -1946,6 +2061,7 @@
 
     if-ne v0, v1, :cond_11
 
+    .line 509
     :try_start_19
     invoke-interface/range {p4 .. p4}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -1953,6 +2069,7 @@
 
     if-eqz p3, :cond_1b
 
+    .line 510
     move-object/from16 v0, p4
 
     move-object/from16 v1, p7
@@ -1970,6 +2087,7 @@
 
     move-result-object p3
 
+    .line 513
     .end local v5           #bitmap:Landroid/graphics/Bitmap;
     .local p3, bitmap:Landroid/graphics/Bitmap;
     const-wide/16 v5, 0x0
@@ -1981,6 +2099,7 @@
     .end local p6           #options:Landroid/graphics/BitmapFactory$Options;
     if-nez p3, :cond_1a
 
+    .line 518
     const/16 p6, 0x0
 
     :try_start_1a
@@ -1992,6 +2111,7 @@
 
     move-result-wide v5
 
+    .line 519
     .end local v6           #uri:Landroid/net/Uri;
     .local v5, thumbId:J
     move-object/from16 v0, p7
@@ -2007,6 +2127,7 @@
 
     move-result-object p7
 
+    .line 520
     .end local v23           #thumbUri:Landroid/net/Uri;
     .local p7, thumbUri:Landroid/net/Uri;
     const/16 p6, 0x1
@@ -2036,10 +2157,12 @@
     .local p6, c0:Landroid/database/Cursor;
     move-object/from16 p7, v16
 
+    .line 521
     .end local v16           #filePath:Ljava/lang/String;
     .local p7, filePath:Ljava/lang/String;
     goto/16 :goto_d
 
+    .line 526
     .end local v7           #mini_thumb_magic:J
     .end local v9           #saveMini:Z
     .end local v10           #thumbUri:Landroid/net/Uri;
@@ -2092,6 +2215,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1b .. :try_end_1b} :catch_19
     .catch Ljava/io/IOException; {:try_start_1b .. :try_end_1b} :catch_f
 
+    .line 581
     :catch_4
     move-exception p0
 
@@ -2133,6 +2257,7 @@
     .local v5, saveMini:Z
     goto/16 :goto_10
 
+    .line 557
     .end local v6           #thumbUri:Landroid/net/Uri;
     .end local v8           #blockingUri:Landroid/net/Uri;
     .end local p1           #c:Landroid/database/Cursor;
@@ -2151,6 +2276,7 @@
     :cond_12
     if-eqz p8, :cond_13
 
+    .line 558
     :try_start_1c
     move-object/from16 v0, p7
 
@@ -2165,6 +2291,7 @@
 
     move-result-object p0
 
+    .line 588
     .end local p3           #bitmap:Landroid/graphics/Bitmap;
     .end local p5           #kind:I
     .local p0, bitmap:Landroid/graphics/Bitmap;
@@ -2203,6 +2330,7 @@
     .local v5, thumbUri:Landroid/net/Uri;
     goto/16 :goto_11
 
+    .line 560
     .end local p1           #c:Landroid/database/Cursor;
     .end local p2           #c0:Landroid/database/Cursor;
     .local v5, magic:J
@@ -2231,12 +2359,15 @@
 
     move-result-object p1
 
+    .line 561
     .end local p3           #bitmap:Landroid/graphics/Bitmap;
     .local p1, bitmap:Landroid/graphics/Bitmap;
     if-eqz p1, :cond_15
 
+    .line 562
     if-eqz v9, :cond_15
 
+    .line 563
     :try_start_1e
     move-object/from16 v0, p0
 
@@ -2246,6 +2377,7 @@
 
     move-result-object p2
 
+    .line 564
     .local p2, thumbOut:Ljava/io/OutputStream;
     sget-object p0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -2262,6 +2394,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
+    .line 565
     move-object/from16 v0, p2
 
     instance-of v0, v0, Ljava/io/FileOutputStream;
@@ -2275,6 +2408,7 @@
 
     if-eqz p0, :cond_14
 
+    .line 567
     :try_start_1f
     move-object/from16 v0, p2
 
@@ -2294,11 +2428,13 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1f .. :try_end_1f} :catch_1c
     .catch Ljava/io/IOException; {:try_start_1f .. :try_end_1f} :catch_12
 
+    .line 572
     .end local p5           #kind:I
     :cond_14
     :goto_14
     if-eqz p2, :cond_15
 
+    .line 573
     :try_start_20
     invoke-virtual/range {p2 .. p2}, Ljava/io/OutputStream;->close()V
 
@@ -2310,6 +2446,7 @@
     .local p0, bitmap:Landroid/graphics/Bitmap;
     goto :goto_13
 
+    .line 568
     .end local p0           #bitmap:Landroid/graphics/Bitmap;
     .restart local p1       #bitmap:Landroid/graphics/Bitmap;
     .restart local p2       #thumbOut:Ljava/io/OutputStream;
@@ -2317,6 +2454,7 @@
     :catch_5
     move-exception p0
 
+    .line 569
     .local p0, t:Ljava/lang/Throwable;
     const-string p3, "MediaStore"
 
@@ -2338,6 +2476,7 @@
 
     goto :goto_14
 
+    .line 581
     .end local p0           #t:Ljava/lang/Throwable;
     .end local p2           #thumbOut:Ljava/io/OutputStream;
     :catch_6
@@ -2380,6 +2519,7 @@
     .local p7, mini_thumb_magic:J
     goto/16 :goto_10
 
+    .line 583
     .end local p2           #c0:Landroid/database/Cursor;
     .end local p4           #filePath:Ljava/lang/String;
     .local v5, bitmap:Landroid/graphics/Bitmap;
@@ -2434,6 +2574,7 @@
     .local p0, bitmap:Landroid/graphics/Bitmap;
     move/from16 v5, v21
 
+    .line 584
     .end local v21           #saveMini:Z
     .local v5, saveMini:Z
     .local p3, ex:Ljava/io/FileNotFoundException;
@@ -2472,6 +2613,7 @@
     :try_end_21
     .catchall {:try_start_21 .. :try_end_21} :catchall_10
 
+    .line 588
     if-eqz p1, :cond_17
 
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->close()V
@@ -2510,6 +2652,7 @@
     .local p8, saveMini:Z
     goto/16 :goto_11
 
+    .line 585
     .end local p2           #c0:Landroid/database/Cursor;
     .end local p3           #filePath:Ljava/lang/String;
     .end local p4           #magic:J
@@ -2565,6 +2708,7 @@
     .local p0, bitmap:Landroid/graphics/Bitmap;
     move/from16 v5, v21
 
+    .line 586
     .end local v21           #saveMini:Z
     .local v5, saveMini:Z
     .local p3, ex:Ljava/io/IOException;
@@ -2603,6 +2747,7 @@
     :try_end_22
     .catchall {:try_start_22 .. :try_end_22} :catchall_10
 
+    .line 588
     if-eqz p1, :cond_17
 
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->close()V
@@ -3302,6 +3447,7 @@
     .restart local p6       #mini_thumb_magic:J
     goto/16 :goto_17
 
+    .line 585
     .end local p2           #c0:Landroid/database/Cursor;
     .local v5, bitmap:Landroid/graphics/Bitmap;
     .local v6, mini_thumb_magic:J
@@ -3845,6 +3991,7 @@
     .local p7, mini_thumb_magic:J
     goto/16 :goto_16
 
+    .line 583
     .end local p2           #c0:Landroid/database/Cursor;
     .local v5, bitmap:Landroid/graphics/Bitmap;
     .local v6, mini_thumb_magic:J
@@ -4388,6 +4535,7 @@
     .local p7, mini_thumb_magic:J
     goto/16 :goto_15
 
+    .line 581
     .end local p2           #c0:Landroid/database/Cursor;
     .end local p4           #filePath:Ljava/lang/String;
     .local v5, bitmap:Landroid/graphics/Bitmap;
@@ -4780,6 +4928,7 @@
 
     goto/16 :goto_10
 
+    .line 503
     .end local v5           #saveMini:Z
     .end local p2           #c0:Landroid/database/Cursor;
     .local v6, magic:J
@@ -4811,6 +4960,7 @@
 
     goto/16 :goto_12
 
+    .line 486
     .end local p6           #c0:Landroid/database/Cursor;
     .local v5, bitmap:Landroid/graphics/Bitmap;
     .local v6, uri:Landroid/net/Uri;
@@ -4865,6 +5015,7 @@
     .local p0, c0:Landroid/database/Cursor;
     goto/16 :goto_f
 
+    .line 483
     .local v6, uri:Landroid/net/Uri;
     .restart local v19       #mini_thumb_magic:J
     .local p0, cr:Landroid/content/ContentResolver;
@@ -4885,6 +5036,7 @@
 
     goto/16 :goto_e
 
+    .line 436
     .end local v5           #bitmap:Landroid/graphics/Bitmap;
     .end local v8           #blockingUri:Landroid/net/Uri;
     .end local p4           #c:Landroid/database/Cursor;
@@ -4906,6 +5058,7 @@
     .local p0, c:Landroid/database/Cursor;
     goto/16 :goto_9
 
+    .line 422
     .end local v13           #bitmap:Landroid/graphics/Bitmap;
     .end local p1           #origId:J
     .end local p3           #groupId:J
@@ -4915,6 +5068,7 @@
 
     goto/16 :goto_6
 
+    .line 395
     .end local v15           #c0:Landroid/database/Cursor;
     .end local v16           #filePath:Ljava/lang/String;
     .end local v19           #mini_thumb_magic:J
@@ -4959,6 +5113,7 @@
     .local p0, c0:Landroid/database/Cursor;
     goto/16 :goto_5
 
+    .line 392
     .restart local v5       #c0:Landroid/database/Cursor;
     .restart local v14       #mini_thumb_magic:J
     .local p0, cr:Landroid/content/ContentResolver;

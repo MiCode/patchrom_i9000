@@ -79,10 +79,13 @@
     .parameter "context"
 
     .prologue
+    .line 149
     invoke-direct {p0, p1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
 
+    .line 150
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText;->init()V
 
+    .line 151
     return-void
 .end method
 
@@ -92,10 +95,13 @@
     .parameter "attrs"
 
     .prologue
+    .line 144
     invoke-direct {p0, p1, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 145
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText;->init()V
 
+    .line 146
     return-void
 .end method
 
@@ -106,10 +112,13 @@
     .parameter "defStyle"
 
     .prologue
+    .line 139
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 140
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText;->init()V
 
+    .line 141
     return-void
 .end method
 
@@ -119,6 +128,7 @@
     .parameter "x1"
 
     .prologue
+    .line 61
     invoke-direct {p0, p1}, Lcom/android/internal/widget/EditStyledText;->setHintMessage(I)V
 
     return-void
@@ -129,6 +139,7 @@
     .parameter "x0"
 
     .prologue
+    .line 61
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText;->onShowForegroundColorAlert()V
 
     return-void
@@ -139,6 +150,7 @@
     .parameter "x0"
 
     .prologue
+    .line 61
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText;->onShowSizeAlert()V
 
     return-void
@@ -149,6 +161,7 @@
     .parameter "x0"
 
     .prologue
+    .line 61
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText;->onShowAlignAlert()V
 
     return-void
@@ -161,6 +174,7 @@
     .parameter "x2"
 
     .prologue
+    .line 61
     invoke-direct {p0, p1, p2}, Lcom/android/internal/widget/EditStyledText;->notifyStateChanged(II)V
 
     return-void
@@ -171,6 +185,7 @@
     .parameter "x0"
 
     .prologue
+    .line 61
     invoke-direct {p0}, Lcom/android/internal/widget/EditStyledText;->onShowBackgroundColorAlert()V
 
     return-void
@@ -181,6 +196,7 @@
     .parameter "x0"
 
     .prologue
+    .line 61
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDefaultBackground:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -191,6 +207,7 @@
     .parameter "x0"
 
     .prologue
+    .line 61
     iget v0, p0, Lcom/android/internal/widget/EditStyledText;->mBackgroundColor:I
 
     return v0
@@ -202,6 +219,7 @@
     .parameter "x1"
 
     .prologue
+    .line 61
     iput p1, p0, Lcom/android/internal/widget/EditStyledText;->mBackgroundColor:I
 
     return p1
@@ -211,36 +229,43 @@
     .locals 2
 
     .prologue
+    .line 505
     invoke-virtual {p0}, Lcom/android/internal/widget/EditStyledText;->requestFocus()Z
 
+    .line 506
     invoke-virtual {p0}, Lcom/android/internal/widget/EditStyledText;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDefaultBackground:Landroid/graphics/drawable/Drawable;
 
+    .line 507
     const v0, 0xffffff
 
     iput v0, p0, Lcom/android/internal/widget/EditStyledText;->mBackgroundColor:I
 
+    .line 508
     new-instance v0, Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-direct {v0, p0, p0}, Lcom/android/internal/widget/EditStyledText$EditorManager;-><init>(Lcom/android/internal/widget/EditStyledText;Lcom/android/internal/widget/EditStyledText;)V
 
     iput-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
+    .line 509
     new-instance v0, Lcom/android/internal/widget/EditStyledText$StyledTextConverter;
 
     invoke-direct {v0, p0, p0}, Lcom/android/internal/widget/EditStyledText$StyledTextConverter;-><init>(Lcom/android/internal/widget/EditStyledText;Lcom/android/internal/widget/EditStyledText;)V
 
     iput-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mConverter:Lcom/android/internal/widget/EditStyledText$StyledTextConverter;
 
+    .line 510
     new-instance v0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     invoke-direct {v0, p0, p0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;-><init>(Lcom/android/internal/widget/EditStyledText;Lcom/android/internal/widget/EditStyledText;)V
 
     iput-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
+    .line 511
     new-instance v0, Lcom/android/internal/widget/EditStyledText$StyledTextArrowKeyMethod;
 
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
@@ -249,16 +274,19 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/EditStyledText;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
+    .line 512
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     #calls: Lcom/android/internal/widget/EditStyledText$EditorManager;->blockSoftKey()V
     invoke-static {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->access$000(Lcom/android/internal/widget/EditStyledText$EditorManager;)V
 
+    .line 513
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     #calls: Lcom/android/internal/widget/EditStyledText$EditorManager;->unblockSoftKey()V
     invoke-static {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->access$100(Lcom/android/internal/widget/EditStyledText$EditorManager;)V
 
+    .line 514
     return-void
 .end method
 
@@ -268,14 +296,17 @@
     .parameter "state"
 
     .prologue
+    .line 565
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mESTInterface:Lcom/android/internal/widget/EditStyledText$EditStyledTextNotifier;
 
     if-eqz v0, :cond_0
 
+    .line 566
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mESTInterface:Lcom/android/internal/widget/EditStyledText$EditStyledTextNotifier;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/widget/EditStyledText$EditStyledTextNotifier;->notifyStateChanged(II)V
 
+    .line 568
     :cond_0
     return-void
 .end method
@@ -284,11 +315,13 @@
     .locals 1
 
     .prologue
+    .line 541
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     #calls: Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->onShowAlignAlertDialog()V
     invoke-static {v0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->access$500(Lcom/android/internal/widget/EditStyledText$StyledTextDialog;)V
 
+    .line 542
     return-void
 .end method
 
@@ -296,11 +329,13 @@
     .locals 1
 
     .prologue
+    .line 527
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     #calls: Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->onShowBackgroundColorAlertDialog()V
     invoke-static {v0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->access$300(Lcom/android/internal/widget/EditStyledText$StyledTextDialog;)V
 
+    .line 528
     return-void
 .end method
 
@@ -308,11 +343,13 @@
     .locals 1
 
     .prologue
+    .line 520
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     #calls: Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->onShowForegroundColorAlertDialog()V
     invoke-static {v0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->access$200(Lcom/android/internal/widget/EditStyledText$StyledTextDialog;)V
 
+    .line 521
     return-void
 .end method
 
@@ -320,11 +357,13 @@
     .locals 1
 
     .prologue
+    .line 534
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     #calls: Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->onShowSizeAlertDialog()V
     invoke-static {v0}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->access$400(Lcom/android/internal/widget/EditStyledText$StyledTextDialog;)V
 
+    .line 535
     return-void
 .end method
 
@@ -333,14 +372,17 @@
     .parameter "msgId"
 
     .prologue
+    .line 551
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mESTInterface:Lcom/android/internal/widget/EditStyledText$EditStyledTextNotifier;
 
     if-eqz v0, :cond_0
 
+    .line 552
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mESTInterface:Lcom/android/internal/widget/EditStyledText$EditStyledTextNotifier;
 
     invoke-interface {v0, p1}, Lcom/android/internal/widget/EditStyledText$EditStyledTextNotifier;->notifyHintMsg(I)V
 
+    .line 554
     :cond_0
     return-void
 .end method
@@ -351,6 +393,7 @@
     .locals 1
 
     .prologue
+    .line 472
     iget v0, p0, Lcom/android/internal/widget/EditStyledText;->mBackgroundColor:I
 
     return v0
@@ -360,6 +403,7 @@
     .locals 1
 
     .prologue
+    .line 420
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->getEditMode()I
@@ -376,6 +420,7 @@
     .prologue
     const v3, 0xffffff
 
+    .line 484
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Lcom/android/internal/widget/EditStyledText;->getText()Landroid/text/Editable;
@@ -388,6 +433,7 @@
 
     if-le p1, v1, :cond_1
 
+    .line 485
     :cond_0
     const-string v1, "EditStyledText"
 
@@ -397,9 +443,11 @@
 
     move v1, v3
 
+    .line 493
     :goto_0
     return v1
 
+    .line 488
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/widget/EditStyledText;->getText()Landroid/text/Editable;
 
@@ -413,11 +461,13 @@
 
     check-cast v0, [Landroid/text/style/ForegroundColorSpan;
 
+    .line 490
     .local v0, spans:[Landroid/text/style/ForegroundColorSpan;
     array-length v1, v0
 
     if-lez v1, :cond_2
 
+    .line 491
     const/4 v1, 0x0
 
     aget-object v1, v0, v1
@@ -431,6 +481,7 @@
     :cond_2
     move v1, v3
 
+    .line 493
     goto :goto_0
 .end method
 
@@ -438,6 +489,7 @@
     .locals 1
 
     .prologue
+    .line 451
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mConverter:Lcom/android/internal/widget/EditStyledText$StyledTextConverter;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$StyledTextConverter;->getHtml()Ljava/lang/String;
@@ -462,6 +514,7 @@
     .end annotation
 
     .prologue
+    .line 462
     .local p1, uris:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/net/Uri;>;"
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mConverter:Lcom/android/internal/widget/EditStyledText$StyledTextConverter;
 
@@ -471,6 +524,7 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/internal/widget/EditStyledText$StyledTextConverter;->getUriArray(Ljava/util/ArrayList;Landroid/text/Editable;)V
 
+    .line 463
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mConverter:Lcom/android/internal/widget/EditStyledText$StyledTextConverter;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$StyledTextConverter;->getHtml()Ljava/lang/String;
@@ -485,18 +539,22 @@
     .parameter "create"
 
     .prologue
+    .line 437
     invoke-super {p0, p1}, Landroid/widget/EditText;->getInputExtras(Z)Landroid/os/Bundle;
 
     move-result-object v0
 
+    .line 438
     .local v0, bundle:Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
+    .line 439
     new-instance v0, Landroid/os/Bundle;
 
     .end local v0           #bundle:Landroid/os/Bundle;
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 441
     .restart local v0       #bundle:Landroid/os/Bundle;
     :cond_0
     const-string v1, "allowEmoji"
@@ -505,6 +563,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
+    .line 442
     return-object v0
 .end method
 
@@ -512,6 +571,7 @@
     .locals 1
 
     .prologue
+    .line 429
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->getSelectState()I
@@ -525,6 +585,7 @@
     .locals 1
 
     .prologue
+    .line 394
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->isEditting()Z
@@ -538,6 +599,7 @@
     .locals 1
 
     .prologue
+    .line 411
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->isSoftKeyBlocked()Z
@@ -551,6 +613,7 @@
     .locals 1
 
     .prologue
+    .line 403
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->isStyledText()Z
@@ -564,10 +627,12 @@
     .locals 1
 
     .prologue
+    .line 335
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onClearStyles()V
 
+    .line 336
     return-void
 .end method
 
@@ -575,10 +640,12 @@
     .locals 1
 
     .prologue
+    .line 237
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onEndEdit()V
 
+    .line 238
     return-void
 .end method
 
@@ -586,10 +653,12 @@
     .locals 1
 
     .prologue
+    .line 307
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onFixSelectedItem()V
 
+    .line 308
     return-void
 .end method
 
@@ -597,10 +666,12 @@
     .locals 1
 
     .prologue
+    .line 331
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onInsertHorizontalLine()V
 
+    .line 332
     return-void
 .end method
 
@@ -609,10 +680,12 @@
     .parameter "resId"
 
     .prologue
+    .line 327
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onInsertImage(I)V
 
+    .line 328
     return-void
 .end method
 
@@ -621,10 +694,12 @@
     .parameter "uri"
 
     .prologue
+    .line 317
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onInsertImage(Landroid/net/Uri;)V
 
+    .line 318
     return-void
 .end method
 
@@ -632,10 +707,12 @@
     .locals 1
 
     .prologue
+    .line 286
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartAlign()V
 
+    .line 287
     return-void
 .end method
 
@@ -643,10 +720,12 @@
     .locals 1
 
     .prologue
+    .line 279
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartBackgroundColor()V
 
+    .line 280
     return-void
 .end method
 
@@ -654,10 +733,12 @@
     .locals 1
 
     .prologue
+    .line 272
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartColor()V
 
+    .line 273
     return-void
 .end method
 
@@ -665,10 +746,12 @@
     .locals 1
 
     .prologue
+    .line 244
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartCopy()V
 
+    .line 245
     return-void
 .end method
 
@@ -676,10 +759,12 @@
     .locals 1
 
     .prologue
+    .line 251
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartCut()V
 
+    .line 252
     return-void
 .end method
 
@@ -687,10 +772,12 @@
     .locals 1
 
     .prologue
+    .line 230
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartEdit()V
 
+    .line 231
     return-void
 .end method
 
@@ -698,10 +785,12 @@
     .locals 1
 
     .prologue
+    .line 258
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartPaste()V
 
+    .line 259
     return-void
 .end method
 
@@ -709,10 +798,12 @@
     .locals 1
 
     .prologue
+    .line 293
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartSelect()V
 
+    .line 294
     return-void
 .end method
 
@@ -720,10 +811,12 @@
     .locals 1
 
     .prologue
+    .line 300
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartSelectAll()V
 
+    .line 301
     return-void
 .end method
 
@@ -731,10 +824,12 @@
     .locals 1
 
     .prologue
+    .line 265
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onStartSize()V
 
+    .line 266
     return-void
 .end method
 
@@ -745,6 +840,7 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 211
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v1}, Lcom/android/internal/widget/EditStyledText$EditorManager;->isSoftKeyBlocked()Z
@@ -759,13 +855,16 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 213
     invoke-virtual {p0}, Lcom/android/internal/widget/EditStyledText;->cancelLongPress()V
 
+    .line 215
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/EditText;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
+    .line 216
     .local v0, superResult:Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -773,10 +872,12 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 220
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v1}, Lcom/android/internal/widget/EditStyledText$EditorManager;->onCursorMoved()V
 
+    .line 222
     :cond_1
     return v0
 .end method
@@ -787,10 +888,12 @@
     .parameter "alignnames"
 
     .prologue
+    .line 206
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->setAlignAlertParams(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)V
 
+    .line 207
     return-void
 .end method
 
@@ -799,10 +902,12 @@
     .parameter "align"
 
     .prologue
+    .line 364
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/EditStyledText$EditorManager;->setAlignment(Landroid/text/Layout$Alignment;)V
 
+    .line 365
     return-void
 .end method
 
@@ -811,10 +916,13 @@
     .parameter "color"
 
     .prologue
+    .line 375
     invoke-super {p0, p1}, Landroid/widget/EditText;->setBackgroundColor(I)V
 
+    .line 376
     iput p1, p0, Lcom/android/internal/widget/EditStyledText;->mBackgroundColor:I
 
+    .line 377
     return-void
 .end method
 
@@ -823,10 +931,12 @@
     .parameter "builder"
 
     .prologue
+    .line 167
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->setBuilder(Landroid/app/AlertDialog$Builder;)V
 
+    .line 168
     return-void
 .end method
 
@@ -837,10 +947,12 @@
     .parameter "colorints"
 
     .prologue
+    .line 182
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->setColorAlertParams(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)V
 
+    .line 183
     return-void
 .end method
 
@@ -849,10 +961,12 @@
     .parameter "html"
 
     .prologue
+    .line 386
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mConverter:Lcom/android/internal/widget/EditStyledText$StyledTextConverter;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/EditStyledText$StyledTextConverter;->SetHtml(Ljava/lang/String;)V
 
+    .line 387
     return-void
 .end method
 
@@ -861,10 +975,12 @@
     .parameter "color"
 
     .prologue
+    .line 354
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/EditStyledText$EditorManager;->setItemColor(I)V
 
+    .line 355
     return-void
 .end method
 
@@ -873,10 +989,12 @@
     .parameter "size"
 
     .prologue
+    .line 344
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mManager:Lcom/android/internal/widget/EditStyledText$EditorManager;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/EditStyledText$EditorManager;->setItemSize(I)V
 
+    .line 345
     return-void
 .end method
 
@@ -885,8 +1003,10 @@
     .parameter "estInterface"
 
     .prologue
+    .line 157
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText;->mESTInterface:Lcom/android/internal/widget/EditStyledText$EditStyledTextNotifier;
 
+    .line 158
     return-void
 .end method
 
@@ -898,9 +1018,11 @@
     .parameter "sizesendints"
 
     .prologue
+    .line 200
     iget-object v0, p0, Lcom/android/internal/widget/EditStyledText;->mDialog:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->setSizeAlertParams(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;[Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)V
 
+    .line 202
     return-void
 .end method

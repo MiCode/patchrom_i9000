@@ -20,6 +20,7 @@
     .locals 0
 
     .prologue
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
     .locals 1
 
     .prologue
+    .line 47
     iget-char v0, p0, Landroid/divxdrm/mobile/DrmDivxRightsInfo;->cgmsaSignal:C
 
     return v0
@@ -40,6 +42,7 @@
     .locals 1
 
     .prologue
+    .line 51
     iget-char v0, p0, Landroid/divxdrm/mobile/DrmDivxRightsInfo;->digitalProtectionSignal:C
 
     return v0
@@ -49,6 +52,7 @@
     .locals 1
 
     .prologue
+    .line 55
     iget v0, p0, Landroid/divxdrm/mobile/DrmDivxRightsInfo;->drmMode:I
 
     return v0
@@ -58,6 +62,7 @@
     .locals 1
 
     .prologue
+    .line 39
     iget v0, p0, Landroid/divxdrm/mobile/DrmDivxRightsInfo;->useLimitID:I
 
     return v0
@@ -67,6 +72,7 @@
     .locals 1
 
     .prologue
+    .line 43
     iget v0, p0, Landroid/divxdrm/mobile/DrmDivxRightsInfo;->usedCounter:I
 
     return v0

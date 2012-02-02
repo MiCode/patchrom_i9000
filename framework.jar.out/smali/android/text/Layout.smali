@@ -69,6 +69,7 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 42
     const-class v0, Landroid/text/style/ParagraphStyle;
 
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->emptyArray(Ljava/lang/Class;)[Ljava/lang/Object;
@@ -1549,6 +1550,7 @@
 
     move v2, p3
 
+    .line 1936
     :goto_0
     return v2
 
@@ -1855,6 +1857,7 @@
 
     if-gt v0, v1, :cond_11
 
+    .line 1218
     const/4 v5, 0x0
 
     .local v5, isEmoji:Z
@@ -1927,6 +1930,7 @@
 
     add-int v8, p3, v16
 
+    .line 1387
     const/4 v10, 0x0
 
     move-object/from16 v5, p0
@@ -2702,6 +2706,7 @@
 
     iput v0, v1, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
+    .line 1407
     :cond_3
     :goto_3
     move/from16 v0, v17
@@ -3818,6 +3823,7 @@
 
     if-ne v5, v7, :cond_b
 
+    .line 1417
     :cond_a
     const/16 v27, 0x1
 
@@ -4194,6 +4200,7 @@
     :cond_14
     const/4 v5, 0x0
 
+    .line 1431
     move-object/from16 v0, p0
 
     move v1, v15
@@ -5924,6 +5931,7 @@
 
     goto :goto_1
 
+    .line 1435
     :cond_b
     invoke-virtual/range {p0 .. p0}, Landroid/text/Layout;->getLineCount()I
 
@@ -6682,6 +6690,7 @@
     .parameter "offset"
 
     .prologue
+    .line 67
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -6809,6 +6818,7 @@
 
     move-result v11
 
+    .line 561
     move-object/from16 v0, p0
 
     move v1, v3
@@ -7021,6 +7031,7 @@
 
     goto/16 :goto_0
 
+    .line 593
     :cond_5
     const/4 v9, 0x0
 
@@ -7101,6 +7112,7 @@
 
     throw v0
 
+    .line 689
     :cond_0
     iput p1, p0, Landroid/text/Layout;->mWidth:I
 
@@ -7158,22 +7170,31 @@
 
     throw v0
 
+    .line 469
+    .line 139
     :cond_0
     iput-object p1, p0, Landroid/text/Layout;->mText:Ljava/lang/CharSequence;
 
+    .line 140
     iput-object p2, p0, Landroid/text/Layout;->mPaint:Landroid/text/TextPaint;
 
+    .line 141
     iput p3, p0, Landroid/text/Layout;->mWidth:I
 
+    .line 142
     iput-object p4, p0, Landroid/text/Layout;->mAlignment:Landroid/text/Layout$Alignment;
 
+    .line 143
     iput p5, p0, Landroid/text/Layout;->mSpacingMult:F
 
+    .line 144
     iput p6, p0, Landroid/text/Layout;->mSpacingAdd:F
 
+    .line 145
     instance-of v0, p1, Landroid/text/Spanned;
 
     iput-boolean v0, p0, Landroid/text/Layout;->mSpannedText:Z
 
+    .line 146
     return-void
 .end method

@@ -27,10 +27,13 @@
     .parameter "remote"
 
     .prologue
+    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 64
     iput-object p1, p0, Landroid/view/IRotationWatcher$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
+    .line 65
     return-void
 .end method
 
@@ -40,6 +43,7 @@
     .locals 1
 
     .prologue
+    .line 68
     iget-object v0, p0, Landroid/view/IRotationWatcher$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -49,6 +53,7 @@
     .locals 1
 
     .prologue
+    .line 72
     const-string v0, "android.view.IRotationWatcher"
 
     return-object v0
@@ -64,18 +69,22 @@
     .end annotation
 
     .prologue
+    .line 76
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 78
     .local v0, _data:Landroid/os/Parcel;
     :try_start_0
     const-string v1, "android.view.IRotationWatcher"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 79
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 80
     iget-object v1, p0, Landroid/view/IRotationWatcher$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -88,10 +97,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 83
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 85
     return-void
 
+    .line 83
     :catchall_0
     move-exception v1
 

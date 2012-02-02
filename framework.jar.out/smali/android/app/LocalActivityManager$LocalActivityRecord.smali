@@ -37,15 +37,20 @@
     .parameter "_intent"
 
     .prologue
+    .line 45
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 56
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/LocalActivityManager$LocalActivityRecord;->curState:I
 
+    .line 46
     iput-object p1, p0, Landroid/app/LocalActivityManager$LocalActivityRecord;->id:Ljava/lang/String;
 
+    .line 47
     iput-object p2, p0, Landroid/app/LocalActivityManager$LocalActivityRecord;->intent:Landroid/content/Intent;
 
+    .line 48
     return-void
 .end method

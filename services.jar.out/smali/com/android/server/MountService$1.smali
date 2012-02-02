@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 718
     iput-object p1, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,10 +40,12 @@
     .parameter "intent"
 
     .prologue
+    .line 720
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 722
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -52,6 +55,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 723
     iget-object v1, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     const/4 v2, 0x1
@@ -59,6 +63,7 @@
     #setter for: Lcom/android/server/MountService;->mBooted:Z
     invoke-static {v1, v2}, Lcom/android/server/MountService;->access$802(Lcom/android/server/MountService;Z)Z
 
+    .line 729
     const-string v1, "simulator"
 
     const-string v2, "ro.product.device"
@@ -73,6 +78,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 730
     iget-object v1, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     const/4 v2, 0x0
@@ -86,10 +92,12 @@
     #calls: Lcom/android/server/MountService;->notifyVolumeStateChange(Ljava/lang/String;Ljava/lang/String;II)V
     invoke-static {v1, v2, v3, v4, v5}, Lcom/android/server/MountService;->access$900(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;II)V
 
+    .line 798
     :cond_0
     :goto_0
     return-void
 
+    .line 733
     :cond_1
     new-instance v1, Lcom/android/server/MountService$1$1;
 

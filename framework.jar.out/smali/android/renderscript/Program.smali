@@ -40,10 +40,13 @@
     .parameter "rs"
 
     .prologue
+    .line 41
     invoke-direct {p0, p2}, Landroid/renderscript/BaseObj;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 42
     iput p1, p0, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 43
     return-void
 .end method
 
@@ -55,6 +58,7 @@
     .parameter "slot"
 
     .prologue
+    .line 46
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
@@ -63,6 +67,7 @@
 
     invoke-virtual {v0, v1, p2, v2}, Landroid/renderscript/RenderScript;->nProgramBindConstants(III)V
 
+    .line 47
     return-void
 .end method
 
@@ -77,16 +82,19 @@
     .end annotation
 
     .prologue
+    .line 61
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 62
     if-ltz p2, :cond_0
 
     iget v0, p0, Landroid/renderscript/Program;->mTextureCount:I
 
     if-lt p2, v0, :cond_1
 
+    .line 63
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -96,6 +104,7 @@
 
     throw v0
 
+    .line 66
     :cond_1
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
@@ -105,6 +114,7 @@
 
     invoke-virtual {v0, v1, p2, v2}, Landroid/renderscript/RenderScript;->nProgramBindSampler(III)V
 
+    .line 67
     return-void
 .end method
 
@@ -119,16 +129,19 @@
     .end annotation
 
     .prologue
+    .line 51
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 52
     if-ltz p2, :cond_0
 
     iget v0, p0, Landroid/renderscript/Program;->mTextureCount:I
 
     if-lt p2, v0, :cond_1
 
+    .line 53
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -138,6 +151,7 @@
 
     throw v0
 
+    .line 56
     :cond_1
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
@@ -147,6 +161,7 @@
 
     invoke-virtual {v0, v1, p2, v2}, Landroid/renderscript/RenderScript;->nProgramBindTexture(III)V
 
+    .line 57
     return-void
 .end method
 
@@ -154,6 +169,7 @@
     .locals 0
 
     .prologue
+    .line 28
     invoke-super {p0}, Landroid/renderscript/BaseObj;->destroy()V
 
     return-void
@@ -163,6 +179,7 @@
     .locals 1
 
     .prologue
+    .line 28
     invoke-super {p0}, Landroid/renderscript/BaseObj;->getID()I
 
     move-result v0
@@ -181,6 +198,7 @@
     .end annotation
 
     .prologue
+    .line 28
     invoke-super {p0, p1}, Landroid/renderscript/BaseObj;->setName(Ljava/lang/String;)V
 
     return-void

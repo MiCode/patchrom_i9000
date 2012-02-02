@@ -64,14 +64,19 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 336
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 292
     iput v0, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->uid:I
 
+    .line 296
     iput v0, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->gid:I
 
+    .line 337
     invoke-direct {p0, p1}, Lcom/android/internal/os/ZygoteConnection$Arguments;->parseArgs([Ljava/lang/String;)V
 
+    .line 338
     return-void
 .end method
 
@@ -85,16 +90,20 @@
     .end annotation
 
     .prologue
+    .line 350
     const/4 v3, 0x0
 
+    .line 352
     .local v3, curArg:I
     :goto_0
     array-length v9, p1
 
     if-ge v3, v9, :cond_0
 
+    .line 353
     aget-object v0, p1, v3
 
+    .line 355
     .local v0, arg:Ljava/lang/String;
     const-string v9, "--"
 
@@ -104,8 +113,10 @@
 
     if-eqz v9, :cond_1
 
+    .line 356
     add-int/lit8 v3, v3, 0x1
 
+    .line 453
     .end local v0           #arg:Ljava/lang/String;
     :cond_0
     iget-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->runtimeInit:Z
@@ -116,6 +127,7 @@
 
     if-eqz v9, :cond_17
 
+    .line 454
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
     const-string v10, "--runtime-init and -classpath are incompatible"
@@ -124,6 +136,7 @@
 
     throw v9
 
+    .line 358
     .restart local v0       #arg:Ljava/lang/String;
     :cond_1
     const-string v9, "--setuid="
@@ -134,10 +147,12 @@
 
     if-eqz v9, :cond_4
 
+    .line 359
     iget-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->uidSpecified:Z
 
     if-eqz v9, :cond_2
 
+    .line 360
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
     const-string v10, "Duplicate arg specified"
@@ -146,11 +161,13 @@
 
     throw v9
 
+    .line 363
     :cond_2
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->uidSpecified:Z
 
+    .line 364
     const/16 v9, 0x3d
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->indexOf(I)I
@@ -169,12 +186,14 @@
 
     iput v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->uid:I
 
+    .line 352
     :cond_3
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 366
     :cond_4
     const-string v9, "--setgid="
 
@@ -184,10 +203,12 @@
 
     if-eqz v9, :cond_6
 
+    .line 367
     iget-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->gidSpecified:Z
 
     if-eqz v9, :cond_5
 
+    .line 368
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
     const-string v10, "Duplicate arg specified"
@@ -196,11 +217,13 @@
 
     throw v9
 
+    .line 371
     :cond_5
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->gidSpecified:Z
 
+    .line 372
     const/16 v9, 0x3d
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->indexOf(I)I
@@ -221,6 +244,7 @@
 
     goto :goto_1
 
+    .line 374
     :cond_6
     const-string v9, "--enable-debugger"
 
@@ -230,6 +254,7 @@
 
     if-eqz v9, :cond_7
 
+    .line 375
     iget v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->debugFlags:I
 
     or-int/lit8 v9, v9, 0x1
@@ -238,6 +263,7 @@
 
     goto :goto_1
 
+    .line 376
     :cond_7
     const-string v9, "--enable-safemode"
 
@@ -247,6 +273,7 @@
 
     if-eqz v9, :cond_8
 
+    .line 377
     iget v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->debugFlags:I
 
     or-int/lit8 v9, v9, 0x8
@@ -255,6 +282,7 @@
 
     goto :goto_1
 
+    .line 378
     :cond_8
     const-string v9, "--enable-checkjni"
 
@@ -264,6 +292,7 @@
 
     if-eqz v9, :cond_9
 
+    .line 379
     iget v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->debugFlags:I
 
     or-int/lit8 v9, v9, 0x2
@@ -272,6 +301,7 @@
 
     goto :goto_1
 
+    .line 380
     :cond_9
     const-string v9, "--enable-assert"
 
@@ -281,6 +311,7 @@
 
     if-eqz v9, :cond_a
 
+    .line 381
     iget v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->debugFlags:I
 
     or-int/lit8 v9, v9, 0x4
@@ -289,6 +320,7 @@
 
     goto :goto_1
 
+    .line 382
     :cond_a
     const-string v9, "--peer-wait"
 
@@ -298,12 +330,14 @@
 
     if-eqz v9, :cond_b
 
+    .line 383
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->peerWait:Z
 
     goto :goto_1
 
+    .line 384
     :cond_b
     const-string v9, "--runtime-init"
 
@@ -313,12 +347,14 @@
 
     if-eqz v9, :cond_c
 
+    .line 385
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->runtimeInit:Z
 
     goto :goto_1
 
+    .line 386
     :cond_c
     const-string v9, "--capabilities="
 
@@ -328,10 +364,12 @@
 
     if-eqz v9, :cond_f
 
+    .line 387
     iget-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->capabilitiesSpecified:Z
 
     if-eqz v9, :cond_d
 
+    .line 388
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
     const-string v10, "Duplicate arg specified"
@@ -340,11 +378,13 @@
 
     throw v9
 
+    .line 391
     :cond_d
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->capabilitiesSpecified:Z
 
+    .line 392
     const/16 v9, 0x3d
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->indexOf(I)I
@@ -357,6 +397,7 @@
 
     move-result-object v1
 
+    .line 394
     .local v1, capString:Ljava/lang/String;
     const-string v9, ","
 
@@ -366,6 +407,7 @@
 
     move-result-object v2
 
+    .line 396
     .local v2, capStrings:[Ljava/lang/String;
     array-length v9, v2
 
@@ -373,6 +415,7 @@
 
     if-ne v9, v10, :cond_e
 
+    .line 397
     const/4 v9, 0x0
 
     aget-object v9, v2, v9
@@ -387,12 +430,14 @@
 
     iput-wide v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->effectiveCapabilities:J
 
+    .line 398
     iget-wide v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->effectiveCapabilities:J
 
     iput-wide v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->permittedCapabilities:J
 
     goto/16 :goto_1
 
+    .line 400
     :cond_e
     const/4 v9, 0x0
 
@@ -408,6 +453,7 @@
 
     iput-wide v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->permittedCapabilities:J
 
+    .line 401
     const/4 v9, 0x1
 
     aget-object v9, v2, v9
@@ -424,6 +470,7 @@
 
     goto/16 :goto_1
 
+    .line 403
     .end local v1           #capString:Ljava/lang/String;
     .end local v2           #capStrings:[Ljava/lang/String;
     :cond_f
@@ -435,6 +482,7 @@
 
     if-eqz v9, :cond_13
 
+    .line 405
     const/16 v9, 0x3d
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->indexOf(I)I
@@ -453,6 +501,7 @@
 
     move-result-object v6
 
+    .line 408
     .local v6, limitStrings:[Ljava/lang/String;
     array-length v9, v6
 
@@ -460,6 +509,7 @@
 
     if-eq v9, v10, :cond_10
 
+    .line 409
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
     const-string v10, "--rlimit= should have 3 comma-delimited ints"
@@ -468,11 +518,13 @@
 
     throw v9
 
+    .line 412
     :cond_10
     array-length v9, v6
 
     new-array v8, v9, [I
 
+    .line 414
     .local v8, rlimitTuple:[I
     const/4 v5, 0x0
 
@@ -482,6 +534,7 @@
 
     if-ge v5, v9, :cond_11
 
+    .line 415
     aget-object v9, v6, v5
 
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -490,21 +543,25 @@
 
     aput v9, v8, v5
 
+    .line 414
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
+    .line 418
     :cond_11
     iget-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->rlimits:Ljava/util/ArrayList;
 
     if-nez v9, :cond_12
 
+    .line 419
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->rlimits:Ljava/util/ArrayList;
 
+    .line 422
     :cond_12
     iget-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->rlimits:Ljava/util/ArrayList;
 
@@ -512,6 +569,7 @@
 
     goto/16 :goto_1
 
+    .line 423
     .end local v5           #i:I
     .end local v6           #limitStrings:[Ljava/lang/String;
     .end local v8           #rlimitTuple:[I
@@ -524,10 +582,12 @@
 
     if-eqz v9, :cond_15
 
+    .line 424
     iget-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->classpath:Ljava/lang/String;
 
     if-eqz v9, :cond_14
 
+    .line 425
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
     const-string v10, "Duplicate arg specified"
@@ -536,6 +596,7 @@
 
     throw v9
 
+    .line 429
     :cond_14
     add-int/lit8 v3, v3, 0x1
 
@@ -548,11 +609,13 @@
 
     goto/16 :goto_1
 
+    .line 430
     :catch_0
     move-exception v9
 
     move-object v4, v9
 
+    .line 431
     .local v4, ex:Ljava/lang/IndexOutOfBoundsException;
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
@@ -562,6 +625,7 @@
 
     throw v9
 
+    .line 434
     .end local v4           #ex:Ljava/lang/IndexOutOfBoundsException;
     :cond_15
     const-string v9, "--setgroups="
@@ -572,10 +636,12 @@
 
     if-eqz v9, :cond_0
 
+    .line 435
     iget-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->gids:[I
 
     if-eqz v9, :cond_16
 
+    .line 436
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
     const-string v10, "Duplicate arg specified"
@@ -584,6 +650,7 @@
 
     throw v9
 
+    .line 440
     :cond_16
     const/16 v9, 0x3d
 
@@ -603,6 +670,7 @@
 
     move-result-object v7
 
+    .line 443
     .local v7, params:[Ljava/lang/String;
     array-length v9, v7
 
@@ -610,6 +678,7 @@
 
     iput-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->gids:[I
 
+    .line 445
     array-length v9, v7
 
     const/4 v10, 0x1
@@ -620,6 +689,7 @@
     :goto_3
     if-ltz v5, :cond_3
 
+    .line 446
     iget-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->gids:[I
 
     aget-object v10, v7, v5
@@ -630,10 +700,12 @@
 
     aput v10, v9, v5
 
+    .line 445
     add-int/lit8 v5, v5, -0x1
 
     goto :goto_3
 
+    .line 458
     .end local v0           #arg:Ljava/lang/String;
     .end local v5           #i:I
     .end local v7           #params:[Ljava/lang/String;
@@ -646,6 +718,7 @@
 
     iput-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->remainingArgs:[Ljava/lang/String;
 
+    .line 460
     iget-object v9, p0, Lcom/android/internal/os/ZygoteConnection$Arguments;->remainingArgs:[Ljava/lang/String;
 
     const/4 v10, 0x0
@@ -656,5 +729,6 @@
 
     invoke-static {p1, v3, v9, v10, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 462
     return-void
 .end method

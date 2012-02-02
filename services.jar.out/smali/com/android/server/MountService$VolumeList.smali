@@ -53,16 +53,19 @@
 
     const-string v4, "MountService"
 
+    .line 201
     iput-object p1, p0, Lcom/android/server/MountService$VolumeList;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 199
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
+    .line 211
     invoke-static {}, Landroid/os/Environment;->getInstalledStorageDirectory()[Ljava/io/File;
 
     move-result-object v0
@@ -77,6 +80,7 @@
 
     iput-object v0, p0, Lcom/android/server/MountService$VolumeList;->targeting_prefer_asec_path:Ljava/lang/String;
 
+    .line 212
     const-string v0, "ASEC_MOUNTPOINT"
 
     invoke-static {v0}, Ljava/lang/System;->getenv(Ljava/lang/String;)Ljava/lang/String;
@@ -85,6 +89,7 @@
 
     iput-object v0, p0, Lcom/android/server/MountService$VolumeList;->asec_path:Ljava/lang/String;
 
+    .line 202
     const-string v0, "MountService"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -115,6 +120,7 @@
 
     invoke-static {v4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 203
     iget-object v0, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/MountService$VolumeList$VolumeInfo;
@@ -133,10 +139,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 205
     sget-boolean v0, Lcom/android/server/StorageFeature;->INSTALLED_SECOND_DISK:Z
 
     if-eqz v0, :cond_0
 
+    .line 206
     const-string v0, "MountService"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -167,6 +175,7 @@
 
     invoke-static {v4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 207
     iget-object v0, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/MountService$VolumeList$VolumeInfo;
@@ -185,6 +194,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 209
     :cond_0
     return-void
 .end method
@@ -194,6 +204,7 @@
     .parameter "path"
 
     .prologue
+    .line 247
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -206,6 +217,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 248
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -224,14 +236,17 @@
 
     move v1, v0
 
+    .line 251
     :goto_1
     return v1
 
+    .line 247
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 251
     :cond_1
     const/4 v1, -0x1
 
@@ -244,6 +259,7 @@
     .locals 1
 
     .prologue
+    .line 218
     iget-object v0, p0, Lcom/android/server/MountService$VolumeList;->asec_path:Ljava/lang/String;
 
     return-object v0
@@ -254,8 +270,10 @@
     .parameter "path"
 
     .prologue
+    .line 295
     const/4 v0, -0x1
 
+    .line 296
     .local v0, index:I
     invoke-direct {p0, p1}, Lcom/android/server/MountService$VolumeList;->vaildVolumePath(Ljava/lang/String;)I
 
@@ -265,6 +283,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 297
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -276,6 +295,7 @@
 
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->devPath:Ljava/lang/String;
 
+    .line 299
     :goto_0
     return-object v1
 
@@ -291,8 +311,10 @@
     .parameter "path"
 
     .prologue
+    .line 262
     const/4 v0, -0x1
 
+    .line 263
     .local v0, index:I
     invoke-direct {p0, p1}, Lcom/android/server/MountService$VolumeList;->vaildVolumePath(Ljava/lang/String;)I
 
@@ -302,6 +324,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 264
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -313,6 +336,7 @@
 
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->CryptogramState:Ljava/lang/String;
 
+    .line 267
     :goto_0
     return-object v1
 
@@ -328,8 +352,10 @@
     .parameter "path"
 
     .prologue
+    .line 277
     const/4 v0, -0x1
 
+    .line 278
     .local v0, index:I
     invoke-direct {p0, p1}, Lcom/android/server/MountService$VolumeList;->vaildVolumePath(Ljava/lang/String;)I
 
@@ -339,6 +365,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 279
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -350,6 +377,7 @@
 
     iget-boolean v1, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->pending:Z
 
+    .line 282
     :goto_0
     return v1
 
@@ -364,6 +392,7 @@
     .locals 3
 
     .prologue
+    .line 231
     iget-object v2, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -372,6 +401,7 @@
 
     new-array v1, v2, [Ljava/lang/String;
 
+    .line 232
     .local v1, list:[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -385,6 +415,7 @@
 
     if-ge v0, v2, :cond_0
 
+    .line 233
     iget-object v2, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -397,10 +428,12 @@
 
     aput-object v2, v1, v0
 
+    .line 232
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 235
     :cond_0
     return-object v1
 .end method
@@ -410,8 +443,10 @@
     .parameter "path"
 
     .prologue
+    .line 312
     const/4 v0, -0x1
 
+    .line 313
     .local v0, index:I
     invoke-direct {p0, p1}, Lcom/android/server/MountService$VolumeList;->vaildVolumePath(Ljava/lang/String;)I
 
@@ -421,6 +456,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 314
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -432,6 +468,7 @@
 
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->LegacyState:Ljava/lang/String;
 
+    .line 316
     :goto_0
     return-object v1
 
@@ -447,10 +484,12 @@
     .parameter "path"
 
     .prologue
+    .line 222
     invoke-virtual {p0, p1}, Lcom/android/server/MountService$VolumeList;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 223
     .local v0, state:Ljava/lang/String;
     const-string v1, "mounted"
 
@@ -460,8 +499,10 @@
 
     if-eqz v1, :cond_0
 
+    .line 224
     const/4 v1, 0x1
 
+    .line 227
     :goto_0
     return v1
 
@@ -476,6 +517,7 @@
     .parameter "path"
 
     .prologue
+    .line 240
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -488,6 +530,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 241
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -506,14 +549,17 @@
 
     const/4 v1, 0x1
 
+    .line 243
     :goto_1
     return v1
 
+    .line 240
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 243
     :cond_1
     const/4 v1, 0x0
 
@@ -526,8 +572,10 @@
     .parameter "devPath"
 
     .prologue
+    .line 286
     const/4 v0, 0x0
 
+    .line 287
     .local v0, index:I
     invoke-direct {p0, p1}, Lcom/android/server/MountService$VolumeList;->vaildVolumePath(Ljava/lang/String;)I
 
@@ -537,6 +585,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 288
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -548,8 +597,10 @@
 
     iput-object p2, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->devPath:Ljava/lang/String;
 
+    .line 289
     const/4 v1, 0x1
 
+    .line 291
     :goto_0
     return v1
 
@@ -566,8 +617,10 @@
     .parameter "State"
 
     .prologue
+    .line 255
     const/4 v0, -0x1
 
+    .line 256
     .local v0, index:I
     invoke-direct {p0, p1}, Lcom/android/server/MountService$VolumeList;->vaildVolumePath(Ljava/lang/String;)I
 
@@ -577,6 +630,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 257
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -588,6 +642,7 @@
 
     iput-object p2, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->CryptogramState:Ljava/lang/String;
 
+    .line 259
     :cond_0
     return-void
 .end method
@@ -598,8 +653,10 @@
     .parameter "bPending"
 
     .prologue
+    .line 270
     const/4 v0, -0x1
 
+    .line 271
     .local v0, index:I
     invoke-direct {p0, p1}, Lcom/android/server/MountService$VolumeList;->vaildVolumePath(Ljava/lang/String;)I
 
@@ -609,6 +666,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 272
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -620,6 +678,7 @@
 
     iput-boolean p2, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->pending:Z
 
+    .line 274
     :cond_0
     return-void
 .end method
@@ -630,8 +689,10 @@
     .parameter "LegacyState"
 
     .prologue
+    .line 303
     const/4 v0, 0x0
 
+    .line 304
     .local v0, index:I
     invoke-direct {p0, p1}, Lcom/android/server/MountService$VolumeList;->vaildVolumePath(Ljava/lang/String;)I
 
@@ -641,6 +702,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 305
     iget-object v1, p0, Lcom/android/server/MountService$VolumeList;->volumeinfo:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -652,8 +714,10 @@
 
     iput-object p2, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->LegacyState:Ljava/lang/String;
 
+    .line 306
     const/4 v1, 0x1
 
+    .line 308
     :goto_0
     return v1
 

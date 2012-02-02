@@ -45,6 +45,7 @@
 
     const/4 v4, 0x0
 
+    .line 36
     new-instance v0, Ljava/util/HashSet;
 
     const/16 v1, 0x2c
@@ -321,6 +322,7 @@
 
     sput-object v0, Landroid/pim/vcard/VCardParser_V40;->sKnownPropertyNameSet:Ljava/util/Set;
 
+    .line 53
     new-instance v0, Ljava/util/HashSet;
 
     new-array v1, v6, [Ljava/lang/String;
@@ -352,14 +354,17 @@
     .locals 1
 
     .prologue
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 61
     new-instance v0, Landroid/pim/vcard/VCardParserImpl_V40;
 
     invoke-direct {v0}, Landroid/pim/vcard/VCardParserImpl_V40;-><init>()V
 
     iput-object v0, p0, Landroid/pim/vcard/VCardParser_V40;->mVCardParserImpl:Landroid/pim/vcard/VCardParserImpl_V30;
 
+    .line 62
     return-void
 .end method
 
@@ -368,14 +373,17 @@
     .parameter "vcardType"
 
     .prologue
+    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 65
     new-instance v0, Landroid/pim/vcard/VCardParserImpl_V40;
 
     invoke-direct {v0, p1}, Landroid/pim/vcard/VCardParserImpl_V40;-><init>(I)V
 
     iput-object v0, p0, Landroid/pim/vcard/VCardParser_V40;->mVCardParserImpl:Landroid/pim/vcard/VCardParserImpl_V30;
 
+    .line 66
     return-void
 .end method
 
@@ -385,10 +393,12 @@
     .locals 1
 
     .prologue
+    .line 76
     iget-object v0, p0, Landroid/pim/vcard/VCardParser_V40;->mVCardParserImpl:Landroid/pim/vcard/VCardParserImpl_V30;
 
     invoke-virtual {v0}, Landroid/pim/vcard/VCardParserImpl_V30;->cancel()V
 
+    .line 77
     return-void
 .end method
 
@@ -404,9 +414,11 @@
     .end annotation
 
     .prologue
+    .line 71
     iget-object v0, p0, Landroid/pim/vcard/VCardParser_V40;->mVCardParserImpl:Landroid/pim/vcard/VCardParserImpl_V30;
 
     invoke-virtual {v0, p1, p2}, Landroid/pim/vcard/VCardParserImpl_V30;->parse(Ljava/io/InputStream;Landroid/pim/vcard/VCardInterpreter;)V
 
+    .line 72
     return-void
 .end method

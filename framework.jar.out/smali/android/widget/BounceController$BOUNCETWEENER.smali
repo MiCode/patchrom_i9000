@@ -60,6 +60,7 @@
     .locals 10
 
     .prologue
+    .line 416
     new-instance v0, Landroid/widget/BounceController$BOUNCETWEENER;
 
     const-string v1, "EXPO_DEFAULT"
@@ -76,6 +77,7 @@
 
     sput-object v0, Landroid/widget/BounceController$BOUNCETWEENER;->EXPO_DEFAULT:Landroid/widget/BounceController$BOUNCETWEENER;
 
+    .line 439
     new-instance v0, Landroid/widget/BounceController$BOUNCETWEENER;
 
     const-string v1, "BOUNCE_EASE_IN_OUT"
@@ -92,6 +94,7 @@
 
     sput-object v0, Landroid/widget/BounceController$BOUNCETWEENER;->BOUNCE_EASE_IN_OUT:Landroid/widget/BounceController$BOUNCETWEENER;
 
+    .line 476
     new-instance v0, Landroid/widget/BounceController$BOUNCETWEENER;
 
     const-string v1, "BOUNCE_EASE_IN_OUT2"
@@ -108,6 +111,7 @@
 
     sput-object v0, Landroid/widget/BounceController$BOUNCETWEENER;->BOUNCE_EASE_IN_OUT2:Landroid/widget/BounceController$BOUNCETWEENER;
 
+    .line 502
     new-instance v0, Landroid/widget/BounceController$BOUNCETWEENER;
 
     const-string v1, "SIN_EASE_IN_OUT"
@@ -134,6 +138,7 @@
 
     sput-object v0, Landroid/widget/BounceController$BOUNCETWEENER;->SIN_EASE_IN_OUT:Landroid/widget/BounceController$BOUNCETWEENER;
 
+    .line 520
     new-instance v0, Landroid/widget/BounceController$BOUNCETWEENER;
 
     const-string v1, "QUINT_EASE_IN_OUT"
@@ -160,6 +165,7 @@
 
     sput-object v0, Landroid/widget/BounceController$BOUNCETWEENER;->QUINT_EASE_IN_OUT:Landroid/widget/BounceController$BOUNCETWEENER;
 
+    .line 541
     new-instance v0, Landroid/widget/BounceController$BOUNCETWEENER;
 
     const-string v1, "SIN_EASE_IN_OUT_1BOUNCE"
@@ -186,6 +192,7 @@
 
     sput-object v0, Landroid/widget/BounceController$BOUNCETWEENER;->SIN_EASE_IN_OUT_1BOUNCE:Landroid/widget/BounceController$BOUNCETWEENER;
 
+    .line 415
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/widget/BounceController$BOUNCETWEENER;
@@ -251,24 +258,33 @@
 
     const/16 v1, 0x190
 
+    .line 595
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 596
     iput-object p3, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mName:Ljava/lang/String;
 
+    .line 597
     iput-object p4, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mTweener:Landroid/widget/BounceController$Tweener;
 
+    .line 599
     const/high16 v0, 0x4040
 
     iput v0, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMaxGlowScale:F
 
+    .line 600
     iput v1, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMinDragDur:I
 
+    .line 601
     iput v1, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMaxDragDur:I
 
+    .line 602
     iput v2, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMinFlingDur:I
 
+    .line 603
     iput v2, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMaxFlingDur:I
 
+    .line 604
     return-void
 .end method
 
@@ -293,22 +309,31 @@
     .end annotation
 
     .prologue
+    .line 607
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 608
     iput-object p3, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mName:Ljava/lang/String;
 
+    .line 609
     iput-object p4, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mTweener:Landroid/widget/BounceController$Tweener;
 
+    .line 611
     iput p5, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMaxGlowScale:F
 
+    .line 612
     iput p6, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMinDragDur:I
 
+    .line 613
     iput p7, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMaxDragDur:I
 
+    .line 614
     iput p8, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMinFlingDur:I
 
+    .line 615
     iput p9, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mMaxFlingDur:I
 
+    .line 616
     return-void
 .end method
 
@@ -317,6 +342,7 @@
     .parameter "name"
 
     .prologue
+    .line 415
     const-class v0, Landroid/widget/BounceController$BOUNCETWEENER;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -333,6 +359,7 @@
     .locals 1
 
     .prologue
+    .line 415
     sget-object v0, Landroid/widget/BounceController$BOUNCETWEENER;->$VALUES:[Landroid/widget/BounceController$BOUNCETWEENER;
 
     invoke-virtual {v0}, [Landroid/widget/BounceController$BOUNCETWEENER;->clone()Ljava/lang/Object;
@@ -350,6 +377,7 @@
     .locals 1
 
     .prologue
+    .line 619
     iget-object v0, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mName:Ljava/lang/String;
 
     return-object v0
@@ -359,6 +387,7 @@
     .locals 1
 
     .prologue
+    .line 623
     iget-object v0, p0, Landroid/widget/BounceController$BOUNCETWEENER;->mTweener:Landroid/widget/BounceController$Tweener;
 
     return-object v0

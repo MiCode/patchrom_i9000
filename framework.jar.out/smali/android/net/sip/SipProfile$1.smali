@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "in"
 
     .prologue
+    .line 61
     new-instance v0, Landroid/net/sip/SipProfile;
 
     const/4 v1, 0x0
@@ -58,6 +60,7 @@
     .parameter "x0"
 
     .prologue
+    .line 59
     invoke-virtual {p0, p1}, Landroid/net/sip/SipProfile$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/sip/SipProfile;
 
     move-result-object v0
@@ -70,6 +73,7 @@
     .parameter "size"
 
     .prologue
+    .line 65
     new-array v0, p1, [Landroid/net/sip/SipProfile;
 
     return-object v0
@@ -80,6 +84,7 @@
     .parameter "x0"
 
     .prologue
+    .line 59
     invoke-virtual {p0, p1}, Landroid/net/sip/SipProfile$1;->newArray(I)[Landroid/net/sip/SipProfile;
 
     move-result-object v0

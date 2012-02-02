@@ -485,6 +485,7 @@
     .parameter "includepad"
 
     .prologue
+    .line 54
     const/4 v10, 0x0
 
     const/4 v11, 0x0
@@ -511,6 +512,7 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;IILandroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZLandroid/text/TextUtils$TruncateAt;I)V
 
+    .line 56
     return-void
 .end method
 
@@ -1342,6 +1344,7 @@
 
     if-gtz v15, :cond_0
 
+    .line 94
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/text/StaticLayout;->mLines:[I
@@ -1733,6 +1736,7 @@
     :goto_1
     return v0
 
+    .line 89
     :cond_2
     move v0, v9
 
@@ -2135,6 +2139,7 @@
 
     iput v0, v1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
+    .line 90
     move/from16 v0, p5
 
     move-object/from16 v1, p13
@@ -2944,6 +2949,7 @@
 
     move-result v139
 
+    .line 97
     :cond_3
     add-int/lit8 v8, v8, 0x1
 
@@ -4996,6 +5002,7 @@
 
     invoke-virtual/range {v0 .. v14}, Landroid/text/StaticLayout;->generate(Ljava/lang/CharSequence;IILandroid/text/TextPaint;IILandroid/text/Layout$Alignment;FFZZZFLandroid/text/TextUtils$TruncateAt;)V
 
+    .line 47
     return-void
 .end method
 
@@ -5100,9 +5107,11 @@
 
     const/4 v0, 0x1
 
+    .line 933
     :goto_0
     return v0
 
+    .line 859
     :cond_0
     const/4 v0, 0x0
 
@@ -5202,6 +5211,7 @@
     :goto_1
     return v4
 
+    .line 1018
     :cond_2
     move v4, v3
 
@@ -5253,6 +5263,11 @@
     .parameter "line"
 
     .prologue
+    .line 1256
+    .line 1244
+    .line 1248
+    .line 1240
+    .line 1252
     iget-object v0, p0, Landroid/text/StaticLayout;->mLines:[I
 
     iget v1, p0, Landroid/text/StaticLayout;->mColumns:I
@@ -5272,6 +5287,7 @@
     .locals 1
 
     .prologue
+    .line 1264
     iget v0, p0, Landroid/text/StaticLayout;->mTopPadding:I
 
     return v0

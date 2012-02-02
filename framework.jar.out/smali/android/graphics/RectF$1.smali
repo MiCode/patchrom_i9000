@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 500
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,13 +45,16 @@
     .parameter "in"
 
     .prologue
+    .line 505
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
+    .line 506
     .local v0, r:Landroid/graphics/RectF;
     invoke-virtual {v0, p1}, Landroid/graphics/RectF;->readFromParcel(Landroid/os/Parcel;)V
 
+    .line 507
     return-object v0
 .end method
 
@@ -59,6 +63,7 @@
     .parameter "x0"
 
     .prologue
+    .line 500
     invoke-virtual {p0, p1}, Landroid/graphics/RectF$1;->createFromParcel(Landroid/os/Parcel;)Landroid/graphics/RectF;
 
     move-result-object v0
@@ -71,6 +76,7 @@
     .parameter "size"
 
     .prologue
+    .line 514
     new-array v0, p1, [Landroid/graphics/RectF;
 
     return-object v0
@@ -81,6 +87,7 @@
     .parameter "x0"
 
     .prologue
+    .line 500
     invoke-virtual {p0, p1}, Landroid/graphics/RectF$1;->newArray(I)[Landroid/graphics/RectF;
 
     move-result-object v0

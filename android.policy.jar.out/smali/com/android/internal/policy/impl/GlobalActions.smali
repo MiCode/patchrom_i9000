@@ -79,42 +79,53 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 76
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/GlobalActions;->mKeyguardShowing:Z
 
+    .line 77
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDeviceProvisioned:Z
 
+    .line 78
     sget-object v2, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;->Off:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAirplaneState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
+    .line 79
     sget-object v2, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;->Off:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDataNetworkState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
+    .line 80
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/GlobalActions;->mIsWaitingForEcmExit:Z
 
+    .line 578
     new-instance v2, Lcom/android/internal/policy/impl/GlobalActions$5;
 
     invoke-direct {v2, p0}, Lcom/android/internal/policy/impl/GlobalActions$5;-><init>(Lcom/android/internal/policy/impl/GlobalActions;)V
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 599
     new-instance v2, Lcom/android/internal/policy/impl/GlobalActions$6;
 
     invoke-direct {v2, p0}, Lcom/android/internal/policy/impl/GlobalActions$6;-><init>(Lcom/android/internal/policy/impl/GlobalActions;)V
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
+    .line 610
     new-instance v2, Lcom/android/internal/policy/impl/GlobalActions$7;
 
     invoke-direct {v2, p0}, Lcom/android/internal/policy/impl/GlobalActions$7;-><init>(Lcom/android/internal/policy/impl/GlobalActions;)V
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mHandler:Landroid/os/Handler;
 
+    .line 86
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
+    .line 87
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
     const-string v3, "audio"
@@ -127,6 +138,7 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAudioManager:Landroid/media/AudioManager;
 
+    .line 88
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
     const-string v3, "connectivity"
@@ -139,27 +151,33 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
+    .line 91
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 92
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 93
     const-string v2, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 94
     const-string v2, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 95
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 98
     const-string v2, "phone"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -168,6 +186,7 @@
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
+    .line 100
     .local v1, telephonyManager:Landroid/telephony/TelephonyManager;
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
@@ -175,6 +194,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
+    .line 101
     return-void
 .end method
 
@@ -183,6 +203,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -193,6 +214,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAudioManager:Landroid/media/AudioManager;
 
     return-object v0
@@ -203,6 +225,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -213,6 +236,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAirplaneModeOn:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
 
     return-object v0
@@ -223,6 +247,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
 
     return-object v0
@@ -233,6 +258,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
     return-object v0
@@ -243,6 +269,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     return-object v0
@@ -253,6 +280,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mIsWaitingForEcmExit:Z
 
     return v0
@@ -264,6 +292,7 @@
     .parameter "x1"
 
     .prologue
+    .line 57
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mIsWaitingForEcmExit:Z
 
     return p1
@@ -275,6 +304,7 @@
     .parameter "x1"
 
     .prologue
+    .line 57
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/GlobalActions;->changeAirplaneModeSystemSetting(Z)V
 
     return-void
@@ -285,6 +315,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAirplaneState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
     return-object v0
@@ -296,6 +327,7 @@
     .parameter "x1"
 
     .prologue
+    .line 57
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAirplaneState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
     return-object p1
@@ -306,6 +338,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
 
     return-object v0
@@ -316,6 +349,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mKeyguardShowing:Z
 
     return v0
@@ -326,6 +360,7 @@
     .parameter "x0"
 
     .prologue
+    .line 57
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDeviceProvisioned:Z
 
     return v0
@@ -336,6 +371,7 @@
     .parameter "on"
 
     .prologue
+    .line 624
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -351,27 +387,33 @@
     :goto_0
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
+    .line 628
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 629
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x2000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
+    .line 630
     const-string v1, "state"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    .line 631
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 632
     return-void
 
+    .line 624
     .end local v0           #intent:Landroid/content/Intent;
     :cond_0
     const/4 v3, 0x0
@@ -387,6 +429,7 @@
 
     const/4 v9, 0x4
 
+    .line 125
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$1;
 
     const v2, 0x1080031
@@ -405,6 +448,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mSilentModeToggle:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
 
+    .line 161
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$2;
 
     const v2, 0x10803cd
@@ -423,6 +467,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDataModeToggle:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
 
+    .line 183
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$3;
 
     const v2, 0x10801b5
@@ -441,6 +486,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAirplaneModeOn:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
 
+    .line 223
     new-array v0, v9, [Lcom/android/internal/policy/impl/GlobalActions$Action;
 
     const/4 v1, 0x0
@@ -477,6 +523,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
 
+    .line 249
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
 
     const/4 v1, 0x0
@@ -485,12 +532,14 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
 
+    .line 251
     new-instance v7, Landroid/app/AlertDialog$Builder;
 
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
     invoke-direct {v7, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
+    .line 253
     .local v7, ab:Landroid/app/AlertDialog$Builder;
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
 
@@ -500,10 +549,12 @@
 
     invoke-virtual {v0, v10}, Landroid/app/AlertDialog$Builder;->setInverseBackgroundForced(Z)Landroid/app/AlertDialog$Builder;
 
+    .line 256
     invoke-virtual {v7}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v8
 
+    .line 257
     .local v8, dialog:Landroid/app/AlertDialog;
     invoke-virtual {v8}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -513,6 +564,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
+    .line 258
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -527,15 +579,18 @@
 
     if-nez v0, :cond_0
 
+    .line 260
     invoke-virtual {v8}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     invoke-virtual {v0, v9, v9}, Landroid/view/Window;->setFlags(II)V
 
+    .line 264
     :cond_0
     invoke-virtual {v8, p0}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
+    .line 266
     return-object v8
 .end method
 
@@ -545,10 +600,12 @@
     .prologue
     const v4, 0x104014f
 
+    .line 273
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2, v4}, Landroid/app/AlertDialog;->setTitle(I)V
 
+    .line 276
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v2}, Landroid/media/AudioManager;->getRingerMode()I
@@ -563,6 +620,7 @@
 
     move v1, v2
 
+    .line 278
     .local v1, silentModeOn:Z
     :goto_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mSilentModeToggle:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
@@ -574,19 +632,23 @@
     :goto_1
     invoke-virtual {v2, v3}, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;->updateState(Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;)V
 
+    .line 282
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v2}, Landroid/net/ConnectivityManager;->getMobileDataEnabled()Z
 
     move-result v0
 
+    .line 284
     .local v0, dataModeOn:Z
     if-eqz v0, :cond_2
 
+    .line 285
     sget-object v2, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;->On:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDataNetworkState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
+    .line 290
     :goto_2
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAirplaneModeOn:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
 
@@ -594,20 +656,24 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;->updateState(Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;)V
 
+    .line 291
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDataModeToggle:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDataNetworkState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
     invoke-virtual {v2, v3}, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;->updateState(Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;)V
 
+    .line 293
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;->notifyDataSetChanged()V
 
+    .line 294
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mKeyguardShowing:Z
 
     if-eqz v2, :cond_3
 
+    .line 295
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
@@ -618,13 +684,16 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->setType(I)V
 
+    .line 299
     :goto_3
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2, v4}, Landroid/app/AlertDialog;->setTitle(I)V
 
+    .line 300
     return-void
 
+    .line 276
     .end local v0           #dataModeOn:Z
     .end local v1           #silentModeOn:Z
     :cond_0
@@ -634,12 +703,14 @@
 
     goto :goto_0
 
+    .line 278
     .restart local v1       #silentModeOn:Z
     :cond_1
     sget-object v3, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;->Off:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
     goto :goto_1
 
+    .line 287
     .restart local v0       #dataModeOn:Z
     :cond_2
     sget-object v2, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;->Off:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
@@ -648,6 +719,7 @@
 
     goto :goto_2
 
+    .line 297
     :cond_3
     iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
@@ -668,12 +740,14 @@
     .locals 1
 
     .prologue
+    .line 317
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 318
     :goto_0
     return v0
 
@@ -693,8 +767,10 @@
     .parameter "which"
 
     .prologue
+    .line 310
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
+    .line 311
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
 
     invoke-virtual {v0, p2}, Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;->getItem(I)Lcom/android/internal/policy/impl/GlobalActions$Action;
@@ -703,6 +779,7 @@
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/GlobalActions$Action;->onPress()V
 
+    .line 312
     return-void
 .end method
 
@@ -711,12 +788,14 @@
     .parameter "dialog"
 
     .prologue
+    .line 305
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mStatusBar:Landroid/app/StatusBarManager;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/StatusBarManager;->disable(I)V
 
+    .line 306
     return-void
 .end method
 
@@ -726,14 +805,18 @@
     .parameter "isDeviceProvisioned"
 
     .prologue
+    .line 108
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mKeyguardShowing:Z
 
+    .line 109
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDeviceProvisioned:Z
 
+    .line 110
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
     if-nez v0, :cond_0
 
+    .line 111
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
 
     const-string v1, "statusbar"
@@ -746,24 +829,29 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mStatusBar:Landroid/app/StatusBarManager;
 
+    .line 112
     invoke-direct {p0}, Lcom/android/internal/policy/impl/GlobalActions;->createDialog()Landroid/app/AlertDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
+    .line 114
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/policy/impl/GlobalActions;->prepareDialog()V
 
+    .line 116
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mStatusBar:Landroid/app/StatusBarManager;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/StatusBarManager;->disable(I)V
 
+    .line 117
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
+    .line 118
     return-void
 .end method

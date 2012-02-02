@@ -27,8 +27,10 @@
     .locals 0
 
     .prologue
+    .line 410
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 411
     return-void
 .end method
 
@@ -37,26 +39,31 @@
     .parameter "in"
 
     .prologue
+    .line 416
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 417
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ApplicationErrorReport$AnrInfo;->activity:Ljava/lang/String;
 
+    .line 418
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ApplicationErrorReport$AnrInfo;->cause:Ljava/lang/String;
 
+    .line 419
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ApplicationErrorReport$AnrInfo;->info:Ljava/lang/String;
 
+    .line 420
     return-void
 .end method
 
@@ -68,6 +75,7 @@
     .parameter "prefix"
 
     .prologue
+    .line 435
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,6 +102,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 436
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,6 +129,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 437
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,6 +156,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
+    .line 438
     return-void
 .end method
 
@@ -155,17 +166,21 @@
     .parameter "flags"
 
     .prologue
+    .line 426
     iget-object v0, p0, Landroid/app/ApplicationErrorReport$AnrInfo;->activity:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 427
     iget-object v0, p0, Landroid/app/ApplicationErrorReport$AnrInfo;->cause:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 428
     iget-object v0, p0, Landroid/app/ApplicationErrorReport$AnrInfo;->info:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 429
     return-void
 .end method

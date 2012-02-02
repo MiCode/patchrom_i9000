@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 168
     iput-object p1, p0, Landroid/widget/NumberPicker$4;->this$0:Landroid/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,16 +43,20 @@
     .parameter "hasFocus"
 
     .prologue
+    .line 174
     if-nez p2, :cond_0
 
+    .line 175
     iget-object v0, p0, Landroid/widget/NumberPicker$4;->this$0:Landroid/widget/NumberPicker;
 
     #calls: Landroid/widget/NumberPicker;->validateInput(Landroid/view/View;)V
     invoke-static {v0, p1}, Landroid/widget/NumberPicker;->access$800(Landroid/widget/NumberPicker;Landroid/view/View;)V
 
+    .line 186
     :goto_0
     return-void
 
+    .line 184
     :cond_0
     iget-object v0, p0, Landroid/widget/NumberPicker$4;->this$0:Landroid/widget/NumberPicker;
 

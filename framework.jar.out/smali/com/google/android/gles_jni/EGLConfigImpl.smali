@@ -13,10 +13,13 @@
     .parameter "config"
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljavax/microedition/khronos/egl/EGLConfig;-><init>()V
 
+    .line 26
     iput p1, p0, Lcom/google/android/gles_jni/EGLConfigImpl;->mEGLConfig:I
 
+    .line 27
     return-void
 .end method
 
@@ -26,6 +29,7 @@
     .locals 1
 
     .prologue
+    .line 30
     iget v0, p0, Lcom/google/android/gles_jni/EGLConfigImpl;->mEGLConfig:I
 
     return v0

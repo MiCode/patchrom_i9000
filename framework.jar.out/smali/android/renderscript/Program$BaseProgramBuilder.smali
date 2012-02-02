@@ -46,30 +46,40 @@
 
     const/4 v1, 0x0
 
+    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 84
     iput-object p1, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mRS:Landroid/renderscript/RenderScript;
 
+    .line 85
     new-array v0, v2, [Landroid/renderscript/Element;
 
     iput-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mInputs:[Landroid/renderscript/Element;
 
+    .line 86
     new-array v0, v2, [Landroid/renderscript/Element;
 
     iput-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mOutputs:[Landroid/renderscript/Element;
 
+    .line 87
     new-array v0, v2, [Landroid/renderscript/Type;
 
     iput-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mConstants:[Landroid/renderscript/Type;
 
+    .line 88
     iput v1, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mInputCount:I
 
+    .line 89
     iput v1, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mOutputCount:I
 
+    .line 90
     iput v1, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mConstantCount:I
 
+    .line 91
     iput v1, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mTextureCount:I
 
+    .line 92
     return-void
 .end method
 
@@ -85,12 +95,14 @@
     .end annotation
 
     .prologue
+    .line 116
     iget v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mConstantCount:I
 
     const/16 v1, 0x8
 
     if-lt v0, v1, :cond_0
 
+    .line 117
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Max input count exceeded."
@@ -99,6 +111,7 @@
 
     throw v0
 
+    .line 119
     :cond_0
     iget-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mConstants:[Landroid/renderscript/Type;
 
@@ -106,6 +119,7 @@
 
     aput-object p1, v0, v1
 
+    .line 120
     iget v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mConstantCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -125,12 +139,14 @@
     .end annotation
 
     .prologue
+    .line 100
     iget v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mInputCount:I
 
     const/16 v1, 0x8
 
     if-lt v0, v1, :cond_0
 
+    .line 101
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Max input count exceeded."
@@ -139,6 +155,7 @@
 
     throw v0
 
+    .line 103
     :cond_0
     iget-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mInputs:[Landroid/renderscript/Element;
 
@@ -150,6 +167,7 @@
 
     aput-object p1, v0, v1
 
+    .line 104
     return-void
 .end method
 
@@ -163,12 +181,14 @@
     .end annotation
 
     .prologue
+    .line 108
     iget v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mOutputCount:I
 
     const/16 v1, 0x8
 
     if-lt v0, v1, :cond_0
 
+    .line 109
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Max output count exceeded."
@@ -177,6 +197,7 @@
 
     throw v0
 
+    .line 111
     :cond_0
     iget-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mOutputs:[Landroid/renderscript/Element;
 
@@ -188,6 +209,7 @@
 
     aput-object p1, v0, v1
 
+    .line 112
     return-void
 .end method
 
@@ -198,12 +220,14 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 132
     iget v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mInputCount:I
 
     new-array v0, v0, [Landroid/renderscript/Element;
 
     iput-object v0, p1, Landroid/renderscript/Program;->mInputs:[Landroid/renderscript/Element;
 
+    .line 133
     iget-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mInputs:[Landroid/renderscript/Element;
 
     iget-object v1, p1, Landroid/renderscript/Program;->mInputs:[Landroid/renderscript/Element;
@@ -212,12 +236,14 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 134
     iget v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mOutputCount:I
 
     new-array v0, v0, [Landroid/renderscript/Element;
 
     iput-object v0, p1, Landroid/renderscript/Program;->mOutputs:[Landroid/renderscript/Element;
 
+    .line 135
     iget-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mOutputs:[Landroid/renderscript/Element;
 
     iget-object v1, p1, Landroid/renderscript/Program;->mOutputs:[Landroid/renderscript/Element;
@@ -226,12 +252,14 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 136
     iget v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mConstantCount:I
 
     new-array v0, v0, [Landroid/renderscript/Type;
 
     iput-object v0, p1, Landroid/renderscript/Program;->mConstants:[Landroid/renderscript/Type;
 
+    .line 137
     iget-object v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mConstants:[Landroid/renderscript/Type;
 
     iget-object v1, p1, Landroid/renderscript/Program;->mConstants:[Landroid/renderscript/Type;
@@ -240,10 +268,12 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 138
     iget v0, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mTextureCount:I
 
     iput v0, p1, Landroid/renderscript/Program;->mTextureCount:I
 
+    .line 139
     return-void
 .end method
 
@@ -252,8 +282,10 @@
     .parameter "s"
 
     .prologue
+    .line 95
     iput-object p1, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mShader:Ljava/lang/String;
 
+    .line 96
     return-void
 .end method
 
@@ -267,10 +299,12 @@
     .end annotation
 
     .prologue
+    .line 125
     const/16 v0, 0x8
 
     if-lt p1, v0, :cond_0
 
+    .line 126
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Max texture count exceeded."
@@ -279,8 +313,10 @@
 
     throw v0
 
+    .line 128
     :cond_0
     iput p1, p0, Landroid/renderscript/Program$BaseProgramBuilder;->mTextureCount:I
 
+    .line 129
     return-void
 .end method

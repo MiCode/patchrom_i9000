@@ -32,6 +32,7 @@
     .parameter
 
     .prologue
+    .line 503
     iput-object p1, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$RegisteredProvider;->this$0:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -22,12 +22,15 @@
     .locals 1
 
     .prologue
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 50
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/nfc/P2pDevice;->isClosed:Z
 
+    .line 56
     return-void
 .end method
 
@@ -42,6 +45,7 @@
     .end annotation
 
     .prologue
+    .line 66
     const/4 v0, 0x0
 
     return-object v0
@@ -51,6 +55,7 @@
     .locals 1
 
     .prologue
+    .line 77
     const/16 v0, 0xff
 
     return v0

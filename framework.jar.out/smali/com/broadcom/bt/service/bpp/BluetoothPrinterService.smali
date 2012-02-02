@@ -24,22 +24,28 @@
     .parameter "isAppService"
 
     .prologue
+    .line 48
     invoke-direct {p0}, Lcom/broadcom/bt/service/bpp/IBluetoothPrinterService$Stub;-><init>()V
 
+    .line 403
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mIsStarted:Z
 
+    .line 49
     const-string v0, "BluetoothPrinterService"
 
     const-string v1, "Initialize Bluetooth Printer Service"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 50
     iput-object p1, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mContext:Landroid/content/Context;
 
+    .line 51
     invoke-direct {p0}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->Native_InitBluetoothPrinter()V
 
+    .line 52
     return-void
 .end method
 
@@ -88,38 +94,46 @@
 
     const-string v3, "BluetoothPrinterService"
 
+    .line 299
     const-string v2, "BluetoothPrinterService"
 
     const-string v2, "abort"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 302
     :try_start_0
     invoke-direct {p0}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->Native_BluetoothPrinterAbort()V
 
+    .line 303
     invoke-static {}, Lcom/broadcom/bt/service/bpp/PrintManager;->getCurrentJob()Lcom/broadcom/bt/service/bpp/PrintJob;
 
     move-result-object v0
 
+    .line 304
     .local v0, job:Lcom/broadcom/bt/service/bpp/PrintJob;
     if-eqz v0, :cond_0
 
+    .line 305
     const/4 v2, 0x4
 
     iput v2, v0, Lcom/broadcom/bt/service/bpp/PrintJob;->mPrintState:I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 310
     .end local v0           #job:Lcom/broadcom/bt/service/bpp/PrintJob;
     :cond_0
     :goto_0
     return-void
 
+    .line 307
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 308
     .local v1, t:Ljava/lang/Throwable;
     const-string v2, "BluetoothPrinterService"
 
@@ -143,23 +157,28 @@
 
     const-string v2, "BluetoothPrinterService"
 
+    .line 348
     const-string v1, "BluetoothPrinterService"
 
     const-string v1, "cancelBppStatus"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 351
     :try_start_0
     invoke-virtual {p0}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->Native_BluetoothPrinterCancelBppStatus()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 355
     :goto_0
     return-void
 
+    .line 352
     :catch_0
     move-exception v0
 
+    .line 353
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothPrinterService"
 
@@ -179,6 +198,7 @@
     .end annotation
 
     .prologue
+    .line 179
     monitor-enter p0
 
     :try_start_0
@@ -187,14 +207,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 184
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 180
     :catch_0
     move-exception v0
 
+    .line 181
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "BluetoothPrinterService"
@@ -207,6 +230,7 @@
 
     goto :goto_0
 
+    .line 179
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -225,6 +249,7 @@
     .end annotation
 
     .prologue
+    .line 160
     monitor-enter p0
 
     :try_start_0
@@ -233,14 +258,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 164
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 161
     :catch_0
     move-exception v0
 
+    .line 162
     .local v0, e:Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -249,6 +277,7 @@
 
     goto :goto_0
 
+    .line 160
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -262,6 +291,7 @@
     .locals 0
 
     .prologue
+    .line 63
     return-void
 .end method
 
@@ -278,6 +308,7 @@
     .prologue
     const-string v4, "BluetoothPrinterService"
 
+    .line 206
     :try_start_0
     const-string v1, "BluetoothPrinterService"
 
@@ -321,20 +352,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 209
     invoke-virtual {p0}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->enable()V
 
+    .line 210
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->Native_BluetoothPrinterGetCapabilities(Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 215
     :goto_0
     return-void
 
+    .line 212
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 213
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothPrinterService"
 
@@ -349,6 +385,7 @@
     .locals 1
 
     .prologue
+    .line 55
     const-string v0, "bluetooth_bpp_service"
 
     return-object v0
@@ -358,6 +395,7 @@
     .locals 0
 
     .prologue
+    .line 60
     return-void
 .end method
 
@@ -374,13 +412,14 @@
     .prologue
     const-string v3, "BluetoothPrinterService"
 
+    .line 328
     const-string v1, "BluetoothPrinterService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "obexAuthenticationResponse("
+    const-string/jumbo v2, "obexAuthenticationResponse("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -406,21 +445,25 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 332
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->Native_BluetoothPrinterObexAuthenticationResponse(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 336
     :goto_0
     return-void
 
+    .line 333
     :catch_0
     move-exception v0
 
+    .line 334
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothPrinterService"
 
-    const-string v1, "obexAuthenticationResponse"
+    const-string/jumbo v1, "obexAuthenticationResponse"
 
     invoke-static {v3, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -439,13 +482,14 @@
     .prologue
     const-string v3, "BluetoothPrinterService"
 
+    .line 370
     const-string v1, "BluetoothPrinterService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "partialImageResponse("
+    const-string/jumbo v2, "partialImageResponse("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -467,21 +511,25 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 374
     :try_start_0
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->Native_BluetoothPrinterPartialImageResponse(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 378
     :goto_0
     return-void
 
+    .line 375
     :catch_0
     move-exception v0
 
+    .line 376
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothPrinterService"
 
-    const-string v1, "partialImageResponse"
+    const-string/jumbo v1, "partialImageResponse"
 
     invoke-static {v3, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -507,20 +555,23 @@
     .end annotation
 
     .prologue
+    .line 262
     invoke-static/range {p1 .. p10}, Lcom/broadcom/bt/service/bpp/PrintManager;->createJob(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILcom/broadcom/bt/service/bpp/BipParameters;Lcom/broadcom/bt/service/bpp/BppParameters;Lcom/broadcom/bt/service/bpp/BppObjectResolver;Lcom/broadcom/bt/service/bpp/IBluetoothPrinterTaskCallback;)Lcom/broadcom/bt/service/bpp/PrintJob;
 
     move-result-object v9
 
+    .line 265
     .local v9, job:Lcom/broadcom/bt/service/bpp/PrintJob;
     invoke-virtual {v9}, Lcom/broadcom/bt/service/bpp/PrintJob;->setStartState()V
 
+    .line 268
     const-string v0, "BluetoothPrinterService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "print("
+    const-string/jumbo v2, "print("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -644,11 +695,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 275
     :try_start_0
     invoke-virtual {p0}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->enable()V
 
+    .line 276
     invoke-static {v9}, Lcom/broadcom/bt/service/bpp/PrintManager;->setCurrentJob(Lcom/broadcom/bt/service/bpp/PrintJob;)V
 
+    .line 277
     iget-object v1, v9, Lcom/broadcom/bt/service/bpp/PrintJob;->mBluetoothAddress:Ljava/lang/String;
 
     iget v2, v9, Lcom/broadcom/bt/service/bpp/PrintJob;->mServiceMask:I
@@ -671,20 +725,23 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 283
     :goto_0
     iget-wide v0, v9, Lcom/broadcom/bt/service/bpp/PrintJob;->mJobId:J
 
     return-wide v0
 
+    .line 280
     :catch_0
     move-exception v0
 
     move-object v10, v0
 
+    .line 281
     .local v10, t:Ljava/lang/Throwable;
     const-string v0, "BluetoothPrinterService"
 
-    const-string v1, "print"
+    const-string/jumbo v1, "print"
 
     invoke-static {v0, v1, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -703,13 +760,14 @@
     .prologue
     const-string v3, "BluetoothPrinterService"
 
+    .line 392
     const-string v1, "BluetoothPrinterService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "refObjectResponse("
+    const-string/jumbo v2, "refObjectResponse("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -731,21 +789,25 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 395
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->Native_BluetoothPrinterRefObjectResponse(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 399
     :goto_0
     return-void
 
+    .line 396
     :catch_0
     move-exception v0
 
+    .line 397
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothPrinterService"
 
-    const-string v1, "refObjectResponse"
+    const-string/jumbo v1, "refObjectResponse"
 
     invoke-static {v3, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -762,16 +824,19 @@
     .end annotation
 
     .prologue
+    .line 125
     iget-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     if-eqz v0, :cond_0
 
+    .line 126
     iget-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;->registerClientCallback(Lcom/broadcom/bt/service/bpp/IBluetoothPrinterCallback;)Z
 
     move-result v0
 
+    .line 128
     :goto_0
     return v0
 
@@ -787,6 +852,7 @@
     .prologue
     const-string v0, "BluetoothPrinterService"
 
+    .line 66
     monitor-enter p0
 
     :try_start_0
@@ -794,19 +860,22 @@
 
     if-eqz v0, :cond_0
 
+    .line 68
     const-string v0, "BluetoothPrinterService"
 
-    const-string v1, "start() called, but service already running.Ignoring..."
+    const-string/jumbo v1, "start() called, but service already running.Ignoring..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 84
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 75
     :cond_0
     :try_start_1
     const-string v0, "BluetoothPrinterService"
@@ -815,16 +884,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 77
     iget-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     if-nez v0, :cond_1
 
+    .line 78
     const-string v0, "BluetoothPrinterService"
 
     const-string v1, "Starting BluetoothPrinterEventLoop..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 79
     new-instance v0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     iget-object v1, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mContext:Landroid/content/Context;
@@ -833,10 +905,12 @@
 
     iput-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
+    .line 80
     iget-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     invoke-virtual {v0}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;->start()V
 
+    .line 82
     :cond_1
     const/4 v0, 0x1
 
@@ -846,6 +920,7 @@
 
     goto :goto_0
 
+    .line 66
     :catchall_0
     move-exception v0
 
@@ -860,6 +935,7 @@
     .prologue
     const-string v0, "BluetoothPrinterService"
 
+    .line 87
     monitor-enter p0
 
     :try_start_0
@@ -867,19 +943,22 @@
 
     if-nez v0, :cond_0
 
+    .line 89
     const-string v0, "BluetoothPrinterService"
 
-    const-string v1, "stop() called, but service already disabled. Ignoring..."
+    const-string/jumbo v1, "stop() called, but service already disabled. Ignoring..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 107
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 95
     :cond_0
     :try_start_1
     const-string v0, "BluetoothPrinterService"
@@ -888,24 +967,29 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 98
     iget-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     if-eqz v0, :cond_1
 
+    .line 100
     const-string v0, "BluetoothPrinterService"
 
     const-string v1, "Stopping BluetoothPrinterEventLoop..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 102
     iget-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     invoke-virtual {v0}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;->interrupt()V
 
+    .line 103
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
+    .line 105
     :cond_1
     const/4 v0, 0x0
 
@@ -915,6 +999,7 @@
 
     goto :goto_0
 
+    .line 87
     :catchall_0
     move-exception v0
 
@@ -933,16 +1018,19 @@
     .end annotation
 
     .prologue
+    .line 142
     iget-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     if-eqz v0, :cond_0
 
+    .line 143
     iget-object v0, p0, Lcom/broadcom/bt/service/bpp/BluetoothPrinterService;->mThread:Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;
 
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/bpp/BluetoothPrinterEventLoop;->unregisterClientCallback(Lcom/broadcom/bt/service/bpp/IBluetoothPrinterCallback;)Z
 
     move-result v0
 
+    .line 145
     :goto_0
     return v0
 

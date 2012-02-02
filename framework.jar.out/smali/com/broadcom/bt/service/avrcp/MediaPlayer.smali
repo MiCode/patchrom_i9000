@@ -35,10 +35,13 @@
     .parameter "manager"
 
     .prologue
+    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 93
     iput-object p1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->mManager:Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;
 
+    .line 94
     return-void
 .end method
 
@@ -103,12 +106,14 @@
     .parameter "UI"
 
     .prologue
+    .line 102
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.broadcom.bluetooth.avrcp"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 103
     .local v0, i:Landroid/content/Intent;
     const-string v2, "name"
 
@@ -116,57 +121,69 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 104
     new-instance v1, Ljava/lang/StringBuffer;
 
     const/16 v2, 0x40
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuffer;-><init>(I)V
 
+    .line 105
     .local v1, strb:Ljava/lang/StringBuffer;
     and-int/lit8 v2, p1, 0x1
 
     if-eqz v2, :cond_0
 
-    const-string v2, "track "
+    .line 106
+    const-string/jumbo v2, "track "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 107
     :cond_0
     and-int/lit8 v2, p1, 0x4
 
     if-eqz v2, :cond_1
 
-    const-string v2, "progress "
+    .line 108
+    const-string/jumbo v2, "progress "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 109
     :cond_1
     and-int/lit8 v2, p1, 0x2
 
     if-eqz v2, :cond_2
 
-    const-string v2, "play/pause "
+    .line 110
+    const-string/jumbo v2, "play/pause "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 111
     :cond_2
     and-int/lit8 v2, p1, 0x8
 
     if-eqz v2, :cond_3
 
-    const-string v2, "shuffle "
+    .line 112
+    const-string/jumbo v2, "shuffle "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 113
     :cond_3
     and-int/lit8 v2, p1, 0x10
 
     if-eqz v2, :cond_4
 
-    const-string v2, "repeat "
+    .line 114
+    const-string/jumbo v2, "repeat "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 115
     :cond_4
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->length()I
 
@@ -174,6 +191,7 @@
 
     if-lez v2, :cond_5
 
+    .line 116
     const-string v2, "controls"
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -182,6 +200,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 118
     :cond_5
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->mManager:Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;
 
@@ -191,6 +210,7 @@
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 119
     return-void
 .end method
 

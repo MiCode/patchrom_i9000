@@ -42,12 +42,14 @@
     .parameter "context"
 
     .prologue
+    .line 63
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/broadcom/bt/preference/ResourceListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 64
     return-void
 .end method
 
@@ -57,10 +59,12 @@
     .parameter "attrs"
 
     .prologue
+    .line 59
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/broadcom/bt/preference/ResourceListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 60
     return-void
 .end method
 
@@ -73,21 +77,26 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 48
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 45
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mAdapter:Landroid/widget/ListAdapter;
 
+    .line 49
     sget-object v1, Lcom/android/internal/R$styleable;->ListPreference:[I
 
     invoke-virtual {p1, p2, v1, v2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
+    .line 55
     .local v0, a:Landroid/content/res/TypedArray;
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 56
     return-void
 .end method
 
@@ -95,6 +104,7 @@
     .locals 1
 
     .prologue
+    .line 160
     iget v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mValue:I
 
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/preference/ResourceListPreference;->findIndexOfValue(I)I
@@ -111,12 +121,15 @@
     .parameter "value"
 
     .prologue
+    .line 153
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mEntryValues:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
+    .line 154
     const/4 v0, -0x1
 
+    .line 156
     :goto_0
     return v0
 
@@ -147,6 +160,7 @@
     .end annotation
 
     .prologue
+    .line 89
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mEntryValues:Ljava/util/ArrayList;
 
     return-object v0
@@ -156,6 +170,7 @@
     .locals 1
 
     .prologue
+    .line 222
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mIPreferenceChangeListener:Lcom/broadcom/bt/preference/IPreferenceChangeListener;
 
     return-object v0
@@ -165,6 +180,7 @@
     .locals 1
 
     .prologue
+    .line 134
     iget v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mValue:I
 
     return v0
@@ -174,12 +190,15 @@
     .locals 2
 
     .prologue
+    .line 110
     invoke-super {p0}, Landroid/preference/DialogPreference;->notifyChanged()V
 
+    .line 111
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mIPreferenceChangeListener:Lcom/broadcom/bt/preference/IPreferenceChangeListener;
 
     if-eqz v0, :cond_0
 
+    .line 112
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mIPreferenceChangeListener:Lcom/broadcom/bt/preference/IPreferenceChangeListener;
 
     iget v1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mValue:I
@@ -190,6 +209,7 @@
 
     invoke-interface {v0, p0, v1}, Lcom/broadcom/bt/preference/IPreferenceChangeListener;->onPreferenceChanged(Landroid/preference/Preference;Ljava/lang/Object;)V
 
+    .line 114
     :cond_0
     return-void
 .end method
@@ -199,8 +219,10 @@
     .parameter "positiveResult"
 
     .prologue
+    .line 194
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onDialogClosed(Z)V
 
+    .line 196
     if-eqz p1, :cond_0
 
     iget v1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mClickedDialogEntryIndex:I
@@ -211,6 +233,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 198
     iget-object v1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mEntryValues:Ljava/util/ArrayList;
 
     iget v2, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mClickedDialogEntryIndex:I
@@ -225,6 +248,7 @@
 
     move-result v0
 
+    .line 199
     .local v0, value:I
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -236,8 +260,10 @@
 
     if-eqz v1, :cond_0
 
+    .line 200
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/preference/ResourceListPreference;->setValue(I)V
 
+    .line 203
     .end local v0           #value:I
     :cond_0
     return-void
@@ -249,6 +275,7 @@
     .parameter "index"
 
     .prologue
+    .line 227
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -263,12 +290,15 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 165
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onPrepareDialogBuilder(Landroid/app/AlertDialog$Builder;)V
 
+    .line 167
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mEntryValues:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
+    .line 168
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "ResourceListPreference requires an entryValues array."
@@ -277,6 +307,7 @@
 
     throw v0
 
+    .line 172
     :cond_0
     invoke-direct {p0}, Lcom/broadcom/bt/preference/ResourceListPreference;->getValueIndex()I
 
@@ -284,6 +315,7 @@
 
     iput v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mClickedDialogEntryIndex:I
 
+    .line 174
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mAdapter:Landroid/widget/ListAdapter;
 
     iget v1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mClickedDialogEntryIndex:I
@@ -294,8 +326,10 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
+    .line 189
     invoke-virtual {p1, v3, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
+    .line 190
     return-void
 .end method
 
@@ -304,6 +338,7 @@
     .parameter "state"
 
     .prologue
+    .line 262
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -318,12 +353,15 @@
 
     if-nez v2, :cond_1
 
+    .line 264
     :cond_0
     invoke-super {p0, p1}, Landroid/preference/DialogPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
+    .line 271
     :goto_0
     return-void
 
+    .line 268
     :cond_1
     move-object v0, p1
 
@@ -331,6 +369,7 @@
 
     move-object v1, v0
 
+    .line 269
     .local v1, myState:Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;
     invoke-virtual {v1}, Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -338,6 +377,7 @@
 
     invoke-super {p0, v2}, Landroid/preference/DialogPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
+    .line 270
     iget v2, v1, Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;->value:I
 
     invoke-virtual {p0, v2}, Lcom/broadcom/bt/preference/ResourceListPreference;->setValue(I)V
@@ -349,10 +389,12 @@
     .locals 3
 
     .prologue
+    .line 249
     invoke-super {p0}, Landroid/preference/DialogPreference;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
+    .line 250
     .local v1, superState:Landroid/os/Parcelable;
     invoke-virtual {p0}, Lcom/broadcom/bt/preference/ResourceListPreference;->isPersistent()Z
 
@@ -362,14 +404,17 @@
 
     move-object v2, v1
 
+    .line 257
     :goto_0
     return-object v2
 
+    .line 255
     :cond_0
     new-instance v0, Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;
 
     invoke-direct {v0, v1}, Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;-><init>(Landroid/os/Parcelable;)V
 
+    .line 256
     .local v0, myState:Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;
     invoke-virtual {p0}, Lcom/broadcom/bt/preference/ResourceListPreference;->getValue()I
 
@@ -379,6 +424,7 @@
 
     move-object v2, v0
 
+    .line 257
     goto :goto_0
 .end method
 
@@ -390,8 +436,10 @@
     .prologue
     const-string v2, "ResourceListPreference"
 
+    .line 232
     if-eqz p1, :cond_0
 
+    .line 234
     :try_start_0
     iget v1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mValue:I
 
@@ -403,16 +451,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 245
     .end local p2
     :goto_0
     return-void
 
+    .line 235
     .restart local p2
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 236
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "ResourceListPreference"
 
@@ -422,6 +473,7 @@
 
     goto :goto_0
 
+    .line 240
     .end local v0           #e:Ljava/lang/Exception;
     :cond_0
     :try_start_1
@@ -438,11 +490,13 @@
 
     goto :goto_0
 
+    .line 241
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
+    .line 242
     .restart local v0       #e:Ljava/lang/Exception;
     const-string v1, "ResourceListPreference"
 
@@ -458,14 +512,17 @@
     .parameter "adapter"
 
     .prologue
+    .line 78
     iput-object p1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mAdapter:Landroid/widget/ListAdapter;
 
+    .line 79
     invoke-virtual {p1}, Lcom/broadcom/bt/widget/IndexedDataArrayAdapter;->get()Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mEntryValues:Ljava/util/ArrayList;
 
+    .line 80
     return-void
 .end method
 
@@ -474,8 +531,10 @@
     .parameter "listener"
 
     .prologue
+    .line 213
     iput-object p1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mIPreferenceChangeListener:Lcom/broadcom/bt/preference/IPreferenceChangeListener;
 
+    .line 214
     return-void
 .end method
 
@@ -484,12 +543,15 @@
     .parameter "value"
 
     .prologue
+    .line 100
     iput p1, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mValue:I
 
+    .line 101
     invoke-virtual {p0}, Lcom/broadcom/bt/preference/ResourceListPreference;->getEditor()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
+    .line 102
     .local v0, editor:Landroid/content/SharedPreferences$Editor;
     invoke-virtual {p0}, Lcom/broadcom/bt/preference/ResourceListPreference;->getKey()Ljava/lang/String;
 
@@ -497,12 +559,16 @@
 
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 103
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
+    .line 104
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/preference/ResourceListPreference;->persistInt(I)Z
 
+    .line 105
     invoke-virtual {p0}, Lcom/broadcom/bt/preference/ResourceListPreference;->notifyChanged()V
 
+    .line 106
     return-void
 .end method
 
@@ -511,10 +577,12 @@
     .parameter "index"
 
     .prologue
+    .line 122
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mEntryValues:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
+    .line 123
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference;->mEntryValues:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -529,6 +597,7 @@
 
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/preference/ResourceListPreference;->setValue(I)V
 
+    .line 125
     :cond_0
     return-void
 .end method

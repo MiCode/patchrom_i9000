@@ -49,10 +49,12 @@
     .parameter "context"
 
     .prologue
+    .line 80
     const v0, 0x1030007
 
     invoke-direct {p0, p1, v0}, Landroid/app/ShutdownDialog;-><init>(Landroid/content/Context;I)V
 
+    .line 81
     return-void
 .end method
 
@@ -64,22 +66,29 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 84
     invoke-direct {p0, p1, p2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
+    .line 57
     const/16 v0, 0xc8
 
     iput v0, p0, Landroid/app/ShutdownDialog;->MAX_IMAGECOUNT:I
 
+    .line 61
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/ShutdownDialog;->cntImages:I
 
+    .line 70
     iput-object v1, p0, Landroid/app/ShutdownDialog;->mContext:Landroid/content/Context;
 
+    .line 73
     iput-object v1, p0, Landroid/app/ShutdownDialog;->mRunOnAnimationEnd:Ljava/lang/Runnable;
 
+    .line 85
     iput-object p1, p0, Landroid/app/ShutdownDialog;->mContext:Landroid/content/Context;
 
+    .line 86
     return-void
 .end method
 
@@ -88,6 +97,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     iget v0, p0, Landroid/app/ShutdownDialog;->handle:I
 
     return v0
@@ -98,6 +108,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     iget-object v0, p0, Landroid/app/ShutdownDialog;->buf:[I
 
     return-object v0
@@ -108,6 +119,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     iget-object v0, p0, Landroid/app/ShutdownDialog;->mImages:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -119,6 +131,7 @@
     .parameter "x1"
 
     .prologue
+    .line 52
     iput-object p1, p0, Landroid/app/ShutdownDialog;->mImages:Landroid/graphics/Bitmap;
 
     return-object p1
@@ -129,6 +142,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     iget v0, p0, Landroid/app/ShutdownDialog;->width:I
 
     return v0
@@ -139,6 +153,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     iget v0, p0, Landroid/app/ShutdownDialog;->height:I
 
     return v0
@@ -149,6 +164,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     iget-object v0, p0, Landroid/app/ShutdownDialog;->mShutdownView:Landroid/widget/ImageView;
 
     return-object v0
@@ -159,6 +175,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     iget-object v0, p0, Landroid/app/ShutdownDialog;->mRunOnAnimationEnd:Ljava/lang/Runnable;
 
     return-object v0
@@ -169,6 +186,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     iget-object v0, p0, Landroid/app/ShutdownDialog;->mViewUpdateHandler:Landroid/os/Handler;
 
     return-object v0
@@ -183,14 +201,17 @@
     .prologue
     const-string v4, "ShutdownDialog"
 
+    .line 90
     const-string v2, "ShutdownDialog"
 
-    const-string v2, "onCreate"
+    const-string/jumbo v2, "onCreate"
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 91
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
+    .line 93
     invoke-virtual {p0}, Landroid/app/ShutdownDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
@@ -199,24 +220,29 @@
 
     move-result-object v0
 
+    .line 94
     .local v0, l:Landroid/view/WindowManager$LayoutParams;
     new-instance v1, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v1}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
+    .line 96
     .local v1, nl:Landroid/view/WindowManager$LayoutParams;
     invoke-virtual {v1, v0}, Landroid/view/WindowManager$LayoutParams;->copyFrom(Landroid/view/WindowManager$LayoutParams;)I
 
+    .line 97
     const/4 v2, 0x1
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
 
+    .line 99
     invoke-virtual {p0}, Landroid/app/ShutdownDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
+    .line 101
     new-instance v2, Landroid/widget/ImageView;
 
     iget-object v3, p0, Landroid/app/ShutdownDialog;->mContext:Landroid/content/Context;
@@ -225,10 +251,12 @@
 
     iput-object v2, p0, Landroid/app/ShutdownDialog;->mShutdownView:Landroid/widget/ImageView;
 
+    .line 102
     iget-object v2, p0, Landroid/app/ShutdownDialog;->mShutdownView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v2}, Landroid/app/ShutdownDialog;->setContentView(Landroid/view/View;)V
 
+    .line 104
     const-string v2, "//system/media/video/shutdown/shutdown.qmg"
 
     invoke-static {v2}, Landroid/app/LibQmg;->qmgOpen(Ljava/lang/String;)I
@@ -237,6 +265,7 @@
 
     iput v2, p0, Landroid/app/ShutdownDialog;->handle:I
 
+    .line 105
     iget v2, p0, Landroid/app/ShutdownDialog;->handle:I
 
     invoke-static {v2}, Landroid/app/LibQmg;->qmgGetWidth(I)I
@@ -245,6 +274,7 @@
 
     iput v2, p0, Landroid/app/ShutdownDialog;->width:I
 
+    .line 106
     iget v2, p0, Landroid/app/ShutdownDialog;->handle:I
 
     invoke-static {v2}, Landroid/app/LibQmg;->qmgGetHeight(I)I
@@ -253,6 +283,7 @@
 
     iput v2, p0, Landroid/app/ShutdownDialog;->height:I
 
+    .line 108
     const-string v2, "ShutdownDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -277,6 +308,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 109
     const-string v2, "ShutdownDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -301,6 +333,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 111
     iget v2, p0, Landroid/app/ShutdownDialog;->width:I
 
     iget v3, p0, Landroid/app/ShutdownDialog;->height:I
@@ -311,12 +344,14 @@
 
     iput-object v2, p0, Landroid/app/ShutdownDialog;->buf:[I
 
+    .line 112
     new-instance v2, Landroid/app/ShutdownDialog$1;
 
     invoke-direct {v2, p0}, Landroid/app/ShutdownDialog$1;-><init>(Landroid/app/ShutdownDialog;)V
 
     iput-object v2, p0, Landroid/app/ShutdownDialog;->mViewUpdateHandler:Landroid/os/Handler;
 
+    .line 161
     return-void
 .end method
 
@@ -324,26 +359,31 @@
     .locals 3
 
     .prologue
+    .line 165
     invoke-super {p0}, Landroid/app/Dialog;->onStart()V
 
+    .line 166
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/app/ShutdownDialog;->mHasStarted:Z
 
+    .line 168
     iget-object v1, p0, Landroid/app/ShutdownDialog;->mViewUpdateHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
+    .line 169
     iget-object v1, p0, Landroid/app/ShutdownDialog;->mViewUpdateHandler:Landroid/os/Handler;
 
     const/16 v2, 0x12c
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
+    .line 174
     :cond_0
     iget-object v1, p0, Landroid/app/ShutdownDialog;->mContext:Landroid/content/Context;
 
-    const-string v2, "statusbar"
+    const-string/jumbo v2, "statusbar"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -351,18 +391,23 @@
 
     check-cast v0, Landroid/app/StatusBarManager;
 
+    .line 176
     .local v0, statusBarManager:Landroid/app/StatusBarManager;
     if-eqz v0, :cond_1
 
+    .line 177
     invoke-virtual {v0}, Landroid/app/StatusBarManager;->collapse()V
 
+    .line 180
     :cond_1
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->startSoundThreadForPowerOff()V
 
+    .line 182
     iget-object v1, p0, Landroid/app/ShutdownDialog;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_2
 
+    .line 184
     iget-object v1, p0, Landroid/app/ShutdownDialog;->mContext:Landroid/content/Context;
 
     const-string v2, "keyguard"
@@ -375,6 +420,7 @@
 
     iput-object v1, p0, Landroid/app/ShutdownDialog;->mKeyguardManager:Landroid/app/KeyguardManager;
 
+    .line 185
     iget-object v1, p0, Landroid/app/ShutdownDialog;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     const-string v2, "ShutdownDialog"
@@ -385,10 +431,12 @@
 
     iput-object v1, p0, Landroid/app/ShutdownDialog;->mKeyguardLock:Landroid/app/KeyguardManager$KeyguardLock;
 
+    .line 186
     iget-object v1, p0, Landroid/app/ShutdownDialog;->mKeyguardLock:Landroid/app/KeyguardManager$KeyguardLock;
 
     invoke-virtual {v1}, Landroid/app/KeyguardManager$KeyguardLock;->disableKeyguard()V
 
+    .line 189
     :cond_2
     return-void
 .end method
@@ -397,12 +445,15 @@
     .locals 1
 
     .prologue
+    .line 193
     invoke-super {p0}, Landroid/app/Dialog;->onStop()V
 
+    .line 194
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/app/ShutdownDialog;->mHasStarted:Z
 
+    .line 195
     return-void
 .end method
 
@@ -411,7 +462,9 @@
     .parameter "r"
 
     .prologue
+    .line 199
     iput-object p1, p0, Landroid/app/ShutdownDialog;->mRunOnAnimationEnd:Ljava/lang/Runnable;
 
+    .line 200
     return-void
 .end method

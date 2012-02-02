@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1394
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog$2;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "which"
 
     .prologue
+    .line 1396
     const-string v1, "EETVM"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -64,6 +66,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1397
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog$2;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     iget-object v1, v1, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mColorInts:[Ljava/lang/CharSequence;
@@ -82,6 +85,7 @@
 
     sub-int v0, v1, v2
 
+    .line 1399
     .local v0, color:I
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog$2;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
@@ -89,5 +93,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/widget/EditStyledText;->setBackgroundColor(I)V
 
+    .line 1400
     return-void
 .end method

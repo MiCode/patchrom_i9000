@@ -34,12 +34,15 @@
     .locals 1
 
     .prologue
+    .line 21
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 22
     const-string v0, "android.content.IIntentReceiver"
 
     invoke-virtual {p0, p0, v0}, Landroid/content/IIntentReceiver$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 23
     return-void
 .end method
 
@@ -48,13 +51,17 @@
     .parameter "obj"
 
     .prologue
+    .line 30
     if-nez p0, :cond_0
 
+    .line 31
     const/4 v1, 0x0
 
+    .line 37
     :goto_0
     return-object v1
 
+    .line 33
     :cond_0
     const-string v1, "android.content.IIntentReceiver"
 
@@ -62,6 +69,7 @@
 
     move-result-object v0
 
+    .line 34
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -69,6 +77,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 35
     check-cast v0, Landroid/content/IIntentReceiver;
 
     .end local v0           #iin:Landroid/os/IInterface;
@@ -76,6 +85,7 @@
 
     goto :goto_0
 
+    .line 37
     .restart local v0       #iin:Landroid/os/IInterface;
     :cond_1
     new-instance v1, Landroid/content/IIntentReceiver$Stub$Proxy;
@@ -91,6 +101,7 @@
     .locals 0
 
     .prologue
+    .line 41
     return-object p0
 .end method
 
@@ -113,8 +124,10 @@
 
     const-string v9, "android.content.IIntentReceiver"
 
+    .line 45
     sparse-switch p1, :sswitch_data_0
 
+    .line 81
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -122,6 +135,7 @@
     :goto_0
     return v0
 
+    .line 49
     :sswitch_0
     const-string v0, "android.content.IIntentReceiver"
 
@@ -129,19 +143,23 @@
 
     move v0, v7
 
+    .line 50
     goto :goto_0
 
+    .line 54
     :sswitch_1
     const-string v0, "android.content.IIntentReceiver"
 
     invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 56
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 57
     sget-object v0, Landroid/content/Intent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -150,17 +168,20 @@
 
     check-cast v1, Landroid/content/Intent;
 
+    .line 63
     .local v1, _arg0:Landroid/content/Intent;
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 65
     .local v2, _arg1:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 67
     .local v3, _arg2:Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -168,6 +189,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 68
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -176,6 +198,7 @@
 
     check-cast v4, Landroid/os/Bundle;
 
+    .line 74
     .local v4, _arg3:Landroid/os/Bundle;
     :goto_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -186,6 +209,7 @@
 
     move v5, v7
 
+    .line 76
     .local v5, _arg4:Z
     :goto_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -200,12 +224,15 @@
     :goto_4
     move-object v0, p0
 
+    .line 77
     invoke-virtual/range {v0 .. v6}, Landroid/content/IIntentReceiver$Stub;->performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZ)V
 
     move v0, v7
 
+    .line 78
     goto :goto_0
 
+    .line 60
     .end local v1           #_arg0:Landroid/content/Intent;
     .end local v2           #_arg1:I
     .end local v3           #_arg2:Ljava/lang/String;
@@ -218,6 +245,7 @@
     .restart local v1       #_arg0:Landroid/content/Intent;
     goto :goto_1
 
+    .line 71
     .restart local v2       #_arg1:I
     .restart local v3       #_arg2:Ljava/lang/String;
     :cond_1
@@ -229,14 +257,17 @@
     :cond_2
     move v5, v8
 
+    .line 74
     goto :goto_3
 
     .restart local v5       #_arg4:Z
     :cond_3
     move v6, v8
 
+    .line 76
     goto :goto_4
 
+    .line 45
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

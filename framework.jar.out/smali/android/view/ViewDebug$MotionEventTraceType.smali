@@ -44,6 +44,7 @@
 
     const/4 v2, 0x0
 
+    .line 413
     new-instance v0, Landroid/view/ViewDebug$MotionEventTraceType;
 
     const-string v1, "DISPATCH"
@@ -52,6 +53,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$MotionEventTraceType;->DISPATCH:Landroid/view/ViewDebug$MotionEventTraceType;
 
+    .line 414
     new-instance v0, Landroid/view/ViewDebug$MotionEventTraceType;
 
     const-string v1, "ON_INTERCEPT"
@@ -60,6 +62,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$MotionEventTraceType;->ON_INTERCEPT:Landroid/view/ViewDebug$MotionEventTraceType;
 
+    .line 415
     new-instance v0, Landroid/view/ViewDebug$MotionEventTraceType;
 
     const-string v1, "ON_TOUCH"
@@ -68,6 +71,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$MotionEventTraceType;->ON_TOUCH:Landroid/view/ViewDebug$MotionEventTraceType;
 
+    .line 412
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/view/ViewDebug$MotionEventTraceType;
@@ -100,6 +104,7 @@
     .end annotation
 
     .prologue
+    .line 412
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,6 +115,7 @@
     .parameter "name"
 
     .prologue
+    .line 412
     const-class v0, Landroid/view/ViewDebug$MotionEventTraceType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,6 +132,7 @@
     .locals 1
 
     .prologue
+    .line 412
     sget-object v0, Landroid/view/ViewDebug$MotionEventTraceType;->$VALUES:[Landroid/view/ViewDebug$MotionEventTraceType;
 
     invoke-virtual {v0}, [Landroid/view/ViewDebug$MotionEventTraceType;->clone()Ljava/lang/Object;

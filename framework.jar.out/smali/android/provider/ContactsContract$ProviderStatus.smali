@@ -37,9 +37,10 @@
     .locals 2
 
     .prologue
+    .line 5461
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string v1, "provider_status"
+    const-string/jumbo v1, "provider_status"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -54,7 +55,9 @@
     .locals 0
 
     .prologue
+    .line 5452
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5453
     return-void
 .end method

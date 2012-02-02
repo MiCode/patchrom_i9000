@@ -32,10 +32,13 @@
     .parameter "preferenceManager"
 
     .prologue
+    .line 46
     invoke-direct {p0, p1}, Landroid/preference/GenericInflater;-><init>(Landroid/content/Context;)V
 
+    .line 47
     invoke-direct {p0, p2}, Landroid/preference/PreferenceInflater;->init(Landroid/preference/PreferenceManager;)V
 
+    .line 48
     return-void
 .end method
 
@@ -59,11 +62,14 @@
     .end annotation
 
     .prologue
+    .line 51
     .local p1, original:Landroid/preference/GenericInflater;,"Landroid/preference/GenericInflater<Landroid/preference/Preference;Landroid/preference/PreferenceGroup;>;"
     invoke-direct {p0, p1, p3}, Landroid/preference/GenericInflater;-><init>(Landroid/preference/GenericInflater;Landroid/content/Context;)V
 
+    .line 52
     invoke-direct {p0, p2}, Landroid/preference/PreferenceInflater;->init(Landroid/preference/PreferenceManager;)V
 
+    .line 53
     return-void
 .end method
 
@@ -72,12 +78,15 @@
     .parameter "preferenceManager"
 
     .prologue
+    .line 61
     iput-object p1, p0, Landroid/preference/PreferenceInflater;->mPreferenceManager:Landroid/preference/PreferenceManager;
 
+    .line 62
     const-string v0, "android.preference."
 
     invoke-virtual {p0, v0}, Landroid/preference/PreferenceInflater;->setDefaultPackage(Ljava/lang/String;)V
 
+    .line 63
     return-void
 .end method
 
@@ -100,6 +109,7 @@
     .end annotation
 
     .prologue
+    .line 57
     new-instance v0, Landroid/preference/PreferenceInflater;
 
     iget-object v1, p0, Landroid/preference/PreferenceInflater;->mPreferenceManager:Landroid/preference/PreferenceManager;
@@ -123,10 +133,12 @@
     .prologue
     const-string v4, "PreferenceInflater"
 
+    .line 68
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 70
     .local v2, tag:Ljava/lang/String;
     const-string v3, "intent"
 
@@ -136,8 +148,10 @@
 
     if-eqz v3, :cond_1
 
+    .line 71
     const/4 v1, 0x0
 
+    .line 74
     .local v1, intent:Landroid/content/Intent;
     :try_start_0
     invoke-virtual {p0}, Landroid/preference/PreferenceInflater;->getContext()Landroid/content/Context;
@@ -154,24 +168,30 @@
 
     move-result-object v1
 
+    .line 80
     :goto_0
     if-eqz v1, :cond_0
 
+    .line 81
     invoke-virtual {p2, v1}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
+    .line 84
     :cond_0
     const/4 v3, 0x1
 
+    .line 87
     .end local v1           #intent:Landroid/content/Intent;
     :goto_1
     return v3
 
+    .line 75
     .restart local v1       #intent:Landroid/content/Intent;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
+    .line 76
     .local v0, e:Ljava/io/IOException;
     const-string v3, "PreferenceInflater"
 
@@ -179,12 +199,14 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 77
     const-string v3, "PreferenceInflater"
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
+    .line 87
     .end local v0           #e:Ljava/io/IOException;
     .end local v1           #intent:Landroid/content/Intent;
     :cond_1
@@ -205,6 +227,7 @@
     .end annotation
 
     .prologue
+    .line 39
     check-cast p2, Landroid/preference/Preference;
 
     .end local p2
@@ -222,6 +245,7 @@
     .parameter "x2"
 
     .prologue
+    .line 39
     check-cast p1, Landroid/preference/PreferenceGroup;
 
     .end local p1
@@ -242,14 +266,17 @@
     .parameter "xmlRoot"
 
     .prologue
+    .line 95
     if-nez p1, :cond_0
 
+    .line 96
     iget-object v0, p0, Landroid/preference/PreferenceInflater;->mPreferenceManager:Landroid/preference/PreferenceManager;
 
     invoke-virtual {p3, v0}, Landroid/preference/PreferenceGroup;->onAttachedToHierarchy(Landroid/preference/PreferenceManager;)V
 
     move-object v0, p3
 
+    .line 99
     :goto_0
     return-object v0
 

@@ -67,6 +67,7 @@
     .locals 0
 
     .prologue
+    .line 507
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -77,7 +78,8 @@
     .parameter "intent"
 
     .prologue
-    const-string v7, "pdus"
+    .line 761
+    const-string/jumbo v7, "pdus"
 
     invoke-virtual {p0, v7}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
 
@@ -92,11 +94,13 @@
 
     move-object v2, v0
 
+    .line 762
     .local v2, messages:[Ljava/lang/Object;
     array-length v7, v2
 
     new-array v5, v7, [[B
 
+    .line 764
     .local v5, pduObjs:[[B
     const/4 v1, 0x0
 
@@ -106,6 +110,7 @@
 
     if-ge v1, v7, :cond_0
 
+    .line 765
     aget-object p0, v2, v1
 
     check-cast p0, [B
@@ -114,31 +119,38 @@
 
     aput-object p0, v5, v1
 
+    .line 764
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 767
     :cond_0
     array-length v7, v5
 
     new-array v6, v7, [[B
 
+    .line 768
     .local v6, pdus:[[B
     array-length v4, v6
 
+    .line 769
     .local v4, pduCount:I
     new-array v3, v4, [Landroid/telephony/gsm/CbMessage;
 
+    .line 770
     .local v3, msgs:[Landroid/telephony/gsm/CbMessage;
     const/4 v1, 0x0
 
     :goto_1
     if-ge v1, v4, :cond_1
 
+    .line 771
     aget-object v7, v5, v1
 
     aput-object v7, v6, v1
 
+    .line 772
     aget-object v7, v6, v1
 
     invoke-static {v7}, Landroid/telephony/gsm/CbMessage;->createFromPdu([B)Landroid/telephony/gsm/CbMessage;
@@ -147,10 +159,12 @@
 
     aput-object v7, v3, v1
 
+    .line 770
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 774
     :cond_1
     return-object v3
 .end method
@@ -160,7 +174,8 @@
     .parameter "intent"
 
     .prologue
-    const-string v7, "pdus"
+    .line 743
+    const-string/jumbo v7, "pdus"
 
     invoke-virtual {p0, v7}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
 
@@ -175,11 +190,13 @@
 
     move-object v2, v0
 
+    .line 744
     .local v2, messages:[Ljava/lang/Object;
     array-length v7, v2
 
     new-array v5, v7, [[B
 
+    .line 746
     .local v5, pduObjs:[[B
     const/4 v1, 0x0
 
@@ -189,6 +206,7 @@
 
     if-ge v1, v7, :cond_0
 
+    .line 747
     aget-object p0, v2, v1
 
     check-cast p0, [B
@@ -197,31 +215,38 @@
 
     aput-object p0, v5, v1
 
+    .line 746
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 749
     :cond_0
     array-length v7, v5
 
     new-array v6, v7, [[B
 
+    .line 750
     .local v6, pdus:[[B
     array-length v4, v6
 
+    .line 751
     .local v4, pduCount:I
     new-array v3, v4, [Landroid/telephony/SmsMessage;
 
+    .line 752
     .local v3, msgs:[Landroid/telephony/SmsMessage;
     const/4 v1, 0x0
 
     :goto_1
     if-ge v1, v4, :cond_1
 
+    .line 753
     aget-object v7, v5, v1
 
     aput-object v7, v6, v1
 
+    .line 754
     aget-object v7, v6, v1
 
     invoke-static {v7}, Landroid/telephony/SmsMessage;->createFromPdu([B)Landroid/telephony/SmsMessage;
@@ -230,10 +255,12 @@
 
     aput-object v7, v3, v1
 
+    .line 752
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 756
     :cond_1
     return-object v3
 .end method

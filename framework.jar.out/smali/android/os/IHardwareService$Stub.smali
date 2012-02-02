@@ -36,12 +36,15 @@
     .locals 1
 
     .prologue
+    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 16
     const-string v0, "android.os.IHardwareService"
 
     invoke-virtual {p0, p0, v0}, Landroid/os/IHardwareService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 17
     return-void
 .end method
 
@@ -50,13 +53,17 @@
     .parameter "obj"
 
     .prologue
+    .line 24
     if-nez p0, :cond_0
 
+    .line 25
     const/4 v1, 0x0
 
+    .line 31
     :goto_0
     return-object v1
 
+    .line 27
     :cond_0
     const-string v1, "android.os.IHardwareService"
 
@@ -64,6 +71,7 @@
 
     move-result-object v0
 
+    .line 28
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -71,6 +79,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 29
     check-cast v0, Landroid/os/IHardwareService;
 
     .end local v0           #iin:Landroid/os/IInterface;
@@ -78,6 +87,7 @@
 
     goto :goto_0
 
+    .line 31
     .restart local v0       #iin:Landroid/os/IInterface;
     :cond_1
     new-instance v1, Landroid/os/IHardwareService$Stub$Proxy;
@@ -93,6 +103,7 @@
     .locals 0
 
     .prologue
+    .line 35
     return-object p0
 .end method
 
@@ -115,8 +126,10 @@
 
     const-string v4, "android.os.IHardwareService"
 
+    .line 39
     sparse-switch p1, :sswitch_data_0
 
+    .line 64
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -124,6 +137,7 @@
     :goto_0
     return v2
 
+    .line 43
     :sswitch_0
     const-string v2, "android.os.IHardwareService"
 
@@ -131,20 +145,25 @@
 
     move v2, v3
 
+    .line 44
     goto :goto_0
 
+    .line 48
     :sswitch_1
     const-string v2, "android.os.IHardwareService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 49
     invoke-virtual {p0}, Landroid/os/IHardwareService$Stub;->getFlashlightEnabled()Z
 
     move-result v1
 
+    .line 50
     .local v1, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 51
     if-eqz v1, :cond_0
 
     move v2, v3
@@ -154,19 +173,23 @@
 
     move v2, v3
 
+    .line 52
     goto :goto_0
 
     :cond_0
     move v2, v5
 
+    .line 51
     goto :goto_1
 
+    .line 56
     .end local v1           #_result:Z
     :sswitch_2
     const-string v2, "android.os.IHardwareService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 58
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -175,22 +198,27 @@
 
     move v0, v3
 
+    .line 59
     .local v0, _arg0:Z
     :goto_2
     invoke-virtual {p0, v0}, Landroid/os/IHardwareService$Stub;->setFlashlightEnabled(Z)V
 
+    .line 60
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v2, v3
 
+    .line 61
     goto :goto_0
 
     .end local v0           #_arg0:Z
     :cond_1
     move v0, v5
 
+    .line 58
     goto :goto_2
 
+    .line 39
     nop
 
     :sswitch_data_0

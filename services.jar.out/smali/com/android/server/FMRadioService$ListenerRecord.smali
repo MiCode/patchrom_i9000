@@ -27,11 +27,15 @@
     .parameter "binder"
 
     .prologue
+    .line 477
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 478
     iput-object p2, p0, Lcom/android/server/FMRadioService$ListenerRecord;->mBinder:Landroid/os/IBinder;
 
+    .line 479
     iput-object p1, p0, Lcom/android/server/FMRadioService$ListenerRecord;->mListener:Lcom/samsung/media/fmradio/internal/IFMEventListener;
 
+    .line 480
     return-void
 .end method

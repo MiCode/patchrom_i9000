@@ -40,12 +40,15 @@
     .parameter "menuType"
 
     .prologue
+    .line 172
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 173
     iput p2, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mMenuType:I
 
+    .line 174
     return-void
 .end method
 
@@ -54,6 +57,7 @@
     .parameter "x0"
 
     .prologue
+    .line 163
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mMenuView:Ljava/lang/ref/WeakReference;
 
     return-object v0
@@ -65,6 +69,7 @@
     .parameter "x1"
 
     .prologue
+    .line 163
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mMenuView:Ljava/lang/ref/WeakReference;
 
     return-object p1
@@ -76,10 +81,12 @@
     .locals 4
 
     .prologue
+    .line 178
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mInflater:Landroid/view/LayoutInflater;
 
     if-nez v1, :cond_0
 
+    .line 179
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
@@ -97,6 +104,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
+    .line 181
     .local v0, wrappedContext:Landroid/content/Context;
     const-string v1, "layout_inflater"
 
@@ -108,6 +116,7 @@
 
     iput-object v1, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mInflater:Landroid/view/LayoutInflater;
 
+    .line 185
     .end local v0           #wrappedContext:Landroid/content/Context;
     :cond_0
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mInflater:Landroid/view/LayoutInflater;
@@ -122,6 +131,7 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 189
     sget-object v3, Lcom/android/internal/view/menu/MenuBuilder;->LAYOUT_RES_FOR_TYPE:[I
 
     iget v4, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mMenuType:I
@@ -132,12 +142,15 @@
 
     move-object v3, v5
 
+    .line 213
     :goto_0
     return-object v3
 
+    .line 193
     :cond_0
     monitor-enter p0
 
+    .line 194
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mMenuView:Ljava/lang/ref/WeakReference;
 
@@ -153,10 +166,12 @@
 
     move-object v1, v3
 
+    .line 196
     .local v1, menuView:Lcom/android/internal/view/menu/MenuView;
     :goto_1
     if-nez v1, :cond_1
 
+    .line 197
     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->getInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
@@ -176,6 +191,7 @@
     .end local v1           #menuView:Lcom/android/internal/view/menu/MenuView;
     check-cast v1, Lcom/android/internal/view/menu/MenuView;
 
+    .line 199
     .restart local v1       #menuView:Lcom/android/internal/view/menu/MenuView;
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
@@ -183,12 +199,14 @@
 
     invoke-interface {v1, v3, v4}, Lcom/android/internal/view/menu/MenuView;->initialize(Lcom/android/internal/view/menu/MenuBuilder;I)V
 
+    .line 202
     new-instance v3, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v3, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mMenuView:Ljava/lang/ref/WeakReference;
 
+    .line 204
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
     #getter for: Lcom/android/internal/view/menu/MenuBuilder;->mFrozenViewStates:Landroid/util/SparseArray;
@@ -198,12 +216,14 @@
 
     if-eqz v3, :cond_1
 
+    .line 205
     move-object v0, v1
 
     check-cast v0, Landroid/view/View;
 
     move-object v2, v0
 
+    .line 206
     .local v2, view:Landroid/view/View;
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
@@ -214,6 +234,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->restoreHierarchyState(Landroid/util/SparseArray;)V
 
+    .line 209
     iget-object v3, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
     #getter for: Lcom/android/internal/view/menu/MenuBuilder;->mFrozenViewStates:Landroid/util/SparseArray;
@@ -227,6 +248,7 @@
 
     invoke-virtual {v3, v4}, Landroid/util/SparseArray;->remove(I)V
 
+    .line 213
     .end local v2           #view:Landroid/view/View;
     :cond_1
     monitor-exit p0
@@ -239,8 +261,10 @@
     :cond_2
     move-object v1, v5
 
+    .line 194
     goto :goto_1
 
+    .line 214
     :catchall_0
     move-exception v3
 
@@ -255,6 +279,7 @@
     .locals 1
 
     .prologue
+    .line 218
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuType;->mMenuView:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0

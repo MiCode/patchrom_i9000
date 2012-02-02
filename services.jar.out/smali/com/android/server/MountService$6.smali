@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 1641
     iput-object p1, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -41,6 +42,7 @@
 
     const-string v10, "MountService"
 
+    .line 1645
     :try_start_0
     const-string v5, "MountService"
 
@@ -77,6 +79,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1646
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->getUmsEnabling()Z
@@ -86,6 +89,7 @@
 
     if-eqz v5, :cond_0
 
+    .line 1648
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -94,6 +98,7 @@
 
     if-ge v2, v5, :cond_0
 
+    .line 1649
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->getUmsEnabling()Z
@@ -103,6 +108,7 @@
 
     if-nez v5, :cond_2
 
+    .line 1655
     .end local v2           #i:I
     :cond_0
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
@@ -116,6 +122,7 @@
 
     if-eqz v5, :cond_1
 
+    .line 1658
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->getUmsDisabling()Z
@@ -125,22 +132,26 @@
 
     if-eqz v5, :cond_3
 
+    .line 1659
     const-string v5, "MountService"
 
     const-string v6, "notifyShareAvailabilityChange -> skip (disabling ums mode by other process)"
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1686
     :cond_1
     :goto_1
     return-void
 
+    .line 1650
     .restart local v2       #i:I
     :cond_2
     const-wide/16 v5, 0x3e8
 
     invoke-static {v5, v6}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 1651
     const-string v5, "MountService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -169,10 +180,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1648
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 1662
     .end local v2           #i:I
     :cond_3
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
@@ -182,6 +195,7 @@
     #calls: Lcom/android/server/MountService;->setUmsDisabling(Z)V
     invoke-static {v5, v6}, Lcom/android/server/MountService;->access$2700(Lcom/android/server/MountService;Z)V
 
+    .line 1663
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v5
@@ -190,6 +204,7 @@
 
     move-result-object v1
 
+    .line 1664
     .local v1, firstPath:Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
@@ -200,11 +215,13 @@
     #calls: Lcom/android/server/MountService;->doShareUnshareVolume(Ljava/lang/String;Ljava/lang/String;Z)V
     invoke-static {v5, v1, v6, v7}, Lcom/android/server/MountService;->access$400(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;Z)V
 
+    .line 1665
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->actionReleasedMassStorage(Ljava/lang/String;)V
     invoke-static {v5, v1}, Lcom/android/server/MountService;->access$2800(Lcom/android/server/MountService;Ljava/lang/String;)V
 
+    .line 1666
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->doMountVolume(Ljava/lang/String;)I
@@ -215,6 +232,7 @@
     .local v3, rc:I
     if-eqz v3, :cond_4
 
+    .line 1667
     const-string v5, "MountService"
 
     const-string v6, "Failed to remount {%s} on UMS enabled-disconnect (%d)"
@@ -241,11 +259,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1669
     :cond_4
     sget-boolean v5, Lcom/android/server/StorageFeature;->INSTALLED_SECOND_DISK:Z
 
     if-eqz v5, :cond_6
 
+    .line 1670
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectorySd()Ljava/io/File;
 
     move-result-object v5
@@ -254,6 +274,7 @@
 
     move-result-object v4
 
+    .line 1671
     .local v4, secondPath:Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
@@ -283,6 +304,7 @@
 
     if-eqz v5, :cond_6
 
+    .line 1673
     :cond_5
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
@@ -293,11 +315,13 @@
     #calls: Lcom/android/server/MountService;->doShareUnshareVolume(Ljava/lang/String;Ljava/lang/String;Z)V
     invoke-static {v5, v4, v6, v7}, Lcom/android/server/MountService;->access$400(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;Z)V
 
+    .line 1674
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->actionReleasedMassStorage(Ljava/lang/String;)V
     invoke-static {v5, v4}, Lcom/android/server/MountService;->access$2800(Lcom/android/server/MountService;Ljava/lang/String;)V
 
+    .line 1675
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->doMountVolume(Ljava/lang/String;)I
@@ -307,6 +331,7 @@
 
     if-eqz v3, :cond_6
 
+    .line 1676
     const-string v5, "MountService"
 
     const-string v6, "Failed to remount {%s} on UMS enabled-disconnect (%d)"
@@ -333,6 +358,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1680
     .end local v4           #secondPath:Ljava/lang/String;
     :cond_6
     iget-object v5, p0, Lcom/android/server/MountService$6;->this$0:Lcom/android/server/MountService;
@@ -346,6 +372,7 @@
 
     goto/16 :goto_1
 
+    .line 1682
     .end local v1           #firstPath:Ljava/lang/String;
     .end local v3           #rc:I
     :catch_0
@@ -353,6 +380,7 @@
 
     move-object v0, v5
 
+    .line 1683
     .local v0, ex:Ljava/lang/Exception;
     const-string v5, "MountService"
 

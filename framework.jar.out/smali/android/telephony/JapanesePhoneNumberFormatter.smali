@@ -12,6 +12,7 @@
     .locals 1
 
     .prologue
+    .line 33
     const/16 v0, 0x4b0
 
     new-array v0, v0, [S
@@ -1231,6 +1232,7 @@
     .locals 0
 
     .prologue
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -1249,13 +1251,16 @@
 
     const-string v13, "-"
 
+    .line 159
     const/4 v6, 0x1
 
+    .line 160
     .local v6, rootIndex:I
     invoke-interface {p0}, Landroid/text/Editable;->length()I
 
     move-result v5
 
+    .line 161
     .local v5, length:I
     if-le v5, v12, :cond_1
 
@@ -1275,16 +1280,20 @@
 
     if-eqz v9, :cond_1
 
+    .line 163
     const/4 v6, 0x3
 
+    .line 168
     :cond_0
     invoke-interface {p0, v11, v5}, Landroid/text/Editable;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v7
 
+    .line 171
     .local v7, saved:Ljava/lang/CharSequence;
     const/4 v4, 0x0
 
+    .line 172
     .local v4, i:I
     :goto_0
     invoke-interface {p0}, Landroid/text/Editable;->length()I
@@ -1293,6 +1302,7 @@
 
     if-ge v4, v9, :cond_4
 
+    .line 173
     invoke-interface {p0, v4}, Landroid/text/Editable;->charAt(I)C
 
     move-result v9
@@ -1301,12 +1311,14 @@
 
     if-ne v9, v10, :cond_3
 
+    .line 174
     add-int/lit8 v9, v4, 0x1
 
     invoke-interface {p0, v4, v9}, Landroid/text/Editable;->delete(II)Landroid/text/Editable;
 
     goto :goto_0
 
+    .line 164
     .end local v4           #i:I
     .end local v7           #saved:Ljava/lang/CharSequence;
     :cond_1
@@ -1320,10 +1332,12 @@
 
     if-eq v9, v14, :cond_0
 
+    .line 215
     :cond_2
     :goto_1
     return-void
 
+    .line 176
     .restart local v4       #i:I
     .restart local v7       #saved:Ljava/lang/CharSequence;
     :cond_3
@@ -1331,23 +1345,29 @@
 
     goto :goto_0
 
+    .line 180
     :cond_4
     invoke-interface {p0}, Landroid/text/Editable;->length()I
 
     move-result v5
 
+    .line 183
     move v4, v6
 
+    .line 184
     const/4 v0, 0x0
 
+    .line 185
     .local v0, base:I
     :goto_2
     if-ge v4, v5, :cond_8
 
+    .line 186
     invoke-interface {p0, v4}, Landroid/text/Editable;->charAt(I)C
 
     move-result v1
 
+    .line 187
     .local v1, ch:C
     invoke-static {v1}, Ljava/lang/Character;->isDigit(C)Z
 
@@ -1355,10 +1375,12 @@
 
     if-nez v9, :cond_5
 
+    .line 188
     invoke-interface {p0, v11, v5, v7}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
     goto :goto_1
 
+    .line 191
     :cond_5
     sget-object v9, Landroid/telephony/JapanesePhoneNumberFormatter;->FORMAT_MAP:[S
 
@@ -1368,17 +1390,21 @@
 
     aget-short v8, v9, v10
 
+    .line 192
     .local v8, value:S
     if-gez v8, :cond_9
 
+    .line 193
     const/16 v9, -0x64
 
     if-gt v8, v9, :cond_6
 
+    .line 194
     invoke-interface {p0, v11, v5, v7}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
     goto :goto_1
 
+    .line 197
     :cond_6
     invoke-static {v8}, Ljava/lang/Math;->abs(I)I
 
@@ -1388,13 +1414,16 @@
 
     add-int v3, v6, v9
 
+    .line 198
     .local v3, dashPos2:I
     if-le v5, v3, :cond_7
 
+    .line 199
     const-string v9, "-"
 
     invoke-interface {p0, v3, v13}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
 
+    .line 201
     :cond_7
     invoke-static {v8}, Ljava/lang/Math;->abs(I)I
 
@@ -1404,13 +1433,16 @@
 
     add-int v2, v6, v9
 
+    .line 202
     .local v2, dashPos1:I
     if-le v5, v2, :cond_8
 
+    .line 203
     const-string v9, "-"
 
     invoke-interface {p0, v2, v13}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
 
+    .line 212
     .end local v1           #ch:C
     .end local v2           #dashPos1:I
     .end local v3           #dashPos2:I
@@ -1420,18 +1452,22 @@
 
     if-ne v6, v12, :cond_2
 
+    .line 213
     const-string v9, "-"
 
     invoke-interface {p0, v6, v13}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
 
     goto :goto_1
 
+    .line 207
     .restart local v1       #ch:C
     .restart local v8       #value:S
     :cond_9
     move v0, v8
 
+    .line 208
     add-int/lit8 v4, v4, 0x1
 
+    .line 210
     goto :goto_2
 .end method

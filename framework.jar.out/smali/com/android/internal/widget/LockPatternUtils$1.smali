@@ -26,6 +26,7 @@
     .parameter "x1"
 
     .prologue
+    .line 189
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtils$1;->this$0:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
@@ -49,6 +50,7 @@
 
     const-string v1, "LockPatternUtils"
 
+    .line 191
     const-string v0, "gesture.key"
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -57,12 +59,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 192
     const-string v0, "LockPatternUtils"
 
     const-string v0, "lock pattern file changed"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 193
     invoke-static {}, Lcom/android/internal/widget/LockPatternUtils;->access$100()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v0
@@ -88,6 +92,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 204
     :cond_0
     :goto_1
     return-void
@@ -95,10 +100,12 @@
     :cond_1
     move v1, v3
 
+    .line 193
     goto :goto_0
 
+    .line 194
     :cond_2
-    const-string v0, "password.key"
+    const-string/jumbo v0, "password.key"
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -106,12 +113,14 @@
 
     if-eqz v0, :cond_4
 
+    .line 195
     const-string v0, "LockPatternUtils"
 
     const-string v0, "lock password file changed"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 196
     invoke-static {}, Lcom/android/internal/widget/LockPatternUtils;->access$300()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v0
@@ -144,8 +153,9 @@
 
     goto :goto_2
 
+    .line 197
     :cond_4
-    const-string v0, "password_history.key"
+    const-string/jumbo v0, "password_history.key"
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -153,12 +163,14 @@
 
     if-eqz v0, :cond_6
 
+    .line 198
     const-string v0, "LockPatternUtils"
 
     const-string v0, "lock password history file changed"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 199
     invoke-static {}, Lcom/android/internal/widget/LockPatternUtils;->access$500()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v0
@@ -191,8 +203,9 @@
 
     goto :goto_3
 
+    .line 200
     :cond_6
-    const-string v0, "recovery_password.key"
+    const-string/jumbo v0, "recovery_password.key"
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -200,12 +213,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 201
     const-string v0, "LockPatternUtils"
 
     const-string v0, "lock recovery password file changed"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 202
     invoke-static {}, Lcom/android/internal/widget/LockPatternUtils;->access$700()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v0

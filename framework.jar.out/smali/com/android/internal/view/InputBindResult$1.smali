@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "source"
 
     .prologue
+    .line 80
     new-instance v0, Lcom/android/internal/view/InputBindResult;
 
     invoke-direct {v0, p1}, Lcom/android/internal/view/InputBindResult;-><init>(Landroid/os/Parcel;)V
@@ -56,6 +58,7 @@
     .parameter "x0"
 
     .prologue
+    .line 78
     invoke-virtual {p0, p1}, Lcom/android/internal/view/InputBindResult$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/view/InputBindResult;
 
     move-result-object v0
@@ -68,6 +71,7 @@
     .parameter "size"
 
     .prologue
+    .line 84
     new-array v0, p1, [Lcom/android/internal/view/InputBindResult;
 
     return-object v0
@@ -78,6 +82,7 @@
     .parameter "x0"
 
     .prologue
+    .line 78
     invoke-virtual {p0, p1}, Lcom/android/internal/view/InputBindResult$1;->newArray(I)[Lcom/android/internal/view/InputBindResult;
 
     move-result-object v0

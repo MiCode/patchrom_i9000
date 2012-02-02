@@ -44,24 +44,29 @@
     .locals 1
 
     .prologue
+    .line 42
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
+    .line 44
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/broadcom/bt/service/fm/FmServiceManager;->mInitialized:Z
 
+    .line 45
     const/4 v0, -0x1
 
     sput v0, Lcom/broadcom/bt/service/fm/FmServiceManager;->mLastFmState:I
 
+    .line 47
     new-instance v0, Lcom/broadcom/bt/service/fm/FmServiceManager$1;
 
     invoke-direct {v0}, Lcom/broadcom/bt/service/fm/FmServiceManager$1;-><init>()V
 
     sput-object v0, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 76
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -75,8 +80,10 @@
     .locals 0
 
     .prologue
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 81
     return-void
 .end method
 
@@ -92,17 +99,21 @@
 
     const-string v3, ": "
 
+    .line 140
     invoke-static {p0}, Lcom/broadcom/bt/service/fm/FmServiceConfig;->isServiceSupported(Ljava/lang/String;)Z
 
     move-result v0
 
+    .line 141
     .local v0, isSupported:Z
     sget-boolean v1, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v1, :cond_1
 
+    .line 142
     if-nez v0, :cond_0
 
+    .line 143
     const-string v1, "FmServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -148,6 +159,7 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 148
     :cond_0
     const-string v1, "FmServiceManager"
 
@@ -194,13 +206,16 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 153
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 154
     sget-object v1, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
     monitor-enter v1
 
+    .line 155
     :try_start_0
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
@@ -212,13 +227,16 @@
 
     invoke-virtual {v2, p0, v3}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 157
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 159
     :cond_2
     return-void
 
+    .line 143
     :cond_3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -230,6 +248,7 @@
 
     goto :goto_0
 
+    .line 148
     :cond_4
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -241,6 +260,7 @@
 
     goto :goto_1
 
+    .line 157
     :catchall_0
     move-exception v2
 
@@ -261,6 +281,7 @@
 
     const-string v4, "FmServiceManager"
 
+    .line 187
     if-eqz p0, :cond_0
 
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mSystemContext:Landroid/content/Context;
@@ -271,11 +292,13 @@
 
     if-nez v2, :cond_3
 
+    .line 189
     :cond_0
     sget-boolean v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v2, :cond_1
 
+    .line 190
     const-string v2, "FmServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -309,6 +332,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 241
     :cond_1
     :goto_1
     return-void
@@ -316,16 +340,20 @@
     :cond_2
     move-object v3, p0
 
+    .line 190
     goto :goto_0
 
+    .line 197
     :cond_3
     const/4 v1, 0x0
 
+    .line 198
     .local v1, svcWrapper:Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;
     sget-object v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
     monitor-enter v3
 
+    .line 199
     :try_start_0
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
@@ -339,16 +367,20 @@
 
     move-object v1, v0
 
+    .line 200
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 202
     if-nez v1, :cond_4
 
+    .line 203
     sget-boolean v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v2, :cond_1
 
+    .line 204
     const-string v2, "FmServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -379,6 +411,7 @@
 
     goto :goto_1
 
+    .line 200
     :catchall_0
     move-exception v2
 
@@ -389,9 +422,11 @@
 
     throw v2
 
+    .line 210
     :cond_4
     monitor-enter v1
 
+    .line 211
     :try_start_2
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$000(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;)Z
@@ -400,6 +435,7 @@
 
     if-eqz v2, :cond_5
 
+    .line 212
     const-string v2, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -428,10 +464,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 214
     monitor-exit v1
 
     goto :goto_1
 
+    .line 239
     :catchall_1
     move-exception v2
 
@@ -441,6 +479,7 @@
 
     throw v2
 
+    .line 216
     :cond_5
     :try_start_3
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
@@ -450,10 +489,12 @@
 
     if-nez v2, :cond_7
 
+    .line 217
     sget-boolean v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v2, :cond_6
 
+    .line 218
     const-string v2, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -482,11 +523,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 223
     const/4 v2, 0x1
 
     #setter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
     invoke-static {v1, v2}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$002(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;Z)Z
 
+    .line 226
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mSystemContext:Landroid/content/Context;
 
     const/4 v3, 0x2
@@ -497,21 +540,25 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 229
     :cond_6
     monitor-exit v1
 
     goto/16 :goto_1
 
+    .line 231
     :cond_7
     sget-boolean v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v2, :cond_8
 
+    .line 232
     const/4 v2, 0x1
 
     #setter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
     invoke-static {v1, v2}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$002(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;Z)Z
 
+    .line 233
     const-string v2, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -540,6 +587,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 236
     :cond_8
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$100(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;)Lcom/broadcom/bt/service/framework/IBtService;
@@ -548,6 +596,7 @@
 
     invoke-interface {v2}, Lcom/broadcom/bt/service/framework/IBtService;->init()V
 
+    .line 237
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$100(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;)Lcom/broadcom/bt/service/framework/IBtService;
 
@@ -555,6 +604,7 @@
 
     invoke-interface {v2}, Lcom/broadcom/bt/service/framework/IBtService;->start()V
 
+    .line 239
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -571,17 +621,21 @@
 
     const-string v4, "FmServiceManager"
 
+    .line 244
     if-nez p0, :cond_1
 
+    .line 298
     :cond_0
     :goto_0
     return-void
 
+    .line 247
     :cond_1
     sget-boolean v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v2, :cond_2
 
+    .line 248
     const-string v2, "FmServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -610,14 +664,17 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 251
     :cond_2
     const/4 v1, 0x0
 
+    .line 252
     .local v1, svcWrapper:Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;
     sget-object v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
     monitor-enter v3
 
+    .line 253
     :try_start_0
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
@@ -631,16 +688,20 @@
 
     move-object v1, v0
 
+    .line 254
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 256
     if-nez v1, :cond_3
 
+    .line 257
     sget-boolean v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v2, :cond_0
 
+    .line 258
     const-string v2, "FmServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -671,6 +732,7 @@
 
     goto :goto_0
 
+    .line 254
     :catchall_0
     move-exception v2
 
@@ -681,9 +743,11 @@
 
     throw v2
 
+    .line 265
     :cond_3
     monitor-enter v1
 
+    .line 266
     :try_start_2
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$000(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;)Z
@@ -692,6 +756,7 @@
 
     if-nez v2, :cond_4
 
+    .line 267
     const-string v2, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -720,10 +785,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 269
     monitor-exit v1
 
     goto :goto_0
 
+    .line 296
     :catchall_1
     move-exception v2
 
@@ -733,6 +800,7 @@
 
     throw v2
 
+    .line 272
     :cond_4
     :try_start_3
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
@@ -742,10 +810,12 @@
 
     if-nez v2, :cond_6
 
+    .line 273
     sget-boolean v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v2, :cond_5
 
+    .line 274
     const-string v2, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -774,11 +844,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 278
     const/4 v2, 0x0
 
     #setter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
     invoke-static {v1, v2}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$002(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;Z)Z
 
+    .line 281
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mSystemContext:Landroid/content/Context;
 
     const/4 v3, 0x1
@@ -789,21 +861,25 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 284
     :cond_5
     monitor-exit v1
 
     goto/16 :goto_0
 
+    .line 287
     :cond_6
     sget-boolean v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v2, :cond_7
 
+    .line 288
     const/4 v2, 0x0
 
     #setter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
     invoke-static {v1, v2}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$002(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;Z)Z
 
+    .line 289
     const-string v2, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -832,11 +908,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 293
     :cond_7
     monitor-enter v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 294
     :try_start_4
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$100(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;)Lcom/broadcom/bt/service/framework/IBtService;
@@ -845,10 +923,12 @@
 
     invoke-interface {v2}, Lcom/broadcom/bt/service/framework/IBtService;->stop()V
 
+    .line 295
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 296
     :try_start_5
     monitor-exit v1
     :try_end_5
@@ -856,6 +936,7 @@
 
     goto/16 :goto_0
 
+    .line 295
     :catchall_2
     move-exception v2
 
@@ -876,21 +957,25 @@
     .parameter "state"
 
     .prologue
+    .line 439
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "broadcom.bt.intent.action.FM_SVC_STATE_CHANGE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 440
     .local v0, i:Landroid/content/Intent;
     const-string v1, "fm_svc_name"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 441
     const-string v1, "fm_svc_state"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 442
     return-object v0
 .end method
 
@@ -899,10 +984,12 @@
     .parameter "svcName"
 
     .prologue
+    .line 409
     sget-object v1, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
     monitor-enter v1
 
+    .line 410
     :try_start_0
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
@@ -912,6 +999,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;
 
+    .line 411
     .local v0, svcWrapper:Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;
     if-nez v0, :cond_0
 
@@ -930,6 +1018,7 @@
 
     goto :goto_0
 
+    .line 412
     .end local v0           #svcWrapper:Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;
     :catchall_0
     move-exception v2
@@ -946,6 +1035,7 @@
     .parameter "svcName"
 
     .prologue
+    .line 422
     sget-object v1, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -954,11 +1044,14 @@
 
     check-cast v0, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;
 
+    .line 423
     .local v0, svcWrapper:Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;
     if-nez v0, :cond_0
 
+    .line 424
     const/4 v1, -0x1
 
+    .line 426
     :goto_0
     return v1
 
@@ -987,6 +1080,7 @@
     .prologue
     const-string v0, "FmServiceManager"
 
+    .line 99
     const-class v0, Lcom/broadcom/bt/service/fm/FmServiceManager;
 
     monitor-enter v0
@@ -998,10 +1092,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 101
     sget-boolean v1, Lcom/broadcom/bt/service/fm/FmServiceManager;->mInitialized:Z
 
     if-eqz v1, :cond_0
 
+    .line 102
     const-string v1, "FmServiceManager"
 
     const-string v2, "Fm Service Manager already initialized.....Skipping init()..."
@@ -1010,23 +1106,29 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 113
     :goto_0
     monitor-exit v0
 
     return-void
 
+    .line 106
     :cond_0
     :try_start_1
     sput-object p0, Lcom/broadcom/bt/service/fm/FmServiceManager;->mSystemContext:Landroid/content/Context;
 
+    .line 107
     invoke-static {}, Lcom/broadcom/bt/service/fm/FmServiceManager;->initSettings()V
 
+    .line 109
     invoke-static {}, Lcom/broadcom/bt/service/fm/FmServiceManager;->registerServices()V
 
+    .line 110
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/broadcom/bt/service/fm/FmServiceManager;->mInitialized:Z
 
+    .line 111
     sget-object v1, Lcom/broadcom/bt/service/fm/FmServiceManager;->mSystemContext:Landroid/content/Context;
 
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmReceiver:Landroid/content/BroadcastReceiver;
@@ -1043,6 +1145,7 @@
 
     goto :goto_0
 
+    .line 99
     :catchall_0
     move-exception v1
 
@@ -1057,29 +1160,35 @@
     .prologue
     const-string v2, "FmServiceManager"
 
+    .line 116
     const-string v1, "FmServiceManager"
 
     const-string v1, "initFmPower()"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 118
     invoke-static {}, Lcom/broadcom/bt/service/framework/PowerManager;->getProxy()Lcom/broadcom/bt/service/framework/PowerManager;
 
     move-result-object v0
 
+    .line 119
     .local v0, fmPwrMgr:Lcom/broadcom/bt/service/framework/PowerManager;
     if-nez v0, :cond_1
 
+    .line 120
     const-string v1, "FmServiceManager"
 
     const-string v1, "Unable to initialize  FM!!!!"
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 125
     :cond_0
     :goto_0
     return-void
 
+    .line 122
     :cond_1
     invoke-virtual {v0}, Lcom/broadcom/bt/service/framework/PowerManager;->enableFm()Z
 
@@ -1087,6 +1196,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 123
     invoke-static {}, Lcom/broadcom/bt/service/fm/FmServiceManager;->onEnabled()V
 
     goto :goto_0
@@ -1106,22 +1216,26 @@
 
     const-string v5, "FmServiceManager"
 
+    .line 164
     sget-object v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mSystemContext:Landroid/content/Context;
 
     if-eqz v3, :cond_2
 
+    .line 165
     const-string v3, "FmServiceManager"
 
     const-string v3, "initSettings mSystemContext isn\'t null"
 
     invoke-static {v5, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 166
     sget-object v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mSystemContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
+    .line 167
     .local v0, cr:Landroid/content/ContentResolver;
     const-string v3, "fm_svcst_init"
 
@@ -1129,15 +1243,18 @@
 
     move-result v2
 
+    .line 169
     .local v2, settingsExist:I
     if-nez v2, :cond_2
 
+    .line 170
     const-string v3, "FmServiceManager"
 
     const-string v3, "*********Initializing Fm Service Settings*******"
 
     invoke-static {v5, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 171
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1148,6 +1265,7 @@
 
     if-ge v1, v3, :cond_1
 
+    .line 172
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1191,6 +1309,7 @@
     :goto_1
     invoke-static {v0, v3, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
+    .line 176
     const-string v3, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1259,6 +1378,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 171
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -1266,13 +1386,16 @@
     :cond_0
     move v4, v6
 
+    .line 172
     goto :goto_1
 
+    .line 182
     :cond_1
     const-string v3, "fm_svcst_init"
 
     invoke-static {v0, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
+    .line 185
     .end local v0           #cr:Landroid/content/ContentResolver;
     .end local v1           #i:I
     .end local v2           #settingsExist:I
@@ -1284,6 +1407,7 @@
     .locals 2
 
     .prologue
+    .line 62
     const-class v0, Lcom/broadcom/bt/service/fm/FmServiceManager;
 
     monitor-enter v0
@@ -1313,30 +1437,36 @@
 
     const-string v3, "FmServiceManager"
 
+    .line 359
     const-string v2, "FmServiceManager"
 
-    const-string v2, "onDisabled()"
+    const-string/jumbo v2, "onDisabled()"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 361
     sget v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mLastFmState:I
 
     if-ne v2, v4, :cond_0
 
+    .line 362
     const-string v2, "FmServiceManager"
 
     const-string v2, "Already STOPPED..Skipping"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 377
     :goto_0
     return-void
 
+    .line 366
     :cond_0
     sget-object v2, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
     monitor-enter v2
 
+    .line 367
     :try_start_0
     sget-object v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
@@ -1348,6 +1478,7 @@
 
     move-result-object v0
 
+    .line 369
     .local v0, svcIterator:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1356,17 +1487,20 @@
 
     if-eqz v3, :cond_1
 
+    .line 370
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 371
     .local v1, svcName:Ljava/lang/String;
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager;->_stopService(Ljava/lang/String;)V
 
     goto :goto_1
 
+    .line 373
     .end local v0           #svcIterator:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v1           #svcName:Ljava/lang/String;
     :catchall_0
@@ -1385,6 +1519,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 375
     sput v4, Lcom/broadcom/bt/service/fm/FmServiceManager;->mLastFmState:I
 
     goto :goto_0
@@ -1398,6 +1533,7 @@
 
     const-string v2, "FmServiceManager"
 
+    .line 336
     const-class v2, Lcom/broadcom/bt/service/fm/FmServiceManager;
 
     monitor-enter v2
@@ -1405,27 +1541,31 @@
     :try_start_0
     const-string v3, "FmServiceManager"
 
-    const-string v4, "onEnabled()"
+    const-string/jumbo v4, "onEnabled()"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 338
     sget-boolean v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mIsFactoryTest:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v3, :cond_0
 
+    .line 356
     :goto_0
     monitor-exit v2
 
     return-void
 
+    .line 342
     :cond_0
     :try_start_1
     sget v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mLastFmState:I
 
     if-ne v3, v5, :cond_1
 
+    .line 343
     const-string v3, "FmServiceManager"
 
     const-string v4, "Already STARTED..Skipping"
@@ -1436,6 +1576,7 @@
 
     goto :goto_0
 
+    .line 336
     :catchall_0
     move-exception v3
 
@@ -1443,6 +1584,7 @@
 
     throw v3
 
+    .line 347
     :cond_1
     :try_start_2
     sget-object v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
@@ -1451,6 +1593,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 348
     :try_start_3
     sget-object v4, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
@@ -1462,6 +1605,7 @@
 
     move-result-object v0
 
+    .line 350
     .local v0, svcIterator:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1470,17 +1614,20 @@
 
     if-eqz v4, :cond_2
 
+    .line 351
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 352
     .local v1, svcName:Ljava/lang/String;
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager;->_startService(Ljava/lang/String;)V
 
     goto :goto_1
 
+    .line 354
     .end local v0           #svcIterator:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v1           #svcName:Ljava/lang/String;
     :catchall_1
@@ -1502,6 +1649,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 355
     const/4 v3, 0x2
 
     :try_start_6
@@ -1522,6 +1670,7 @@
 
     const-string v5, "FmServiceManager"
 
+    .line 301
     const-string v3, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1554,13 +1703,16 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 303
     const/4 v1, 0x0
 
+    .line 304
     .local v1, svcWrapper:Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;
     sget-object v4, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
     monitor-enter v4
 
+    .line 305
     :try_start_0
     sget-object v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->mFmServiceWrapper:Ljava/util/LinkedHashMap;
 
@@ -1574,16 +1726,20 @@
 
     move-object v1, v0
 
+    .line 306
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 308
     if-nez v1, :cond_1
 
+    .line 309
     sget-boolean v3, Lcom/broadcom/bt/service/fm/FmServiceManager;->_DBG:Z
 
     if-eqz v3, :cond_0
 
+    .line 310
     const-string v3, "FmServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1612,10 +1768,12 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 333
     :cond_0
     :goto_0
     return-void
 
+    .line 306
     :catchall_0
     move-exception v3
 
@@ -1626,19 +1784,23 @@
 
     throw v3
 
+    .line 317
     :cond_1
     monitor-enter v1
 
+    .line 318
     const/4 v3, 0x2
 
     if-ne v3, p1, :cond_3
 
+    .line 319
     const/4 v3, 0x1
 
     :try_start_2
     #setter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mIsStarted:Z
     invoke-static {v1, v3}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$002(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;Z)Z
 
+    .line 332
     :cond_2
     :goto_1
     monitor-exit v1
@@ -1654,9 +1816,11 @@
 
     throw v3
 
+    .line 320
     :cond_3
     if-ne v6, p1, :cond_2
 
+    .line 321
     const/4 v3, 0x0
 
     :try_start_3
@@ -1665,6 +1829,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 323
     :try_start_4
     const-string v3, "FmServiceManager"
 
@@ -1688,6 +1853,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 324
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$100(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;)Lcom/broadcom/bt/service/framework/IBtService;
 
@@ -1695,6 +1861,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 325
     #getter for: Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->mSvc:Lcom/broadcom/bt/service/framework/IBtService;
     invoke-static {v1}, Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;->access$100(Lcom/broadcom/bt/service/fm/FmServiceManager$FmServiceWrapper;)Lcom/broadcom/bt/service/framework/IBtService;
 
@@ -1707,11 +1874,13 @@
 
     goto :goto_1
 
+    .line 328
     :catch_0
     move-exception v3
 
     move-object v2, v3
 
+    .line 329
     .local v2, t:Ljava/lang/Throwable;
     :try_start_5
     const-string v3, "FmServiceManager"
@@ -1745,6 +1914,7 @@
     .locals 3
 
     .prologue
+    .line 70
     const-string v0, "bluetooth_fm_receiver_service"
 
     new-instance v1, Lcom/broadcom/bt/service/fm/FmReceiverService;
@@ -1755,6 +1925,7 @@
 
     invoke-static {v0, v1}, Lcom/broadcom/bt/service/fm/FmServiceManager;->_registerService(Ljava/lang/String;Lcom/broadcom/bt/service/framework/IBtService;)V
 
+    .line 72
     const-string v0, "bluetooth_fm_transmitter_service"
 
     new-instance v1, Lcom/broadcom/bt/service/fm/FmTransmitterService;
@@ -1765,6 +1936,7 @@
 
     invoke-static {v0, v1}, Lcom/broadcom/bt/service/fm/FmServiceManager;->_registerService(Ljava/lang/String;Lcom/broadcom/bt/service/framework/IBtService;)V
 
+    .line 74
     return-void
 .end method
 
@@ -1774,29 +1946,35 @@
     .prologue
     const-string v2, "FmServiceManager"
 
+    .line 128
     const-string v1, "FmServiceManager"
 
-    const-string v1, "shutDownFmPower()"
+    const-string/jumbo v1, "shutDownFmPower()"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 130
     invoke-static {}, Lcom/broadcom/bt/service/framework/PowerManager;->getProxy()Lcom/broadcom/bt/service/framework/PowerManager;
 
     move-result-object v0
 
+    .line 131
     .local v0, fmPwrMgr:Lcom/broadcom/bt/service/framework/PowerManager;
     if-nez v0, :cond_1
 
+    .line 132
     const-string v1, "FmServiceManager"
 
     const-string v1, "Unable to shutdown FM!!!!"
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 137
     :cond_0
     :goto_0
     return-void
 
+    .line 134
     :cond_1
     invoke-virtual {v0}, Lcom/broadcom/bt/service/framework/PowerManager;->disableFm()Z
 
@@ -1804,6 +1982,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 135
     invoke-static {}, Lcom/broadcom/bt/service/fm/FmServiceManager;->onDisabled()V
 
     goto :goto_0

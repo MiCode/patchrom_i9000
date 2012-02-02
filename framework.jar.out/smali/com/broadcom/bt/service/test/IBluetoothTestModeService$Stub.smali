@@ -54,12 +54,15 @@
     .locals 1
 
     .prologue
+    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 19
     const-string v0, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p0, p0, v0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 20
     return-void
 .end method
 
@@ -68,13 +71,17 @@
     .parameter "obj"
 
     .prologue
+    .line 27
     if-nez p0, :cond_0
 
+    .line 28
     const/4 v1, 0x0
 
+    .line 34
     :goto_0
     return-object v1
 
+    .line 30
     :cond_0
     const-string v1, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
@@ -82,6 +89,7 @@
 
     move-result-object v0
 
+    .line 31
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,6 +97,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 32
     check-cast v0, Lcom/broadcom/bt/service/test/IBluetoothTestModeService;
 
     .end local v0           #iin:Landroid/os/IInterface;
@@ -96,6 +105,7 @@
 
     goto :goto_0
 
+    .line 34
     .restart local v0       #iin:Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub$Proxy;
@@ -111,6 +121,7 @@
     .locals 0
 
     .prologue
+    .line 38
     return-object p0
 .end method
 
@@ -131,8 +142,10 @@
 
     const-string v6, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
+    .line 42
     sparse-switch p1, :sswitch_data_0
 
+    .line 157
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -140,6 +153,7 @@
     :goto_0
     return v4
 
+    .line 46
     :sswitch_0
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
@@ -147,13 +161,16 @@
 
     move v4, v5
 
+    .line 47
     goto :goto_0
 
+    .line 51
     :sswitch_1
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
@@ -162,20 +179,25 @@
 
     move-result-object v0
 
+    .line 54
     .local v0, _arg0:Lcom/broadcom/bt/service/test/IBluetoothTestModeCallback;
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->createTestMode(Lcom/broadcom/bt/service/test/IBluetoothTestModeCallback;)I
 
     move-result v3
 
+    .line 55
     .local v3, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 56
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 57
     goto :goto_0
 
+    .line 61
     .end local v0           #_arg0:Lcom/broadcom/bt/service/test/IBluetoothTestModeCallback;
     .end local v3           #_result:I
     :sswitch_2
@@ -183,105 +205,132 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 62
     invoke-virtual {p0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->connectTestMode()I
 
     move-result v3
 
+    .line 63
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 64
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 65
     goto :goto_0
 
+    .line 69
     .end local v3           #_result:I
     :sswitch_3
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 70
     invoke-virtual {p0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->enterTestMode()I
 
     move-result v3
 
+    .line 71
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 72
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 73
     goto :goto_0
 
+    .line 77
     .end local v3           #_result:I
     :sswitch_4
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 78
     invoke-virtual {p0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->exitTestMode()I
 
     move-result v3
 
+    .line 79
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 80
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 81
     goto :goto_0
 
+    .line 85
     .end local v3           #_result:I
     :sswitch_5
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 86
     invoke-virtual {p0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->getTestMode()I
 
     move-result v3
 
+    .line 87
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 88
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 89
     goto :goto_0
 
+    .line 93
     .end local v3           #_result:I
     :sswitch_6
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 95
     invoke-virtual {p2}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
 
+    .line 97
     .local v0, _arg0:B
     invoke-virtual {p2}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
 
+    .line 98
     .local v1, _arg1:B
     invoke-virtual {p0, v0, v1}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->setTraceLevel(BB)I
 
     move-result v3
 
+    .line 99
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 100
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 101
     goto :goto_0
 
+    .line 105
     .end local v0           #_arg0:B
     .end local v1           #_arg1:B
     .end local v3           #_result:I
@@ -290,69 +339,86 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 106
     invoke-virtual {p0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->exitCurrentTestMode()I
 
     move-result v3
 
+    .line 107
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 108
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 109
     goto/16 :goto_0
 
+    .line 113
     .end local v3           #_result:I
     :sswitch_8
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 114
     invoke-virtual {p0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->enterDUTMode()I
 
     move-result v3
 
+    .line 115
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 116
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 117
     goto/16 :goto_0
 
+    .line 121
     .end local v3           #_result:I
     :sswitch_9
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 122
     invoke-virtual {p0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->exitDUTMode()I
 
     move-result v3
 
+    .line 123
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 124
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 125
     goto/16 :goto_0
 
+    .line 129
     .end local v3           #_result:I
     :sswitch_a
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 131
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 132
     sget-object v4, Lcom/broadcom/bt/service/test/TxRxTestParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -361,21 +427,26 @@
 
     check-cast v0, Lcom/broadcom/bt/service/test/TxRxTestParams;
 
+    .line 137
     .local v0, _arg0:Lcom/broadcom/bt/service/test/TxRxTestParams;
     :goto_1
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->Set_Tx_Rx_Test(Lcom/broadcom/bt/service/test/TxRxTestParams;)I
 
     move-result v3
 
+    .line 138
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 139
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 140
     goto/16 :goto_0
 
+    .line 135
     .end local v0           #_arg0:Lcom/broadcom/bt/service/test/TxRxTestParams;
     .end local v3           #_result:I
     :cond_0
@@ -384,40 +455,49 @@
     .restart local v0       #_arg0:Lcom/broadcom/bt/service/test/TxRxTestParams;
     goto :goto_1
 
+    .line 144
     .end local v0           #_arg0:Lcom/broadcom/bt/service/test/TxRxTestParams;
     :sswitch_b
     const-string v4, "com.broadcom.bt.service.test.IBluetoothTestModeService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 146
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 148
     .local v0, _arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 150
     .local v1, _arg1:I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v2
 
+    .line 151
     .local v2, _arg2:[B
     invoke-virtual {p0, v0, v1, v2}, Lcom/broadcom/bt/service/test/IBluetoothTestModeService$Stub;->SendBtldApiCmd(II[B)I
 
     move-result v3
 
+    .line 152
     .restart local v3       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 153
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     move v4, v5
 
+    .line 154
     goto/16 :goto_0
 
+    .line 42
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

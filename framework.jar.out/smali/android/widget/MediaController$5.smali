@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 549
     iput-object p1, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "v"
 
     .prologue
+    .line 551
     iget-object v1, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     #getter for: Landroid/widget/MediaController;->mPlayer:Landroid/widget/MediaController$MediaPlayerControl;
@@ -52,9 +54,11 @@
 
     move-result v0
 
+    .line 552
     .local v0, pos:I
     add-int/lit16 v0, v0, -0x1388
 
+    .line 553
     iget-object v1, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     #getter for: Landroid/widget/MediaController;->mPlayer:Landroid/widget/MediaController$MediaPlayerControl;
@@ -64,16 +68,19 @@
 
     invoke-interface {v1, v0}, Landroid/widget/MediaController$MediaPlayerControl;->seekTo(I)V
 
+    .line 554
     iget-object v1, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     #calls: Landroid/widget/MediaController;->setProgress()I
     invoke-static {v1}, Landroid/widget/MediaController;->access$100(Landroid/widget/MediaController;)I
 
+    .line 556
     iget-object v1, p0, Landroid/widget/MediaController$5;->this$0:Landroid/widget/MediaController;
 
     const/16 v2, 0xbb8
 
     invoke-virtual {v1, v2}, Landroid/widget/MediaController;->show(I)V
 
+    .line 557
     return-void
 .end method

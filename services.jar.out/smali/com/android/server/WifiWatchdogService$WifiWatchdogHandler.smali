@@ -42,6 +42,7 @@
     .parameter
 
     .prologue
+    .line 994
     iput-object p1, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -55,6 +56,7 @@
     .parameter "x1"
 
     .prologue
+    .line 994
     invoke-direct {p0, p1}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;-><init>(Lcom/android/server/WifiWatchdogService;)V
 
     return-void
@@ -65,6 +67,7 @@
     .parameter "x0"
 
     .prologue
+    .line 994
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
     return-void
@@ -74,18 +77,22 @@
     .locals 1
 
     .prologue
+    .line 1069
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeMessages(I)V
 
+    .line 1070
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeMessages(I)V
 
+    .line 1071
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeMessages(I)V
 
+    .line 1072
     return-void
 .end method
 
@@ -96,6 +103,7 @@
     .parameter "ap"
 
     .prologue
+    .line 1031
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
 
     #calls: Lcom/android/server/WifiWatchdogService;->isBackgroundCheckEnabled()Z
@@ -105,12 +113,15 @@
 
     if-nez v0, :cond_0
 
+    .line 1036
     :goto_0
     return-void
 
+    .line 1033
     :cond_0
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
+    .line 1034
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -136,8 +147,10 @@
     .parameter "ap"
 
     .prologue
+    .line 1026
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
+    .line 1027
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -146,6 +159,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 1028
     return-void
 .end method
 
@@ -153,8 +167,10 @@
     .locals 1
 
     .prologue
+    .line 1049
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
+    .line 1050
     const/16 v0, 0x66
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->obtainMessage(I)Landroid/os/Message;
@@ -163,6 +179,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 1051
     return-void
 .end method
 
@@ -170,8 +187,10 @@
     .locals 1
 
     .prologue
+    .line 1059
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
+    .line 1060
     const/16 v0, 0x68
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->obtainMessage(I)Landroid/os/Message;
@@ -180,6 +199,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 1061
     return-void
 .end method
 
@@ -188,8 +208,10 @@
     .parameter "ssid"
 
     .prologue
+    .line 1054
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
+    .line 1055
     const/16 v0, 0x67
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -198,6 +220,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 1056
     return-void
 .end method
 
@@ -206,14 +229,17 @@
     .parameter "msg"
 
     .prologue
+    .line 1076
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
+    .line 1102
     .end local p0
     :goto_0
     return-void
 
+    .line 1078
     .restart local p0
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
@@ -228,6 +254,7 @@
 
     goto :goto_0
 
+    .line 1081
     .restart local p0
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
@@ -242,6 +269,7 @@
 
     goto :goto_0
 
+    .line 1084
     .restart local p0
     :sswitch_2
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
@@ -256,6 +284,7 @@
 
     goto :goto_0
 
+    .line 1087
     .restart local p0
     :sswitch_3
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
@@ -270,6 +299,7 @@
 
     goto :goto_0
 
+    .line 1090
     .restart local p0
     :sswitch_4
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
@@ -279,6 +309,7 @@
 
     goto :goto_0
 
+    .line 1093
     :sswitch_5
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
 
@@ -287,6 +318,7 @@
 
     goto :goto_0
 
+    .line 1096
     :sswitch_6
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
 
@@ -295,6 +327,7 @@
 
     goto :goto_0
 
+    .line 1099
     :sswitch_7
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->this$0:Lcom/android/server/WifiWatchdogService;
 
@@ -303,6 +336,7 @@
 
     goto :goto_0
 
+    .line 1076
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -320,8 +354,10 @@
     .locals 1
 
     .prologue
+    .line 1039
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
+    .line 1040
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->obtainMessage(I)Landroid/os/Message;
@@ -330,6 +366,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 1041
     return-void
 .end method
 
@@ -337,8 +374,10 @@
     .locals 1
 
     .prologue
+    .line 1064
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
+    .line 1065
     const/16 v0, 0x69
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->obtainMessage(I)Landroid/os/Message;
@@ -347,6 +386,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 1066
     return-void
 .end method
 
@@ -355,8 +395,10 @@
     .parameter "ssid"
 
     .prologue
+    .line 1044
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->removeAllActions()V
 
+    .line 1045
     const/16 v0, 0x65
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -365,5 +407,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/WifiWatchdogService$WifiWatchdogHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 1046
     return-void
 .end method

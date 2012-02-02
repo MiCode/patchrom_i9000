@@ -47,6 +47,7 @@
     .locals 2
 
     .prologue
+    .line 144
     const-string v0, "com.broadcom.bt.app.dun.action."
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -55,6 +56,7 @@
 
     sput v0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->ACTION_PREFIX_LENGTH:I
 
+    .line 178
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,12 +86,15 @@
     .locals 1
 
     .prologue
+    .line 218
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;-><init>()V
 
+    .line 191
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mEventHandler:Lcom/broadcom/bt/service/dun/IBluetoothDUNEventHandler;
 
+    .line 219
     return-void
 .end method
 
@@ -98,6 +103,7 @@
     .parameter "x0"
 
     .prologue
+    .line 123
     iget-object v0, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mEventHandler:Lcom/broadcom/bt/service/dun/IBluetoothDUNEventHandler;
 
     return-object v0
@@ -110,6 +116,7 @@
     .parameter "x2"
 
     .prologue
+    .line 123
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/dun/BluetoothDUN;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -122,19 +129,23 @@
     .parameter "filter"
 
     .prologue
+    .line 467
     if-nez p0, :cond_0
 
+    .line 468
     new-instance p0, Landroid/content/IntentFilter;
 
     .end local p0
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 470
     .restart local p0
     :cond_0
     sget-object v0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->ACTION_ON_PORT_STATE_CHANGE:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 471
     return-object p0
 .end method
 
@@ -144,6 +155,7 @@
     .parameter "cb"
 
     .prologue
+    .line 207
     const-string v1, "bluetooth_dun"
 
     invoke-static {p0, v1}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceEnabled(Landroid/content/Context;Ljava/lang/String;)Z
@@ -152,22 +164,27 @@
 
     if-nez v1, :cond_0
 
+    .line 208
     const-string v1, "BluetoothDUN"
 
     const-string v2, "Unable to get BluetoothFTP proxy: service is not enabled."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 210
     const/4 v1, 0x0
 
+    .line 213
     :goto_0
     return v1
 
+    .line 212
     :cond_0
     new-instance v0, Lcom/broadcom/bt/service/dun/BluetoothDUN;
 
     invoke-direct {v0}, Lcom/broadcom/bt/service/dun/BluetoothDUN;-><init>()V
 
+    .line 213
     .local v0, p:Lcom/broadcom/bt/service/dun/BluetoothDUN;
     const-string v1, "com.broadcom.bt.app.system"
 
@@ -186,8 +203,10 @@
     .locals 0
 
     .prologue
+    .line 273
     invoke-super {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;->finalize()V
 
+    .line 274
     return-void
 .end method
 
@@ -195,6 +214,7 @@
     .locals 2
 
     .prologue
+    .line 249
     monitor-enter p0
 
     :try_start_0
@@ -202,34 +222,41 @@
 
     if-eqz v0, :cond_0
 
+    .line 250
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mEventHandler:Lcom/broadcom/bt/service/dun/IBluetoothDUNEventHandler;
 
+    .line 254
     :cond_0
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_1
 
+    .line 255
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 256
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 268
     :cond_1
     invoke-super {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;->finish()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 269
     monitor-exit p0
 
     return-void
 
+    .line 249
     :catchall_0
     move-exception v0
 
@@ -242,10 +269,12 @@
     .locals 3
 
     .prologue
+    .line 514
     iget-object v1, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mService:Lcom/broadcom/bt/service/dun/IBluetoothDUN;
 
     if-eqz v1, :cond_0
 
+    .line 516
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mService:Lcom/broadcom/bt/service/dun/IBluetoothDUN;
 
@@ -255,14 +284,17 @@
 
     move-result-object v1
 
+    .line 521
     :goto_0
     return-object v1
 
+    .line 517
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 518
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothDUN"
 
@@ -270,6 +302,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 521
     .end local v0           #t:Ljava/lang/Throwable;
     :cond_0
     const/4 v1, 0x0
@@ -282,6 +315,7 @@
     .parameter "service"
 
     .prologue
+    .line 228
     :try_start_0
     invoke-static {p1}, Lcom/broadcom/bt/service/dun/IBluetoothDUN$Stub;->asInterface(Landroid/os/IBinder;)Lcom/broadcom/bt/service/dun/IBluetoothDUN;
 
@@ -291,16 +325,20 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 229
     const/4 v1, 0x1
 
+    .line 232
     :goto_0
     return v1
 
+    .line 230
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 231
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothDUN"
 
@@ -308,6 +346,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 232
     const/4 v1, 0x0
 
     goto :goto_0
@@ -318,10 +357,12 @@
     .parameter "cb"
 
     .prologue
+    .line 532
     iget-object v1, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mService:Lcom/broadcom/bt/service/dun/IBluetoothDUN;
 
     if-eqz v1, :cond_0
 
+    .line 534
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mService:Lcom/broadcom/bt/service/dun/IBluetoothDUN;
 
@@ -329,19 +370,22 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 539
     :cond_0
     :goto_0
     return-void
 
+    .line 535
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 536
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothDUN"
 
-    const-string v2, "registerCallback"
+    const-string/jumbo v2, "registerCallback"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -353,6 +397,7 @@
     .parameter "handler"
 
     .prologue
+    .line 293
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -366,10 +411,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 295
     monitor-exit p0
 
     return-void
 
+    .line 293
     :catchall_0
     move-exception v0
 
@@ -386,19 +433,23 @@
     .parameter "receiverPriority"
 
     .prologue
+    .line 430
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mEventHandler:Lcom/broadcom/bt/service/dun/IBluetoothDUNEventHandler;
 
+    .line 435
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v1, :cond_1
 
+    .line 437
     if-nez p2, :cond_0
 
+    .line 438
     const/4 v1, 0x0
 
     :try_start_1
@@ -406,9 +457,11 @@
 
     move-result-object p2
 
+    .line 440
     :cond_0
     invoke-virtual {p2, p4}, Landroid/content/IntentFilter;->setPriority(I)V
 
+    .line 441
     new-instance v1, Lcom/broadcom/bt/service/dun/BluetoothDUN$DUNBroadcastReceiver;
 
     const/4 v2, 0x0
@@ -417,6 +470,7 @@
 
     iput-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 442
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
@@ -428,17 +482,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 458
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 444
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 445
     .local v0, t:Ljava/lang/Throwable;
     :try_start_2
     const-string v1, "BluetoothDUN"
@@ -451,6 +508,7 @@
 
     goto :goto_0
 
+    .line 430
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -468,6 +526,7 @@
     .parameter "receiverPriority"
 
     .prologue
+    .line 359
     monitor-enter p0
 
     if-eqz p3, :cond_0
@@ -482,10 +541,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 365
     monitor-exit p0
 
     return-void
 
+    .line 359
     :cond_0
     const/4 v0, 0x0
 
@@ -503,6 +564,7 @@
     .locals 1
 
     .prologue
+    .line 240
     const/4 v0, 0x0
 
     return v0
@@ -513,10 +575,12 @@
     .parameter "cb"
 
     .prologue
+    .line 549
     iget-object v1, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mService:Lcom/broadcom/bt/service/dun/IBluetoothDUN;
 
     if-eqz v1, :cond_0
 
+    .line 551
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mService:Lcom/broadcom/bt/service/dun/IBluetoothDUN;
 
@@ -524,19 +588,22 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 556
     :cond_0
     :goto_0
     return-void
 
+    .line 552
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 553
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothDUN"
 
-    const-string v2, "registerCallback"
+    const-string/jumbo v2, "registerCallback"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -547,40 +614,47 @@
     .locals 2
 
     .prologue
+    .line 490
     monitor-enter p0
 
     :try_start_0
     const-string v0, "BluetoothDUN"
 
-    const-string v1, "unregisterEventHandler()"
+    const-string/jumbo v1, "unregisterEventHandler()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 492
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/dun/BluetoothDUN;->mEventHandler:Lcom/broadcom/bt/service/dun/IBluetoothDUNEventHandler;
 
+    .line 495
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
+    .line 496
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 497
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 506
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 490
     :catchall_0
     move-exception v0
 

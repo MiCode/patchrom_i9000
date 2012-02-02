@@ -33,6 +33,7 @@
     .parameter
 
     .prologue
+    .line 2105
     iput-object p1, p0, Landroid/webkit/WebView$8;->this$0:Landroid/webkit/WebView;
 
     iput-object p2, p0, Landroid/webkit/WebView$8;->val$in:Ljava/io/FileInputStream;
@@ -50,6 +51,7 @@
     .locals 3
 
     .prologue
+    .line 2108
     :try_start_0
     iget-object v1, p0, Landroid/webkit/WebView$8;->val$in:Ljava/io/FileInputStream;
 
@@ -57,9 +59,11 @@
 
     move-result-object v0
 
+    .line 2109
     .local v0, p:Landroid/graphics/Picture;
     if-eqz v0, :cond_0
 
+    .line 2112
     iget-object v1, p0, Landroid/webkit/WebView$8;->this$0:Landroid/webkit/WebView;
 
     iget-object v1, v1, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -72,6 +76,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2120
     :cond_0
     :try_start_1
     iget-object v1, p0, Landroid/webkit/WebView$8;->val$in:Ljava/io/FileInputStream;
@@ -80,13 +85,16 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 2125
     :goto_0
     return-void
 
+    .line 2119
     .end local v0           #p:Landroid/graphics/Picture;
     :catchall_0
     move-exception v1
 
+    .line 2120
     :try_start_2
     iget-object v2, p0, Landroid/webkit/WebView$8;->val$in:Ljava/io/FileInputStream;
 
@@ -94,9 +102,11 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 2119
     :goto_1
     throw v1
 
+    .line 2121
     .restart local v0       #p:Landroid/graphics/Picture;
     :catch_0
     move-exception v1

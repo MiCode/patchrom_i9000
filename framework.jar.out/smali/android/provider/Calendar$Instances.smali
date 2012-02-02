@@ -50,6 +50,7 @@
     .locals 1
 
     .prologue
+    .line 879
     const-string v0, "content://com.android.calendar/instances/when"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -58,6 +59,7 @@
 
     sput-object v0, Landroid/provider/Calendar$Instances;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 881
     const-string v0, "content://com.android.calendar/instances/whenbyday"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -73,6 +75,7 @@
     .locals 0
 
     .prologue
+    .line 849
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -86,22 +89,26 @@
     .parameter "end"
 
     .prologue
+    .line 855
     sget-object v0, Landroid/provider/Calendar$Instances;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v6
 
+    .line 856
     .local v6, builder:Landroid/net/Uri$Builder;
     invoke-static {v6, p2, p3}, Landroid/content/ContentUris;->appendId(Landroid/net/Uri$Builder;J)Landroid/net/Uri$Builder;
 
+    .line 857
     invoke-static {v6, p4, p5}, Landroid/content/ContentUris;->appendId(Landroid/net/Uri$Builder;J)Landroid/net/Uri$Builder;
 
+    .line 858
     invoke-virtual {v6}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1
 
-    const-string v3, "selected=1"
+    const-string/jumbo v3, "selected=1"
 
     const/4 v4, 0x0
 
@@ -128,25 +135,31 @@
     .parameter "orderBy"
 
     .prologue
+    .line 864
     sget-object v0, Landroid/provider/Calendar$Instances;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v6
 
+    .line 865
     .local v6, builder:Landroid/net/Uri$Builder;
     invoke-static {v6, p2, p3}, Landroid/content/ContentUris;->appendId(Landroid/net/Uri$Builder;J)Landroid/net/Uri$Builder;
 
+    .line 866
     invoke-static {v6, p4, p5}, Landroid/content/ContentUris;->appendId(Landroid/net/Uri$Builder;J)Landroid/net/Uri$Builder;
 
+    .line 867
     invoke-static {p6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string p6, "selected=1"
+    .line 868
+    const-string/jumbo p6, "selected=1"
 
+    .line 872
     :goto_0
     invoke-virtual {v6}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
@@ -173,6 +186,7 @@
 
     return-object v0
 
+    .line 870
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -194,7 +208,7 @@
 
     move-result-object v0
 
-    const-string v1, "selected=1"
+    const-string/jumbo v1, "selected=1"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -209,5 +223,6 @@
     :cond_1
     move-object v5, p7
 
+    .line 872
     goto :goto_1
 .end method

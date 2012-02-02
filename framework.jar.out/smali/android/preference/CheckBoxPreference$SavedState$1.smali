@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 308
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "in"
 
     .prologue
+    .line 310
     new-instance v0, Landroid/preference/CheckBoxPreference$SavedState;
 
     invoke-direct {v0, p1}, Landroid/preference/CheckBoxPreference$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -56,6 +58,7 @@
     .parameter "x0"
 
     .prologue
+    .line 308
     invoke-virtual {p0, p1}, Landroid/preference/CheckBoxPreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/preference/CheckBoxPreference$SavedState;
 
     move-result-object v0
@@ -68,6 +71,7 @@
     .parameter "size"
 
     .prologue
+    .line 314
     new-array v0, p1, [Landroid/preference/CheckBoxPreference$SavedState;
 
     return-object v0
@@ -78,6 +82,7 @@
     .parameter "x0"
 
     .prologue
+    .line 308
     invoke-virtual {p0, p1}, Landroid/preference/CheckBoxPreference$SavedState$1;->newArray(I)[Landroid/preference/CheckBoxPreference$SavedState;
 
     move-result-object v0

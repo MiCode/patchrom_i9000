@@ -30,6 +30,7 @@
     .locals 1
 
     .prologue
+    .line 68
     new-instance v0, Landroid/nfc/LlcpPacket$1;
 
     invoke-direct {v0}, Landroid/nfc/LlcpPacket$1;-><init>()V
@@ -45,12 +46,16 @@
     .parameter "data"
 
     .prologue
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 40
     iput p1, p0, Landroid/nfc/LlcpPacket;->mRemoteSap:I
 
+    .line 41
     iput-object p2, p0, Landroid/nfc/LlcpPacket;->mDataBuffer:[B
 
+    .line 42
     return-void
 .end method
 
@@ -60,6 +65,7 @@
     .locals 1
 
     .prologue
+    .line 59
     const/4 v0, 0x0
 
     return v0
@@ -69,6 +75,7 @@
     .locals 1
 
     .prologue
+    .line 55
     iget-object v0, p0, Landroid/nfc/LlcpPacket;->mDataBuffer:[B
 
     return-object v0
@@ -78,6 +85,7 @@
     .locals 1
 
     .prologue
+    .line 48
     iget v0, p0, Landroid/nfc/LlcpPacket;->mRemoteSap:I
 
     return v0
@@ -89,19 +97,23 @@
     .parameter "flags"
 
     .prologue
+    .line 63
     iget v0, p0, Landroid/nfc/LlcpPacket;->mRemoteSap:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 64
     iget-object v0, p0, Landroid/nfc/LlcpPacket;->mDataBuffer:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 65
     iget-object v0, p0, Landroid/nfc/LlcpPacket;->mDataBuffer:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 66
     return-void
 .end method

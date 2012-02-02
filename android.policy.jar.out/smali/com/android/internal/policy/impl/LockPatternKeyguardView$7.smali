@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1374
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$7;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,6 +47,7 @@
 
     const-string v1, "LockPatternKeyguardView"
 
+    .line 1376
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$7;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->wipeDataDialog:Landroid/app/AlertDialog;
@@ -55,6 +57,7 @@
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
+    .line 1381
     :try_start_0
     sget-object v1, Landroid/deviceencryption/DeviceEncryptionManager;->enabled:Ljava/lang/String;
 
@@ -66,18 +69,21 @@
 
     if-eqz v1, :cond_0
 
+    .line 1382
     const-string v1, "LockPatternKeyguardView"
 
     const-string v2, "DEVENC: check point lock pattern"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1383
     const-string v1, "LockPatternKeyguardView"
 
     const-string v2, "DEVENC:Request to delete edk_p"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1384
     const-string v1, "securewipedata"
 
     const-string v2, "true"
@@ -86,6 +92,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1393
     :cond_0
     :goto_0
     :try_start_1
@@ -100,14 +107,17 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 1398
     :goto_1
     return-void
 
+    .line 1386
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1388
     .local v0, e:Ljava/lang/Exception;
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -117,12 +127,14 @@
 
     goto :goto_0
 
+    .line 1394
     .end local v0           #e:Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
+    .line 1396
     .restart local v0       #e:Ljava/lang/Exception;
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 

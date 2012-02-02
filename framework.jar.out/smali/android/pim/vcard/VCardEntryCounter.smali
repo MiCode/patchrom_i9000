@@ -15,6 +15,7 @@
     .locals 0
 
     .prologue
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,6 +27,7 @@
     .locals 0
 
     .prologue
+    .line 34
     return-void
 .end method
 
@@ -33,12 +35,14 @@
     .locals 1
 
     .prologue
+    .line 40
     iget v0, p0, Landroid/pim/vcard/VCardEntryCounter;->mCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/pim/vcard/VCardEntryCounter;->mCount:I
 
+    .line 41
     return-void
 .end method
 
@@ -46,6 +50,7 @@
     .locals 0
 
     .prologue
+    .line 47
     return-void
 .end method
 
@@ -53,6 +58,7 @@
     .locals 1
 
     .prologue
+    .line 27
     iget v0, p0, Landroid/pim/vcard/VCardEntryCounter;->mCount:I
 
     return v0
@@ -63,6 +69,7 @@
     .parameter "group"
 
     .prologue
+    .line 50
     return-void
 .end method
 
@@ -71,6 +78,7 @@
     .parameter "name"
 
     .prologue
+    .line 53
     return-void
 .end method
 
@@ -79,6 +87,7 @@
     .parameter "type"
 
     .prologue
+    .line 56
     return-void
 .end method
 
@@ -87,6 +96,7 @@
     .parameter "value"
 
     .prologue
+    .line 59
     return-void
 .end method
 
@@ -104,6 +114,7 @@
     .end annotation
 
     .prologue
+    .line 62
     .local p1, values:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     return-void
 .end method
@@ -112,6 +123,7 @@
     .locals 0
 
     .prologue
+    .line 31
     return-void
 .end method
 
@@ -119,6 +131,7 @@
     .locals 0
 
     .prologue
+    .line 37
     return-void
 .end method
 
@@ -126,5 +139,6 @@
     .locals 0
 
     .prologue
+    .line 44
     return-void
 .end method

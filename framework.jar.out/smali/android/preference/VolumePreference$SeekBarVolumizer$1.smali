@@ -25,6 +25,7 @@
     .parameter "x0"
 
     .prologue
+    .line 242
     iput-object p1, p0, Landroid/preference/VolumePreference$SeekBarVolumizer$1;->this$1:Landroid/preference/VolumePreference$SeekBarVolumizer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,8 +42,10 @@
     .prologue
     const-string v4, "VolumePreference"
 
+    .line 245
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
+    .line 246
     iget-object v1, p0, Landroid/preference/VolumePreference$SeekBarVolumizer$1;->this$1:Landroid/preference/VolumePreference$SeekBarVolumizer;
 
     #getter for: Landroid/preference/VolumePreference$SeekBarVolumizer;->mSeekBar:Landroid/widget/SeekBar;
@@ -52,6 +55,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 247
     iget-object v1, p0, Landroid/preference/VolumePreference$SeekBarVolumizer$1;->this$1:Landroid/preference/VolumePreference$SeekBarVolumizer;
 
     #getter for: Landroid/preference/VolumePreference$SeekBarVolumizer;->mContext:Landroid/content/Context;
@@ -80,9 +84,11 @@
 
     move-result v0
 
+    .line 251
     .local v0, volume:I
     if-ltz v0, :cond_0
 
+    .line 252
     iget-object v1, p0, Landroid/preference/VolumePreference$SeekBarVolumizer$1;->this$1:Landroid/preference/VolumePreference$SeekBarVolumizer;
 
     #getter for: Landroid/preference/VolumePreference$SeekBarVolumizer;->mSeekBar:Landroid/widget/SeekBar;
@@ -92,6 +98,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/SeekBar;->setProgress(I)V
 
+    .line 253
     const-string v1, "VolumePreference"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -125,6 +132,7 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 254
     const-string v1, "VolumePreference"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -154,6 +162,7 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 257
     .end local v0           #volume:I
     :cond_0
     return-void

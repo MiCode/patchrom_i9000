@@ -32,6 +32,7 @@
     .locals 1
 
     .prologue
+    .line 66
     new-instance v0, Landroid/nfc/TransceiveResult$1;
 
     invoke-direct {v0}, Landroid/nfc/TransceiveResult$1;-><init>()V
@@ -48,14 +49,19 @@
     .parameter "data"
 
     .prologue
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     iput-boolean p1, p0, Landroid/nfc/TransceiveResult;->mSuccess:Z
 
+    .line 35
     iput-boolean p2, p0, Landroid/nfc/TransceiveResult;->mTagLost:Z
 
+    .line 36
     iput-object p3, p0, Landroid/nfc/TransceiveResult;->mResponseData:[B
 
+    .line 37
     return-void
 .end method
 
@@ -65,6 +71,7 @@
     .locals 1
 
     .prologue
+    .line 53
     const/4 v0, 0x0
 
     return v0
@@ -74,6 +81,7 @@
     .locals 1
 
     .prologue
+    .line 48
     iget-object v0, p0, Landroid/nfc/TransceiveResult;->mResponseData:[B
 
     return-object v0
@@ -83,6 +91,7 @@
     .locals 1
 
     .prologue
+    .line 40
     iget-boolean v0, p0, Landroid/nfc/TransceiveResult;->mSuccess:Z
 
     return v0
@@ -92,6 +101,7 @@
     .locals 1
 
     .prologue
+    .line 44
     iget-boolean v0, p0, Landroid/nfc/TransceiveResult;->mTagLost:Z
 
     return v0
@@ -107,6 +117,7 @@
 
     const/4 v1, 0x0
 
+    .line 58
     iget-boolean v0, p0, Landroid/nfc/TransceiveResult;->mSuccess:Z
 
     if-eqz v0, :cond_1
@@ -116,6 +127,7 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 59
     iget-boolean v0, p0, Landroid/nfc/TransceiveResult;->mTagLost:Z
 
     if-eqz v0, :cond_2
@@ -125,30 +137,36 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 60
     iget-boolean v0, p0, Landroid/nfc/TransceiveResult;->mSuccess:Z
 
     if-eqz v0, :cond_0
 
+    .line 61
     iget-object v0, p0, Landroid/nfc/TransceiveResult;->mResponseData:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 62
     iget-object v0, p0, Landroid/nfc/TransceiveResult;->mResponseData:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 64
     :cond_0
     return-void
 
     :cond_1
     move v0, v1
 
+    .line 58
     goto :goto_0
 
     :cond_2
     move v0, v1
 
+    .line 59
     goto :goto_1
 .end method

@@ -78,31 +78,38 @@
     .locals 3
 
     .prologue
+    .line 50
     const/4 v1, 0x0
 
     sput-boolean v1, Landroid/renderscript/RenderScript;->sInitialized:Z
 
+    .line 52
     :try_start_0
-    const-string v1, "rs_jni"
+    const-string/jumbo v1, "rs_jni"
 
     invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
+    .line 53
     invoke-static {}, Landroid/renderscript/RenderScript;->_nInit()V
 
+    .line 54
     const/4 v1, 0x1
 
     sput-boolean v1, Landroid/renderscript/RenderScript;->sInitialized:Z
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 58
     :goto_0
     return-void
 
+    .line 55
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 56
     .local v0, e:Ljava/lang/UnsatisfiedLinkError;
     const-string v1, "RenderScript_jni"
 
@@ -117,12 +124,15 @@
     .locals 1
 
     .prologue
+    .line 291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 230
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mMessageCallback:Landroid/renderscript/RenderScript$RSMessage;
 
+    .line 292
     return-void
 .end method
 
@@ -133,10 +143,12 @@
     .locals 3
 
     .prologue
+    .line 295
     new-instance v0, Landroid/renderscript/RenderScript;
 
     invoke-direct {v0}, Landroid/renderscript/RenderScript;-><init>()V
 
+    .line 297
     .local v0, rs:Landroid/renderscript/RenderScript;
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->nDeviceCreate()I
 
@@ -144,6 +156,7 @@
 
     iput v1, v0, Landroid/renderscript/RenderScript;->mDev:I
 
+    .line 298
     iget v1, v0, Landroid/renderscript/RenderScript;->mDev:I
 
     const/4 v2, 0x0
@@ -154,18 +167,22 @@
 
     iput v1, v0, Landroid/renderscript/RenderScript;->mContext:I
 
+    .line 299
     new-instance v1, Landroid/renderscript/RenderScript$MessageThread;
 
     invoke-direct {v1, v0}, Landroid/renderscript/RenderScript$MessageThread;-><init>(Landroid/renderscript/RenderScript;)V
 
     iput-object v1, v0, Landroid/renderscript/RenderScript;->mMessageThread:Landroid/renderscript/RenderScript$MessageThread;
 
+    .line 300
     iget-object v1, v0, Landroid/renderscript/RenderScript;->mMessageThread:Landroid/renderscript/RenderScript$MessageThread;
 
     invoke-virtual {v1}, Landroid/renderscript/RenderScript$MessageThread;->start()V
 
+    .line 301
     invoke-static {v0}, Landroid/renderscript/Element;->initPredefined(Landroid/renderscript/RenderScript;)V
 
+    .line 302
     return-object v0
 .end method
 
@@ -176,10 +193,13 @@
     .parameter "bits"
 
     .prologue
+    .line 306
     invoke-virtual {p0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 307
     invoke-virtual {p0, p1}, Landroid/renderscript/RenderScript;->nContextDump(I)V
 
+    .line 308
     return-void
 .end method
 
@@ -188,12 +208,15 @@
     .parameter "p"
 
     .prologue
+    .line 249
     invoke-virtual {p0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 250
     iget v0, p1, Landroid/renderscript/RenderScript$Priority;->mID:I
 
     invoke-virtual {p0, v0}, Landroid/renderscript/RenderScript;->nContextSetPriority(I)V
 
+    .line 251
     return-void
 .end method
 
@@ -203,26 +226,34 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 311
     invoke-virtual {p0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 312
     invoke-virtual {p0}, Landroid/renderscript/RenderScript;->nContextDeinitToClient()V
 
+    .line 313
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mMessageThread:Landroid/renderscript/RenderScript$MessageThread;
 
     iput-boolean v1, v0, Landroid/renderscript/RenderScript$MessageThread;->mRun:Z
 
+    .line 315
     iget v0, p0, Landroid/renderscript/RenderScript;->mContext:I
 
     invoke-virtual {p0, v0}, Landroid/renderscript/RenderScript;->nContextDestroy(I)V
 
+    .line 316
     iput v1, p0, Landroid/renderscript/RenderScript;->mContext:I
 
+    .line 318
     iget v0, p0, Landroid/renderscript/RenderScript;->mDev:I
 
     invoke-virtual {p0, v0}, Landroid/renderscript/RenderScript;->nDeviceDestroy(I)V
 
+    .line 319
     iput v1, p0, Landroid/renderscript/RenderScript;->mDev:I
 
+    .line 320
     return-void
 .end method
 
@@ -230,6 +261,7 @@
     .locals 1
 
     .prologue
+    .line 323
     iget v0, p0, Landroid/renderscript/RenderScript;->mContext:I
 
     if-eqz v0, :cond_0
@@ -577,10 +609,13 @@
     .parameter "o"
 
     .prologue
+    .line 330
     if-eqz p1, :cond_0
 
+    .line 331
     iget v0, p1, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 333
     :goto_0
     return v0
 
@@ -594,10 +629,12 @@
     .locals 2
 
     .prologue
+    .line 243
     iget v0, p0, Landroid/renderscript/RenderScript;->mContext:I
 
     if-nez v0, :cond_0
 
+    .line 244
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Calling RS with no Context active."
@@ -606,6 +643,7 @@
 
     throw v0
 
+    .line 246
     :cond_0
     return-void
 .end method

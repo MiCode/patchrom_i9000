@@ -66,20 +66,26 @@
     .parameter "value"
 
     .prologue
+    .line 624
     iput-object p1, p0, Landroid/widget/RemoteViews$ReflectionAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
+    .line 625
     iput p2, p0, Landroid/widget/RemoteViews$ReflectionAction;->viewId:I
 
+    .line 626
     iput-object p3, p0, Landroid/widget/RemoteViews$ReflectionAction;->methodName:Ljava/lang/String;
 
+    .line 627
     iput p4, p0, Landroid/widget/RemoteViews$ReflectionAction;->type:I
 
+    .line 628
     iput-object p5, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
 
+    .line 629
     return-void
 .end method
 
@@ -89,37 +95,44 @@
     .parameter "in"
 
     .prologue
+    .line 631
     iput-object p1, p0, Landroid/widget/RemoteViews$ReflectionAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
+    .line 632
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->viewId:I
 
+    .line 633
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->methodName:Ljava/lang/String;
 
+    .line 634
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->type:I
 
+    .line 640
     iget v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->type:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 683
     :goto_0
     return-void
 
+    .line 642
     :pswitch_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -143,6 +156,7 @@
 
     goto :goto_1
 
+    .line 645
     :pswitch_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readByte()B
 
@@ -156,6 +170,7 @@
 
     goto :goto_0
 
+    .line 648
     :pswitch_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -171,6 +186,7 @@
 
     goto :goto_0
 
+    .line 651
     :pswitch_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -184,6 +200,7 @@
 
     goto :goto_0
 
+    .line 654
     :pswitch_4
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
@@ -197,6 +214,7 @@
 
     goto :goto_0
 
+    .line 657
     :pswitch_5
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
@@ -210,6 +228,7 @@
 
     goto :goto_0
 
+    .line 660
     :pswitch_6
     invoke-virtual {p2}, Landroid/os/Parcel;->readDouble()D
 
@@ -223,6 +242,7 @@
 
     goto :goto_0
 
+    .line 663
     :pswitch_7
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -238,6 +258,7 @@
 
     goto :goto_0
 
+    .line 666
     :pswitch_8
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -247,6 +268,7 @@
 
     goto :goto_0
 
+    .line 669
     :pswitch_9
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -258,6 +280,7 @@
 
     goto :goto_0
 
+    .line 672
     :pswitch_a
     sget-object v0, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -269,6 +292,7 @@
 
     goto :goto_0
 
+    .line 675
     :pswitch_b
     sget-object v0, Landroid/graphics/Bitmap;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -280,6 +304,7 @@
 
     goto/16 :goto_0
 
+    .line 678
     :pswitch_c
     invoke-virtual {p2}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
@@ -289,6 +314,7 @@
 
     goto/16 :goto_0
 
+    .line 640
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -311,80 +337,96 @@
     .locals 1
 
     .prologue
+    .line 741
     iget v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->type:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 769
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
+    .line 743
     :pswitch_0
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
+    .line 745
     :pswitch_1
     sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
+    .line 747
     :pswitch_2
     sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
+    .line 749
     :pswitch_3
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
+    .line 751
     :pswitch_4
     sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
+    .line 753
     :pswitch_5
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
+    .line 755
     :pswitch_6
     sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
+    .line 757
     :pswitch_7
     sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
+    .line 759
     :pswitch_8
     const-class v0, Ljava/lang/String;
 
     goto :goto_0
 
+    .line 761
     :pswitch_9
     const-class v0, Ljava/lang/CharSequence;
 
     goto :goto_0
 
+    .line 763
     :pswitch_a
     const-class v0, Landroid/net/Uri;
 
     goto :goto_0
 
+    .line 765
     :pswitch_b
     const-class v0, Landroid/graphics/Bitmap;
 
     goto :goto_0
 
+    .line 767
     :pswitch_c
     const-class v0, Landroid/os/Bundle;
 
     goto :goto_0
 
+    .line 741
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -410,21 +452,24 @@
     .parameter "root"
 
     .prologue
-    const-string v11, "view: "
+    const-string/jumbo v11, "view: "
 
     const-string v10, ")"
 
     const-string v9, "("
 
+    .line 775
     iget v5, p0, Landroid/widget/RemoteViews$ReflectionAction;->viewId:I
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
+    .line 776
     .local v4, view:Landroid/view/View;
     if-nez v4, :cond_0
 
+    .line 777
     new-instance v5, Landroid/widget/RemoteViews$ActionException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -455,14 +500,17 @@
 
     throw v5
 
+    .line 780
     :cond_0
     invoke-direct {p0}, Landroid/widget/RemoteViews$ReflectionAction;->getParameterType()Ljava/lang/Class;
 
     move-result-object v3
 
+    .line 781
     .local v3, param:Ljava/lang/Class;
     if-nez v3, :cond_1
 
+    .line 782
     new-instance v5, Landroid/widget/RemoteViews$ActionException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -489,11 +537,13 @@
 
     throw v5
 
+    .line 785
     :cond_1
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
+    .line 788
     .local v1, klass:Ljava/lang/Class;
     :try_start_0
     iget-object v5, p0, Landroid/widget/RemoteViews$ReflectionAction;->methodName:Ljava/lang/String;
@@ -516,6 +566,7 @@
 
     move-result-object v2
 
+    .line 795
     .local v2, method:Ljava/lang/reflect/Method;
     const-class v5, Landroid/view/RemotableViewMethod;
 
@@ -525,13 +576,14 @@
 
     if-nez v5, :cond_2
 
+    .line 796
     new-instance v5, Landroid/widget/RemoteViews$ActionException;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "view: "
+    const-string/jumbo v7, "view: "
 
     invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -585,12 +637,14 @@
 
     throw v5
 
+    .line 790
     .end local v2           #method:Ljava/lang/reflect/Method;
     :catch_0
     move-exception v5
 
     move-object v0, v5
 
+    .line 791
     .local v0, ex:Ljava/lang/NoSuchMethodException;
     new-instance v5, Landroid/widget/RemoteViews$ActionException;
 
@@ -598,7 +652,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "view: "
+    const-string/jumbo v7, "view: "
 
     invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -652,6 +706,7 @@
 
     throw v5
 
+    .line 808
     .end local v0           #ex:Ljava/lang/NoSuchMethodException;
     .restart local v2       #method:Ljava/lang/reflect/Method;
     :cond_2
@@ -670,13 +725,16 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 813
     return-void
 
+    .line 810
     :catch_1
     move-exception v5
 
     move-object v0, v5
 
+    .line 811
     .local v0, ex:Ljava/lang/Exception;
     new-instance v5, Landroid/widget/RemoteViews$ActionException;
 
@@ -691,30 +749,37 @@
     .parameter "flags"
 
     .prologue
+    .line 686
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 687
     iget v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->viewId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 688
     iget-object v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->methodName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 689
     iget v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->type:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 695
     iget v0, p0, Landroid/widget/RemoteViews$ReflectionAction;->type:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 738
     .end local p0
     :goto_0
     return-void
 
+    .line 697
     .restart local p0
     :pswitch_0
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -740,6 +805,7 @@
 
     goto :goto_1
 
+    .line 700
     .restart local p0
     :pswitch_1
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -755,6 +821,7 @@
 
     goto :goto_0
 
+    .line 703
     .restart local p0
     :pswitch_2
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -770,6 +837,7 @@
 
     goto :goto_0
 
+    .line 706
     .restart local p0
     :pswitch_3
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -785,6 +853,7 @@
 
     goto :goto_0
 
+    .line 709
     .restart local p0
     :pswitch_4
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -800,6 +869,7 @@
 
     goto :goto_0
 
+    .line 712
     .restart local p0
     :pswitch_5
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -815,6 +885,7 @@
 
     goto :goto_0
 
+    .line 715
     .restart local p0
     :pswitch_6
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -830,6 +901,7 @@
 
     goto :goto_0
 
+    .line 718
     .restart local p0
     :pswitch_7
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -845,6 +917,7 @@
 
     goto :goto_0
 
+    .line 721
     .restart local p0
     :pswitch_8
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -856,6 +929,7 @@
 
     goto :goto_0
 
+    .line 724
     .restart local p0
     :pswitch_9
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -867,6 +941,7 @@
 
     goto :goto_0
 
+    .line 727
     .restart local p0
     :pswitch_a
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -878,6 +953,7 @@
 
     goto :goto_0
 
+    .line 730
     .restart local p0
     :pswitch_b
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -889,6 +965,7 @@
 
     goto/16 :goto_0
 
+    .line 733
     .restart local p0
     :pswitch_c
     iget-object p0, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
@@ -900,6 +977,7 @@
 
     goto/16 :goto_0
 
+    .line 695
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

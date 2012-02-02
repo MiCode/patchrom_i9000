@@ -318,6 +318,7 @@
     .locals 1
 
     .prologue
+    .line 696
     const-string v0, "content://downloads/my_downloads"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -326,6 +327,7 @@
 
     sput-object v0, Landroid/provider/Downloads$Impl;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 703
     const-string v0, "content://downloads/all_downloads"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -334,6 +336,7 @@
 
     sput-object v0, Landroid/provider/Downloads$Impl;->ALL_DOWNLOADS_CONTENT_URI:Landroid/net/Uri;
 
+    .line 1340
     const-string v0, "content://sisodownloads/sisodownloads"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -349,6 +352,7 @@
     .locals 0
 
     .prologue
+    .line 640
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -359,6 +363,7 @@
     .parameter "state"
 
     .prologue
+    .line 1125
     const/16 v0, 0xa
 
     if-eq p0, v0, :cond_0
@@ -385,6 +390,7 @@
     .parameter "state"
 
     .prologue
+    .line 1131
     const/16 v0, 0xa
 
     if-ne p1, v0, :cond_0
@@ -413,6 +419,7 @@
     .parameter "status"
 
     .prologue
+    .line 1100
     const/16 v0, 0x190
 
     if-lt p0, v0, :cond_0
@@ -447,6 +454,7 @@
     .parameter "status"
 
     .prologue
+    .line 1116
     const/16 v0, 0xc8
 
     if-lt p0, v0, :cond_0
@@ -481,6 +489,7 @@
     .parameter "status"
 
     .prologue
+    .line 1087
     const/16 v0, 0x190
 
     if-lt p0, v0, :cond_0
@@ -505,6 +514,7 @@
     .parameter "status"
 
     .prologue
+    .line 1056
     const/16 v0, 0x64
 
     if-lt p0, v0, :cond_0
@@ -529,6 +539,7 @@
     .parameter "status"
 
     .prologue
+    .line 1108
     const/16 v0, 0x1f4
 
     if-lt p0, v0, :cond_0
@@ -553,6 +564,7 @@
     .parameter "status"
 
     .prologue
+    .line 1075
     const/16 v0, 0xc8
 
     if-lt p0, v0, :cond_0
@@ -577,6 +589,7 @@
     .parameter "status"
 
     .prologue
+    .line 1067
     const/16 v0, 0xbf
 
     if-eq p0, v0, :cond_0

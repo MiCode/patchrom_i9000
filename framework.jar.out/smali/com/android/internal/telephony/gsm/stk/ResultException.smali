@@ -23,8 +23,10 @@
     .parameter "result"
 
     .prologue
+    .line 30
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/stk/StkException;-><init>()V
 
+    .line 35
     sget-object v0, Lcom/android/internal/telephony/gsm/stk/ResultException$1;->$SwitchMap$com$android$internal$telephony$gsm$stk$ResultCode:[I
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/stk/ResultCode;->ordinal()I
@@ -35,14 +37,18 @@
 
     packed-switch v0, :pswitch_data_0
 
+    .line 49
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/stk/ResultException;->mResult:Lcom/android/internal/telephony/gsm/stk/ResultCode;
 
+    .line 50
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/stk/ResultException;->mAdditionalInfo:I
 
+    .line 51
     return-void
 
+    .line 44
     :pswitch_0
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -74,6 +80,7 @@
 
     throw v0
 
+    .line 35
     nop
 
     :pswitch_data_0
@@ -95,10 +102,13 @@
     .parameter "additionalInfo"
 
     .prologue
+    .line 54
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/stk/StkException;-><init>()V
 
+    .line 56
     if-gez p2, :cond_0
 
+    .line 57
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "Additional info must be greater than zero!"
@@ -107,11 +117,14 @@
 
     throw v0
 
+    .line 61
     :cond_0
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/stk/ResultException;->mResult:Lcom/android/internal/telephony/gsm/stk/ResultCode;
 
+    .line 62
     iput p2, p0, Lcom/android/internal/telephony/gsm/stk/ResultException;->mAdditionalInfo:I
 
+    .line 63
     return-void
 .end method
 
@@ -121,6 +134,7 @@
     .locals 1
 
     .prologue
+    .line 74
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/ResultException;->mAdditionalInfo:I
 
     return v0
@@ -130,6 +144,7 @@
     .locals 1
 
     .prologue
+    .line 70
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/ResultException;->mAdditionalInfo:I
 
     if-ltz v0, :cond_0
@@ -149,6 +164,7 @@
     .locals 1
 
     .prologue
+    .line 66
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/ResultException;->mResult:Lcom/android/internal/telephony/gsm/stk/ResultCode;
 
     return-object v0

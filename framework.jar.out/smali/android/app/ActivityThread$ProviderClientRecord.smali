@@ -36,16 +36,21 @@
     .parameter "localProvider"
 
     .prologue
+    .line 248
     iput-object p1, p0, Landroid/app/ActivityThread$ProviderClientRecord;->this$0:Landroid/app/ActivityThread;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 249
     iput-object p2, p0, Landroid/app/ActivityThread$ProviderClientRecord;->mName:Ljava/lang/String;
 
+    .line 250
     iput-object p3, p0, Landroid/app/ActivityThread$ProviderClientRecord;->mProvider:Landroid/content/IContentProvider;
 
+    .line 251
     iput-object p4, p0, Landroid/app/ActivityThread$ProviderClientRecord;->mLocalProvider:Landroid/content/ContentProvider;
 
+    .line 252
     return-void
 .end method
 
@@ -55,6 +60,7 @@
     .locals 3
 
     .prologue
+    .line 255
     iget-object v0, p0, Landroid/app/ActivityThread$ProviderClientRecord;->this$0:Landroid/app/ActivityThread;
 
     iget-object v1, p0, Landroid/app/ActivityThread$ProviderClientRecord;->mName:Ljava/lang/String;
@@ -63,5 +69,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/ActivityThread;->removeDeadProvider(Ljava/lang/String;Landroid/content/IContentProvider;)V
 
+    .line 256
     return-void
 .end method

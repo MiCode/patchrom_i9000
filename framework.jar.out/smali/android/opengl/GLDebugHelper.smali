@@ -18,6 +18,7 @@
     .locals 0
 
     .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,8 +31,10 @@
     .parameter "log"
 
     .prologue
+    .line 101
     if-eqz p2, :cond_0
 
+    .line 102
     new-instance v0, Landroid/opengl/EGLLogWrapper;
 
     invoke-direct {v0, p0, p1, p2}, Landroid/opengl/EGLLogWrapper;-><init>(Ljavax/microedition/khronos/egl/EGL;ILjava/io/Writer;)V
@@ -40,6 +43,7 @@
     .local v0, egl:Ljavax/microedition/khronos/egl/EGL;
     move-object p0, v0
 
+    .line 104
     .end local v0           #egl:Ljavax/microedition/khronos/egl/EGL;
     .restart local p0
     :cond_0
@@ -53,17 +57,21 @@
     .parameter "log"
 
     .prologue
+    .line 80
     if-eqz p1, :cond_2
 
+    .line 81
     new-instance v0, Landroid/opengl/GLErrorWrapper;
 
     invoke-direct {v0, p0, p1}, Landroid/opengl/GLErrorWrapper;-><init>(Ljavax/microedition/khronos/opengles/GL;I)V
 
+    .line 83
     .end local p0
     .local v0, gl:Ljavax/microedition/khronos/opengles/GL;
     :goto_0
     if-eqz p2, :cond_1
 
+    .line 84
     and-int/lit8 v2, p1, 0x4
 
     if-eqz v2, :cond_0
@@ -72,18 +80,21 @@
 
     move v1, v2
 
+    .line 86
     .local v1, logArgumentNames:Z
     :goto_1
     new-instance p0, Landroid/opengl/GLLogWrapper;
 
     invoke-direct {p0, v0, p2, v1}, Landroid/opengl/GLLogWrapper;-><init>(Ljavax/microedition/khronos/opengles/GL;Ljava/io/Writer;Z)V
 
+    .line 88
     .end local v0           #gl:Ljavax/microedition/khronos/opengles/GL;
     .end local v1           #logArgumentNames:Z
     .restart local p0
     :goto_2
     return-object p0
 
+    .line 84
     .end local p0
     .restart local v0       #gl:Ljavax/microedition/khronos/opengles/GL;
     :cond_0

@@ -34,6 +34,7 @@
     .parameter
 
     .prologue
+    .line 202
     iput-object p1, p0, Landroid/os/Broadcaster$Registration;->this$0:Landroid/os/Broadcaster;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,6 +48,7 @@
     .parameter "x1"
 
     .prologue
+    .line 202
     invoke-direct {p0, p1}, Landroid/os/Broadcaster$Registration;-><init>(Landroid/os/Broadcaster;)V
 
     return-void

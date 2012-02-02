@@ -19,8 +19,10 @@
     .parameter "manager"
 
     .prologue
+    .line 34
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/avrcp/MediaPlayerBinder;-><init>(Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;)V
 
+    .line 35
     return-void
 .end method
 
@@ -31,6 +33,7 @@
     .parameter "mgr"
 
     .prologue
+    .line 38
     new-instance v0, Lcom/broadcom/bt/service/avrcp/MediaPlayerAndroid;
 
     invoke-direct {v0, p1}, Lcom/broadcom/bt/service/avrcp/MediaPlayerAndroid;-><init>(Lcom/broadcom/bt/service/avrcp/MediaPlayerManager;)V
@@ -42,6 +45,7 @@
     .locals 1
 
     .prologue
+    .line 42
     const-string v0, "com.android.music.MediaPlaybackActivity"
 
     return-object v0
@@ -51,6 +55,7 @@
     .locals 1
 
     .prologue
+    .line 40
     const-string v0, "com.android.music"
 
     return-object v0
@@ -60,6 +65,7 @@
     .locals 1
 
     .prologue
+    .line 41
     const-string v0, "com.android.music.MediaPlaybackService"
 
     return-object v0
@@ -69,6 +75,7 @@
     .locals 1
 
     .prologue
+    .line 43
     const-string v0, "Android Media Player"
 
     return-object v0

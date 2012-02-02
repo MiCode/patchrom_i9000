@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1088
     iput-object p1, p0, Lcom/android/server/MountService$5;->this$0:Lcom/android/server/MountService;
 
     iput-object p2, p0, Lcom/android/server/MountService$5;->val$path:Ljava/lang/String;
@@ -46,6 +47,7 @@
 
     const-string v6, "MountService"
 
+    .line 1090
     iget-object v1, p0, Lcom/android/server/MountService$5;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->isVolumeStateShared()Z
@@ -55,17 +57,20 @@
 
     if-eqz v1, :cond_0
 
+    .line 1092
     const-wide/16 v1, 0x3e8
 
     :try_start_0
     invoke-static {v1, v2}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 1093
     const-string v1, "MountService"
 
     const-string v2, "waiting the finished process to unshare..."
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1094
     iget-object v1, p0, Lcom/android/server/MountService$5;->this$0:Lcom/android/server/MountService;
 
     iget-object v2, p0, Lcom/android/server/MountService$5;->val$path:Ljava/lang/String;
@@ -79,15 +84,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1099
     :cond_0
     :goto_0
     return-void
 
+    .line 1095
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1096
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "MountService"
 

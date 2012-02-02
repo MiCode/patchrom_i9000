@@ -25,6 +25,7 @@
     .locals 3
 
     .prologue
+    .line 1020
     invoke-static {}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->values()[Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     move-result-object v0
@@ -130,6 +131,7 @@
     :try_end_5
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_2
 
+    .line 856
     :goto_5
     invoke-static {}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$LockScreenMode;->values()[Lcom/android/internal/policy/impl/LockPatternKeyguardView$LockScreenMode;
 
@@ -185,6 +187,7 @@
 
     goto :goto_6
 
+    .line 1020
     :catch_2
     move-exception v0
 

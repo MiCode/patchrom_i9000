@@ -28,12 +28,15 @@
     .parameter "paint"
 
     .prologue
+    .line 43
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/ProcessStats;-><init>(Z)V
 
+    .line 44
     iput-object p1, p0, Lcom/android/server/LoadAverageService$Stats;->mPaint:Landroid/graphics/Paint;
 
+    .line 45
     return-void
 .end method
 
@@ -48,6 +51,7 @@
     .prologue
     const-string v2, " / "
 
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,6 +86,7 @@
 
     iput-object v0, p0, Lcom/android/server/LoadAverageService$Stats;->mLoadText:Ljava/lang/String;
 
+    .line 50
     iget-object v0, p0, Lcom/android/server/LoadAverageService$Stats;->mPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/android/server/LoadAverageService$Stats;->mLoadText:Ljava/lang/String;
@@ -94,6 +99,7 @@
 
     iput v0, p0, Lcom/android/server/LoadAverageService$Stats;->mLoadWidth:I
 
+    .line 51
     return-void
 .end method
 
@@ -102,6 +108,7 @@
     .parameter "name"
 
     .prologue
+    .line 55
     iget-object v0, p0, Lcom/android/server/LoadAverageService$Stats;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F

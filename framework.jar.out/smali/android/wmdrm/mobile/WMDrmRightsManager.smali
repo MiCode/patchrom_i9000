@@ -17,10 +17,12 @@
     .locals 3
 
     .prologue
+    .line 16
     const/4 v1, 0x0
 
     sput-object v1, Landroid/wmdrm/mobile/WMDrmRightsManager;->wmdrmManager:Landroid/wmdrm/mobile/WMDrmRightsManager;
 
+    .line 122
     :try_start_0
     const-string v1, "WMDRMRIGHTSMANAGER"
 
@@ -28,20 +30,24 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v1, "wmdrm_jni"
+    .line 123
+    const-string/jumbo v1, "wmdrm_jni"
 
     invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 127
     :goto_0
     return-void
 
+    .line 124
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 125
     .local v0, ule:Ljava/lang/UnsatisfiedLinkError;
     sget-object v1, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
@@ -56,8 +62,10 @@
     .locals 0
 
     .prologue
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 21
     return-void
 .end method
 
@@ -81,16 +89,19 @@
     .locals 1
 
     .prologue
+    .line 30
     sget-object v0, Landroid/wmdrm/mobile/WMDrmRightsManager;->wmdrmManager:Landroid/wmdrm/mobile/WMDrmRightsManager;
 
     if-nez v0, :cond_0
 
+    .line 31
     new-instance v0, Landroid/wmdrm/mobile/WMDrmRightsManager;
 
     invoke-direct {v0}, Landroid/wmdrm/mobile/WMDrmRightsManager;-><init>()V
 
     sput-object v0, Landroid/wmdrm/mobile/WMDrmRightsManager;->wmdrmManager:Landroid/wmdrm/mobile/WMDrmRightsManager;
 
+    .line 33
     :cond_0
     sget-object v0, Landroid/wmdrm/mobile/WMDrmRightsManager;->wmdrmManager:Landroid/wmdrm/mobile/WMDrmRightsManager;
 
@@ -135,8 +146,10 @@
     .end annotation
 
     .prologue
+    .line 79
     const/4 v0, 0x0
 
+    .line 80
     .local v0, result:Z
     new-instance v1, Ljava/io/File;
 
@@ -148,12 +161,15 @@
 
     if-eqz v1, :cond_0
 
+    .line 82
     invoke-direct {p0, p1}, Landroid/wmdrm/mobile/WMDrmRightsManager;->IsValidWmdrmFile(Ljava/lang/String;)Z
 
     move-result v0
 
+    .line 88
     return v0
 
+    .line 85
     :cond_0
     const-string v1, "WMDRMRIGHTSMANAGER"
 
@@ -161,6 +177,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 86
     new-instance v1, Ljava/io/FileNotFoundException;
 
     invoke-direct {v1}, Ljava/io/FileNotFoundException;-><init>()V
@@ -182,6 +199,7 @@
     .prologue
     const-string v3, "WMDRMRIGHTSMANAGER"
 
+    .line 50
     const-string v1, "WMDRMRIGHTSMANAGER"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -204,8 +222,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 51
     const/4 v0, 0x0
 
+    .line 52
     .local v0, rightsInfo:Landroid/wmdrm/mobile/WMDRMRightsInfo;
     new-instance v1, Ljava/io/File;
 
@@ -217,12 +237,15 @@
 
     if-eqz v1, :cond_0
 
+    .line 54
     invoke-direct {p0, p1}, Landroid/wmdrm/mobile/WMDrmRightsManager;->WMDRMQueryRights(Ljava/lang/String;)Landroid/wmdrm/mobile/WMDRMRightsInfo;
 
     move-result-object v0
 
+    .line 60
     return-object v0
 
+    .line 57
     :cond_0
     const-string v1, "WMDRMRIGHTSMANAGER"
 
@@ -230,6 +253,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 58
     new-instance v1, Ljava/io/FileNotFoundException;
 
     invoke-direct {v1}, Ljava/io/FileNotFoundException;-><init>()V
@@ -249,6 +273,7 @@
     .prologue
     const-string v3, "WMDRMRIGHTSMANAGER"
 
+    .line 103
     const-string v1, "WMDRMRIGHTSMANAGER"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -271,10 +296,12 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 104
     invoke-direct {p0, p1, p2}, Landroid/wmdrm/mobile/WMDrmRightsManager;->setWmDrmSecureClock(J)Z
 
     move-result v0
 
+    .line 105
     .local v0, result:Z
     const-string v1, "WMDRMRIGHTSMANAGER"
 
@@ -282,6 +309,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 107
     return v0
 .end method
 
@@ -298,6 +326,7 @@
     .prologue
     const-string v3, "WMDRMRIGHTSMANAGER"
 
+    .line 94
     const-string v1, "WMDRMRIGHTSMANAGER"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -330,10 +359,12 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 95
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/wmdrm/mobile/WMDrmRightsManager;->updateWmDrmSecureClock(JJ)Z
 
     move-result v0
 
+    .line 96
     .local v0, result:Z
     const-string v1, "WMDRMRIGHTSMANAGER"
 
@@ -341,5 +372,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 98
     return v0
 .end method

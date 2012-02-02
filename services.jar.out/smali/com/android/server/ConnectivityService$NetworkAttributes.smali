@@ -32,14 +32,17 @@
     .parameter "init"
 
     .prologue
+    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 199
     const-string v1, ","
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 200
     .local v0, fragments:[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -51,6 +54,7 @@
 
     iput-object v1, p0, Lcom/android/server/ConnectivityService$NetworkAttributes;->mName:Ljava/lang/String;
 
+    .line 201
     const/4 v1, 0x1
 
     aget-object v1, v0, v1
@@ -61,6 +65,7 @@
 
     iput v1, p0, Lcom/android/server/ConnectivityService$NetworkAttributes;->mType:I
 
+    .line 202
     const/4 v1, 0x2
 
     aget-object v1, v0, v1
@@ -71,6 +76,7 @@
 
     iput v1, p0, Lcom/android/server/ConnectivityService$NetworkAttributes;->mRadio:I
 
+    .line 203
     const/4 v1, 0x3
 
     aget-object v1, v0, v1
@@ -81,10 +87,12 @@
 
     iput v1, p0, Lcom/android/server/ConnectivityService$NetworkAttributes;->mPriority:I
 
+    .line 204
     sget-object v1, Landroid/net/NetworkInfo$State;->UNKNOWN:Landroid/net/NetworkInfo$State;
 
     iput-object v1, p0, Lcom/android/server/ConnectivityService$NetworkAttributes;->mLastState:Landroid/net/NetworkInfo$State;
 
+    .line 205
     return-void
 .end method
 
@@ -94,6 +102,7 @@
     .locals 2
 
     .prologue
+    .line 207
     iget v0, p0, Lcom/android/server/ConnectivityService$NetworkAttributes;->mType:I
 
     iget v1, p0, Lcom/android/server/ConnectivityService$NetworkAttributes;->mRadio:I

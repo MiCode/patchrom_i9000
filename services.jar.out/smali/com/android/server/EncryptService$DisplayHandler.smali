@@ -27,11 +27,14 @@
     .parameter "PopupType"
 
     .prologue
+    .line 125
     iput-object p1, p0, Lcom/android/server/EncryptService$DisplayHandler;->this$0:Lcom/android/server/EncryptService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 126
     iput p2, p0, Lcom/android/server/EncryptService$DisplayHandler;->PopupType:I
 
+    .line 127
     return-void
 .end method

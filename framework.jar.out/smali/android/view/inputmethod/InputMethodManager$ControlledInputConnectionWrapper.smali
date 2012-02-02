@@ -26,10 +26,13 @@
     .parameter "conn"
 
     .prologue
+    .line 386
     iput-object p1, p0, Landroid/view/inputmethod/InputMethodManager$ControlledInputConnectionWrapper;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
+    .line 387
     invoke-direct {p0, p2, p3}, Lcom/android/internal/view/IInputConnectionWrapper;-><init>(Landroid/os/Looper;Landroid/view/inputmethod/InputConnection;)V
 
+    .line 388
     return-void
 .end method
 
@@ -39,6 +42,7 @@
     .locals 1
 
     .prologue
+    .line 391
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager$ControlledInputConnectionWrapper;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
     iget-boolean v0, v0, Landroid/view/inputmethod/InputMethodManager;->mActive:Z

@@ -27,10 +27,13 @@
     .prologue
     const/4 v0, -0x1
 
+    .line 185
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 186
     iput v0, p0, Landroid/preference/VolumePreference$VolumeStore;->volume:I
 
+    .line 187
     iput v0, p0, Landroid/preference/VolumePreference$VolumeStore;->originalVolume:I
 
     return-void

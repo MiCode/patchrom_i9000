@@ -40,6 +40,7 @@
     .locals 1
 
     .prologue
+    .line 170
     const-string v0, "content://tasks/tasks"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -55,6 +56,7 @@
     .locals 0
 
     .prologue
+    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,6 +69,7 @@
     .parameter "selectionArgs"
 
     .prologue
+    .line 156
     sget-object v0, Landroid/provider/Tasks$TasksTbl;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v0, p1, p2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
@@ -84,6 +87,7 @@
     .parameter "orderBy"
 
     .prologue
+    .line 144
     sget-object v1, Landroid/provider/Tasks$TasksTbl;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

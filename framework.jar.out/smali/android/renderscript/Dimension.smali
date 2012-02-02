@@ -49,6 +49,7 @@
 
     const/4 v4, 0x0
 
+    .line 23
     new-instance v0, Landroid/renderscript/Dimension;
 
     const-string v1, "X"
@@ -57,6 +58,7 @@
 
     sput-object v0, Landroid/renderscript/Dimension;->X:Landroid/renderscript/Dimension;
 
+    .line 24
     new-instance v0, Landroid/renderscript/Dimension;
 
     const-string v1, "Y"
@@ -65,6 +67,7 @@
 
     sput-object v0, Landroid/renderscript/Dimension;->Y:Landroid/renderscript/Dimension;
 
+    .line 25
     new-instance v0, Landroid/renderscript/Dimension;
 
     const-string v1, "Z"
@@ -73,6 +76,7 @@
 
     sput-object v0, Landroid/renderscript/Dimension;->Z:Landroid/renderscript/Dimension;
 
+    .line 26
     new-instance v0, Landroid/renderscript/Dimension;
 
     const-string v1, "LOD"
@@ -81,6 +85,7 @@
 
     sput-object v0, Landroid/renderscript/Dimension;->LOD:Landroid/renderscript/Dimension;
 
+    .line 27
     new-instance v0, Landroid/renderscript/Dimension;
 
     const-string v1, "FACE"
@@ -89,6 +94,7 @@
 
     sput-object v0, Landroid/renderscript/Dimension;->FACE:Landroid/renderscript/Dimension;
 
+    .line 28
     new-instance v0, Landroid/renderscript/Dimension;
 
     const-string v1, "ARRAY_0"
@@ -101,6 +107,7 @@
 
     sput-object v0, Landroid/renderscript/Dimension;->ARRAY_0:Landroid/renderscript/Dimension;
 
+    .line 22
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/renderscript/Dimension;
@@ -148,10 +155,13 @@
     .end annotation
 
     .prologue
+    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 32
     iput p3, p0, Landroid/renderscript/Dimension;->mID:I
 
+    .line 33
     return-void
 .end method
 
@@ -160,6 +170,7 @@
     .parameter "name"
 
     .prologue
+    .line 22
     const-class v0, Landroid/renderscript/Dimension;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -176,6 +187,7 @@
     .locals 1
 
     .prologue
+    .line 22
     sget-object v0, Landroid/renderscript/Dimension;->$VALUES:[Landroid/renderscript/Dimension;
 
     invoke-virtual {v0}, [Landroid/renderscript/Dimension;->clone()Ljava/lang/Object;

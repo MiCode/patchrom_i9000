@@ -54,6 +54,7 @@
     .locals 1
 
     .prologue
+    .line 41
     new-instance v0, Landroid/content/res/CompatibilityInfo$1;
 
     invoke-direct {v0}, Landroid/content/res/CompatibilityInfo$1;-><init>()V
@@ -69,6 +70,7 @@
     .prologue
     const/high16 v4, 0x3f80
 
+    .line 181
     const v1, 0x81e00
 
     const/4 v2, 0x6
@@ -81,6 +83,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/content/res/CompatibilityInfo;-><init>(IIIFF)V
 
+    .line 190
     return-void
 .end method
 
@@ -93,18 +96,25 @@
     .parameter "invertedScale"
 
     .prologue
+    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 173
     iput p1, p0, Landroid/content/res/CompatibilityInfo;->appFlags:I
 
+    .line 174
     iput p2, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
+    .line 175
     iput p3, p0, Landroid/content/res/CompatibilityInfo;->applicationDensity:I
 
+    .line 176
     iput p4, p0, Landroid/content/res/CompatibilityInfo;->applicationScale:F
 
+    .line 177
     iput p5, p0, Landroid/content/res/CompatibilityInfo;->applicationInvertedScale:F
 
+    .line 178
     return-void
 .end method
 
@@ -115,24 +125,29 @@
     .prologue
     const/high16 v2, 0x3f80
 
+    .line 139
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 140
     iget v0, p1, Landroid/content/pm/ApplicationInfo;->flags:I
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->appFlags:I
 
+    .line 142
     iget v0, p1, Landroid/content/pm/ApplicationInfo;->flags:I
 
     and-int/lit16 v0, v0, 0x800
 
     if-eqz v0, :cond_0
 
+    .line 146
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     or-int/lit8 v0, v0, 0x7e
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
+    .line 150
     :cond_0
     iget v0, p1, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -142,12 +157,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 151
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     or-int/lit8 v0, v0, 0x66
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
+    .line 154
     :cond_1
     iget v0, p1, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -155,12 +172,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 155
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     or-int/lit8 v0, v0, 0x6
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
+    .line 158
     :cond_2
     iget v0, p1, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -168,22 +187,28 @@
 
     if-eqz v0, :cond_3
 
+    .line 159
     sget v0, Landroid/util/DisplayMetrics;->DENSITY_DEVICE:I
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->applicationDensity:I
 
+    .line 160
     iput v2, p0, Landroid/content/res/CompatibilityInfo;->applicationScale:F
 
+    .line 161
     iput v2, p0, Landroid/content/res/CompatibilityInfo;->applicationInvertedScale:F
 
+    .line 169
     :goto_0
     return-void
 
+    .line 163
     :cond_3
     const/16 v0, 0xa0
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->applicationDensity:I
 
+    .line 164
     sget v0, Landroid/util/DisplayMetrics;->DENSITY_DEVICE:I
 
     int-to-float v0, v0
@@ -194,12 +219,14 @@
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->applicationScale:F
 
+    .line 166
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->applicationScale:F
 
     div-float v0, v2, v0
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->applicationInvertedScale:F
 
+    .line 167
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     or-int/lit8 v0, v0, 0x1
@@ -214,6 +241,7 @@
     .parameter "x0"
 
     .prologue
+    .line 36
     invoke-direct {p0}, Landroid/content/res/CompatibilityInfo;-><init>()V
 
     return-void
@@ -230,8 +258,10 @@
 
     const/high16 v6, 0x3f00
 
+    .line 411
     iget v2, p0, Landroid/util/DisplayMetrics;->widthPixels:I
 
+    .line 412
     .local v2, width:I
     const/high16 v4, 0x43f0
 
@@ -243,6 +273,7 @@
 
     float-to-int v0, v4
 
+    .line 413
     .local v0, portraitHeight:I
     const/high16 v4, 0x43a0
 
@@ -254,29 +285,35 @@
 
     float-to-int v1, v4
 
+    .line 414
     .local v1, portraitWidth:I
     const/4 v4, 0x2
 
     if-ne p1, v4, :cond_0
 
+    .line 415
     sub-int v4, v2, v0
 
     div-int/lit8 v3, v4, 0x2
 
+    .line 416
     .local v3, xOffset:I
     add-int v4, v3, v0
 
     invoke-virtual {p2, v3, v7, v4, v1}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 421
     :goto_0
     return-void
 
+    .line 418
     .end local v3           #xOffset:I
     :cond_0
     sub-int v4, v2, v1
 
     div-int/lit8 v3, v4, 0x2
 
+    .line 419
     .restart local v3       #xOffset:I
     add-int v4, v3, v1
 
@@ -291,6 +328,7 @@
     .locals 6
 
     .prologue
+    .line 196
     new-instance v0, Landroid/content/res/CompatibilityInfo;
 
     iget v1, p0, Landroid/content/res/CompatibilityInfo;->appFlags:I
@@ -305,6 +343,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/content/res/CompatibilityInfo;-><init>(IIIFF)V
 
+    .line 198
     .local v0, info:Landroid/content/res/CompatibilityInfo;
     return-object v0
 .end method
@@ -313,6 +352,7 @@
     .locals 1
 
     .prologue
+    .line 278
     invoke-virtual {p0}, Landroid/content/res/CompatibilityInfo;->isScalingRequired()Z
 
     move-result v0
@@ -336,6 +376,7 @@
     .locals 1
 
     .prologue
+    .line 238
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     and-int/lit8 v0, v0, 0x4
@@ -357,6 +398,7 @@
     .locals 1
 
     .prologue
+    .line 245
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     and-int/lit8 v0, v0, 0x10
@@ -378,6 +420,7 @@
     .locals 1
 
     .prologue
+    .line 252
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     and-int/lit8 v0, v0, 0x40
@@ -399,6 +442,7 @@
     .locals 1
 
     .prologue
+    .line 259
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -421,17 +465,21 @@
     .parameter "expandable"
 
     .prologue
+    .line 205
     if-eqz p1, :cond_0
 
+    .line 206
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
+    .line 210
     :goto_0
     return-void
 
+    .line 208
     :cond_0
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
@@ -447,17 +495,21 @@
     .parameter "expandable"
 
     .prologue
+    .line 216
     if-eqz p1, :cond_0
 
+    .line 217
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     or-int/lit8 v0, v0, 0x8
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
+    .line 221
     :goto_0
     return-void
 
+    .line 219
     :cond_0
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
@@ -473,17 +525,21 @@
     .parameter "expandable"
 
     .prologue
+    .line 227
     if-eqz p1, :cond_0
 
+    .line 228
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     or-int/lit8 v0, v0, 0x20
 
     iput v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
+    .line 232
     :goto_0
     return-void
 
+    .line 230
     :cond_0
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
@@ -498,6 +554,7 @@
     .locals 2
 
     .prologue
+    .line 263
     iget v0, p0, Landroid/content/res/CompatibilityInfo;->mCompatibilityFlags:I
 
     and-int/lit8 v0, v0, 0xa
@@ -521,6 +578,7 @@
     .locals 2
 
     .prologue
+    .line 269
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -551,7 +609,7 @@
 
     move-result-object v0
 
-    const-string v1, "}"
+    const-string/jumbo v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

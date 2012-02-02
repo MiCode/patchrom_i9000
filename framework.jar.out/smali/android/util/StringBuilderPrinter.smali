@@ -16,10 +16,13 @@
     .parameter "builder"
 
     .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     iput-object p1, p0, Landroid/util/StringBuilderPrinter;->mBuilder:Ljava/lang/StringBuilder;
 
+    .line 33
     return-void
 .end method
 
@@ -32,14 +35,17 @@
     .prologue
     const/16 v2, 0xa
 
+    .line 36
     iget-object v1, p0, Landroid/util/StringBuilderPrinter;->mBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 37
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 38
     .local v0, len:I
     if-lez v0, :cond_0
 
@@ -53,11 +59,13 @@
 
     if-eq v1, v2, :cond_1
 
+    .line 39
     :cond_0
     iget-object v1, p0, Landroid/util/StringBuilderPrinter;->mBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 41
     :cond_1
     return-void
 .end method

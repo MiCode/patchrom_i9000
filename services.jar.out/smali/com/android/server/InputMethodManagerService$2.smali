@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1665
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$2;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,9 +43,11 @@
     .parameter "which"
 
     .prologue
+    .line 1667
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$2;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/InputMethodManagerService;->hideInputMethodMenu()V
 
+    .line 1668
     return-void
 .end method

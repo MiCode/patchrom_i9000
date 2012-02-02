@@ -33,22 +33,28 @@
     .parameter "uuid"
 
     .prologue
+    .line 377
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothCallback$Stub;-><init>()V
 
+    .line 378
     invoke-static {}, Landroid/bluetooth/BluetoothDevice;->getService()Landroid/bluetooth/IBluetooth;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->service:Landroid/bluetooth/IBluetooth;
 
+    .line 379
     iput-object p1, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->device:Landroid/bluetooth/BluetoothDevice;
 
+    .line 380
     iput-object p2, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->uuid:Landroid/os/ParcelUuid;
 
+    .line 381
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->canceled:Z
 
+    .line 382
     return-void
 .end method
 
@@ -58,6 +64,7 @@
     .locals 1
 
     .prologue
+    .line 412
     monitor-enter p0
 
     :try_start_0
@@ -65,23 +72,28 @@
 
     if-nez v0, :cond_0
 
+    .line 413
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->canceled:Z
 
+    .line 414
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->channel:I
 
+    .line 415
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 417
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 412
     :catchall_0
     move-exception v0
 
@@ -101,6 +113,7 @@
     .prologue
     const-string v2, "Service discovery canceled"
 
+    .line 388
     monitor-enter p0
 
     :try_start_0
@@ -125,6 +138,7 @@
 
     throw v2
 
+    .line 389
     :cond_0
     const/4 v2, -0x1
 
@@ -133,8 +147,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 391
     const/4 v1, 0x0
 
+    .line 393
     .local v1, inProgress:Z
     :try_start_2
     iget-object v2, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->service:Landroid/bluetooth/IBluetooth;
@@ -154,6 +170,7 @@
 
     move-result v1
 
+    .line 396
     :goto_0
     if-nez v1, :cond_1
 
@@ -166,6 +183,7 @@
 
     throw v2
 
+    .line 394
     :catch_0
     move-exception v2
 
@@ -182,6 +200,7 @@
 
     goto :goto_0
 
+    .line 401
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_1
     const-wide/16 v2, 0x2ee0
@@ -192,6 +211,7 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
 
+    .line 405
     :goto_1
     :try_start_5
     iget-boolean v2, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->canceled:Z
@@ -206,6 +226,7 @@
 
     throw v2
 
+    .line 406
     :cond_2
     iget v2, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->channel:I
 
@@ -221,6 +242,7 @@
 
     throw v2
 
+    .line 408
     :cond_3
     iget v2, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->channel:I
     :try_end_5
@@ -230,6 +252,7 @@
 
     return v2
 
+    .line 403
     :catch_1
     move-exception v2
 
@@ -241,6 +264,7 @@
     .parameter "channel"
 
     .prologue
+    .line 419
     monitor-enter p0
 
     :try_start_0
@@ -248,17 +272,21 @@
 
     if-nez v0, :cond_0
 
+    .line 420
     iput p1, p0, Landroid/bluetooth/BluetoothSocket$SdpHelper;->channel:I
 
+    .line 421
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 423
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 419
     :catchall_0
     move-exception v0
 

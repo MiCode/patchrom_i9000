@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 90
     iput-object p1, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerAndroid$1;->this$0:Lcom/broadcom/bt/service/avrcp/MediaPlayerAndroid;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,16 +42,20 @@
     .prologue
     const-string v4, "AVRCP.MediaPlayerAndroid"
 
+    .line 92
     if-nez p2, :cond_0
 
+    .line 110
     :goto_0
     return-void
 
+    .line 93
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 94
     .local v0, action:Ljava/lang/String;
     const-string v2, "AVRCP.MediaPlayerAndroid"
 
@@ -58,7 +63,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "received intent: "
+    const-string/jumbo v3, "received intent: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -74,8 +79,10 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 95
     const/4 v1, 0x0
 
+    .line 96
     .local v1, type:I
     const-string v2, "com.android.music.playstatechanged"
 
@@ -85,8 +92,10 @@
 
     if-eqz v2, :cond_1
 
+    .line 97
     const/4 v1, 0x1
 
+    .line 109
     :goto_1
     iget-object v2, p0, Lcom/broadcom/bt/service/avrcp/MediaPlayerAndroid$1;->this$0:Lcom/broadcom/bt/service/avrcp/MediaPlayerAndroid;
 
@@ -98,6 +107,7 @@
 
     goto :goto_0
 
+    .line 98
     :cond_1
     const-string v2, "com.android.music.metachanged"
 
@@ -107,10 +117,12 @@
 
     if-eqz v2, :cond_2
 
+    .line 99
     const/4 v1, 0x2
 
     goto :goto_1
 
+    .line 101
     :cond_2
     const-string v2, "com.android.music.queuechanged"
 
@@ -120,10 +132,12 @@
 
     if-eqz v2, :cond_3
 
+    .line 102
     const/4 v1, 0x3
 
     goto :goto_1
 
+    .line 103
     :cond_3
     const-string v2, "com.android.music.playbackcomplete"
 
@@ -133,13 +147,16 @@
 
     if-eqz v2, :cond_4
 
+    .line 104
     const/4 v1, 0x4
 
     goto :goto_1
 
+    .line 106
     :cond_4
     const/4 v1, 0x1
 
+    .line 107
     const-string v2, "AVRCP.MediaPlayerAndroid"
 
     new-instance v2, Ljava/lang/StringBuilder;

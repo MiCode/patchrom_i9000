@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 73
     iput-object p1, p0, Landroid/speech/RecognitionService$1;->this$0:Landroid/speech/RecognitionService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,20 +39,24 @@
     .parameter "msg"
 
     .prologue
+    .line 76
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
+    .line 91
     .end local p0
     :goto_0
     return-void
 
+    .line 78
     .restart local p0
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/speech/RecognitionService$StartListeningArgs;
 
+    .line 79
     .local v0, args:Landroid/speech/RecognitionService$StartListeningArgs;
     iget-object v1, p0, Landroid/speech/RecognitionService$1;->this$0:Landroid/speech/RecognitionService;
 
@@ -64,6 +69,7 @@
 
     goto :goto_0
 
+    .line 82
     .end local v0           #args:Landroid/speech/RecognitionService$StartListeningArgs;
     :pswitch_1
     iget-object v1, p0, Landroid/speech/RecognitionService$1;->this$0:Landroid/speech/RecognitionService;
@@ -78,6 +84,7 @@
 
     goto :goto_0
 
+    .line 85
     .restart local p0
     :pswitch_2
     iget-object v1, p0, Landroid/speech/RecognitionService$1;->this$0:Landroid/speech/RecognitionService;
@@ -92,6 +99,7 @@
 
     goto :goto_0
 
+    .line 88
     .restart local p0
     :pswitch_3
     iget-object v1, p0, Landroid/speech/RecognitionService$1;->this$0:Landroid/speech/RecognitionService;
@@ -101,6 +109,7 @@
 
     goto :goto_0
 
+    .line 76
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

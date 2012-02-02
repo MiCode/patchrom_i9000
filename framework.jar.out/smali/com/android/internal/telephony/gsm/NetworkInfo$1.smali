@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "in"
 
     .prologue
+    .line 165
     new-instance v0, Lcom/android/internal/telephony/gsm/NetworkInfo;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -70,6 +72,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/telephony/gsm/NetworkInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/gsm/NetworkInfo$State;I)V
 
+    .line 171
     .local v0, netInfo:Lcom/android/internal/telephony/gsm/NetworkInfo;
     return-object v0
 .end method
@@ -79,6 +82,7 @@
     .parameter "x0"
 
     .prologue
+    .line 163
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/NetworkInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/gsm/NetworkInfo;
 
     move-result-object v0
@@ -91,6 +95,7 @@
     .parameter "size"
 
     .prologue
+    .line 175
     new-array v0, p1, [Lcom/android/internal/telephony/gsm/NetworkInfo;
 
     return-object v0
@@ -101,6 +106,7 @@
     .parameter "x0"
 
     .prologue
+    .line 163
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/NetworkInfo$1;->newArray(I)[Lcom/android/internal/telephony/gsm/NetworkInfo;
 
     move-result-object v0

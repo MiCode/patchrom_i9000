@@ -47,6 +47,7 @@
     .locals 2
 
     .prologue
+    .line 3848
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "emails"
@@ -57,6 +58,7 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 3866
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "lookup"
@@ -67,6 +69,7 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_LOOKUP_URI:Landroid/net/Uri;
 
+    .line 3886
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "filter"
@@ -84,6 +87,7 @@
     .locals 0
 
     .prologue
+    .line 3833
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -96,6 +100,7 @@
     .parameter "label"
 
     .prologue
+    .line 3928
     if-nez p1, :cond_0
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -106,14 +111,17 @@
 
     move-object v1, p2
 
+    .line 3932
     :goto_0
     return-object v1
 
+    .line 3931
     :cond_0
     invoke-static {p1}, Landroid/provider/ContactsContract$CommonDataKinds$Email;->getTypeLabelResource(I)I
 
     move-result v0
 
+    .line 3932
     .local v0, labelRes:I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -127,33 +135,40 @@
     .parameter "type"
 
     .prologue
+    .line 3912
     packed-switch p0, :pswitch_data_0
 
+    .line 3917
     const v0, 0x10402f9
 
     :goto_0
     return v0
 
+    .line 3913
     :pswitch_0
     const v0, 0x10402fa
 
     goto :goto_0
 
+    .line 3914
     :pswitch_1
     const v0, 0x10402fb
 
     goto :goto_0
 
+    .line 3915
     :pswitch_2
     const v0, 0x10402fc
 
     goto :goto_0
 
+    .line 3916
     :pswitch_3
     const v0, 0x10402fd
 
     goto :goto_0
 
+    .line 3912
     nop
 
     :pswitch_data_0

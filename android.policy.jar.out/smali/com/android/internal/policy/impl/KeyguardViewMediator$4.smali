@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 1220
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -42,13 +43,16 @@
 
     const/4 v2, 0x1
 
+    .line 1223
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 1272
     :goto_0
     return-void
 
+    .line 1225
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -59,6 +63,7 @@
 
     goto :goto_0
 
+    .line 1228
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -67,6 +72,7 @@
 
     goto :goto_0
 
+    .line 1231
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -75,6 +81,7 @@
 
     goto :goto_0
 
+    .line 1234
     :pswitch_3
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -83,6 +90,7 @@
 
     goto :goto_0
 
+    .line 1237
     :pswitch_4
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -91,6 +99,7 @@
 
     goto :goto_0
 
+    .line 1240
     :pswitch_5
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -99,6 +108,7 @@
 
     goto :goto_0
 
+    .line 1243
     :pswitch_6
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -107,6 +117,7 @@
 
     goto :goto_0
 
+    .line 1246
     :pswitch_7
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -117,6 +128,7 @@
 
     goto :goto_0
 
+    .line 1249
     :pswitch_8
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -137,6 +149,7 @@
 
     goto :goto_1
 
+    .line 1252
     :pswitch_9
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -145,6 +158,7 @@
 
     goto :goto_0
 
+    .line 1255
     :pswitch_a
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -152,6 +166,7 @@
 
     goto :goto_0
 
+    .line 1258
     :pswitch_b
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -172,6 +187,7 @@
 
     goto :goto_2
 
+    .line 1261
     :pswitch_c
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -182,6 +198,7 @@
 
     goto :goto_0
 
+    .line 1264
     :pswitch_d
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -190,6 +207,7 @@
 
     goto :goto_0
 
+    .line 1267
     :pswitch_e
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -198,6 +216,7 @@
     #calls: Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleShowLowBatteryWarn(I)V
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->access$2900(Lcom/android/internal/policy/impl/KeyguardViewMediator;I)V
 
+    .line 1269
     :pswitch_f
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator$4;->this$0:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -206,6 +225,7 @@
 
     goto :goto_0
 
+    .line 1223
     nop
 
     :pswitch_data_0

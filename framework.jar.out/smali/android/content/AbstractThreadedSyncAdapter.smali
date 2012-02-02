@@ -43,22 +43,27 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 51
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mSyncThreadLock:Ljava/lang/Object;
 
+    .line 65
     iput-object p1, p0, Landroid/content/AbstractThreadedSyncAdapter;->mContext:Landroid/content/Context;
 
+    .line 66
     new-instance v0, Landroid/content/AbstractThreadedSyncAdapter$ISyncAdapterImpl;
 
     invoke-direct {v0, p0, v2}, Landroid/content/AbstractThreadedSyncAdapter$ISyncAdapterImpl;-><init>(Landroid/content/AbstractThreadedSyncAdapter;Landroid/content/AbstractThreadedSyncAdapter$1;)V
 
     iput-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mISyncAdapterImpl:Landroid/content/AbstractThreadedSyncAdapter$ISyncAdapterImpl;
 
+    .line 67
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -67,10 +72,13 @@
 
     iput-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mNumSyncStarts:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 68
     iput-object v2, p0, Landroid/content/AbstractThreadedSyncAdapter;->mSyncThread:Landroid/content/AbstractThreadedSyncAdapter$SyncThread;
 
+    .line 69
     iput-boolean p2, p0, Landroid/content/AbstractThreadedSyncAdapter;->mAutoInitialize:Z
 
+    .line 70
     return-void
 .end method
 
@@ -79,6 +87,7 @@
     .parameter "x0"
 
     .prologue
+    .line 37
     iget-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mSyncThreadLock:Ljava/lang/Object;
 
     return-object v0
@@ -89,6 +98,7 @@
     .parameter "x0"
 
     .prologue
+    .line 37
     iget-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mSyncThread:Landroid/content/AbstractThreadedSyncAdapter$SyncThread;
 
     return-object v0
@@ -100,6 +110,7 @@
     .parameter "x1"
 
     .prologue
+    .line 37
     iput-object p1, p0, Landroid/content/AbstractThreadedSyncAdapter;->mSyncThread:Landroid/content/AbstractThreadedSyncAdapter$SyncThread;
 
     return-object p1
@@ -110,6 +121,7 @@
     .parameter "x0"
 
     .prologue
+    .line 37
     iget-boolean v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mAutoInitialize:Z
 
     return v0
@@ -120,6 +132,7 @@
     .parameter "x0"
 
     .prologue
+    .line 37
     iget-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mNumSyncStarts:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-object v0
@@ -130,6 +143,7 @@
     .parameter "x0"
 
     .prologue
+    .line 37
     iget-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -141,6 +155,7 @@
     .locals 1
 
     .prologue
+    .line 73
     iget-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -150,6 +165,7 @@
     .locals 1
 
     .prologue
+    .line 193
     iget-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mISyncAdapterImpl:Landroid/content/AbstractThreadedSyncAdapter$ISyncAdapterImpl;
 
     invoke-virtual {v0}, Landroid/content/AbstractThreadedSyncAdapter$ISyncAdapterImpl;->asBinder()Landroid/os/IBinder;
@@ -166,25 +182,32 @@
     .locals 3
 
     .prologue
+    .line 219
     iget-object v1, p0, Landroid/content/AbstractThreadedSyncAdapter;->mSyncThreadLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 220
     :try_start_0
     iget-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mSyncThread:Landroid/content/AbstractThreadedSyncAdapter$SyncThread;
 
+    .line 221
     .local v0, syncThread:Landroid/content/AbstractThreadedSyncAdapter$SyncThread;
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 222
     if-eqz v0, :cond_0
 
+    .line 223
     invoke-virtual {v0}, Landroid/content/AbstractThreadedSyncAdapter$SyncThread;->interrupt()V
 
+    .line 225
     :cond_0
     return-void
 
+    .line 221
     .end local v0           #syncThread:Landroid/content/AbstractThreadedSyncAdapter$SyncThread;
     :catchall_0
     move-exception v2

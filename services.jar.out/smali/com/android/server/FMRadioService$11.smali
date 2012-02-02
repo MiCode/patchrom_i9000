@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 425
     iput-object p1, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,13 +44,16 @@
 
     const/4 v7, 0x1
 
+    .line 429
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 432
     .local v0, action:Ljava/lang/String;
     const/16 v4, 0xa
 
+    .line 435
     .local v4, mLowBatteryWarningLevel:I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -71,6 +75,7 @@
 
     invoke-static {v5}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 436
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,6 +96,7 @@
 
     invoke-static {v5}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 438
     const-string v5, "android.intent.action.BATTERY_LOW"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -99,11 +105,13 @@
 
     if-eqz v5, :cond_1
 
+    .line 440
     iget-object v5, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     #setter for: Lcom/android/server/FMRadioService;->mIsBatteryLow:Z
     invoke-static {v5, v7}, Lcom/android/server/FMRadioService;->access$1902(Lcom/android/server/FMRadioService;Z)Z
 
+    .line 441
     iget-object v5, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mIsOn:Z
@@ -113,15 +121,18 @@
 
     if-eqz v5, :cond_0
 
+    .line 442
     iget-object v5, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     #calls: Lcom/android/server/FMRadioService;->offInternal(ZIZ)Z
     invoke-static {v5, v7, v8, v7}, Lcom/android/server/FMRadioService;->access$500(Lcom/android/server/FMRadioService;ZIZ)Z
 
+    .line 460
     :cond_0
     :goto_0
     return-void
 
+    .line 443
     :cond_1
     const-string v5, "android.intent.action.BATTERY_CHANGED"
 
@@ -131,12 +142,14 @@
 
     if-eqz v5, :cond_0
 
+    .line 444
     const-string v5, "status"
 
     invoke-virtual {p2, v5, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
+    .line 445
     .local v3, battStatus:I
     const-string v5, "scale"
 
@@ -146,6 +159,7 @@
 
     move-result v2
 
+    .line 446
     .local v2, battScale:I
     const-string v5, "level"
 
@@ -153,6 +167,7 @@
 
     move-result v1
 
+    .line 447
     .local v1, battLevel:I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -184,6 +199,7 @@
 
     invoke-static {v5}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 448
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,17 +220,20 @@
 
     invoke-static {v5}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 450
     if-gt v1, v4, :cond_2
 
     const/4 v5, 0x2
 
     if-eq v3, v5, :cond_2
 
+    .line 452
     iget-object v5, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     #setter for: Lcom/android/server/FMRadioService;->mIsBatteryLow:Z
     invoke-static {v5, v7}, Lcom/android/server/FMRadioService;->access$1902(Lcom/android/server/FMRadioService;Z)Z
 
+    .line 453
     iget-object v5, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mIsOn:Z
@@ -224,6 +243,7 @@
 
     if-eqz v5, :cond_0
 
+    .line 454
     iget-object v5, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 
     #calls: Lcom/android/server/FMRadioService;->offInternal(ZIZ)Z
@@ -231,6 +251,7 @@
 
     goto :goto_0
 
+    .line 456
     :cond_2
     iget-object v5, p0, Lcom/android/server/FMRadioService$11;->this$0:Lcom/android/server/FMRadioService;
 

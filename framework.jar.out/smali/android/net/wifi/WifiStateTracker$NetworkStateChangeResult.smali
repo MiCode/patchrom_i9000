@@ -30,13 +30,18 @@
     .parameter "networkId"
 
     .prologue
+    .line 407
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 408
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker$NetworkStateChangeResult;->state:Landroid/net/NetworkInfo$DetailedState;
 
+    .line 409
     iput-object p2, p0, Landroid/net/wifi/WifiStateTracker$NetworkStateChangeResult;->BSSID:Ljava/lang/String;
 
+    .line 410
     iput p3, p0, Landroid/net/wifi/WifiStateTracker$NetworkStateChangeResult;->networkId:I
 
+    .line 411
     return-void
 .end method

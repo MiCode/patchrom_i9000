@@ -42,6 +42,7 @@
     .locals 3
 
     .prologue
+    .line 285
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -60,7 +61,7 @@
 
     const/4 v1, 0x2
 
-    const-string v2, "textContent"
+    const-string/jumbo v2, "textContent"
 
     aput-object v2, v0, v1
 
@@ -72,24 +73,25 @@
 
     const/4 v1, 0x4
 
-    const-string v2, "type"
+    const-string/jumbo v2, "type"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string v2, "size"
+    const-string/jumbo v2, "size"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string v2, "truncated"
+    const-string/jumbo v2, "truncated"
 
     aput-object v2, v0, v1
 
     sput-object v0, Landroid/provider/Notes$Body;->BODY_PROJECTION:[Ljava/lang/String;
 
+    .line 289
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,6 +125,7 @@
     .locals 0
 
     .prologue
+    .line 283
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -135,6 +138,7 @@
     .parameter "selectionArgs"
 
     .prologue
+    .line 306
     sget-object v0, Landroid/provider/Notes$Body;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v0, p1, p2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
@@ -152,6 +156,7 @@
     .parameter "orderBy"
 
     .prologue
+    .line 294
     sget-object v1, Landroid/provider/Notes$Body;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 474
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,25 +40,30 @@
     .parameter "notification_extras"
 
     .prologue
+    .line 491
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
+    .line 494
     .local p0, cr:Landroid/content/ContentResolver;
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
+    .line 495
     .local v0, values:Landroid/content/ContentValues;
-    const-string v1, "uri"
+    const-string/jumbo v1, "uri"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 496
     const-string v1, "cookiedata"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string p2, "visibility"
+    .line 497
+    const-string/jumbo p2, "visibility"
 
     .end local p2
     if-eqz p3, :cond_3
@@ -72,22 +78,28 @@
 
     invoke-virtual {v0, p2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 500
     if-eqz p7, :cond_0
 
-    const-string p2, "title"
+    .line 501
+    const-string/jumbo p2, "title"
 
     invoke-virtual {v0, p2, p7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 503
     :cond_0
     const-string p2, "entity"
 
     invoke-virtual {v0, p2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 508
     const/4 p1, 0x0
 
+    .line 509
     .local p1, destination:I
     packed-switch p4, :pswitch_data_0
 
+    .line 526
     :goto_1
     const-string p2, "destination"
 
@@ -98,6 +110,7 @@
     .end local p1           #destination:I
     invoke-virtual {v0, p2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 527
     const-string p1, "no_integrity"
 
     invoke-static {p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -106,24 +119,30 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
+    .line 529
     if-eqz p8, :cond_1
 
     if-eqz p9, :cond_1
 
+    .line 530
     const-string p1, "notificationpackage"
 
     invoke-virtual {v0, p1, p8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 532
     const-string p1, "notificationclass"
 
     invoke-virtual {v0, p1, p9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 535
     if-eqz p10, :cond_1
 
+    .line 536
     const-string p1, "notificationextras"
 
     invoke-virtual {v0, p1, p10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 541
     :cond_1
     sget-object p1, Landroid/provider/Downloads$Impl;->CONTENT_URI:Landroid/net/Uri;
 
@@ -131,12 +150,15 @@
 
     move-result-object p2
 
+    .line 543
     .local p2, downloadUri:Landroid/net/Uri;
     const-wide/16 p0, -0x1
 
+    .line 544
     .local p0, downloadId:J
     if-eqz p2, :cond_2
 
+    .line 545
     invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p0
@@ -146,10 +168,12 @@
 
     move-result-wide p0
 
+    .line 547
     .restart local p0       #downloadId:J
     :cond_2
     return-wide p0
 
+    .line 497
     .end local p2           #downloadUri:Landroid/net/Uri;
     .local p0, cr:Landroid/content/ContentResolver;
     .local p1, url:Ljava/lang/String;
@@ -159,30 +183,38 @@
 
     goto :goto_0
 
+    .line 511
     .end local p3
     .local p1, destination:I
     :pswitch_0
     const/4 p1, 0x0
 
+    .line 512
     goto :goto_1
 
+    .line 514
     :pswitch_1
     if-eqz p5, :cond_4
 
+    .line 515
     const/4 p1, 0x1
 
     goto :goto_1
 
+    .line 517
     :cond_4
     const/4 p1, 0x3
 
+    .line 520
     goto :goto_1
 
+    .line 522
     :pswitch_2
     const/4 p1, 0x2
 
     goto :goto_1
 
+    .line 509
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

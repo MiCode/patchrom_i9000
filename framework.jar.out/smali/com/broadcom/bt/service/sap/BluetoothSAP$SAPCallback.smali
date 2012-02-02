@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 281
     iput-object p1, p0, Lcom/broadcom/bt/service/sap/BluetoothSAP$SAPCallback;->this$0:Lcom/broadcom/bt/service/sap/BluetoothSAP;
 
     invoke-direct {p0}, Lcom/broadcom/bt/service/sap/IBluetoothSAPCallback$Stub;-><init>()V
@@ -43,6 +44,7 @@
     .end annotation
 
     .prologue
+    .line 285
     monitor-enter p0
 
     :try_start_0
@@ -52,7 +54,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "onConnected: address = ["
+    const-string/jumbo v2, "onConnected: address = ["
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -74,6 +76,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 288
     iget-object v0, p0, Lcom/broadcom/bt/service/sap/BluetoothSAP$SAPCallback;->this$0:Lcom/broadcom/bt/service/sap/BluetoothSAP;
 
     #getter for: Lcom/broadcom/bt/service/sap/BluetoothSAP;->mEventHandler:Lcom/broadcom/bt/service/sap/IBluetoothSAPEventHandler;
@@ -83,6 +86,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 289
     iget-object v0, p0, Lcom/broadcom/bt/service/sap/BluetoothSAP$SAPCallback;->this$0:Lcom/broadcom/bt/service/sap/BluetoothSAP;
 
     #getter for: Lcom/broadcom/bt/service/sap/BluetoothSAP;->mEventHandler:Lcom/broadcom/bt/service/sap/IBluetoothSAPEventHandler;
@@ -94,11 +98,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 291
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 285
     :catchall_0
     move-exception v0
 
@@ -116,15 +122,17 @@
     .end annotation
 
     .prologue
+    .line 295
     monitor-enter p0
 
     :try_start_0
     const-string v0, "BluetoothSAP"
 
-    const-string v1, "onDisconnected"
+    const-string/jumbo v1, "onDisconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 298
     iget-object v0, p0, Lcom/broadcom/bt/service/sap/BluetoothSAP$SAPCallback;->this$0:Lcom/broadcom/bt/service/sap/BluetoothSAP;
 
     #getter for: Lcom/broadcom/bt/service/sap/BluetoothSAP;->mEventHandler:Lcom/broadcom/bt/service/sap/IBluetoothSAPEventHandler;
@@ -134,6 +142,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 299
     iget-object v0, p0, Lcom/broadcom/bt/service/sap/BluetoothSAP$SAPCallback;->this$0:Lcom/broadcom/bt/service/sap/BluetoothSAP;
 
     #getter for: Lcom/broadcom/bt/service/sap/BluetoothSAP;->mEventHandler:Lcom/broadcom/bt/service/sap/IBluetoothSAPEventHandler;
@@ -145,11 +154,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 301
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 295
     :catchall_0
     move-exception v0
 

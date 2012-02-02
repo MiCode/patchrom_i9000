@@ -24,12 +24,15 @@
     .parameter
 
     .prologue
+    .line 75
     iput-object p1, p0, Lcom/android/server/ServerThread$AdbSettingsObserver;->this$0:Lcom/android/server/ServerThread;
 
+    .line 76
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
+    .line 77
     return-void
 .end method
 
@@ -42,6 +45,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 80
     iget-object v1, p0, Lcom/android/server/ServerThread$AdbSettingsObserver;->this$0:Lcom/android/server/ServerThread;
 
     #getter for: Lcom/android/server/ServerThread;->mContentResolver:Landroid/content/ContentResolver;
@@ -61,6 +65,7 @@
 
     move v0, v1
 
+    .line 83
     .local v0, enableAdb:Z
     :goto_0
     const-string v1, "persist.service.adb.enable"
@@ -72,14 +77,17 @@
     :goto_1
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 84
     return-void
 
     .end local v0           #enableAdb:Z
     :cond_0
     move v0, v3
 
+    .line 80
     goto :goto_0
 
+    .line 83
     .restart local v0       #enableAdb:Z
     :cond_1
     const-string v2, "0"

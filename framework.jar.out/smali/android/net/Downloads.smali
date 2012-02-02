@@ -69,6 +69,7 @@
     .locals 3
 
     .prologue
+    .line 563
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -87,7 +88,7 @@
 
     const/4 v1, 0x2
 
-    const-string v2, "status"
+    const-string/jumbo v2, "status"
 
     aput-object v2, v0, v1
 
@@ -118,6 +119,7 @@
     .locals 0
 
     .prologue
+    .line 644
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -127,6 +129,7 @@
     .locals 1
 
     .prologue
+    .line 41
     sget-object v0, Landroid/net/Downloads;->DOWNLOADS_PROJECTION:[Ljava/lang/String;
 
     return-object v0
@@ -138,6 +141,7 @@
     .parameter "x1"
 
     .prologue
+    .line 41
     invoke-static {p0, p1, p2}, Landroid/net/Downloads;->getStatusOfDownload(Landroid/database/Cursor;J)I
 
     move-result v0
@@ -157,17 +161,20 @@
 
     const/4 v10, 0x0
 
+    .line 611
     const/4 v8, 0x2
 
     invoke-interface {p0, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v7
 
+    .line 612
     .local v7, status:I
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v5
 
+    .line 617
     .local v5, realtime:J
     invoke-static {v7}, Landroid/provider/Downloads$Impl;->isStatusCompleted(I)Z
 
@@ -175,15 +182,18 @@
 
     if-nez v8, :cond_2
 
+    .line 619
     invoke-interface {p0, v9}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
 
+    .line 620
     .local v1, modified:J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
+    .line 621
     .local v3, now:J
     cmp-long v8, v3, v1
 
@@ -198,6 +208,7 @@
     :cond_0
     move v8, v10
 
+    .line 637
     .end local v1           #modified:J
     .end local v3           #now:J
     :goto_0
@@ -208,8 +219,10 @@
     :cond_1
     move v8, v11
 
+    .line 625
     goto :goto_0
 
+    .line 628
     .end local v1           #modified:J
     .end local v3           #now:J
     :cond_2
@@ -221,23 +234,28 @@
 
     move v8, v10
 
+    .line 629
     goto :goto_0
 
+    .line 632
     :cond_3
     invoke-interface {p0, v11}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 633
     .local v0, filename:Ljava/lang/String;
     if-nez v0, :cond_4
 
     move v8, v10
 
+    .line 634
     goto :goto_0
 
     :cond_4
     move v8, v9
 
+    .line 637
     goto :goto_0
 .end method
 
@@ -246,6 +264,7 @@
     .parameter "status"
 
     .prologue
+    .line 110
     const/16 v0, 0x190
 
     if-lt p0, v0, :cond_0
@@ -270,6 +289,7 @@
     .parameter "status"
 
     .prologue
+    .line 103
     const/16 v0, 0xc8
 
     if-lt p0, v0, :cond_0

@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1876
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$6;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +43,18 @@
     .parameter "item"
 
     .prologue
+    .line 1878
     const/4 v1, 0x0
 
+    .line 1880
     .local v1, query:Ljava/lang/String;
     packed-switch p2, :pswitch_data_0
 
+    .line 1895
     :goto_0
     if-eqz v1, :cond_0
 
+    .line 1896
     const-string v2, "%s"
 
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$6;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -63,6 +68,7 @@
 
     move-result-object v1
 
+    .line 1897
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.VIEW"
@@ -73,6 +79,7 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 1898
     .local v0, intentSearchText:Landroid/content/Intent;
     invoke-virtual {v0}, Landroid/content/Intent;->getFlags()I
 
@@ -84,6 +91,7 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
+    .line 1900
     :try_start_0
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$6;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -93,11 +101,13 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1904
     .end local v0           #intentSearchText:Landroid/content/Intent;
     :cond_0
     :goto_1
     return-void
 
+    .line 1882
     :pswitch_0
     new-instance v1, Ljava/lang/String;
 
@@ -106,9 +116,11 @@
 
     invoke-direct {v1, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
+    .line 1883
     .restart local v1       #query:Ljava/lang/String;
     goto :goto_0
 
+    .line 1885
     :pswitch_1
     new-instance v1, Ljava/lang/String;
 
@@ -117,9 +129,11 @@
 
     invoke-direct {v1, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
+    .line 1886
     .restart local v1       #query:Ljava/lang/String;
     goto :goto_0
 
+    .line 1888
     :pswitch_2
     new-instance v1, Ljava/lang/String;
 
@@ -128,9 +142,11 @@
 
     invoke-direct {v1, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
+    .line 1889
     .restart local v1       #query:Ljava/lang/String;
     goto :goto_0
 
+    .line 1891
     :pswitch_3
     new-instance v1, Ljava/lang/String;
 
@@ -142,12 +158,14 @@
     .restart local v1       #query:Ljava/lang/String;
     goto :goto_0
 
+    .line 1901
     .restart local v0       #intentSearchText:Landroid/content/Intent;
     :catch_0
     move-exception v2
 
     goto :goto_1
 
+    .line 1880
     nop
 
     :pswitch_data_0

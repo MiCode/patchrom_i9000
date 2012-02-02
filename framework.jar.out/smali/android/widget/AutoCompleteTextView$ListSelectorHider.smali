@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1502
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$ListSelectorHider;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1502
     invoke-direct {p0, p1}, Landroid/widget/AutoCompleteTextView$ListSelectorHider;-><init>(Landroid/widget/AutoCompleteTextView;)V
 
     return-void
@@ -51,9 +53,11 @@
     .locals 1
 
     .prologue
+    .line 1504
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$ListSelectorHider;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->clearListSelection()V
 
+    .line 1505
     return-void
 .end method

@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 323
     iput-object p1, p0, Landroid/widget/SimpleAdapter$SimpleFilter;->this$0:Landroid/widget/SimpleAdapter;
 
     invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 323
     invoke-direct {p0, p1}, Landroid/widget/SimpleAdapter$SimpleFilter;-><init>(Landroid/widget/SimpleAdapter;)V
 
     return-void
@@ -49,10 +51,12 @@
     .parameter "prefix"
 
     .prologue
+    .line 327
     new-instance v11, Landroid/widget/Filter$FilterResults;
 
     invoke-direct {v11}, Landroid/widget/Filter$FilterResults;-><init>()V
 
+    .line 329
     .local v11, results:Landroid/widget/Filter$FilterResults;
     move-object/from16 v0, p0
 
@@ -67,6 +71,7 @@
 
     if-nez v17, :cond_0
 
+    .line 330
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/SimpleAdapter$SimpleFilter;->this$0:Landroid/widget/SimpleAdapter;
@@ -91,6 +96,7 @@
     #setter for: Landroid/widget/SimpleAdapter;->mUnfilteredData:Ljava/util/ArrayList;
     invoke-static/range {v17 .. v18}, Landroid/widget/SimpleAdapter;->access$102(Landroid/widget/SimpleAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
+    .line 333
     :cond_0
     if-eqz p1, :cond_1
 
@@ -100,6 +106,7 @@
 
     if-nez v17, :cond_2
 
+    .line 334
     :cond_1
     move-object/from16 v0, p0
 
@@ -112,9 +119,11 @@
 
     move-result-object v8
 
+    .line 335
     .local v8, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;*>;>;"
     iput-object v8, v11, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
+    .line 336
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v17
@@ -125,10 +134,12 @@
 
     iput v0, v1, Landroid/widget/Filter$FilterResults;->count:I
 
+    .line 373
     .end local v8           #list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;*>;>;"
     :goto_0
     return-object v11
 
+    .line 338
     :cond_2
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -138,6 +149,7 @@
 
     move-result-object v10
 
+    .line 340
     .local v10, prefixString:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -150,16 +162,19 @@
 
     move-result-object v13
 
+    .line 341
     .local v13, unfilteredValues:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;*>;>;"
     invoke-virtual {v13}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
+    .line 343
     .local v2, count:I
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9, v2}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 345
     .local v9, newValues:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;*>;>;"
     const/4 v4, 0x0
 
@@ -167,15 +182,18 @@
     :goto_1
     if-ge v4, v2, :cond_6
 
+    .line 346
     invoke-virtual {v13, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/Map;
 
+    .line 347
     .local v3, h:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;*>;"
     if-eqz v3, :cond_5
 
+    .line 349
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/SimpleAdapter$SimpleFilter;->this$0:Landroid/widget/SimpleAdapter;
@@ -193,6 +211,7 @@
 
     move v7, v0
 
+    .line 351
     .local v7, len:I
     const/4 v5, 0x0
 
@@ -200,6 +219,7 @@
     :goto_2
     if-ge v5, v7, :cond_5
 
+    .line 352
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/SimpleAdapter$SimpleFilter;->this$0:Landroid/widget/SimpleAdapter;
@@ -223,6 +243,7 @@
 
     check-cast v12, Ljava/lang/String;
 
+    .line 354
     .local v12, str:Ljava/lang/String;
     const-string v17, " "
 
@@ -234,6 +255,7 @@
 
     move-result-object v16
 
+    .line 355
     .local v16, words:[Ljava/lang/String;
     move-object/from16 v0, v16
 
@@ -241,6 +263,7 @@
 
     move v15, v0
 
+    .line 357
     .local v15, wordCount:I
     const/4 v6, 0x0
 
@@ -248,8 +271,10 @@
     :goto_3
     if-ge v6, v15, :cond_3
 
+    .line 358
     aget-object v14, v16, v6
 
+    .line 360
     .local v14, word:Ljava/lang/String;
     invoke-virtual {v14}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -265,20 +290,24 @@
 
     if-eqz v17, :cond_4
 
+    .line 361
     invoke-virtual {v9, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 351
     .end local v14           #word:Ljava/lang/String;
     :cond_3
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
+    .line 357
     .restart local v14       #word:Ljava/lang/String;
     :cond_4
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
+    .line 345
     .end local v5           #j:I
     .end local v6           #k:I
     .end local v7           #len:I
@@ -291,10 +320,12 @@
 
     goto :goto_1
 
+    .line 369
     .end local v3           #h:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;*>;"
     :cond_6
     iput-object v9, v11, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
+    .line 370
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
     move-result v17
@@ -314,6 +345,7 @@
     .parameter "results"
 
     .prologue
+    .line 379
     iget-object v1, p0, Landroid/widget/SimpleAdapter$SimpleFilter;->this$0:Landroid/widget/SimpleAdapter;
 
     iget-object v0, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
@@ -323,17 +355,21 @@
     #setter for: Landroid/widget/SimpleAdapter;->mData:Ljava/util/List;
     invoke-static {v1, v0}, Landroid/widget/SimpleAdapter;->access$202(Landroid/widget/SimpleAdapter;Ljava/util/List;)Ljava/util/List;
 
+    .line 380
     iget v0, p2, Landroid/widget/Filter$FilterResults;->count:I
 
     if-lez v0, :cond_0
 
+    .line 381
     iget-object v0, p0, Landroid/widget/SimpleAdapter$SimpleFilter;->this$0:Landroid/widget/SimpleAdapter;
 
     invoke-virtual {v0}, Landroid/widget/SimpleAdapter;->notifyDataSetChanged()V
 
+    .line 385
     :goto_0
     return-void
 
+    .line 383
     :cond_0
     iget-object v0, p0, Landroid/widget/SimpleAdapter$SimpleFilter;->this$0:Landroid/widget/SimpleAdapter;
 

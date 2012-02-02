@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 391
     iput-object p1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$7;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/UnlockMediaController$7;->val$mContext:Landroid/content/Context;
@@ -46,11 +47,13 @@
     .parameter "v"
 
     .prologue
+    .line 393
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockMediaController$7;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #calls: Lcom/android/internal/policy/impl/UnlockMediaController;->sendTouchDetection()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/UnlockMediaController;->access$000(Lcom/android/internal/policy/impl/UnlockMediaController;)V
 
+    .line 394
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockMediaController$7;->val$mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
@@ -61,5 +64,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 395
     return-void
 .end method

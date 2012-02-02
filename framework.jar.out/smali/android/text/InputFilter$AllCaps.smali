@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,12 +44,14 @@
 
     const/4 v6, 0x0
 
+    .line 52
     move v7, p2
 
     .local v7, i:I
     :goto_0
     if-ge v7, p3, :cond_2
 
+    .line 53
     invoke-interface {p1, v7}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
@@ -59,13 +62,16 @@
 
     if-eqz v1, :cond_1
 
+    .line 54
     sub-int v1, p3, p2
 
     new-array v9, v1, [C
 
+    .line 55
     .local v9, v:[C
     invoke-static {p1, p2, p3, v9, v6}, Landroid/text/TextUtils;->getChars(Ljava/lang/CharSequence;II[CI)V
 
+    .line 56
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v9}, Ljava/lang/String;-><init>([C)V
@@ -74,15 +80,18 @@
 
     move-result-object v8
 
+    .line 58
     .local v8, s:Ljava/lang/String;
     instance-of v1, p1, Landroid/text/Spanned;
 
     if-eqz v1, :cond_0
 
+    .line 59
     new-instance v5, Landroid/text/SpannableString;
 
     invoke-direct {v5, v8}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 60
     .local v5, sp:Landroid/text/SpannableString;
     move-object v0, p1
 
@@ -98,6 +107,7 @@
 
     move-object v1, v5
 
+    .line 69
     .end local v5           #sp:Landroid/text/SpannableString;
     .end local v8           #s:Ljava/lang/String;
     .end local v9           #v:[C
@@ -109,8 +119,10 @@
     :cond_0
     move-object v1, v8
 
+    .line 64
     goto :goto_1
 
+    .line 52
     .end local v8           #s:Ljava/lang/String;
     .end local v9           #v:[C
     :cond_1
@@ -121,5 +133,6 @@
     :cond_2
     move-object v1, v4
 
+    .line 69
     goto :goto_1
 .end method

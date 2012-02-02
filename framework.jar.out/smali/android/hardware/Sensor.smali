@@ -59,8 +59,10 @@
     .locals 0
 
     .prologue
+    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 121
     return-void
 .end method
 
@@ -70,6 +72,7 @@
     .locals 1
 
     .prologue
+    .line 182
     iget v0, p0, Landroid/hardware/Sensor;->mHandle:I
 
     return v0
@@ -79,6 +82,7 @@
     .locals 1
 
     .prologue
+    .line 195
     iget v0, p0, Landroid/hardware/Sensor;->mLegacyType:I
 
     return v0
@@ -88,6 +92,7 @@
     .locals 1
 
     .prologue
+    .line 155
     iget v0, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
     return v0
@@ -97,6 +102,7 @@
     .locals 1
 
     .prologue
+    .line 178
     iget v0, p0, Landroid/hardware/Sensor;->mMinDelay:I
 
     return v0
@@ -106,6 +112,7 @@
     .locals 1
 
     .prologue
+    .line 127
     iget-object v0, p0, Landroid/hardware/Sensor;->mName:Ljava/lang/String;
 
     return-object v0
@@ -115,6 +122,7 @@
     .locals 1
 
     .prologue
+    .line 169
     iget v0, p0, Landroid/hardware/Sensor;->mPower:F
 
     return v0
@@ -124,6 +132,7 @@
     .locals 1
 
     .prologue
+    .line 162
     iget v0, p0, Landroid/hardware/Sensor;->mResolution:F
 
     return v0
@@ -133,6 +142,7 @@
     .locals 1
 
     .prologue
+    .line 141
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
     return v0
@@ -142,6 +152,7 @@
     .locals 1
 
     .prologue
+    .line 134
     iget-object v0, p0, Landroid/hardware/Sensor;->mVendor:Ljava/lang/String;
 
     return-object v0
@@ -151,6 +162,7 @@
     .locals 1
 
     .prologue
+    .line 148
     iget v0, p0, Landroid/hardware/Sensor;->mVersion:I
 
     return v0
@@ -161,8 +173,10 @@
     .parameter "legacyType"
 
     .prologue
+    .line 191
     iput p1, p0, Landroid/hardware/Sensor;->mLegacyType:I
 
+    .line 192
     return-void
 .end method
 
@@ -172,9 +186,12 @@
     .parameter "res"
 
     .prologue
+    .line 186
     iput p1, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
+    .line 187
     iput p2, p0, Landroid/hardware/Sensor;->mResolution:F
 
+    .line 188
     return-void
 .end method

@@ -56,6 +56,7 @@
 
     const/4 v2, 0x0
 
+    .line 105
     new-instance v0, Lcom/android/internal/telephony/DataConnection$SetupResult;
 
     const-string v1, "ERR_BadCommand"
@@ -64,6 +65,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$SetupResult;->ERR_BadCommand:Lcom/android/internal/telephony/DataConnection$SetupResult;
 
+    .line 106
     new-instance v0, Lcom/android/internal/telephony/DataConnection$SetupResult;
 
     const-string v1, "ERR_BadDns"
@@ -72,6 +74,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$SetupResult;->ERR_BadDns:Lcom/android/internal/telephony/DataConnection$SetupResult;
 
+    .line 107
     new-instance v0, Lcom/android/internal/telephony/DataConnection$SetupResult;
 
     const-string v1, "ERR_Other"
@@ -80,6 +83,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$SetupResult;->ERR_Other:Lcom/android/internal/telephony/DataConnection$SetupResult;
 
+    .line 108
     new-instance v0, Lcom/android/internal/telephony/DataConnection$SetupResult;
 
     const-string v1, "ERR_Stale"
@@ -88,6 +92,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$SetupResult;->ERR_Stale:Lcom/android/internal/telephony/DataConnection$SetupResult;
 
+    .line 109
     new-instance v0, Lcom/android/internal/telephony/DataConnection$SetupResult;
 
     const-string v1, "SUCCESS"
@@ -96,6 +101,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$SetupResult;->SUCCESS:Lcom/android/internal/telephony/DataConnection$SetupResult;
 
+    .line 104
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/DataConnection$SetupResult;
@@ -136,6 +142,7 @@
     .end annotation
 
     .prologue
+    .line 104
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -146,6 +153,7 @@
     .parameter "name"
 
     .prologue
+    .line 104
     const-class v0, Lcom/android/internal/telephony/DataConnection$SetupResult;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -162,6 +170,7 @@
     .locals 1
 
     .prologue
+    .line 104
     sget-object v0, Lcom/android/internal/telephony/DataConnection$SetupResult;->$VALUES:[Lcom/android/internal/telephony/DataConnection$SetupResult;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/DataConnection$SetupResult;->clone()Ljava/lang/Object;
@@ -179,6 +188,7 @@
     .locals 2
 
     .prologue
+    .line 115
     sget-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataConnection$SetupResult:[I
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/DataConnection$SetupResult;->ordinal()I
@@ -189,36 +199,43 @@
 
     packed-switch v0, :pswitch_data_0
 
-    const-string v0, "unknown"
+    .line 121
+    const-string/jumbo v0, "unknown"
 
     :goto_0
     return-object v0
 
+    .line 116
     :pswitch_0
     const-string v0, "Bad Command"
 
     goto :goto_0
 
+    .line 117
     :pswitch_1
     const-string v0, "Bad DNS"
 
     goto :goto_0
 
+    .line 118
     :pswitch_2
     const-string v0, "Other error"
 
     goto :goto_0
 
+    .line 119
     :pswitch_3
     const-string v0, "Stale command"
 
     goto :goto_0
 
+    .line 120
     :pswitch_4
     const-string v0, "SUCCESS"
 
     goto :goto_0
 
+    .line 115
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

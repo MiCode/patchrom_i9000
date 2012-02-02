@@ -40,6 +40,7 @@
     .locals 3
 
     .prologue
+    .line 34
     invoke-static {}, Landroid/text/method/TextKeyListener$Capitalize;->values()[Landroid/text/method/TextKeyListener$Capitalize;
 
     move-result-object v0
@@ -52,12 +53,14 @@
 
     sput-object v0, Landroid/text/method/MultiTapKeyListener;->sInstance:[Landroid/text/method/MultiTapKeyListener;
 
+    .line 37
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
+    .line 43
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0x8
@@ -66,6 +69,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 44
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0x9
@@ -74,6 +78,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 45
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0xa
@@ -82,6 +87,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 46
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0xb
@@ -90,6 +96,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 47
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0xc
@@ -98,6 +105,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 48
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0xd
@@ -106,30 +114,34 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 49
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0xe
 
-    const-string v2, "pqrs7PQRS"
+    const-string/jumbo v2, "pqrs7PQRS"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 50
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0xf
 
-    const-string v2, "tuv8TUV"
+    const-string/jumbo v2, "tuv8TUV"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 51
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0x10
 
-    const-string v2, "wxyz9WXYZ"
+    const-string/jumbo v2, "wxyz9WXYZ"
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 52
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/4 v1, 0x7
@@ -138,6 +150,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 53
     sget-object v0, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     const/16 v1, 0x12
@@ -146,6 +159,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 54
     return-void
 .end method
 
@@ -155,12 +169,16 @@
     .parameter "autotext"
 
     .prologue
+    .line 57
     invoke-direct {p0}, Landroid/text/method/BaseKeyListener;-><init>()V
 
+    .line 58
     iput-object p1, p0, Landroid/text/method/MultiTapKeyListener;->mCapitalize:Landroid/text/method/TextKeyListener$Capitalize;
 
+    .line 59
     iput-boolean p2, p0, Landroid/text/method/MultiTapKeyListener;->mAutoText:Z
 
+    .line 60
     return-void
 .end method
 
@@ -170,6 +188,7 @@
     .parameter "cap"
 
     .prologue
+    .line 68
     invoke-virtual {p1}, Landroid/text/method/TextKeyListener$Capitalize;->ordinal()I
 
     move-result v1
@@ -183,6 +202,7 @@
     :goto_0
     add-int v0, v1, v2
 
+    .line 70
     .local v0, off:I
     sget-object v1, Landroid/text/method/MultiTapKeyListener;->sInstance:[Landroid/text/method/MultiTapKeyListener;
 
@@ -190,6 +210,7 @@
 
     if-nez v1, :cond_0
 
+    .line 71
     sget-object v1, Landroid/text/method/MultiTapKeyListener;->sInstance:[Landroid/text/method/MultiTapKeyListener;
 
     new-instance v2, Landroid/text/method/MultiTapKeyListener;
@@ -198,6 +219,7 @@
 
     aput-object v2, v1, v0
 
+    .line 74
     :cond_0
     sget-object v1, Landroid/text/method/MultiTapKeyListener;->sInstance:[Landroid/text/method/MultiTapKeyListener;
 
@@ -205,6 +227,7 @@
 
     return-object v1
 
+    .line 68
     .end local v0           #off:I
     :cond_1
     const/4 v2, 0x0
@@ -217,6 +240,7 @@
     .parameter "buf"
 
     .prologue
+    .line 239
     const/4 v3, 0x0
 
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
@@ -231,6 +255,7 @@
 
     check-cast v2, [Landroid/text/method/MultiTapKeyListener$Timeout;
 
+    .line 241
     .local v2, timeout:[Landroid/text/method/MultiTapKeyListener$Timeout;
     const/4 v0, 0x0
 
@@ -240,22 +265,28 @@
 
     if-ge v0, v3, :cond_0
 
+    .line 242
     aget-object v1, v2, v0
 
+    .line 244
     .local v1, t:Landroid/text/method/MultiTapKeyListener$Timeout;
     invoke-virtual {v1, v1}, Landroid/text/method/MultiTapKeyListener$Timeout;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    .line 245
     const/4 v3, 0x0
 
     #setter for: Landroid/text/method/MultiTapKeyListener$Timeout;->mBuffer:Landroid/text/Editable;
     invoke-static {v1, v3}, Landroid/text/method/MultiTapKeyListener$Timeout;->access$002(Landroid/text/method/MultiTapKeyListener$Timeout;Landroid/text/Editable;)Landroid/text/Editable;
 
+    .line 246
     invoke-interface {p0, v1}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
+    .line 241
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 248
     .end local v1           #t:Landroid/text/method/MultiTapKeyListener$Timeout;
     :cond_0
     return-void
@@ -267,6 +298,7 @@
     .locals 2
 
     .prologue
+    .line 78
     iget-object v0, p0, Landroid/text/method/MultiTapKeyListener;->mCapitalize:Landroid/text/method/TextKeyListener$Capitalize;
 
     iget-boolean v1, p0, Landroid/text/method/MultiTapKeyListener;->mAutoText:Z
@@ -286,11 +318,14 @@
     .parameter "event"
 
     .prologue
+    .line 84
     const/16 v29, 0x0
 
+    .line 86
     .local v29, pref:I
     if-eqz p1, :cond_0
 
+    .line 87
     invoke-static {}, Landroid/text/method/TextKeyListener;->getInstance()Landroid/text/method/TextKeyListener;
 
     move-result-object v5
@@ -303,16 +338,19 @@
 
     move-result v29
 
+    .line 91
     :cond_0
     invoke-static/range {p2 .. p2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
     move-result v16
 
+    .line 92
     .local v16, a:I
     invoke-static/range {p2 .. p2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v20
 
+    .line 94
     .local v20, b:I
     move/from16 v0, v16
 
@@ -322,6 +360,7 @@
 
     move-result v6
 
+    .line 95
     .local v6, selStart:I
     move/from16 v0, v16
 
@@ -331,6 +370,7 @@
 
     move-result v7
 
+    .line 98
     .local v7, selEnd:I
     sget-object v5, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
 
@@ -342,6 +382,7 @@
 
     move-result v18
 
+    .line 99
     .local v18, activeStart:I
     sget-object v5, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
 
@@ -353,6 +394,7 @@
 
     move-result v17
 
+    .line 106
     .local v17, activeEnd:I
     sget-object v5, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
 
@@ -370,6 +412,7 @@
 
     ushr-int/lit8 v30, v5, 0x18
 
+    .line 109
     .local v30, rec:I
     move/from16 v0, v18
 
@@ -403,6 +446,7 @@
 
     if-ge v0, v1, :cond_8
 
+    .line 112
     const/16 v5, 0x11
 
     move/from16 v0, p3
@@ -411,6 +455,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 113
     move-object/from16 v0, p2
 
     move v1, v6
@@ -419,6 +464,7 @@
 
     move-result v22
 
+    .line 115
     .local v22, current:C
     invoke-static/range {v22 .. v22}, Ljava/lang/Character;->isLowerCase(C)Z
 
@@ -426,6 +472,7 @@
 
     if-eqz v5, :cond_1
 
+    .line 116
     invoke-static/range {v22 .. v22}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
     move-result-object v5
@@ -444,8 +491,10 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
+    .line 118
     invoke-static/range {p2 .. p2}, Landroid/text/method/MultiTapKeyListener;->removeTimeouts(Landroid/text/Spannable;)V
 
+    .line 119
     new-instance v31, Landroid/text/method/MultiTapKeyListener$Timeout;
 
     move-object/from16 v0, v31
@@ -456,14 +505,17 @@
 
     invoke-direct {v0, v1, v2}, Landroid/text/method/MultiTapKeyListener$Timeout;-><init>(Landroid/text/method/MultiTapKeyListener;Landroid/text/Editable;)V
 
+    .line 121
     .local v31, t:Landroid/text/method/MultiTapKeyListener$Timeout;
     const/4 v5, 0x1
 
+    .line 227
     .end local v22           #current:C
     .end local v31           #t:Landroid/text/method/MultiTapKeyListener$Timeout;
     :goto_0
     return v5
 
+    .line 123
     .restart local v22       #current:C
     :cond_1
     invoke-static/range {v22 .. v22}, Ljava/lang/Character;->isUpperCase(C)Z
@@ -472,6 +524,7 @@
 
     if-eqz v5, :cond_2
 
+    .line 124
     invoke-static/range {v22 .. v22}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
     move-result-object v5
@@ -490,8 +543,10 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
+    .line 126
     invoke-static/range {p2 .. p2}, Landroid/text/method/MultiTapKeyListener;->removeTimeouts(Landroid/text/Spannable;)V
 
+    .line 127
     new-instance v31, Landroid/text/method/MultiTapKeyListener$Timeout;
 
     move-object/from16 v0, v31
@@ -502,11 +557,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/text/method/MultiTapKeyListener$Timeout;-><init>(Landroid/text/method/MultiTapKeyListener;Landroid/text/Editable;)V
 
+    .line 129
     .restart local v31       #t:Landroid/text/method/MultiTapKeyListener$Timeout;
     const/4 v5, 0x1
 
     goto :goto_0
 
+    .line 133
     .end local v22           #current:C
     .end local v31           #t:Landroid/text/method/MultiTapKeyListener$Timeout;
     :cond_2
@@ -526,6 +583,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 134
     sget-object v5, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     move-object v0, v5
@@ -538,6 +596,7 @@
 
     check-cast v8, Ljava/lang/String;
 
+    .line 135
     .local v8, val:Ljava/lang/String;
     move-object/from16 v0, p2
 
@@ -547,6 +606,7 @@
 
     move-result v21
 
+    .line 136
     .local v21, ch:C
     move-object v0, v8
 
@@ -556,9 +616,11 @@
 
     move-result v9
 
+    .line 138
     .local v9, ix:I
     if-ltz v9, :cond_3
 
+    .line 139
     add-int/lit8 v5, v9, 0x1
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
@@ -568,6 +630,7 @@
     .end local v9           #ix:I
     rem-int v9, v5, v9
 
+    .line 141
     .restart local v9       #ix:I
     add-int/lit8 v10, v9, 0x1
 
@@ -575,8 +638,10 @@
 
     invoke-interface/range {v5 .. v10}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
 
+    .line 142
     invoke-static/range {p2 .. p2}, Landroid/text/method/MultiTapKeyListener;->removeTimeouts(Landroid/text/Spannable;)V
 
+    .line 143
     new-instance v31, Landroid/text/method/MultiTapKeyListener$Timeout;
 
     move-object/from16 v0, v31
@@ -587,11 +652,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/text/method/MultiTapKeyListener$Timeout;-><init>(Landroid/text/method/MultiTapKeyListener;Landroid/text/Editable;)V
 
+    .line 145
     .restart local v31       #t:Landroid/text/method/MultiTapKeyListener$Timeout;
     const/4 v5, 0x1
 
     goto :goto_0
 
+    .line 154
     .end local v8           #val:Ljava/lang/String;
     .end local v9           #ix:I
     .end local v21           #ch:C
@@ -607,8 +674,10 @@
 
     move-result v30
 
+    .line 156
     if-ltz v30, :cond_4
 
+    .line 157
     move-object/from16 v0, p2
 
     move v1, v7
@@ -617,12 +686,15 @@
 
     invoke-static {v0, v1, v2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
+    .line 158
     move v6, v7
 
+    .line 164
     :cond_4
     :goto_1
     if-ltz v30, :cond_c
 
+    .line 169
     sget-object v5, Landroid/text/method/MultiTapKeyListener;->sRecs:Landroid/util/SparseArray;
 
     move-object v0, v5
@@ -635,9 +707,11 @@
 
     check-cast v8, Ljava/lang/String;
 
+    .line 171
     .restart local v8       #val:Ljava/lang/String;
     const/4 v14, 0x0
 
+    .line 172
     .local v14, off:I
     and-int/lit8 v5, v29, 0x1
 
@@ -661,6 +735,7 @@
 
     if-eqz v5, :cond_5
 
+    .line 174
     const/16 v23, 0x0
 
     .local v23, i:I
@@ -675,6 +750,7 @@
 
     if-ge v0, v1, :cond_5
 
+    .line 175
     move-object v0, v8
 
     move/from16 v1, v23
@@ -689,18 +765,22 @@
 
     if-eqz v5, :cond_9
 
+    .line 176
     move/from16 v14, v23
 
+    .line 182
     .end local v23           #i:I
     :cond_5
     if-eq v6, v7, :cond_6
 
+    .line 183
     move-object/from16 v0, p2
 
     move v1, v7
 
     invoke-static {v0, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
+    .line 186
     :cond_6
     sget-object v5, Landroid/text/method/MultiTapKeyListener;->OLD_SEL_START:Ljava/lang/Object;
 
@@ -718,6 +798,7 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
+    .line 189
     add-int/lit8 v15, v14, 0x1
 
     move-object/from16 v10, p2
@@ -730,6 +811,7 @@
 
     invoke-interface/range {v10 .. v15}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
 
+    .line 191
     sget-object v5, Landroid/text/method/MultiTapKeyListener;->OLD_SEL_START:Ljava/lang/Object;
 
     move-object/from16 v0, p2
@@ -740,17 +822,20 @@
 
     move-result v28
 
+    .line 192
     .local v28, oldStart:I
     invoke-static/range {p2 .. p2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v7
 
+    .line 194
     move v0, v7
 
     move/from16 v1, v28
 
     if-eq v0, v1, :cond_7
 
+    .line 195
     move-object/from16 v0, p2
 
     move/from16 v1, v28
@@ -759,6 +844,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
+    .line 197
     sget-object v5, Landroid/text/method/TextKeyListener;->LAST_TYPED:Ljava/lang/Object;
 
     const/16 v8, 0x21
@@ -775,6 +861,7 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
+    .line 201
     .end local v8           #val:Ljava/lang/String;
     sget-object v5, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
 
@@ -794,9 +881,11 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
+    .line 208
     :cond_7
     invoke-static/range {p2 .. p2}, Landroid/text/method/MultiTapKeyListener;->removeTimeouts(Landroid/text/Spannable;)V
 
+    .line 209
     new-instance v31, Landroid/text/method/MultiTapKeyListener$Timeout;
 
     move-object/from16 v0, v31
@@ -807,6 +896,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/text/method/MultiTapKeyListener$Timeout;-><init>(Landroid/text/method/MultiTapKeyListener;Landroid/text/Editable;)V
 
+    .line 214
     .restart local v31       #t:Landroid/text/method/MultiTapKeyListener$Timeout;
     move-object/from16 v0, p2
 
@@ -818,6 +908,7 @@
 
     if-gez v5, :cond_b
 
+    .line 215
     const/4 v5, 0x0
 
     invoke-interface/range {p2 .. p2}, Landroid/text/Editable;->length()I
@@ -840,6 +931,7 @@
 
     check-cast v27, [Landroid/text/method/KeyListener;
 
+    .line 217
     .local v27, methods:[Landroid/text/method/KeyListener;
     move-object/from16 v19, v27
 
@@ -863,6 +955,7 @@
 
     aget-object v26, v19, v24
 
+    .line 218
     .local v26, method:Landroid/text/method/KeyListener;
     move-object/from16 v0, p2
 
@@ -870,10 +963,12 @@
 
     invoke-interface {v0, v1}, Landroid/text/Editable;->removeSpan(Ljava/lang/Object;)V
 
+    .line 217
     add-int/lit8 v24, v24, 0x1
 
     goto :goto_3
 
+    .line 161
     .end local v14           #off:I
     .end local v19           #arr$:[Landroid/text/method/KeyListener;
     .end local v24           #i$:I
@@ -895,6 +990,7 @@
 
     goto/16 :goto_1
 
+    .line 174
     .restart local v8       #val:Ljava/lang/String;
     .restart local v14       #off:I
     .restart local v23       #i:I
@@ -903,6 +999,7 @@
 
     goto/16 :goto_2
 
+    .line 220
     .end local v8           #val:Ljava/lang/String;
     .end local v23           #i:I
     .restart local v19       #arr$:[Landroid/text/method/KeyListener;
@@ -932,6 +1029,7 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
+    .line 224
     .end local v19           #arr$:[Landroid/text/method/KeyListener;
     .end local v24           #i$:I
     .end local v25           #len$:I
@@ -941,6 +1039,7 @@
 
     goto/16 :goto_0
 
+    .line 227
     .end local v14           #off:I
     .end local v28           #oldStart:I
     .end local v31           #t:Landroid/text/method/MultiTapKeyListener$Timeout;
@@ -960,6 +1059,7 @@
     .parameter "end"
 
     .prologue
+    .line 283
     return-void
 .end method
 
@@ -973,16 +1073,20 @@
     .parameter "stop"
 
     .prologue
+    .line 232
     sget-object v0, Landroid/text/Selection;->SELECTION_END:Ljava/lang/Object;
 
     if-ne p2, v0, :cond_0
 
+    .line 233
     sget-object v0, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
 
     invoke-interface {p1, v0}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
+    .line 234
     invoke-static {p1}, Landroid/text/method/MultiTapKeyListener;->removeTimeouts(Landroid/text/Spannable;)V
 
+    .line 236
     :cond_0
     return-void
 .end method
@@ -995,5 +1099,6 @@
     .parameter "end"
 
     .prologue
+    .line 284
     return-void
 .end method

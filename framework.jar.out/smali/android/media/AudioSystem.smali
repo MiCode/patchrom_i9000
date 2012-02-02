@@ -193,6 +193,7 @@
     .locals 0
 
     .prologue
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -203,14 +204,17 @@
     .parameter "error"
 
     .prologue
+    .line 258
     sget-object v0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
     if-eqz v0, :cond_0
 
+    .line 259
     sget-object v0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
     invoke-interface {v0, p0}, Landroid/media/AudioSystem$ErrorCallback;->onError(I)V
 
+    .line 261
     :cond_0
     return-void
 .end method
@@ -225,6 +229,7 @@
     .locals 1
 
     .prologue
+    .line 110
     const/4 v0, -0x2
 
     return v0
@@ -234,6 +239,7 @@
     .locals 1
 
     .prologue
+    .line 71
     const/16 v0, 0xc
 
     return v0
@@ -247,6 +253,7 @@
     .parameter "mode"
 
     .prologue
+    .line 174
     const/4 v0, 0x0
 
     return v0
@@ -278,8 +285,10 @@
     .parameter "cb"
 
     .prologue
+    .line 253
     sput-object p0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
+    .line 254
     return-void
 .end method
 
@@ -291,6 +300,7 @@
     .parameter "mode"
 
     .prologue
+    .line 99
     const/4 v0, 0x1
 
     return v0
@@ -312,6 +322,7 @@
     .parameter "mask"
 
     .prologue
+    .line 162
     const/4 v0, 0x1
 
     return v0

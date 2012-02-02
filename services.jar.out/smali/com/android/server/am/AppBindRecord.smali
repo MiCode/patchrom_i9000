@@ -30,20 +30,26 @@
     .parameter "_client"
 
     .prologue
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/AppBindRecord;->connections:Ljava/util/HashSet;
 
+    .line 53
     iput-object p1, p0, Lcom/android/server/am/AppBindRecord;->service:Lcom/android/server/am/ServiceRecord;
 
+    .line 54
     iput-object p2, p0, Lcom/android/server/am/AppBindRecord;->intent:Lcom/android/server/am/IntentBindRecord;
 
+    .line 55
     iput-object p3, p0, Lcom/android/server/am/AppBindRecord;->client:Lcom/android/server/am/ProcessRecord;
 
+    .line 56
     return-void
 .end method
 
@@ -55,6 +61,7 @@
     .parameter "prefix"
 
     .prologue
+    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,6 +88,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,8 +115,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 37
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppBindRecord;->dumpInIntentBind(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
+    .line 38
     return-void
 .end method
 
@@ -118,6 +128,7 @@
     .parameter "prefix"
 
     .prologue
+    .line 41
     iget-object v2, p0, Lcom/android/server/am/AppBindRecord;->connections:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->size()I
@@ -126,6 +137,7 @@
 
     if-lez v2, :cond_0
 
+    .line 42
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,12 +158,14 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 43
     iget-object v2, p0, Lcom/android/server/am/AppBindRecord;->connections:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
+    .line 44
     .local v1, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/android/server/am/ConnectionRecord;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -160,12 +174,14 @@
 
     if-eqz v2, :cond_0
 
+    .line 45
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/am/ConnectionRecord;
 
+    .line 46
     .local v0, c:Lcom/android/server/am/ConnectionRecord;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -193,6 +209,7 @@
 
     goto :goto_0
 
+    .line 49
     .end local v0           #c:Lcom/android/server/am/ConnectionRecord;
     .end local v1           #it:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/android/server/am/ConnectionRecord;>;"
     :cond_0
@@ -203,6 +220,7 @@
     .locals 2
 
     .prologue
+    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

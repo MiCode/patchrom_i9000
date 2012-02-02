@@ -33,12 +33,15 @@
     .locals 1
 
     .prologue
+    .line 55
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->isStateRunning:Z
 
+    .line 63
     invoke-static {}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->classInitNative()V
 
+    .line 64
     return-void
 .end method
 
@@ -47,18 +50,22 @@
     .parameter "context"
 
     .prologue
+    .line 108
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/framework/BaseService;-><init>(Landroid/content/Context;)V
 
+    .line 69
     new-instance v0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService$1;
 
     invoke-direct {v0, p0}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService$1;-><init>(Lcom/broadcom/bt/service/ftp/BluetoothFTPService;)V
 
     iput-object v0, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mUnmountReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 109
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->isStateRunning:Z
 
+    .line 111
     new-instance v0, Landroid/media/MediaScannerConnection;
 
     const/4 v1, 0x0
@@ -67,6 +74,7 @@
 
     iput-object v0, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
+    .line 113
     return-void
 .end method
 
@@ -75,10 +83,12 @@
     .parameter "fileName"
 
     .prologue
+    .line 373
     invoke-static {}, Landroid/drm/mobile2/OMADRMManager;->getInstance()Landroid/drm/mobile2/OMADRMManager;
 
     move-result-object v1
 
+    .line 375
     .local v1, mDrmManager:Landroid/drm/mobile2/OMADRMManager;
     :try_start_0
     invoke-virtual {v1, p1}, Landroid/drm/mobile2/OMADRMManager;->IsDrmFileByExt(Ljava/lang/String;)Z
@@ -87,15 +97,17 @@
 
     if-eqz v2, :cond_0
 
+    .line 376
     invoke-virtual {v1, p1}, Landroid/drm/mobile2/OMADRMManager;->isConvertedFL(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 377
     const-string v2, "BluetoothFTPService"
 
-    const-string v3, "onFtpServerAccessRequested: DRM file so can not send."
+    const-string/jumbo v3, "onFtpServerAccessRequested: DRM file so can not send."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -103,19 +115,24 @@
     .catch Landroid/drm/mobile2/OMADRMException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
+    .line 378
     const/4 v2, 0x1
 
+    .line 388
     :goto_0
     return v2
 
+    .line 381
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 382
     .local v0, e:Ljava/io/FileNotFoundException;
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
+    .line 388
     .end local v0           #e:Ljava/io/FileNotFoundException;
     :cond_0
     :goto_1
@@ -123,22 +140,26 @@
 
     goto :goto_0
 
+    .line 383
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
+    .line 384
     .local v0, e:Landroid/drm/mobile2/OMADRMException;
     invoke-virtual {v0}, Landroid/drm/mobile2/OMADRMException;->printStackTrace()V
 
     goto :goto_1
 
+    .line 385
     .end local v0           #e:Landroid/drm/mobile2/OMADRMException;
     :catch_2
     move-exception v2
 
     move-object v0, v2
 
+    .line 386
     .local v0, e:Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
@@ -149,6 +170,7 @@
     .locals 1
 
     .prologue
+    .line 51
     sget-boolean v0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->isStateRunning:Z
 
     return v0
@@ -185,10 +207,11 @@
     .locals 4
 
     .prologue
+    .line 93
     :try_start_0
-    const-string v1, "true"
+    const-string/jumbo v1, "true"
 
-    const-string v2, "service.brcm.bt.secure_mode"
+    const-string/jumbo v2, "service.brcm.bt.secure_mode"
 
     const-string v3, ""
 
@@ -202,14 +225,17 @@
 
     move-result v1
 
+    .line 97
     :goto_0
     return v1
 
+    .line 95
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 96
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothFTPService"
 
@@ -217,6 +243,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 97
     const/4 v1, 0x0
 
     goto :goto_0
@@ -231,8 +258,10 @@
     .parameter "remoteAddress"
 
     .prologue
+    .line 395
     if-nez p4, :cond_1
 
+    .line 397
     :try_start_0
     new-instance v12, Lcom/broadcom/bt/service/ftp/BluetoothFTPVisibility;
 
@@ -244,6 +273,7 @@
 
     invoke-direct {v12, v4}, Lcom/broadcom/bt/service/ftp/BluetoothFTPVisibility;-><init>(Landroid/content/Context;)V
 
+    .line 398
     .local v12, bluetoothFtpVisibility:Lcom/broadcom/bt/service/ftp/BluetoothFTPVisibility;
     move-object v0, v12
 
@@ -253,6 +283,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 446
     .end local v12           #bluetoothFtpVisibility:Lcom/broadcom/bt/service/ftp/BluetoothFTPVisibility;
     :cond_0
     :goto_0
@@ -262,6 +293,7 @@
 
     if-eqz v4, :cond_6
 
+    .line 447
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
@@ -292,14 +324,17 @@
 
     invoke-virtual {v12, v4, v5}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    .line 454
     :goto_1
     return-void
 
+    .line 399
     :catch_0
     move-exception v4
 
     move-object v13, v4
 
+    .line 400
     .local v13, e:Ljava/lang/Exception;
     const-string v4, "BluetoothFTPService"
 
@@ -307,6 +342,7 @@
 
     invoke-static {v4, v5, v13}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 401
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -321,6 +357,7 @@
 
     goto :goto_0
 
+    .line 403
     .end local v13           #e:Ljava/lang/Exception;
     :cond_1
     const/4 v4, 0x3
@@ -347,6 +384,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 404
     :cond_2
     const/4 v4, 0x0
 
@@ -362,6 +400,7 @@
 
     goto :goto_1
 
+    .line 406
     :cond_3
     const/4 v4, 0x2
 
@@ -371,18 +410,21 @@
 
     if-ne v0, v1, :cond_4
 
+    .line 407
     invoke-direct/range {p0 .. p1}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->FtpGetFileIsDRM(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 408
     const-string v4, "BluetoothFTPService"
 
     const-string v5, "ftpServerAccessRspNative this is DRM file block it"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 409
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -397,6 +439,7 @@
 
     goto :goto_1
 
+    .line 414
     :cond_4
     const/4 v4, 0x1
 
@@ -406,13 +449,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 419
     const-string v4, "BluetoothFTPService"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "onFtpServerAccessRequested: put request fileName:"
+    const-string/jumbo v6, "onFtpServerAccessRequested: put request fileName:"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -446,8 +490,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 421
     const/16 v18, 0x0
 
+    .line 422
     .local v18, path:Ljava/lang/String;
     const-string v4, "/"
 
@@ -459,9 +505,11 @@
 
     move-result v17
 
+    .line 423
     .local v17, index:I
     if-lez v17, :cond_5
 
+    .line 424
     const/4 v4, 0x0
 
     move-object/from16 v0, p1
@@ -474,13 +522,14 @@
 
     move-result-object v18
 
+    .line 425
     const-string v4, "BluetoothFTPService"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "onFtpServerAccessRequested: path:: "
+    const-string/jumbo v6, "onFtpServerAccessRequested: path:: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -500,6 +549,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 429
     :cond_5
     :try_start_1
     new-instance v19, Landroid/os/StatFs;
@@ -510,6 +560,7 @@
 
     invoke-direct {v0, v1}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
+    .line 432
     .local v19, stat:Landroid/os/StatFs;
     invoke-virtual/range {v19 .. v19}, Landroid/os/StatFs;->getAvailableBlocks()I
 
@@ -525,6 +576,7 @@
 
     mul-long v15, v4, v6
 
+    .line 434
     .local v15, freeSpace:J
     move/from16 v0, p2
 
@@ -536,12 +588,14 @@
 
     if-lez v4, :cond_0
 
+    .line 435
     const-string v4, "BluetoothFTPService"
 
-    const-string v5, "onFtpServerAccessRequested - Not enough free space"
+    const-string/jumbo v5, "onFtpServerAccessRequested - Not enough free space"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 437
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -558,6 +612,7 @@
 
     goto/16 :goto_1
 
+    .line 440
     .end local v15           #freeSpace:J
     .end local v19           #stat:Landroid/os/StatFs;
     :catch_1
@@ -565,6 +620,7 @@
 
     move-object v14, v4
 
+    .line 441
     .local v14, eee:Ljava/lang/Exception;
     const-string v4, "BluetoothFTPService"
 
@@ -592,6 +648,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 442
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -606,6 +663,7 @@
 
     goto/16 :goto_1
 
+    .line 452
     .end local v14           #eee:Ljava/lang/Exception;
     .end local v17           #index:I
     .end local v18           #path:Ljava/lang/String;
@@ -632,6 +690,7 @@
     .parameter "userid_required"
 
     .prologue
+    .line 369
     return-void
 .end method
 
@@ -641,12 +700,14 @@
     .prologue
     const-string v2, "BluetoothFTPService"
 
+    .line 330
     const-string v1, "BluetoothFTPService"
 
-    const-string v1, "onFtpServerClosed() called."
+    const-string/jumbo v1, "onFtpServerClosed() called."
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 333
     iget-object v1, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
     invoke-virtual {v1}, Landroid/media/MediaScannerConnection;->isConnected()Z
@@ -655,6 +716,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 335
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
@@ -662,6 +724,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 342
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
@@ -676,13 +739,16 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    .line 363
     return-void
 
+    .line 336
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 337
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothFTPService"
 
@@ -701,13 +767,14 @@
     .prologue
     const-string v4, "BluetoothFTPService"
 
+    .line 542
     const-string v2, "BluetoothFTPService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onFtpServerDelCompleted(): "
+    const-string/jumbo v3, "onFtpServerDelCompleted(): "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -733,6 +800,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 545
     if-nez p2, :cond_0
 
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
@@ -743,6 +811,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 548
     :try_start_0
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
@@ -752,6 +821,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 555
     :cond_0
     :goto_0
     new-instance v0, Landroid/content/Intent;
@@ -760,29 +830,35 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 556
     .local v0, i:Landroid/content/Intent;
     const-string v2, "FILEPATH"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 557
     const-string v2, "STATUS"
 
     invoke-virtual {v0, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;B)Landroid/content/Intent;
 
+    .line 558
     iget-object v2, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.BLUETOOTH"
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    .line 572
     return-void
 
+    .line 549
     .end local v0           #i:Landroid/content/Intent;
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 550
     .local v1, t:Ljava/lang/Throwable;
     const-string v2, "BluetoothFTPService"
 
@@ -797,16 +873,19 @@
     .locals 2
 
     .prologue
+    .line 288
     const-string v0, "BluetoothFTPService"
 
-    const-string v1, "onFtpServerDisabled() called."
+    const-string/jumbo v1, "onFtpServerDisabled() called."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 289
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->onStateChangeEvent(Z)V
 
+    .line 290
     return-void
 .end method
 
@@ -814,16 +893,19 @@
     .locals 2
 
     .prologue
+    .line 283
     const-string v0, "BluetoothFTPService"
 
-    const-string v1, "onFtpServerEnabled() called."
+    const-string/jumbo v1, "onFtpServerEnabled() called."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 284
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->onStateChangeEvent(Z)V
 
+    .line 285
     return-void
 .end method
 
@@ -833,6 +915,7 @@
     .parameter "bytesTransferred"
 
     .prologue
+    .line 458
     const-string v1, "BluetoothFTPService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -865,27 +948,32 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 462
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.broadcom.bt.app.ftp.action.ON_FTS_XFR_PROGRESS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 463
     .local v0, i:Landroid/content/Intent;
     const-string v1, "TOTAL_BYTES"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 464
     const-string v1, "BYTES_TRANSFERRED"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 465
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.BLUETOOTH"
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    .line 480
     return-void
 .end method
 
@@ -895,13 +983,14 @@
     .parameter "status"
 
     .prologue
+    .line 518
     const-string v1, "BluetoothFTPService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onFtpServerGetCompleted(): "
+    const-string/jumbo v3, "onFtpServerGetCompleted(): "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -927,27 +1016,32 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 522
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.broadcom.bt.app.ftp.action.ON_FTS_GET_COMPLETE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 523
     .local v0, i:Landroid/content/Intent;
     const-string v1, "FILEPATH"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 524
     const-string v1, "STATUS"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;B)Landroid/content/Intent;
 
+    .line 525
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.BLUETOOTH"
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    .line 538
     return-void
 .end method
 
@@ -958,13 +1052,14 @@
     .prologue
     const-string v4, "BluetoothFTPService"
 
+    .line 293
     const-string v2, "BluetoothFTPService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onFtpServerOpened: remoteAddress = ["
+    const-string/jumbo v3, "onFtpServerOpened: remoteAddress = ["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -986,10 +1081,12 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 294
     const/4 v2, 0x1
 
     sput-boolean v2, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->isStateRunning:Z
 
+    .line 296
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
     invoke-virtual {v2}, Landroid/media/MediaScannerConnection;->isConnected()Z
@@ -998,6 +1095,7 @@
 
     if-nez v2, :cond_0
 
+    .line 298
     :try_start_0
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
@@ -1005,6 +1103,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 305
     :cond_0
     :goto_0
     new-instance v0, Landroid/content/Intent;
@@ -1013,25 +1112,30 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 306
     .local v0, i:Landroid/content/Intent;
     const-string v2, "RMT_DEV_ADDR"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 307
     iget-object v2, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.BLUETOOTH"
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    .line 327
     return-void
 
+    .line 299
     .end local v0           #i:Landroid/content/Intent;
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 300
     .local v1, t:Ljava/lang/Throwable;
     const-string v2, "BluetoothFTPService"
 
@@ -1050,13 +1154,14 @@
     .prologue
     const-string v4, "BluetoothFTPService"
 
+    .line 484
     const-string v2, "BluetoothFTPService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onFtpServerPutCompleted(): "
+    const-string/jumbo v3, "onFtpServerPutCompleted(): "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1082,6 +1187,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 488
     if-nez p2, :cond_0
 
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
@@ -1092,6 +1198,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 491
     :try_start_0
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
@@ -1101,6 +1208,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 498
     :cond_0
     :goto_0
     new-instance v0, Landroid/content/Intent;
@@ -1109,29 +1217,35 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 499
     .local v0, i:Landroid/content/Intent;
     const-string v2, "FILEPATH"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 500
     const-string v2, "STATUS"
 
     invoke-virtual {v0, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;B)Landroid/content/Intent;
 
+    .line 501
     iget-object v2, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.BLUETOOTH"
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    .line 514
     return-void
 
+    .line 492
     .end local v0           #i:Landroid/content/Intent;
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 493
     .local v1, t:Ljava/lang/Throwable;
     const-string v2, "BluetoothFTPService"
 
@@ -1150,6 +1264,7 @@
     .prologue
     const-string v2, "BluetoothFTPService"
 
+    .line 207
     monitor-enter p0
 
     :try_start_0
@@ -1163,6 +1278,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 209
     :try_start_1
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
@@ -1171,6 +1287,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 216
     :cond_0
     :goto_0
     :try_start_2
@@ -1179,16 +1296,19 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 220
     :goto_1
     monitor-exit p0
 
     return-void
 
+    .line 210
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 211
     .local v1, t:Ljava/lang/Throwable;
     :try_start_3
     const-string v2, "BluetoothFTPService"
@@ -1201,6 +1321,7 @@
 
     goto :goto_0
 
+    .line 207
     .end local v1           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v2
@@ -1209,9 +1330,11 @@
 
     throw v2
 
+    .line 217
     :catch_1
     move-exception v0
 
+    .line 218
     .local v0, e:Ljava/lang/Exception;
     :try_start_4
     const-string v2, "BluetoothFTPService"
@@ -1234,10 +1357,13 @@
     .end annotation
 
     .prologue
+    .line 198
     invoke-virtual {p0}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->finish()V
 
+    .line 199
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 200
     return-void
 .end method
 
@@ -1245,6 +1371,7 @@
     .locals 3
 
     .prologue
+    .line 187
     monitor-enter p0
 
     :try_start_0
@@ -1254,12 +1381,14 @@
 
     if-nez v1, :cond_0
 
+    .line 189
     :try_start_1
     invoke-direct {p0}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->cleanupFtpNativeDataNative()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 193
     :goto_0
     const/4 v1, 0x1
 
@@ -1268,14 +1397,17 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 195
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 190
     :catch_0
     move-exception v0
 
+    .line 191
     .local v0, t:Ljava/lang/Throwable;
     :try_start_3
     const-string v1, "BluetoothFTPService"
@@ -1288,6 +1420,7 @@
 
     goto :goto_0
 
+    .line 187
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -1304,6 +1437,7 @@
     .parameter "filename"
 
     .prologue
+    .line 251
     monitor-enter p0
 
     :try_start_0
@@ -1312,14 +1446,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 255
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 252
     :catch_0
     move-exception v0
 
+    .line 253
     .local v0, e:Ljava/lang/Exception;
     :try_start_1
     const-string v1, "BluetoothFTPService"
@@ -1332,6 +1469,7 @@
 
     goto :goto_0
 
+    .line 251
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -1347,6 +1485,7 @@
     .parameter "userId"
 
     .prologue
+    .line 229
     monitor-enter p0
 
     :try_start_0
@@ -1355,14 +1494,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 233
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 230
     :catch_0
     move-exception v0
 
+    .line 231
     .local v0, e:Ljava/lang/Exception;
     :try_start_1
     const-string v1, "BluetoothFTPService"
@@ -1375,6 +1517,7 @@
 
     goto :goto_0
 
+    .line 229
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -1388,6 +1531,7 @@
     .locals 1
 
     .prologue
+    .line 119
     const-string v0, "bluetooth_ftp"
 
     return-object v0
@@ -1397,6 +1541,7 @@
     .locals 3
 
     .prologue
+    .line 129
     monitor-enter p0
 
     :try_start_0
@@ -1406,51 +1551,62 @@
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 130
     .local v0, iFilter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.MEDIA_UNMOUNTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 131
     const-string v1, "android.intent.action.MEDIA_BAD_REMOVAL"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 132
     const-string v1, "android.intent.action.MEDIA_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 133
     const-string v1, "broadcom.android.bluetooth.intent.action.MEDIA_EJECT"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 135
     const-string v1, "file"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
+    .line 136
     const-string v1, "*"
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/content/IntentFilter;->addDataAuthority(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 137
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mUnmountReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 138
     invoke-direct {p0}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->initFtpNativeDataNative()V
 
+    .line 139
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/broadcom/bt/service/framework/BaseService;->mIsFinish:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 146
     monitor-exit p0
 
     return-void
 
+    .line 129
     .end local v0           #iFilter:Landroid/content/IntentFilter;
     :catchall_0
     move-exception v1
@@ -1465,16 +1621,19 @@
     .parameter "cb"
 
     .prologue
+    .line 258
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     if-eqz v0, :cond_0
 
+    .line 259
     iget-object v0, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
+    .line 261
     :cond_0
     return-void
 .end method
@@ -1483,11 +1642,13 @@
     .locals 3
 
     .prologue
+    .line 153
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->enableDefaultFtpServerNative()V
 
+    .line 154
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->isStateRunning:Z
@@ -1495,16 +1656,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 158
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 155
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 156
     .local v0, e:Ljava/lang/Exception;
     :try_start_1
     const-string v1, "BluetoothFTPService"
@@ -1517,6 +1681,7 @@
 
     goto :goto_0
 
+    .line 153
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -1532,6 +1697,7 @@
     .prologue
     const-string v2, "BluetoothFTPService"
 
+    .line 166
     monitor-enter p0
 
     const/4 v2, 0x0
@@ -1539,6 +1705,7 @@
     :try_start_0
     sput-boolean v2, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->isStateRunning:Z
 
+    .line 167
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
     invoke-virtual {v2}, Landroid/media/MediaScannerConnection;->isConnected()Z
@@ -1549,6 +1716,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 169
     :try_start_1
     iget-object v2, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mMediaScanner:Landroid/media/MediaScannerConnection;
 
@@ -1557,6 +1725,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 177
     :cond_0
     :goto_0
     :try_start_2
@@ -1565,16 +1734,19 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 181
     :goto_1
     monitor-exit p0
 
     return-void
 
+    .line 170
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 171
     .local v1, t:Ljava/lang/Throwable;
     :try_start_3
     const-string v2, "BluetoothFTPService"
@@ -1587,6 +1759,7 @@
 
     goto :goto_0
 
+    .line 166
     .end local v1           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v2
@@ -1595,9 +1768,11 @@
 
     throw v2
 
+    .line 178
     :catch_1
     move-exception v0
 
+    .line 179
     .local v0, e:Ljava/lang/Exception;
     :try_start_4
     const-string v2, "BluetoothFTPService"
@@ -1616,16 +1791,19 @@
     .parameter "cb"
 
     .prologue
+    .line 264
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     if-eqz v0, :cond_0
 
+    .line 265
     iget-object v0, p0, Lcom/broadcom/bt/service/ftp/BluetoothFTPService;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
+    .line 267
     :cond_0
     return-void
 .end method

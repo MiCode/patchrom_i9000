@@ -33,18 +33,24 @@
     .parameter "datahandle"
 
     .prologue
+    .line 156
     iput-object p1, p0, Landroid/drm/mobile2/DrmRoapManager$HttpThread;->this$0:Landroid/drm/mobile2/DrmRoapManager;
 
+    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 154
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/drm/mobile2/DrmRoapManager$HttpThread;->dataHandle:Landroid/drm/mobile2/DrmRoapManager$DataHandler;
 
+    .line 158
     iput-object p2, p0, Landroid/drm/mobile2/DrmRoapManager$HttpThread;->config:Landroid/drm/mobile2/HttpConfig;
 
+    .line 159
     iput-object p3, p0, Landroid/drm/mobile2/DrmRoapManager$HttpThread;->dataHandle:Landroid/drm/mobile2/DrmRoapManager$DataHandler;
 
+    .line 160
     return-void
 .end method
 
@@ -54,6 +60,7 @@
     .locals 23
 
     .prologue
+    .line 163
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/drm/mobile2/DrmRoapManager$HttpThread;->this$0:Landroid/drm/mobile2/DrmRoapManager;
@@ -69,22 +76,27 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 164
     const/16 v22, 0x0
 
+    .line 165
     .local v22, status:I
     const/4 v6, 0x0
 
+    .line 168
     .local v6, isProxySet:Z
     :try_start_0
     invoke-static {}, Landroid/net/Proxy;->getDefaultHost()Ljava/lang/String;
 
     move-result-object v7
 
+    .line 169
     .local v7, host:Ljava/lang/String;
     invoke-static {}, Landroid/net/Proxy;->getDefaultPort()I
 
     move-result v8
 
+    .line 170
     .local v8, port:I
     if-eqz v7, :cond_1
 
@@ -92,8 +104,10 @@
 
     if-eq v8, v2, :cond_1
 
+    .line 172
     const/4 v6, 0x1
 
+    .line 173
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -154,6 +168,7 @@
 
     move-result v22
 
+    .line 181
     :goto_0
     const/4 v2, 0x1
 
@@ -163,12 +178,14 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 187
     .end local v7           #host:Ljava/lang/String;
     .end local v8           #port:I
     :cond_0
     :goto_1
     return-void
 
+    .line 178
     .restart local v7       #host:Ljava/lang/String;
     .restart local v8       #port:I
     :cond_1
@@ -250,6 +267,7 @@
 
     goto :goto_0
 
+    .line 184
     .end local v7           #host:Ljava/lang/String;
     .end local v8           #port:I
     :catch_0
@@ -257,6 +275,7 @@
 
     move-object/from16 v21, v2
 
+    .line 185
     .local v21, e:Ljava/io/IOException;
     invoke-virtual/range {v21 .. v21}, Ljava/io/IOException;->printStackTrace()V
 

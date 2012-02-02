@@ -66,6 +66,7 @@
     .locals 1
 
     .prologue
+    .line 52
     new-instance v0, Lcom/android/internal/telephony/UsimPhonebookCapaInfo$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/UsimPhonebookCapaInfo$1;-><init>()V
@@ -79,14 +80,17 @@
     .locals 1
 
     .prologue
+    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 75
     const/16 v0, 0x34
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/android/internal/telephony/UsimPhonebookCapaInfo;->mFieldTypeInfo:[I
 
+    .line 76
     return-void
 .end method
 
@@ -95,10 +99,13 @@
     .parameter "data"
 
     .prologue
+    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 79
     iput-object p1, p0, Lcom/android/internal/telephony/UsimPhonebookCapaInfo;->mFieldTypeInfo:[I
 
+    .line 80
     return-void
 .end method
 
@@ -108,6 +115,7 @@
     .locals 1
 
     .prologue
+    .line 71
     const/4 v0, 0x0
 
     return v0
@@ -119,34 +127,41 @@
     .parameter "fieldInfo"
 
     .prologue
+    .line 83
     const/4 v0, 0x0
 
+    .line 84
     .local v0, i:I
     :goto_0
     const/16 v1, 0x34
 
     if-ge v0, v1, :cond_1
 
+    .line 85
     iget-object v1, p0, Lcom/android/internal/telephony/UsimPhonebookCapaInfo;->mFieldTypeInfo:[I
 
     aget v1, v1, v0
 
     if-ne v1, p1, :cond_0
 
+    .line 86
     iget-object v1, p0, Lcom/android/internal/telephony/UsimPhonebookCapaInfo;->mFieldTypeInfo:[I
 
     add-int v2, v0, p2
 
     aget v1, v1, v2
 
+    .line 89
     :goto_1
     return v1
 
+    .line 84
     :cond_0
     add-int/lit8 v0, v0, 0x4
 
     goto :goto_0
 
+    .line 89
     :cond_1
     const/4 v1, 0x0
 
@@ -159,9 +174,11 @@
     .parameter "flags"
 
     .prologue
+    .line 67
     iget-object v0, p0, Lcom/android/internal/telephony/UsimPhonebookCapaInfo;->mFieldTypeInfo:[I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeIntArray([I)V
 
+    .line 68
     return-void
 .end method

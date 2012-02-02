@@ -31,6 +31,7 @@
     .parameter
 
     .prologue
+    .line 42
     iput-object p1, p0, Lcom/android/server/MasterClearReceiver$1;->this$0:Lcom/android/server/MasterClearReceiver;
 
     iput-object p3, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
@@ -52,6 +53,7 @@
 
     const-string v5, "MasterClear"
 
+    .line 46
     :try_start_0
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
 
@@ -63,6 +65,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 47
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
@@ -77,6 +80,7 @@
 
     invoke-static {v1, v2}, Landroid/os/RecoverySystem;->rebootToggleEFS(Landroid/content/Context;Z)V
 
+    .line 51
     :goto_0
     const-string v1, "MasterClear"
 
@@ -84,9 +88,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 55
     :goto_1
     return-void
 
+    .line 49
     :cond_0
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
@@ -96,11 +102,13 @@
 
     goto :goto_0
 
+    .line 52
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 53
     .local v0, e:Ljava/io/IOException;
     const-string v1, "MasterClear"
 

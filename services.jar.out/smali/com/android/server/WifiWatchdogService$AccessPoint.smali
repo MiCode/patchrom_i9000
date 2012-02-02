@@ -27,12 +27,16 @@
     .parameter "bssid"
 
     .prologue
+    .line 1168
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1169
     iput-object p1, p0, Lcom/android/server/WifiWatchdogService$AccessPoint;->ssid:Ljava/lang/String;
 
+    .line 1170
     iput-object p2, p0, Lcom/android/server/WifiWatchdogService$AccessPoint;->bssid:Ljava/lang/String;
 
+    .line 1171
     return-void
 .end method
 
@@ -40,6 +44,7 @@
     .locals 1
 
     .prologue
+    .line 1174
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$AccessPoint;->ssid:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -69,15 +74,18 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 1179
     instance-of v3, p1, Lcom/android/server/WifiWatchdogService$AccessPoint;
 
     if-nez v3, :cond_0
 
     move v3, v5
 
+    .line 1183
     :goto_0
     return v3
 
+    .line 1180
     :cond_0
     move-object v0, p1
 
@@ -85,11 +93,13 @@
 
     move-object v2, v0
 
+    .line 1181
     .local v2, otherAp:Lcom/android/server/WifiWatchdogService$AccessPoint;
     invoke-direct {p0}, Lcom/android/server/WifiWatchdogService$AccessPoint;->hasNull()Z
 
     move-result v1
 
+    .line 1183
     .local v1, iHaveNull:Z
     if-eqz v1, :cond_1
 
@@ -139,6 +149,7 @@
     .locals 2
 
     .prologue
+    .line 1190
     iget-object v0, p0, Lcom/android/server/WifiWatchdogService$AccessPoint;->ssid:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -150,6 +161,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1191
     :goto_0
     return v0
 
@@ -175,6 +187,7 @@
     .locals 2
 
     .prologue
+    .line 1196
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

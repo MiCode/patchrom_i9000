@@ -19,12 +19,15 @@
     .parameter "c"
 
     .prologue
+    .line 47
     invoke-direct {p0, p1, p3}, Landroid/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;)V
 
+    .line 48
     iput p2, p0, Landroid/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
     iput p2, p0, Landroid/widget/ResourceCursorAdapter;->mLayout:I
 
+    .line 49
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -35,6 +38,7 @@
 
     iput-object v0, p0, Landroid/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
+    .line 50
     return-void
 .end method
 
@@ -46,12 +50,15 @@
     .parameter "autoRequery"
 
     .prologue
+    .line 66
     invoke-direct {p0, p1, p3, p4}, Landroid/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
 
+    .line 67
     iput p2, p0, Landroid/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
     iput p2, p0, Landroid/widget/ResourceCursorAdapter;->mLayout:I
 
+    .line 68
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -62,6 +69,7 @@
 
     iput-object v0, p0, Landroid/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
+    .line 69
     return-void
 .end method
 
@@ -74,6 +82,7 @@
     .parameter "parent"
 
     .prologue
+    .line 84
     iget-object v0, p0, Landroid/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget v1, p0, Landroid/widget/ResourceCursorAdapter;->mDropDownLayout:I
@@ -94,6 +103,7 @@
     .parameter "parent"
 
     .prologue
+    .line 79
     iget-object v0, p0, Landroid/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget v1, p0, Landroid/widget/ResourceCursorAdapter;->mLayout:I
@@ -112,8 +122,10 @@
     .parameter "dropDownLayout"
 
     .prologue
+    .line 102
     iput p1, p0, Landroid/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
+    .line 103
     return-void
 .end method
 
@@ -122,7 +134,9 @@
     .parameter "layout"
 
     .prologue
+    .line 93
     iput p1, p0, Landroid/widget/ResourceCursorAdapter;->mLayout:I
 
+    .line 94
     return-void
 .end method

@@ -35,14 +35,18 @@
     .parameter "intent"
 
     .prologue
+    .line 648
     iput-object p1, p0, Landroid/widget/TabHost$IntentContentStrategy;->this$0:Landroid/widget/TabHost;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 649
     iput-object p2, p0, Landroid/widget/TabHost$IntentContentStrategy;->mTag:Ljava/lang/String;
 
+    .line 650
     iput-object p3, p0, Landroid/widget/TabHost$IntentContentStrategy;->mIntent:Landroid/content/Intent;
 
+    .line 651
     return-void
 .end method
 
@@ -54,6 +58,7 @@
     .parameter "x3"
 
     .prologue
+    .line 641
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TabHost$IntentContentStrategy;-><init>(Landroid/widget/TabHost;Ljava/lang/String;Landroid/content/Intent;)V
 
     return-void
@@ -65,12 +70,14 @@
     .locals 5
 
     .prologue
+    .line 654
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->this$0:Landroid/widget/TabHost;
 
     iget-object v2, v2, Landroid/widget/TabHost;->mLocalActivityManager:Landroid/app/LocalActivityManager;
 
     if-nez v2, :cond_0
 
+    .line 655
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Did you forget to call \'public void setup(LocalActivityManager activityGroup)\'?"
@@ -79,6 +86,7 @@
 
     throw v2
 
+    .line 657
     :cond_0
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->this$0:Landroid/widget/TabHost;
 
@@ -92,6 +100,7 @@
 
     move-result-object v0
 
+    .line 659
     .local v0, w:Landroid/view/Window;
     if-eqz v0, :cond_3
 
@@ -101,6 +110,7 @@
 
     move-object v1, v2
 
+    .line 660
     .local v1, wd:Landroid/view/View;
     :goto_0
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
@@ -111,6 +121,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 661
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -119,6 +130,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 662
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->this$0:Landroid/widget/TabHost;
 
     #getter for: Landroid/widget/TabHost;->mTabContent:Landroid/widget/FrameLayout;
@@ -130,25 +142,30 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
+    .line 665
     :cond_1
     iput-object v1, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
+    .line 673
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
     if-eqz v2, :cond_2
 
+    .line 674
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
+    .line 675
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setFocusableInTouchMode(Z)V
 
+    .line 676
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
     check-cast v2, Landroid/view/ViewGroup;
@@ -157,11 +174,13 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
 
+    .line 679
     :cond_2
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
     return-object v2
 
+    .line 659
     .end local v1           #wd:Landroid/view/View;
     :cond_3
     const/4 v2, 0x0
@@ -175,16 +194,19 @@
     .locals 2
 
     .prologue
+    .line 683
     iget-object v0, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
+    .line 684
     iget-object v0, p0, Landroid/widget/TabHost$IntentContentStrategy;->mLaunchedView:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 686
     :cond_0
     return-void
 .end method

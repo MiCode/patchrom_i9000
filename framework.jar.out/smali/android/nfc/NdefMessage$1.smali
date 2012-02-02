@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,18 +45,22 @@
     .parameter "in"
 
     .prologue
+    .line 120
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 121
     .local v1, recordsLength:I
     new-array v0, v1, [Landroid/nfc/NdefRecord;
 
+    .line 122
     .local v0, records:[Landroid/nfc/NdefRecord;
     sget-object v2, Landroid/nfc/NdefRecord;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->readTypedArray([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V
 
+    .line 123
     new-instance v2, Landroid/nfc/NdefMessage;
 
     invoke-direct {v2, v0}, Landroid/nfc/NdefMessage;-><init>([Landroid/nfc/NdefRecord;)V
@@ -68,6 +73,7 @@
     .parameter "x0"
 
     .prologue
+    .line 117
     invoke-virtual {p0, p1}, Landroid/nfc/NdefMessage$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/NdefMessage;
 
     move-result-object v0
@@ -80,6 +86,7 @@
     .parameter "size"
 
     .prologue
+    .line 127
     new-array v0, p1, [Landroid/nfc/NdefMessage;
 
     return-object v0
@@ -90,6 +97,7 @@
     .parameter "x0"
 
     .prologue
+    .line 117
     invoke-virtual {p0, p1}, Landroid/nfc/NdefMessage$1;->newArray(I)[Landroid/nfc/NdefMessage;
 
     move-result-object v0

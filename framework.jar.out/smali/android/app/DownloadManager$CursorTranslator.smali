@@ -27,6 +27,7 @@
     .locals 1
 
     .prologue
+    .line 1244
     const-class v0, Landroid/app/DownloadManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -54,10 +55,13 @@
     .parameter "baseUri"
 
     .prologue
+    .line 1248
     invoke-direct {p0, p1}, Landroid/database/CursorWrapper;-><init>(Landroid/database/Cursor;)V
 
+    .line 1249
     iput-object p2, p0, Landroid/app/DownloadManager$CursorTranslator;->mBaseUri:Landroid/net/Uri;
 
+    .line 1250
     return-void
 .end method
 
@@ -66,6 +70,7 @@
     .parameter "status"
 
     .prologue
+    .line 1437
     const/16 v0, 0x190
 
     if-gt v0, p1, :cond_0
@@ -83,60 +88,73 @@
 
     if-ge p1, v0, :cond_2
 
+    .line 1440
     :cond_1
     int-to-long v0, p1
 
+    .line 1470
     :goto_0
     return-wide v0
 
+    .line 1443
     :cond_2
     packed-switch p1, :pswitch_data_0
 
+    .line 1470
     :pswitch_0
     const-wide/16 v0, 0x3e8
 
     goto :goto_0
 
+    .line 1445
     :pswitch_1
     const-wide/16 v0, 0x3e9
 
     goto :goto_0
 
+    .line 1449
     :pswitch_2
     const-wide/16 v0, 0x3ea
 
     goto :goto_0
 
+    .line 1452
     :pswitch_3
     const-wide/16 v0, 0x3ec
 
     goto :goto_0
 
+    .line 1455
     :pswitch_4
     const-wide/16 v0, 0x3ed
 
     goto :goto_0
 
+    .line 1458
     :pswitch_5
     const-wide/16 v0, 0x3ee
 
     goto :goto_0
 
+    .line 1461
     :pswitch_6
     const-wide/16 v0, 0x3ef
 
     goto :goto_0
 
+    .line 1464
     :pswitch_7
     const-wide/16 v0, 0x3f0
 
     goto :goto_0
 
+    .line 1467
     :pswitch_8
     const-wide/16 v0, 0x3f1
 
     goto :goto_0
 
+    .line 1443
     :pswitch_data_0
     .packed-switch 0x1e8
         :pswitch_8
@@ -944,28 +962,34 @@
     .parameter "status"
 
     .prologue
+    .line 1421
     packed-switch p1, :pswitch_data_0
 
+    .line 1432
     const-wide/16 v0, 0x4
 
     :goto_0
     return-wide v0
 
+    .line 1423
     :pswitch_0
     const-wide/16 v0, 0x1
 
     goto :goto_0
 
+    .line 1426
     :pswitch_1
     const-wide/16 v0, 0x2
 
     goto :goto_0
 
+    .line 1429
     :pswitch_2
     const-wide/16 v0, 0x3
 
     goto :goto_0
 
+    .line 1421
     nop
 
     :pswitch_data_0
@@ -1005,5 +1029,6 @@
 
     move-result-object v0
 
+    .line 1280
     return-object v0
 .end method

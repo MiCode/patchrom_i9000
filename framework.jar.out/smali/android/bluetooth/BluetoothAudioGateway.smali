@@ -62,6 +62,7 @@
     .locals 0
 
     .prologue
+    .line 37
     invoke-static {}, Landroid/bluetooth/BluetoothAudioGateway;->classInitNative()V
 
     return-void
@@ -72,12 +73,14 @@
     .parameter "adapter"
 
     .prologue
+    .line 58
     const/16 v0, 0xa
 
     const/16 v1, 0xb
 
     invoke-direct {p0, p1, v0, v1}, Landroid/bluetooth/BluetoothAudioGateway;-><init>(Landroid/bluetooth/BluetoothAdapter;II)V
 
+    .line 59
     return-void
 .end method
 
@@ -90,20 +93,28 @@
     .prologue
     const/4 v0, -0x1
 
+    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 40
     iput v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mHandsfreeAgRfcommChannel:I
 
+    .line 41
     iput v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mHeadsetAgRfcommChannel:I
 
+    .line 63
     iput-object p1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
+    .line 64
     iput p2, p0, Landroid/bluetooth/BluetoothAudioGateway;->mHandsfreeAgRfcommChannel:I
 
+    .line 65
     iput p3, p0, Landroid/bluetooth/BluetoothAudioGateway;->mHeadsetAgRfcommChannel:I
 
+    .line 66
     invoke-direct {p0}, Landroid/bluetooth/BluetoothAudioGateway;->initializeNativeDataNative()V
 
+    .line 67
     return-void
 .end method
 
@@ -112,6 +123,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-boolean v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mInterrupted:Z
 
     return v0
@@ -123,6 +135,7 @@
     .parameter "x1"
 
     .prologue
+    .line 32
     iput-boolean p1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mInterrupted:Z
 
     return p1
@@ -133,6 +146,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectingHeadsetRfcommChannel:I
 
     return v0
@@ -143,6 +157,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectingHandsfreeSocketFd:I
 
     return v0
@@ -154,6 +169,7 @@
     .parameter "x1"
 
     .prologue
+    .line 32
     iput p1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectingHeadsetRfcommChannel:I
 
     return p1
@@ -164,6 +180,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectingHandsfreeRfcommChannel:I
 
     return v0
@@ -175,6 +192,7 @@
     .parameter "x1"
 
     .prologue
+    .line 32
     iput p1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectingHandsfreeRfcommChannel:I
 
     return p1
@@ -186,6 +204,7 @@
     .parameter "x1"
 
     .prologue
+    .line 32
     invoke-direct {p0, p1}, Landroid/bluetooth/BluetoothAudioGateway;->waitForHandsfreeConnectNative(I)Z
 
     move-result v0
@@ -198,6 +217,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mTimeoutRemainingMs:I
 
     return v0
@@ -208,6 +228,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-object v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectingHeadsetAddress:Ljava/lang/String;
 
     return-object v0
@@ -218,6 +239,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-object v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mCallback:Landroid/os/Handler;
 
     return-object v0
@@ -228,6 +250,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-object v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     return-object v0
@@ -238,6 +261,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectingHeadsetSocketFd:I
 
     return v0
@@ -248,6 +272,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-object v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectingHandsfreeAddress:Ljava/lang/String;
 
     return-object v0
@@ -267,10 +292,12 @@
     .parameter "msg"
 
     .prologue
+    .line 200
     const-string v0, "BT Audio Gateway"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 201
     return-void
 .end method
 
@@ -294,15 +321,19 @@
     .end annotation
 
     .prologue
+    .line 186
     :try_start_0
     invoke-direct {p0}, Landroid/bluetooth/BluetoothAudioGateway;->cleanupNativeDataNative()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 188
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 190
     return-void
 
+    .line 188
     :catchall_0
     move-exception v0
 
@@ -320,6 +351,7 @@
 
     const-string v0, "BT Audio Gateway"
 
+    .line 94
     monitor-enter p0
 
     :try_start_0
@@ -327,8 +359,10 @@
 
     if-nez v0, :cond_1
 
+    .line 95
     iput-object p1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mCallback:Landroid/os/Handler;
 
+    .line 96
     new-instance v0, Landroid/bluetooth/BluetoothAudioGateway$1;
 
     const-string v1, "BT Audio Gateway"
@@ -337,12 +371,14 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectThead:Ljava/lang/Thread;
 
+    .line 155
     invoke-direct {p0}, Landroid/bluetooth/BluetoothAudioGateway;->setUpListeningSocketsNative()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 156
     const-string v0, "BT Audio Gateway"
 
     const-string v1, "Could not set up listening socket, exiting"
@@ -353,28 +389,33 @@
 
     move v0, v2
 
+    .line 164
     :goto_0
     monitor-exit p0
 
     return v0
 
+    .line 160
     :cond_0
     const/4 v0, 0x0
 
     :try_start_1
     iput-boolean v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mInterrupted:Z
 
+    .line 161
     iget-object v0, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectThead:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 164
     :cond_1
     const/4 v0, 0x1
 
     goto :goto_0
 
+    .line 94
     :catchall_0
     move-exception v0
 
@@ -387,6 +428,7 @@
     .locals 3
 
     .prologue
+    .line 168
     monitor-enter p0
 
     :try_start_0
@@ -394,45 +436,54 @@
 
     if-eqz v1, :cond_0
 
+    .line 170
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mInterrupted:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 172
     :try_start_1
     iget-object v1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectThead:Ljava/lang/Thread;
 
     invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
+    .line 174
     iget-object v1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectThead:Ljava/lang/Thread;
 
     invoke-virtual {v1}, Ljava/lang/Thread;->join()V
 
+    .line 175
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mConnectThead:Ljava/lang/Thread;
 
+    .line 176
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/bluetooth/BluetoothAudioGateway;->mCallback:Landroid/os/Handler;
 
+    .line 177
     invoke-direct {p0}, Landroid/bluetooth/BluetoothAudioGateway;->tearDownListeningSocketsNative()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 182
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 178
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 179
     .local v0, e:Ljava/lang/InterruptedException;
     :try_start_2
     const-string v1, "BT Audio Gateway"
@@ -445,6 +496,7 @@
 
     goto :goto_0
 
+    .line 168
     .end local v0           #e:Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v1

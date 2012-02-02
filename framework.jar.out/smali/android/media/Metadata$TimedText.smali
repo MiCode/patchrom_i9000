@@ -33,16 +33,21 @@
     .parameter "text"
 
     .prologue
+    .line 153
     iput-object p1, p0, Landroid/media/Metadata$TimedText;->this$0:Landroid/media/Metadata;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 154
     iput-object p2, p0, Landroid/media/Metadata$TimedText;->mTime:Ljava/util/Date;
 
+    .line 155
     iput p3, p0, Landroid/media/Metadata$TimedText;->mDuration:I
 
+    .line 156
     iput-object p4, p0, Landroid/media/Metadata$TimedText;->mText:Ljava/lang/String;
 
+    .line 157
     return-void
 .end method
 
@@ -52,12 +57,14 @@
     .locals 3
 
     .prologue
+    .line 160
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x50
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 161
     .local v0, res:Ljava/lang/StringBuilder;
     iget-object v1, p0, Landroid/media/Metadata$TimedText;->mTime:Ljava/util/Date;
 
@@ -87,6 +94,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 163
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

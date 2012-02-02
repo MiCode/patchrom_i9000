@@ -40,6 +40,7 @@
     .locals 1
 
     .prologue
+    .line 321
     new-instance v0, Landroid/nfc/Tag$1;
 
     invoke-direct {v0}, Landroid/nfc/Tag$1;-><init>()V
@@ -58,21 +59,26 @@
     .parameter "tagService"
 
     .prologue
+    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 124
     if-nez p2, :cond_0
 
+    .line 125
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "rawTargets cannot be null"
+    const-string/jumbo v1, "rawTargets cannot be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 127
     :cond_0
     iput-object p1, p0, Landroid/nfc/Tag;->mId:[B
 
+    .line 128
     array-length v0, p2
 
     invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([II)[I
@@ -81,12 +87,14 @@
 
     iput-object v0, p0, Landroid/nfc/Tag;->mTechList:[I
 
+    .line 129
     invoke-direct {p0, p2}, Landroid/nfc/Tag;->generateTechStringList([I)[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/nfc/Tag;->mTechStringList:[Ljava/lang/String;
 
+    .line 131
     array-length v0, p2
 
     invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
@@ -97,14 +105,18 @@
 
     iput-object v0, p0, Landroid/nfc/Tag;->mTechExtras:[Landroid/os/Bundle;
 
+    .line 132
     iput p4, p0, Landroid/nfc/Tag;->mServiceHandle:I
 
+    .line 133
     iput-object p5, p0, Landroid/nfc/Tag;->mTagService:Landroid/nfc/INfcTag;
 
+    .line 135
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/nfc/Tag;->mConnectedTechnology:I
 
+    .line 136
     return-void
 .end method
 
@@ -115,6 +127,7 @@
     .parameter "techListExtras"
 
     .prologue
+    .line 150
     new-instance v0, Landroid/nfc/Tag;
 
     const/4 v4, 0x0
@@ -137,11 +150,14 @@
     .parameter "techList"
 
     .prologue
+    .line 154
     array-length v1, p1
 
+    .line 155
     .local v1, size:I
     new-array v2, v1, [Ljava/lang/String;
 
+    .line 156
     .local v2, strings:[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -149,10 +165,12 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
+    .line 157
     aget v3, p1, v0
 
     packed-switch v3, :pswitch_data_0
 
+    .line 186
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -179,6 +197,7 @@
 
     throw v3
 
+    .line 159
     :pswitch_0
     const-class v3, Landroid/nfc/tech/IsoDep;
 
@@ -188,11 +207,13 @@
 
     aput-object v3, v2, v0
 
+    .line 156
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 162
     :pswitch_1
     const-class v3, Landroid/nfc/tech/MifareClassic;
 
@@ -204,6 +225,7 @@
 
     goto :goto_1
 
+    .line 165
     :pswitch_2
     const-class v3, Landroid/nfc/tech/MifareUltralight;
 
@@ -215,6 +237,7 @@
 
     goto :goto_1
 
+    .line 168
     :pswitch_3
     const-class v3, Landroid/nfc/tech/Ndef;
 
@@ -226,6 +249,7 @@
 
     goto :goto_1
 
+    .line 171
     :pswitch_4
     const-class v3, Landroid/nfc/tech/NdefFormatable;
 
@@ -237,6 +261,7 @@
 
     goto :goto_1
 
+    .line 174
     :pswitch_5
     const-class v3, Landroid/nfc/tech/NfcA;
 
@@ -248,6 +273,7 @@
 
     goto :goto_1
 
+    .line 177
     :pswitch_6
     const-class v3, Landroid/nfc/tech/NfcB;
 
@@ -259,6 +285,7 @@
 
     goto :goto_1
 
+    .line 180
     :pswitch_7
     const-class v3, Landroid/nfc/tech/NfcF;
 
@@ -270,6 +297,7 @@
 
     goto :goto_1
 
+    .line 183
     :pswitch_8
     const-class v3, Landroid/nfc/tech/NfcV;
 
@@ -281,9 +309,11 @@
 
     goto :goto_1
 
+    .line 189
     :cond_0
     return-object v2
 
+    .line 157
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_5
@@ -303,20 +333,26 @@
     .parameter "in"
 
     .prologue
+    .line 282
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 283
     .local v0, len:I
     const/4 v1, 0x0
 
+    .line 284
     .local v1, result:[B
     if-ltz v0, :cond_0
 
+    .line 285
     new-array v1, v0, [B
 
+    .line 286
     invoke-virtual {p0, v1}, Landroid/os/Parcel;->readByteArray([B)V
 
+    .line 288
     :cond_0
     return-object v1
 .end method
@@ -327,20 +363,25 @@
     .parameter "b"
 
     .prologue
+    .line 292
     if-nez p1, :cond_0
 
+    .line 293
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 298
     :goto_0
     return-void
 
+    .line 296
     :cond_0
     array-length v0, p1
 
     invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 297
     invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_0
@@ -352,6 +393,7 @@
     .locals 1
 
     .prologue
+    .line 302
     const/4 v0, 0x0
 
     return v0
@@ -361,6 +403,7 @@
     .locals 1
 
     .prologue
+    .line 369
     iget v0, p0, Landroid/nfc/Tag;->mConnectedTechnology:I
 
     return v0
@@ -370,6 +413,7 @@
     .locals 1
 
     .prologue
+    .line 213
     iget-object v0, p0, Landroid/nfc/Tag;->mId:[B
 
     return-object v0
@@ -379,6 +423,7 @@
     .locals 1
 
     .prologue
+    .line 197
     iget v0, p0, Landroid/nfc/Tag;->mServiceHandle:I
 
     return v0
@@ -388,6 +433,7 @@
     .locals 1
 
     .prologue
+    .line 262
     iget-object v0, p0, Landroid/nfc/Tag;->mTagService:Landroid/nfc/INfcTag;
 
     return-object v0
@@ -398,8 +444,10 @@
     .parameter "tech"
 
     .prologue
+    .line 246
     const/4 v1, -0x1
 
+    .line 247
     .local v1, pos:I
     const/4 v0, 0x0
 
@@ -411,27 +459,34 @@
 
     if-ge v0, v2, :cond_0
 
+    .line 248
     iget-object v2, p0, Landroid/nfc/Tag;->mTechList:[I
 
     aget v2, v2, v0
 
     if-ne v2, p1, :cond_1
 
+    .line 249
     move v1, v0
 
+    .line 253
     :cond_0
     if-gez v1, :cond_2
 
+    .line 254
     const/4 v2, 0x0
 
+    .line 257
     :goto_1
     return-object v2
 
+    .line 247
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 257
     :cond_2
     iget-object v2, p0, Landroid/nfc/Tag;->mTechExtras:[Landroid/os/Bundle;
 
@@ -444,6 +499,7 @@
     .locals 1
 
     .prologue
+    .line 233
     iget-object v0, p0, Landroid/nfc/Tag;->mTechStringList:[Ljava/lang/String;
 
     return-object v0
@@ -454,6 +510,7 @@
     .parameter "techType"
 
     .prologue
+    .line 238
     iget-object v0, p0, Landroid/nfc/Tag;->mTechList:[I
 
     .local v0, arr$:[I
@@ -468,21 +525,25 @@
 
     aget v3, v0, v1
 
+    .line 239
     .local v3, tech:I
     if-ne v3, p1, :cond_0
 
     const/4 v4, 0x1
 
+    .line 241
     .end local v3           #tech:I
     :goto_1
     return v4
 
+    .line 238
     .restart local v3       #tech:I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 241
     .end local v3           #tech:I
     :cond_1
     const/4 v4, 0x0
@@ -495,6 +556,7 @@
     .parameter "technology"
 
     .prologue
+    .line 356
     monitor-enter p0
 
     :try_start_0
@@ -504,14 +566,17 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 357
     iput p1, p0, Landroid/nfc/Tag;->mConnectedTechnology:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 361
     monitor-exit p0
 
     return-void
 
+    .line 359
     :cond_0
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -524,6 +589,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 356
     :catchall_0
     move-exception v0
 
@@ -536,10 +602,12 @@
     .locals 1
 
     .prologue
+    .line 378
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/nfc/Tag;->mConnectedTechnology:I
 
+    .line 379
     return-void
 .end method
 
@@ -547,13 +615,14 @@
     .locals 7
 
     .prologue
+    .line 270
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "TAG "
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v6, "uid = "
+    const-string/jumbo v6, "uid = "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -571,6 +640,7 @@
 
     move-result-object v4
 
+    .line 274
     .local v4, sb:Ljava/lang/StringBuilder;
     iget-object v0, p0, Landroid/nfc/Tag;->mTechList:[I
 
@@ -586,6 +656,7 @@
 
     aget v1, v0, v2
 
+    .line 275
     .local v1, i:I
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -595,10 +666,12 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 274
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 278
     .end local v1           #i:I
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -616,6 +689,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 308
     iget-object v1, p0, Landroid/nfc/Tag;->mTagService:Landroid/nfc/INfcTag;
 
     if-nez v1, :cond_1
@@ -624,34 +698,42 @@
 
     move v0, v1
 
+    .line 310
     .local v0, isMock:I
     :goto_0
     iget-object v1, p0, Landroid/nfc/Tag;->mId:[B
 
     invoke-static {p1, v1}, Landroid/nfc/Tag;->writeBytesWithNull(Landroid/os/Parcel;[B)V
 
+    .line 311
     iget-object v1, p0, Landroid/nfc/Tag;->mTechList:[I
 
     array-length v1, v1
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 312
     iget-object v1, p0, Landroid/nfc/Tag;->mTechList:[I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeIntArray([I)V
 
+    .line 313
     iget-object v1, p0, Landroid/nfc/Tag;->mTechExtras:[Landroid/os/Bundle;
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
+    .line 314
     iget v1, p0, Landroid/nfc/Tag;->mServiceHandle:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 315
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 316
     if-nez v0, :cond_0
 
+    .line 317
     iget-object v1, p0, Landroid/nfc/Tag;->mTagService:Landroid/nfc/INfcTag;
 
     invoke-interface {v1}, Landroid/nfc/INfcTag;->asBinder()Landroid/os/IBinder;
@@ -660,6 +742,7 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 319
     :cond_0
     return-void
 
@@ -667,5 +750,6 @@
     :cond_1
     move v0, v2
 
+    .line 308
     goto :goto_0
 .end method

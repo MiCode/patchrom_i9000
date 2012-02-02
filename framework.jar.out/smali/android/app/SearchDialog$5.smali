@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 800
     iput-object p1, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "v"
 
     .prologue
+    .line 803
     iget-object v4, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchable:Landroid/app/SearchableInfo;
@@ -50,9 +52,11 @@
 
     if-nez v4, :cond_0
 
+    .line 823
     :goto_0
     return-void
 
+    .line 806
     :cond_0
     iget-object v4, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
 
@@ -61,6 +65,7 @@
 
     move-result-object v2
 
+    .line 808
     .local v2, searchable:Landroid/app/SearchableInfo;
     :try_start_0
     invoke-virtual {v2}, Landroid/app/SearchableInfo;->getVoiceSearchLaunchWebSearch()Z
@@ -69,6 +74,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 809
     iget-object v4, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
 
     iget-object v5, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
@@ -83,6 +89,7 @@
 
     move-result-object v3
 
+    .line 811
     .local v3, webSearchIntent:Landroid/content/Intent;
     iget-object v4, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
 
@@ -94,6 +101,7 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 822
     .end local v3           #webSearchIntent:Landroid/content/Intent;
     :cond_1
     :goto_1
@@ -103,6 +111,7 @@
 
     goto :goto_0
 
+    .line 812
     :cond_2
     :try_start_1
     invoke-virtual {v2}, Landroid/app/SearchableInfo;->getVoiceSearchLaunchRecognizer()Z
@@ -111,6 +120,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 813
     iget-object v4, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
 
     iget-object v5, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
@@ -125,6 +135,7 @@
 
     move-result-object v0
 
+    .line 815
     .local v0, appSearchIntent:Landroid/content/Intent;
     iget-object v4, p0, Landroid/app/SearchDialog$5;->this$0:Landroid/app/SearchDialog;
 
@@ -138,12 +149,14 @@
 
     goto :goto_1
 
+    .line 817
     .end local v0           #appSearchIntent:Landroid/content/Intent;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 820
     .local v1, e:Landroid/content/ActivityNotFoundException;
     const-string v4, "SearchDialog"
 

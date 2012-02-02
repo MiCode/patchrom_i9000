@@ -32,6 +32,7 @@
     .parameter
 
     .prologue
+    .line 189
     .local p0, this:Landroid/os/AsyncTask$3;,"Landroid/os/AsyncTask.3;"
     .local p2, x0:Ljava/util/concurrent/Callable;,"Ljava/util/concurrent/Callable<TResult;>;"
     iput-object p1, p0, Landroid/os/AsyncTask$3;->this$0:Landroid/os/AsyncTask;
@@ -52,8 +53,10 @@
 
     const-string v6, "An error occured while executing doInBackground()"
 
+    .line 193
     const/4 v2, 0x0
 
+    .line 196
     .local v2, result:Ljava/lang/Object;,"TResult;"
     :try_start_0
     invoke-virtual {p0}, Landroid/os/AsyncTask$3;->get()Ljava/lang/Object;
@@ -65,6 +68,7 @@
 
     move-result-object v2
 
+    .line 212
     .end local v2           #result:Ljava/lang/Object;,"TResult;"
     :goto_0
     invoke-static {}, Landroid/os/AsyncTask;->access$200()Landroid/os/AsyncTask$InternalHandler;
@@ -87,19 +91,23 @@
 
     move-result-object v1
 
+    .line 214
     .local v1, message:Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
+    .line 215
     .end local p0           #this:Landroid/os/AsyncTask$3;,"Landroid/os/AsyncTask.3;"
     :goto_1
     return-void
 
+    .line 197
     .end local v1           #message:Landroid/os/Message;
     .restart local v2       #result:Ljava/lang/Object;,"TResult;"
     .restart local p0       #this:Landroid/os/AsyncTask$3;,"Landroid/os/AsyncTask.3;"
     :catch_0
     move-exception v0
 
+    .line 198
     .local v0, e:Ljava/lang/InterruptedException;
     const-string v4, "AsyncTask"
 
@@ -107,10 +115,12 @@
 
     goto :goto_0
 
+    .line 199
     .end local v0           #e:Ljava/lang/InterruptedException;
     :catch_1
     move-exception v0
 
+    .line 200
     .local v0, e:Ljava/util/concurrent/ExecutionException;
     new-instance v4, Ljava/lang/RuntimeException;
 
@@ -124,10 +134,12 @@
 
     throw v4
 
+    .line 202
     .end local v0           #e:Ljava/util/concurrent/ExecutionException;
     :catch_2
     move-exception v0
 
+    .line 203
     .local v0, e:Ljava/util/concurrent/CancellationException;
     invoke-static {}, Landroid/os/AsyncTask;->access$200()Landroid/os/AsyncTask$InternalHandler;
 
@@ -150,17 +162,20 @@
 
     move-result-object v1
 
+    .line 205
     .restart local v1       #message:Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_1
 
+    .line 207
     .end local v0           #e:Ljava/util/concurrent/CancellationException;
     .end local v1           #message:Landroid/os/Message;
     .restart local p0       #this:Landroid/os/AsyncTask$3;,"Landroid/os/AsyncTask.3;"
     :catch_3
     move-exception v3
 
+    .line 208
     .local v3, t:Ljava/lang/Throwable;
     new-instance v4, Ljava/lang/RuntimeException;
 

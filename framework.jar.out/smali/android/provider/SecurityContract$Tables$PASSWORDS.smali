@@ -31,9 +31,10 @@
     .locals 2
 
     .prologue
+    .line 43
     sget-object v0, Landroid/provider/SecurityContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string v1, "password"
+    const-string/jumbo v1, "password"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -48,7 +49,9 @@
     .locals 0
 
     .prologue
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 38
     return-void
 .end method

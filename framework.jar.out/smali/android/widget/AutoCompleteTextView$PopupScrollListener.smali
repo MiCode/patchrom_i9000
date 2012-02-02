@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1528
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$PopupScrollListener;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1528
     invoke-direct {p0, p1}, Landroid/widget/AutoCompleteTextView$PopupScrollListener;-><init>(Landroid/widget/AutoCompleteTextView;)V
 
     return-void
@@ -55,6 +57,7 @@
     .parameter "totalItemCount"
 
     .prologue
+    .line 1532
     return-void
 .end method
 
@@ -64,6 +67,7 @@
     .parameter "scrollState"
 
     .prologue
+    .line 1535
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
@@ -89,6 +93,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1537
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupScrollListener;->this$0:Landroid/widget/AutoCompleteTextView;
 
     iget-object v1, p0, Landroid/widget/AutoCompleteTextView$PopupScrollListener;->this$0:Landroid/widget/AutoCompleteTextView;
@@ -100,6 +105,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 1538
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupScrollListener;->this$0:Landroid/widget/AutoCompleteTextView;
 
     #getter for: Landroid/widget/AutoCompleteTextView;->mResizePopupRunnable:Ljava/lang/Runnable;
@@ -109,6 +115,7 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
+    .line 1540
     :cond_0
     return-void
 .end method

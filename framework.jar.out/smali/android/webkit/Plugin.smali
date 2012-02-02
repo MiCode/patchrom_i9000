@@ -39,16 +39,22 @@
     .end annotation
 
     .prologue
+    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 54
     iput-object p1, p0, Landroid/webkit/Plugin;->mName:Ljava/lang/String;
 
+    .line 55
     iput-object p2, p0, Landroid/webkit/Plugin;->mPath:Ljava/lang/String;
 
+    .line 56
     iput-object p3, p0, Landroid/webkit/Plugin;->mFileName:Ljava/lang/String;
 
+    .line 57
     iput-object p4, p0, Landroid/webkit/Plugin;->mDescription:Ljava/lang/String;
 
+    .line 58
     new-instance v0, Landroid/webkit/Plugin$DefaultClickHandler;
 
     const/4 v1, 0x0
@@ -57,6 +63,7 @@
 
     iput-object v0, p0, Landroid/webkit/Plugin;->mHandler:Landroid/webkit/Plugin$PreferencesClickHandler;
 
+    .line 59
     return-void
 .end method
 
@@ -65,6 +72,7 @@
     .parameter "x0"
 
     .prologue
+    .line 34
     iget-object v0, p0, Landroid/webkit/Plugin;->mDescription:Ljava/lang/String;
 
     return-object v0
@@ -75,6 +83,7 @@
     .parameter "x0"
 
     .prologue
+    .line 34
     iget-object v0, p0, Landroid/webkit/Plugin;->mName:Ljava/lang/String;
 
     return-object v0
@@ -89,14 +98,17 @@
     .end annotation
 
     .prologue
+    .line 159
     iget-object v0, p0, Landroid/webkit/Plugin;->mHandler:Landroid/webkit/Plugin$PreferencesClickHandler;
 
     if-eqz v0, :cond_0
 
+    .line 160
     iget-object v0, p0, Landroid/webkit/Plugin;->mHandler:Landroid/webkit/Plugin$PreferencesClickHandler;
 
     invoke-interface {v0, p1}, Landroid/webkit/Plugin$PreferencesClickHandler;->handleClickEvent(Landroid/content/Context;)V
 
+    .line 162
     :cond_0
     return-void
 .end method
@@ -107,6 +119,7 @@
     .end annotation
 
     .prologue
+    .line 103
     iget-object v0, p0, Landroid/webkit/Plugin;->mDescription:Ljava/lang/String;
 
     return-object v0
@@ -118,6 +131,7 @@
     .end annotation
 
     .prologue
+    .line 94
     iget-object v0, p0, Landroid/webkit/Plugin;->mFileName:Ljava/lang/String;
 
     return-object v0
@@ -129,6 +143,7 @@
     .end annotation
 
     .prologue
+    .line 76
     iget-object v0, p0, Landroid/webkit/Plugin;->mName:Ljava/lang/String;
 
     return-object v0
@@ -140,6 +155,7 @@
     .end annotation
 
     .prologue
+    .line 85
     iget-object v0, p0, Landroid/webkit/Plugin;->mPath:Ljava/lang/String;
 
     return-object v0
@@ -152,8 +168,10 @@
     .end annotation
 
     .prologue
+    .line 148
     iput-object p1, p0, Landroid/webkit/Plugin;->mHandler:Landroid/webkit/Plugin$PreferencesClickHandler;
 
+    .line 149
     return-void
 .end method
 
@@ -164,8 +182,10 @@
     .end annotation
 
     .prologue
+    .line 139
     iput-object p1, p0, Landroid/webkit/Plugin;->mDescription:Ljava/lang/String;
 
+    .line 140
     return-void
 .end method
 
@@ -176,8 +196,10 @@
     .end annotation
 
     .prologue
+    .line 130
     iput-object p1, p0, Landroid/webkit/Plugin;->mFileName:Ljava/lang/String;
 
+    .line 131
     return-void
 .end method
 
@@ -188,8 +210,10 @@
     .end annotation
 
     .prologue
+    .line 112
     iput-object p1, p0, Landroid/webkit/Plugin;->mName:Ljava/lang/String;
 
+    .line 113
     return-void
 .end method
 
@@ -200,8 +224,10 @@
     .end annotation
 
     .prologue
+    .line 121
     iput-object p1, p0, Landroid/webkit/Plugin;->mPath:Ljava/lang/String;
 
+    .line 122
     return-void
 .end method
 
@@ -211,6 +237,7 @@
     .end annotation
 
     .prologue
+    .line 67
     iget-object v0, p0, Landroid/webkit/Plugin;->mName:Ljava/lang/String;
 
     return-object v0

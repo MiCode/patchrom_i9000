@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 733
     iput-object p1, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -39,6 +40,7 @@
     .prologue
     const-string v12, "MountService"
 
+    .line 736
     :try_start_0
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
@@ -47,6 +49,7 @@
     #calls: Lcom/android/server/MountService;->waitForReady()V
     invoke-static {v7}, Lcom/android/server/MountService;->access$1000(Lcom/android/server/MountService;)V
 
+    .line 737
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v7
@@ -55,6 +58,7 @@
 
     move-result-object v1
 
+    .line 738
     .local v1, path:Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
@@ -64,6 +68,7 @@
 
     move-result-object v6
 
+    .line 740
     .local v6, state:Ljava/lang/String;
     const-string v7, "unmounted"
 
@@ -73,6 +78,7 @@
 
     if-eqz v7, :cond_2
 
+    .line 741
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
     iget-object v7, v7, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
@@ -84,9 +90,11 @@
 
     move-result v2
 
+    .line 742
     .local v2, rc:I
     if-eqz v2, :cond_0
 
+    .line 743
     const-string v7, "MountService"
 
     const-string v8, "First SD Card :: Boot-time mount failed (%d)"
@@ -109,6 +117,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 753
     .end local v2           #rc:I
     :cond_0
     :goto_0
@@ -116,6 +125,7 @@
 
     if-eqz v7, :cond_5
 
+    .line 756
     const/4 v3, 0x0
 
     .local v3, retry:I
@@ -124,6 +134,7 @@
 
     if-ge v3, v7, :cond_4
 
+    .line 757
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
     iget-object v7, v7, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
@@ -132,6 +143,7 @@
 
     move-result-object v6
 
+    .line 758
     const-string v7, "mounted"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -140,6 +152,7 @@
 
     if-nez v7, :cond_1
 
+    .line 759
     const-string v7, "MountService"
 
     const-string v8, "Second SD Card : %s waiting first sdcard mounted (%s) "
@@ -162,15 +175,18 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 760
     const-wide/16 v7, 0x1f4
 
     invoke-static {v7, v8}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 756
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
+    .line 745
     .end local v3           #retry:I
     :cond_2
     const-string v7, "shared"
@@ -181,6 +197,7 @@
 
     if-eqz v7, :cond_0
 
+    .line 750
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
     iget-object v7, v7, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
@@ -198,6 +215,7 @@
 
     goto :goto_0
 
+    .line 792
     .end local v1           #path:Ljava/lang/String;
     .end local v6           #state:Ljava/lang/String;
     :catch_0
@@ -205,6 +223,7 @@
 
     move-object v0, v7
 
+    .line 793
     .local v0, ex:Ljava/lang/Exception;
     const-string v7, "MountService"
 
@@ -212,11 +231,13 @@
 
     invoke-static {v12, v7, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 795
     .end local v0           #ex:Ljava/lang/Exception;
     :cond_3
     :goto_2
     return-void
 
+    .line 765
     .restart local v1       #path:Ljava/lang/String;
     .restart local v3       #retry:I
     .restart local v6       #state:Ljava/lang/String;
@@ -230,6 +251,7 @@
 
     move-result-object v4
 
+    .line 766
     .local v4, secondPath:Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
@@ -239,6 +261,7 @@
 
     move-result-object v5
 
+    .line 770
     .local v5, secondState:Ljava/lang/String;
     const-string v7, "unmounted"
 
@@ -248,6 +271,7 @@
 
     if-eqz v7, :cond_6
 
+    .line 771
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
     iget-object v7, v7, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
@@ -259,9 +283,11 @@
 
     move-result v2
 
+    .line 772
     .restart local v2       #rc:I
     if-eqz v2, :cond_5
 
+    .line 773
     const-string v7, "MountService"
 
     const-string v8, "Second SD Card :: Boot-time mount failed (%d)"
@@ -284,6 +310,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 787
     .end local v2           #rc:I
     .end local v3           #retry:I
     .end local v4           #secondPath:Ljava/lang/String;
@@ -301,6 +328,7 @@
 
     if-eqz v7, :cond_3
 
+    .line 788
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
     iget-object v7, v7, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
@@ -310,6 +338,7 @@
     #calls: Lcom/android/server/MountService;->sendUmsIntent(Z)V
     invoke-static {v7, v8}, Lcom/android/server/MountService;->access$1300(Lcom/android/server/MountService;Z)V
 
+    .line 789
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
     iget-object v7, v7, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
@@ -321,6 +350,7 @@
 
     goto :goto_2
 
+    .line 775
     .restart local v3       #retry:I
     .restart local v4       #secondPath:Ljava/lang/String;
     .restart local v5       #secondState:Ljava/lang/String;
@@ -333,6 +363,7 @@
 
     if-eqz v7, :cond_5
 
+    .line 780
     iget-object v7, p0, Lcom/android/server/MountService$1$1;->this$1:Lcom/android/server/MountService$1;
 
     iget-object v7, v7, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;

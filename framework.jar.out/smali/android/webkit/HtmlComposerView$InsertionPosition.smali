@@ -44,6 +44,7 @@
 
     const/4 v2, 0x0
 
+    .line 465
     new-instance v0, Landroid/webkit/HtmlComposerView$InsertionPosition;
 
     const-string v1, "INSERT_AT_BEGINING"
@@ -52,6 +53,7 @@
 
     sput-object v0, Landroid/webkit/HtmlComposerView$InsertionPosition;->INSERT_AT_BEGINING:Landroid/webkit/HtmlComposerView$InsertionPosition;
 
+    .line 466
     new-instance v0, Landroid/webkit/HtmlComposerView$InsertionPosition;
 
     const-string v1, "INSERT_AT_CURSOR"
@@ -60,6 +62,7 @@
 
     sput-object v0, Landroid/webkit/HtmlComposerView$InsertionPosition;->INSERT_AT_CURSOR:Landroid/webkit/HtmlComposerView$InsertionPosition;
 
+    .line 467
     new-instance v0, Landroid/webkit/HtmlComposerView$InsertionPosition;
 
     const-string v1, "INSERT_AT_END"
@@ -68,6 +71,7 @@
 
     sput-object v0, Landroid/webkit/HtmlComposerView$InsertionPosition;->INSERT_AT_END:Landroid/webkit/HtmlComposerView$InsertionPosition;
 
+    .line 464
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/webkit/HtmlComposerView$InsertionPosition;
@@ -100,6 +104,7 @@
     .end annotation
 
     .prologue
+    .line 464
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,6 +115,7 @@
     .parameter "name"
 
     .prologue
+    .line 464
     const-class v0, Landroid/webkit/HtmlComposerView$InsertionPosition;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,6 +132,7 @@
     .locals 1
 
     .prologue
+    .line 464
     sget-object v0, Landroid/webkit/HtmlComposerView$InsertionPosition;->$VALUES:[Landroid/webkit/HtmlComposerView$InsertionPosition;
 
     invoke-virtual {v0}, [Landroid/webkit/HtmlComposerView$InsertionPosition;->clone()Ljava/lang/Object;

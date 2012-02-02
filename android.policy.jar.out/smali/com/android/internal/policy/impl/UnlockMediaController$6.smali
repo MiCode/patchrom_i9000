@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 350
     iput-object p1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$6;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,11 +51,13 @@
 
     const-string v4, "com.android.music.musicservicecommand.rew.up"
 
+    .line 353
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$6;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     #calls: Lcom/android/internal/policy/impl/UnlockMediaController;->sendTouchDetection()V
     invoke-static {v1}, Lcom/android/internal/policy/impl/UnlockMediaController;->access$000(Lcom/android/internal/policy/impl/UnlockMediaController;)V
 
+    .line 355
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v1
@@ -63,16 +66,19 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 356
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
+    .line 386
     :cond_0
     :goto_0
     return v3
 
+    .line 359
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$6;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
@@ -87,6 +93,7 @@
 
     goto :goto_0
 
+    .line 363
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/View;->isPressed()Z
 
@@ -94,22 +101,26 @@
 
     if-nez v1, :cond_0
 
+    .line 364
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$6;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     iget-boolean v1, v1, Lcom/android/internal/policy/impl/UnlockMediaController;->mREWLongPressed:Z
 
     if-eqz v1, :cond_0
 
+    .line 365
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$6;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     iput-boolean v3, v1, Lcom/android/internal/policy/impl/UnlockMediaController;->mREWLongPressed:Z
 
+    .line 366
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.music.musicservicecommand.rew.up"
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 367
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "musicplayer.from"
 
@@ -117,6 +128,7 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 368
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -125,6 +137,7 @@
 
     goto :goto_0
 
+    .line 374
     .end local v0           #intent:Landroid/content/Intent;
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$6;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
@@ -133,16 +146,19 @@
 
     if-eqz v1, :cond_1
 
+    .line 375
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockMediaController$6;->this$0:Lcom/android/internal/policy/impl/UnlockMediaController;
 
     iput-boolean v3, v1, Lcom/android/internal/policy/impl/UnlockMediaController;->mREWLongPressed:Z
 
+    .line 376
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.music.musicservicecommand.rew.up"
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 377
     .restart local v0       #intent:Landroid/content/Intent;
     const-string v1, "musicplayer.from"
 
@@ -150,6 +166,7 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 378
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -158,6 +175,7 @@
 
     goto :goto_0
 
+    .line 380
     .end local v0           #intent:Landroid/content/Intent;
     :cond_1
     new-instance v0, Landroid/content/Intent;
@@ -166,6 +184,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 381
     .restart local v0       #intent:Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -175,6 +194,7 @@
 
     goto :goto_0
 
+    .line 356
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -27,12 +27,15 @@
     .parameter "pin"
 
     .prologue
+    .line 387
     iput-object p1, p0, Lcom/android/internal/policy/impl/PukUnlockScreen$CheckSimPuk;->this$0:Lcom/android/internal/policy/impl/PukUnlockScreen;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
+    .line 388
     iput-object p2, p0, Lcom/android/internal/policy/impl/PukUnlockScreen$CheckSimPuk;->mPin:Ljava/lang/String;
 
+    .line 389
     return-void
 .end method
 
@@ -45,6 +48,7 @@
     .locals 5
 
     .prologue
+    .line 396
     :try_start_0
     const-string v2, "phoneext"
 
@@ -69,6 +73,7 @@
 
     move-result v1
 
+    .line 408
     .local v1, result:Z
     iget-object v2, p0, Lcom/android/internal/policy/impl/PukUnlockScreen$CheckSimPuk;->this$0:Lcom/android/internal/policy/impl/PukUnlockScreen;
 
@@ -82,15 +87,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 431
     .end local v1           #result:Z
     :goto_0
     return-void
 
+    .line 414
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 424
     .local v0, e:Landroid/os/RemoteException;
     iget-object v2, p0, Lcom/android/internal/policy/impl/PukUnlockScreen$CheckSimPuk;->this$0:Lcom/android/internal/policy/impl/PukUnlockScreen;
 

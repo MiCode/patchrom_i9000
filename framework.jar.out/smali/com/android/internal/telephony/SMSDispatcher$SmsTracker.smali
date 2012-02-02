@@ -34,17 +34,23 @@
     .parameter "deliveryIntent"
 
     .prologue
+    .line 2402
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2403
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mData:Ljava/util/HashMap;
 
+    .line 2404
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mSentIntent:Landroid/app/PendingIntent;
 
+    .line 2405
     iput-object p3, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mDeliveryIntent:Landroid/app/PendingIntent;
 
+    .line 2406
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mRetryCount:I
 
+    .line 2407
     return-void
 .end method

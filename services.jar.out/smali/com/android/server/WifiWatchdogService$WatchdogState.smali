@@ -48,6 +48,7 @@
 
     const/4 v2, 0x0
 
+    .line 948
     new-instance v0, Lcom/android/server/WifiWatchdogService$WatchdogState;
 
     const-string v1, "IDLE"
@@ -56,6 +57,7 @@
 
     sput-object v0, Lcom/android/server/WifiWatchdogService$WatchdogState;->IDLE:Lcom/android/server/WifiWatchdogService$WatchdogState;
 
+    .line 950
     new-instance v0, Lcom/android/server/WifiWatchdogService$WatchdogState;
 
     const-string v1, "SLEEP"
@@ -64,6 +66,7 @@
 
     sput-object v0, Lcom/android/server/WifiWatchdogService$WatchdogState;->SLEEP:Lcom/android/server/WifiWatchdogService$WatchdogState;
 
+    .line 952
     new-instance v0, Lcom/android/server/WifiWatchdogService$WatchdogState;
 
     const-string v1, "CHECKING_AP"
@@ -72,6 +75,7 @@
 
     sput-object v0, Lcom/android/server/WifiWatchdogService$WatchdogState;->CHECKING_AP:Lcom/android/server/WifiWatchdogService$WatchdogState;
 
+    .line 954
     new-instance v0, Lcom/android/server/WifiWatchdogService$WatchdogState;
 
     const-string v1, "SWITCHING_AP"
@@ -80,6 +84,7 @@
 
     sput-object v0, Lcom/android/server/WifiWatchdogService$WatchdogState;->SWITCHING_AP:Lcom/android/server/WifiWatchdogService$WatchdogState;
 
+    .line 946
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/server/WifiWatchdogService$WatchdogState;
@@ -116,6 +121,7 @@
     .end annotation
 
     .prologue
+    .line 946
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -126,6 +132,7 @@
     .parameter "name"
 
     .prologue
+    .line 946
     const-class v0, Lcom/android/server/WifiWatchdogService$WatchdogState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -142,6 +149,7 @@
     .locals 1
 
     .prologue
+    .line 946
     sget-object v0, Lcom/android/server/WifiWatchdogService$WatchdogState;->$VALUES:[Lcom/android/server/WifiWatchdogService$WatchdogState;
 
     invoke-virtual {v0}, [Lcom/android/server/WifiWatchdogService$WatchdogState;->clone()Ljava/lang/Object;

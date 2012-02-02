@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "in"
 
     .prologue
+    .line 293
     new-instance v0, Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;
 
     invoke-direct {v0, p1}, Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -56,6 +58,7 @@
     .parameter "x0"
 
     .prologue
+    .line 291
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/preference/ResourceListPreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;
 
     move-result-object v0
@@ -68,6 +71,7 @@
     .parameter "size"
 
     .prologue
+    .line 297
     new-array v0, p1, [Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;
 
     return-object v0
@@ -78,6 +82,7 @@
     .parameter "x0"
 
     .prologue
+    .line 291
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/preference/ResourceListPreference$SavedState$1;->newArray(I)[Lcom/broadcom/bt/preference/ResourceListPreference$SavedState;
 
     move-result-object v0

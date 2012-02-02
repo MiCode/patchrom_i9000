@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,13 +39,16 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 108
     if-nez p2, :cond_0
 
     move v0, v2
 
+    .line 116
     :goto_0
     return v0
 
+    .line 112
     :cond_0
     sub-int v0, p2, v2
 
@@ -56,6 +60,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 113
     const/4 v0, 0x0
 
     goto :goto_0
@@ -63,5 +68,6 @@
     :cond_1
     move v0, v2
 
+    .line 116
     goto :goto_0
 .end method

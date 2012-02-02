@@ -31,6 +31,7 @@
     .locals 3
 
     .prologue
+    .line 299
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -74,6 +75,7 @@
     .locals 0
 
     .prologue
+    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -86,8 +88,10 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 318
     sparse-switch p0, :sswitch_data_0
 
+    .line 328
     sget-object v0, Lcom/broadcom/bt/service/bpp/BluetoothPrinter$SERVICE_MASK;->prettyText:[Ljava/lang/String;
 
     sget-object v1, Lcom/broadcom/bt/service/bpp/BluetoothPrinter$SERVICE_MASK;->prettyText:[Ljava/lang/String;
@@ -101,6 +105,7 @@
     :goto_0
     return-object v0
 
+    .line 320
     :sswitch_0
     sget-object v0, Lcom/broadcom/bt/service/bpp/BluetoothPrinter$SERVICE_MASK;->prettyText:[Ljava/lang/String;
 
@@ -110,6 +115,7 @@
 
     goto :goto_0
 
+    .line 322
     :sswitch_1
     sget-object v0, Lcom/broadcom/bt/service/bpp/BluetoothPrinter$SERVICE_MASK;->prettyText:[Ljava/lang/String;
 
@@ -117,6 +123,7 @@
 
     goto :goto_0
 
+    .line 324
     :sswitch_2
     sget-object v0, Lcom/broadcom/bt/service/bpp/BluetoothPrinter$SERVICE_MASK;->prettyText:[Ljava/lang/String;
 
@@ -126,6 +133,7 @@
 
     goto :goto_0
 
+    .line 326
     :sswitch_3
     sget-object v0, Lcom/broadcom/bt/service/bpp/BluetoothPrinter$SERVICE_MASK;->prettyText:[Ljava/lang/String;
 
@@ -135,6 +143,7 @@
 
     goto :goto_0
 
+    .line 318
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0

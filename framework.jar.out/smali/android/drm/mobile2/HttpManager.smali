@@ -35,12 +35,14 @@
     .locals 1
 
     .prologue
+    .line 61
     invoke-static {}, Landroid/drm/mobile2/HttpManager;->getHttpAcceptLanguage()Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Landroid/drm/mobile2/HttpManager;->HDR_VALUE_ACCEPT_LANGUAGE:Ljava/lang/String;
 
+    .line 76
     const/4 v0, 0x0
 
     sput-object v0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
@@ -52,8 +54,10 @@
     .locals 0
 
     .prologue
+    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 75
     return-void
 .end method
 
@@ -63,28 +67,36 @@
     .parameter "locale"
 
     .prologue
+    .line 435
     invoke-virtual {p1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 437
     .local v1, language:Ljava/lang/String;
     if-eqz v1, :cond_0
 
+    .line 438
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 440
     invoke-virtual {p1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 442
     .local v0, country:Ljava/lang/String;
     if-eqz v0, :cond_0
 
+    .line 443
     const-string v2, "-"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 444
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 447
     .end local v0           #country:Ljava/lang/String;
     :cond_0
     return-void
@@ -94,19 +106,24 @@
     .locals 2
 
     .prologue
+    .line 363
     sget-object v0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     if-eqz v0, :cond_0
 
+    .line 364
     sget-object v0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual {v0}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 365
     const/4 v0, 0x1
 
+    .line 368
     :goto_0
     return v0
 
+    .line 367
     :cond_0
     const-string v0, "DrmLicenseHttpManger"
 
@@ -114,6 +131,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 368
     const/4 v0, 0x0
 
     goto :goto_0
@@ -125,29 +143,35 @@
     .prologue
     const-string v6, "DrmLicenseHttpManger"
 
+    .line 399
     invoke-static {}, Landroid/drm/mobile2/HttpConfig;->getUserAgent()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 400
     .local v3, userAgent:Ljava/lang/String;
     invoke-static {v3}, Landroid/net/http/AndroidHttpClient;->newInstance(Ljava/lang/String;)Landroid/net/http/AndroidHttpClient;
 
     move-result-object v0
 
+    .line 401
     .local v0, client:Landroid/net/http/AndroidHttpClient;
     invoke-virtual {v0}, Landroid/net/http/AndroidHttpClient;->getParams()Lorg/apache/http/params/HttpParams;
 
     move-result-object v1
 
+    .line 402
     .local v1, params:Lorg/apache/http/params/HttpParams;
     const-string v4, "UTF-8"
 
     invoke-static {v1, v4}, Lorg/apache/http/params/HttpProtocolParams;->setContentCharset(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V
 
+    .line 405
     invoke-static {}, Landroid/drm/mobile2/HttpConfig;->getHttpSocketTimeout()I
 
     move-result v2
 
+    .line 407
     .local v2, soTimeout:I
     const-string v4, "DrmLicenseHttpManger"
 
@@ -159,6 +183,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 408
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -193,9 +218,11 @@
 
     invoke-static {v6, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 411
     :cond_0
     invoke-static {v1, v2}, Lorg/apache/http/params/HttpConnectionParams;->setSoTimeout(Lorg/apache/http/params/HttpParams;I)V
 
+    .line 412
     return-object v0
 .end method
 
@@ -203,18 +230,22 @@
     .locals 3
 
     .prologue
+    .line 420
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v1
 
+    .line 421
     .local v1, locale:Ljava/util/Locale;
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 423
     .local v0, builder:Ljava/lang/StringBuilder;
     invoke-static {v0, v1}, Landroid/drm/mobile2/HttpManager;->addLocaleToHttpAcceptLanguage(Ljava/lang/StringBuilder;Ljava/util/Locale;)V
 
+    .line 424
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v1, v2}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -223,21 +254,25 @@
 
     if-nez v2, :cond_1
 
+    .line 425
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
     if-lez v2, :cond_0
 
+    .line 426
     const-string v2, ", "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 428
     :cond_0
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {v0, v2}, Landroid/drm/mobile2/HttpManager;->addLocaleToHttpAcceptLanguage(Ljava/lang/StringBuilder;Ljava/util/Locale;)V
 
+    .line 430
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -256,8 +291,10 @@
     .end annotation
 
     .prologue
+    .line 393
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 394
     const-string v0, "DrmLicenseHttpManger"
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -266,6 +303,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 395
     new-instance v0, Ljava/io/IOException;
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -298,8 +336,10 @@
     .end annotation
 
     .prologue
+    .line 96
     if-nez p2, :cond_0
 
+    .line 97
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     .end local p0
@@ -310,25 +350,30 @@
 
     throw p0
 
+    .line 99
     .restart local p0
     .restart local p1
     :cond_0
     const/16 v16, 0x0
 
+    .line 100
     .local v16, multiPart:Z
     new-instance v17, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct/range {v17 .. v17}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 101
     .local v17, out:Ljava/io/ByteArrayOutputStream;
     const-string v4, "DrmLicenseHttpManger"
 
-    const-string v5, "testing the Httpconnetion"
+    const-string/jumbo v5, "testing the Httpconnetion"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 102
     const/16 v19, 0x0
 
+    .line 104
     .local v19, strheader:Ljava/lang/StringBuilder;
     const-string v4, "DrmLicenseHttpManger"
 
@@ -336,6 +381,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 105
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -362,6 +408,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 106
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -388,6 +435,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 107
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -421,6 +469,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 110
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -447,6 +496,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 111
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -473,6 +523,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 112
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -499,6 +550,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 113
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -525,6 +577,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 115
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -551,6 +604,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 118
     const/4 v4, 0x2
 
     move/from16 v0, p3
@@ -561,6 +615,7 @@
 
     if-eqz p7, :cond_3
 
+    .line 119
     const/4 v4, 0x0
 
     const/16 v5, 0x3e
@@ -597,6 +652,7 @@
 
     move-result-object p7
 
+    .line 120
     const-string v4, "DrmLicenseHttpManger"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -623,9 +679,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 126
     :goto_1
     const/4 v6, 0x0
 
+    .line 129
     .local v6, status:Lorg/apache/http/StatusLine;
     :try_start_0
     new-instance v4, Ljava/net/URI;
@@ -636,6 +694,7 @@
 
     invoke-direct {v0, v1}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
 
+    .line 130
     .local v4, hostUrl:Ljava/net/URI;
     new-instance v7, Lorg/apache/http/HttpHost;
 
@@ -652,6 +711,7 @@
 
     invoke-direct {v7, v5, v4, v8}, Lorg/apache/http/HttpHost;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 134
     .local v7, target:Lorg/apache/http/HttpHost;
     invoke-static {}, Landroid/drm/mobile2/HttpManager;->createHttpClient()Landroid/net/http/AndroidHttpClient;
 
@@ -659,8 +719,10 @@
 
     sput-object v4, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
+    .line 135
     const/4 v4, 0x0
 
+    .line 136
     .local v4, req:Lorg/apache/http/HttpRequest;
     const-string v4, "DrmLicenseHttpManger"
 
@@ -669,8 +731,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 137
     packed-switch p3, :pswitch_data_0
 
+    .line 154
     const-string p0, "DrmLicenseHttpManger"
 
     .end local p0
@@ -737,16 +801,20 @@
     .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_5
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_6
 
+    .line 157
     const/16 p0, -0x1
 
+    .line 352
     sget-object p1, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     if-eqz p1, :cond_8
 
+    .line 355
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p0, 0x1
 
     move-object/from16 p2, v6
@@ -765,6 +833,7 @@
 
     move/from16 p0, v16
 
+    .line 359
     .end local v7           #target:Lorg/apache/http/HttpHost;
     .end local v16           #multiPart:Z
     .end local p4
@@ -778,6 +847,7 @@
     :goto_2
     return p4
 
+    .line 107
     .restart local v16       #multiPart:Z
     .restart local v17       #out:Ljava/io/ByteArrayOutputStream;
     .restart local v19       #strheader:Ljava/lang/StringBuilder;
@@ -810,6 +880,7 @@
 
     goto/16 :goto_0
 
+    .line 124
     :cond_3
     const-string v4, "DrmLicenseHttpManger"
 
@@ -819,6 +890,7 @@
 
     goto/16 :goto_1
 
+    .line 139
     .restart local v6       #status:Lorg/apache/http/StatusLine;
     .restart local v7       #target:Lorg/apache/http/HttpHost;
     :pswitch_0
@@ -831,15 +903,18 @@
 
     invoke-direct {v0, v1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
 
+    .line 140
     .local v5, post:Lorg/apache/http/client/methods/HttpPost;
     new-instance p2, Lorg/apache/http/entity/BasicHttpEntity;
 
     .end local p2           #url:Ljava/lang/String;
     invoke-direct/range {p2 .. p2}, Lorg/apache/http/entity/BasicHttpEntity;-><init>()V
 
+    .line 141
     .local p2, entity:Lorg/apache/http/entity/BasicHttpEntity;
     if-eqz p7, :cond_4
 
+    .line 142
     new-instance v4, Ljava/io/ByteArrayInputStream;
 
     invoke-virtual/range {p7 .. p7}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -852,6 +927,7 @@
 
     invoke-direct {v4, v8}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
+    .line 143
     .local v4, is:Ljava/io/ByteArrayInputStream;
     move-object/from16 v0, p2
 
@@ -859,6 +935,7 @@
 
     invoke-virtual {v0, v1}, Lorg/apache/http/entity/BasicHttpEntity;->setContent(Ljava/io/InputStream;)V
 
+    .line 144
     invoke-virtual {v4}, Ljava/io/ByteArrayInputStream;->available()I
 
     move-result v4
@@ -872,6 +949,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/apache/http/entity/BasicHttpEntity;->setContentLength(J)V
 
+    .line 146
     :cond_4
     move-object v0, v5
 
@@ -879,11 +957,13 @@
 
     invoke-virtual {v0, v1}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
 
+    .line 147
     move-object/from16 p2, v5
 
     .local p2, req:Lorg/apache/http/HttpRequest;
     move-object/from16 v4, p2
 
+    .line 161
     .end local v5           #post:Lorg/apache/http/client/methods/HttpPost;
     .end local p2           #req:Lorg/apache/http/HttpRequest;
     .local v4, req:Lorg/apache/http/HttpRequest;
@@ -894,16 +974,18 @@
 
     move-result-object p2
 
+    .line 162
     .local p2, params:Lorg/apache/http/params/HttpParams;
     if-eqz p4, :cond_5
 
+    .line 163
     const-string v5, "DrmLicenseHttpManger"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "proxy is set:"
+    const-string/jumbo v9, "proxy is set:"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -937,6 +1019,7 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 164
     new-instance v5, Lorg/apache/http/HttpHost;
 
     move-object v0, v5
@@ -953,6 +1036,7 @@
 
     invoke-static {v0, v1}, Lorg/apache/http/conn/params/ConnRouteParams;->setDefaultProxy(Lorg/apache/http/params/HttpParams;Lorg/apache/http/HttpHost;)V
 
+    .line 167
     :cond_5
     move-object v0, v4
 
@@ -960,6 +1044,7 @@
 
     invoke-interface {v0, v1}, Lorg/apache/http/HttpRequest;->setParams(Lorg/apache/http/params/HttpParams;)V
 
+    .line 169
     const-string p2, "DrmLicenseHttpManger"
 
     .end local p2           #params:Lorg/apache/http/params/HttpParams;
@@ -971,6 +1056,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 181
     const-string p2, "Accept-Language"
 
     sget-object v5, Landroid/drm/mobile2/HttpManager;->HDR_VALUE_ACCEPT_LANGUAGE:Ljava/lang/String;
@@ -983,6 +1069,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/apache/http/HttpRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 182
     const-string p2, "Accept-Encoding"
 
     const-string v5, "gzip"
@@ -995,6 +1082,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/apache/http/HttpRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 185
     const/16 p2, 0x1
 
     move/from16 v0, p3
@@ -1003,6 +1091,7 @@
 
     if-ne v0, v1, :cond_9
 
+    .line 186
     const-string p2, "Accept"
 
     const-string v5, "application/vnd.oma.drm.roap-trigger+xml"
@@ -1015,9 +1104,10 @@
 
     invoke-interface {v0, v1, v2}, Lorg/apache/http/HttpRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 187
     const-string p2, "Cookie"
 
-    const-string v5, "phone=919880438077"
+    const-string/jumbo v5, "phone=919880438077"
 
     move-object v0, v4
 
@@ -1027,6 +1117,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/apache/http/HttpRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 192
     :goto_4
     const-string p2, "DrmLicenseHttpManger"
 
@@ -1038,6 +1129,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 193
     sget-object p2, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     move-object/from16 v0, p2
@@ -1050,6 +1142,7 @@
 
     move-result-object v4
 
+    .line 195
     .local v4, response:Lorg/apache/http/HttpResponse;
     invoke-interface {v4}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
     :try_end_1
@@ -1062,6 +1155,7 @@
 
     move-result-object v18
 
+    .line 197
     .end local v6           #status:Lorg/apache/http/StatusLine;
     .local v18, status:Lorg/apache/http/StatusLine;
     :try_start_2
@@ -1069,6 +1163,7 @@
 
     move-result v9
 
+    .line 198
     .local v9, statusCode:I
     const-string p2, "DrmLicenseHttpManger"
 
@@ -1076,7 +1171,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "status is:"
+    const-string/jumbo v6, "status is:"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1096,6 +1191,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 199
     const/16 p2, 0xc8
 
     move v0, v9
@@ -1104,6 +1200,7 @@
 
     if-eq v0, v1, :cond_c
 
+    .line 200
     const/16 p2, 0x12d
 
     move v0, v9
@@ -1120,15 +1217,19 @@
 
     if-ne v0, v1, :cond_b
 
+    .line 201
     :cond_6
     const-string p2, "Location"
 
+    .line 202
     .local p2, locationHeader:Ljava/lang/String;
     const/4 v6, 0x0
 
+    .line 203
     .local v6, locationHeaderValue:Ljava/lang/String;
     const/4 v5, 0x0
 
+    .line 204
     .local v5, result:I
     move-object v0, v4
 
@@ -1141,6 +1242,7 @@
     .end local p2           #locationHeader:Ljava/lang/String;
     if-eqz p2, :cond_7
 
+    .line 205
     const-string p2, "Location"
 
     move-object v0, v4
@@ -1151,13 +1253,16 @@
 
     move-result-object p2
 
+    .line 206
     .local p2, locHeader:Lorg/apache/http/Header;
     if-eqz p2, :cond_7
 
+    .line 207
     invoke-interface/range {p2 .. p2}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object v6
 
+    .line 210
     .end local p2           #locHeader:Lorg/apache/http/Header;
     :cond_7
     const-string p2, "DrmLicenseHttpManger"
@@ -1188,6 +1293,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 212
     const-string p2, "DrmLicenseHttpManger"
 
     const-string v4, "We got 302 making another connection"
@@ -1220,6 +1326,7 @@
 
     move-object/from16 v15, p11
 
+    .line 213
     invoke-static/range {v4 .. v15}, Landroid/drm/mobile2/HttpManager;->httpConnection(Landroid/content/Context;ILjava/lang/String;IZLjava/lang/String;ILjava/lang/String;Ljava/lang/String;IILandroid/os/Handler;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
@@ -1233,17 +1340,20 @@
     .end local v9           #statusCode:I
     move-result p0
 
+    .line 352
     .local p0, result:I
     sget-object p1, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p1           #session:I
     if-eqz p1, :cond_a
 
+    .line 355
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p0           #result:I
     invoke-virtual/range {p0 .. p0}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p0, 0x1
 
     move-object/from16 p2, v18
@@ -1266,6 +1376,7 @@
     .local p0, multiPart:Z
     goto/16 :goto_2
 
+    .line 150
     .local v6, status:Lorg/apache/http/StatusLine;
     .restart local v7       #target:Lorg/apache/http/HttpHost;
     .restart local v16       #multiPart:Z
@@ -1283,6 +1394,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 151
     new-instance v4, Lorg/apache/http/client/methods/HttpGet;
 
     move-object v0, v4
@@ -1291,6 +1403,7 @@
 
     invoke-direct {v0, v1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
+    .line 152
     .local v4, req:Lorg/apache/http/HttpRequest;
     goto/16 :goto_3
 
@@ -1315,10 +1428,12 @@
 
     move/from16 p0, v16
 
+    .line 356
     .end local v16           #multiPart:Z
     .local p0, multiPart:Z
     goto/16 :goto_2
 
+    .line 189
     .end local p2           #status:Lorg/apache/http/StatusLine;
     .restart local v4       #req:Lorg/apache/http/HttpRequest;
     .restart local v6       #status:Lorg/apache/http/StatusLine;
@@ -1350,6 +1465,7 @@
 
     goto/16 :goto_4
 
+    .line 341
     .end local v4           #req:Lorg/apache/http/HttpRequest;
     .end local v7           #target:Lorg/apache/http/HttpHost;
     .end local p0           #context:Landroid/content/Context;
@@ -1371,6 +1487,7 @@
     .local p2, out:Ljava/io/ByteArrayOutputStream;
     move/from16 p1, v16
 
+    .line 342
     .end local v16           #multiPart:Z
     .end local p5
     .end local p6
@@ -1386,15 +1503,18 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_7
 
+    .line 352
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p0           #e:Ljava/net/URISyntaxException;
     if-eqz p0, :cond_19
 
+    .line 355
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p0, 0x1
 
     move-object/from16 v20, p3
@@ -1458,6 +1578,7 @@
     .local p0, multiPart:Z
     goto/16 :goto_2
 
+    .line 220
     .end local v6           #locationHeaderValue:Ljava/lang/String;
     .end local p2           #status:Lorg/apache/http/StatusLine;
     .local v4, response:Lorg/apache/http/HttpResponse;
@@ -1502,6 +1623,7 @@
 
     throw p0
 
+    .line 341
     .end local v4           #response:Lorg/apache/http/HttpResponse;
     .end local v7           #target:Lorg/apache/http/HttpHost;
     .end local v9           #statusCode:I
@@ -1527,6 +1649,7 @@
     .local p1, multiPart:Z
     goto :goto_5
 
+    .line 223
     .end local p2           #out:Ljava/io/ByteArrayOutputStream;
     .restart local v4       #response:Lorg/apache/http/HttpResponse;
     .restart local v7       #target:Lorg/apache/http/HttpHost;
@@ -1552,10 +1675,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 224
     invoke-interface {v4}, Lorg/apache/http/HttpResponse;->getAllHeaders()[Lorg/apache/http/Header;
 
     move-result-object p0
 
+    .line 225
     .local p0, a:[Lorg/apache/http/Header;
     new-instance p8, Ljava/lang/StringBuilder;
 
@@ -1569,6 +1694,7 @@
     .catch Ljava/net/SocketException; {:try_start_5 .. :try_end_5} :catch_b
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_7
 
+    .line 226
     .end local v19           #strheader:Ljava/lang/StringBuilder;
     .local p8, strheader:Ljava/lang/StringBuilder;
     const/16 p2, 0x0
@@ -1595,6 +1721,7 @@
 
     if-ge v0, v1, :cond_e
 
+    .line 227
     aget-object p4, p0, p2
 
     invoke-interface/range {p4 .. p4}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
@@ -1609,12 +1736,14 @@
 
     if-eqz p4, :cond_d
 
+    .line 228
     const-string p4, "DrmLicenseHttpManger"
 
     const-string p5, "Header is Content-Type"
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 229
     aget-object p4, p0, p2
 
     invoke-interface/range {p4 .. p4}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
@@ -1629,14 +1758,17 @@
 
     if-eqz p4, :cond_d
 
+    .line 230
     const/16 p3, 0x1
 
+    .line 231
     const-string p4, "DrmLicenseHttpManger"
 
     const-string p5, "MultiPart True"
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 234
     :cond_d
     aget-object p4, p0, p2
 
@@ -1672,6 +1804,7 @@
 
     invoke-virtual/range {p4 .. p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 235
     const-string p4, "DrmLicenseHttpManger"
 
     new-instance p5, Ljava/lang/StringBuilder;
@@ -1717,13 +1850,16 @@
     .catch Ljava/net/SocketException; {:try_start_6 .. :try_end_6} :catch_c
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_8
 
+    .line 226
     add-int/lit8 p2, p2, 0x1
 
     goto/16 :goto_6
 
+    .line 238
     :cond_e
     if-eqz p3, :cond_f
 
+    .line 239
     :try_start_7
     const-string p0, "Transfer-Encoding:chunked"
 
@@ -1745,6 +1881,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 240
     :cond_f
     const-string p0, "DrmLicenseHttpManger"
 
@@ -1756,8 +1893,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 241
     if-eqz p3, :cond_10
 
+    .line 242
     const/4 v8, 0x0
 
     const/4 v10, 0x0
@@ -1772,6 +1911,7 @@
 
     invoke-static/range {v7 .. v12}, Landroid/drm/mobile2/HttpManager;->sendData(Landroid/os/Handler;II[BLjava/lang/String;I)V
 
+    .line 243
     .end local v7           #target:Lorg/apache/http/HttpHost;
     const-string p0, "DrmLicenseHttpManger"
 
@@ -1783,16 +1923,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 246
     :cond_10
     invoke-interface {v4}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object p0
 
+    .line 247
     .local p0, entity:Lorg/apache/http/HttpEntity;
     invoke-interface/range {p0 .. p0}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
 
     move-result-object p2
 
+    .line 249
     .local p2, inputstream:Ljava/io/InputStream;
     sget p4, Landroid/drm/mobile2/HttpConfig;->MAX_DATA_LEN:I
 
@@ -1809,9 +1952,11 @@
     .catch Ljava/net/SocketException; {:try_start_7 .. :try_end_7} :catch_d
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_9
 
+    .line 250
     .local p7, res:[B
     if-eqz p0, :cond_1d
 
+    .line 252
     :try_start_8
     invoke-interface/range {p0 .. p0}, Lorg/apache/http/HttpEntity;->isChunked()Z
 
@@ -1819,8 +1964,10 @@
 
     if-eqz p4, :cond_13
 
+    .line 255
     const/16 p4, 0x0
 
+    .line 258
     .end local p9
     .local p4, n:I
     :goto_7
@@ -1832,12 +1979,14 @@
 
     move-result p4
 
+    .line 259
     move-object/from16 v0, v17
 
     move-object/from16 v1, p7
 
     invoke-virtual {v0, v1}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
+    .line 260
     const/16 p5, -0x1
 
     move/from16 v0, p4
@@ -1846,6 +1995,7 @@
 
     if-eq v0, v1, :cond_12
 
+    .line 261
     const-string p5, "DrmLicenseHttpManger"
 
     new-instance p6, Ljava/lang/StringBuilder;
@@ -1876,6 +2026,7 @@
 
     invoke-static/range {p5 .. p6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 262
     invoke-virtual/range {v17 .. v17}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p5
@@ -1898,12 +2049,14 @@
 
     invoke-static/range {v7 .. v12}, Landroid/drm/mobile2/HttpManager;->sendData(Landroid/os/Handler;II[BLjava/lang/String;I)V
 
+    .line 265
     invoke-virtual/range {v17 .. v17}, Ljava/io/ByteArrayOutputStream;->reset()V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
     goto :goto_7
 
+    .line 335
     .end local v4           #response:Lorg/apache/http/HttpResponse;
     .end local p4           #n:I
     .end local p7           #res:[B
@@ -1921,9 +2074,11 @@
     :goto_8
     if-eqz p0, :cond_11
 
+    .line 336
     :try_start_9
     invoke-interface/range {p0 .. p0}, Lorg/apache/http/HttpEntity;->consumeContent()V
 
+    .line 337
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p0           #entity:Lorg/apache/http/HttpEntity;
@@ -1939,6 +2094,7 @@
     .catch Ljava/net/SocketException; {:try_start_9 .. :try_end_9} :catch_e
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_a
 
+    .line 341
     :catch_2
     move-exception p0
 
@@ -1960,6 +2116,7 @@
     .local p3, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_5
 
+    .line 268
     .restart local v4       #response:Lorg/apache/http/HttpResponse;
     .restart local v17       #out:Ljava/io/ByteArrayOutputStream;
     .restart local v18       #status:Lorg/apache/http/StatusLine;
@@ -1980,12 +2137,14 @@
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 274
     const-string p4, "DrmLicenseHttpManger"
 
     const-string p5, " sending last chunk data"
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 275
     const/4 v8, 0x0
 
     const/4 v10, 0x0
@@ -2000,26 +2159,32 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
+    .line 276
     const/16 p1, 0x0
 
+    .line 277
     .end local v17           #out:Ljava/io/ByteArrayOutputStream;
     .local p1, out:Ljava/io/ByteArrayOutputStream;
     :try_start_b
     invoke-static {}, Ljava/lang/System;->gc()V
 
+    .line 278
     invoke-virtual/range {p2 .. p2}, Ljava/io/InputStream;->close()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
+    .line 335
     .end local v4           #response:Lorg/apache/http/HttpResponse;
     .end local p7           #res:[B
     .end local p10
     :goto_9
     if-eqz p0, :cond_1b
 
+    .line 336
     :try_start_c
     invoke-interface/range {p0 .. p0}, Lorg/apache/http/HttpEntity;->consumeContent()V
 
+    .line 337
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p0           #entity:Lorg/apache/http/HttpEntity;
@@ -2034,6 +2199,7 @@
 
     move-object/from16 p0, p1
 
+    .line 352
     .end local p1           #out:Ljava/io/ByteArrayOutputStream;
     .local p0, out:Ljava/io/ByteArrayOutputStream;
     :goto_a
@@ -2041,10 +2207,12 @@
 
     if-eqz p1, :cond_1a
 
+    .line 355
     sget-object p1, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p1, 0x1
 
     move-object/from16 p2, v18
@@ -2067,6 +2235,7 @@
     .local p3, strheader:Ljava/lang/StringBuilder;
     goto/16 :goto_2
 
+    .line 284
     .restart local v4       #response:Lorg/apache/http/HttpResponse;
     .restart local v17       #out:Ljava/io/ByteArrayOutputStream;
     .restart local v18       #status:Lorg/apache/http/StatusLine;
@@ -2111,6 +2280,7 @@
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 287
     invoke-interface/range {p0 .. p0}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
     move-result-wide p4
@@ -2121,20 +2291,25 @@
 
     if-lez p4, :cond_1c
 
+    .line 288
     const-string p4, "DrmLicenseHttpManger"
 
     const-string p5, "content length is present"
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 289
     const/16 p4, 0x0
 
+    .line 290
     .local p4, n1:I
     const/16 p5, 0x0
 
+    .line 291
     .local p5, offset:I
     const/16 p6, 0x1
 
+    .line 293
     .end local v4           #response:Lorg/apache/http/HttpResponse;
     .end local p10
     .local p6, progress:I
@@ -2148,6 +2323,7 @@
 
     move-result p4
 
+    .line 294
     const/16 p9, -0x1
 
     move/from16 v0, p4
@@ -2156,8 +2332,10 @@
 
     if-eq v0, v1, :cond_16
 
+    .line 295
     add-int p5, p5, p4
 
+    .line 296
     const/16 p9, 0x0
 
     move-object/from16 v0, v17
@@ -2170,8 +2348,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
+    .line 297
     if-eqz p3, :cond_15
 
+    .line 298
     invoke-interface/range {p0 .. p0}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
     move-result-wide p9
@@ -2192,15 +2372,17 @@
 
     if-lt v0, v1, :cond_14
 
+    .line 299
     add-int/lit8 p6, p6, 0x1
 
+    .line 300
     const-string p9, "DrmLicenseHttpManger"
 
     new-instance p10, Ljava/lang/StringBuilder;
 
     invoke-direct/range {p10 .. p10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "sending part "
+    const-string/jumbo v4, "sending part "
 
     move-object/from16 v0, p10
 
@@ -2224,6 +2406,7 @@
 
     invoke-static/range {p9 .. p10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 301
     invoke-virtual/range {v17 .. v17}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p9
@@ -2246,10 +2429,12 @@
 
     invoke-static/range {v7 .. v12}, Landroid/drm/mobile2/HttpManager;->sendData(Landroid/os/Handler;II[BLjava/lang/String;I)V
 
+    .line 304
     invoke-virtual/range {v17 .. v17}, Ljava/io/ByteArrayOutputStream;->reset()V
 
     goto :goto_b
 
+    .line 308
     :cond_15
     const-string p9, "DrmLicenseHttpManger"
 
@@ -2259,6 +2444,7 @@
 
     goto :goto_b
 
+    .line 311
     :cond_16
     const-string p5, "DrmLicenseHttpManger"
 
@@ -2295,6 +2481,7 @@
 
     invoke-static/range {p5 .. p6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 312
     const-string p5, "DrmLicenseHttpManger"
 
     new-instance p6, Ljava/lang/StringBuilder;
@@ -2326,6 +2513,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 313
     const-string p4, "DrmLicenseHttpManger"
 
     new-instance p5, Ljava/lang/StringBuilder;
@@ -2352,14 +2540,17 @@
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 314
     sget-object p4, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string p5, "NO NEED TO SEND DATA NOW DATA HAS BEEN SENT ALREADY"
 
     invoke-virtual/range {p4 .. p5}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 315
     if-nez p3, :cond_17
 
+    .line 317
     invoke-interface/range {p0 .. p0}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
     move-result-wide p4
@@ -2386,25 +2577,30 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_0
 
+    .line 325
     :goto_c
     const/16 p1, 0x0
 
+    .line 326
     .end local v17           #out:Ljava/io/ByteArrayOutputStream;
     .local p1, out:Ljava/io/ByteArrayOutputStream;
     :try_start_e
     invoke-static {}, Ljava/lang/System;->gc()V
 
+    .line 327
     invoke-virtual/range {p2 .. p2}, Ljava/io/InputStream;->close()V
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 
     goto/16 :goto_9
 
+    .line 335
     :catchall_1
     move-exception p2
 
     goto/16 :goto_8
 
+    .line 321
     .restart local v17       #out:Ljava/io/ByteArrayOutputStream;
     .local p1, session:I
     :cond_17
@@ -2415,6 +2611,7 @@
 
     invoke-static/range {p4 .. p5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 322
     const/4 v8, 0x0
 
     const/4 v10, 0x0
@@ -2431,6 +2628,7 @@
 
     goto :goto_c
 
+    .line 343
     .end local v9           #statusCode:I
     .end local v18           #status:Lorg/apache/http/StatusLine;
     .end local p0           #entity:Lorg/apache/http/HttpEntity;
@@ -2464,6 +2662,7 @@
     .local p2, out:Ljava/io/ByteArrayOutputStream;
     move/from16 p1, v16
 
+    .line 344
     .end local v16           #multiPart:Z
     .end local p5           #proxyHost:Ljava/lang/String;
     .end local p6           #proxyPort:I
@@ -2479,15 +2678,18 @@
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_7
 
+    .line 352
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p0           #e:Ljava/lang/IllegalStateException;
     if-eqz p0, :cond_19
 
+    .line 355
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p0, 0x1
 
     move-object/from16 v20, p3
@@ -2514,6 +2716,7 @@
     .local p2, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_2
 
+    .line 345
     .end local p0           #multiPart:Z
     .end local p1           #out:Ljava/io/ByteArrayOutputStream;
     .end local p2           #status:Lorg/apache/http/StatusLine;
@@ -2546,6 +2749,7 @@
     .local p2, out:Ljava/io/ByteArrayOutputStream;
     move/from16 p1, v16
 
+    .line 346
     .end local v16           #multiPart:Z
     .end local p5           #proxyHost:Ljava/lang/String;
     .end local p6           #proxyPort:I
@@ -2561,15 +2765,18 @@
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_7
 
+    .line 352
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p0           #e:Ljava/lang/IllegalArgumentException;
     if-eqz p0, :cond_19
 
+    .line 355
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p0, 0x1
 
     move-object/from16 v20, p3
@@ -2596,6 +2803,7 @@
     .local p2, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_2
 
+    .line 347
     .end local p0           #multiPart:Z
     .end local p1           #out:Ljava/io/ByteArrayOutputStream;
     .end local p2           #status:Lorg/apache/http/StatusLine;
@@ -2628,6 +2836,7 @@
     .local p2, out:Ljava/io/ByteArrayOutputStream;
     move/from16 p1, v16
 
+    .line 348
     .end local v16           #multiPart:Z
     .end local p5           #proxyHost:Ljava/lang/String;
     .end local p6           #proxyPort:I
@@ -2643,15 +2852,18 @@
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_7
 
+    .line 352
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p0           #e:Ljava/net/SocketException;
     if-eqz p0, :cond_19
 
+    .line 355
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p0, 0x1
 
     move-object/from16 v20, p3
@@ -2678,6 +2890,7 @@
     .local p2, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_2
 
+    .line 349
     .end local p0           #multiPart:Z
     .end local p1           #out:Ljava/io/ByteArrayOutputStream;
     .end local p2           #status:Lorg/apache/http/StatusLine;
@@ -2710,6 +2923,7 @@
     .local p2, out:Ljava/io/ByteArrayOutputStream;
     move/from16 p1, v16
 
+    .line 350
     .end local v16           #multiPart:Z
     .end local p5           #proxyHost:Ljava/lang/String;
     .end local p6           #proxyPort:I
@@ -2725,15 +2939,18 @@
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_7
 
+    .line 352
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     .end local p0           #e:Ljava/lang/Exception;
     if-eqz p0, :cond_19
 
+    .line 355
     sget-object p0, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p0, 0x1
 
     move-object/from16 v20, p3
@@ -2760,6 +2977,7 @@
     .local p2, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_2
 
+    .line 352
     .end local p0           #multiPart:Z
     .end local p1           #out:Ljava/io/ByteArrayOutputStream;
     .end local p2           #status:Lorg/apache/http/StatusLine;
@@ -2808,10 +3026,12 @@
 
     if-eqz p5, :cond_18
 
+    .line 355
     sget-object p4, Landroid/drm/mobile2/HttpManager;->client:Landroid/net/http/AndroidHttpClient;
 
     invoke-virtual/range {p4 .. p4}, Landroid/net/http/AndroidHttpClient;->close()V
 
+    .line 356
     const/16 p4, 0x1
 
     goto/16 :goto_2
@@ -2839,6 +3059,7 @@
     .local p2, status:Lorg/apache/http/StatusLine;
     move-object/from16 p3, p4
 
+    .line 359
     .end local p4           #strheader:Ljava/lang/StringBuilder;
     .local p3, strheader:Ljava/lang/StringBuilder;
     :goto_12
@@ -2846,6 +3067,7 @@
 
     goto/16 :goto_2
 
+    .line 352
     .end local p0           #multiPart:Z
     .end local p1           #out:Ljava/io/ByteArrayOutputStream;
     .end local p2           #status:Lorg/apache/http/StatusLine;
@@ -3009,6 +3231,7 @@
 
     goto :goto_11
 
+    .line 349
     .end local p0           #multiPart:Z
     .end local p1           #out:Ljava/io/ByteArrayOutputStream;
     .end local p2           #status:Lorg/apache/http/StatusLine;
@@ -3139,6 +3362,7 @@
     .local p3, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_10
 
+    .line 347
     .end local v9           #statusCode:I
     .end local p1           #multiPart:Z
     .end local p2           #out:Ljava/io/ByteArrayOutputStream;
@@ -3269,6 +3493,7 @@
     .local p3, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_f
 
+    .line 345
     .end local v9           #statusCode:I
     .end local p1           #multiPart:Z
     .end local p2           #out:Ljava/io/ByteArrayOutputStream;
@@ -3399,6 +3624,7 @@
     .local p3, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_e
 
+    .line 343
     .end local v9           #statusCode:I
     .end local p1           #multiPart:Z
     .end local p2           #out:Ljava/io/ByteArrayOutputStream;
@@ -3529,6 +3755,7 @@
     .local p3, status:Lorg/apache/http/StatusLine;
     goto/16 :goto_d
 
+    .line 341
     .end local p4           #strheader:Ljava/lang/StringBuilder;
     .restart local v4       #response:Lorg/apache/http/HttpResponse;
     .restart local v7       #target:Lorg/apache/http/HttpHost;
@@ -3658,6 +3885,7 @@
     .local p0, out:Ljava/io/ByteArrayOutputStream;
     goto/16 :goto_a
 
+    .line 137
     nop
 
     :pswitch_data_0
@@ -3677,49 +3905,64 @@
     .parameter "session"
 
     .prologue
+    .line 372
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
+    .line 373
     .local v1, msg:Landroid/os/Message;
     new-instance v0, Landroid/drm/mobile2/DrmHttpEvent;
 
     invoke-direct {v0}, Landroid/drm/mobile2/DrmHttpEvent;-><init>()V
 
+    .line 374
     .local v0, event:Landroid/drm/mobile2/DrmHttpEvent;
     invoke-virtual {v0, p3}, Landroid/drm/mobile2/DrmHttpEvent;->setBody([B)V
 
+    .line 375
     invoke-virtual {v0, p1}, Landroid/drm/mobile2/DrmHttpEvent;->setBodylen(I)V
 
+    .line 376
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/drm/mobile2/DrmHttpEvent;->setEvent(I)V
 
+    .line 377
     invoke-virtual {v0, p4}, Landroid/drm/mobile2/DrmHttpEvent;->setHeader(Ljava/lang/String;)V
 
+    .line 378
     invoke-virtual {v0, p5}, Landroid/drm/mobile2/DrmHttpEvent;->setSession(I)V
 
+    .line 379
     if-nez p4, :cond_0
 
+    .line 380
     const-string v2, "DrmLicenseHttpManger"
 
-    const-string v3, "sending null hedear"
+    const-string/jumbo v3, "sending null hedear"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 381
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/drm/mobile2/DrmHttpEvent;->setHeaderlen(I)V
 
+    .line 384
     :goto_0
     invoke-virtual {v0, p2}, Landroid/drm/mobile2/DrmHttpEvent;->setStatus(I)V
 
+    .line 385
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 386
     invoke-virtual {p0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 388
     return-void
 
+    .line 383
     :cond_0
     invoke-virtual {p4}, Ljava/lang/String;->length()I
 

@@ -48,6 +48,7 @@
 
     const/4 v2, 0x0
 
+    .line 1173
     new-instance v0, Landroid/graphics/Canvas$VertexMode;
 
     const-string v1, "TRIANGLES"
@@ -56,6 +57,7 @@
 
     sput-object v0, Landroid/graphics/Canvas$VertexMode;->TRIANGLES:Landroid/graphics/Canvas$VertexMode;
 
+    .line 1174
     new-instance v0, Landroid/graphics/Canvas$VertexMode;
 
     const-string v1, "TRIANGLE_STRIP"
@@ -64,6 +66,7 @@
 
     sput-object v0, Landroid/graphics/Canvas$VertexMode;->TRIANGLE_STRIP:Landroid/graphics/Canvas$VertexMode;
 
+    .line 1175
     new-instance v0, Landroid/graphics/Canvas$VertexMode;
 
     const-string v1, "TRIANGLE_FAN"
@@ -72,6 +75,7 @@
 
     sput-object v0, Landroid/graphics/Canvas$VertexMode;->TRIANGLE_FAN:Landroid/graphics/Canvas$VertexMode;
 
+    .line 1172
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/graphics/Canvas$VertexMode;
@@ -105,10 +109,13 @@
     .end annotation
 
     .prologue
+    .line 1177
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 1178
     iput p3, p0, Landroid/graphics/Canvas$VertexMode;->nativeInt:I
 
+    .line 1179
     return-void
 .end method
 
@@ -117,6 +124,7 @@
     .parameter "name"
 
     .prologue
+    .line 1172
     const-class v0, Landroid/graphics/Canvas$VertexMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -133,6 +141,7 @@
     .locals 1
 
     .prologue
+    .line 1172
     sget-object v0, Landroid/graphics/Canvas$VertexMode;->$VALUES:[Landroid/graphics/Canvas$VertexMode;
 
     invoke-virtual {v0}, [Landroid/graphics/Canvas$VertexMode;->clone()Ljava/lang/Object;

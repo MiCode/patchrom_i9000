@@ -38,7 +38,8 @@
     .locals 1
 
     .prologue
-    const-string v0, "yyyy-MM-dd HH:mm:ssZ"
+    .line 39
+    const-string/jumbo v0, "yyyy-MM-dd HH:mm:ssZ"
 
     sput-object v0, Landroid/net/http/SslCertificate;->ISO_8601_DATE_FORMAT:Ljava/lang/String;
 
@@ -55,6 +56,7 @@
     .end annotation
 
     .prologue
+    .line 118
     invoke-static {p3}, Landroid/net/http/SslCertificate;->parseDate(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v0
@@ -65,6 +67,7 @@
 
     invoke-direct {p0, p1, p2, v0, v1}, Landroid/net/http/SslCertificate;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 
+    .line 119
     return-void
 .end method
 
@@ -76,32 +79,38 @@
     .parameter "validNotAfter"
 
     .prologue
+    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 130
     new-instance v0, Landroid/net/http/SslCertificate$DName;
 
     invoke-direct {v0, p0, p1}, Landroid/net/http/SslCertificate$DName;-><init>(Landroid/net/http/SslCertificate;Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/net/http/SslCertificate;->mIssuedTo:Landroid/net/http/SslCertificate$DName;
 
+    .line 131
     new-instance v0, Landroid/net/http/SslCertificate$DName;
 
     invoke-direct {v0, p0, p2}, Landroid/net/http/SslCertificate$DName;-><init>(Landroid/net/http/SslCertificate;Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/net/http/SslCertificate;->mIssuedBy:Landroid/net/http/SslCertificate$DName;
 
+    .line 132
     invoke-static {p3}, Landroid/net/http/SslCertificate;->cloneDate(Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/http/SslCertificate;->mValidNotBefore:Ljava/util/Date;
 
+    .line 133
     invoke-static {p4}, Landroid/net/http/SslCertificate;->cloneDate(Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/http/SslCertificate;->mValidNotAfter:Ljava/util/Date;
 
+    .line 134
     return-void
 .end method
 
@@ -110,6 +119,7 @@
     .parameter "certificate"
 
     .prologue
+    .line 141
     invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
 
     move-result-object v0
@@ -136,6 +146,7 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Landroid/net/http/SslCertificate;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 
+    .line 145
     return-void
 .end method
 
@@ -144,10 +155,13 @@
     .parameter "date"
 
     .prologue
+    .line 233
     if-nez p0, :cond_0
 
+    .line 234
     const/4 v0, 0x0
 
+    .line 236
     .end local p0
     :goto_0
     return-object v0
@@ -171,10 +185,13 @@
     .parameter "date"
 
     .prologue
+    .line 223
     if-nez p0, :cond_0
 
+    .line 224
     const-string v0, ""
 
+    .line 226
     :goto_0
     return-object v0
 
@@ -197,6 +214,7 @@
     .parameter "string"
 
     .prologue
+    .line 213
     :try_start_0
     new-instance v1, Ljava/text/SimpleDateFormat;
 
@@ -210,14 +228,17 @@
 
     move-result-object v1
 
+    .line 215
     :goto_0
     return-object v1
 
+    .line 214
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 215
     .local v0, e:Ljava/text/ParseException;
     const/4 v1, 0x0
 
@@ -229,8 +250,10 @@
     .parameter "bundle"
 
     .prologue
+    .line 96
     if-eqz p0, :cond_0
 
+    .line 97
     new-instance v0, Landroid/net/http/SslCertificate;
 
     const-string v1, "issued-to"
@@ -245,13 +268,13 @@
 
     move-result-object v2
 
-    const-string v3, "valid-not-before"
+    const-string/jumbo v3, "valid-not-before"
 
     invoke-virtual {p0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    const-string v4, "valid-not-after"
+    const-string/jumbo v4, "valid-not-after"
 
     invoke-virtual {p0, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -259,6 +282,7 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/net/http/SslCertificate;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 104
     :goto_0
     return-object v0
 
@@ -273,16 +297,20 @@
     .parameter "certificate"
 
     .prologue
+    .line 75
     const/4 v0, 0x0
 
+    .line 77
     .local v0, bundle:Landroid/os/Bundle;
     if-eqz p0, :cond_0
 
+    .line 78
     new-instance v0, Landroid/os/Bundle;
 
     .end local v0           #bundle:Landroid/os/Bundle;
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 80
     .restart local v0       #bundle:Landroid/os/Bundle;
     const-string v1, "issued-to"
 
@@ -296,6 +324,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 81
     const-string v1, "issued-by"
 
     invoke-virtual {p0}, Landroid/net/http/SslCertificate;->getIssuedBy()Landroid/net/http/SslCertificate$DName;
@@ -308,7 +337,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "valid-not-before"
+    .line 83
+    const-string/jumbo v1, "valid-not-before"
 
     invoke-virtual {p0}, Landroid/net/http/SslCertificate;->getValidNotBefore()Ljava/lang/String;
 
@@ -316,7 +346,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "valid-not-after"
+    .line 84
+    const-string/jumbo v1, "valid-not-after"
 
     invoke-virtual {p0}, Landroid/net/http/SslCertificate;->getValidNotAfter()Ljava/lang/String;
 
@@ -324,6 +355,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 87
     :cond_0
     return-object v0
 .end method
@@ -334,6 +366,7 @@
     .locals 1
 
     .prologue
+    .line 196
     iget-object v0, p0, Landroid/net/http/SslCertificate;->mIssuedBy:Landroid/net/http/SslCertificate$DName;
 
     return-object v0
@@ -343,6 +376,7 @@
     .locals 1
 
     .prologue
+    .line 189
     iget-object v0, p0, Landroid/net/http/SslCertificate;->mIssuedTo:Landroid/net/http/SslCertificate$DName;
 
     return-object v0
@@ -354,6 +388,7 @@
     .end annotation
 
     .prologue
+    .line 182
     iget-object v0, p0, Landroid/net/http/SslCertificate;->mValidNotAfter:Ljava/util/Date;
 
     invoke-static {v0}, Landroid/net/http/SslCertificate;->formatDate(Ljava/util/Date;)Ljava/lang/String;
@@ -367,6 +402,7 @@
     .locals 1
 
     .prologue
+    .line 171
     iget-object v0, p0, Landroid/net/http/SslCertificate;->mValidNotAfter:Ljava/util/Date;
 
     invoke-static {v0}, Landroid/net/http/SslCertificate;->cloneDate(Ljava/util/Date;)Ljava/util/Date;
@@ -382,6 +418,7 @@
     .end annotation
 
     .prologue
+    .line 163
     iget-object v0, p0, Landroid/net/http/SslCertificate;->mValidNotBefore:Ljava/util/Date;
 
     invoke-static {v0}, Landroid/net/http/SslCertificate;->formatDate(Ljava/util/Date;)Ljava/lang/String;
@@ -395,6 +432,7 @@
     .locals 1
 
     .prologue
+    .line 152
     iget-object v0, p0, Landroid/net/http/SslCertificate;->mValidNotBefore:Ljava/util/Date;
 
     invoke-static {v0}, Landroid/net/http/SslCertificate;->cloneDate(Ljava/util/Date;)Ljava/util/Date;
@@ -410,6 +448,7 @@
     .prologue
     const-string v2, ";\n"
 
+    .line 203
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 290
     iput-object p1, p0, Landroid/os/Process$1;->val$processClass:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +41,12 @@
     .locals 1
 
     .prologue
+    .line 292
     iget-object v0, p0, Landroid/os/Process$1;->val$processClass:Ljava/lang/String;
 
     #calls: Landroid/os/Process;->invokeStaticMain(Ljava/lang/String;)V
     invoke-static {v0}, Landroid/os/Process;->access$000(Ljava/lang/String;)V
 
+    .line 293
     return-void
 .end method

@@ -36,21 +36,27 @@
     .parameter "LegacyState"
 
     .prologue
+    .line 190
     iput-object p1, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->this$1:Lcom/android/server/MountService$VolumeList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 191
     iput-object p2, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->path:Ljava/lang/String;
 
+    .line 192
     iput-object p3, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->LegacyState:Ljava/lang/String;
 
+    .line 193
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->pending:Z
 
+    .line 194
     const-string v0, "decrypt"
 
     iput-object v0, p0, Lcom/android/server/MountService$VolumeList$VolumeInfo;->CryptogramState:Ljava/lang/String;
 
+    .line 195
     return-void
 .end method

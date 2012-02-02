@@ -31,16 +31,20 @@
     .parameter "mapAPI"
 
     .prologue
+    .line 161
     iput-object p1, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->this$0:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     invoke-direct {p0}, Lcom/broadcom/bt/service/map/IMapCallback$Stub;-><init>()V
 
+    .line 159
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
+    .line 162
     iput-object p2, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
+    .line 163
     return-void
 .end method
 
@@ -53,18 +57,21 @@
     .parameter "deviceName"
 
     .prologue
+    .line 177
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMCEConnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 178
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCEConnected(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 179
     return-void
 .end method
 
@@ -74,18 +81,21 @@
     .parameter "data_source_id"
 
     .prologue
+    .line 183
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMCEDisconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 184
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
     invoke-interface {v0, p1, p2}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCEDisconnected(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 185
     return-void
 .end method
 
@@ -99,12 +109,14 @@
     .parameter "offset"
 
     .prologue
+    .line 204
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMCEGetFolderListing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 205
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
@@ -123,6 +135,7 @@
 
     invoke-interface/range {v0 .. v6}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCEGetFolderListing(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
 
+    .line 207
     return-void
 .end method
 
@@ -138,12 +151,14 @@
     .parameter "includeAttachment"
 
     .prologue
+    .line 234
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMCEGetMsg"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 235
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
@@ -166,6 +181,7 @@
 
     invoke-interface/range {v0 .. v8}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCEGetMsg(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;BB)V
 
+    .line 237
     return-void
 .end method
 
@@ -188,12 +204,14 @@
     .parameter "pri_status"
 
     .prologue
+    .line 216
     const-string v1, "MapCallback"
 
     const-string v2, "MapCallback::onMCEGetMsgListing"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 217
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
@@ -234,6 +252,7 @@
 
     invoke-interface/range {v1 .. v16}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCEGetMsgListing(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IIIBBLjava/lang/String;Ljava/lang/String;BLjava/lang/String;Ljava/lang/String;B)V
 
+    .line 220
     return-void
 .end method
 
@@ -250,12 +269,14 @@
     .parameter "msg_content_uri"
 
     .prologue
+    .line 226
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMCEPushMsg"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 227
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
@@ -280,6 +301,7 @@
 
     invoke-interface/range {v0 .. v9}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCEPushMsg(ILjava/lang/String;Ljava/lang/String;BBBLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 229
     return-void
 .end method
 
@@ -291,18 +313,21 @@
     .parameter "notification_mode"
 
     .prologue
+    .line 190
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMCERegisterForNotification"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 191
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCERegisterForNotification(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 193
     return-void
 .end method
 
@@ -317,12 +342,14 @@
     .parameter "status_value"
 
     .prologue
+    .line 243
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMCESetMessageStatus"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 244
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
@@ -343,6 +370,7 @@
 
     invoke-interface/range {v0 .. v7}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCESetMessageStatus(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;BB)V
 
+    .line 246
     return-void
 .end method
 
@@ -352,18 +380,21 @@
     .parameter "data_source_id"
 
     .prologue
+    .line 197
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMCEUpdateInbox"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 198
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
     invoke-interface {v0, p1, p2}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMCEUpdateInbox(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 199
     return-void
 .end method
 
@@ -374,18 +405,21 @@
     .parameter "state"
 
     .prologue
+    .line 171
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMSEStateChanged"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 172
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMSEStateChanged(Ljava/lang/String;Ljava/lang/String;B)V
 
+    .line 173
     return-void
 .end method
 
@@ -393,18 +427,21 @@
     .locals 2
 
     .prologue
+    .line 250
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMsgGetInProgress"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 251
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
     invoke-interface {v0}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMsgGetInProgress()V
 
+    .line 252
     return-void
 .end method
 
@@ -412,17 +449,20 @@
     .locals 2
 
     .prologue
+    .line 256
     const-string v0, "MapCallback"
 
     const-string v1, "MapCallback::onMsgPushInProgress"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 257
     iget-object v0, p0, Lcom/broadcom/bt/service/map/BluetoothMAP$MapCallback;->mmapAPI:Lcom/broadcom/bt/service/map/BluetoothMAP;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/BluetoothMAP;->mMapEventHandler:Lcom/broadcom/bt/service/map/IMapEventHandler;
 
     invoke-interface {v0}, Lcom/broadcom/bt/service/map/IMapEventHandler;->onMsgPushInProgress()V
 
+    .line 258
     return-void
 .end method

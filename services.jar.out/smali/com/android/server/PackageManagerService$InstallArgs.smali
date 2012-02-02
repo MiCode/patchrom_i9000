@@ -33,16 +33,22 @@
     .parameter "installerPackageName"
 
     .prologue
+    .line 5109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5110
     iput-object p1, p0, Lcom/android/server/PackageManagerService$InstallArgs;->packageURI:Landroid/net/Uri;
 
+    .line 5111
     iput p3, p0, Lcom/android/server/PackageManagerService$InstallArgs;->flags:I
 
+    .line 5112
     iput-object p2, p0, Lcom/android/server/PackageManagerService$InstallArgs;->observer:Landroid/content/pm/IPackageInstallObserver;
 
+    .line 5113
     iput-object p4, p0, Lcom/android/server/PackageManagerService$InstallArgs;->installerPackageName:Ljava/lang/String;
 
+    .line 5114
     return-void
 .end method
 

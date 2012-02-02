@@ -27,11 +27,15 @@
     .parameter "ta"
 
     .prologue
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 58
     iput-object p1, p0, Lcom/android/server/AttributeCache$Entry;->context:Landroid/content/Context;
 
+    .line 59
     iput-object p2, p0, Lcom/android/server/AttributeCache$Entry;->array:Landroid/content/res/TypedArray;
 
+    .line 60
     return-void
 .end method

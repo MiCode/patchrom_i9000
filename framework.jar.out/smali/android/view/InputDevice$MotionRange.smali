@@ -33,16 +33,22 @@
     .parameter "fuzz"
 
     .prologue
+    .line 346
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 347
     iput p1, p0, Landroid/view/InputDevice$MotionRange;->mMin:F
 
+    .line 348
     iput p2, p0, Landroid/view/InputDevice$MotionRange;->mMax:F
 
+    .line 349
     iput p3, p0, Landroid/view/InputDevice$MotionRange;->mFlat:F
 
+    .line 350
     iput p4, p0, Landroid/view/InputDevice$MotionRange;->mFuzz:F
 
+    .line 351
     return-void
 .end method
 
@@ -55,6 +61,7 @@
     .parameter "x4"
 
     .prologue
+    .line 340
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/InputDevice$MotionRange;-><init>(FFFF)V
 
     return-void
@@ -65,6 +72,7 @@
     .parameter "x0"
 
     .prologue
+    .line 340
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mMin:F
 
     return v0
@@ -75,6 +83,7 @@
     .parameter "x0"
 
     .prologue
+    .line 340
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mMax:F
 
     return v0
@@ -85,6 +94,7 @@
     .parameter "x0"
 
     .prologue
+    .line 340
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mFlat:F
 
     return v0
@@ -95,6 +105,7 @@
     .parameter "x0"
 
     .prologue
+    .line 340
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mFuzz:F
 
     return v0
@@ -106,6 +117,7 @@
     .locals 1
 
     .prologue
+    .line 384
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mFlat:F
 
     return v0
@@ -115,6 +127,7 @@
     .locals 1
 
     .prologue
+    .line 394
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mFuzz:F
 
     return v0
@@ -124,6 +137,7 @@
     .locals 1
 
     .prologue
+    .line 366
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mMax:F
 
     return v0
@@ -133,6 +147,7 @@
     .locals 1
 
     .prologue
+    .line 358
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mMin:F
 
     return v0
@@ -142,6 +157,7 @@
     .locals 2
 
     .prologue
+    .line 374
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mMax:F
 
     iget v1, p0, Landroid/view/InputDevice$MotionRange;->mMin:F

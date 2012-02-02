@@ -35,10 +35,12 @@
     .parameter
 
     .prologue
+    .line 113
     iput-object p1, p0, Landroid/os/storage/StorageManager$ObbActionListener;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {p0}, Landroid/os/storage/IObbActionListener$Stub;-><init>()V
 
+    .line 114
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -54,6 +56,7 @@
     .parameter "x1"
 
     .prologue
+    .line 113
     invoke-direct {p0, p1}, Landroid/os/storage/StorageManager$ObbActionListener;-><init>(Landroid/os/storage/StorageManager;)V
 
     return-void
@@ -66,17 +69,20 @@
     .parameter "listener"
 
     .prologue
+    .line 132
     new-instance v0, Landroid/os/storage/StorageManager$ObbListenerDelegate;
 
     iget-object v1, p0, Landroid/os/storage/StorageManager$ObbActionListener;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {v0, v1, p1}, Landroid/os/storage/StorageManager$ObbListenerDelegate;-><init>(Landroid/os/storage/StorageManager;Landroid/os/storage/OnObbStateChangeListener;)V
 
+    .line 134
     .local v0, delegate:Landroid/os/storage/StorageManager$ObbListenerDelegate;
     iget-object v1, p0, Landroid/os/storage/StorageManager$ObbActionListener;->mListeners:Landroid/util/SparseArray;
 
     monitor-enter v1
 
+    .line 135
     :try_start_0
     iget-object v2, p0, Landroid/os/storage/StorageManager$ObbActionListener;->mListeners:Landroid/util/SparseArray;
 
@@ -87,10 +93,12 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 136
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 138
     #getter for: Landroid/os/storage/StorageManager$ObbListenerDelegate;->nonce:I
     invoke-static {v0}, Landroid/os/storage/StorageManager$ObbListenerDelegate;->access$200(Landroid/os/storage/StorageManager$ObbListenerDelegate;)I
 
@@ -98,6 +106,7 @@
 
     return v1
 
+    .line 136
     :catchall_0
     move-exception v2
 
@@ -121,10 +130,12 @@
     .end annotation
 
     .prologue
+    .line 119
     iget-object v1, p0, Landroid/os/storage/StorageManager$ObbActionListener;->mListeners:Landroid/util/SparseArray;
 
     monitor-enter v1
 
+    .line 120
     :try_start_0
     iget-object v2, p0, Landroid/os/storage/StorageManager$ObbActionListener;->mListeners:Landroid/util/SparseArray;
 
@@ -134,25 +145,32 @@
 
     check-cast v0, Landroid/os/storage/StorageManager$ObbListenerDelegate;
 
+    .line 121
     .local v0, delegate:Landroid/os/storage/StorageManager$ObbListenerDelegate;
     if-eqz v0, :cond_0
 
+    .line 122
     iget-object v2, p0, Landroid/os/storage/StorageManager$ObbActionListener;->mListeners:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p2}, Landroid/util/SparseArray;->remove(I)V
 
+    .line 124
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 126
     if-eqz v0, :cond_1
 
+    .line 127
     invoke-virtual {v0, p1, p3}, Landroid/os/storage/StorageManager$ObbListenerDelegate;->sendObbStateChanged(Ljava/lang/String;I)V
 
+    .line 129
     :cond_1
     return-void
 
+    .line 124
     .end local v0           #delegate:Landroid/os/storage/StorageManager$ObbListenerDelegate;
     :catchall_0
     move-exception v2

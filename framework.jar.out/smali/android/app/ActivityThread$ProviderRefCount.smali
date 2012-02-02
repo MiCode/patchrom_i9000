@@ -27,11 +27,14 @@
     .parameter "pCount"
 
     .prologue
+    .line 2391
     iput-object p1, p0, Landroid/app/ActivityThread$ProviderRefCount;->this$0:Landroid/app/ActivityThread;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2392
     iput p2, p0, Landroid/app/ActivityThread$ProviderRefCount;->count:I
 
+    .line 2393
     return-void
 .end method

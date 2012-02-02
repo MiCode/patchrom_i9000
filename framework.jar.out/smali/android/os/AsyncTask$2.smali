@@ -31,6 +31,7 @@
     .parameter
 
     .prologue
+    .line 182
     .local p0, this:Landroid/os/AsyncTask$2;,"Landroid/os/AsyncTask.2;"
     iput-object p1, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
@@ -58,11 +59,13 @@
     .end annotation
 
     .prologue
+    .line 184
     .local p0, this:Landroid/os/AsyncTask$2;,"Landroid/os/AsyncTask.2;"
     const/16 v0, 0xa
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
+    .line 185
     iget-object v0, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
     iget-object v1, p0, Landroid/os/AsyncTask$WorkerRunnable;->mParams:[Ljava/lang/Object;

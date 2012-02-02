@@ -16,12 +16,16 @@
     .parameter "sweepAngle"
 
     .prologue
+    .line 41
     invoke-direct {p0}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
 
+    .line 42
     iput p1, p0, Landroid/graphics/drawable/shapes/ArcShape;->mStart:F
 
+    .line 43
     iput p2, p0, Landroid/graphics/drawable/shapes/ArcShape;->mSweep:F
 
+    .line 44
     return-void
 .end method
 
@@ -33,6 +37,7 @@
     .parameter "paint"
 
     .prologue
+    .line 48
     invoke-virtual {p0}, Landroid/graphics/drawable/shapes/ArcShape;->rect()Landroid/graphics/RectF;
 
     move-result-object v1
@@ -49,5 +54,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
+    .line 49
     return-void
 .end method

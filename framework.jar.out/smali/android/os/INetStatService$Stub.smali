@@ -48,12 +48,15 @@
     .locals 1
 
     .prologue
+    .line 21
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 22
     const-string v0, "android.os.INetStatService"
 
     invoke-virtual {p0, p0, v0}, Landroid/os/INetStatService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 23
     return-void
 .end method
 
@@ -62,13 +65,17 @@
     .parameter "obj"
 
     .prologue
+    .line 30
     if-nez p0, :cond_0
 
+    .line 31
     const/4 v1, 0x0
 
+    .line 37
     :goto_0
     return-object v1
 
+    .line 33
     :cond_0
     const-string v1, "android.os.INetStatService"
 
@@ -76,6 +83,7 @@
 
     move-result-object v0
 
+    .line 34
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -83,6 +91,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 35
     check-cast v0, Landroid/os/INetStatService;
 
     .end local v0           #iin:Landroid/os/IInterface;
@@ -90,6 +99,7 @@
 
     goto :goto_0
 
+    .line 37
     .restart local v0       #iin:Landroid/os/IInterface;
     :cond_1
     new-instance v1, Landroid/os/INetStatService$Stub$Proxy;
@@ -105,6 +115,7 @@
     .locals 0
 
     .prologue
+    .line 41
     return-object p0
 .end method
 
@@ -125,8 +136,10 @@
 
     const-string v4, "android.os.INetStatService"
 
+    .line 45
     sparse-switch p1, :sswitch_data_0
 
+    .line 117
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -134,6 +147,7 @@
     :goto_0
     return v2
 
+    .line 49
     :sswitch_0
     const-string v2, "android.os.INetStatService"
 
@@ -141,159 +155,201 @@
 
     move v2, v3
 
+    .line 50
     goto :goto_0
 
+    .line 54
     :sswitch_1
     const-string v2, "android.os.INetStatService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 55
     invoke-virtual {p0}, Landroid/os/INetStatService$Stub;->getMobileTxPackets()J
 
     move-result-wide v0
 
+    .line 56
     .local v0, _result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 57
     invoke-virtual {p3, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     move v2, v3
 
+    .line 58
     goto :goto_0
 
+    .line 62
     .end local v0           #_result:J
     :sswitch_2
     const-string v2, "android.os.INetStatService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 63
     invoke-virtual {p0}, Landroid/os/INetStatService$Stub;->getMobileRxPackets()J
 
     move-result-wide v0
 
+    .line 64
     .restart local v0       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 65
     invoke-virtual {p3, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     move v2, v3
 
+    .line 66
     goto :goto_0
 
+    .line 70
     .end local v0           #_result:J
     :sswitch_3
     const-string v2, "android.os.INetStatService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 71
     invoke-virtual {p0}, Landroid/os/INetStatService$Stub;->getMobileTxBytes()J
 
     move-result-wide v0
 
+    .line 72
     .restart local v0       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 73
     invoke-virtual {p3, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     move v2, v3
 
+    .line 74
     goto :goto_0
 
+    .line 78
     .end local v0           #_result:J
     :sswitch_4
     const-string v2, "android.os.INetStatService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 79
     invoke-virtual {p0}, Landroid/os/INetStatService$Stub;->getMobileRxBytes()J
 
     move-result-wide v0
 
+    .line 80
     .restart local v0       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 81
     invoke-virtual {p3, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     move v2, v3
 
+    .line 82
     goto :goto_0
 
+    .line 86
     .end local v0           #_result:J
     :sswitch_5
     const-string v2, "android.os.INetStatService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 87
     invoke-virtual {p0}, Landroid/os/INetStatService$Stub;->getTotalTxPackets()J
 
     move-result-wide v0
 
+    .line 88
     .restart local v0       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 89
     invoke-virtual {p3, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     move v2, v3
 
+    .line 90
     goto :goto_0
 
+    .line 94
     .end local v0           #_result:J
     :sswitch_6
     const-string v2, "android.os.INetStatService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 95
     invoke-virtual {p0}, Landroid/os/INetStatService$Stub;->getTotalRxPackets()J
 
     move-result-wide v0
 
+    .line 96
     .restart local v0       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 97
     invoke-virtual {p3, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     move v2, v3
 
+    .line 98
     goto :goto_0
 
+    .line 102
     .end local v0           #_result:J
     :sswitch_7
     const-string v2, "android.os.INetStatService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 103
     invoke-virtual {p0}, Landroid/os/INetStatService$Stub;->getTotalTxBytes()J
 
     move-result-wide v0
 
+    .line 104
     .restart local v0       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 105
     invoke-virtual {p3, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     move v2, v3
 
+    .line 106
     goto :goto_0
 
+    .line 110
     .end local v0           #_result:J
     :sswitch_8
     const-string v2, "android.os.INetStatService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 111
     invoke-virtual {p0}, Landroid/os/INetStatService$Stub;->getTotalRxBytes()J
 
     move-result-wide v0
 
+    .line 112
     .restart local v0       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 113
     invoke-virtual {p3, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     move v2, v3
 
+    .line 114
     goto/16 :goto_0
 
+    .line 45
     nop
 
     :sswitch_data_0

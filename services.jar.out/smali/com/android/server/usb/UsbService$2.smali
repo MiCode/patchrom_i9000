@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 193
     iput-object p1, p0, Lcom/android/server/usb/UsbService$2;->this$0:Lcom/android/server/usb/UsbService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,6 +40,7 @@
     .parameter "intent"
 
     .prologue
+    .line 196
     iget-object v0, p0, Lcom/android/server/usb/UsbService$2;->this$0:Lcom/android/server/usb/UsbService;
 
     #getter for: Lcom/android/server/usb/UsbService;->mLock:Ljava/lang/Object;
@@ -48,6 +50,7 @@
 
     monitor-enter v0
 
+    .line 197
     :try_start_0
     iget-object v1, p0, Lcom/android/server/usb/UsbService$2;->this$0:Lcom/android/server/usb/UsbService;
 
@@ -58,6 +61,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 198
     iget-object v1, p0, Lcom/android/server/usb/UsbService$2;->this$0:Lcom/android/server/usb/UsbService;
 
     #getter for: Lcom/android/server/usb/UsbService;->mDeviceManager:Lcom/android/server/usb/UsbDeviceSettingsManager;
@@ -74,11 +78,14 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/usb/UsbDeviceSettingsManager;->accessoryAttached(Landroid/hardware/usb/UsbAccessory;)V
 
+    .line 200
     :cond_0
     monitor-exit v0
 
+    .line 201
     return-void
 
+    .line 200
     :catchall_0
     move-exception v1
 

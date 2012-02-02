@@ -24,8 +24,10 @@
     .locals 0
 
     .prologue
+    .line 51
     invoke-static {}, Lcom/broadcom/bt/service/map/MapService;->Native_InitMapService()V
 
+    .line 52
     return-void
 .end method
 
@@ -34,20 +36,25 @@
     .parameter "context"
 
     .prologue
+    .line 67
     invoke-direct {p0}, Lcom/broadcom/bt/service/map/IMapService$Stub;-><init>()V
 
+    .line 45
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/broadcom/bt/service/map/MapService;->mIsFinished:Z
 
+    .line 46
     new-instance v1, Ljava/util/Vector;
 
     invoke-direct {v1}, Ljava/util/Vector;-><init>()V
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
+    .line 68
     iput-object p1, p0, Lcom/broadcom/bt/service/map/MapService;->mContext:Landroid/content/Context;
 
+    .line 72
     const-string v1, "bluetooth_map"
 
     invoke-static {v1}, Lcom/broadcom/bt/service/framework/BluetoothServiceManager;->getService(Ljava/lang/String;)Lcom/broadcom/bt/service/framework/IBtService;
@@ -56,9 +63,11 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapEventLoop;
 
+    .line 74
     .local v0, mSvc:Lcom/broadcom/bt/service/map/MapEventLoop;
     invoke-virtual {v0, p0}, Lcom/broadcom/bt/service/map/MapEventLoop;->setMapService(Lcom/broadcom/bt/service/map/MapService;)V
 
+    .line 75
     return-void
 .end method
 
@@ -107,12 +116,14 @@
     .parameter "datasourceName"
 
     .prologue
+    .line 498
     const-string v2, "MapService"
 
     const-string v3, "disableProvider"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 501
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapService;->mContext:Landroid/content/Context;
 
     const-string v3, "DisabledMapProviders"
@@ -123,11 +134,13 @@
 
     move-result-object v1
 
+    .line 502
     .local v1, sp:Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
+    .line 503
     .local v0, se:Landroid/content/SharedPreferences$Editor;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -153,10 +166,13 @@
 
     invoke-interface {v0, v2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 504
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
+    .line 506
     invoke-virtual {p0, p1, p2}, Lcom/broadcom/bt/service/map/MapService;->stopMSEInstance(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 507
     return-void
 .end method
 
@@ -167,12 +183,14 @@
     .parameter "datasourceName"
 
     .prologue
+    .line 481
     const-string v3, "MapService"
 
     const-string v4, "enableProvider"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 483
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapService;->mContext:Landroid/content/Context;
 
     const-string v4, "DisabledMapProviders"
@@ -183,11 +201,13 @@
 
     move-result-object v2
 
+    .line 484
     .local v2, sp:Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
+    .line 485
     .local v1, se:Landroid/content/SharedPreferences$Editor;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -213,19 +233,23 @@
 
     invoke-interface {v1, v3}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 486
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
+    .line 491
     new-instance v0, Landroid/content/Intent;
 
     const-string v3, "com.broadcom.bt.service.map.DS_DISCOVER"
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 492
     .local v0, i:Landroid/content/Intent;
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 494
     return-void
 .end method
 
@@ -235,12 +259,14 @@
     .prologue
     const-string v10, ":"
 
+    .line 457
     const-string v7, "MapService"
 
     const-string v8, "enumRegisteredProviders"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 459
     iget-object v7, p0, Lcom/broadcom/bt/service/map/MapService;->mContext:Landroid/content/Context;
 
     const-string v8, "DisabledMapProviders"
@@ -251,11 +277,13 @@
 
     move-result-object v6
 
+    .line 460
     .local v6, sp:Landroid/content/SharedPreferences;
     invoke-interface {v6}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
     move-result-object v0
 
+    .line 461
     .local v0, allProps:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;*>;"
     invoke-interface {v0}, Ljava/util/Map;->size()I
 
@@ -271,9 +299,11 @@
 
     new-array v5, v7, [Ljava/lang/String;
 
+    .line 462
     .local v5, ret:[Ljava/lang/String;
     const/4 v3, 0x0
 
+    .line 464
     .local v3, i:I
     :goto_0
     iget-object v7, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
@@ -284,6 +314,7 @@
 
     if-ge v3, v7, :cond_0
 
+    .line 466
     iget-object v7, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v7, v3}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -292,6 +323,7 @@
 
     check-cast v1, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 467
     .local v1, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     new-instance v7, Ljava/lang/String;
 
@@ -343,10 +375,13 @@
 
     aput-object v7, v5, v3
 
+    .line 468
     add-int/lit8 v3, v3, 0x1
 
+    .line 469
     goto :goto_0
 
+    .line 471
     .end local v1           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -372,6 +407,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 473
     .local v2, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     new-instance v7, Ljava/lang/String;
 
@@ -417,10 +453,12 @@
 
     aput-object v7, v5, v3
 
+    .line 474
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
+    .line 476
     .end local v2           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     :cond_1
     return-object v5
@@ -435,10 +473,13 @@
     .end annotation
 
     .prologue
+    .line 116
     invoke-virtual {p0}, Lcom/broadcom/bt/service/map/MapService;->finish()V
 
+    .line 117
     invoke-super {p0}, Lcom/broadcom/bt/service/map/IMapService$Stub;->finalize()V
 
+    .line 118
     return-void
 .end method
 
@@ -446,6 +487,7 @@
     .locals 2
 
     .prologue
+    .line 83
     monitor-enter p0
 
     :try_start_0
@@ -455,23 +497,28 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 84
     iget-boolean v0, p0, Lcom/broadcom/bt/service/map/MapService;->mIsFinished:Z
 
     if-nez v0, :cond_0
 
+    .line 85
     invoke-virtual {p0}, Lcom/broadcom/bt/service/map/MapService;->unregisterallProviders()V
 
+    .line 86
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/broadcom/bt/service/map/MapService;->mIsFinished:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 89
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 83
     :catchall_0
     move-exception v0
 
@@ -490,21 +537,26 @@
     .parameter "folder_info"
 
     .prologue
+    .line 263
     const-string v2, "MapService"
 
     const-string v3, "FolderListingResponse"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 269
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v11
 
+    .line 270
     .local v11, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v11, :cond_2
 
+    .line 271
     if-nez p5, :cond_1
 
+    .line 273
     const/4 v10, 0x0
 
     .local v10, i:I
@@ -517,6 +569,7 @@
 
     if-ge v10, v2, :cond_0
 
+    .line 274
     const-string v2, "MapService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -559,10 +612,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 273
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
+    .line 277
     :cond_0
     move-object/from16 v0, p6
 
@@ -570,6 +625,7 @@
 
     iput-object v0, v1, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mFolderInfo:[Lcom/broadcom/bt/service/map/FolderInfo;
 
+    .line 280
     const/4 v5, 0x1
 
     const/4 v2, 0x0
@@ -610,10 +666,12 @@
 
     invoke-virtual/range {v2 .. v9}, Lcom/broadcom/bt/service/map/MapService;->sendFolderListingInfo(IBIILjava/lang/String;Ljava/lang/String;B)V
 
+    .line 291
     .end local v10           #i:I
     :goto_1
     return-void
 
+    .line 285
     :cond_1
     const/4 v5, 0x0
 
@@ -635,6 +693,7 @@
 
     goto :goto_1
 
+    .line 288
     :cond_2
     const-string v2, "MapService"
 
@@ -666,8 +725,10 @@
     .parameter "mse_instance_id"
 
     .prologue
+    .line 621
     const/4 v0, 0x0
 
+    .line 622
     .local v0, callback:Lcom/broadcom/bt/service/map/IMapCallback;
     const/4 v2, 0x0
 
@@ -681,6 +742,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 624
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v3, v2}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -689,17 +751,21 @@
 
     check-cast v1, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 625
     .local v1, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     iget v3, v1, Lcom/broadcom/bt/service/map/MapProviderContext;->mMseInstanceId:I
 
     if-ne v3, p1, :cond_1
 
+    .line 626
     iget-object v0, v1, Lcom/broadcom/bt/service/map/MapProviderContext;->mCallback:Lcom/broadcom/bt/service/map/IMapCallback;
 
+    .line 630
     .end local v1           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     return-object v0
 
+    .line 622
     .restart local v1       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -712,6 +778,7 @@
     .parameter "mse_session_id"
 
     .prologue
+    .line 609
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -724,6 +791,7 @@
 
     if-ge v1, v3, :cond_1
 
+    .line 610
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v3, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -732,21 +800,25 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 611
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/map/MapProviderContext;->getSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v2
 
+    .line 612
     .local v2, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v2, :cond_0
 
     move-object v3, v2
 
+    .line 616
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .end local v2           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :goto_1
     return-object v3
 
+    .line 609
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .restart local v2       #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_0
@@ -754,6 +826,7 @@
 
     goto :goto_0
 
+    .line 616
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .end local v2           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_1
@@ -767,6 +840,7 @@
     .parameter "mse_instance_id"
 
     .prologue
+    .line 584
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -779,6 +853,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 586
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -787,6 +862,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 587
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     iget v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mMseInstanceId:I
 
@@ -794,16 +870,19 @@
 
     move-object v2, v0
 
+    .line 591
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :goto_1
     return-object v2
 
+    .line 584
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 591
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_1
     const/4 v2, 0x0
@@ -817,6 +896,7 @@
     .parameter "mse_type"
 
     .prologue
+    .line 572
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -829,6 +909,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 574
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -837,6 +918,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 575
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     invoke-virtual {v0, p1, p2}, Lcom/broadcom/bt/service/map/MapProviderContext;->isEqual(Ljava/lang/String;B)Z
 
@@ -846,16 +928,19 @@
 
     move-object v2, v0
 
+    .line 579
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :goto_1
     return-object v2
 
+    .line 572
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 579
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_1
     const/4 v2, 0x0
@@ -869,6 +954,7 @@
     .parameter "data_source_id"
 
     .prologue
+    .line 546
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -881,6 +967,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 548
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -889,6 +976,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 549
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     invoke-virtual {v0, p1, p2}, Lcom/broadcom/bt/service/map/MapProviderContext;->isEqual(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -898,16 +986,19 @@
 
     move-object v2, v0
 
+    .line 553
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :goto_1
     return-object v2
 
+    .line 546
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 553
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_1
     const/4 v2, 0x0
@@ -921,6 +1012,7 @@
     .parameter "mse_type"
 
     .prologue
+    .line 559
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -933,6 +1025,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 561
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -941,6 +1034,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 562
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     iget-byte v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderType:B
 
@@ -956,16 +1050,19 @@
 
     move-object v2, v0
 
+    .line 567
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :goto_1
     return-object v2
 
+    .line 559
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 567
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_1
     const/4 v2, 0x0
@@ -978,6 +1075,7 @@
     .parameter "mse_session_id"
 
     .prologue
+    .line 596
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -990,6 +1088,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 598
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -998,6 +1097,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 599
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/map/MapProviderContext;->getSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
@@ -1007,16 +1107,19 @@
 
     move-object v2, v0
 
+    .line 603
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :goto_1
     return-object v2
 
+    .line 596
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 603
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_1
     const/4 v2, 0x0
@@ -1031,6 +1134,7 @@
     .parameter "status"
 
     .prologue
+    .line 396
     const-string v5, ""
 
     move-object v0, p0
@@ -1043,6 +1147,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSEGetMsgResponse(IJBLjava/lang/String;)V
 
+    .line 399
     return-void
 .end method
 
@@ -1056,14 +1161,17 @@
     .parameter "msg_file_path"
 
     .prologue
+    .line 380
     const-string v0, "MapService"
 
     const-string v1, "GetMsgResponse"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 384
     if-nez p5, :cond_0
 
+    .line 385
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v0
@@ -1084,9 +1192,11 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSEGetMsgResponse(IJBLjava/lang/String;)V
 
+    .line 392
     :goto_0
     return-void
 
+    .line 388
     :cond_0
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
@@ -1115,10 +1225,12 @@
     .locals 1
 
     .prologue
+    .line 79
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/broadcom/bt/service/map/MapService;->mIsFinished:Z
 
+    .line 80
     return-void
 .end method
 
@@ -1135,12 +1247,14 @@
 
     const-string v5, ":"
 
+    .line 638
     const-string v2, "MapService"
 
     const-string v2, "isProviderDisabled"
 
     invoke-static {v6, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 639
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapService;->mContext:Landroid/content/Context;
 
     const-string v3, "DisabledMapProviders"
@@ -1149,6 +1263,7 @@
 
     move-result-object v1
 
+    .line 640
     .local v1, sp:Landroid/content/SharedPreferences;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1178,6 +1293,7 @@
 
     move-result-object v0
 
+    .line 641
     .local v0, sProp:Ljava/lang/String;
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1185,6 +1301,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 643
     const-string v2, "MapService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1223,8 +1340,10 @@
 
     invoke-static {v6, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 644
     const/4 v2, 0x1
 
+    .line 646
     :goto_0
     return v2
 
@@ -1241,8 +1360,10 @@
     .parameter "datasource_id"
 
     .prologue
+    .line 531
     const/4 v2, 0x0
 
+    .line 532
     .local v2, ret:Z
     const-string v3, "MapService"
 
@@ -1250,6 +1371,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 533
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1262,6 +1384,7 @@
 
     if-ge v1, v3, :cond_0
 
+    .line 534
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v3, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -1270,6 +1393,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 535
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     invoke-virtual {v0, p1, p2, p3}, Lcom/broadcom/bt/service/map/MapProviderContext;->isEqual(BLjava/lang/String;Ljava/lang/String;)Z
 
@@ -1277,12 +1401,15 @@
 
     if-eqz v3, :cond_1
 
+    .line 536
     const/4 v2, 0x1
 
+    .line 540
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     return v2
 
+    .line 533
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -1296,8 +1423,10 @@
     .parameter "datasource_id"
 
     .prologue
+    .line 517
     const/4 v2, 0x0
 
+    .line 519
     .local v2, ret:Z
     const/4 v1, 0x0
 
@@ -1311,6 +1440,7 @@
 
     if-ge v1, v3, :cond_0
 
+    .line 520
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v3, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -1319,6 +1449,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 521
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     invoke-virtual {v0, p1, p2}, Lcom/broadcom/bt/service/map/MapProviderContext;->isEqual(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1326,12 +1457,15 @@
 
     if-eqz v3, :cond_1
 
+    .line 522
     const/4 v2, 0x1
 
+    .line 526
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     return v2
 
+    .line 519
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -1365,12 +1499,14 @@
     .parameter "folder_path"
 
     .prologue
+    .line 340
     const-string v3, "MapService"
 
     const-string v4, "MsgEntryResponse"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 346
     invoke-virtual/range {p0 .. p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v3
@@ -1431,6 +1567,7 @@
 
     invoke-direct/range {v3 .. v25}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSEMsgEntryResponse(IBIIIIBBBBBJBBLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 352
     return-void
 .end method
 
@@ -1448,26 +1585,33 @@
     .prologue
     const-string v2, "MapService"
 
+    .line 301
     const-string v0, "MapService"
 
     const-string v0, "MsgListingResponse"
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 308
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v6
 
+    .line 309
     .local v6, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v6, :cond_1
 
+    .line 313
     const/4 v3, 0x0
 
+    .line 314
     .local v3, listSize:I
     if-nez p5, :cond_0
 
+    .line 315
     iput-object p8, v6, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mMessageInfo:[Lcom/broadcom/bt/service/map/MessageInfo;
 
+    .line 316
     array-length v3, p8
 
     :cond_0
@@ -1481,12 +1625,15 @@
 
     move v5, p7
 
+    .line 318
     invoke-direct/range {v0 .. v5}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSEMsgListInfoResponse(IBILjava/lang/String;B)V
 
+    .line 324
     .end local v3           #listSize:I
     :goto_0
     return-void
 
+    .line 322
     :cond_1
     const-string v0, "MapService"
 
@@ -1523,23 +1670,28 @@
     .parameter "msg_folder"
 
     .prologue
+    .line 360
     const-string v2, "MapService"
 
     const-string v3, "MsgPushResponse"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 365
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v0
 
+    .line 366
     .local v0, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v0, :cond_0
 
+    .line 368
     invoke-virtual {v0, p6}, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->getVirtualFolder(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 369
     .local v1, s_virtual_folder:Ljava/lang/String;
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mCtx:Lcom/broadcom/bt/service/map/MapProviderContext;
 
@@ -1549,6 +1701,7 @@
 
     invoke-direct {p0, p1, v2, v3, p5}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSEPushResponse(IJB)V
 
+    .line 372
     .end local v1           #s_virtual_folder:Ljava/lang/String;
     :cond_0
     return-void
@@ -1565,21 +1718,26 @@
     .parameter "msg_type"
 
     .prologue
+    .line 223
     const-string v3, "MapService"
 
     const-string v4, "NotifyClient"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 225
     invoke-virtual/range {p0 .. p2}, Lcom/broadcom/bt/service/map/MapService;->getContext(Ljava/lang/String;Ljava/lang/String;)Lcom/broadcom/bt/service/map/MapProviderContext;
 
     move-result-object v12
 
+    .line 226
     .local v12, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     if-eqz v12, :cond_2
 
+    .line 227
     const/4 v11, 0x0
 
+    .line 228
     .local v11, clientSession:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     iget-object v3, v12, Lcom/broadcom/bt/service/map/MapProviderContext;->mSessions:Ljava/util/Vector;
 
@@ -1589,6 +1747,7 @@
 
     if-lez v3, :cond_1
 
+    .line 229
     iget-object v3, v12, Lcom/broadcom/bt/service/map/MapProviderContext;->mSessions:Ljava/util/Vector;
 
     const/4 v4, 0x0
@@ -1600,6 +1759,7 @@
     .end local v11           #clientSession:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     check-cast v11, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
+    .line 230
     .restart local v11       #clientSession:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     move-object v0, v11
 
@@ -1609,8 +1769,9 @@
 
     move-result-object v13
 
+    .line 232
     .local v13, msg_virtual_folder:Ljava/lang/String;
-    const-string v3, "root"
+    const-string/jumbo v3, "root"
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1622,6 +1783,7 @@
 
     move-result-object v8
 
+    .line 233
     .local v8, msg_virtual_folder_stripped:Ljava/lang/String;
     move-object v0, v11
 
@@ -1631,8 +1793,9 @@
 
     move-result-object v9
 
+    .line 234
     .local v9, msg_old_virtual_folder:Ljava/lang/String;
-    const-string v3, "root/"
+    const-string/jumbo v3, "root/"
 
     invoke-virtual {v9, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1640,7 +1803,8 @@
 
     if-eqz v3, :cond_0
 
-    const-string v3, "root"
+    .line 235
+    const-string/jumbo v3, "root"
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1652,6 +1816,7 @@
 
     move-result-object v9
 
+    .line 237
     :cond_0
     iget v4, v12, Lcom/broadcom/bt/service/map/MapProviderContext;->mMseInstanceId:I
 
@@ -1673,6 +1838,7 @@
 
     invoke-direct/range {v3 .. v10}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSENotifyClients(IBJLjava/lang/String;Ljava/lang/String;B)V
 
+    .line 249
     .end local v8           #msg_virtual_folder_stripped:Ljava/lang/String;
     .end local v9           #msg_old_virtual_folder:Ljava/lang/String;
     .end local v11           #clientSession:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
@@ -1680,6 +1846,7 @@
     :goto_0
     return-void
 
+    .line 241
     .restart local v11       #clientSession:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_1
     const-string v3, "MapService"
@@ -1720,6 +1887,7 @@
 
     goto :goto_0
 
+    .line 245
     .end local v11           #clientSession:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_2
     const-string v3, "MapService"
@@ -1769,14 +1937,17 @@
     .parameter "status"
 
     .prologue
+    .line 444
     const-string v0, "MapService"
 
     const-string v1, "NotifyRegistrationResponse"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 446
     invoke-direct {p0, p1, p4}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSENotifyRegistrationResponse(IB)V
 
+    .line 447
     return-void
 .end method
 
@@ -1793,6 +1964,7 @@
     .parameter "callback"
 
     .prologue
+    .line 127
     const-string v1, "MapService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1809,7 +1981,7 @@
 
     move-result-object v2
 
-    const-string v3, "provider name = "
+    const-string/jumbo v3, "provider name = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1825,18 +1997,21 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 129
     invoke-virtual {p0, p1, p2, p4}, Lcom/broadcom/bt/service/map/MapService;->isRegistered(BLjava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
+    .line 133
     invoke-virtual {p0, p2, p4, p5}, Lcom/broadcom/bt/service/map/MapService;->isProviderDisabled(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 139
     const-string v1, "MapService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1869,6 +2044,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 140
     new-instance v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
     move v1, p1
@@ -1891,15 +2067,18 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/broadcom/bt/service/map/MapProviderContext;-><init>(BLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ[Ljava/lang/String;Lcom/broadcom/bt/service/map/IMapCallback;)V
 
+    .line 144
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v1, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
+    .line 155
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :goto_0
     return-void
 
+    .line 148
     :cond_0
     const-string v1, "MapService"
 
@@ -1951,6 +2130,7 @@
 
     goto :goto_0
 
+    .line 152
     :cond_1
     const-string v1, "MapService"
 
@@ -2014,8 +2194,10 @@
     .parameter "mode"
 
     .prologue
+    .line 256
     invoke-direct/range {p0 .. p7}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSEFolderListingResponse(IBIILjava/lang/String;Ljava/lang/String;B)V
 
+    .line 258
     return-void
 .end method
 
@@ -2030,23 +2212,28 @@
     .parameter "msg_folder"
 
     .prologue
+    .line 407
     const-string v2, "MapService"
 
     const-string v3, "SetMsgStatusResponse"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 410
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v0
 
+    .line 413
     .local v0, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v0, :cond_0
 
+    .line 417
     invoke-virtual {v0, p7}, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->getVirtualFolder(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 418
     .local v1, sVirtualFolder:Ljava/lang/String;
     const-string v2, "deleted"
 
@@ -2056,26 +2243,32 @@
 
     if-eqz v2, :cond_1
 
+    .line 421
     if-nez p5, :cond_0
 
+    .line 423
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mCtx:Lcom/broadcom/bt/service/map/MapProviderContext;
 
     invoke-virtual {v2, p6}, Lcom/broadcom/bt/service/map/MapProviderContext;->removeMAPMsgId(Ljava/lang/String;)V
 
+    .line 436
     .end local v1           #sVirtualFolder:Ljava/lang/String;
     :cond_0
     :goto_0
     invoke-direct {p0, p1, p4, p5}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSESetMsgStatusResponse(IBB)V
 
+    .line 437
     return-void
 
+    .line 431
     .restart local v1       #sVirtualFolder:Ljava/lang/String;
     :cond_1
     if-nez p5, :cond_0
 
+    .line 432
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mCtx:Lcom/broadcom/bt/service/map/MapProviderContext;
 
-    const-string v3, "root/telecom/msg/deleted"
+    const-string/jumbo v3, "root/telecom/msg/deleted"
 
     invoke-virtual {v2, p6, v3}, Lcom/broadcom/bt/service/map/MapProviderContext;->setMAPMsgFolder(Ljava/lang/String;Ljava/lang/String;)J
 
@@ -2092,6 +2285,7 @@
 
     const-string v3, " "
 
+    .line 183
     const-string v1, "MapService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2124,13 +2318,16 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 186
     invoke-virtual {p0, p1, p2}, Lcom/broadcom/bt/service/map/MapService;->getContext(Ljava/lang/String;Ljava/lang/String;)Lcom/broadcom/bt/service/map/MapProviderContext;
 
     move-result-object v0
 
+    .line 187
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     if-eqz v0, :cond_0
 
+    .line 188
     const-string v1, "MapService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2179,6 +2376,7 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 190
     iget-object v1, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderDSDisplayName:Ljava/lang/String;
 
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderRootPath:Ljava/lang/String;
@@ -2187,9 +2385,11 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSEStart(Ljava/lang/String;Ljava/lang/String;B)V
 
+    .line 197
     :goto_0
     return-void
 
+    .line 193
     :cond_0
     const-string v1, "MapService"
 
@@ -2234,26 +2434,32 @@
     .prologue
     const-string v3, "MapService"
 
+    .line 204
     const-string v1, "MapService"
 
     const-string v1, "StopMSEInstance"
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 206
     invoke-virtual {p0, p1, p2}, Lcom/broadcom/bt/service/map/MapService;->getContext(Ljava/lang/String;Ljava/lang/String;)Lcom/broadcom/bt/service/map/MapProviderContext;
 
     move-result-object v0
 
+    .line 207
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     if-eqz v0, :cond_0
 
+    .line 208
     iget v1, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mMseInstanceId:I
 
     invoke-direct {p0, v1}, Lcom/broadcom/bt/service/map/MapService;->Native_BluetoothMapMSEStop(I)V
 
+    .line 214
     :goto_0
     return-void
 
+    .line 210
     :cond_0
     const-string v1, "MapService"
 
@@ -2298,12 +2504,14 @@
     .prologue
     const-string v5, "MapService"
 
+    .line 159
     const-string v3, "MapService"
 
     const-string v3, "UnregisterDSProvider"
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 160
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -2316,6 +2524,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 162
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v3, v2}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -2324,6 +2533,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 163
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     invoke-virtual {v0, p1, p2}, Lcom/broadcom/bt/service/map/MapProviderContext;->isEqual(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -2331,6 +2541,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 165
     :try_start_0
     iget-object v3, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mCallback:Lcom/broadcom/bt/service/map/IMapCallback;
 
@@ -2340,6 +2551,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 170
     :goto_1
     const-string v3, "MapService"
 
@@ -2373,20 +2585,24 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 171
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     invoke-virtual {v3, v0}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
 
+    .line 175
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     return-void
 
+    .line 167
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 168
     .local v1, e:Ljava/lang/Exception;
     const-string v3, "MapService"
 
@@ -2398,6 +2614,7 @@
 
     goto :goto_1
 
+    .line 160
     .end local v1           #e:Ljava/lang/Exception;
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -2411,6 +2628,7 @@
     .prologue
     const-string v1, "MapService"
 
+    .line 94
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
@@ -2420,12 +2638,14 @@
 
     if-nez v1, :cond_0
 
+    .line 96
     const-string v1, "MapService"
 
-    const-string v2, "unregisterallProviders() - No Providers registered"
+    const-string/jumbo v2, "unregisterallProviders() - No Providers registered"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 99
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
@@ -2436,6 +2656,7 @@
 
     if-lez v1, :cond_1
 
+    .line 102
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapService;->mProviders:Ljava/util/Vector;
 
     const/4 v2, 0x0
@@ -2446,6 +2667,7 @@
 
     check-cast v0, Lcom/broadcom/bt/service/map/MapProviderContext;
 
+    .line 103
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     const-string v1, "MapService"
 
@@ -2453,7 +2675,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "unregisterallProviders - Stopping MSE instance Provider Id = "
+    const-string/jumbo v3, "unregisterallProviders - Stopping MSE instance Provider Id = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2483,12 +2705,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 104
     iget-object v1, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderId:Ljava/lang/String;
 
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderDSId:Ljava/lang/String;
 
     invoke-virtual {p0, v1, v2}, Lcom/broadcom/bt/service/map/MapService;->stopMSEInstance(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 105
     iget-object v1, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderId:Ljava/lang/String;
 
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderDSId:Ljava/lang/String;
@@ -2497,13 +2721,16 @@
 
     goto :goto_0
 
+    .line 109
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :catch_0
     move-exception v1
 
+    .line 112
     :goto_1
     return-void
 
+    .line 108
     :cond_1
     invoke-direct {p0}, Lcom/broadcom/bt/service/map/MapService;->Native_CleanupMapService()V
     :try_end_0

@@ -28,10 +28,13 @@
     .parameter "out"
 
     .prologue
+    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 78
     iput-object p1, p0, Landroid/renderscript/ProgramRaster$Builder;->mRS:Landroid/renderscript/RenderScript;
 
+    .line 79
     new-instance v0, Landroid/renderscript/ProgramRaster;
 
     const/4 v1, 0x0
@@ -40,6 +43,7 @@
 
     iput-object v0, p0, Landroid/renderscript/ProgramRaster$Builder;->mPR:Landroid/renderscript/ProgramRaster;
 
+    .line 80
     return-void
 .end method
 
@@ -49,6 +53,7 @@
     .parameter "b"
 
     .prologue
+    .line 96
     const-class v1, Landroid/renderscript/ProgramRaster$Builder;
 
     monitor-enter v1
@@ -58,8 +63,10 @@
 
     invoke-virtual {v2}, Landroid/renderscript/ProgramRaster;->internalInit()V
 
+    .line 97
     iget-object v0, p1, Landroid/renderscript/ProgramRaster$Builder;->mPR:Landroid/renderscript/ProgramRaster;
 
+    .line 98
     .local v0, pr:Landroid/renderscript/ProgramRaster;
     new-instance v2, Landroid/renderscript/ProgramRaster;
 
@@ -73,10 +80,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 99
     monitor-exit v1
 
     return-object v0
 
+    .line 96
     .end local v0           #pr:Landroid/renderscript/ProgramRaster;
     :catchall_0
     move-exception v2
@@ -92,10 +101,12 @@
     .locals 1
 
     .prologue
+    .line 103
     iget-object v0, p0, Landroid/renderscript/ProgramRaster$Builder;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 104
     iget-object v0, p0, Landroid/renderscript/ProgramRaster$Builder;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-static {v0, p0}, Landroid/renderscript/ProgramRaster$Builder;->internalCreate(Landroid/renderscript/RenderScript;Landroid/renderscript/ProgramRaster$Builder;)Landroid/renderscript/ProgramRaster;
@@ -110,10 +121,12 @@
     .parameter "enable"
 
     .prologue
+    .line 91
     iget-object v0, p0, Landroid/renderscript/ProgramRaster$Builder;->mPR:Landroid/renderscript/ProgramRaster;
 
     iput-boolean p1, v0, Landroid/renderscript/ProgramRaster;->mLineSmooth:Z
 
+    .line 92
     return-void
 .end method
 
@@ -122,10 +135,12 @@
     .parameter "enable"
 
     .prologue
+    .line 87
     iget-object v0, p0, Landroid/renderscript/ProgramRaster$Builder;->mPR:Landroid/renderscript/ProgramRaster;
 
     iput-boolean p1, v0, Landroid/renderscript/ProgramRaster;->mPointSmooth:Z
 
+    .line 88
     return-void
 .end method
 
@@ -134,9 +149,11 @@
     .parameter "enable"
 
     .prologue
+    .line 83
     iget-object v0, p0, Landroid/renderscript/ProgramRaster$Builder;->mPR:Landroid/renderscript/ProgramRaster;
 
     iput-boolean p1, v0, Landroid/renderscript/ProgramRaster;->mPointSprite:Z
 
+    .line 84
     return-void
 .end method

@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 310
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/location/IGpsStatusProvider$Stub;-><init>()V
@@ -43,8 +44,10 @@
     .end annotation
 
     .prologue
+    .line 312
     if-nez p1, :cond_0
 
+    .line 313
     new-instance v5, Ljava/lang/NullPointerException;
 
     const-string v6, "listener is null in addGpsStatusListener"
@@ -53,6 +56,7 @@
 
     throw v5
 
+    .line 316
     :cond_0
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -63,11 +67,13 @@
 
     monitor-enter v5
 
+    .line 317
     :try_start_0
     invoke-interface {p1}, Landroid/location/IGpsStatusListener;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
+    .line 318
     .local v0, binder:Landroid/os/IBinder;
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -80,6 +86,7 @@
 
     move-result v3
 
+    .line 319
     .local v3, size:I
     const/4 v1, 0x0
 
@@ -87,6 +94,7 @@
     :goto_0
     if-ge v1, v3, :cond_2
 
+    .line 320
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mListeners:Ljava/util/ArrayList;
@@ -100,6 +108,7 @@
 
     check-cast v4, Lcom/android/server/location/GpsLocationProvider$Listener;
 
+    .line 321
     .local v4, test:Lcom/android/server/location/GpsLocationProvider$Listener;
     iget-object v6, v4, Lcom/android/server/location/GpsLocationProvider$Listener;->mListener:Landroid/location/IGpsStatusListener;
 
@@ -113,18 +122,22 @@
 
     if-eqz v6, :cond_1
 
+    .line 323
     monitor-exit v5
 
+    .line 331
     .end local v4           #test:Lcom/android/server/location/GpsLocationProvider$Listener;
     :goto_1
     return-void
 
+    .line 319
     .restart local v4       #test:Lcom/android/server/location/GpsLocationProvider$Listener;
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 327
     .end local v4           #test:Lcom/android/server/location/GpsLocationProvider$Listener;
     :cond_2
     new-instance v2, Lcom/android/server/location/GpsLocationProvider$Listener;
@@ -133,11 +146,13 @@
 
     invoke-direct {v2, v6, p1}, Lcom/android/server/location/GpsLocationProvider$Listener;-><init>(Lcom/android/server/location/GpsLocationProvider;Landroid/location/IGpsStatusListener;)V
 
+    .line 328
     .local v2, l:Lcom/android/server/location/GpsLocationProvider$Listener;
     const/4 v6, 0x0
 
     invoke-interface {v0, v2, v6}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
+    .line 329
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mListeners:Ljava/util/ArrayList;
@@ -147,6 +162,7 @@
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 330
     monitor-exit v5
 
     goto :goto_1
@@ -170,8 +186,10 @@
     .parameter "listener"
 
     .prologue
+    .line 334
     if-nez p1, :cond_0
 
+    .line 335
     new-instance v5, Ljava/lang/NullPointerException;
 
     const-string v6, "listener is null in addGpsStatusListener"
@@ -180,6 +198,7 @@
 
     throw v5
 
+    .line 338
     :cond_0
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -190,14 +209,17 @@
 
     monitor-enter v5
 
+    .line 339
     :try_start_0
     invoke-interface {p1}, Landroid/location/IGpsStatusListener;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
+    .line 340
     .local v0, binder:Landroid/os/IBinder;
     const/4 v2, 0x0
 
+    .line 341
     .local v2, l:Lcom/android/server/location/GpsLocationProvider$Listener;
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -210,6 +232,7 @@
 
     move-result v3
 
+    .line 342
     .local v3, size:I
     const/4 v1, 0x0
 
@@ -219,6 +242,7 @@
 
     if-nez v2, :cond_2
 
+    .line 343
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mListeners:Ljava/util/ArrayList;
@@ -232,6 +256,7 @@
 
     check-cast v4, Lcom/android/server/location/GpsLocationProvider$Listener;
 
+    .line 344
     .local v4, test:Lcom/android/server/location/GpsLocationProvider$Listener;
     iget-object v6, v4, Lcom/android/server/location/GpsLocationProvider$Listener;->mListener:Landroid/location/IGpsStatusListener;
 
@@ -245,17 +270,21 @@
 
     if-eqz v6, :cond_1
 
+    .line 345
     move-object v2, v4
 
+    .line 342
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 349
     .end local v4           #test:Lcom/android/server/location/GpsLocationProvider$Listener;
     :cond_2
     if-eqz v2, :cond_3
 
+    .line 350
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mListeners:Ljava/util/ArrayList;
@@ -265,15 +294,19 @@
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 351
     const/4 v6, 0x0
 
     invoke-interface {v0, v2, v6}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
+    .line 353
     :cond_3
     monitor-exit v5
 
+    .line 354
     return-void
 
+    .line 353
     .end local v0           #binder:Landroid/os/IBinder;
     .end local v1           #i:I
     .end local v2           #l:Lcom/android/server/location/GpsLocationProvider$Listener;

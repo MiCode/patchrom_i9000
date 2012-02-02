@@ -66,6 +66,7 @@
     .locals 1
 
     .prologue
+    .line 1832
     const-string v0, "content://telephony/carriers"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -74,6 +75,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 1874
     const-string v0, "content://telephony/carriers/openmarketapn"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -82,6 +84,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_OPENMARKET_URI:Landroid/net/Uri;
 
+    .line 1877
     const-string v0, "content://telephony/carriers/csc"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -97,6 +100,7 @@
     .locals 0
 
     .prologue
+    .line 1828
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

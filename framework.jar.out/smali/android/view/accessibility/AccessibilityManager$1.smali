@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 63
     iput-object p1, p0, Landroid/view/accessibility/AccessibilityManager$1;->this$0:Landroid/view/accessibility/AccessibilityManager;
 
     invoke-direct {p0}, Landroid/view/accessibility/IAccessibilityManagerClient$Stub;-><init>()V
@@ -40,6 +41,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 65
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityManager$1;->this$0:Landroid/view/accessibility/AccessibilityManager;
 
     iget-object v0, v0, Landroid/view/accessibility/AccessibilityManager;->mHandler:Landroid/os/Handler;
@@ -57,10 +59,12 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 66
     return-void
 
     :cond_0
     move v2, v3
 
+    .line 65
     goto :goto_0
 .end method

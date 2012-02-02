@@ -35,6 +35,7 @@
     .parameter
 
     .prologue
+    .line 141
     iput-object p1, p0, Lcom/android/server/BootReceiver$2;->this$0:Lcom/android/server/BootReceiver;
 
     iput-object p4, p0, Lcom/android/server/BootReceiver$2;->val$db:Landroid/os/DropBoxManager;
@@ -56,6 +57,7 @@
     .parameter "path"
 
     .prologue
+    .line 145
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -69,6 +71,7 @@
 
     move-result-object v3
 
+    .line 146
     .local v3, filename:Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/BootReceiver$2;->val$db:Landroid/os/DropBoxManager;
 
@@ -85,15 +88,18 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 150
     .end local v3           #filename:Ljava/lang/String;
     :goto_0
     return-void
 
+    .line 147
     :catch_0
     move-exception v0
 
     move-object v6, v0
 
+    .line 148
     .local v6, e:Ljava/io/IOException;
     const-string v0, "BootReceiver"
 

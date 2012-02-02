@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 230
     iput-object p1, p0, Landroid/widget/NumberPicker$6;->this$0:Landroid/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "v"
 
     .prologue
+    .line 232
     iget-object v0, p0, Landroid/widget/NumberPicker$6;->this$0:Landroid/widget/NumberPicker;
 
     #getter for: Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
@@ -54,6 +56,7 @@
 
     if-nez v0, :cond_0
 
+    .line 233
     iget-object v0, p0, Landroid/widget/NumberPicker$6;->this$0:Landroid/widget/NumberPicker;
 
     #getter for: Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
@@ -63,6 +66,7 @@
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
+    .line 235
     :cond_0
     const/4 v0, 0x0
 

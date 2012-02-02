@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 70
     iput-object p1, p0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1;->this$0:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,19 +40,23 @@
     .parameter "intent"
 
     .prologue
+    .line 73
     if-nez p2, :cond_1
 
+    .line 139
     .end local p0
     :cond_0
     :goto_0
     return-void
 
+    .line 74
     .restart local p0
     :cond_1
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 75
     .local v5, action:Ljava/lang/String;
     const-string v16, "BluetoothAVRCPService"
 
@@ -79,6 +84,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 76
     const-string v16, "cmd"
 
     move-object/from16 v0, p2
@@ -91,6 +97,7 @@
 
     if-nez v16, :cond_2
 
+    .line 77
     const-string v16, "BluetoothAVRCPService"
 
     const-string v17, "cannot find cmd in intent"
@@ -99,6 +106,7 @@
 
     goto :goto_0
 
+    .line 80
     :cond_2
     const-string v16, "cmd"
 
@@ -112,6 +120,7 @@
 
     check-cast v7, Ljava/lang/String;
 
+    .line 82
     .local v7, cmd:Ljava/lang/String;
     const-string v16, "BluetoothAVRCPService"
 
@@ -139,6 +148,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 84
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1;->this$0:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
@@ -171,6 +181,7 @@
 
     move-result-object v13
 
+    .line 85
     .local v13, player:Lcom/broadcom/bt/service/avrcp/MediaPlayer;
     const-string v16, "BluetoothAVRCPService"
 
@@ -201,6 +212,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 86
     const-string v16, "launch"
 
     move-object v0, v7
@@ -213,7 +225,8 @@
 
     if-eqz v16, :cond_3
 
-    const-string v16, "wait"
+    .line 87
+    const-string/jumbo v16, "wait"
 
     const/16 v17, 0x0
 
@@ -227,8 +240,9 @@
 
     move-result v15
 
+    .line 88
     .local v15, wait:I
-    const-string v16, "player"
+    const-string/jumbo v16, "player"
 
     move-object/from16 v0, p2
 
@@ -240,7 +254,7 @@
 
     if-eqz v16, :cond_5
 
-    const-string v16, "player"
+    const-string/jumbo v16, "player"
 
     move-object/from16 v0, p2
 
@@ -252,10 +266,12 @@
 
     move-object/from16 v4, v16
 
+    .line 89
     .local v4, PlayerName:Ljava/lang/String;
     :goto_2
     if-lez v15, :cond_6
 
+    .line 90
     new-instance v16, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1$1;
 
     move-object/from16 v0, v16
@@ -270,13 +286,15 @@
 
     invoke-virtual/range {v16 .. v16}, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1$1;->start()V
 
+    .line 101
     .end local v4           #PlayerName:Ljava/lang/String;
     .end local v15           #wait:I
     :cond_3
     :goto_3
     if-eqz v13, :cond_0
 
-    const-string v16, "play"
+    .line 103
+    const-string/jumbo v16, "play"
 
     move-object v0, v7
 
@@ -288,15 +306,18 @@
 
     if-eqz v16, :cond_7
 
+    .line 104
     invoke-virtual {v13}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->play()V
 
     goto/16 :goto_0
 
+    .line 85
     :cond_4
     const-string v18, "null"
 
     goto :goto_1
 
+    .line 88
     .restart local v15       #wait:I
     :cond_5
     const/16 v16, 0x0
@@ -305,6 +326,7 @@
 
     goto :goto_2
 
+    .line 99
     .restart local v4       #PlayerName:Ljava/lang/String;
     :cond_6
     move-object/from16 v0, p0
@@ -327,10 +349,11 @@
 
     goto :goto_3
 
+    .line 105
     .end local v4           #PlayerName:Ljava/lang/String;
     .end local v15           #wait:I
     :cond_7
-    const-string v16, "stop"
+    const-string/jumbo v16, "stop"
 
     move-object v0, v7
 
@@ -342,12 +365,14 @@
 
     if-eqz v16, :cond_8
 
+    .line 106
     invoke-virtual {v13}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->stop()V
 
     goto/16 :goto_0
 
+    .line 107
     :cond_8
-    const-string v16, "pause"
+    const-string/jumbo v16, "pause"
 
     move-object v0, v7
 
@@ -359,12 +384,14 @@
 
     if-eqz v16, :cond_9
 
+    .line 108
     invoke-virtual {v13}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->pause()V
 
     goto/16 :goto_0
 
+    .line 109
     :cond_9
-    const-string v16, "setcurrentplayer"
+    const-string/jumbo v16, "setcurrentplayer"
 
     move-object v0, v7
 
@@ -376,6 +403,7 @@
 
     if-eqz v16, :cond_a
 
+    .line 110
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1;->this$0:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
@@ -388,7 +416,7 @@
 
     move-object/from16 v16, v0
 
-    const-string v17, "player"
+    const-string/jumbo v17, "player"
 
     move-object/from16 v0, p2
 
@@ -409,6 +437,7 @@
 
     goto/16 :goto_0
 
+    .line 111
     .restart local p0
     :cond_a
     const-string v16, "getplayers"
@@ -423,6 +452,7 @@
 
     if-eqz v16, :cond_b
 
+    .line 112
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1;->this$0:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
@@ -439,6 +469,7 @@
 
     move-result-object v14
 
+    .line 113
     .local v14, players:[Ljava/lang/String;
     move-object v6, v14
 
@@ -454,6 +485,7 @@
 
     aget-object v12, v6, v8
 
+    .line 114
     .local v12, name:Ljava/lang/String;
     const-string v16, "BluetoothAVRCPService"
 
@@ -481,10 +513,12 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 113
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_4
 
+    .line 116
     .end local v6           #arr$:[Ljava/lang/String;
     .end local v8           #i$:I
     .end local v10           #len$:I
@@ -503,12 +537,14 @@
 
     if-eqz v16, :cond_c
 
+    .line 117
     invoke-virtual {v13}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->next()V
 
     goto/16 :goto_0
 
+    .line 118
     :cond_c
-    const-string v16, "prev"
+    const-string/jumbo v16, "prev"
 
     move-object v0, v7
 
@@ -520,12 +556,14 @@
 
     if-eqz v16, :cond_d
 
+    .line 119
     invoke-virtual {v13}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->prev()V
 
     goto/16 :goto_0
 
+    .line 120
     :cond_d
-    const-string v16, "setrepeatmode"
+    const-string/jumbo v16, "setrepeatmode"
 
     move-object v0, v7
 
@@ -537,6 +575,7 @@
 
     if-eqz v16, :cond_e
 
+    .line 121
     const-string v16, "mode"
 
     const/16 v17, 0x0
@@ -551,14 +590,16 @@
 
     move-result v11
 
+    .line 122
     .local v11, mode:I
     invoke-virtual {v13, v11}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->setRepeatMode(I)V
 
     goto/16 :goto_0
 
+    .line 124
     .end local v11           #mode:I
     :cond_e
-    const-string v16, "setshufflemode"
+    const-string/jumbo v16, "setshufflemode"
 
     move-object v0, v7
 
@@ -570,6 +611,7 @@
 
     if-eqz v16, :cond_f
 
+    .line 125
     const-string v16, "mode"
 
     const/16 v17, 0x0
@@ -584,14 +626,16 @@
 
     move-result v11
 
+    .line 126
     .restart local v11       #mode:I
     invoke-virtual {v13, v11}, Lcom/broadcom/bt/service/avrcp/MediaPlayer;->setShuffleMode(I)V
 
     goto/16 :goto_0
 
+    .line 128
     .end local v11           #mode:I
     :cond_f
-    const-string v16, "position"
+    const-string/jumbo v16, "position"
 
     move-object v0, v7
 
@@ -603,6 +647,7 @@
 
     if-eqz v16, :cond_10
 
+    .line 129
     const-string v16, "BluetoothAVRCPService"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -631,6 +676,7 @@
 
     goto/16 :goto_0
 
+    .line 131
     :cond_10
     const-string v16, "getcurrentplayer"
 
@@ -644,6 +690,7 @@
 
     if-eqz v16, :cond_11
 
+    .line 132
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService$1;->this$0:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
@@ -660,6 +707,7 @@
 
     move-result-object v4
 
+    .line 133
     .restart local v4       #PlayerName:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -681,6 +729,7 @@
 
     move-result v9
 
+    .line 134
     .local v9, launched:Z
     const-string v16, "BluetoothAVRCPService"
 
@@ -724,6 +773,7 @@
 
     goto/16 :goto_0
 
+    .line 137
     .end local v4           #PlayerName:Ljava/lang/String;
     .end local v9           #launched:Z
     :cond_11

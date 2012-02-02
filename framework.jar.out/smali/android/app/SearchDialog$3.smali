@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 762
     iput-object p1, p0, Landroid/app/SearchDialog$3;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +46,7 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 765
     iget-object v0, p0, Landroid/app/SearchDialog$3;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchable:Landroid/app/SearchableInfo;
@@ -56,9 +58,11 @@
 
     move v0, v1
 
+    .line 780
     :goto_0
     return v0
 
+    .line 769
     :cond_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->isSystem()Z
 
@@ -82,6 +86,7 @@
 
     if-eq p2, v0, :cond_1
 
+    .line 775
     iget-object v0, p0, Landroid/app/SearchDialog$3;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchAutoComplete:Landroid/app/SearchDialog$SearchAutoComplete;
@@ -95,6 +100,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 776
     iget-object v0, p0, Landroid/app/SearchDialog$3;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchAutoComplete:Landroid/app/SearchDialog$SearchAutoComplete;
@@ -111,5 +117,6 @@
     :cond_1
     move v0, v1
 
+    .line 780
     goto :goto_0
 .end method

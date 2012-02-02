@@ -44,6 +44,7 @@
 
     const/4 v2, 0x0
 
+    .line 27
     new-instance v0, Landroid/graphics/AvoidXfermode$Mode;
 
     const-string v1, "AVOID"
@@ -52,6 +53,7 @@
 
     sput-object v0, Landroid/graphics/AvoidXfermode$Mode;->AVOID:Landroid/graphics/AvoidXfermode$Mode;
 
+    .line 28
     new-instance v0, Landroid/graphics/AvoidXfermode$Mode;
 
     const-string v1, "TARGET"
@@ -60,6 +62,7 @@
 
     sput-object v0, Landroid/graphics/AvoidXfermode$Mode;->TARGET:Landroid/graphics/AvoidXfermode$Mode;
 
+    .line 26
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/graphics/AvoidXfermode$Mode;
@@ -89,10 +92,13 @@
     .end annotation
 
     .prologue
+    .line 30
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 31
     iput p3, p0, Landroid/graphics/AvoidXfermode$Mode;->nativeInt:I
 
+    .line 32
     return-void
 .end method
 
@@ -101,6 +107,7 @@
     .parameter "name"
 
     .prologue
+    .line 26
     const-class v0, Landroid/graphics/AvoidXfermode$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -117,6 +124,7 @@
     .locals 1
 
     .prologue
+    .line 26
     sget-object v0, Landroid/graphics/AvoidXfermode$Mode;->$VALUES:[Landroid/graphics/AvoidXfermode$Mode;
 
     invoke-virtual {v0}, [Landroid/graphics/AvoidXfermode$Mode;->clone()Ljava/lang/Object;

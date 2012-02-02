@@ -28,6 +28,7 @@
     .locals 0
 
     .prologue
+    .line 30
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -39,6 +40,7 @@
     .locals 2
 
     .prologue
+    .line 33
     new-instance v0, Landroid/view/FocusFinder;
 
     const/4 v1, 0x0
@@ -52,6 +54,7 @@
     .locals 1
 
     .prologue
+    .line 30
     invoke-virtual {p0}, Landroid/view/FocusFinder$1;->initialValue()Landroid/view/FocusFinder;
 
     move-result-object v0

@@ -24,8 +24,10 @@
     .parameter "rs"
 
     .prologue
+    .line 33
     invoke-direct {p0, p1, p2}, Landroid/renderscript/Program;-><init>(ILandroid/renderscript/RenderScript;)V
 
+    .line 34
     return-void
 .end method
 
@@ -36,15 +38,18 @@
     .parameter "va"
 
     .prologue
+    .line 37
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 38
     iget-object v0, p1, Landroid/renderscript/ProgramVertex$MatrixAllocation;->mAlloc:Landroid/renderscript/Allocation;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Landroid/renderscript/ProgramVertex;->bindConstants(Landroid/renderscript/Allocation;I)V
 
+    .line 39
     return-void
 .end method

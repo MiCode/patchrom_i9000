@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 185
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,16 +41,19 @@
     .locals 1
 
     .prologue
+    .line 187
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     invoke-virtual {v0}, Lcom/android/server/NetworkManagementService;->onConnected()V
 
+    .line 188
     new-instance v0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver$1;-><init>(Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;)V
 
     invoke-virtual {v0}, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver$1;->start()V
 
+    .line 192
     return-void
 .end method
 
@@ -70,10 +74,12 @@
 
     const/4 v4, 0x1
 
+    .line 194
     const/16 v0, 0x258
 
     if-ne p1, v0, :cond_5
 
+    .line 201
     array-length v0, p3
 
     if-lt v0, v6, :cond_0
@@ -88,6 +94,7 @@
 
     if-nez v0, :cond_1
 
+    .line 202
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -105,6 +112,7 @@
 
     throw v0
 
+    .line 205
     :cond_1
     aget-object v0, p3, v2
 
@@ -116,6 +124,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 206
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     aget-object v1, p3, v5
@@ -125,9 +134,11 @@
 
     move v0, v4
 
+    .line 218
     :goto_0
     return v0
 
+    .line 208
     :cond_2
     aget-object v0, p3, v2
 
@@ -139,6 +150,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 209
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     aget-object v1, p3, v5
@@ -148,8 +160,10 @@
 
     move v0, v4
 
+    .line 210
     goto :goto_0
 
+    .line 211
     :cond_3
     aget-object v0, p3, v2
 
@@ -167,6 +181,7 @@
 
     if-ne v0, v1, :cond_4
 
+    .line 212
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$NetdCallbackReceiver;->this$0:Lcom/android/server/NetworkManagementService;
 
     aget-object v1, p3, v5
@@ -184,8 +199,10 @@
 
     move v0, v4
 
+    .line 213
     goto :goto_0
 
+    .line 215
     :cond_4
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -206,5 +223,6 @@
     :cond_5
     move v0, v3
 
+    .line 218
     goto :goto_0
 .end method

@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 358
     iput-object p1, p0, Landroid/webkit/WebViewCore$2;->this$0:Landroid/webkit/WebViewCore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +42,12 @@
     .parameter "quota"
 
     .prologue
+    .line 360
     iget-object v0, p0, Landroid/webkit/WebViewCore$2;->this$0:Landroid/webkit/WebViewCore;
 
     #calls: Landroid/webkit/WebViewCore;->nativeSetNewStorageLimit(J)V
     invoke-static {v0, p1, p2}, Landroid/webkit/WebViewCore;->access$300(Landroid/webkit/WebViewCore;J)V
 
+    .line 361
     return-void
 .end method

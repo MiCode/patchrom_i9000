@@ -58,6 +58,7 @@
 
     const-string v12, "L2TP"
 
+    .line 26
     new-instance v0, Landroid/net/vpn/VpnType;
 
     const-string v1, "PPTP"
@@ -72,6 +73,7 @@
 
     sput-object v0, Landroid/net/vpn/VpnType;->PPTP:Landroid/net/vpn/VpnType;
 
+    .line 27
     new-instance v3, Landroid/net/vpn/VpnType;
 
     const-string v0, "L2TP"
@@ -92,6 +94,7 @@
 
     sput-object v3, Landroid/net/vpn/VpnType;->L2TP:Landroid/net/vpn/VpnType;
 
+    .line 28
     new-instance v3, Landroid/net/vpn/VpnType;
 
     const-string v4, "L2TP_IPSEC_PSK"
@@ -108,6 +111,7 @@
 
     sput-object v3, Landroid/net/vpn/VpnType;->L2TP_IPSEC_PSK:Landroid/net/vpn/VpnType;
 
+    .line 30
     new-instance v3, Landroid/net/vpn/VpnType;
 
     const-string v4, "L2TP_IPSEC"
@@ -124,6 +128,7 @@
 
     sput-object v3, Landroid/net/vpn/VpnType;->L2TP_IPSEC:Landroid/net/vpn/VpnType;
 
+    .line 25
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/net/vpn/VpnType;
@@ -169,15 +174,20 @@
     .end annotation
 
     .prologue
+    .line 38
     .local p5, klass:Ljava/lang/Class;,"Ljava/lang/Class<+Landroid/net/vpn/VpnProfile;>;"
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 39
     iput-object p3, p0, Landroid/net/vpn/VpnType;->mDisplayName:Ljava/lang/String;
 
+    .line 40
     iput p4, p0, Landroid/net/vpn/VpnType;->mDescriptionId:I
 
+    .line 41
     iput-object p5, p0, Landroid/net/vpn/VpnType;->mClass:Ljava/lang/Class;
 
+    .line 42
     return-void
 .end method
 
@@ -186,6 +196,7 @@
     .parameter "name"
 
     .prologue
+    .line 25
     const-class v0, Landroid/net/vpn/VpnType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -202,6 +213,7 @@
     .locals 1
 
     .prologue
+    .line 25
     sget-object v0, Landroid/net/vpn/VpnType;->$VALUES:[Landroid/net/vpn/VpnType;
 
     invoke-virtual {v0}, [Landroid/net/vpn/VpnType;->clone()Ljava/lang/Object;
@@ -219,6 +231,7 @@
     .locals 1
 
     .prologue
+    .line 49
     iget v0, p0, Landroid/net/vpn/VpnType;->mDescriptionId:I
 
     return v0
@@ -228,6 +241,7 @@
     .locals 1
 
     .prologue
+    .line 45
     iget-object v0, p0, Landroid/net/vpn/VpnType;->mDisplayName:Ljava/lang/String;
 
     return-object v0
@@ -246,6 +260,7 @@
     .end annotation
 
     .prologue
+    .line 53
     iget-object v0, p0, Landroid/net/vpn/VpnType;->mClass:Ljava/lang/Class;
 
     return-object v0

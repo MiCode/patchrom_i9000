@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 416
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,8 +38,10 @@
     .prologue
     const/high16 v1, -0x3ee0
 
+    .line 418
     if-eqz p1, :cond_0
 
+    .line 429
     mul-float v0, v1, p2
 
     float-to-double v0, v0
@@ -49,6 +52,7 @@
 
     double-to-float v0, v0
 
+    .line 436
     :goto_0
     return v0
 

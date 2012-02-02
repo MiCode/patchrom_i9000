@@ -28,6 +28,7 @@
     .parameter
 
     .prologue
+    .line 160
     iput-object p1, p0, Landroid/app/backup/RestoreSession$RestoreObserverWrapper$1;->this$1:Landroid/app/backup/RestoreSession$RestoreObserverWrapper;
 
     iput-object p3, p0, Landroid/app/backup/RestoreSession$RestoreObserverWrapper$1;->val$this$0:Landroid/app/backup/RestoreSession;
@@ -44,14 +45,17 @@
     .parameter "msg"
 
     .prologue
+    .line 163
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 177
     .end local p0
     :goto_0
     return-void
 
+    .line 165
     .restart local p0
     :pswitch_0
     iget-object v0, p0, Landroid/app/backup/RestoreSession$RestoreObserverWrapper$1;->this$1:Landroid/app/backup/RestoreSession$RestoreObserverWrapper;
@@ -64,6 +68,7 @@
 
     goto :goto_0
 
+    .line 168
     :pswitch_1
     iget-object v0, p0, Landroid/app/backup/RestoreSession$RestoreObserverWrapper$1;->this$1:Landroid/app/backup/RestoreSession$RestoreObserverWrapper;
 
@@ -80,6 +85,7 @@
 
     goto :goto_0
 
+    .line 171
     .restart local p0
     :pswitch_2
     iget-object v0, p0, Landroid/app/backup/RestoreSession$RestoreObserverWrapper$1;->this$1:Landroid/app/backup/RestoreSession$RestoreObserverWrapper;
@@ -92,6 +98,7 @@
 
     goto :goto_0
 
+    .line 174
     :pswitch_3
     iget-object v0, p0, Landroid/app/backup/RestoreSession$RestoreObserverWrapper$1;->this$1:Landroid/app/backup/RestoreSession$RestoreObserverWrapper;
 
@@ -108,6 +115,7 @@
 
     goto :goto_0
 
+    .line 163
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

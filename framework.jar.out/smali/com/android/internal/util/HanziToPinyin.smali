@@ -42,12 +42,14 @@
 
     const/4 v3, 0x6
 
+    .line 38
     new-array v0, v1, [C
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/internal/util/HanziToPinyin;->UNIHANS:[C
 
+    .line 91
     new-array v0, v1, [[B
 
     const/4 v1, 0x0
@@ -3298,6 +3300,7 @@
 
     sput-object v0, Lcom/android/internal/util/HanziToPinyin;->PINYINS:[[B
 
+    .line 303
     sget-object v0, Ljava/util/Locale;->CHINA:Ljava/util/Locale;
 
     invoke-static {v0}, Ljava/text/Collator;->getInstance(Ljava/util/Locale;)Ljava/text/Collator;
@@ -3308,6 +3311,7 @@
 
     return-void
 
+    .line 38
     :array_0
     .array-data 0x2
         0x16t 0x54t
@@ -3718,6 +3722,7 @@
         0x28t 0x66t
     .end array-data
 
+    .line 91
     :array_1
     .array-data 0x1
         0x41t
@@ -8594,10 +8599,13 @@
     .parameter "hasChinaCollator"
 
     .prologue
+    .line 341
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 342
     iput-boolean p1, p0, Lcom/android/internal/util/HanziToPinyin;->mHasChinaCollator:Z
 
+    .line 343
     return-void
 .end method
 
@@ -8618,11 +8626,13 @@
     .end annotation
 
     .prologue
+    .line 490
     .local p2, tokens:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/util/HanziToPinyin$Token;>;"
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 491
     .local v0, str:Ljava/lang/String;
     new-instance v1, Lcom/android/internal/util/HanziToPinyin$Token;
 
@@ -8630,10 +8640,12 @@
 
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 492
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
+    .line 493
     return-void
 .end method
 
@@ -8641,29 +8653,35 @@
     .locals 5
 
     .prologue
+    .line 346
     const-class v2, Lcom/android/internal/util/HanziToPinyin;
 
     monitor-enter v2
 
+    .line 347
     :try_start_0
     sget-object v3, Lcom/android/internal/util/HanziToPinyin;->sInstance:Lcom/android/internal/util/HanziToPinyin;
 
     if-eqz v3, :cond_0
 
+    .line 348
     sget-object v3, Lcom/android/internal/util/HanziToPinyin;->sInstance:Lcom/android/internal/util/HanziToPinyin;
 
     monitor-exit v2
 
     move-object v2, v3
 
+    .line 360
     :goto_0
     return-object v2
 
+    .line 351
     :cond_0
     invoke-static {}, Ljava/text/Collator;->getAvailableLocales()[Ljava/util/Locale;
 
     move-result-object v1
 
+    .line 352
     .local v1, locale:[Ljava/util/Locale;
     const/4 v0, 0x0
 
@@ -8673,6 +8691,7 @@
 
     if-ge v0, v3, :cond_2
 
+    .line 353
     aget-object v3, v1, v0
 
     sget-object v4, Ljava/util/Locale;->CHINA:Ljava/util/Locale;
@@ -8683,6 +8702,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 354
     new-instance v3, Lcom/android/internal/util/HanziToPinyin;
 
     const/4 v4, 0x1
@@ -8691,6 +8711,7 @@
 
     sput-object v3, Lcom/android/internal/util/HanziToPinyin;->sInstance:Lcom/android/internal/util/HanziToPinyin;
 
+    .line 355
     sget-object v3, Lcom/android/internal/util/HanziToPinyin;->sInstance:Lcom/android/internal/util/HanziToPinyin;
 
     monitor-exit v2
@@ -8699,11 +8720,13 @@
 
     goto :goto_0
 
+    .line 352
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
+    .line 358
     :cond_2
     const-string v3, "HanziToPinyin"
 
@@ -8711,6 +8734,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 359
     new-instance v3, Lcom/android/internal/util/HanziToPinyin;
 
     const/4 v4, 0x0
@@ -8719,6 +8743,7 @@
 
     sput-object v3, Lcom/android/internal/util/HanziToPinyin;->sInstance:Lcom/android/internal/util/HanziToPinyin;
 
+    .line 360
     sget-object v3, Lcom/android/internal/util/HanziToPinyin;->sInstance:Lcom/android/internal/util/HanziToPinyin;
 
     monitor-exit v2
@@ -8727,6 +8752,7 @@
 
     goto :goto_0
 
+    .line 361
     .end local v0           #i:I
     .end local v1           #locale:[Ljava/util/Locale;
     :catchall_0
@@ -8750,76 +8776,98 @@
 
     const/4 v11, 0x1
 
+    .line 365
     new-instance v7, Lcom/android/internal/util/HanziToPinyin$Token;
 
     invoke-direct {v7}, Lcom/android/internal/util/HanziToPinyin$Token;-><init>()V
 
+    .line 366
     .local v7, token:Lcom/android/internal/util/HanziToPinyin$Token;
     invoke-static {p1}, Ljava/lang/Character;->toString(C)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 367
     .local v4, letter:Ljava/lang/String;
     iput-object v4, v7, Lcom/android/internal/util/HanziToPinyin$Token;->source:Ljava/lang/String;
 
+    .line 368
     const/4 v5, -0x1
 
+    .line 370
     .local v5, offset:I
     const/16 v9, 0x100
 
     if-ge p1, v9, :cond_0
 
+    .line 371
     iput v11, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
+    .line 372
     iput-object v4, v7, Lcom/android/internal/util/HanziToPinyin$Token;->target:Ljava/lang/String;
 
+    .line 425
     :goto_0
     return-object v7
 
+    .line 374
     :cond_0
     const/16 v9, 0x3400
 
     if-ge p1, v9, :cond_1
 
+    .line 375
     iput v13, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
+    .line 376
     iput-object v4, v7, Lcom/android/internal/util/HanziToPinyin$Token;->target:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 379
     :cond_1
     sget-object v9, Lcom/android/internal/util/HanziToPinyin;->COLLATOR:Ljava/text/Collator;
 
-    const-string v10, "\u5416"
+    const-string/jumbo v10, "\u5416"
 
     invoke-virtual {v9, v4, v10}, Ljava/text/Collator;->compare(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
+    .line 380
     .local v1, cmp:I
     if-gez v1, :cond_2
 
+    .line 381
     iput v13, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
+    .line 382
     iput-object v4, v7, Lcom/android/internal/util/HanziToPinyin$Token;->target:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 384
     :cond_2
     if-nez v1, :cond_6
 
+    .line 385
     iput v12, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
+    .line 386
     const/4 v5, 0x0
 
+    .line 400
     :cond_3
     :goto_1
     iput v12, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
+    .line 401
     if-gez v5, :cond_4
 
+    .line 402
     const/4 v0, 0x0
 
+    .line 403
     .local v0, begin:I
     sget-object v9, Lcom/android/internal/util/HanziToPinyin;->UNIHANS:[C
 
@@ -8827,14 +8875,17 @@
 
     sub-int v2, v9, v11
 
+    .line 404
     .local v2, end:I
     :goto_2
     if-gt v0, v2, :cond_4
 
+    .line 405
     add-int v9, v0, v2
 
     div-int/lit8 v5, v9, 0x2
 
+    .line 406
     sget-object v9, Lcom/android/internal/util/HanziToPinyin;->UNIHANS:[C
 
     aget-char v9, v9, v5
@@ -8843,6 +8894,7 @@
 
     move-result-object v8
 
+    .line 407
     .local v8, unihan:Ljava/lang/String;
     sget-object v9, Lcom/android/internal/util/HanziToPinyin;->COLLATOR:Ljava/text/Collator;
 
@@ -8850,21 +8902,26 @@
 
     move-result v1
 
+    .line 408
     if-nez v1, :cond_8
 
+    .line 417
     .end local v0           #begin:I
     .end local v2           #end:I
     .end local v8           #unihan:Ljava/lang/String;
     :cond_4
     if-gez v1, :cond_5
 
+    .line 418
     add-int/lit8 v5, v5, -0x1
 
+    .line 420
     :cond_5
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 421
     .local v6, pinyin:Ljava/lang/StringBuilder;
     const/4 v3, 0x0
 
@@ -8886,6 +8943,7 @@
 
     if-eqz v9, :cond_a
 
+    .line 422
     sget-object v9, Lcom/android/internal/util/HanziToPinyin;->PINYINS:[[B
 
     aget-object v9, v9, v5
@@ -8896,34 +8954,42 @@
 
     invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 421
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
+    .line 388
     .end local v3           #j:I
     .end local v6           #pinyin:Ljava/lang/StringBuilder;
     :cond_6
     sget-object v9, Lcom/android/internal/util/HanziToPinyin;->COLLATOR:Ljava/text/Collator;
 
-    const-string v10, "\u5497"
+    const-string/jumbo v10, "\u5497"
 
     invoke-virtual {v9, v4, v10}, Ljava/text/Collator;->compare(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
+    .line 389
     if-lez v1, :cond_7
 
+    .line 390
     iput v13, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
+    .line 391
     iput-object v4, v7, Lcom/android/internal/util/HanziToPinyin$Token;->target:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 393
     :cond_7
     if-nez v1, :cond_3
 
+    .line 394
     iput v12, v7, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
+    .line 395
     sget-object v9, Lcom/android/internal/util/HanziToPinyin;->UNIHANS:[C
 
     array-length v9, v9
@@ -8932,21 +8998,25 @@
 
     goto :goto_1
 
+    .line 410
     .restart local v0       #begin:I
     .restart local v2       #end:I
     .restart local v8       #unihan:Ljava/lang/String;
     :cond_8
     if-lez v1, :cond_9
 
+    .line 411
     add-int/lit8 v0, v5, 0x1
 
     goto :goto_2
 
+    .line 413
     :cond_9
     sub-int v2, v5, v11
 
     goto :goto_2
 
+    .line 424
     .end local v0           #begin:I
     .end local v2           #end:I
     .end local v8           #unihan:Ljava/lang/String;
@@ -8980,10 +9050,12 @@
     .end annotation
 
     .prologue
+    .line 435
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
+    .line 436
     .local v6, tokens:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/util/HanziToPinyin$Token;>;"
     iget-boolean v7, p0, Lcom/android/internal/util/HanziToPinyin;->mHasChinaCollator:Z
 
@@ -8995,23 +9067,28 @@
 
     if-eqz v7, :cond_1
 
+    .line 485
     :cond_0
     :goto_0
     return-object v6
 
+    .line 440
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
+    .line 441
     .local v2, inputLength:I
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 442
     .local v3, sb:Ljava/lang/StringBuilder;
     const/4 v5, 0x1
 
+    .line 447
     .local v5, tokenType:I
     const/4 v1, 0x0
 
@@ -9019,34 +9096,41 @@
     :goto_1
     if-ge v1, v2, :cond_b
 
+    .line 448
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
+    .line 449
     .local v0, character:C
     const/16 v7, 0x20
 
     if-ne v0, v7, :cond_3
 
+    .line 450
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
 
     if-lez v7, :cond_2
 
+    .line 451
     invoke-direct {p0, v3, v6, v5}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
+    .line 447
     :cond_2
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 453
     :cond_3
     const/16 v7, 0x100
 
     if-ge v0, v7, :cond_5
 
+    .line 454
     const/4 v7, 0x1
 
     if-eq v5, v7, :cond_4
@@ -9057,20 +9141,25 @@
 
     if-lez v7, :cond_4
 
+    .line 455
     invoke-direct {p0, v3, v6, v5}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
+    .line 457
     :cond_4
     const/4 v5, 0x1
 
+    .line 458
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
+    .line 459
     :cond_5
     const/16 v7, 0x3400
 
     if-ge v0, v7, :cond_7
 
+    .line 460
     const/4 v7, 0x3
 
     if-eq v5, v7, :cond_6
@@ -9081,20 +9170,25 @@
 
     if-lez v7, :cond_6
 
+    .line 461
     invoke-direct {p0, v3, v6, v5}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
+    .line 463
     :cond_6
     const/4 v5, 0x3
 
+    .line 464
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
+    .line 466
     :cond_7
     invoke-direct {p0, v0}, Lcom/android/internal/util/HanziToPinyin;->getToken(C)Lcom/android/internal/util/HanziToPinyin$Token;
 
     move-result-object v4
 
+    .line 467
     .local v4, t:Lcom/android/internal/util/HanziToPinyin$Token;
     iget v7, v4, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
@@ -9102,21 +9196,26 @@
 
     if-ne v7, v8, :cond_9
 
+    .line 468
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
 
     if-lez v7, :cond_8
 
+    .line 469
     invoke-direct {p0, v3, v6, v5}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
+    .line 471
     :cond_8
     invoke-virtual {v6, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 472
     const/4 v5, 0x2
 
     goto :goto_2
 
+    .line 474
     :cond_9
     iget v7, v4, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
@@ -9128,15 +9227,19 @@
 
     if-lez v7, :cond_a
 
+    .line 475
     invoke-direct {p0, v3, v6, v5}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
+    .line 477
     :cond_a
     iget v5, v4, Lcom/android/internal/util/HanziToPinyin$Token;->type:I
 
+    .line 478
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
+    .line 482
     .end local v0           #character:C
     .end local v4           #t:Lcom/android/internal/util/HanziToPinyin$Token;
     :cond_b
@@ -9146,6 +9249,7 @@
 
     if-lez v7, :cond_0
 
+    .line 483
     invoke-direct {p0, v3, v6, v5}, Lcom/android/internal/util/HanziToPinyin;->addToken(Ljava/lang/StringBuilder;Ljava/util/ArrayList;I)V
 
     goto :goto_0

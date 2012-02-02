@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 353
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -41,12 +42,14 @@
     .parameter "doit"
 
     .prologue
+    .line 357
     iget-object v8, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v8, v8, Lcom/android/server/InputMethodManagerService;->mMethodMap:Ljava/util/HashMap;
 
     monitor-enter v8
 
+    .line 358
     :try_start_0
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -62,6 +65,7 @@
 
     move-result-object v2
 
+    .line 360
     .local v2, curInputMethodId:Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -71,15 +75,18 @@
 
     move-result v0
 
+    .line 361
     .local v0, N:I
     if-eqz v2, :cond_3
 
+    .line 362
     const/4 v3, 0x0
 
     .local v3, i:I
     :goto_0
     if-ge v3, v0, :cond_3
 
+    .line 363
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v9, v9, Lcom/android/server/InputMethodManagerService;->mMethodList:Ljava/util/ArrayList;
@@ -90,6 +97,7 @@
 
     check-cast v5, Landroid/view/inputmethod/InputMethodInfo;
 
+    .line 364
     .local v5, imi:Landroid/view/inputmethod/InputMethodInfo;
     invoke-virtual {v5}, Landroid/view/inputmethod/InputMethodInfo;->getId()Ljava/lang/String;
 
@@ -101,6 +109,7 @@
 
     if-eqz v9, :cond_2
 
+    .line 365
     move-object v1, p2
 
     .local v1, arr$:[Ljava/lang/String;
@@ -115,6 +124,7 @@
 
     aget-object v7, v1, v4
 
+    .line 366
     .local v7, pkg:Ljava/lang/String;
     invoke-virtual {v5}, Landroid/view/inputmethod/InputMethodInfo;->getPackageName()Ljava/lang/String;
 
@@ -126,14 +136,17 @@
 
     if-eqz v9, :cond_1
 
+    .line 367
     if-nez p4, :cond_0
 
+    .line 368
     const/4 v9, 0x1
 
     monitor-exit v8
 
     move v8, v9
 
+    .line 381
     .end local v1           #arr$:[Ljava/lang/String;
     .end local v3           #i:I
     .end local v4           #i$:I
@@ -143,6 +156,7 @@
     :goto_2
     return v8
 
+    .line 371
     .restart local v1       #arr$:[Ljava/lang/String;
     .restart local v3       #i:I
     .restart local v4       #i$:I
@@ -164,11 +178,13 @@
 
     invoke-static {v9, v10, v11}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
+    .line 373
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     #calls: Lcom/android/server/InputMethodManagerService;->chooseNewDefaultIMELocked()Z
     invoke-static {v9}, Lcom/android/server/InputMethodManagerService;->access$000(Lcom/android/server/InputMethodManagerService;)Z
 
+    .line 374
     const/4 v9, 0x1
 
     monitor-exit v8
@@ -177,11 +193,13 @@
 
     goto :goto_2
 
+    .line 365
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
+    .line 362
     .end local v1           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
     .end local v6           #len$:I
@@ -191,15 +209,18 @@
 
     goto :goto_0
 
+    .line 380
     .end local v3           #i:I
     .end local v5           #imi:Landroid/view/inputmethod/InputMethodInfo;
     :cond_3
     monitor-exit v8
 
+    .line 381
     const/4 v8, 0x0
 
     goto :goto_2
 
+    .line 380
     .end local v0           #N:I
     .end local v2           #curInputMethodId:Ljava/lang/String;
     :catchall_0
@@ -224,14 +245,17 @@
 
     const-string v8, "InputManagerService"
 
+    .line 386
     iget-object v8, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v8, v8, Lcom/android/server/InputMethodManagerService;->mMethodMap:Ljava/util/HashMap;
 
     monitor-enter v8
 
+    .line 387
     const/4 v3, 0x0
 
+    .line 388
     .local v3, curIm:Landroid/view/inputmethod/InputMethodInfo;
     :try_start_0
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -248,6 +272,7 @@
 
     move-result-object v4
 
+    .line 390
     .local v4, curInputMethodId:Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -257,15 +282,18 @@
 
     move-result v0
 
+    .line 391
     .local v0, N:I
     if-eqz v4, :cond_3
 
+    .line 392
     const/4 v5, 0x0
 
     .local v5, i:I
     :goto_0
     if-ge v5, v0, :cond_3
 
+    .line 393
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v9, v9, Lcom/android/server/InputMethodManagerService;->mMethodList:Ljava/util/ArrayList;
@@ -276,6 +304,7 @@
 
     check-cast v6, Landroid/view/inputmethod/InputMethodInfo;
 
+    .line 394
     .local v6, imi:Landroid/view/inputmethod/InputMethodInfo;
     invoke-virtual {v6}, Landroid/view/inputmethod/InputMethodInfo;->getId()Ljava/lang/String;
 
@@ -287,8 +316,10 @@
 
     if-eqz v9, :cond_0
 
+    .line 395
     move-object v3, v6
 
+    .line 397
     :cond_0
     invoke-virtual {v6}, Landroid/view/inputmethod/InputMethodInfo;->getPackageName()Ljava/lang/String;
 
@@ -298,11 +329,13 @@
 
     move-result v1
 
+    .line 398
     .local v1, change:I
     if-eq v1, v12, :cond_1
 
     if-ne v1, v13, :cond_2
 
+    .line 400
     :cond_1
     const-string v9, "InputManagerService"
 
@@ -330,6 +363,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 402
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v6}, Landroid/view/inputmethod/InputMethodInfo;->getId()Ljava/lang/String;
@@ -340,11 +374,13 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/InputMethodManagerService;->setInputMethodEnabledLocked(Ljava/lang/String;Z)Z
 
+    .line 392
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
+    .line 407
     .end local v1           #change:I
     .end local v5           #i:I
     .end local v6           #imi:Landroid/view/inputmethod/InputMethodInfo;
@@ -361,11 +397,14 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/InputMethodManagerService;->buildInputMethodListLocked(Ljava/util/ArrayList;Ljava/util/HashMap;)V
 
+    .line 409
     const/4 v2, 0x0
 
+    .line 411
     .local v2, changed:Z
     if-eqz v3, :cond_5
 
+    .line 412
     invoke-virtual {v3}, Landroid/view/inputmethod/InputMethodInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v9
@@ -376,14 +415,17 @@
 
     move-result v1
 
+    .line 413
     .restart local v1       #change:I
     if-eq v1, v12, :cond_4
 
     if-ne v1, v13, :cond_5
 
+    .line 415
     :cond_4
     const/4 v7, 0x0
 
+    .line 417
     .local v7, si:Landroid/content/pm/ServiceInfo;
     :try_start_1
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -407,9 +449,11 @@
 
     move-result-object v7
 
+    .line 421
     :goto_1
     if-nez v7, :cond_5
 
+    .line 424
     :try_start_2
     const-string v9, "InputManagerService"
 
@@ -433,6 +477,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 425
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     #calls: Lcom/android/server/InputMethodManagerService;->chooseNewDefaultIMELocked()Z
@@ -442,18 +487,23 @@
 
     if-nez v9, :cond_5
 
+    .line 426
     const/4 v2, 0x1
 
+    .line 427
     const/4 v3, 0x0
 
+    .line 428
     const-string v4, ""
 
+    .line 429
     const-string v9, "InputManagerService"
 
     const-string v10, "Unsetting current input method"
 
     invoke-static {v9, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 430
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v9, v9, Lcom/android/server/InputMethodManagerService;->mContext:Landroid/content/Context;
@@ -466,11 +516,13 @@
 
     invoke-static {v9, v10, v4}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
+    .line 438
     .end local v1           #change:I
     .end local v7           #si:Landroid/content/pm/ServiceInfo;
     :cond_5
     if-nez v3, :cond_6
 
+    .line 441
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     #calls: Lcom/android/server/InputMethodManagerService;->chooseNewDefaultIMELocked()Z
@@ -478,18 +530,23 @@
 
     move-result v2
 
+    .line 444
     :cond_6
     if-eqz v2, :cond_7
 
+    .line 445
     iget-object v9, p0, Lcom/android/server/InputMethodManagerService$MyPackageMonitor;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v9}, Lcom/android/server/InputMethodManagerService;->updateFromSettingsLocked()V
 
+    .line 447
     :cond_7
     monitor-exit v8
 
+    .line 448
     return-void
 
+    .line 447
     .end local v0           #N:I
     .end local v2           #changed:Z
     .end local v4           #curInputMethodId:Ljava/lang/String;
@@ -502,6 +559,7 @@
 
     throw v9
 
+    .line 419
     .restart local v0       #N:I
     .restart local v1       #change:I
     .restart local v2       #changed:Z

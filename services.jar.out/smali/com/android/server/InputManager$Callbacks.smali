@@ -34,6 +34,7 @@
     .parameter
 
     .prologue
+    .line 356
     iput-object p1, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,6 +48,7 @@
     .parameter "x1"
 
     .prologue
+    .line 356
     invoke-direct {p0, p1}, Lcom/android/server/InputManager$Callbacks;-><init>(Lcom/android/server/InputManager;)V
 
     return-void
@@ -60,6 +62,7 @@
     .parameter "injectorUid"
 
     .prologue
+    .line 400
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mContext:Landroid/content/Context;
@@ -90,6 +93,7 @@
     .locals 2
 
     .prologue
+    .line 413
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mContext:Landroid/content/Context;
@@ -114,6 +118,7 @@
     .locals 2
 
     .prologue
+    .line 407
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mContext:Landroid/content/Context;
@@ -138,13 +143,16 @@
     .locals 10
 
     .prologue
+    .line 498
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
+    .line 501
     .local v5, names:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
+    .line 503
     .local v6, parser:Lorg/xmlpull/v1/XmlPullParser;
     new-instance v0, Ljava/io/File;
 
@@ -156,9 +164,11 @@
 
     invoke-direct {v0, v7, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 504
     .local v0, confFile:Ljava/io/File;
     const/4 v1, 0x0
 
+    .line 506
     .local v1, confreader:Ljava/io/FileReader;
     :try_start_0
     new-instance v2, Ljava/io/FileReader;
@@ -169,6 +179,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_6
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
+    .line 507
     .end local v1           #confreader:Ljava/io/FileReader;
     .local v2, confreader:Ljava/io/FileReader;
     :try_start_1
@@ -176,16 +187,20 @@
 
     move-result-object v6
 
+    .line 508
     invoke-interface {v6, v2}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
+    .line 509
     const-string v7, "devices"
 
     invoke-static {v6, v7}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
+    .line 512
     :cond_0
     :goto_0
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
+    .line 513
     const-string v7, "device"
 
     invoke-interface {v6}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -202,6 +217,7 @@
 
     if-nez v7, :cond_3
 
+    .line 526
     if-eqz v2, :cond_1
 
     :try_start_2
@@ -213,6 +229,7 @@
     :goto_1
     move-object v1, v2
 
+    .line 529
     .end local v2           #confreader:Ljava/io/FileReader;
     .restart local v1       #confreader:Ljava/io/FileReader;
     :cond_2
@@ -232,6 +249,7 @@
 
     return-object p0
 
+    .line 516
     .end local v1           #confreader:Ljava/io/FileReader;
     .restart local v2       #confreader:Ljava/io/FileReader;
     .restart local p0
@@ -245,9 +263,11 @@
 
     move-result-object v4
 
+    .line 517
     .local v4, name:Ljava/lang/String;
     if-eqz v4, :cond_0
 
+    .line 518
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -256,12 +276,14 @@
 
     goto :goto_0
 
+    .line 521
     .end local v4           #name:Ljava/lang/String;
     :catch_0
     move-exception v7
 
     move-object v1, v2
 
+    .line 526
     .end local v2           #confreader:Ljava/io/FileReader;
     .restart local v1       #confreader:Ljava/io/FileReader;
     :goto_3
@@ -279,11 +301,13 @@
 
     goto :goto_2
 
+    .line 523
     :catch_2
     move-exception v7
 
     move-object v3, v7
 
+    .line 524
     .local v3, e:Ljava/lang/Exception;
     :goto_4
     :try_start_5
@@ -321,6 +345,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 526
     if-eqz v1, :cond_2
 
     :try_start_6
@@ -367,6 +392,7 @@
     .restart local v1       #confreader:Ljava/io/FileReader;
     goto :goto_5
 
+    .line 523
     .end local v1           #confreader:Ljava/io/FileReader;
     .restart local v2       #confreader:Ljava/io/FileReader;
     :catch_5
@@ -380,6 +406,7 @@
     .restart local v1       #confreader:Ljava/io/FileReader;
     goto :goto_4
 
+    .line 521
     :catch_6
     move-exception v7
 
@@ -397,10 +424,12 @@
 
     const-string v8, "."
 
+    .line 474
     new-instance v3, Ljava/util/Properties;
 
     invoke-direct {v3}, Ljava/util/Properties;-><init>()V
 
+    .line 475
     .local v3, properties:Ljava/util/Properties;
     new-instance v1, Ljava/io/File;
 
@@ -434,6 +463,7 @@
 
     invoke-direct {v1, v4, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 477
     .local v1, calibrationFile:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -441,6 +471,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 479
     :try_start_0
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -450,11 +481,13 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 490
     :goto_0
     new-instance v0, Lcom/android/server/InputManager$InputDeviceCalibration;
 
     invoke-direct {v0, v7}, Lcom/android/server/InputManager$InputDeviceCalibration;-><init>(Lcom/android/server/InputManager$1;)V
 
+    .line 491
     .local v0, calibration:Lcom/android/server/InputManager$InputDeviceCalibration;
     invoke-virtual {v3}, Ljava/util/Properties;->keySet()Ljava/util/Set;
 
@@ -475,6 +508,7 @@
 
     iput-object p0, v0, Lcom/android/server/InputManager$InputDeviceCalibration;->keys:[Ljava/lang/String;
 
+    .line 492
     invoke-virtual {v3}, Ljava/util/Properties;->values()Ljava/util/Collection;
 
     move-result-object v4
@@ -495,16 +529,19 @@
 
     move-object v4, v0
 
+    .line 493
     .end local v0           #calibration:Lcom/android/server/InputManager$InputDeviceCalibration;
     :goto_1
     return-object v4
 
+    .line 480
     .restart local p0
     :catch_0
     move-exception v4
 
     move-object v2, v4
 
+    .line 481
     .local v2, ex:Ljava/io/IOException;
     const-string v4, "InputManager-Callbacks"
 
@@ -546,6 +583,7 @@
 
     goto :goto_0
 
+    .line 485
     .end local v2           #ex:Ljava/io/IOException;
     :cond_0
     const-string v4, "InputManager-Callbacks"
@@ -578,6 +616,7 @@
 
     move-object v4, v7
 
+    .line 487
     goto :goto_1
 .end method
 
@@ -585,8 +624,10 @@
     .locals 2
 
     .prologue
+    .line 534
     const/4 v0, 0x0
 
+    .line 536
     .local v0, result:I
     :try_start_0
     const-string v1, "windowsmgr.max_events_per_sec"
@@ -601,16 +642,20 @@
 
     move-result v0
 
+    .line 539
     :goto_0
     const/4 v1, 0x1
 
     if-ge v0, v1, :cond_0
 
+    .line 540
     const/16 v0, 0x3c
 
+    .line 542
     :cond_0
     return v0
 
+    .line 537
     :catch_0
     move-exception v1
 
@@ -621,6 +666,7 @@
     .locals 1
 
     .prologue
+    .line 548
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->IsShutDownStarted()Z
 
     move-result v0
@@ -633,10 +679,12 @@
     .parameter "deviceName"
 
     .prologue
+    .line 425
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
+    .line 428
     .local v8, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/server/InputManager$VirtualKeyDefinition;>;"
     :try_start_0
     new-instance v3, Ljava/io/FileInputStream;
@@ -661,11 +709,13 @@
 
     invoke-direct {v3, v10}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
+    .line 430
     .local v3, fis:Ljava/io/FileInputStream;
     new-instance v5, Ljava/io/InputStreamReader;
 
     invoke-direct {v5, v3}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
+    .line 431
     .local v5, isr:Ljava/io/InputStreamReader;
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -673,20 +723,24 @@
 
     invoke-direct {v1, v5, v10}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;I)V
 
+    .line 432
     .local v1, br:Ljava/io/BufferedReader;
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v9
 
+    .line 433
     .local v9, str:Ljava/lang/String;
     if-eqz v9, :cond_1
 
+    .line 434
     const-string v10, ":"
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
+    .line 436
     .local v6, it:[Ljava/lang/String;
     array-length v10, v6
 
@@ -694,6 +748,7 @@
 
     sub-int v0, v10, v11
 
+    .line 437
     .local v0, N:I
     const/4 v4, 0x0
 
@@ -701,6 +756,7 @@
     :goto_0
     if-gt v4, v0, :cond_1
 
+    .line 438
     const-string v10, "0x01"
 
     aget-object v11, v6, v4
@@ -711,6 +767,7 @@
 
     if-nez v10, :cond_0
 
+    .line 439
     const-string v10, "InputManager-Callbacks"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -758,11 +815,13 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
+    .line 437
     :goto_1
     add-int/lit8 v4, v4, 0x6
 
     goto :goto_0
 
+    .line 444
     :cond_0
     :try_start_1
     new-instance v7, Lcom/android/server/InputManager$VirtualKeyDefinition;
@@ -771,6 +830,7 @@
 
     invoke-direct {v7, v10}, Lcom/android/server/InputManager$VirtualKeyDefinition;-><init>(Lcom/android/server/InputManager$1;)V
 
+    .line 445
     .local v7, key:Lcom/android/server/InputManager$VirtualKeyDefinition;
     add-int/lit8 v10, v4, 0x1
 
@@ -782,6 +842,7 @@
 
     iput v10, v7, Lcom/android/server/InputManager$VirtualKeyDefinition;->scanCode:I
 
+    .line 446
     add-int/lit8 v10, v4, 0x2
 
     aget-object v10, v6, v10
@@ -792,6 +853,7 @@
 
     iput v10, v7, Lcom/android/server/InputManager$VirtualKeyDefinition;->centerX:I
 
+    .line 447
     add-int/lit8 v10, v4, 0x3
 
     aget-object v10, v6, v10
@@ -802,6 +864,7 @@
 
     iput v10, v7, Lcom/android/server/InputManager$VirtualKeyDefinition;->centerY:I
 
+    .line 448
     add-int/lit8 v10, v4, 0x4
 
     aget-object v10, v6, v10
@@ -812,6 +875,7 @@
 
     iput v10, v7, Lcom/android/server/InputManager$VirtualKeyDefinition;->width:I
 
+    .line 449
     add-int/lit8 v10, v4, 0x5
 
     aget-object v10, v6, v10
@@ -822,6 +886,7 @@
 
     iput v10, v7, Lcom/android/server/InputManager$VirtualKeyDefinition;->height:I
 
+    .line 454
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
@@ -830,12 +895,14 @@
 
     goto :goto_1
 
+    .line 455
     .end local v7           #key:Lcom/android/server/InputManager$VirtualKeyDefinition;
     :catch_0
     move-exception v10
 
     move-object v2, v10
 
+    .line 456
     .local v2, e:Ljava/lang/NumberFormatException;
     :try_start_2
     const-string v10, "InputManager-Callbacks"
@@ -885,6 +952,7 @@
 
     goto :goto_1
 
+    .line 462
     .end local v0           #N:I
     .end local v1           #br:Ljava/io/BufferedReader;
     .end local v2           #e:Ljava/lang/NumberFormatException;
@@ -898,6 +966,7 @@
 
     move-object v2, v10
 
+    .line 463
     .local v2, e:Ljava/io/FileNotFoundException;
     const-string v10, "InputManager-Callbacks"
 
@@ -927,6 +996,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 468
     .end local v2           #e:Ljava/io/FileNotFoundException;
     :goto_2
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
@@ -944,6 +1014,7 @@
 
     return-object p0
 
+    .line 461
     .restart local v1       #br:Ljava/io/BufferedReader;
     .restart local v3       #fis:Ljava/io/FileInputStream;
     .restart local v5       #isr:Ljava/io/InputStreamReader;
@@ -958,6 +1029,7 @@
 
     goto :goto_2
 
+    .line 464
     .end local v1           #br:Ljava/io/BufferedReader;
     .end local v3           #fis:Ljava/io/FileInputStream;
     .end local v5           #isr:Ljava/io/InputStreamReader;
@@ -967,6 +1039,7 @@
 
     move-object v2, v10
 
+    .line 465
     .local v2, e:Ljava/io/IOException;
     const-string v10, "InputManager-Callbacks"
 
@@ -1003,6 +1076,7 @@
     .locals 2
 
     .prologue
+    .line 419
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mContext:Landroid/content/Context;
@@ -1035,6 +1109,7 @@
     .parameter "policyFlags"
 
     .prologue
+    .line 394
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mWindowManagerService:Lcom/android/server/WindowManagerService;
@@ -1078,6 +1153,7 @@
     .parameter "isScreenOn"
 
     .prologue
+    .line 386
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mWindowManagerService:Lcom/android/server/WindowManagerService;
@@ -1114,6 +1190,7 @@
     .parameter "inputChannel"
 
     .prologue
+    .line 380
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mWindowManagerService:Lcom/android/server/WindowManagerService;
@@ -1135,6 +1212,7 @@
     .parameter "whenNanos"
 
     .prologue
+    .line 365
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mWindowManagerService:Lcom/android/server/WindowManagerService;
@@ -1144,6 +1222,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/WindowManagerService;->sendNewConfiguration()V
 
+    .line 366
     return-void
 .end method
 
@@ -1152,6 +1231,7 @@
     .parameter "inputChannel"
 
     .prologue
+    .line 375
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mWindowManagerService:Lcom/android/server/WindowManagerService;
@@ -1163,6 +1243,7 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/WindowManagerService$InputMonitor;->notifyInputChannelBroken(Landroid/view/InputChannel;)V
 
+    .line 376
     return-void
 .end method
 
@@ -1172,6 +1253,7 @@
     .parameter "lidOpen"
 
     .prologue
+    .line 370
     iget-object v0, p0, Lcom/android/server/InputManager$Callbacks;->this$0:Lcom/android/server/InputManager;
 
     #getter for: Lcom/android/server/InputManager;->mWindowManagerService:Lcom/android/server/WindowManagerService;
@@ -1183,5 +1265,6 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/WindowManagerService$InputMonitor;->notifyLidSwitchChanged(JZ)V
 
+    .line 371
     return-void
 .end method

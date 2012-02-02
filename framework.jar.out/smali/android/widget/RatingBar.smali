@@ -25,10 +25,12 @@
     .parameter "context"
 
     .prologue
+    .line 121
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 122
     return-void
 .end method
 
@@ -38,10 +40,12 @@
     .parameter "attrs"
 
     .prologue
+    .line 117
     const v0, 0x101007c
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 118
     return-void
 .end method
 
@@ -60,18 +64,22 @@
 
     const/4 v6, 0x0
 
+    .line 87
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/AbsSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 80
     const/4 v4, 0x5
 
     iput v4, p0, Landroid/widget/RatingBar;->mNumStars:I
 
+    .line 89
     sget-object v4, Lcom/android/internal/R$styleable;->RatingBar:[I
 
     invoke-virtual {p1, p2, v4, p3, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
+    .line 91
     .local v0, a:Landroid/content/res/TypedArray;
     iget v4, p0, Landroid/widget/RatingBar;->mNumStars:I
 
@@ -79,6 +87,7 @@
 
     move-result v1
 
+    .line 92
     .local v1, numStars:I
     const/4 v4, 0x3
 
@@ -95,10 +104,12 @@
 
     invoke-virtual {p0, v4}, Landroid/widget/RatingBar;->setIsIndicator(Z)V
 
+    .line 93
     invoke-virtual {v0, v9, v7}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
+    .line 94
     .local v2, rating:F
     const/4 v4, 0x2
 
@@ -106,36 +117,45 @@
 
     move-result v3
 
+    .line 95
     .local v3, stepSize:F
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 97
     if-lez v1, :cond_0
 
     iget v4, p0, Landroid/widget/RatingBar;->mNumStars:I
 
     if-eq v1, v4, :cond_0
 
+    .line 98
     invoke-virtual {p0, v1}, Landroid/widget/RatingBar;->setNumStars(I)V
 
+    .line 101
     :cond_0
     cmpl-float v4, v3, v8
 
     if-ltz v4, :cond_3
 
+    .line 102
     invoke-virtual {p0, v3}, Landroid/widget/RatingBar;->setStepSize(F)V
 
+    .line 107
     :goto_1
     cmpl-float v4, v2, v8
 
     if-ltz v4, :cond_1
 
+    .line 108
     invoke-virtual {p0, v2}, Landroid/widget/RatingBar;->setRating(F)V
 
+    .line 113
     :cond_1
     const v4, 0x3f8ccccd
 
     iput v4, p0, Landroid/widget/AbsSeekBar;->mTouchProgressOffset:F
 
+    .line 114
     return-void
 
     .end local v2           #rating:F
@@ -143,8 +163,10 @@
     :cond_2
     move v5, v6
 
+    .line 92
     goto :goto_0
 
+    .line 104
     .restart local v2       #rating:F
     .restart local v3       #stepSize:F
     :cond_3
@@ -161,10 +183,12 @@
     .prologue
     const/high16 v1, 0x3f80
 
+    .line 233
     iget v0, p0, Landroid/widget/RatingBar;->mNumStars:I
 
     if-lez v0, :cond_0
 
+    .line 234
     invoke-virtual {p0}, Landroid/widget/RatingBar;->getMax()I
 
     move-result v0
@@ -179,6 +203,7 @@
 
     div-float/2addr v0, v1
 
+    .line 236
     :goto_0
     return v0
 
@@ -193,10 +218,12 @@
     .parameter "progress"
 
     .prologue
+    .line 267
     invoke-direct {p0}, Landroid/widget/RatingBar;->getProgressPerStar()F
 
     move-result v1
 
+    .line 268
     .local v1, ratio:F
     const/4 v3, 0x0
 
@@ -204,10 +231,12 @@
 
     if-lez v3, :cond_0
 
+    .line 269
     int-to-float v3, p1
 
     div-float v0, v3, v1
 
+    .line 270
     .local v0, progressInStars:F
     float-to-double v3, v0
 
@@ -221,9 +250,11 @@
 
     double-to-int v2, v3
 
+    .line 271
     .local v2, secondaryProgress:I
     invoke-virtual {p0, v2}, Landroid/widget/RatingBar;->setSecondaryProgress(I)V
 
+    .line 273
     .end local v0           #progressInStars:F
     .end local v2           #secondaryProgress:I
     :cond_0
@@ -237,10 +268,12 @@
     .parameter "fromUser"
 
     .prologue
+    .line 310
     iget-object v0, p0, Landroid/widget/RatingBar;->mOnRatingBarChangeListener:Landroid/widget/RatingBar$OnRatingBarChangeListener;
 
     if-eqz v0, :cond_0
 
+    .line 311
     iget-object v0, p0, Landroid/widget/RatingBar;->mOnRatingBarChangeListener:Landroid/widget/RatingBar$OnRatingBarChangeListener;
 
     invoke-virtual {p0}, Landroid/widget/RatingBar;->getRating()F
@@ -249,6 +282,7 @@
 
     invoke-interface {v0, p0, v1, p1}, Landroid/widget/RatingBar$OnRatingBarChangeListener;->onRatingChanged(Landroid/widget/RatingBar;FZ)V
 
+    .line 314
     :cond_0
     return-void
 .end method
@@ -257,6 +291,7 @@
     .locals 1
 
     .prologue
+    .line 243
     new-instance v0, Landroid/graphics/drawable/shapes/RectShape;
 
     invoke-direct {v0}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
@@ -268,6 +303,7 @@
     .locals 1
 
     .prologue
+    .line 182
     iget v0, p0, Landroid/widget/RatingBar;->mNumStars:I
 
     return v0
@@ -277,6 +313,7 @@
     .locals 1
 
     .prologue
+    .line 138
     iget-object v0, p0, Landroid/widget/RatingBar;->mOnRatingBarChangeListener:Landroid/widget/RatingBar$OnRatingBarChangeListener;
 
     return-object v0
@@ -286,6 +323,7 @@
     .locals 2
 
     .prologue
+    .line 200
     invoke-virtual {p0}, Landroid/widget/RatingBar;->getProgress()I
 
     move-result v0
@@ -305,6 +343,7 @@
     .locals 2
 
     .prologue
+    .line 226
     invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
 
     move-result v0
@@ -326,6 +365,7 @@
     .locals 1
 
     .prologue
+    .line 156
     iget-boolean v0, p0, Landroid/widget/AbsSeekBar;->mIsUserSeekable:Z
 
     if-nez v0, :cond_0
@@ -345,12 +385,15 @@
     .locals 1
 
     .prologue
+    .line 305
     invoke-super {p0}, Landroid/widget/AbsSeekBar;->onKeyChange()V
 
+    .line 306
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/widget/RatingBar;->dispatchRatingChange(Z)V
 
+    .line 307
     return-void
 .end method
 
@@ -360,15 +403,18 @@
     .parameter "heightMeasureSpec"
 
     .prologue
+    .line 277
     monitor-enter p0
 
     :try_start_0
     invoke-super {p0, p1, p2}, Landroid/widget/AbsSeekBar;->onMeasure(II)V
 
+    .line 279
     iget-object v1, p0, Landroid/widget/ProgressBar;->mSampleTile:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_0
 
+    .line 282
     iget-object v1, p0, Landroid/widget/ProgressBar;->mSampleTile:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -379,6 +425,7 @@
 
     mul-int v0, v1, v2
 
+    .line 283
     .local v0, width:I
     invoke-static {v0, p1}, Landroid/widget/RatingBar;->resolveSize(II)I
 
@@ -390,12 +437,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 285
     .end local v0           #width:I
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 277
     :catchall_0
     move-exception v1
 
@@ -410,20 +459,25 @@
     .parameter "fromUser"
 
     .prologue
+    .line 248
     invoke-super {p0, p1, p2}, Landroid/widget/AbsSeekBar;->onProgressRefresh(FZ)V
 
+    .line 251
     invoke-virtual {p0}, Landroid/widget/RatingBar;->getProgress()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Landroid/widget/RatingBar;->updateSecondaryProgress(I)V
 
+    .line 253
     if-nez p2, :cond_0
 
+    .line 255
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/RatingBar;->dispatchRatingChange(Z)V
 
+    .line 257
     :cond_0
     return-void
 .end method
@@ -432,14 +486,17 @@
     .locals 1
 
     .prologue
+    .line 289
     invoke-virtual {p0}, Landroid/widget/RatingBar;->getProgress()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RatingBar;->mProgressOnStartTracking:I
 
+    .line 291
     invoke-super {p0}, Landroid/widget/AbsSeekBar;->onStartTrackingTouch()V
 
+    .line 292
     return-void
 .end method
 
@@ -447,8 +504,10 @@
     .locals 2
 
     .prologue
+    .line 296
     invoke-super {p0}, Landroid/widget/AbsSeekBar;->onStopTrackingTouch()V
 
+    .line 298
     invoke-virtual {p0}, Landroid/widget/RatingBar;->getProgress()I
 
     move-result v0
@@ -457,10 +516,12 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 299
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/widget/RatingBar;->dispatchRatingChange(Z)V
 
+    .line 301
     :cond_0
     return-void
 .end method
@@ -474,6 +535,7 @@
 
     const/4 v1, 0x0
 
+    .line 148
     if-nez p1, :cond_0
 
     move v0, v2
@@ -481,6 +543,7 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/AbsSeekBar;->mIsUserSeekable:Z
 
+    .line 149
     if-nez p1, :cond_1
 
     move v0, v2
@@ -488,16 +551,19 @@
     :goto_1
     invoke-virtual {p0, v0}, Landroid/widget/RatingBar;->setFocusable(Z)V
 
+    .line 150
     return-void
 
     :cond_0
     move v0, v1
 
+    .line 148
     goto :goto_0
 
     :cond_1
     move v0, v1
 
+    .line 149
     goto :goto_1
 .end method
 
@@ -506,15 +572,18 @@
     .parameter "max"
 
     .prologue
+    .line 319
     monitor-enter p0
 
     if-gtz p1, :cond_0
 
+    .line 324
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 323
     :cond_0
     :try_start_0
     invoke-super {p0, p1}, Landroid/widget/AbsSeekBar;->setMax(I)V
@@ -523,6 +592,7 @@
 
     goto :goto_0
 
+    .line 319
     :catchall_0
     move-exception v0
 
@@ -536,14 +606,18 @@
     .parameter "numStars"
 
     .prologue
+    .line 167
     if-gtz p1, :cond_0
 
+    .line 175
     :goto_0
     return-void
 
+    .line 171
     :cond_0
     iput p1, p0, Landroid/widget/RatingBar;->mNumStars:I
 
+    .line 174
     invoke-virtual {p0}, Landroid/widget/RatingBar;->requestLayout()V
 
     goto :goto_0
@@ -554,8 +628,10 @@
     .parameter "listener"
 
     .prologue
+    .line 130
     iput-object p1, p0, Landroid/widget/RatingBar;->mOnRatingBarChangeListener:Landroid/widget/RatingBar$OnRatingBarChangeListener;
 
+    .line 131
     return-void
 .end method
 
@@ -564,6 +640,7 @@
     .parameter "rating"
 
     .prologue
+    .line 191
     invoke-direct {p0}, Landroid/widget/RatingBar;->getProgressPerStar()F
 
     move-result v0
@@ -576,6 +653,7 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/RatingBar;->setProgress(I)V
 
+    .line 192
     return-void
 .end method
 
@@ -584,15 +662,18 @@
     .parameter "stepSize"
 
     .prologue
+    .line 210
     const/4 v2, 0x0
 
     cmpg-float v2, p1, v2
 
     if-gtz v2, :cond_0
 
+    .line 218
     :goto_0
     return-void
 
+    .line 214
     :cond_0
     iget v2, p0, Landroid/widget/RatingBar;->mNumStars:I
 
@@ -600,6 +681,7 @@
 
     div-float v0, v2, p1
 
+    .line 215
     .local v0, newMax:F
     invoke-virtual {p0}, Landroid/widget/RatingBar;->getMax()I
 
@@ -619,11 +701,13 @@
 
     float-to-int v1, v2
 
+    .line 216
     .local v1, newProgress:I
     float-to-int v2, v0
 
     invoke-virtual {p0, v2}, Landroid/widget/RatingBar;->setMax(I)V
 
+    .line 217
     invoke-virtual {p0, v1}, Landroid/widget/RatingBar;->setProgress(I)V
 
     goto :goto_0

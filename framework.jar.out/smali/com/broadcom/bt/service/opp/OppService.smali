@@ -22,12 +22,15 @@
     .locals 1
 
     .prologue
+    .line 34
     const/4 v0, 0x0
 
     sput v0, Lcom/broadcom/bt/service/opp/OppService;->mRefs:I
 
+    .line 44
     invoke-static {}, Lcom/broadcom/bt/service/opp/OppService;->classInitNative()V
 
+    .line 45
     return-void
 .end method
 
@@ -36,18 +39,22 @@
     .parameter "context"
 
     .prologue
+    .line 60
     invoke-direct {p0}, Lcom/broadcom/bt/service/opp/IOppService$Stub;-><init>()V
 
+    .line 37
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/broadcom/bt/service/opp/OppService;->isFinished:Z
 
+    .line 63
     sget v0, Lcom/broadcom/bt/service/opp/OppService;->mRefs:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Lcom/broadcom/bt/service/opp/OppService;->mRefs:I
 
+    .line 64
     const-string v0, "OppService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,6 +79,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 66
     return-void
 .end method
 
@@ -124,6 +132,7 @@
     .prologue
     const-string v1, "OppService"
 
+    .line 137
     monitor-enter p0
 
     :try_start_0
@@ -133,21 +142,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 139
     invoke-direct {p0}, Lcom/broadcom/bt/service/opp/OppService;->closeOpcSessionNative()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 143
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 140
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 141
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "OppService"
@@ -160,6 +173,7 @@
 
     goto :goto_0
 
+    .line 137
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -180,6 +194,7 @@
     .prologue
     const-string v1, "OppService"
 
+    .line 151
     monitor-enter p0
 
     :try_start_0
@@ -189,21 +204,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 153
     invoke-direct {p0}, Lcom/broadcom/bt/service/opp/OppService;->closeOpsSessionNative()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 157
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 154
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 155
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "OppService"
@@ -216,6 +235,7 @@
 
     goto :goto_0
 
+    .line 151
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -236,6 +256,7 @@
     .prologue
     const-string v1, "OppService"
 
+    .line 123
     monitor-enter p0
 
     :try_start_0
@@ -245,21 +266,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 125
     invoke-direct {p0}, Lcom/broadcom/bt/service/opp/OppService;->enableOpcSessionNative()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 129
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 126
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 127
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "OppService"
@@ -272,6 +297,7 @@
 
     goto :goto_0
 
+    .line 123
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -293,6 +319,7 @@
     .prologue
     const-string v1, "OppService"
 
+    .line 196
     monitor-enter p0
 
     :try_start_0
@@ -324,21 +351,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 198
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/opp/OppService;->exchangeVcardNative(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 202
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 199
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 200
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "OppService"
@@ -351,6 +382,7 @@
 
     goto :goto_0
 
+    .line 196
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -369,8 +401,10 @@
     .end annotation
 
     .prologue
+    .line 92
     invoke-virtual {p0}, Lcom/broadcom/bt/service/opp/OppService;->finish()V
 
+    .line 94
     sget v0, Lcom/broadcom/bt/service/opp/OppService;->mRefs:I
 
     const/4 v1, 0x1
@@ -379,6 +413,7 @@
 
     sput v0, Lcom/broadcom/bt/service/opp/OppService;->mRefs:I
 
+    .line 95
     const-string v0, "OppService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -403,8 +438,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 97
     invoke-super {p0}, Lcom/broadcom/bt/service/opp/IOppService$Stub;->finalize()V
 
+    .line 98
     return-void
 .end method
 
@@ -412,6 +449,7 @@
     .locals 3
 
     .prologue
+    .line 79
     monitor-enter p0
 
     :try_start_0
@@ -421,12 +459,14 @@
 
     if-nez v1, :cond_0
 
+    .line 81
     :try_start_1
     invoke-direct {p0}, Lcom/broadcom/bt/service/opp/OppService;->cleanupDataNative()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 85
     :goto_0
     const/4 v1, 0x1
 
@@ -435,14 +475,17 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 88
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 82
     :catch_0
     move-exception v0
 
+    .line 83
     .local v0, t:Ljava/lang/Throwable;
     :try_start_3
     const-string v1, "OppService"
@@ -455,6 +498,7 @@
 
     goto :goto_0
 
+    .line 79
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -480,6 +524,7 @@
 
     const-string v1, ", "
 
+    .line 211
     monitor-enter p0
 
     :try_start_0
@@ -531,21 +576,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 214
     invoke-direct {p0, p1, p2, p3}, Lcom/broadcom/bt/service/opp/OppService;->grantAccessNative(IILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 218
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 215
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 216
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "OppService"
@@ -558,6 +607,7 @@
 
     goto :goto_0
 
+    .line 211
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -571,12 +621,15 @@
     .locals 1
 
     .prologue
+    .line 71
     invoke-direct {p0}, Lcom/broadcom/bt/service/opp/OppService;->initializeDataNative()V
 
+    .line 72
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/broadcom/bt/service/opp/OppService;->isFinished:Z
 
+    .line 73
     return-void
 .end method
 
@@ -592,6 +645,7 @@
     .prologue
     const-string v1, "OppService"
 
+    .line 182
     monitor-enter p0
 
     :try_start_0
@@ -601,7 +655,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "pullVcard("
+    const-string/jumbo v3, "pullVcard("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -623,21 +677,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 184
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/opp/OppService;->pullVcardNative(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 188
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 185
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 186
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "OppService"
@@ -650,6 +708,7 @@
 
     goto :goto_0
 
+    .line 182
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -672,6 +731,7 @@
     .prologue
     const-string v1, "OppService"
 
+    .line 166
     monitor-enter p0
 
     :try_start_0
@@ -681,7 +741,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "pushObject("
+    const-string/jumbo v3, "pushObject("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -713,21 +773,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 169
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/opp/OppService;->pushObjectNative(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 173
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 170
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 171
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "OppService"
@@ -740,6 +804,7 @@
 
     goto :goto_0
 
+    .line 166
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -759,6 +824,7 @@
     .end annotation
 
     .prologue
+    .line 105
     const-string v1, "bluetooth_opp_service"
 
     invoke-static {v1}, Lcom/broadcom/bt/service/framework/BluetoothServiceManager;->getServiceEventLoop(Ljava/lang/String;)Lcom/broadcom/bt/service/framework/IBtService;
@@ -767,11 +833,14 @@
 
     check-cast v0, Lcom/broadcom/bt/service/opp/OppEventLoop;
 
+    .line 106
     .local v0, eventLoop:Lcom/broadcom/bt/service/opp/OppEventLoop;
     if-eqz v0, :cond_0
 
+    .line 107
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/opp/OppEventLoop;->registerCallback(Lcom/broadcom/bt/service/opp/IOppCallback;)V
 
+    .line 109
     :cond_0
     return-void
 .end method
@@ -786,6 +855,7 @@
     .end annotation
 
     .prologue
+    .line 241
     monitor-enter p0
 
     :try_start_0
@@ -795,7 +865,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "setExchangeFolder("
+    const-string/jumbo v3, "setExchangeFolder("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -817,21 +887,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 243
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/opp/OppService;->setExchangeFolderNative(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 247
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 244
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 245
     .local v0, e:Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -840,6 +914,7 @@
 
     goto :goto_0
 
+    .line 241
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -861,6 +936,7 @@
     .prologue
     const-string v1, "OppService"
 
+    .line 227
     monitor-enter p0
 
     :try_start_0
@@ -870,7 +946,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "setOwnerVcard("
+    const-string/jumbo v3, "setOwnerVcard("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -892,21 +968,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 229
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/opp/OppService;->setOwnerVcardNative(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 233
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 230
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 231
     .local v0, t:Ljava/lang/Throwable;
     :try_start_1
     const-string v1, "OppService"
@@ -919,6 +999,7 @@
 
     goto :goto_0
 
+    .line 227
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -938,6 +1019,7 @@
     .end annotation
 
     .prologue
+    .line 113
     const-string v1, "bluetooth_opp_service"
 
     invoke-static {v1}, Lcom/broadcom/bt/service/framework/BluetoothServiceManager;->getServiceEventLoop(Ljava/lang/String;)Lcom/broadcom/bt/service/framework/IBtService;
@@ -946,11 +1028,14 @@
 
     check-cast v0, Lcom/broadcom/bt/service/opp/OppEventLoop;
 
+    .line 114
     .local v0, eventLoop:Lcom/broadcom/bt/service/opp/OppEventLoop;
     if-eqz v0, :cond_0
 
+    .line 115
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/opp/OppEventLoop;->unregisterCallback(Lcom/broadcom/bt/service/opp/IOppCallback;)V
 
+    .line 117
     :cond_0
     return-void
 .end method

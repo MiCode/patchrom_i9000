@@ -38,10 +38,12 @@
     .parameter
 
     .prologue
+    .line 301
     iput-object p1, p0, Landroid/widget/TextView$InputContentType;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 302
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/TextView$InputContentType;->imeOptions:I

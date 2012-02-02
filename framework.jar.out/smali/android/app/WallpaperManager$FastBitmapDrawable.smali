@@ -34,28 +34,34 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 97
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
+    .line 98
     iput-object p1, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
+    .line 99
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mWidth:I
 
+    .line 100
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mHeight:I
 
+    .line 101
     iget v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mWidth:I
 
     iget v1, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mHeight:I
 
     invoke-virtual {p0, v2, v2, v0, v1}, Landroid/app/WallpaperManager$FastBitmapDrawable;->setBounds(IIII)V
 
+    .line 102
     return-void
 .end method
 
@@ -65,6 +71,7 @@
     .parameter "x1"
 
     .prologue
+    .line 90
     invoke-direct {p0, p1}, Landroid/app/WallpaperManager$FastBitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
     return-void
@@ -77,6 +84,7 @@
     .parameter "canvas"
 
     .prologue
+    .line 106
     iget-object v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     iget v1, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mDrawLeft:I
@@ -91,6 +99,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 107
     return-void
 .end method
 
@@ -98,6 +107,7 @@
     .locals 1
 
     .prologue
+    .line 157
     iget v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mHeight:I
 
     return v0
@@ -107,6 +117,7 @@
     .locals 1
 
     .prologue
+    .line 152
     iget v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mWidth:I
 
     return v0
@@ -116,6 +127,7 @@
     .locals 1
 
     .prologue
+    .line 167
     iget v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mHeight:I
 
     return v0
@@ -125,6 +137,7 @@
     .locals 1
 
     .prologue
+    .line 162
     iget v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mWidth:I
 
     return v0
@@ -134,6 +147,7 @@
     .locals 1
 
     .prologue
+    .line 111
     const/4 v0, -0x1
 
     return v0
@@ -144,6 +158,7 @@
     .parameter "alpha"
 
     .prologue
+    .line 128
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Not supported with this drawable"
@@ -161,6 +176,7 @@
     .parameter "bottom"
 
     .prologue
+    .line 116
     sub-int v0, p3, p1
 
     iget v1, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mWidth:I
@@ -173,6 +189,7 @@
 
     iput v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mDrawLeft:I
 
+    .line 117
     sub-int v0, p4, p2
 
     iget v1, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mHeight:I
@@ -185,6 +202,7 @@
 
     iput v0, p0, Landroid/app/WallpaperManager$FastBitmapDrawable;->mDrawTop:I
 
+    .line 118
     return-void
 .end method
 
@@ -193,8 +211,10 @@
     .parameter "bounds"
 
     .prologue
+    .line 123
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
+    .line 124
     return-void
 .end method
 
@@ -203,6 +223,7 @@
     .parameter "cf"
 
     .prologue
+    .line 134
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Not supported with this drawable"
@@ -217,6 +238,7 @@
     .parameter "dither"
 
     .prologue
+    .line 140
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Not supported with this drawable"
@@ -231,6 +253,7 @@
     .parameter "filter"
 
     .prologue
+    .line 146
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Not supported with this drawable"

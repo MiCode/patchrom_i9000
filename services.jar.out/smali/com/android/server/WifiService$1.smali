@@ -37,6 +37,7 @@
     .parameter "x2"
 
     .prologue
+    .line 276
     iput-object p1, p0, Lcom/android/server/WifiService$1;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0, p2, p3, p4}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
@@ -51,6 +52,7 @@
     .parameter "eldest"
 
     .prologue
+    .line 282
     const/16 v0, 0x50
 
     invoke-virtual {p0}, Lcom/android/server/WifiService$1;->size()I

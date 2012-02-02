@@ -36,8 +36,10 @@
     .end annotation
 
     .prologue
+    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 121
     return-void
 .end method
 
@@ -48,16 +50,20 @@
     .end annotation
 
     .prologue
+    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 128
     iget-object v0, p1, Lcom/android/internal/telephony/SmsMessageBase$SubmitPduBase;->encodedMessage:[B
 
     iput-object v0, p0, Landroid/telephony/gsm/SmsMessage$SubmitPdu;->encodedMessage:[B
 
+    .line 129
     iget-object v0, p1, Lcom/android/internal/telephony/SmsMessageBase$SubmitPduBase;->encodedScAddress:[B
 
     iput-object v0, p0, Landroid/telephony/gsm/SmsMessage$SubmitPdu;->encodedScAddress:[B
 
+    .line 130
     return-void
 .end method
 
@@ -69,6 +75,7 @@
     .end annotation
 
     .prologue
+    .line 135
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

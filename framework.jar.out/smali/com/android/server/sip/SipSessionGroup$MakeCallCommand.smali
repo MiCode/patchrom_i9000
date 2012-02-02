@@ -30,10 +30,12 @@
     .parameter "sessionDescription"
 
     .prologue
+    .line 1420
     const/4 v0, -0x1
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;-><init>(Lcom/android/server/sip/SipSessionGroup;Landroid/net/sip/SipProfile;Ljava/lang/String;I)V
 
+    .line 1421
     return-void
 .end method
 
@@ -45,14 +47,19 @@
     .parameter "timeout"
 
     .prologue
+    .line 1424
     iput-object p1, p0, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->this$0:Lcom/android/server/sip/SipSessionGroup;
 
+    .line 1425
     invoke-direct {p0, p2}, Ljava/util/EventObject;-><init>(Ljava/lang/Object;)V
 
+    .line 1426
     iput-object p3, p0, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->mSessionDescription:Ljava/lang/String;
 
+    .line 1427
     iput p4, p0, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->mTimeout:I
 
+    .line 1428
     return-void
 .end method
 
@@ -62,6 +69,7 @@
     .locals 0
 
     .prologue
+    .line 1431
     invoke-virtual {p0}, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->getSource()Ljava/lang/Object;
 
     move-result-object p0
@@ -76,6 +84,7 @@
     .locals 1
 
     .prologue
+    .line 1435
     iget-object v0, p0, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->mSessionDescription:Ljava/lang/String;
 
     return-object v0
@@ -85,6 +94,7 @@
     .locals 1
 
     .prologue
+    .line 1439
     iget v0, p0, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->mTimeout:I
 
     return v0

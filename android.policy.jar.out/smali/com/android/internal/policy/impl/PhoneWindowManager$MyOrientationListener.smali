@@ -25,10 +25,13 @@
     .parameter "context"
 
     .prologue
+    .line 367
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
+    .line 368
     invoke-direct {p0, p2}, Landroid/view/WindowOrientationListener;-><init>(Landroid/content/Context;)V
 
+    .line 369
     return-void
 .end method
 
@@ -39,6 +42,7 @@
     .parameter "rotation"
 
     .prologue
+    .line 376
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -54,9 +58,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 382
     :goto_0
     return-void
 
+    .line 378
     :catch_0
     move-exception v0
 

@@ -66,6 +66,7 @@
     .locals 3
 
     .prologue
+    .line 67
     const-string v0, "content://com.android.notes"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -74,6 +75,7 @@
 
     sput-object v0, Landroid/provider/Notes;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 70
     const-string v0, "content://com.android.notes/syncNote"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -82,6 +84,7 @@
 
     sput-object v0, Landroid/provider/Notes;->CONTENT_URI_SYNC:Landroid/net/Uri;
 
+    .line 74
     const-string v0, "content://com.android.notes/localNote"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -90,6 +93,7 @@
 
     sput-object v0, Landroid/provider/Notes;->CONTENT_URI_LOCAL:Landroid/net/Uri;
 
+    .line 102
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -108,7 +112,7 @@
 
     const/4 v1, 0x2
 
-    const-string v2, "subject"
+    const-string/jumbo v2, "subject"
 
     aput-object v2, v0, v1
 
@@ -126,13 +130,13 @@
 
     const/4 v1, 0x5
 
-    const-string v2, "textContent"
+    const-string/jumbo v2, "textContent"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string v2, "type"
+    const-string/jumbo v2, "type"
 
     aput-object v2, v0, v1
 
@@ -145,7 +149,9 @@
     .locals 0
 
     .prologue
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 351
     return-void
 .end method

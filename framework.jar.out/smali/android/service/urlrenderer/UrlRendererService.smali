@@ -26,8 +26,10 @@
     .locals 1
 
     .prologue
+    .line 31
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
+    .line 55
     new-instance v0, Landroid/service/urlrenderer/UrlRendererService$1;
 
     invoke-direct {v0, p0}, Landroid/service/urlrenderer/UrlRendererService$1;-><init>(Landroid/service/urlrenderer/UrlRendererService;)V
@@ -44,6 +46,7 @@
     .parameter "intent"
 
     .prologue
+    .line 70
     iget-object v0, p0, Landroid/service/urlrenderer/UrlRendererService;->mBinderInterface:Landroid/service/urlrenderer/IUrlRendererService$Stub;
 
     return-object v0
@@ -54,8 +57,10 @@
     .parameter "intent"
 
     .prologue
+    .line 79
     invoke-virtual {p0}, Landroid/service/urlrenderer/UrlRendererService;->stopSelf()V
 
+    .line 80
     const/4 v0, 0x0
 
     return v0

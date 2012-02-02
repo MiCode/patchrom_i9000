@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,8 +21,10 @@
     .prologue
     const/4 v11, 0x0
 
+    .line 64
     const/4 v4, 0x0
 
+    .line 65
     .local v4, match:Z
     const-string v10, "ANDROID_OBJECT_FILTER"
 
@@ -29,6 +32,7 @@
 
     move-result-object v7
 
+    .line 66
     .local v7, s:Ljava/lang/String;
     if-eqz v7, :cond_4
 
@@ -38,12 +42,14 @@
 
     if-lez v10, :cond_4
 
+    .line 67
     const-string v10, "@"
 
     invoke-virtual {v7, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v8
 
+    .line 69
     .local v8, selectors:[Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -61,6 +67,7 @@
 
     if-eqz v10, :cond_4
 
+    .line 71
     const/4 v2, 0x1
 
     .local v2, i:I
@@ -69,6 +76,7 @@
 
     if-ge v2, v10, :cond_4
 
+    .line 72
     aget-object v10, v8, v2
 
     const-string v11, "="
@@ -77,17 +85,21 @@
 
     move-result-object v5
 
+    .line 73
     .local v5, pair:[Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
+    .line 75
     .local v3, klass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
+    .line 76
     .local v0, declaredMethod:Ljava/lang/reflect/Method;
     move-object v6, v3
 
+    .line 78
     .local v6, parent:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     :cond_0
     :try_start_0
@@ -147,6 +159,7 @@
 
     move-result-object v0
 
+    .line 83
     invoke-virtual {v3}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v6
@@ -155,9 +168,11 @@
 
     if-eqz v0, :cond_0
 
+    .line 85
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 86
     const/4 v10, 0x0
 
     check-cast v10, [Ljava/lang/Object;
@@ -166,6 +181,7 @@
 
     move-result-object v9
 
+    .line 88
     .local v9, value:Ljava/lang/Object;
     if-eqz v9, :cond_3
 
@@ -184,6 +200,7 @@
 
     or-int/2addr v4, v10
 
+    .line 71
     .end local v9           #value:Ljava/lang/Object;
     :cond_2
     :goto_2
@@ -191,6 +208,7 @@
 
     goto :goto_0
 
+    .line 88
     .restart local v9       #value:Ljava/lang/Object;
     :cond_3
     const-string v10, "null"
@@ -201,39 +219,46 @@
 
     goto :goto_1
 
+    .line 91
     .end local v9           #value:Ljava/lang/Object;
     :catch_0
     move-exception v10
 
     move-object v1, v10
 
+    .line 92
     .local v1, e:Ljava/lang/NoSuchMethodException;
     invoke-virtual {v1}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     goto :goto_2
 
+    .line 93
     .end local v1           #e:Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v10
 
     move-object v1, v10
 
+    .line 94
     .local v1, e:Ljava/lang/IllegalAccessException;
     invoke-virtual {v1}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_2
 
+    .line 95
     .end local v1           #e:Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v10
 
     move-object v1, v10
 
+    .line 96
     .local v1, e:Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v1}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_2
 
+    .line 101
     .end local v0           #declaredMethod:Ljava/lang/reflect/Method;
     .end local v1           #e:Ljava/lang/reflect/InvocationTargetException;
     .end local v2           #i:I

@@ -25,10 +25,13 @@
     .parameter "metrics"
 
     .prologue
+    .line 170
     invoke-direct {p0, p1}, Landroid/view/Display;-><init>(I)V
 
+    .line 171
     iput-object p2, p0, Landroid/view/Display$CompatibleDisplay;->mMetrics:Landroid/util/DisplayMetrics;
 
+    .line 172
     return-void
 .end method
 
@@ -39,6 +42,7 @@
     .parameter "x2"
 
     .prologue
+    .line 166
     invoke-direct {p0, p1, p2}, Landroid/view/Display$CompatibleDisplay;-><init>(ILandroid/util/DisplayMetrics;)V
 
     return-void
@@ -50,6 +54,7 @@
     .locals 1
 
     .prologue
+    .line 181
     iget-object v0, p0, Landroid/view/Display$CompatibleDisplay;->mMetrics:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -61,6 +66,7 @@
     .locals 1
 
     .prologue
+    .line 176
     iget-object v0, p0, Landroid/view/Display$CompatibleDisplay;->mMetrics:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I

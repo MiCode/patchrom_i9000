@@ -11,6 +11,7 @@
     .locals 0
 
     .prologue
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,8 +25,10 @@
     .parameter "finishedCallback"
 
     .prologue
+    .line 29
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
+    .line 30
     return-void
 .end method
 
@@ -35,7 +38,9 @@
     .parameter "finishedCallback"
 
     .prologue
+    .line 33
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
+    .line 34
     return-void
 .end method

@@ -62,8 +62,10 @@
     .locals 0
 
     .prologue
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 46
     return-void
 .end method
 
@@ -74,12 +76,14 @@
     .prologue
     const/4 v6, 0x0
 
+    .line 250
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.speech.action.WEB_SEARCH"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 251
     .local v3, voiceSearchIntent:Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -91,6 +95,7 @@
 
     move-result-object v2
 
+    .line 253
     .local v2, ri:Landroid/content/pm/ResolveInfo;
     if-eqz v2, :cond_0
 
@@ -107,9 +112,11 @@
     :cond_0
     move-object v4, v6
 
+    .line 260
     :goto_0
     return-object v4
 
+    .line 255
     :cond_1
     iget-object v4, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -121,6 +128,7 @@
 
     move-result-object v0
 
+    .line 256
     .local v0, className:Ljava/lang/String;
     if-nez v0, :cond_2
 
@@ -128,6 +136,7 @@
 
     goto :goto_0
 
+    .line 258
     :cond_2
     new-instance v1, Landroid/content/Intent;
 
@@ -135,6 +144,7 @@
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 259
     .local v1, detailsIntent:Landroid/content/Intent;
     new-instance v4, Landroid/content/ComponentName;
 
@@ -148,5 +158,6 @@
 
     move-object v4, v1
 
+    .line 260
     goto :goto_0
 .end method

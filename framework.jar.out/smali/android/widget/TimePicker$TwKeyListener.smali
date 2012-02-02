@@ -30,12 +30,15 @@
     .parameter "next_id"
 
     .prologue
+    .line 424
     iput-object p1, p0, Landroid/widget/TimePicker$TwKeyListener;->this$0:Landroid/widget/TimePicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 425
     iput p2, p0, Landroid/widget/TimePicker$TwKeyListener;->mNext:I
 
+    .line 426
     return-void
 .end method
 
@@ -52,6 +55,7 @@
 
     const/4 v2, 0x1
 
+    .line 429
     iget-object v0, p0, Landroid/widget/TimePicker$TwKeyListener;->this$0:Landroid/widget/TimePicker;
 
     #getter for: Landroid/widget/TimePicker;->TW_DEBUG:Z
@@ -69,6 +73,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 430
     :cond_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -78,16 +83,20 @@
 
     move v0, v3
 
+    .line 442
     :goto_0
     return v0
 
+    .line 432
     :cond_1
     sparse-switch p2, :sswitch_data_0
 
     move v0, v3
 
+    .line 442
     goto :goto_0
 
+    .line 434
     :sswitch_0
     invoke-virtual {p1}, Landroid/view/View;->isFocused()Z
 
@@ -97,6 +106,7 @@
 
     invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
 
+    .line 435
     :cond_2
     iget-object v0, p0, Landroid/widget/TimePicker$TwKeyListener;->this$0:Landroid/widget/TimePicker;
 
@@ -113,13 +123,16 @@
 
     move v0, v2
 
+    .line 436
     goto :goto_0
 
     :sswitch_1
     move v0, v2
 
+    .line 440
     goto :goto_0
 
+    .line 432
     :sswitch_data_0
     .sparse-switch
         0x17 -> :sswitch_1

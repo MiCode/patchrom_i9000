@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 1549
     iput-object p1, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1549
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService$MyHandler;-><init>(Lcom/android/server/ConnectivityService;)V
 
     return-void
@@ -49,32 +51,38 @@
     .parameter "msg"
 
     .prologue
+    .line 1553
     iget v10, p1, Landroid/os/Message;->what:I
 
     sparse-switch v10, :sswitch_data_0
 
+    .line 1672
     .end local p0
     :cond_0
     :goto_0
     :sswitch_0
     return-void
 
+    .line 1555
     .restart local p0
     :sswitch_1
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Landroid/net/NetworkInfo;
 
+    .line 1556
     .local v3, info:Landroid/net/NetworkInfo;
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v8
 
+    .line 1557
     .local v8, type:I
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v7
 
+    .line 1563
     .local v7, state:Landroid/net/NetworkInfo$State;
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -98,6 +106,7 @@
 
     if-ne v10, v11, :cond_1
 
+    .line 1568
     const-string v10, "ConnectivityService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -150,6 +159,7 @@
 
     goto :goto_0
 
+    .line 1574
     :cond_1
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -159,6 +169,7 @@
 
     iput-object v7, v10, Lcom/android/server/ConnectivityService$NetworkAttributes;->mLastState:Landroid/net/NetworkInfo$State;
 
+    .line 1576
     const-string v10, "ConnectivityService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -209,6 +220,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1587
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v10
@@ -237,11 +249,13 @@
 
     or-int v2, v10, v11
 
+    .line 1590
     .local v2, eventLogParam:I
     const v10, 0xc364
 
     invoke-static {v10, v2}, Landroid/util/EventLog;->writeEvent(II)I
 
+    .line 1593
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getDetailedState()Landroid/net/NetworkInfo$DetailedState;
 
     move-result-object v10
@@ -250,6 +264,7 @@
 
     if-ne v10, v11, :cond_2
 
+    .line 1595
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
     #calls: Lcom/android/server/ConnectivityService;->handleConnectionFailure(Landroid/net/NetworkInfo;)V
@@ -257,11 +272,13 @@
 
     goto/16 :goto_0
 
+    .line 1596
     :cond_2
     sget-object v10, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
 
     if-ne v7, v10, :cond_3
 
+    .line 1597
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
     #calls: Lcom/android/server/ConnectivityService;->handleDisconnect(Landroid/net/NetworkInfo;)V
@@ -269,11 +286,13 @@
 
     goto/16 :goto_0
 
+    .line 1598
     :cond_3
     sget-object v10, Landroid/net/NetworkInfo$State;->SUSPENDED:Landroid/net/NetworkInfo$State;
 
     if-ne v7, v10, :cond_4
 
+    .line 1606
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
     #calls: Lcom/android/server/ConnectivityService;->handleDisconnect(Landroid/net/NetworkInfo;)V
@@ -281,11 +300,13 @@
 
     goto/16 :goto_0
 
+    .line 1607
     :cond_4
     sget-object v10, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
 
     if-ne v7, v10, :cond_0
 
+    .line 1608
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
     #calls: Lcom/android/server/ConnectivityService;->handleConnect(Landroid/net/NetworkInfo;)V
@@ -293,6 +314,7 @@
 
     goto/16 :goto_0
 
+    .line 1613
     .end local v2           #eventLogParam:I
     .end local v3           #info:Landroid/net/NetworkInfo;
     .end local v7           #state:Landroid/net/NetworkInfo$State;
@@ -302,6 +324,7 @@
 
     check-cast v3, Landroid/net/NetworkInfo;
 
+    .line 1614
     .restart local v3       #info:Landroid/net/NetworkInfo;
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -310,6 +333,7 @@
 
     goto/16 :goto_0
 
+    .line 1618
     .end local v3           #info:Landroid/net/NetworkInfo;
     :sswitch_3
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
@@ -341,16 +365,19 @@
 
     goto :goto_1
 
+    .line 1623
     :sswitch_4
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Landroid/net/NetworkInfo;
 
+    .line 1624
     .restart local v3       #info:Landroid/net/NetworkInfo;
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v8
 
+    .line 1625
     .restart local v8       #type:I
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -359,6 +386,7 @@
 
     goto/16 :goto_0
 
+    .line 1636
     .end local v3           #info:Landroid/net/NetworkInfo;
     .end local v8           #type:I
     :sswitch_5
@@ -366,18 +394,22 @@
 
     check-cast v9, Lcom/android/server/ConnectivityService$FeatureUser;
 
+    .line 1637
     .local v9, u:Lcom/android/server/ConnectivityService$FeatureUser;
     invoke-virtual {v9}, Lcom/android/server/ConnectivityService$FeatureUser;->expire()V
 
     goto/16 :goto_0
 
+    .line 1641
     .end local v9           #u:Lcom/android/server/ConnectivityService$FeatureUser;
     :sswitch_6
     iget v4, p1, Landroid/os/Message;->arg1:I
 
+    .line 1642
     .local v4, netType:I
     iget v0, p1, Landroid/os/Message;->arg2:I
 
+    .line 1643
     .local v0, condition:I
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -386,14 +418,17 @@
 
     goto/16 :goto_0
 
+    .line 1648
     .end local v0           #condition:I
     .end local v4           #netType:I
     :sswitch_7
     iget v4, p1, Landroid/os/Message;->arg1:I
 
+    .line 1649
     .restart local v4       #netType:I
     iget v6, p1, Landroid/os/Message;->arg2:I
 
+    .line 1650
     .local v6, sequence:I
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -402,11 +437,13 @@
 
     goto/16 :goto_0
 
+    .line 1655
     .end local v4           #netType:I
     .end local v6           #sequence:I
     :sswitch_8
     iget v5, p1, Landroid/os/Message;->arg1:I
 
+    .line 1656
     .local v5, preference:I
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -415,6 +452,7 @@
 
     goto/16 :goto_0
 
+    .line 1661
     .end local v5           #preference:I
     :sswitch_9
     iget v10, p1, Landroid/os/Message;->arg1:I
@@ -427,6 +465,7 @@
 
     move v1, v10
 
+    .line 1662
     .local v1, enabled:Z
     :goto_2
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
@@ -436,6 +475,7 @@
 
     goto/16 :goto_0
 
+    .line 1661
     .end local v1           #enabled:Z
     :cond_6
     const/4 v10, 0x0
@@ -444,6 +484,7 @@
 
     goto :goto_2
 
+    .line 1667
     :sswitch_a
     iget v10, p1, Landroid/os/Message;->arg1:I
 
@@ -455,6 +496,7 @@
 
     move v1, v10
 
+    .line 1668
     .restart local v1       #enabled:Z
     :goto_3
     iget-object v10, p0, Lcom/android/server/ConnectivityService$MyHandler;->this$0:Lcom/android/server/ConnectivityService;
@@ -464,6 +506,7 @@
 
     goto/16 :goto_0
 
+    .line 1667
     .end local v1           #enabled:Z
     :cond_7
     const/4 v10, 0x0
@@ -472,6 +515,7 @@
 
     goto :goto_3
 
+    .line 1553
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

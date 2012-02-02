@@ -28,36 +28,44 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 41
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/graphics/utils/BoundaryPatch;->mCols:I
 
     iput v0, p0, Landroid/graphics/utils/BoundaryPatch;->mRows:I
 
+    .line 42
     const/16 v0, 0x18
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mCubicPoints:[F
 
+    .line 43
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mPaint:Landroid/graphics/Paint;
 
+    .line 44
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
 
+    .line 45
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
+    .line 46
     iput-boolean v1, p0, Landroid/graphics/utils/BoundaryPatch;->mDirty:Z
 
+    .line 47
     return-void
 .end method
 
@@ -67,6 +75,7 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 153
     iget v0, p0, Landroid/graphics/utils/BoundaryPatch;->mRows:I
 
     iget v1, p0, Landroid/graphics/utils/BoundaryPatch;->mCols:I
@@ -75,6 +84,7 @@
 
     mul-int/lit8 v8, v0, 0x4
 
+    .line 154
     .local v8, vertCount:I
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mVerts:[F
 
@@ -86,11 +96,13 @@
 
     if-eq v0, v8, :cond_1
 
+    .line 155
     :cond_0
     new-array v0, v8, [F
 
     iput-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mVerts:[F
 
+    .line 158
     :cond_1
     iget v0, p0, Landroid/graphics/utils/BoundaryPatch;->mRows:I
 
@@ -104,6 +116,7 @@
 
     mul-int/lit8 v7, v0, 0x6
 
+    .line 159
     .local v7, indexCount:I
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mIndices:[S
 
@@ -115,11 +128,13 @@
 
     if-eq v0, v7, :cond_3
 
+    .line 160
     :cond_2
     new-array v0, v7, [S
 
     iput-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mIndices:[S
 
+    .line 163
     :cond_3
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mCubicPoints:[F
 
@@ -145,6 +160,7 @@
 
     invoke-static/range {v0 .. v6}, Landroid/graphics/utils/BoundaryPatch;->nativeComputeCubicPatch([FIIII[F[S)V
 
+    .line 166
     return-void
 .end method
 
@@ -160,14 +176,18 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 135
     iget-boolean v0, p0, Landroid/graphics/utils/BoundaryPatch;->mDirty:Z
 
     if-eqz v0, :cond_0
 
+    .line 136
     invoke-direct {p0}, Landroid/graphics/utils/BoundaryPatch;->buildCache()V
 
+    .line 137
     iput-boolean v4, p0, Landroid/graphics/utils/BoundaryPatch;->mDirty:Z
 
+    .line 143
     :cond_0
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mVerts:[F
 
@@ -175,6 +195,7 @@
 
     shr-int/lit8 v2, v0, 0x1
 
+    .line 144
     .local v2, vertCount:I
     sget-object v1, Landroid/graphics/Canvas$VertexMode;->TRIANGLES:Landroid/graphics/Canvas$VertexMode;
 
@@ -202,6 +223,7 @@
 
     invoke-virtual/range {v0 .. v12}, Landroid/graphics/Canvas;->drawVertices(Landroid/graphics/Canvas$VertexMode;I[FI[FI[II[SIILandroid/graphics/Paint;)V
 
+    .line 148
     return-void
 .end method
 
@@ -209,6 +231,7 @@
     .locals 1
 
     .prologue
+    .line 105
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getFlags()I
@@ -223,10 +246,12 @@
     .parameter "alpha"
 
     .prologue
+    .line 126
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 127
     return-void
 .end method
 
@@ -240,19 +265,22 @@
     .prologue
     const/4 v0, 0x2
 
+    .line 72
     if-lt p3, v0, :cond_0
 
     if-ge p4, v0, :cond_1
 
+    .line 73
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v1, "rows and cols must be >= 2"
+    const-string/jumbo v1, "rows and cols must be >= 2"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 75
     :cond_1
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mCubicPoints:[F
 
@@ -262,6 +290,7 @@
 
     invoke-static {p1, p2, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 76
     iget v0, p0, Landroid/graphics/utils/BoundaryPatch;->mRows:I
 
     if-ne v0, p3, :cond_2
@@ -270,16 +299,20 @@
 
     if-eq v0, p4, :cond_3
 
+    .line 77
     :cond_2
     iput p3, p0, Landroid/graphics/utils/BoundaryPatch;->mRows:I
 
+    .line 78
     iput p4, p0, Landroid/graphics/utils/BoundaryPatch;->mCols:I
 
+    .line 80
     :cond_3
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/utils/BoundaryPatch;->mDirty:Z
 
+    .line 81
     return-void
 .end method
 
@@ -288,10 +321,12 @@
     .parameter "flags"
 
     .prologue
+    .line 112
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setFlags(I)V
 
+    .line 113
     return-void
 .end method
 
@@ -300,10 +335,12 @@
     .parameter "texture"
 
     .prologue
+    .line 87
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mTexture:Landroid/graphics/Bitmap;
 
     if-eq v0, p1, :cond_2
 
+    .line 88
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mTexture:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -332,14 +369,17 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 92
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/utils/BoundaryPatch;->mDirty:Z
 
+    .line 94
     :cond_1
     iput-object p1, p0, Landroid/graphics/utils/BoundaryPatch;->mTexture:Landroid/graphics/Bitmap;
 
+    .line 95
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mPaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/BitmapShader;
@@ -352,6 +392,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
+    .line 99
     :cond_2
     return-void
 .end method
@@ -361,9 +402,11 @@
     .parameter "mode"
 
     .prologue
+    .line 119
     iget-object v0, p0, Landroid/graphics/utils/BoundaryPatch;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
+    .line 120
     return-void
 .end method

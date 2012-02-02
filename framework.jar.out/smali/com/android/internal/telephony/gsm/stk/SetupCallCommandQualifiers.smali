@@ -49,6 +49,7 @@
 
     const/4 v4, 0x0
 
+    .line 57
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     const-string v1, "SET_UP_CALL_BUT_ONLY_IF_NOT_CURRENTLY_BUSY_ON_ANOTHER_CALL"
@@ -57,6 +58,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->SET_UP_CALL_BUT_ONLY_IF_NOT_CURRENTLY_BUSY_ON_ANOTHER_CALL:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
+    .line 58
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     const-string v1, "SET_UP_CALL_BUT_ONLY_IF_NOT_CURRENTLY_BUSY_ON_ANOTHER_CALL_WITH_REDIAL"
@@ -65,6 +67,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->SET_UP_CALL_BUT_ONLY_IF_NOT_CURRENTLY_BUSY_ON_ANOTHER_CALL_WITH_REDIAL:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
+    .line 59
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     const-string v1, "SET_UP_CALL_PUTTING_ALL_OTHER_CALLS_ON_HOLD"
@@ -73,6 +76,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->SET_UP_CALL_PUTTING_ALL_OTHER_CALLS_ON_HOLD:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
+    .line 60
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     const-string v1, "SET_UP_CALL_PUTTING_ALL_OTHER_CALLS_ON_HOLD_WITH_REDIAL"
@@ -81,6 +85,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->SET_UP_CALL_PUTTING_ALL_OTHER_CALLS_ON_HOLD_WITH_REDIAL:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
+    .line 61
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     const-string v1, "SET_UP_CALL_DISCONNECTING_ALL_OTHER_CALLS"
@@ -89,6 +94,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->SET_UP_CALL_DISCONNECTING_ALL_OTHER_CALLS:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
+    .line 62
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     const-string v1, "SET_UP_CALL_DISCONNECTING_ALL_OTHER_CALLS_WITH_REDIAL"
@@ -101,6 +107,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->SET_UP_CALL_DISCONNECTING_ALL_OTHER_CALLS_WITH_REDIAL:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
+    .line 56
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
@@ -148,10 +155,13 @@
     .end annotation
 
     .prologue
+    .line 66
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 67
     iput p3, p0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->mValue:I
 
+    .line 68
     return-void
 .end method
 
@@ -160,6 +170,7 @@
     .parameter "value"
 
     .prologue
+    .line 80
     invoke-static {}, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->values()[Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     move-result-object v0
@@ -176,6 +187,7 @@
 
     aget-object v1, v0, v2
 
+    .line 81
     .local v1, e:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
     iget v4, v1, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->mValue:I
 
@@ -183,16 +195,19 @@
 
     move-object v4, v1
 
+    .line 85
     .end local v1           #e:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
     :goto_1
     return-object v4
 
+    .line 80
     .restart local v1       #e:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 85
     .end local v1           #e:Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
     :cond_1
     const/4 v4, 0x0
@@ -205,6 +220,7 @@
     .parameter "name"
 
     .prologue
+    .line 56
     const-class v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -221,6 +237,7 @@
     .locals 1
 
     .prologue
+    .line 56
     sget-object v0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->$VALUES:[Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->clone()Ljava/lang/Object;
@@ -238,6 +255,7 @@
     .locals 1
 
     .prologue
+    .line 76
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/SetupCallCommandQualifiers;->mValue:I
 
     return v0

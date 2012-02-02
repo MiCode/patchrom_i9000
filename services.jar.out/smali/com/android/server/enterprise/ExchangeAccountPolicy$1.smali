@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 636
     iput-object p1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy$1;->this$0:Lcom/android/server/enterprise/ExchangeAccountPolicy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,6 +41,7 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 640
     const-string v2, "ExchangeAccountPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -64,13 +66,16 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 641
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
+    .line 658
     :goto_0
     return-void
 
+    .line 644
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy$1;->this$0:Lcom/android/server/enterprise/ExchangeAccountPolicy;
 
@@ -81,6 +86,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 645
     iget-object v2, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy$1;->this$0:Lcom/android/server/enterprise/ExchangeAccountPolicy;
 
     #getter for: Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -92,6 +98,7 @@
 
     move-result-object v0
 
+    .line 646
     .local v0, pm:Landroid/content/pm/PackageManager;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -101,20 +108,24 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 648
     .local v1, syncMgrCn:Landroid/content/ComponentName;
     const-string v2, "Enabling EAS SyncManager"
 
     invoke-static {v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 649
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2, v5}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
+    .line 651
     iget-object v2, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy$1;->this$0:Lcom/android/server/enterprise/ExchangeAccountPolicy;
 
     #setter for: Lcom/android/server/enterprise/ExchangeAccountPolicy;->mSyncManagerDisabled:Z
     invoke-static {v2, v5}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->access$002(Lcom/android/server/enterprise/ExchangeAccountPolicy;Z)Z
 
+    .line 655
     .end local v0           #pm:Landroid/content/pm/PackageManager;
     .end local v1           #syncMgrCn:Landroid/content/ComponentName;
     :cond_0
@@ -125,6 +136,7 @@
 
     goto :goto_0
 
+    .line 641
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

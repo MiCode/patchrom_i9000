@@ -28,6 +28,7 @@
     .parameter
 
     .prologue
+    .line 44
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;->this$0:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

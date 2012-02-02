@@ -27,10 +27,13 @@
     .parameter "name"
 
     .prologue
+    .line 70
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
+    .line 71
     iput-object p1, p0, Landroid/app/IntentService;->mName:Ljava/lang/String;
 
+    .line 72
     return-void
 .end method
 
@@ -41,6 +44,7 @@
     .parameter "intent"
 
     .prologue
+    .line 129
     const/4 v0, 0x0
 
     return-object v0
@@ -50,8 +54,10 @@
     .locals 3
 
     .prologue
+    .line 100
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
+    .line 101
     new-instance v0, Landroid/os/HandlerThread;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -82,15 +88,18 @@
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
+    .line 102
     .local v0, thread:Landroid/os/HandlerThread;
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
+    .line 104
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/app/IntentService;->mServiceLooper:Landroid/os/Looper;
 
+    .line 105
     new-instance v1, Landroid/app/IntentService$ServiceHandler;
 
     iget-object v2, p0, Landroid/app/IntentService;->mServiceLooper:Landroid/os/Looper;
@@ -99,6 +108,7 @@
 
     iput-object v1, p0, Landroid/app/IntentService;->mServiceHandler:Landroid/app/IntentService$ServiceHandler;
 
+    .line 106
     return-void
 .end method
 
@@ -106,10 +116,12 @@
     .locals 1
 
     .prologue
+    .line 124
     iget-object v0, p0, Landroid/app/IntentService;->mServiceLooper:Landroid/os/Looper;
 
     invoke-virtual {v0}, Landroid/os/Looper;->quit()V
 
+    .line 125
     return-void
 .end method
 
@@ -122,21 +134,26 @@
     .parameter "startId"
 
     .prologue
+    .line 110
     iget-object v1, p0, Landroid/app/IntentService;->mServiceHandler:Landroid/app/IntentService$ServiceHandler;
 
     invoke-virtual {v1}, Landroid/app/IntentService$ServiceHandler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
+    .line 111
     .local v0, msg:Landroid/os/Message;
     iput p2, v0, Landroid/os/Message;->arg1:I
 
+    .line 112
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 113
     iget-object v1, p0, Landroid/app/IntentService;->mServiceHandler:Landroid/app/IntentService$ServiceHandler;
 
     invoke-virtual {v1, v0}, Landroid/app/IntentService$ServiceHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 114
     return-void
 .end method
 
@@ -147,8 +164,10 @@
     .parameter "startId"
 
     .prologue
+    .line 118
     invoke-virtual {p0, p1, p3}, Landroid/app/IntentService;->onStart(Landroid/content/Intent;I)V
 
+    .line 119
     iget-boolean v0, p0, Landroid/app/IntentService;->mRedelivery:Z
 
     if-eqz v0, :cond_0
@@ -169,7 +188,9 @@
     .parameter "enabled"
 
     .prologue
+    .line 91
     iput-boolean p1, p0, Landroid/app/IntentService;->mRedelivery:Z
 
+    .line 92
     return-void
 .end method

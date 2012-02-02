@@ -16,6 +16,7 @@
     .locals 2
 
     .prologue
+    .line 27
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -29,6 +30,7 @@
     .locals 0
 
     .prologue
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,6 +40,7 @@
     .locals 2
 
     .prologue
+    .line 55
     const-class v0, Lcom/broadcom/bt/service/bpp/PrintManager;
 
     monitor-enter v0
@@ -49,10 +52,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 56
     monitor-exit v0
 
     return-void
 
+    .line 55
     :catchall_0
     move-exception v1
 
@@ -75,6 +80,7 @@
     .parameter "cb"
 
     .prologue
+    .line 37
     new-instance v0, Lcom/broadcom/bt/service/bpp/PrintJob;
 
     invoke-static {}, Lcom/broadcom/bt/service/bpp/PrintManager;->createJobId()J
@@ -110,6 +116,7 @@
     .locals 5
 
     .prologue
+    .line 30
     const-class v0, Lcom/broadcom/bt/service/bpp/PrintManager;
 
     monitor-enter v0
@@ -141,6 +148,7 @@
     .locals 2
 
     .prologue
+    .line 59
     const-class v0, Lcom/broadcom/bt/service/bpp/PrintManager;
 
     monitor-enter v0
@@ -167,23 +175,27 @@
     .parameter "job"
 
     .prologue
+    .line 43
     const-class v0, Lcom/broadcom/bt/service/bpp/PrintManager;
 
     monitor-enter v0
 
     if-nez p0, :cond_0
 
+    .line 52
     :goto_0
     monitor-exit v0
 
     return-void
 
+    .line 46
     :cond_0
     :try_start_0
     sget-object v1, Lcom/broadcom/bt/service/bpp/PrintManager;->mCurrentJob:Lcom/broadcom/bt/service/bpp/PrintJob;
 
     if-eqz v1, :cond_1
 
+    .line 47
     const-string v1, "PrintManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -228,6 +240,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 51
     :cond_1
     sput-object p0, Lcom/broadcom/bt/service/bpp/PrintManager;->mCurrentJob:Lcom/broadcom/bt/service/bpp/PrintJob;
     :try_end_0
@@ -235,6 +248,7 @@
 
     goto :goto_0
 
+    .line 43
     :catchall_0
     move-exception v1
 

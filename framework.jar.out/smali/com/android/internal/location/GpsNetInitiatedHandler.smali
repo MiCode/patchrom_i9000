@@ -87,6 +87,7 @@
     .locals 1
 
     .prologue
+    .line 93
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mIsHexInput:Z
@@ -101,18 +102,24 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 88
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mPlaySounds:Z
 
+    .line 89
     iput-boolean v1, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->visible:Z
 
+    .line 90
     iput-boolean v1, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mPopupImmediately:Z
 
+    .line 127
     iput-object p1, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mContext:Landroid/content/Context;
 
+    .line 128
     const-string v0, "location"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -123,6 +130,7 @@
 
     iput-object v0, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mLocationManager:Landroid/location/LocationManager;
 
+    .line 129
     return-void
 .end method
 
@@ -131,23 +139,30 @@
     .parameter "input"
 
     .prologue
+    .line 289
     const/16 v0, 0xd
 
+    .line 290
     .local v0, CHAR_CR:C
     const/4 v3, 0x0
 
+    .line 291
     .local v3, nStridx:I
     const/4 v2, 0x0
 
+    .line 292
     .local v2, nPckidx:I
     array-length v6, p0
 
+    .line 293
     .local v6, num_bytes:I
     const/4 v1, 0x0
 
+    .line 294
     .local v1, cPrev:I
     const/4 v0, 0x0
 
+    .line 297
     .local v0, cCurr:I
     array-length v4, p0
 
@@ -155,6 +170,7 @@
 
     new-array v8, v4, [B
 
+    .line 298
     .local v8, stringBuf:[B
     const-string v7, ""
 
@@ -165,15 +181,18 @@
     .local v5, nStridx:I
     move v3, v2
 
+    .line 300
     .end local v2           #nPckidx:I
     .local v3, nPckidx:I
     :goto_0
     if-ge v3, v6, :cond_4
 
+    .line 302
     and-int/lit8 v0, v5, 0x7
 
     int-to-byte v4, v0
 
+    .line 303
     .local v4, nShift:B
     add-int/lit8 v2, v3, 0x1
 
@@ -181,10 +200,12 @@
     .restart local v2       #nPckidx:I
     aget-byte v0, p0, v3
 
+    .line 304
     if-gez v0, :cond_0
 
     add-int/lit16 v0, v0, 0x100
 
+    .line 309
     :cond_0
     shl-int v3, v0, v4
 
@@ -200,6 +221,7 @@
 
     int-to-byte v3, v1
 
+    .line 310
     .local v3, nextChar:B
     add-int/lit8 v1, v5, 0x1
 
@@ -207,10 +229,12 @@
     .local v1, nStridx:I
     aput-byte v3, v8, v5
 
+    .line 315
     const/4 v5, 0x6
 
     if-ne v4, v5, :cond_3
 
+    .line 320
     if-eq v2, v6, :cond_2
 
     shr-int/lit8 v3, v0, 0x1
@@ -227,6 +251,7 @@
     .local p0, cCurr:I
     move v0, v2
 
+    .line 333
     .end local v2           #nPckidx:I
     .local v0, nPckidx:I
     :goto_1
@@ -243,11 +268,13 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 340
     .end local v7           #result:Ljava/lang/String;
     .local p0, result:Ljava/lang/String;
     :goto_2
     return-object p0
 
+    .line 325
     .local v0, cCurr:I
     .restart local v2       #nPckidx:I
     .restart local v7       #result:Ljava/lang/String;
@@ -257,6 +284,7 @@
 
     int-to-byte v4, v3
 
+    .line 326
     .local v4, nextChar:B
     add-int/lit8 v3, v1, 0x1
 
@@ -266,6 +294,7 @@
 
     move v1, v4
 
+    .line 329
     .end local v4           #nextChar:B
     .local v1, nextChar:B
     :goto_3
@@ -282,6 +311,7 @@
     .local v3, nPckidx:I
     goto :goto_0
 
+    .line 335
     .end local v0           #cCurr:I
     .end local v3           #nPckidx:I
     .end local v5           #nStridx:I
@@ -290,6 +320,7 @@
     :catch_0
     move-exception p0
 
+    .line 337
     .local p0, e:Ljava/io/UnsupportedEncodingException;
     const-string v0, "GpsNetInitiatedHandler"
 
@@ -369,16 +400,20 @@
     .parameter "coding"
 
     .prologue
+    .line 383
     move-object v0, p0
 
+    .line 384
     .local v0, decoded:Ljava/lang/String;
     invoke-static {p0, p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->stringToByteArray(Ljava/lang/String;Z)[B
 
     move-result-object v1
 
+    .line 386
     .local v1, input:[B
     packed-switch p2, :pswitch_data_0
 
+    .line 408
     const-string v2, "GpsNetInitiatedHandler"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -411,40 +446,52 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 411
     :goto_0
     return-object v0
 
+    .line 388
     :pswitch_0
     move-object v0, p0
 
+    .line 389
     goto :goto_0
 
+    .line 392
     :pswitch_1
     invoke-static {v1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->decodeGSMPackedString([B)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 393
     goto :goto_0
 
+    .line 396
     :pswitch_2
     invoke-static {v1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->decodeUTF8String([B)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 397
     goto :goto_0
 
+    .line 400
     :pswitch_3
     invoke-static {v1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->decodeUCS2String([B)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 401
     goto :goto_0
 
+    .line 404
     :pswitch_4
     move-object v0, p0
 
+    .line 405
     goto :goto_0
 
+    .line 386
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_4
@@ -460,8 +507,10 @@
     .parameter "input"
 
     .prologue
+    .line 358
     const-string v0, ""
 
+    .line 360
     .local v0, decoded:Ljava/lang/String;
     :try_start_0
     new-instance v1, Ljava/lang/String;
@@ -476,16 +525,19 @@
     .local v1, decoded:Ljava/lang/String;
     move-object v0, v1
 
+    .line 366
     .end local v1           #decoded:Ljava/lang/String;
     .restart local v0       #decoded:Ljava/lang/String;
     :goto_0
     return-object v0
 
+    .line 362
     :catch_0
     move-exception v3
 
     move-object v2, v3
 
+    .line 364
     .local v2, e:Ljava/io/UnsupportedEncodingException;
     const-string v3, "GpsNetInitiatedHandler"
 
@@ -503,8 +555,10 @@
     .parameter "input"
 
     .prologue
+    .line 345
     const-string v0, ""
 
+    .line 347
     .local v0, decoded:Ljava/lang/String;
     :try_start_0
     new-instance v1, Ljava/lang/String;
@@ -519,16 +573,19 @@
     .local v1, decoded:Ljava/lang/String;
     move-object v0, v1
 
+    .line 353
     .end local v1           #decoded:Ljava/lang/String;
     .restart local v0       #decoded:Ljava/lang/String;
     :goto_0
     return-object v0
 
+    .line 349
     :catch_0
     move-exception v3
 
     move-object v2, v3
 
+    .line 351
     .local v2, e:Ljava/io/UnsupportedEncodingException;
     const-string v3, "GpsNetInitiatedHandler"
 
@@ -546,6 +603,7 @@
     .parameter "notif"
 
     .prologue
+    .line 449
     invoke-static {p0}, Lcom/android/internal/location/GpsNetInitiatedHandler;->getNotifMessage(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)Ljava/lang/String;
 
     move-result-object v0
@@ -558,6 +616,7 @@
     .parameter "notif"
 
     .prologue
+    .line 443
     invoke-static {p0}, Lcom/android/internal/location/GpsNetInitiatedHandler;->getNotifTitle(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)Ljava/lang/String;
 
     move-result-object v0
@@ -570,57 +629,68 @@
     .parameter "notif"
 
     .prologue
+    .line 236
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
+    .line 237
     .local v0, intent:Landroid/content/Intent;
     invoke-static {p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->getDialogTitle(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 238
     .local v2, title:Ljava/lang/String;
     invoke-static {p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->getDialogMessage(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 241
     .local v1, message:Ljava/lang/String;
     const/high16 v3, 0x1000
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
+    .line 242
     iget-object v3, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mContext:Landroid/content/Context;
 
     const-class v4, Lcom/android/internal/app/NetInitiatedActivity;
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
+    .line 245
     const-string v3, "notif_id"
 
     iget v4, p1, Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;->notificationId:I
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    const-string v3, "title"
+    .line 246
+    const-string/jumbo v3, "title"
 
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 247
     const-string v3, "message"
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v3, "timeout"
+    .line 248
+    const-string/jumbo v3, "timeout"
 
     iget v4, p1, Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;->timeout:I
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 249
     const-string v3, "default_resp"
 
     iget v4, p1, Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;->defaultResponse:I
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 251
     const-string v3, "GpsNetInitiatedHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -665,6 +735,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 254
     return-object v0
 .end method
 
@@ -673,6 +744,7 @@
     .parameter "notif"
 
     .prologue
+    .line 433
     const-string v1, "NI Request received from [%s] for client [%s]!"
 
     const/4 v2, 0x2
@@ -711,6 +783,7 @@
 
     move-result-object v0
 
+    .line 437
     .local v0, message:Ljava/lang/String;
     return-object v0
 .end method
@@ -720,6 +793,7 @@
     .parameter "notif"
 
     .prologue
+    .line 417
     const-string v1, "LBS request! ReqId: [%s] Client: [%s]"
 
     const/4 v2, 0x2
@@ -758,6 +832,7 @@
 
     move-result-object v0
 
+    .line 420
     .local v0, ticker:Ljava/lang/String;
     return-object v0
 .end method
@@ -767,6 +842,7 @@
     .parameter "notif"
 
     .prologue
+    .line 426
     const-string v1, "Position Request"
 
     const/4 v2, 0x0
@@ -777,6 +853,7 @@
 
     move-result-object v0
 
+    .line 427
     .local v0, title:Ljava/lang/String;
     return-object v0
 .end method
@@ -786,10 +863,12 @@
     .parameter "notif"
 
     .prologue
+    .line 223
     invoke-direct {p0, p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->getDlgIntent(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)Landroid/content/Intent;
 
     move-result-object v0
 
+    .line 225
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "GpsNetInitiatedHandler"
 
@@ -797,7 +876,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "openNiDialog, notifyId: "
+    const-string/jumbo v3, "openNiDialog, notifyId: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -839,10 +918,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 229
     iget-object v1, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
+    .line 230
     return-void
 .end method
 
@@ -851,6 +932,7 @@
     .parameter "notif"
 
     .prologue
+    .line 179
     monitor-enter p0
 
     :try_start_0
@@ -866,25 +948,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 181
     .local v2, notificationManager:Landroid/app/NotificationManager;
     if-nez v2, :cond_0
 
+    .line 218
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 185
     :cond_0
     :try_start_1
     invoke-static {p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->getNotifTitle(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 186
     .local v4, title:Ljava/lang/String;
     invoke-static {p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->getNotifMessage(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 188
     .local v1, message:Ljava/lang/String;
     const-string v5, "GpsNetInitiatedHandler"
 
@@ -892,7 +979,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "setNiNotification, notifyId: "
+    const-string/jumbo v7, "setNiNotification, notifyId: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -930,33 +1017,39 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 193
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
     if-nez v5, :cond_1
 
+    .line 194
     new-instance v5, Landroid/app/Notification;
 
     invoke-direct {v5}, Landroid/app/Notification;-><init>()V
 
     iput-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
+    .line 195
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
     const v6, 0x10802d8
 
     iput v6, v5, Landroid/app/Notification;->icon:I
 
+    .line 196
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
     const-wide/16 v6, 0x0
 
     iput-wide v6, v5, Landroid/app/Notification;->when:J
 
+    .line 199
     :cond_1
     iget-boolean v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mPlaySounds:Z
 
     if-eqz v5, :cond_2
 
+    .line 200
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
     iget v6, v5, Landroid/app/Notification;->defaults:I
@@ -965,6 +1058,7 @@
 
     iput v6, v5, Landroid/app/Notification;->defaults:I
 
+    .line 205
     :goto_1
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
@@ -972,6 +1066,7 @@
 
     iput v6, v5, Landroid/app/Notification;->flags:I
 
+    .line 206
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
     invoke-static {p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->getNotifTicker(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)Ljava/lang/String;
@@ -980,6 +1075,7 @@
 
     iput-object v6, v5, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
+    .line 209
     iget-boolean v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mPopupImmediately:Z
 
     if-nez v5, :cond_3
@@ -990,6 +1086,7 @@
 
     move-object v0, v5
 
+    .line 210
     .local v0, intent:Landroid/content/Intent;
     :goto_2
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mContext:Landroid/content/Context;
@@ -1002,6 +1099,7 @@
 
     move-result-object v3
 
+    .line 211
     .local v3, pi:Landroid/app/PendingIntent;
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
@@ -1009,10 +1107,12 @@
 
     invoke-virtual {v5, v6, v4, v1, v3}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
+    .line 213
     iget-boolean v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->visible:Z
 
     if-eqz v5, :cond_4
 
+    .line 214
     iget v5, p1, Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;->notificationId:I
 
     iget-object v6, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
@@ -1023,6 +1123,7 @@
 
     goto/16 :goto_0
 
+    .line 179
     .end local v0           #intent:Landroid/content/Intent;
     .end local v1           #message:Ljava/lang/String;
     .end local v2           #notificationManager:Landroid/app/NotificationManager;
@@ -1035,6 +1136,7 @@
 
     throw v5
 
+    .line 202
     .restart local v1       #message:Ljava/lang/String;
     .restart local v2       #notificationManager:Landroid/app/NotificationManager;
     .restart local v4       #title:Ljava/lang/String;
@@ -1050,6 +1152,7 @@
 
     goto :goto_1
 
+    .line 209
     :cond_3
     new-instance v5, Landroid/content/Intent;
 
@@ -1059,6 +1162,7 @@
 
     goto :goto_2
 
+    .line 216
     .restart local v0       #intent:Landroid/content/Intent;
     .restart local v3       #pi:Landroid/app/PendingIntent;
     :cond_4
@@ -1077,6 +1181,7 @@
     .parameter "isHex"
 
     .prologue
+    .line 260
     if-eqz p1, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1087,19 +1192,23 @@
 
     move v1, v3
 
+    .line 261
     .local v1, length:I
     :goto_0
     new-array v2, v1, [B
 
+    .line 264
     .local v2, output:[B
     if-eqz p1, :cond_1
 
+    .line 266
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_1
     if-ge v0, v1, :cond_2
 
+    .line 268
     mul-int/lit8 v3, v0, 0x2
 
     mul-int/lit8 v4, v0, 0x2
@@ -1120,10 +1229,12 @@
 
     aput-byte v3, v2, v0
 
+    .line 266
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
+    .line 260
     .end local v0           #i:I
     .end local v1           #length:I
     .end local v2           #output:[B
@@ -1136,6 +1247,7 @@
 
     goto :goto_0
 
+    .line 272
     .restart local v1       #length:I
     .restart local v2       #output:[B
     :cond_1
@@ -1145,6 +1257,7 @@
     :goto_2
     if-ge v0, v1, :cond_2
 
+    .line 274
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -1153,10 +1266,12 @@
 
     aput-byte v3, v2, v0
 
+    .line 272
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
+    .line 278
     :cond_2
     return-object v2
 .end method
@@ -1168,6 +1283,7 @@
     .parameter "notif"
 
     .prologue
+    .line 134
     const-string v0, "GpsNetInitiatedHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1216,6 +1332,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 138
     iget-boolean v0, p1, Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;->needNotify:Z
 
     if-eqz v0, :cond_0
@@ -1228,8 +1345,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 141
     invoke-direct {p0, p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->openNiDialog(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)V
 
+    .line 145
     :cond_0
     iget-boolean v0, p1, Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;->needNotify:Z
 
@@ -1252,9 +1371,11 @@
 
     if-nez v0, :cond_3
 
+    .line 153
     :cond_2
     invoke-direct {p0, p1}, Lcom/android/internal/location/GpsNetInitiatedHandler;->setNiNotification(Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;)V
 
+    .line 157
     :cond_3
     iget-boolean v0, p1, Lcom/android/internal/location/GpsNetInitiatedHandler$GpsNiNotification;->needNotify:Z
 
@@ -1278,6 +1399,7 @@
 
     if-eqz v0, :cond_7
 
+    .line 161
     :cond_6
     iget-object v0, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mLocationManager:Landroid/location/LocationManager;
 
@@ -1287,6 +1409,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/location/LocationManager;->sendNiResponse(II)Z
 
+    .line 175
     :cond_7
     return-void
 .end method

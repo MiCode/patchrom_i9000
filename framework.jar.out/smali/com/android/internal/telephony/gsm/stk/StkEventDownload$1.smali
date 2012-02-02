@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,23 +45,28 @@
     .parameter "source"
 
     .prologue
+    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 72
     .local v1, eventType:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 73
     .local v2, language:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 74
     .local v0, browserTerminationCause:I
     packed-switch v1, :pswitch_data_0
 
+    .line 83
     :pswitch_0
     new-instance v3, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;
 
@@ -71,6 +77,7 @@
     :goto_0
     return-object v3
 
+    .line 77
     :pswitch_1
     new-instance v3, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;
 
@@ -78,6 +85,7 @@
 
     goto :goto_0
 
+    .line 79
     :pswitch_2
     new-instance v3, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;
 
@@ -85,6 +93,7 @@
 
     goto :goto_0
 
+    .line 81
     :pswitch_3
     new-instance v3, Lcom/android/internal/telephony/gsm/stk/StkEventDownload;
 
@@ -92,6 +101,7 @@
 
     goto :goto_0
 
+    .line 74
     nop
 
     :pswitch_data_0
@@ -109,6 +119,7 @@
     .parameter "x0"
 
     .prologue
+    .line 68
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/stk/StkEventDownload$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/gsm/stk/StkEventDownload;
 
     move-result-object v0
@@ -121,6 +132,7 @@
     .parameter "size"
 
     .prologue
+    .line 89
     new-array v0, p1, [Lcom/android/internal/telephony/gsm/stk/StkEventDownload;
 
     return-object v0
@@ -131,6 +143,7 @@
     .parameter "x0"
 
     .prologue
+    .line 68
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/stk/StkEventDownload$1;->newArray(I)[Lcom/android/internal/telephony/gsm/stk/StkEventDownload;
 
     move-result-object v0

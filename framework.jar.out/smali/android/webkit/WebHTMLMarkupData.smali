@@ -27,6 +27,7 @@
     .locals 0
 
     .prologue
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,6 +39,7 @@
     .locals 1
 
     .prologue
+    .line 53
     iget-object v0, p0, Landroid/webkit/WebHTMLMarkupData;->mHTMLFragment:Ljava/lang/String;
 
     return-object v0
@@ -47,6 +49,7 @@
     .locals 1
 
     .prologue
+    .line 45
     iget-object v0, p0, Landroid/webkit/WebHTMLMarkupData;->mCharSet:Ljava/lang/String;
 
     return-object v0
@@ -56,6 +59,7 @@
     .locals 1
 
     .prologue
+    .line 61
     iget-object v0, p0, Landroid/webkit/WebHTMLMarkupData;->mPlainText:Ljava/lang/String;
 
     return-object v0
@@ -66,8 +70,10 @@
     .parameter "charSet"
 
     .prologue
+    .line 41
     iput-object p1, p0, Landroid/webkit/WebHTMLMarkupData;->mCharSet:Ljava/lang/String;
 
+    .line 42
     return-void
 .end method
 
@@ -76,8 +82,10 @@
     .parameter "html"
 
     .prologue
+    .line 49
     iput-object p1, p0, Landroid/webkit/WebHTMLMarkupData;->mHTMLFragment:Ljava/lang/String;
 
+    .line 50
     return-void
 .end method
 
@@ -86,8 +94,10 @@
     .parameter "plainText"
 
     .prologue
+    .line 57
     iput-object p1, p0, Landroid/webkit/WebHTMLMarkupData;->mPlainText:Ljava/lang/String;
 
+    .line 58
     return-void
 .end method
 
@@ -105,9 +115,11 @@
     .end annotation
 
     .prologue
+    .line 32
     .local p1, subPartList:Ljava/util/Vector;,"Ljava/util/Vector<Landroid/webkit/WebSubPart;>;"
     iput-object p1, p0, Landroid/webkit/WebHTMLMarkupData;->mSubPartList:Ljava/util/Vector;
 
+    .line 33
     return-void
 .end method
 
@@ -124,6 +136,7 @@
     .end annotation
 
     .prologue
+    .line 37
     iget-object v0, p0, Landroid/webkit/WebHTMLMarkupData;->mSubPartList:Ljava/util/Vector;
 
     return-object v0

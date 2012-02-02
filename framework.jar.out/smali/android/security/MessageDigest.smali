@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,13 +24,17 @@
     .end annotation
 
     .prologue
+    .line 40
     if-nez p0, :cond_0
 
+    .line 41
     const/4 v0, 0x0
 
+    .line 48
     :goto_0
     return-object v0
 
+    .line 44
     :cond_0
     const-string v0, "SHA-1"
 
@@ -39,12 +44,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 45
     new-instance v0, Landroid/security/Sha1MessageDigest;
 
     invoke-direct {v0}, Landroid/security/Sha1MessageDigest;-><init>()V
 
     goto :goto_0
 
+    .line 47
     :cond_1
     const-string v0, "MD5"
 
@@ -54,12 +61,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 48
     new-instance v0, Landroid/security/Md5MessageDigest;
 
     invoke-direct {v0}, Landroid/security/Md5MessageDigest;-><init>()V
 
     goto :goto_0
 
+    .line 51
     :cond_2
     new-instance v0, Ljava/security/NoSuchAlgorithmException;
 

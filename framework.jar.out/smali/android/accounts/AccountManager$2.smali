@@ -41,6 +41,7 @@
     .parameter
 
     .prologue
+    .line 470
     .local p3, x1:Landroid/accounts/AccountManagerCallback;,"Landroid/accounts/AccountManagerCallback<[Landroid/accounts/Account;>;"
     iput-object p1, p0, Landroid/accounts/AccountManager$2;->this$0:Landroid/accounts/AccountManager;
 
@@ -65,6 +66,7 @@
     .end annotation
 
     .prologue
+    .line 470
     invoke-virtual {p0, p1}, Landroid/accounts/AccountManager$2;->bundleToResult(Landroid/os/Bundle;)[Landroid/accounts/Account;
 
     move-result-object v0
@@ -84,6 +86,7 @@
     .prologue
     const-string v4, "accounts"
 
+    .line 475
     const-string v3, "accounts"
 
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -92,6 +95,7 @@
 
     if-nez v3, :cond_0
 
+    .line 476
     new-instance v3, Landroid/accounts/AuthenticatorException;
 
     const-string v4, "no result in response"
@@ -100,6 +104,7 @@
 
     throw v3
 
+    .line 478
     :cond_0
     const-string v3, "accounts"
 
@@ -107,11 +112,13 @@
 
     move-result-object v2
 
+    .line 479
     .local v2, parcelables:[Landroid/os/Parcelable;
     array-length v3, v2
 
     new-array v0, v3, [Landroid/accounts/Account;
 
+    .line 480
     .local v0, descs:[Landroid/accounts/Account;
     const/4 v1, 0x0
 
@@ -122,16 +129,19 @@
 
     if-ge v1, v3, :cond_1
 
+    .line 481
     aget-object p0, v2, v1
 
     check-cast p0, Landroid/accounts/Account;
 
     aput-object p0, v0, v1
 
+    .line 480
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 483
     :cond_1
     return-object v0
 .end method
@@ -145,6 +155,7 @@
     .end annotation
 
     .prologue
+    .line 472
     iget-object v0, p0, Landroid/accounts/AccountManager$2;->this$0:Landroid/accounts/AccountManager;
 
     #getter for: Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -160,5 +171,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/accounts/IAccountManager;->getAccountsByFeatures(Landroid/accounts/IAccountManagerResponse;Ljava/lang/String;[Ljava/lang/String;)V
 
+    .line 473
     return-void
 .end method

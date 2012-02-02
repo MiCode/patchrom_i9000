@@ -31,6 +31,7 @@
     .locals 0
 
     .prologue
+    .line 698
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,15 +45,21 @@
     .parameter "y"
 
     .prologue
+    .line 699
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 700
     iput p1, p0, Landroid/webkit/WebViewCore$CursorData;->mFrame:I
 
+    .line 701
     iput p2, p0, Landroid/webkit/WebViewCore$CursorData;->mNode:I
 
+    .line 702
     iput p3, p0, Landroid/webkit/WebViewCore$CursorData;->mX:I
 
+    .line 703
     iput p4, p0, Landroid/webkit/WebViewCore$CursorData;->mY:I
 
+    .line 704
     return-void
 .end method

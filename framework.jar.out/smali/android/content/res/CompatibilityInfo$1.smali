@@ -19,6 +19,7 @@
     .locals 1
 
     .prologue
+    .line 41
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/content/res/CompatibilityInfo;-><init>(Landroid/content/res/CompatibilityInfo$1;)V
@@ -33,9 +34,10 @@
     .parameter "expandable"
 
     .prologue
+    .line 44
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "trying to change default compatibility info"
+    const-string/jumbo v1, "trying to change default compatibility info"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 

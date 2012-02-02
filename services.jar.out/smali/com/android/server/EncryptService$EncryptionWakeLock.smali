@@ -34,22 +34,30 @@
 
     const/4 v0, 0x0
 
+    .line 1561
     iput-object p1, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->this$0:Lcom/android/server/EncryptService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1554
     iput-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mPM:Landroid/os/PowerManager;
 
+    .line 1555
     iput-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
+    .line 1557
     iput-boolean v1, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->bAcquire:Z
 
+    .line 1562
     iput-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mPM:Landroid/os/PowerManager;
 
+    .line 1563
     iput-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
+    .line 1564
     iput-boolean v1, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->bAcquire:Z
 
+    .line 1565
     return-void
 .end method
 
@@ -59,6 +67,7 @@
     .locals 3
 
     .prologue
+    .line 1569
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mPM:Landroid/os/PowerManager;
 
     if-nez v0, :cond_0
@@ -72,6 +81,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1571
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->this$0:Lcom/android/server/EncryptService;
 
     #getter for: Lcom/android/server/EncryptService;->mContext:Landroid/content/Context;
@@ -89,6 +99,7 @@
 
     iput-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mPM:Landroid/os/PowerManager;
 
+    .line 1574
     :cond_0
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mPM:Landroid/os/PowerManager;
 
@@ -98,6 +109,7 @@
 
     if-nez v0, :cond_1
 
+    .line 1576
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mPM:Landroid/os/PowerManager;
 
     const/4 v1, 0x1
@@ -110,12 +122,14 @@
 
     iput-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
+    .line 1577
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
+    .line 1581
     :cond_1
     return-void
 .end method
@@ -124,29 +138,36 @@
     .locals 1
 
     .prologue
+    .line 1585
     iget-boolean v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->bAcquire:Z
 
     if-nez v0, :cond_1
 
+    .line 1587
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-nez v0, :cond_0
 
+    .line 1589
     invoke-virtual {p0}, Lcom/android/server/EncryptService$EncryptionWakeLock;->InitWakeLock()V
 
+    .line 1592
     :cond_0
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_1
 
+    .line 1595
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
+    .line 1596
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->bAcquire:Z
 
+    .line 1599
     :cond_1
     return-void
 .end method
@@ -155,23 +176,28 @@
     .locals 1
 
     .prologue
+    .line 1603
     iget-boolean v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->bAcquire:Z
 
     if-eqz v0, :cond_1
 
+    .line 1605
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_0
 
+    .line 1607
     iget-object v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
+    .line 1610
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/EncryptService$EncryptionWakeLock;->bAcquire:Z
 
+    .line 1612
     :cond_1
     return-void
 .end method

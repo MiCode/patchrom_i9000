@@ -36,6 +36,7 @@
     .locals 1
 
     .prologue
+    .line 99
     new-instance v0, Landroid/net/wifi/ScanResult$1;
 
     invoke-direct {v0}, Landroid/net/wifi/ScanResult$1;-><init>()V
@@ -54,18 +55,25 @@
     .parameter "frequency"
 
     .prologue
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 57
     iput-object p1, p0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
+    .line 58
     iput-object p2, p0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
+    .line 59
     iput-object p3, p0, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
+    .line 60
     iput p4, p0, Landroid/net/wifi/ScanResult;->level:I
 
+    .line 61
     iput p5, p0, Landroid/net/wifi/ScanResult;->frequency:I
 
+    .line 63
     return-void
 .end method
 
@@ -75,6 +83,7 @@
     .locals 1
 
     .prologue
+    .line 86
     const/4 v0, 0x0
 
     return v0
@@ -84,13 +93,16 @@
     .locals 4
 
     .prologue
+    .line 67
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
+    .line 68
     .local v1, sb:Ljava/lang/StringBuffer;
     const-string v0, "<none>"
 
+    .line 70
     .local v0, none:Ljava/lang/String;
     const-string v2, "SSID: "
 
@@ -165,12 +177,14 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
+    .line 81
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
+    .line 70
     :cond_0
     iget-object v3, p0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
@@ -193,25 +207,31 @@
     .parameter "flags"
 
     .prologue
+    .line 91
     iget-object v0, p0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 92
     iget-object v0, p0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 93
     iget-object v0, p0, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 94
     iget v0, p0, Landroid/net/wifi/ScanResult;->level:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 95
     iget v0, p0, Landroid/net/wifi/ScanResult;->frequency:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 96
     return-void
 .end method

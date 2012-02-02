@@ -22,12 +22,15 @@
     .locals 1
 
     .prologue
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 34
     const v0, -0xffff01
 
     iput v0, p0, Landroid/text/style/QuoteSpan;->mColor:I
 
+    .line 35
     return-void
 .end method
 
@@ -36,10 +39,13 @@
     .parameter "color"
 
     .prologue
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 39
     iput p1, p0, Landroid/text/style/QuoteSpan;->mColor:I
 
+    .line 40
     return-void
 .end method
 
@@ -48,14 +54,17 @@
     .parameter "src"
 
     .prologue
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/text/style/QuoteSpan;->mColor:I
 
+    .line 44
     return-void
 .end method
 
@@ -65,6 +74,7 @@
     .locals 1
 
     .prologue
+    .line 51
     const/4 v0, 0x0
 
     return v0
@@ -86,24 +96,29 @@
     .parameter "layout"
 
     .prologue
+    .line 70
     invoke-virtual {p2}, Landroid/graphics/Paint;->getStyle()Landroid/graphics/Paint$Style;
 
     move-result-object v7
 
+    .line 71
     .local v7, style:Landroid/graphics/Paint$Style;
     invoke-virtual {p2}, Landroid/graphics/Paint;->getColor()I
 
     move-result v6
 
+    .line 73
     .local v6, color:I
     sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 74
     iget v0, p0, Landroid/text/style/QuoteSpan;->mColor:I
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 76
     int-to-float v1, p3
 
     int-to-float v2, p5
@@ -122,10 +137,13 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 78
     invoke-virtual {p2, v7}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 79
     invoke-virtual {p2, v6}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 80
     return-void
 .end method
 
@@ -133,6 +151,7 @@
     .locals 1
 
     .prologue
+    .line 59
     iget v0, p0, Landroid/text/style/QuoteSpan;->mColor:I
 
     return v0
@@ -143,6 +162,7 @@
     .parameter "first"
 
     .prologue
+    .line 63
     const/4 v0, 0x4
 
     return v0
@@ -152,6 +172,7 @@
     .locals 1
 
     .prologue
+    .line 47
     const/16 v0, 0x9
 
     return v0
@@ -163,9 +184,11 @@
     .parameter "flags"
 
     .prologue
+    .line 55
     iget v0, p0, Landroid/text/style/QuoteSpan;->mColor:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 56
     return-void
 .end method

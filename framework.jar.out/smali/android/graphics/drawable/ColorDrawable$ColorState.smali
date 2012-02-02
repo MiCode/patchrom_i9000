@@ -28,18 +28,23 @@
     .parameter "state"
 
     .prologue
+    .line 136
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
+    .line 137
     if-eqz p1, :cond_0
 
+    .line 138
     iget v0, p1, Landroid/graphics/drawable/ColorDrawable$ColorState;->mBaseColor:I
 
     iput v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mBaseColor:I
 
+    .line 139
     iget v0, p1, Landroid/graphics/drawable/ColorDrawable$ColorState;->mUseColor:I
 
     iput v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mUseColor:I
 
+    .line 141
     :cond_0
     return-void
 .end method
@@ -50,6 +55,7 @@
     .locals 1
 
     .prologue
+    .line 155
     iget v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mChangingConfigurations:I
 
     return v0
@@ -59,6 +65,7 @@
     .locals 2
 
     .prologue
+    .line 145
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     const/4 v1, 0x0
@@ -73,6 +80,7 @@
     .parameter "res"
 
     .prologue
+    .line 150
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     const/4 v1, 0x0

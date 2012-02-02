@@ -16,12 +16,16 @@
     .parameter "contentProvider"
 
     .prologue
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 42
     iput-object p2, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
+    .line 43
     iput-object p1, p0, Landroid/content/ContentProviderClient;->mContentResolver:Landroid/content/ContentResolver;
 
+    .line 44
     return-void
 .end method
 
@@ -49,6 +53,7 @@
     .end annotation
 
     .prologue
+    .line 95
     .local p1, operations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
@@ -70,6 +75,7 @@
     .end annotation
 
     .prologue
+    .line 65
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-interface {v0, p1, p2}, Landroid/content/IContentProvider;->bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I
@@ -91,6 +97,7 @@
     .end annotation
 
     .prologue
+    .line 71
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/content/IContentProvider;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
@@ -104,6 +111,7 @@
     .locals 1
 
     .prologue
+    .line 117
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-static {v0}, Landroid/content/ContentProvider;->coerceToLocalContentProvider(Landroid/content/IContentProvider;)Landroid/content/ContentProvider;
@@ -123,6 +131,7 @@
     .end annotation
 
     .prologue
+    .line 54
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-interface {v0, p1}, Landroid/content/IContentProvider;->getType(Landroid/net/Uri;)Ljava/lang/String;
@@ -143,6 +152,7 @@
     .end annotation
 
     .prologue
+    .line 60
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-interface {v0, p1, p2}, Landroid/content/IContentProvider;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
@@ -164,6 +174,7 @@
     .end annotation
 
     .prologue
+    .line 89
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-interface {v0, p1, p2}, Landroid/content/IContentProvider;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
@@ -185,6 +196,7 @@
     .end annotation
 
     .prologue
+    .line 83
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-interface {v0, p1, p2}, Landroid/content/IContentProvider;->openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
@@ -208,6 +220,7 @@
     .end annotation
 
     .prologue
+    .line 49
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     move-object v1, p1
@@ -231,6 +244,7 @@
     .locals 2
 
     .prologue
+    .line 104
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
@@ -255,6 +269,7 @@
     .end annotation
 
     .prologue
+    .line 77
     iget-object v0, p0, Landroid/content/ContentProviderClient;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/content/IContentProvider;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I

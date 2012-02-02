@@ -28,12 +28,16 @@
     .parameter "looper"
 
     .prologue
+    .line 123
     iput-object p1, p0, Landroid/hardware/TvOut$EventHandler;->this$0:Landroid/hardware/TvOut;
 
+    .line 124
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 125
     iput-object p2, p0, Landroid/hardware/TvOut$EventHandler;->mTvOut:Landroid/hardware/TvOut;
 
+    .line 126
     return-void
 .end method
 
@@ -46,12 +50,14 @@
     .prologue
     const-string v1, "TvOut-Client"
 
+    .line 129
     const-string v0, "TvOut-Client"
 
     const-string v0, "handleMessage"
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 130
     iget-object v0, p0, Landroid/hardware/TvOut$EventHandler;->mTvOut:Landroid/hardware/TvOut;
 
     #getter for: Landroid/hardware/TvOut;->mNativeContext:I
@@ -61,12 +67,14 @@
 
     if-nez v0, :cond_0
 
+    .line 131
     const-string v0, "TvOut-Client"
 
-    const-string v0, "tvout went away with unhandled events"
+    const-string/jumbo v0, "tvout went away with unhandled events"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 135
     :cond_0
     return-void
 .end method

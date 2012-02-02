@@ -18,10 +18,13 @@
     .parameter "handler"
 
     .prologue
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     iput-object p1, p0, Landroid/text/ClipboardManager;->mContext:Landroid/content/Context;
 
+    .line 53
     return-void
 .end method
 
@@ -29,15 +32,19 @@
     .locals 2
 
     .prologue
+    .line 41
     sget-object v1, Landroid/text/ClipboardManager;->sService:Landroid/text/IClipboard;
 
     if-eqz v1, :cond_0
 
+    .line 42
     sget-object v1, Landroid/text/ClipboardManager;->sService:Landroid/text/IClipboard;
 
+    .line 46
     :goto_0
     return-object v1
 
+    .line 44
     :cond_0
     const-string v1, "clipboard"
 
@@ -45,6 +52,7 @@
 
     move-result-object v0
 
+    .line 45
     .local v0, b:Landroid/os/IBinder;
     invoke-static {v0}, Landroid/text/IClipboard$Stub;->asInterface(Landroid/os/IBinder;)Landroid/text/IClipboard;
 
@@ -52,6 +60,7 @@
 
     sput-object v1, Landroid/text/ClipboardManager;->sService:Landroid/text/IClipboard;
 
+    .line 46
     sget-object v1, Landroid/text/ClipboardManager;->sService:Landroid/text/IClipboard;
 
     goto :goto_0
@@ -63,6 +72,7 @@
     .locals 2
 
     .prologue
+    .line 62
     :try_start_0
     invoke-static {}, Landroid/text/ClipboardManager;->getService()Landroid/text/IClipboard;
 
@@ -74,14 +84,17 @@
 
     move-result-object v1
 
+    .line 64
     :goto_0
     return-object v1
 
+    .line 63
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 64
     .local v0, e:Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -92,6 +105,7 @@
     .locals 2
 
     .prologue
+    .line 83
     :try_start_0
     invoke-static {}, Landroid/text/ClipboardManager;->getService()Landroid/text/IClipboard;
 
@@ -103,14 +117,17 @@
 
     move-result v1
 
+    .line 85
     :goto_0
     return v1
 
+    .line 84
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 85
     .local v0, e:Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -122,6 +139,7 @@
     .parameter "text"
 
     .prologue
+    .line 73
     :try_start_0
     invoke-static {}, Landroid/text/ClipboardManager;->getService()Landroid/text/IClipboard;
 
@@ -131,9 +149,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 76
     :goto_0
     return-void
 
+    .line 74
     :catch_0
     move-exception v0
 

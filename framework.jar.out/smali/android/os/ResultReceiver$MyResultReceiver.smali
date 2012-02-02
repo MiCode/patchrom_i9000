@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 47
     iput-object p1, p0, Landroid/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/os/ResultReceiver;
 
     invoke-direct {p0}, Lcom/android/internal/os/IResultReceiver$Stub;-><init>()V
@@ -39,12 +40,14 @@
     .parameter "resultData"
 
     .prologue
+    .line 49
     iget-object v0, p0, Landroid/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/os/ResultReceiver;
 
     iget-object v0, v0, Landroid/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
+    .line 50
     iget-object v0, p0, Landroid/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/os/ResultReceiver;
 
     iget-object v0, v0, Landroid/os/ResultReceiver;->mHandler:Landroid/os/Handler;
@@ -57,9 +60,11 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 54
     :goto_0
     return-void
 
+    .line 52
     :cond_0
     iget-object v0, p0, Landroid/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/os/ResultReceiver;
 

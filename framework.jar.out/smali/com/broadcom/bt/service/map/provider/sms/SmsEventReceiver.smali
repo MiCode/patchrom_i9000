@@ -62,6 +62,7 @@
     .locals 3
 
     .prologue
+    .line 89
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -82,24 +83,30 @@
     .parameter "provider"
 
     .prologue
+    .line 115
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 97
     const-string v0, "MapURI"
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->intentExtraName:Ljava/lang/String;
 
+    .line 116
     iput-object p1, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mProvider:Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;
 
+    .line 117
     iget-object v0, p1, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;->mHelper:Lcom/broadcom/bt/service/map/provider/ProviderHelper;
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mHelper:Lcom/broadcom/bt/service/map/provider/ProviderHelper;
 
+    .line 118
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mHandler:Landroid/os/Handler;
 
+    .line 119
     return-void
 .end method
 
@@ -111,6 +118,7 @@
     .parameter "x3"
 
     .prologue
+    .line 38
     invoke-direct {p0, p1, p2, p3}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->processMessageReceived(Landroid/content/Context;[Landroid/telephony/SmsMessage;I)V
 
     return-void
@@ -131,19 +139,24 @@
 
     const-string v11, "SmsEventReceiver"
 
+    .line 231
     const/4 v0, 0x3
 
     new-array v4, v0, [Ljava/lang/String;
 
+    .line 232
     .local v4, selectionArgs:[Ljava/lang/String;
     const/4 v6, 0x0
 
+    .line 233
     .local v6, c:Landroid/database/Cursor;
     const/4 v9, -0x1
 
+    .line 234
     .local v9, messageId:I
     const/4 v7, 0x0
 
+    .line 236
     .local v7, hasError:Z
     aget-object v0, p2, v1
 
@@ -157,6 +170,7 @@
 
     aput-object v0, v4, v1
 
+    .line 237
     aget-object v0, p2, v1
 
     invoke-virtual {v0}, Landroid/telephony/SmsMessage;->getDisplayOriginatingAddress()Ljava/lang/String;
@@ -165,10 +179,12 @@
 
     aput-object v0, v4, v3
 
+    .line 238
     const-string v0, ""
 
     aput-object v0, v4, v2
 
+    .line 239
     const/4 v8, 0x0
 
     .local v8, i:I
@@ -177,6 +193,7 @@
 
     if-ge v8, v0, :cond_0
 
+    .line 240
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,10 +220,12 @@
 
     aput-object v0, v4, v2
 
+    .line 239
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
+    .line 245
     :cond_0
     :try_start_0
     const-string v0, "SmsEventReceiver"
@@ -273,6 +292,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 249
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -281,7 +301,7 @@
 
     sget-object v2, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->PROJECTION_SMS_RECEIVED:[Ljava/lang/String;
 
-    const-string v3, "type = 1 AND protocol = ? AND address = ? AND body = ?"
+    const-string/jumbo v3, "type = 1 AND protocol = ? AND address = ? AND body = ?"
 
     const-string v5, "_id DESC "
 
@@ -289,6 +309,7 @@
 
     move-result-object v6
 
+    .line 251
     if-eqz v6, :cond_2
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
@@ -297,6 +318,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 252
     const/4 v0, 0x0
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -305,19 +327,25 @@
 
     move-result v9
 
+    .line 262
     :goto_1
     if-eqz v6, :cond_1
 
+    .line 263
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
+    .line 264
     const/4 v6, 0x0
 
+    .line 266
     :cond_1
     if-eqz v7, :cond_3
 
+    .line 282
     :goto_2
     return-void
 
+    .line 255
     :cond_2
     :try_start_1
     const-string v0, "SmsEventReceiver"
@@ -330,11 +358,13 @@
 
     goto :goto_1
 
+    .line 258
     :catch_0
     move-exception v0
 
     move-object v10, v0
 
+    .line 259
     .local v10, t:Ljava/lang/Throwable;
     const-string v0, "SmsEventReceiver"
 
@@ -342,10 +372,12 @@
 
     invoke-static {v11, v0, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 260
     const/4 v7, 0x1
 
     goto :goto_1
 
+    .line 271
     .end local v10           #t:Ljava/lang/Throwable;
     :cond_3
     const-string v0, "SmsEventReceiver"
@@ -370,10 +402,12 @@
 
     invoke-static {v11, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 273
     const/4 v0, -0x1
 
     if-eq v9, v0, :cond_4
 
+    .line 274
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mHelper:Lcom/broadcom/bt/service/map/provider/ProviderHelper;
 
     const-string v1, "SMS"
@@ -388,11 +422,13 @@
 
     goto :goto_2
 
+    .line 276
     :cond_4
     const/4 v0, 0x5
 
     if-ge p3, v0, :cond_5
 
+    .line 277
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver$ProcessMsgReceivedRunnable;
@@ -407,6 +443,7 @@
 
     goto :goto_2
 
+    .line 280
     :cond_5
     const-string v0, "SmsEventReceiver"
 
@@ -425,12 +462,14 @@
     .prologue
     const-string v7, "SmsEventReceiver"
 
+    .line 201
     const-string v5, "SmsEventReceiver"
 
-    const-string v5, "processMessageReceivedAction()"
+    const-string/jumbo v5, "processMessageReceivedAction()"
 
     invoke-static {v7, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 204
     iget-object v5, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mProvider:Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;
 
     invoke-virtual {v5}, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;->notificationsEnabled()Z
@@ -439,27 +478,32 @@
 
     if-nez v5, :cond_0
 
+    .line 206
     const-string v5, "SmsEventReceiver"
 
     const-string v5, "MAP notification not enabled...Skipping event"
 
     invoke-static {v7, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 228
     :goto_0
     return-void
 
+    .line 212
     :cond_0
     const/4 v3, 0x0
 
+    .line 213
     .local v3, pdus:[Ljava/lang/Object;
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
+    .line 214
     .local v1, bundle:Landroid/os/Bundle;
     if-eqz v1, :cond_1
 
-    const-string v5, "pdus"
+    const-string/jumbo v5, "pdus"
 
     invoke-virtual {v1, v5}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -481,6 +525,7 @@
 
     if-ge v5, v6, :cond_2
 
+    .line 216
     :cond_1
     const-string v5, "SmsEventReceiver"
 
@@ -490,11 +535,13 @@
 
     goto :goto_0
 
+    .line 220
     :cond_2
     array-length v5, v3
 
     new-array v4, v5, [Landroid/telephony/SmsMessage;
 
+    .line 221
     .local v4, smsMessages:[Landroid/telephony/SmsMessage;
     const/4 v2, 0x0
 
@@ -504,6 +551,7 @@
 
     if-ge v2, v5, :cond_3
 
+    .line 222
     aget-object v5, v3, v2
 
     check-cast v5, [B
@@ -516,10 +564,12 @@
 
     aput-object v5, v4, v2
 
+    .line 221
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
+    .line 226
     :cond_3
     const/4 v5, 0x0
 
@@ -538,12 +588,14 @@
 
     const-string v5, "SmsEventReceiver"
 
+    .line 157
     const-string v3, "SmsEventReceiver"
 
-    const-string v3, "processMessageSentAction()"
+    const-string/jumbo v3, "processMessageSentAction()"
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 159
     const-string v3, "com.broadcom.bt.service.map.sms.MESSAGE_SENT_BY_MMS_APP_FWD"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -556,8 +608,10 @@
 
     if-nez v3, :cond_0
 
+    .line 161
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->sendMmsAppMessageSentEvent(Landroid/content/Context;Landroid/content/Intent;)V
 
+    .line 164
     :cond_0
     iget-object v3, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mProvider:Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;
 
@@ -567,18 +621,22 @@
 
     if-nez v3, :cond_1
 
+    .line 166
     const-string v3, "SmsEventReceiver"
 
     const-string v3, "MAP notification not enabled...Skipping event"
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 192
     :goto_0
     return-void
 
+    .line 171
     :cond_1
     const/4 v0, 0x0
 
+    .line 172
     .local v0, messageId:Ljava/lang/String;
     const-string v3, "MapURI"
 
@@ -588,9 +646,11 @@
 
     check-cast v1, Landroid/net/Uri;
 
+    .line 173
     .local v1, messageUri:Landroid/net/Uri;
     if-nez v1, :cond_2
 
+    .line 174
     const-string v3, "SmsEventReceiver"
 
     const-string v3, "Unable to get Message URI for message"
@@ -599,20 +659,24 @@
 
     goto :goto_0
 
+    .line 177
     :cond_2
     invoke-virtual {v1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 179
     invoke-virtual {p0}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->getResultCode()I
 
     move-result v2
 
+    .line 180
     .local v2, resultCode:I
     const/4 v3, -0x1
 
     if-ne v3, v2, :cond_3
 
+    .line 182
     const-string v3, "SmsEventReceiver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -635,6 +699,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 184
     iget-object v3, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mHelper:Lcom/broadcom/bt/service/map/provider/ProviderHelper;
 
     const-string v4, "SMS"
@@ -645,6 +710,7 @@
 
     goto :goto_0
 
+    .line 187
     :cond_3
     const-string v3, "SmsEventReceiver"
 
@@ -694,6 +760,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 190
     iget-object v3, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mHelper:Lcom/broadcom/bt/service/map/provider/ProviderHelper;
 
     const-string v4, "SMS"
@@ -711,12 +778,14 @@
     .parameter "intent"
 
     .prologue
+    .line 286
     const-string v2, "SmsEventReceiver"
 
-    const-string v3, "processMessageStatusReceivedAction()"
+    const-string/jumbo v3, "processMessageStatusReceivedAction()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 289
     const-string v2, "com.broadcom.bt.service.map.sms.MESSAGE_STATUS_RECEIVED_BY_MMS_APP_FWD"
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -729,8 +798,10 @@
 
     if-nez v2, :cond_0
 
+    .line 291
     invoke-direct/range {p0 .. p2}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->sendMmsAppMessageStatusReceivedEvent(Landroid/content/Context;Landroid/content/Intent;)V
 
+    .line 294
     :cond_0
     move-object/from16 v0, p0
 
@@ -744,16 +815,19 @@
 
     if-nez v2, :cond_1
 
+    .line 296
     const-string v2, "SmsEventReceiver"
 
     const-string v3, "MAP notification not enabled...Skipping event"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 346
     .end local p1
     :goto_0
     return-void
 
+    .line 302
     .restart local p1
     :cond_1
     const-string v2, "MapURI"
@@ -768,9 +842,11 @@
 
     check-cast v3, Landroid/net/Uri;
 
+    .line 303
     .local v3, messageUri:Landroid/net/Uri;
     if-nez v3, :cond_2
 
+    .line 304
     const-string v2, "SmsEventReceiver"
 
     const-string v3, "Unable to process message status. Invalid messageUri"
@@ -780,6 +856,7 @@
 
     goto :goto_0
 
+    .line 307
     .restart local v3       #messageUri:Landroid/net/Uri;
     :cond_2
     const-string v2, "SmsEventReceiver"
@@ -808,11 +885,14 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 308
     const/4 v10, -0x1
 
+    .line 309
     .local v10, folderType:I
     const/4 v8, 0x0
 
+    .line 311
     .local v8, c:Landroid/database/Cursor;
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -825,7 +905,7 @@
 
     const/4 v5, 0x0
 
-    const-string v6, "type"
+    const-string/jumbo v6, "type"
 
     aput-object v6, v4, v5
 
@@ -839,12 +919,14 @@
 
     move-result-object v8
 
+    .line 313
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
+    .line 314
     const/4 v2, 0x0
 
     invoke-interface {v8, v2}, Landroid/database/Cursor;->getInt(I)I
@@ -853,22 +935,28 @@
 
     move-result v10
 
+    .line 319
     :cond_3
     :goto_1
     if-eqz v8, :cond_4
 
+    .line 320
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
+    .line 321
     const/4 v8, 0x0
 
+    .line 324
     :cond_4
     invoke-static {v10}, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;->getFolderPath(I)Ljava/lang/String;
 
     move-result-object v9
 
+    .line 325
     .local v9, folderPath:Ljava/lang/String;
     if-nez v9, :cond_5
 
+    .line 326
     const-string v2, "SmsEventReceiver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -894,6 +982,7 @@
 
     goto :goto_0
 
+    .line 316
     .end local v9           #folderPath:Ljava/lang/String;
     .restart local v3       #messageUri:Landroid/net/Uri;
     :catch_0
@@ -901,6 +990,7 @@
 
     move-object v15, v2
 
+    .line 317
     .local v15, t:Ljava/lang/Throwable;
     const-string v2, "SmsEventReceiver"
 
@@ -910,6 +1000,7 @@
 
     goto :goto_1
 
+    .line 329
     .end local v15           #t:Ljava/lang/Throwable;
     .restart local v9       #folderPath:Ljava/lang/String;
     :cond_5
@@ -917,8 +1008,9 @@
 
     move-result-object v12
 
+    .line 331
     .local v12, messageId:Ljava/lang/String;
-    const-string v2, "pdu"
+    const-string/jumbo v2, "pdu"
 
     move-object/from16 v0, p2
 
@@ -937,21 +1029,26 @@
 
     move-object v13, v0
 
+    .line 332
     .local v13, pdu:[B
     if-eqz v13, :cond_7
 
+    .line 334
     invoke-static {v13}, Landroid/telephony/SmsMessage;->createFromPdu([B)Landroid/telephony/SmsMessage;
 
     move-result-object v11
 
+    .line 335
     .local v11, message:Landroid/telephony/SmsMessage;
     invoke-virtual {v11}, Landroid/telephony/SmsMessage;->getStatus()I
 
     move-result v14
 
+    .line 336
     .local v14, status:I
     if-nez v14, :cond_6
 
+    .line 337
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mHelper:Lcom/broadcom/bt/service/map/provider/ProviderHelper;
@@ -965,6 +1062,7 @@
 
     goto/16 :goto_0
 
+    .line 339
     .restart local v3       #messageUri:Landroid/net/Uri;
     :cond_6
     const-string v2, "SmsEventReceiver"
@@ -990,6 +1088,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 340
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->mHelper:Lcom/broadcom/bt/service/map/provider/ProviderHelper;
@@ -1002,6 +1101,7 @@
 
     goto/16 :goto_0
 
+    .line 344
     .end local v11           #message:Landroid/telephony/SmsMessage;
     .end local v14           #status:I
     .restart local v3       #messageUri:Landroid/net/Uri;
@@ -1024,21 +1124,25 @@
     .prologue
     const-string v3, "errorCode"
 
+    .line 349
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
+    .line 350
     .local v0, i:Landroid/content/Intent;
     const-string v1, "com.android.mms.transaction.MESSAGE_SENT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 351
     const-string v1, "com.android.mms"
 
     const-string v2, "com.android.mms.transaction.SmsReceiver"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 352
     const-string v1, "errorCode"
 
     const-string v1, "errorCode"
@@ -1051,6 +1155,7 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 353
     const-string v1, "MapURI"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -1062,8 +1167,10 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
+    .line 354
     invoke-virtual {p1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 355
     return-void
 .end method
 
@@ -1073,21 +1180,25 @@
     .parameter "intent"
 
     .prologue
+    .line 358
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
+    .line 359
     .local v0, i:Landroid/content/Intent;
     const-string v1, "com.android.mms.transaction.MessageStatusReceiver.MESSAGE_STATUS_RECEIVED"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 360
     const-string v1, "com.android.mms"
 
     const-string v2, "com.android.mms.transaction.MessageStatusReceiver"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 363
     const-string v1, "MapURI"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -1099,8 +1210,10 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
+    .line 364
     invoke-virtual {p1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 366
     return-void
 .end method
 
@@ -1111,35 +1224,43 @@
     .parameter "filter"
 
     .prologue
+    .line 143
     if-nez p1, :cond_0
 
+    .line 144
     new-instance p1, Landroid/content/IntentFilter;
 
     .end local p1
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 146
     .restart local p1
     :cond_0
     const-string v0, "com.broadcom.bt.service.map.sms.MESSAGE_SENT_FORWARD"
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 147
     const-string v0, "com.broadcom.bt.service.map.sms.MESSAGE_STATUS_RECEIVED_FORWARD"
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 148
     const-string v0, "android.provider.Telephony.SMS_RECEIVED"
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 149
     const-string v0, "com.broadcom.bt.service.map.sms.MESSAGE_STATUS_RECEIVED_BY_MMS_APP_FWD"
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 150
     const-string v0, "com.broadcom.bt.service.map.sms.MESSAGE_SENT_BY_MMS_APP_FWD"
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 152
     return-object p1
 .end method
 
@@ -1151,10 +1272,12 @@
     .prologue
     const-string v3, "SmsEventReceiver"
 
+    .line 124
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 125
     .local v0, action:Ljava/lang/String;
     const-string v1, "SmsEventReceiver"
 
@@ -1178,6 +1301,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 126
     const-string v1, "com.broadcom.bt.service.map.sms.MESSAGE_SENT_FORWARD"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1186,11 +1310,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 127
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->processMessageSentAction(Landroid/content/Context;Landroid/content/Intent;)V
 
+    .line 140
     :goto_0
     return-void
 
+    .line 128
     :cond_0
     const-string v1, "com.broadcom.bt.service.map.sms.MESSAGE_STATUS_RECEIVED_FORWARD"
 
@@ -1200,10 +1327,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 129
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->processMessageStatusReceivedAction(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
+    .line 130
     :cond_1
     const-string v1, "android.provider.Telephony.SMS_RECEIVED"
 
@@ -1213,10 +1342,12 @@
 
     if-eqz v1, :cond_2
 
+    .line 131
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->processMessageReceivedAction(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
+    .line 132
     :cond_2
     const-string v1, "com.broadcom.bt.service.map.sms.MESSAGE_STATUS_RECEIVED_BY_MMS_APP_FWD"
 
@@ -1226,10 +1357,12 @@
 
     if-eqz v1, :cond_3
 
+    .line 133
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->processMessageStatusReceivedAction(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
+    .line 134
     :cond_3
     const-string v1, "com.broadcom.bt.service.map.sms.MESSAGE_SENT_BY_MMS_APP_FWD"
 
@@ -1239,10 +1372,12 @@
 
     if-eqz v1, :cond_4
 
+    .line 135
     invoke-direct {p0, p1, p2}, Lcom/broadcom/bt/service/map/provider/sms/SmsEventReceiver;->processMessageSentAction(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
+    .line 138
     :cond_4
     const-string v1, "SmsEventReceiver"
 

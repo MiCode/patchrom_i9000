@@ -36,16 +36,20 @@
     .parameter "resourceId"
 
     .prologue
+    .line 112
     invoke-direct {p0}, Landroid/gesture/GestureLibrary;-><init>()V
 
+    .line 113
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/gesture/GestureLibraries$ResourceGestureLibrary;->mContext:Ljava/lang/ref/WeakReference;
 
+    .line 114
     iput p2, p0, Landroid/gesture/GestureLibraries$ResourceGestureLibrary;->mResourceId:I
 
+    .line 115
     return-void
 .end method
 
@@ -55,6 +59,7 @@
     .locals 1
 
     .prologue
+    .line 119
     const/4 v0, 0x1
 
     return v0
@@ -64,8 +69,10 @@
     .locals 8
 
     .prologue
+    .line 127
     const/4 v3, 0x0
 
+    .line 128
     .local v3, result:Z
     iget-object v4, p0, Landroid/gesture/GestureLibraries$ResourceGestureLibrary;->mContext:Ljava/lang/ref/WeakReference;
 
@@ -75,9 +82,11 @@
 
     check-cast v0, Landroid/content/Context;
 
+    .line 129
     .local v0, context:Landroid/content/Context;
     if-eqz v0, :cond_0
 
+    .line 130
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -88,6 +97,7 @@
 
     move-result-object v2
 
+    .line 132
     .local v2, in:Ljava/io/InputStream;
     :try_start_0
     iget-object v4, p0, Landroid/gesture/GestureLibrary;->mStore:Landroid/gesture/GestureStore;
@@ -98,19 +108,23 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 133
     const/4 v3, 0x1
 
+    .line 140
     .end local v2           #in:Ljava/io/InputStream;
     :cond_0
     :goto_0
     return v3
 
+    .line 134
     .restart local v2       #in:Ljava/io/InputStream;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 135
     .local v1, e:Ljava/io/IOException;
     const-string v4, "Gestures"
 
@@ -151,6 +165,7 @@
     .locals 1
 
     .prologue
+    .line 123
     const/4 v0, 0x0
 
     return v0

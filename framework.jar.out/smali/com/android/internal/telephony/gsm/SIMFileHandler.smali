@@ -20,10 +20,13 @@
     .parameter "phone"
 
     .prologue
+    .line 40
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
 
+    .line 41
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/SIMFileHandler;->mPhone:Lcom/android/internal/telephony/Phone;
 
+    .line 42
     return-void
 .end method
 
@@ -33,8 +36,10 @@
     .locals 0
 
     .prologue
+    .line 45
     invoke-super {p0}, Lcom/android/internal/telephony/IccFileHandler;->dispose()V
 
+    .line 46
     return-void
 .end method
 
@@ -42,12 +47,14 @@
     .locals 2
 
     .prologue
+    .line 49
     const-string v0, "GSM"
 
     const-string v1, "SIMFileHandler finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 50
     return-void
 .end method
 
@@ -60,21 +67,26 @@
 
     const-string v3, "3F007F105F3A"
 
+    .line 62
     sparse-switch p1, :sswitch_data_0
 
+    .line 91
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/SIMFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 92
     .local v1, path:Ljava/lang/String;
     if-nez v1, :cond_1
 
+    .line 96
     iget-object v2, p0, Lcom/android/internal/telephony/IccFileHandler;->phone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/PhoneBase;->getIccCard()Lcom/android/internal/telephony/IccCard;
 
     move-result-object v0
 
+    .line 97
     .local v0, card:Lcom/android/internal/telephony/IccCard;
     if-eqz v0, :cond_0
 
@@ -86,20 +98,24 @@
 
     if-eqz v2, :cond_0
 
+    .line 98
     const-string v2, "3F007F105F3A"
 
     move-object v2, v3
 
+    .line 102
     .end local v0           #card:Lcom/android/internal/telephony/IccCard;
     .end local v1           #path:Ljava/lang/String;
     :goto_0
     return-object v2
 
+    .line 64
     :sswitch_0
     const-string v2, "3F007F10"
 
     goto :goto_0
 
+    .line 77
     :sswitch_1
     const-string v2, "3F007F20"
 
@@ -107,6 +123,7 @@
 
     goto :goto_0
 
+    .line 85
     :sswitch_2
     const-string v2, "3F007F20"
 
@@ -114,6 +131,7 @@
 
     goto :goto_0
 
+    .line 89
     :sswitch_3
     const-string v2, "3F007F105F3A"
 
@@ -121,6 +139,7 @@
 
     goto :goto_0
 
+    .line 100
     .restart local v0       #card:Lcom/android/internal/telephony/IccCard;
     .restart local v1       #path:Ljava/lang/String;
     :cond_0
@@ -134,8 +153,10 @@
     :cond_1
     move-object v2, v1
 
+    .line 102
     goto :goto_0
 
+    .line 62
     nop
 
     :sswitch_data_0
@@ -167,8 +188,10 @@
     .parameter "msg"
 
     .prologue
+    .line 56
     invoke-super {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;->handleMessage(Landroid/os/Message;)V
 
+    .line 57
     return-void
 .end method
 
@@ -177,6 +200,7 @@
     .parameter "msg"
 
     .prologue
+    .line 106
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -199,6 +223,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 107
     return-void
 .end method
 
@@ -207,6 +232,7 @@
     .parameter "msg"
 
     .prologue
+    .line 110
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -229,5 +255,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 111
     return-void
 .end method

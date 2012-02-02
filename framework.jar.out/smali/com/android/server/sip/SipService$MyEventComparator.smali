@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 1411
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +43,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1411
     invoke-direct {p0}, Lcom/android/server/sip/SipService$MyEventComparator;-><init>()V
 
     return-void
@@ -55,13 +57,16 @@
     .parameter "e2"
 
     .prologue
+    .line 1413
     if-ne p1, p2, :cond_0
 
     const/4 v1, 0x0
 
+    .line 1416
     :goto_0
     return v1
 
+    .line 1414
     :cond_0
     iget v1, p1, Lcom/android/server/sip/SipService$MyEvent;->mMaxPeriod:I
 
@@ -69,6 +74,7 @@
 
     sub-int v0, v1, v2
 
+    .line 1415
     .local v0, diff:I
     if-nez v0, :cond_1
 
@@ -77,6 +83,7 @@
     :cond_1
     move v1, v0
 
+    .line 1416
     goto :goto_0
 .end method
 
@@ -86,6 +93,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1411
     check-cast p1, Lcom/android/server/sip/SipService$MyEvent;
 
     .end local p1
@@ -104,6 +112,7 @@
     .parameter "that"
 
     .prologue
+    .line 1420
     if-ne p0, p1, :cond_0
 
     const/4 v0, 0x1

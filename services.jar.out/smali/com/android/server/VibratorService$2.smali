@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 556
     iput-object p1, p0, Lcom/android/server/VibratorService$2;->this$0:Lcom/android/server/VibratorService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,6 +40,7 @@
     .parameter "intent"
 
     .prologue
+    .line 558
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -51,6 +53,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 559
     iget-object v0, p0, Lcom/android/server/VibratorService$2;->this$0:Lcom/android/server/VibratorService;
 
     #getter for: Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
@@ -60,12 +63,14 @@
 
     monitor-enter v0
 
+    .line 560
     :try_start_0
     iget-object v1, p0, Lcom/android/server/VibratorService$2;->this$0:Lcom/android/server/VibratorService;
 
     #calls: Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
     invoke-static {v1}, Lcom/android/server/VibratorService;->access$200(Lcom/android/server/VibratorService;)V
 
+    .line 561
     iget-object v1, p0, Lcom/android/server/VibratorService$2;->this$0:Lcom/android/server/VibratorService;
 
     #getter for: Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
@@ -75,11 +80,14 @@
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
+    .line 562
     monitor-exit v0
 
+    .line 564
     :cond_0
     return-void
 
+    .line 562
     :catchall_0
     move-exception v1
 

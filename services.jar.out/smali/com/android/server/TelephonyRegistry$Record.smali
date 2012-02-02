@@ -29,6 +29,7 @@
     .locals 0
 
     .prologue
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +40,7 @@
     .parameter "x0"
 
     .prologue
+    .line 60
     invoke-direct {p0}, Lcom/android/server/TelephonyRegistry$Record;-><init>()V
 
     return-void

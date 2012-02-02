@@ -31,20 +31,26 @@
 
     const-string v5, "ExchangeAccountPolicy"
 
+    .line 26
     invoke-direct {p0}, Landroid/app/enterprise/IExchangeAccountPolicy$Stub;-><init>()V
 
+    .line 22
     iput-boolean v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mSyncManagerDisabled:Z
 
+    .line 23
     iput-boolean v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mRestartExtendDelay:Z
 
+    .line 636
     new-instance v3, Lcom/android/server/enterprise/ExchangeAccountPolicy$1;
 
     invoke-direct {v3, p0}, Lcom/android/server/enterprise/ExchangeAccountPolicy$1;-><init>(Lcom/android/server/enterprise/ExchangeAccountPolicy;)V
 
     iput-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mHandler:Landroid/os/Handler;
 
+    .line 27
     iput-object p1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
+    .line 31
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
@@ -52,6 +58,7 @@
 
     move-result-object v1
 
+    .line 32
     .local v1, pm:Landroid/content/pm/PackageManager;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -61,6 +68,7 @@
 
     invoke-direct {v2, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 34
     .local v2, syncMgrCn:Landroid/content/ComponentName;
     if-eqz v1, :cond_0
 
@@ -72,12 +80,14 @@
 
     if-ne v3, v4, :cond_0
 
+    .line 36
     const-string v3, "ExchangeAccountPolicy"
 
     const-string v4, "Enabling EAS SyncManager"
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 37
     const/4 v3, 0x1
 
     const/4 v4, 0x0
@@ -86,17 +96,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 44
     .end local v1           #pm:Landroid/content/pm/PackageManager;
     .end local v2           #syncMgrCn:Landroid/content/ComponentName;
     :cond_0
     :goto_0
     return-void
 
+    .line 41
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
+    .line 42
     .local v0, e:Ljava/lang/Exception;
     const-string v3, "ExchangeAccountPolicy"
 
@@ -132,6 +145,7 @@
     .parameter "x0"
 
     .prologue
+    .line 18
     iget-boolean v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mSyncManagerDisabled:Z
 
     return v0
@@ -143,6 +157,7 @@
     .parameter "x1"
 
     .prologue
+    .line 18
     iput-boolean p1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mSyncManagerDisabled:Z
 
     return p1
@@ -153,6 +168,7 @@
     .parameter "x0"
 
     .prologue
+    .line 18
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -164,6 +180,7 @@
     .parameter "x1"
 
     .prologue
+    .line 18
     iput-boolean p1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mRestartExtendDelay:Z
 
     return p1
@@ -174,6 +191,7 @@
     .parameter "value"
 
     .prologue
+    .line 135
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -198,10 +216,12 @@
     .parameter "accId"
 
     .prologue
+    .line 314
     monitor-enter p0
 
     const-wide/16 v41, -0x1
 
+    .line 316
     .local v41, newAccountId:J
     :try_start_0
     new-instance v5, Ljava/lang/StringBuilder;
@@ -284,6 +304,7 @@
 
     invoke-static {v5}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 319
     move-object/from16 v0, p0
 
     move-wide/from16 v1, p5
@@ -292,9 +313,11 @@
 
     move-result-object v39
 
+    .line 320
     .local v39, acc:Landroid/app/enterprise/Account;
     if-eqz v39, :cond_4
 
+    .line 321
     const-string v5, "ExchangeAccountPolicy"
 
     invoke-virtual/range {v39 .. v39}, Landroid/app/enterprise/Account;->toString()Ljava/lang/String;
@@ -303,6 +326,7 @@
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 323
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
@@ -313,54 +337,66 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->deleteAccount(JZ)Z
 
+    .line 325
     new-instance v40, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct/range {v40 .. v40}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 326
     .local v40, accountMData:Lcom/android/server/enterprise/AccountMetaData;
     invoke-static/range {v39 .. v40}, Lcom/android/server/enterprise/SettingsUtils;->fillExistingAccountInfo(Landroid/app/enterprise/Account;Lcom/android/server/enterprise/AccountMetaData;)V
 
+    .line 328
     if-eqz p1, :cond_0
 
+    .line 329
     move-object/from16 v0, p1
 
     move-object/from16 v1, v40
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEasUser:Ljava/lang/String;
 
+    .line 331
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 332
     move-object/from16 v0, p2
 
     move-object/from16 v1, v40
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEasDomain:Ljava/lang/String;
 
+    .line 334
     :cond_1
     if-eqz p3, :cond_2
 
+    .line 335
     move-object/from16 v0, p3
 
     move-object/from16 v1, v40
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
+    .line 337
     :cond_2
     if-eqz p4, :cond_3
 
+    .line 338
     move-object/from16 v0, p4
 
     move-object/from16 v1, v40
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAddress:Ljava/lang/String;
 
+    .line 339
     move-object/from16 v0, p4
 
     move-object/from16 v1, v40
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAddress:Ljava/lang/String;
 
+    .line 342
     :cond_3
     move-object/from16 v0, v40
 
@@ -534,6 +570,7 @@
 
     move-result-wide v41
 
+    .line 350
     move-object/from16 v0, p0
 
     move-wide/from16 v1, p5
@@ -542,6 +579,7 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->updateCertificateEntry(JJ)V
 
+    .line 352
     move-object/from16 v0, p0
 
     move-wide/from16 v1, v41
@@ -550,6 +588,7 @@
 
     move-result-object v39
 
+    .line 353
     const-string v5, "ExchangeAccountPolicy"
 
     invoke-virtual/range {v39 .. v39}, Landroid/app/enterprise/Account;->toString()Ljava/lang/String;
@@ -561,6 +600,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 360
     .end local v39           #acc:Landroid/app/enterprise/Account;
     .end local v40           #accountMData:Lcom/android/server/enterprise/AccountMetaData;
     :goto_0
@@ -568,6 +608,7 @@
 
     return-wide v41
 
+    .line 355
     .restart local v39       #acc:Landroid/app/enterprise/Account;
     :cond_4
     :try_start_1
@@ -580,12 +621,14 @@
 
     goto :goto_0
 
+    .line 357
     .end local v39           #acc:Landroid/app/enterprise/Account;
     :catch_0
     move-exception v5
 
     goto :goto_0
 
+    .line 314
     :catchall_0
     move-exception v5
 
@@ -601,6 +644,7 @@
     .parameter "mContext"
 
     .prologue
+    .line 140
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/enterprise/AccountMetaData;->mDisplayName:Ljava/lang/String;
@@ -769,6 +813,7 @@
 
     move-result-wide v36
 
+    .line 146
     .local v36, accId:J
     return-wide v36
 .end method
@@ -779,31 +824,37 @@
     .parameter "newID"
 
     .prologue
+    .line 305
     const-string v1, "ExchangeAccountPolicy"
 
     const-string v2, "updateCertificateEntry() :Sending intent to rename"
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 306
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.email.RENAME_CERTIFICATE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 307
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "accountid"
 
     invoke-virtual {v0, v1, p3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
+    .line 308
     const-string v1, "oldaccountid"
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
+    .line 309
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 311
     return-void
 .end method
 
@@ -831,6 +882,7 @@
     .parameter "serverPathPrefix"
 
     .prologue
+    .line 101
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -843,19 +895,23 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 102
     const-wide/16 v38, -0x1
 
+    .line 103
     .local v38, accId:J
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v43
 
+    .line 105
     .local v43, token:J
     :try_start_0
     const-string v4, "Disabling EAS SyncManager"
 
     invoke-static {v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 106
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -866,6 +922,7 @@
 
     move-result-object v41
 
+    .line 107
     .local v41, pm:Landroid/content/pm/PackageManager;
     new-instance v42, Landroid/content/ComponentName;
 
@@ -881,6 +938,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 109
     .local v42, syncMgrCn:Landroid/content/ComponentName;
     const/4 v4, 0x2
 
@@ -896,6 +954,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
+    .line 111
     const/4 v4, 0x1
 
     move v0, v4
@@ -904,6 +963,7 @@
 
     iput-boolean v0, v1, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mSyncManagerDisabled:Z
 
+    .line 113
     move-object/from16 v0, p0
 
     move/from16 v1, p7
@@ -1034,16 +1094,19 @@
 
     move-result-wide v38
 
+    .line 118
     const-wide/16 v4, -0x1
 
     cmp-long v4, v38, v4
 
     if-nez v4, :cond_0
 
+    .line 119
     const-string v4, "Enabling EAS SyncManager"
 
     invoke-static {v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 120
     const/4 v4, 0x1
 
     const/4 v5, 0x0
@@ -1058,6 +1121,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
+    .line 122
     const/4 v4, 0x0
 
     move v0, v4
@@ -1069,19 +1133,23 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 128
     .end local v41           #pm:Landroid/content/pm/PackageManager;
     .end local v42           #syncMgrCn:Landroid/content/ComponentName;
     :cond_0
     :goto_0
     invoke-static/range {v43 .. v44}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 131
     return-wide v38
 
+    .line 125
     :catch_0
     move-exception v4
 
     move-object/from16 v40, v4
 
+    .line 126
     .local v40, e:Ljava/lang/Exception;
     :try_start_1
     const-string v4, "ExchangeAccountPolicy"
@@ -1114,6 +1182,7 @@
 
     goto :goto_0
 
+    .line 128
     .end local v40           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v4
@@ -1128,6 +1197,7 @@
     .parameter "accId"
 
     .prologue
+    .line 602
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.sec.MDM_EXCHANGE"
@@ -1136,6 +1206,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 603
     const-string v0, "ExchangeAccountPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1158,6 +1229,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 604
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->deleteAccount(JZ)Z
@@ -1175,38 +1247,45 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 607
     iget-object v2, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p2, v2}, Lcom/android/server/enterprise/SettingsUtils;->deleteAccount(JLandroid/content/Context;)Z
 
     move-result v1
 
+    .line 609
     .local v1, ret:Z
     if-ne v1, v3, :cond_0
 
     if-ne p3, v3, :cond_0
 
+    .line 610
     const-string v2, "ExchangeAccountPolicy"
 
     const-string v3, "deleteAccount() :Sending intent to remove"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 611
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.android.email.ACCOUNT_DELETED"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 612
     .local v0, intent:Landroid/content/Intent;
     const-string v2, "accountid"
 
     invoke-virtual {v0, v2, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
+    .line 613
     iget-object v2, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 615
     .end local v0           #intent:Landroid/content/Intent;
     :cond_0
     return v1
@@ -1217,6 +1296,7 @@
     .parameter "accId"
 
     .prologue
+    .line 589
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.sec.MDM_EXCHANGE"
@@ -1225,6 +1305,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 590
     const-string v0, "ExchangeAccountPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1247,6 +1328,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 591
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p2, v0}, Lcom/android/server/enterprise/SettingsUtils;->getAccountDetails(JLandroid/content/Context;)Landroid/app/enterprise/Account;
@@ -1263,6 +1345,7 @@
     .parameter "activeSyncHost"
 
     .prologue
+    .line 576
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.sec.MDM_EXCHANGE"
@@ -1271,6 +1354,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 577
     const-string v0, "ExchangeAccountPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1293,6 +1377,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 578
     const-string v3, "eas"
 
     const/4 v4, 0x1
@@ -1318,6 +1403,7 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 622
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.sec.MDM_EXCHANGE"
@@ -1326,14 +1412,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 623
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/SettingsUtils;->sendAccountsChangedBroadcast(Landroid/content/Context;)V
 
+    .line 624
     iget-boolean v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mRestartExtendDelay:Z
 
     if-nez v0, :cond_0
 
+    .line 625
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mHandler:Landroid/os/Handler;
@@ -1346,9 +1435,11 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
+    .line 631
     :goto_0
     return-void
 
+    .line 628
     :cond_0
     const-string v0, "ExchangeAccountPolicy"
 
@@ -1356,6 +1447,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 629
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mHandler:Landroid/os/Handler;
@@ -1377,6 +1469,7 @@
     .parameter "accId"
 
     .prologue
+    .line 198
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -1385,6 +1478,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 199
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1407,10 +1501,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 201
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 202
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->booleanToByte(Z)B
 
@@ -1418,12 +1514,14 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAcceptAllCertificates:B
 
+    .line 203
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->booleanToByte(Z)B
 
     move-result v1
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAcceptAllCertificates:B
 
+    .line 204
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -1456,6 +1554,7 @@
     .parameter "accId"
 
     .prologue
+    .line 258
     iget-object v4, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v5, "android.permission.sec.MDM_EXCHANGE"
@@ -1464,6 +1563,7 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 259
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1524,38 +1624,46 @@
 
     invoke-static {v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 262
     const-wide/16 v4, 0x1
 
     cmp-long v4, v4, p5
 
     if-lez v4, :cond_0
 
+    .line 263
     const-string v4, "setAccountBaseParameters() : accId is invalid"
 
     invoke-static {v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
     move-wide v4, p5
 
+    .line 299
     :goto_0
     return-wide v4
 
+    .line 267
     :cond_0
     invoke-static {p1}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 268
     invoke-static {p2}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 269
     invoke-static {p3}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
+    .line 270
     invoke-static {p4}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 
+    .line 272
     if-eqz p3, :cond_1
 
     invoke-static {p3}, Lcom/android/server/enterprise/SettingsUtils;->isValidEmailAddress(Ljava/lang/String;)Z
@@ -1564,31 +1672,37 @@
 
     if-nez v4, :cond_1
 
+    .line 273
     const-string v4, "setAccountBaseParameters()  : Error :: Invalid Email Address"
 
     invoke-static {v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 274
     const-wide/16 v4, -0x1
 
     goto :goto_0
 
+    .line 277
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
+    .line 279
     .local v2, token:J
     :try_start_0
     const-string v4, "Disabling EAS SyncManager"
 
     invoke-static {v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 280
     iget-object v4, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
+    .line 281
     .local v0, pm:Landroid/content/pm/PackageManager;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -1598,6 +1712,7 @@
 
     invoke-direct {v1, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 283
     .local v1, syncMgrCn:Landroid/content/ComponentName;
     const/4 v4, 0x2
 
@@ -1605,30 +1720,36 @@
 
     invoke-virtual {v0, v1, v4, v5}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
+    .line 285
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mSyncManagerDisabled:Z
 
+    .line 286
     invoke-direct/range {p0 .. p6}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->reCreate(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide p5
 
+    .line 288
     const-wide/16 v4, -0x1
 
     cmp-long v4, p5, v4
 
     if-nez v4, :cond_2
 
+    .line 289
     const-string v4, "Enabling EAS SyncManager"
 
     invoke-static {v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 290
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
     invoke-virtual {v0, v1, v4, v5}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
+    .line 292
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mSyncManagerDisabled:Z
@@ -1636,6 +1757,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 297
     .end local v0           #pm:Landroid/content/pm/PackageManager;
     .end local v1           #syncMgrCn:Landroid/content/ComponentName;
     :cond_2
@@ -1644,8 +1766,10 @@
 
     move-wide v4, p5
 
+    .line 299
     goto :goto_0
 
+    .line 297
     :catchall_0
     move-exception v4
 
@@ -1653,6 +1777,7 @@
 
     throw v4
 
+    .line 294
     :catch_0
     move-exception v4
 
@@ -1665,6 +1790,7 @@
     .parameter "accId"
 
     .prologue
+    .line 555
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -1673,6 +1799,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 556
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1695,13 +1822,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 558
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 559
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mDisplayName:Ljava/lang/String;
 
+    .line 560
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -1731,6 +1861,7 @@
     .parameter "accId"
 
     .prologue
+    .line 218
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -1739,6 +1870,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 219
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1761,10 +1893,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 221
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 222
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->booleanToByte(Z)B
 
@@ -1772,6 +1906,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateAlways:B
 
+    .line 223
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -1800,6 +1935,7 @@
     .parameter "accId"
 
     .prologue
+    .line 539
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.sec.MDM_EXCHANGE"
@@ -1808,6 +1944,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 540
     const-string v0, "ExchangeAccountPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1830,6 +1967,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 541
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p2, v0}, Lcom/android/server/enterprise/SettingsUtils;->setAsDefaultAccount(JLandroid/content/Context;)Z
@@ -1848,6 +1986,7 @@
     .prologue
     const/4 v4, 0x1
 
+    .line 435
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -1856,6 +1995,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 436
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1878,6 +2018,7 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 437
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -1888,36 +2029,44 @@
 
     if-gez v1, :cond_1
 
+    .line 452
     :cond_0
     :goto_0
     return-void
 
+    .line 441
     :cond_1
     iput-boolean v4, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mRestartExtendDelay:Z
 
+    .line 443
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v4}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 446
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.email.INSTALL_CERTIFICATE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 447
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "password"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 448
     const-string v1, "data"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
 
+    .line 449
     const-string v1, "accountid"
 
     invoke-virtual {v0, v1, p3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
+    .line 451
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
@@ -1931,6 +2080,7 @@
     .parameter "accId"
 
     .prologue
+    .line 373
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -1939,6 +2089,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 374
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1961,15 +2112,19 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 376
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 377
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPassword:Ljava/lang/String;
 
+    .line 378
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPassword:Ljava/lang/String;
 
+    .line 379
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -1999,6 +2154,7 @@
     .parameter "accId"
 
     .prologue
+    .line 465
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -2007,6 +2163,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 466
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2029,13 +2186,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 468
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 469
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mSyncLookback:I
 
+    .line 470
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -2065,6 +2225,7 @@
     .parameter "accId"
 
     .prologue
+    .line 392
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -2073,6 +2234,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 393
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2095,13 +2257,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 395
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 396
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mProtocolVersion:Ljava/lang/String;
 
+    .line 397
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -2131,6 +2296,7 @@
     .parameter "accId"
 
     .prologue
+    .line 159
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -2139,6 +2305,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 160
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2161,10 +2328,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 162
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 163
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->booleanToByte(Z)B
 
@@ -2172,12 +2341,14 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseSSL:B
 
+    .line 164
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->booleanToByte(Z)B
 
     move-result v1
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseSSL:B
 
+    .line 165
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -2207,6 +2378,7 @@
     .parameter "accId"
 
     .prologue
+    .line 504
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -2215,6 +2387,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 505
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2237,13 +2410,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 507
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 508
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mSenderName:Ljava/lang/String;
 
+    .line 509
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -2273,6 +2449,7 @@
     .parameter "accId"
 
     .prologue
+    .line 522
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -2281,6 +2458,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 523
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2303,15 +2481,19 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 525
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 526
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPathPrefix:Ljava/lang/String;
 
+    .line 527
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPathPrefix:Ljava/lang/String;
 
+    .line 528
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -2341,6 +2523,7 @@
     .parameter "accId"
 
     .prologue
+    .line 410
     iget-object v2, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.sec.MDM_EXCHANGE"
@@ -2349,6 +2532,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 411
     const-string v2, "ExchangeAccountPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2371,28 +2555,34 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 414
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.android.email.SIGNATURE_UPDATED"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 415
     .local v1, intent:Landroid/content/Intent;
     const-string v2, "signature"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 416
     iget-object v2, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 419
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 420
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mSignature:Ljava/lang/String;
 
+    .line 421
     const-wide/16 v2, -0x1
 
     iget-object v4, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -2422,6 +2612,7 @@
     .parameter "accId"
 
     .prologue
+    .line 237
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -2430,6 +2621,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 238
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2452,10 +2644,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 240
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 241
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/ExchangeAccountPolicy;->booleanToByte(Z)B
 
@@ -2463,6 +2657,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateWhenSilent:B
 
+    .line 242
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -2492,6 +2687,7 @@
     .parameter "accId"
 
     .prologue
+    .line 486
     iget-object v1, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.sec.MDM_EXCHANGE"
@@ -2500,6 +2696,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 487
     const-string v1, "ExchangeAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2522,13 +2719,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 489
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 490
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mSyncInterval:I
 
+    .line 491
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
@@ -2558,6 +2758,7 @@
     .parameter "accId"
 
     .prologue
+    .line 178
     iget-object v0, p0, Lcom/android/server/enterprise/ExchangeAccountPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.sec.MDM_EXCHANGE"
@@ -2566,6 +2767,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 179
     const-string v0, "ExchangeAccountPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2588,6 +2790,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 184
     const/4 v0, 0x0
 
     return v0

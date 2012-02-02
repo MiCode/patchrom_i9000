@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 9252
     iput-object p1, p0, Landroid/widget/TextView$CursorControllerMenu$1;->this$1:Landroid/widget/TextView$CursorControllerMenu;
 
     iput-object p2, p0, Landroid/widget/TextView$CursorControllerMenu$1;->val$this$0:Landroid/widget/TextView;
@@ -46,6 +47,7 @@
     .parameter "t"
 
     .prologue
+    .line 9256
     const v1, 0x3fc66666
 
     mul-float/2addr v1, p1
@@ -54,6 +56,7 @@
 
     sub-float v0, v1, v2
 
+    .line 9257
     .local v0, inner:F
     const v1, 0x3f99999a
 

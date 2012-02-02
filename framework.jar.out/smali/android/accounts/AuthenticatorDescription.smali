@@ -40,6 +40,7 @@
     .locals 1
 
     .prologue
+    .line 137
     new-instance v0, Landroid/accounts/AuthenticatorDescription$1;
 
     invoke-direct {v0}, Landroid/accounts/AuthenticatorDescription$1;-><init>()V
@@ -56,44 +57,52 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 94
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/accounts/AuthenticatorDescription;->type:Ljava/lang/String;
 
+    .line 95
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/accounts/AuthenticatorDescription;->packageName:Ljava/lang/String;
 
+    .line 96
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/accounts/AuthenticatorDescription;->labelId:I
 
+    .line 97
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/accounts/AuthenticatorDescription;->iconId:I
 
+    .line 98
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/accounts/AuthenticatorDescription;->smallIconId:I
 
+    .line 99
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/accounts/AuthenticatorDescription;->accountPreferencesId:I
 
+    .line 100
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -105,8 +114,10 @@
     :goto_0
     iput-boolean v0, p0, Landroid/accounts/AuthenticatorDescription;->customTokens:Z
 
+    .line 101
     return-void
 
+    .line 100
     :cond_0
     const/4 v0, 0x0
 
@@ -119,6 +130,7 @@
     .parameter "x1"
 
     .prologue
+    .line 25
     invoke-direct {p0, p1}, Landroid/accounts/AuthenticatorDescription;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -131,24 +143,33 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 84
     iput-object p1, p0, Landroid/accounts/AuthenticatorDescription;->type:Ljava/lang/String;
 
+    .line 85
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/accounts/AuthenticatorDescription;->packageName:Ljava/lang/String;
 
+    .line 86
     iput v1, p0, Landroid/accounts/AuthenticatorDescription;->labelId:I
 
+    .line 87
     iput v1, p0, Landroid/accounts/AuthenticatorDescription;->iconId:I
 
+    .line 88
     iput v1, p0, Landroid/accounts/AuthenticatorDescription;->smallIconId:I
 
+    .line 89
     iput v1, p0, Landroid/accounts/AuthenticatorDescription;->accountPreferencesId:I
 
+    .line 90
     iput-boolean v1, p0, Landroid/accounts/AuthenticatorDescription;->customTokens:Z
 
+    .line 91
     return-void
 .end method
 
@@ -162,6 +183,7 @@
     .parameter "prefId"
 
     .prologue
+    .line 70
     const/4 v7, 0x0
 
     move-object v0, p0
@@ -180,6 +202,7 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/accounts/AuthenticatorDescription;-><init>(Ljava/lang/String;Ljava/lang/String;IIIIZ)V
 
+    .line 71
     return-void
 .end method
 
@@ -194,44 +217,55 @@
     .parameter "customTokens"
 
     .prologue
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 57
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "type cannot be null"
+    const-string/jumbo v1, "type cannot be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 58
     :cond_0
     if-nez p2, :cond_1
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "packageName cannot be null"
+    const-string/jumbo v1, "packageName cannot be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 59
     :cond_1
     iput-object p1, p0, Landroid/accounts/AuthenticatorDescription;->type:Ljava/lang/String;
 
+    .line 60
     iput-object p2, p0, Landroid/accounts/AuthenticatorDescription;->packageName:Ljava/lang/String;
 
+    .line 61
     iput p3, p0, Landroid/accounts/AuthenticatorDescription;->labelId:I
 
+    .line 62
     iput p4, p0, Landroid/accounts/AuthenticatorDescription;->iconId:I
 
+    .line 63
     iput p5, p0, Landroid/accounts/AuthenticatorDescription;->smallIconId:I
 
+    .line 64
     iput p6, p0, Landroid/accounts/AuthenticatorDescription;->accountPreferencesId:I
 
+    .line 65
     iput-boolean p7, p0, Landroid/accounts/AuthenticatorDescription;->customTokens:Z
 
+    .line 66
     return-void
 .end method
 
@@ -240,16 +274,18 @@
     .parameter "type"
 
     .prologue
+    .line 79
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "type cannot be null"
+    const-string/jumbo v1, "type cannot be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 80
     :cond_0
     new-instance v0, Landroid/accounts/AuthenticatorDescription;
 
@@ -264,6 +300,7 @@
     .locals 1
 
     .prologue
+    .line 105
     const/4 v0, 0x0
 
     return v0
@@ -274,13 +311,16 @@
     .parameter "o"
 
     .prologue
+    .line 115
     if-ne p1, p0, :cond_0
 
     const/4 v2, 0x1
 
+    .line 118
     :goto_0
     return v2
 
+    .line 116
     :cond_0
     instance-of v2, p1, Landroid/accounts/AuthenticatorDescription;
 
@@ -290,6 +330,7 @@
 
     goto :goto_0
 
+    .line 117
     :cond_1
     move-object v0, p1
 
@@ -297,6 +338,7 @@
 
     move-object v1, v0
 
+    .line 118
     .local v1, other:Landroid/accounts/AuthenticatorDescription;
     iget-object v2, p0, Landroid/accounts/AuthenticatorDescription;->type:Ljava/lang/String;
 
@@ -313,6 +355,7 @@
     .locals 1
 
     .prologue
+    .line 110
     iget-object v0, p0, Landroid/accounts/AuthenticatorDescription;->type:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -326,6 +369,7 @@
     .locals 2
 
     .prologue
+    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -342,7 +386,7 @@
 
     move-result-object v0
 
-    const-string v1, "}"
+    const-string/jumbo v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -361,30 +405,37 @@
     .parameter "flags"
 
     .prologue
+    .line 127
     iget-object v0, p0, Landroid/accounts/AuthenticatorDescription;->type:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 128
     iget-object v0, p0, Landroid/accounts/AuthenticatorDescription;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 129
     iget v0, p0, Landroid/accounts/AuthenticatorDescription;->labelId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 130
     iget v0, p0, Landroid/accounts/AuthenticatorDescription;->iconId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 131
     iget v0, p0, Landroid/accounts/AuthenticatorDescription;->smallIconId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 132
     iget v0, p0, Landroid/accounts/AuthenticatorDescription;->accountPreferencesId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 133
     iget-boolean v0, p0, Landroid/accounts/AuthenticatorDescription;->customTokens:Z
 
     if-eqz v0, :cond_0
@@ -396,8 +447,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 134
     return-void
 
+    .line 133
     :cond_0
     const/4 v0, 0x0
 

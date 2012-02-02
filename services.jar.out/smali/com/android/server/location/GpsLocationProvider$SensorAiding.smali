@@ -232,38 +232,50 @@
 
     const/4 v2, 0x0
 
+    .line 1550
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1420
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
+    .line 1421
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->windowManager:Landroid/view/WindowManager;
 
+    .line 1429
     new-array v0, v4, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccRecent:[F
 
+    .line 1430
     new-array v0, v4, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagRecent:[F
 
+    .line 1431
     new-array v0, v4, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriRecent:[F
 
+    .line 1432
     new-array v0, v4, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrRecent:[F
 
+    .line 1436
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccAccuracy:I
 
+    .line 1437
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagAccuracy:I
 
+    .line 1438
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriAccuracy:I
 
+    .line 1439
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrAccuracy:I
 
+    .line 1442
     filled-new-array {v6, v4}, [I
 
     move-result-object v0
@@ -278,6 +290,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccPacket:[[F
 
+    .line 1443
     filled-new-array {v6, v4}, [I
 
     move-result-object v0
@@ -292,6 +305,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagPacket:[[F
 
+    .line 1444
     filled-new-array {v6, v4}, [I
 
     move-result-object v0
@@ -306,6 +320,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriPacket:[[F
 
+    .line 1445
     filled-new-array {v6, v4}, [I
 
     move-result-object v0
@@ -320,206 +335,264 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrPacket:[[F
 
+    .line 1447
     new-array v0, v6, [J
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorSystemTime:[J
 
+    .line 1448
     new-array v0, v6, [J
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorSamplingIntervalTime:[J
 
+    .line 1449
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPreviousSampledTime:J
 
+    .line 1451
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
 
+    .line 1454
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyroSupported:Z
 
+    .line 1464
     const/4 v0, 0x3
 
     new-array v0, v0, [D
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mDeliverLocation:[D
 
+    .line 1465
     const/4 v0, 0x3
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mDeliverLocationExt:[F
 
+    .line 1466
     const/4 v0, 0x3
 
     new-array v0, v0, [D
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocation:[D
 
+    .line 1467
     const/4 v0, 0x3
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocationExt:[F
 
+    .line 1468
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestValid:[I
 
+    .line 1471
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedLocation:J
 
+    .line 1472
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedNmea:J
 
+    .line 1473
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeUTCLastReportedLocation:J
 
+    .line 1474
     const-wide/16 v0, 0x5dc
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeIntervalForceCall:J
 
+    .line 1485
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
+    .line 1489
     const/16 v0, 0x20
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvs_SensorAiding:[I
 
+    .line 1490
     const/16 v0, 0x20
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSnrs_SensorAiding:[F
 
+    .line 1491
     const/16 v0, 0x20
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvElevations_SensorAiding:[F
 
+    .line 1492
     const/16 v0, 0x20
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvAzimuths_SensorAiding:[F
 
+    .line 1493
     const/4 v0, 0x3
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvMasks_SensorAiding:[I
 
+    .line 1494
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountView_SensorAiding:I
 
+    .line 1495
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountUsed_SensorAiding:I
 
+    .line 1496
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountSatInUse:I
 
+    .line 1506
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPPreviousMode:I
 
+    .line 1507
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPCurrentMode:I
 
+    .line 1509
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
+    .line 1511
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsValid:Z
 
+    .line 1512
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingFlags:I
 
+    .line 1520
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsPedestrian:Z
 
+    .line 1521
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsVehicle:Z
 
+    .line 1522
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingOpMode:I
 
+    .line 1524
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingLogging:I
 
+    .line 1527
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGGA:Ljava/lang/String;
 
+    .line 1528
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirRMC:Ljava/lang/String;
 
+    .line 1529
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
 
+    .line 1530
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGLL:Ljava/lang/String;
 
+    .line 1531
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirLOG:Ljava/lang/String;
 
+    .line 1532
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGGA:Ljava/lang/String;
 
+    .line 1533
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgRMC:Ljava/lang/String;
 
+    .line 1534
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgVTG:Ljava/lang/String;
 
+    .line 1535
     iput-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGLL:Ljava/lang/String;
 
+    .line 1537
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 1538
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaDate:J
 
+    .line 1539
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaUTC:J
 
+    .line 1540
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLat:D
 
+    .line 1541
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLon:D
 
+    .line 1542
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaAlti:D
 
+    .line 1543
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaAltiDiff:D
 
+    .line 1544
     iput-char v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaEW:C
 
+    .line 1545
     iput-char v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaNS:C
 
+    .line 1546
     iput-char v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaValid:C
 
+    .line 1547
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaSpeed:F
 
+    .line 1548
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaHeading:F
 
+    .line 2100
     new-instance v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;-><init>(Lcom/android/server/location/GpsLocationProvider$SensorAiding;)V
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorAccelerometerListener:Landroid/hardware/SensorEventListener;
 
+    .line 2132
     new-instance v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;-><init>(Lcom/android/server/location/GpsLocationProvider$SensorAiding;)V
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorMagneticFieldListener:Landroid/hardware/SensorEventListener;
 
+    .line 2160
     new-instance v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;-><init>(Lcom/android/server/location/GpsLocationProvider$SensorAiding;)V
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorOrientationListener:Landroid/hardware/SensorEventListener;
 
+    .line 2185
     new-instance v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding$4;-><init>(Lcom/android/server/location/GpsLocationProvider$SensorAiding;)V
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorGyroscopeListener:Landroid/hardware/SensorEventListener;
 
+    .line 1551
     return-void
 .end method
 
@@ -532,12 +605,14 @@
 
     const v4, 0xea60
 
+    .line 1622
     if-eq p1, v3, :cond_0
 
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
     if-nez v0, :cond_1
 
+    .line 1623
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -556,6 +631,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
+    .line 1624
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorAccelerometerListener:Landroid/hardware/SensorEventListener;
@@ -568,6 +644,7 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
+    .line 1627
     :cond_1
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
@@ -583,6 +660,7 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
+    .line 1628
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorOrientationListener:Landroid/hardware/SensorEventListener;
@@ -597,20 +675,24 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
+    .line 1632
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyroSupported:Z
 
     if-nez v0, :cond_2
 
+    .line 1634
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrAccuracy:I
 
+    .line 1635
     const-string v0, "GpsLocationProvider"
 
     const-string v1, "SensorAidingActivateAllSensor : Gyroscope sensor is NOT supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1637
     :cond_2
     return-void
 .end method
@@ -620,13 +702,16 @@
     .parameter "Nmea"
 
     .prologue
+    .line 2246
     const/4 v0, 0x0
 
+    .line 2248
     .local v0, checkSumVal:C
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v2
 
+    .line 2249
     .local v2, szTemp:[C
     const/4 v1, 0x0
 
@@ -636,12 +721,14 @@
 
     if-ge v1, v3, :cond_0
 
+    .line 2250
     aget-char v3, v2, v1
 
     const/16 v4, 0x2a
 
     if-ne v3, v4, :cond_1
 
+    .line 2257
     :cond_0
     const-string v3, "%02X\r\n"
 
@@ -663,6 +750,7 @@
 
     return-object v3
 
+    .line 2252
     :cond_1
     aget-char v3, v2, v1
 
@@ -670,12 +758,14 @@
 
     if-eq v3, v4, :cond_2
 
+    .line 2253
     aget-char v3, v2, v1
 
     xor-int/2addr v3, v0
 
     int-to-char v0, v3
 
+    .line 2249
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -689,31 +779,37 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 1640
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
     if-nez v0, :cond_1
 
+    .line 1641
     const-string v0, "GpsLocationProvider"
 
     const-string v1, "SensorAidingDeactivateAllSensor : No registered sensorManager"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1655
     :cond_0
     :goto_0
     return-void
 
+    .line 1645
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyroSupported:Z
 
     if-ne v0, v2, :cond_2
 
+    .line 1646
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorGyroscopeListener:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
+    .line 1648
     :cond_2
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
@@ -721,20 +817,24 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
+    .line 1649
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorMagneticFieldListener:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
+    .line 1651
     if-ne p1, v2, :cond_0
 
+    .line 1652
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorAccelerometerListener:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
+    .line 1653
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->sensorManager:Landroid/hardware/SensorManager;
@@ -752,6 +852,7 @@
 
     const-string v6, "GpsLocationProvider"
 
+    .line 1982
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccPacket:[[F
@@ -771,16 +872,19 @@
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPCurrentMode:I
 
+    .line 1989
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPPreviousMode:I
 
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPCurrentMode:I
 
     if-eq v0, v1, :cond_0
 
+    .line 1990
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPCurrentMode:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 2040
     const-string v0, "GpsLocationProvider"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -811,14 +915,17 @@
 
     invoke-static {v6, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2044
     :goto_0
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPCurrentMode:I
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPPreviousMode:I
 
+    .line 2046
     :cond_0
     return-void
 
+    .line 1992
     :pswitch_0
     const-string v0, "GpsLocationProvider"
 
@@ -828,6 +935,7 @@
 
     goto :goto_0
 
+    .line 1996
     :pswitch_1
     const-string v0, "GpsLocationProvider"
 
@@ -837,9 +945,11 @@
 
     goto :goto_0
 
+    .line 2000
     :pswitch_2
     iput-boolean v8, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
+    .line 2001
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mStarted:Z
@@ -849,18 +959,22 @@
 
     if-ne v0, v8, :cond_1
 
+    .line 2003
     invoke-direct {p0, v7}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingDeactivateAllSensor(Z)V
 
+    .line 2005
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider;->mStarted:Z
     invoke-static {v0, v7}, Lcom/android/server/location/GpsLocationProvider;->access$3702(Lcom/android/server/location/GpsLocationProvider;Z)Z
 
+    .line 2006
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_stop()Z
     invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$3800(Lcom/android/server/location/GpsLocationProvider;)Z
 
+    .line 2007
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
@@ -873,6 +987,7 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->updateStatus(II)V
     invoke-static {v0, v8, v1}, Lcom/android/server/location/GpsLocationProvider;->access$4000(Lcom/android/server/location/GpsLocationProvider;II)V
 
+    .line 2008
     const-string v0, "GpsLocationProvider"
 
     const-string v0, "SensorAiding LPP : Turn GPS OFF"
@@ -881,6 +996,7 @@
 
     goto :goto_0
 
+    .line 2010
     :cond_1
     const-string v0, "GpsLocationProvider"
 
@@ -890,6 +1006,7 @@
 
     goto :goto_0
 
+    .line 2015
     :pswitch_3
     const-string v0, "GpsLocationProvider"
 
@@ -899,6 +1016,7 @@
 
     goto :goto_0
 
+    .line 2019
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -909,18 +1027,22 @@
 
     if-nez v0, :cond_3
 
+    .line 2020
     iput-boolean v7, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
+    .line 2021
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider;->mStarted:Z
     invoke-static {v0, v8}, Lcom/android/server/location/GpsLocationProvider;->access$3702(Lcom/android/server/location/GpsLocationProvider;Z)Z
 
+    .line 2022
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider;->mTTFF:I
     invoke-static {v0, v7}, Lcom/android/server/location/GpsLocationProvider;->access$2402(Lcom/android/server/location/GpsLocationProvider;I)I
 
+    .line 2023
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     const-wide/16 v1, 0x0
@@ -928,6 +1050,7 @@
     #setter for: Lcom/android/server/location/GpsLocationProvider;->mLastFixTime:J
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$4102(Lcom/android/server/location/GpsLocationProvider;J)J
 
+    .line 2024
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -937,6 +1060,7 @@
     #setter for: Lcom/android/server/location/GpsLocationProvider;->mFixRequestTime:J
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$4202(Lcom/android/server/location/GpsLocationProvider;J)J
 
+    .line 2025
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_start()Z
@@ -946,13 +1070,16 @@
 
     if-nez v0, :cond_2
 
+    .line 2026
     iput-boolean v8, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
+    .line 2027
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider;->mStarted:Z
     invoke-static {v0, v7}, Lcom/android/server/location/GpsLocationProvider;->access$3702(Lcom/android/server/location/GpsLocationProvider;Z)Z
 
+    .line 2028
     const-string v0, "GpsLocationProvider"
 
     const-string v0, "SensorAiding LPP : native_start failed"
@@ -961,9 +1088,11 @@
 
     goto/16 :goto_0
 
+    .line 2031
     :cond_2
     invoke-direct {p0, v7}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingActivateAllSensor(Z)V
 
+    .line 2032
     const-string v0, "GpsLocationProvider"
 
     const-string v0, "SensorAiding LPP : Turn GPS ON"
@@ -972,6 +1101,7 @@
 
     goto/16 :goto_0
 
+    .line 2035
     :cond_3
     const-string v0, "GpsLocationProvider"
 
@@ -981,6 +1111,7 @@
 
     goto/16 :goto_0
 
+    .line 1990
     nop
 
     :pswitch_data_0
@@ -997,11 +1128,13 @@
     .locals 1
 
     .prologue
+    .line 1975
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_hybrid_gps_deliver_sv_status()V
     invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$3500(Lcom/android/server/location/GpsLocationProvider;)V
 
+    .line 1979
     return-void
 .end method
 
@@ -1011,35 +1144,43 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 1604
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingDeactivateAllSensor(Z)V
 
+    .line 1606
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_hybrid_gps_finalize()V
     invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2200(Lcom/android/server/location/GpsLocationProvider;)V
 
+    .line 1611
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsValid:Z
 
+    .line 1612
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedLocation:J
 
+    .line 1615
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvMasks_SensorAiding:[I
 
     const/4 v1, 0x2
 
     aput v2, v0, v1
 
+    .line 1616
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountUsed_SensorAiding:I
 
+    .line 1618
     const-string v0, "GpsLocationProvider"
 
     const-string v1, "SensorAidingDeregister : Exit"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1619
     return-void
 .end method
 
@@ -1047,6 +1188,7 @@
     .locals 2
 
     .prologue
+    .line 1971
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocationExt:[F
 
     const/4 v1, 0x2
@@ -1060,6 +1202,7 @@
     .locals 2
 
     .prologue
+    .line 1959
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocation:[D
 
     const/4 v1, 0x2
@@ -1073,6 +1216,7 @@
     .locals 2
 
     .prologue
+    .line 1963
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocationExt:[F
 
     const/4 v1, 0x0
@@ -1086,6 +1230,7 @@
     .locals 1
 
     .prologue
+    .line 1947
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingFlags:I
 
     return v0
@@ -1095,6 +1240,7 @@
     .locals 2
 
     .prologue
+    .line 1951
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocation:[D
 
     const/4 v1, 0x0
@@ -1108,6 +1254,7 @@
     .locals 2
 
     .prologue
+    .line 1955
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocation:[D
 
     const/4 v1, 0x1
@@ -1123,6 +1270,7 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 1935
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsPedestrian:Z
 
     if-ne v0, v1, :cond_0
@@ -1131,15 +1279,18 @@
 
     if-nez v0, :cond_0
 
+    .line 1936
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingOpMode:I
 
+    .line 1943
     :goto_0
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingOpMode:I
 
     return v0
 
+    .line 1937
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsPedestrian:Z
 
@@ -1149,10 +1300,12 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 1938
     iput v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingOpMode:I
 
     goto :goto_0
 
+    .line 1940
     :cond_1
     const/4 v0, -0x1
 
@@ -1165,6 +1318,7 @@
     .locals 2
 
     .prologue
+    .line 1967
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocationExt:[F
 
     const/4 v1, 0x1
@@ -1178,6 +1332,7 @@
     .locals 2
 
     .prologue
+    .line 1931
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestValid:[I
 
     const/4 v1, 0x0
@@ -1191,12 +1346,14 @@
     .locals 26
 
     .prologue
+    .line 2214
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaUTC:J
 
     move-wide/from16 v22, v0
 
+    .line 2215
     .local v22, nUTCTimeAll:J
     move-object/from16 v0, p0
 
@@ -1204,11 +1361,13 @@
 
     move-wide/from16 v20, v0
 
+    .line 2218
     .local v20, nUTCDateAll:J
     const-wide/16 v4, 0x2710
 
     div-long v12, v22, v4
 
+    .line 2219
     .local v12, nHour:J
     const-wide/16 v4, 0x2710
 
@@ -1218,16 +1377,19 @@
 
     div-long v14, v4, v6
 
+    .line 2220
     .local v14, nMinute:J
     const-wide/16 v4, 0x64
 
     rem-long v18, v22, v4
 
+    .line 2222
     .local v18, nSecond:J
     const-wide/16 v4, 0x2710
 
     div-long v10, v20, v4
 
+    .line 2223
     .local v10, nDate:J
     const-wide/16 v4, 0x2710
 
@@ -1237,19 +1399,23 @@
 
     div-long v16, v4, v6
 
+    .line 2224
     .local v16, nMonth:J
     const-wide/16 v4, 0x64
 
     rem-long v24, v20, v4
 
+    .line 2227
     .local v24, nYear:J
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v3
 
+    .line 2228
     .local v3, utcDate:Ljava/util/Calendar;
     invoke-virtual {v3}, Ljava/util/Calendar;->clear()V
 
+    .line 2229
     const-wide/16 v4, 0x7d0
 
     add-long v4, v4, v24
@@ -1276,6 +1442,7 @@
 
     invoke-virtual/range {v3 .. v9}, Ljava/util/Calendar;->set(IIIIII)V
 
+    .line 2232
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Ljava/util/Calendar;->get(I)I
@@ -1290,6 +1457,7 @@
 
     move-wide/from16 v24, v0
 
+    .line 2233
     const/4 v4, 0x2
 
     invoke-virtual {v3, v4}, Ljava/util/Calendar;->get(I)I
@@ -1304,6 +1472,7 @@
 
     move-wide/from16 v16, v0
 
+    .line 2234
     const/4 v4, 0x5
 
     invoke-virtual {v3, v4}, Ljava/util/Calendar;->get(I)I
@@ -1312,6 +1481,7 @@
 
     int-to-long v10, v4
 
+    .line 2235
     const/16 v4, 0xb
 
     invoke-virtual {v3, v4}, Ljava/util/Calendar;->get(I)I
@@ -1320,6 +1490,7 @@
 
     int-to-long v12, v4
 
+    .line 2236
     const/16 v4, 0xc
 
     invoke-virtual {v3, v4}, Ljava/util/Calendar;->get(I)I
@@ -1328,6 +1499,7 @@
 
     int-to-long v14, v4
 
+    .line 2237
     const/16 v4, 0xd
 
     invoke-virtual {v3, v4}, Ljava/util/Calendar;->get(I)I
@@ -1340,6 +1512,7 @@
 
     move-wide/from16 v18, v0
 
+    .line 2239
     const-wide/16 v4, 0x2710
 
     mul-long/2addr v4, v12
@@ -1358,6 +1531,7 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaUTC:J
 
+    .line 2240
     const-wide/16 v4, 0x2710
 
     mul-long/2addr v4, v10
@@ -1376,6 +1550,7 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaDate:J
 
+    .line 2241
     return-void
 .end method
 
@@ -1390,12 +1565,14 @@
 
     const-string v5, "[,*]"
 
+    .line 2461
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedNmea:J
 
+    .line 2465
     const-string v1, "$GPGGA"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -1404,18 +1581,21 @@
 
     if-eq v1, v3, :cond_1
 
+    .line 2466
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, p1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGGA:Ljava/lang/String;
 
+    .line 2469
     const-string v1, "[,*]"
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2470
     .local v0, splitNmea:[Ljava/lang/String;
     const/4 v1, 0x6
 
@@ -1429,6 +1609,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 2471
     const/16 v1, 0xb
 
     aget-object v1, v0, v1
@@ -1444,10 +1625,12 @@
     :cond_0
     move-object v1, v4
 
+    .line 2500
     .end local v0           #splitNmea:[Ljava/lang/String;
     :goto_0
     return-object v1
 
+    .line 2476
     :cond_1
     const-string v1, "$GPRMC"
 
@@ -1457,18 +1640,21 @@
 
     if-eq v1, v3, :cond_3
 
+    .line 2477
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, p1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgRMC:Ljava/lang/String;
 
+    .line 2480
     const-string v1, "[,*]"
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2481
     .restart local v0       #splitNmea:[Ljava/lang/String;
     const/4 v1, 0x2
 
@@ -1482,6 +1668,7 @@
 
     if-nez v1, :cond_2
 
+    .line 2482
     const/4 v1, 0x1
 
     aget-object v1, v0, v1
@@ -1494,6 +1681,7 @@
 
     iput-wide v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaUTC:J
 
+    .line 2483
     const/16 v1, 0x9
 
     aget-object v1, v0, v1
@@ -1507,8 +1695,10 @@
     :cond_2
     move-object v1, v4
 
+    .line 2487
     goto :goto_0
 
+    .line 2488
     .end local v0           #splitNmea:[Ljava/lang/String;
     :cond_3
     const-string v1, "$GPVTG"
@@ -1519,6 +1709,7 @@
 
     if-eq v1, v3, :cond_4
 
+    .line 2489
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, p1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
@@ -1527,8 +1718,10 @@
 
     move-object v1, v4
 
+    .line 2492
     goto :goto_0
 
+    .line 2493
     :cond_4
     const-string v1, "$GPGLL"
 
@@ -1538,6 +1731,7 @@
 
     if-eq v1, v3, :cond_5
 
+    .line 2494
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, p1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
@@ -1546,11 +1740,13 @@
 
     move-object v1, v4
 
+    .line 2497
     goto :goto_0
 
     :cond_5
     move-object v1, p1
 
+    .line 2500
     goto :goto_0
 .end method
 
@@ -1566,10 +1762,12 @@
     .parameter "timestamp"
 
     .prologue
+    .line 1851
     const/4 v3, 0x6
 
     new-array v6, v3, [I
 
+    .line 1853
     .local v6, utcTime:[I
     const-string v3, "RawGPS"
 
@@ -1691,30 +1889,35 @@
 
     invoke-direct {p0, v3, v4}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingPutLogNmea(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 1855
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mDeliverLocation:[D
 
     const/4 v4, 0x0
 
     aput-wide p2, v3, v4
 
+    .line 1856
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mDeliverLocation:[D
 
     const/4 v4, 0x1
 
     aput-wide p4, v3, v4
 
+    .line 1857
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mDeliverLocation:[D
 
     const/4 v4, 0x2
 
     aput-wide p6, v3, v4
 
+    .line 1858
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mDeliverLocationExt:[F
 
     const/4 v4, 0x0
 
     aput p9, v3, v4
 
+    .line 1859
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mDeliverLocationExt:[F
 
     const/4 v4, 0x1
@@ -1725,21 +1928,25 @@
 
     aput v5, v3, v4
 
+    .line 1860
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mDeliverLocationExt:[F
 
     const/4 v4, 0x2
 
     aput p10, v3, v4
 
+    .line 1862
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v13
 
+    .line 1863
     .local v13, utcDate:Ljava/util/Calendar;
     invoke-virtual {v13}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v11
 
+    .line 1864
     .local v11, tempTimeInMillis:J
     move-object v0, v13
 
@@ -1747,6 +1954,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
+    .line 1865
     const/4 v3, 0x0
 
     const/4 v4, 0x1
@@ -1757,6 +1965,7 @@
 
     aput v4, v6, v3
 
+    .line 1866
     const/4 v3, 0x1
 
     const/4 v4, 0x2
@@ -1769,6 +1978,7 @@
 
     aput v4, v6, v3
 
+    .line 1867
     const/4 v3, 0x2
 
     const/4 v4, 0x5
@@ -1779,6 +1989,7 @@
 
     aput v4, v6, v3
 
+    .line 1868
     const/4 v3, 0x3
 
     const/16 v4, 0xb
@@ -1789,6 +2000,7 @@
 
     aput v4, v6, v3
 
+    .line 1869
     const/4 v3, 0x4
 
     const/16 v4, 0xc
@@ -1799,6 +2011,7 @@
 
     aput v4, v6, v3
 
+    .line 1870
     const/4 v3, 0x5
 
     const/16 v4, 0xd
@@ -1809,6 +2022,7 @@
 
     aput v4, v6, v3
 
+    .line 1876
     iget v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountSatInUse:I
 
     if-eqz v3, :cond_0
@@ -1819,8 +2033,10 @@
 
     if-ne v3, v4, :cond_0
 
+    .line 1877
     const/4 v9, 0x1
 
+    .line 1882
     .local v9, isValid:I
     :goto_0
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
@@ -1838,8 +2054,10 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_hybrid_gps_deliver_gps_data([D[F[IJII)V
     invoke-static/range {v3 .. v10}, Lcom/android/server/location/GpsLocationProvider;->access$3100(Lcom/android/server/location/GpsLocationProvider;[D[F[IJII)V
 
+    .line 1886
     return-void
 
+    .line 1879
     .end local v9           #isValid:I
     :cond_0
     const/4 v9, 0x0
@@ -1854,10 +2072,12 @@
     .prologue
     const-wide/16 v3, 0x3e8
 
+    .line 2505
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGGA:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
+    .line 2506
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGGA:Ljava/lang/String;
@@ -1866,6 +2086,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGGA:Ljava/lang/String;
 
+    .line 2507
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGGA:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingUpdateNmea(Ljava/lang/String;)Ljava/lang/String;
@@ -1874,10 +2095,12 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGGA:Ljava/lang/String;
 
+    .line 2508
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2509
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1889,11 +2112,13 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2511
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgRMC:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
+    .line 2512
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgRMC:Ljava/lang/String;
@@ -1902,6 +2127,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirRMC:Ljava/lang/String;
 
+    .line 2513
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirRMC:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingUpdateNmea(Ljava/lang/String;)Ljava/lang/String;
@@ -1910,10 +2136,12 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirRMC:Ljava/lang/String;
 
+    .line 2514
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2515
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1925,11 +2153,13 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2517
     :cond_1
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgVTG:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
+    .line 2518
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgVTG:Ljava/lang/String;
@@ -1938,6 +2168,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
 
+    .line 2519
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingUpdateNmea(Ljava/lang/String;)Ljava/lang/String;
@@ -1946,10 +2177,12 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
 
+    .line 2520
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2521
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1961,11 +2194,13 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2523
     :cond_2
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGLL:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
+    .line 2524
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGLL:Ljava/lang/String;
@@ -1974,6 +2209,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGLL:Ljava/lang/String;
 
+    .line 2525
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGLL:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingUpdateNmea(Ljava/lang/String;)Ljava/lang/String;
@@ -1982,10 +2218,12 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGLL:Ljava/lang/String;
 
+    .line 2526
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2527
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1997,11 +2235,13 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2529
     :cond_3
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2530
     return-void
 .end method
 
@@ -2019,6 +2259,7 @@
 
     const-string v4, ", "
 
+    .line 2049
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccAccuracy:I
 
     if-eq v0, v1, :cond_0
@@ -2035,6 +2276,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 2050
     :cond_0
     const-string v0, "GpsLocationProvider"
 
@@ -2102,10 +2344,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2098
     :cond_1
     :goto_0
     return-void
 
+    .line 2055
     :cond_2
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
 
@@ -2113,10 +2357,12 @@
 
     if-lt v0, v1, :cond_3
 
+    .line 2056
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
 
+    .line 2059
     :cond_3
     const/4 v13, 0x0
 
@@ -2126,6 +2372,7 @@
 
     if-ge v13, v0, :cond_4
 
+    .line 2060
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccPacket:[[F
 
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
@@ -2138,6 +2385,7 @@
 
     aput v1, v0, v13
 
+    .line 2061
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagPacket:[[F
 
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
@@ -2150,6 +2398,7 @@
 
     aput v1, v0, v13
 
+    .line 2062
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriPacket:[[F
 
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
@@ -2162,6 +2411,7 @@
 
     aput v1, v0, v13
 
+    .line 2063
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrPacket:[[F
 
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
@@ -2174,10 +2424,12 @@
 
     aput v1, v0, v13
 
+    .line 2059
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_1
 
+    .line 2066
     :cond_4
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorSystemTime:[J
 
@@ -2189,18 +2441,21 @@
 
     aput-wide v4, v0, v1
 
+    .line 2067
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPreviousSampledTime:J
 
     cmp-long v0, v0, v9
 
     if-nez v0, :cond_6
 
+    .line 2068
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorSamplingIntervalTime:[J
 
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
 
     aput-wide v9, v0, v1
 
+    .line 2072
     :goto_2
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorSystemTime:[J
 
@@ -2210,20 +2465,24 @@
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPreviousSampledTime:J
 
+    .line 2074
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
 
+    .line 2075
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
 
     const/16 v1, 0x8
 
     if-ne v0, v1, :cond_5
 
+    .line 2077
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingDeliverSensorPacket()V
 
+    .line 2082
     :cond_5
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
@@ -2253,6 +2512,7 @@
 
     if-lez v0, :cond_7
 
+    .line 2085
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPreviousSampledTime:J
 
     iget-wide v4, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedNmea:J
@@ -2265,6 +2525,7 @@
 
     if-lez v0, :cond_1
 
+    .line 2086
     const-string v0, "GpsLocationProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2319,6 +2580,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2087
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     const/4 v1, 0x0
@@ -2340,12 +2602,14 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportLocation(IDDDFFFJ)V
     invoke-static/range {v0 .. v12}, Lcom/android/server/location/GpsLocationProvider;->access$4400(Lcom/android/server/location/GpsLocationProvider;IDDDFFFJ)V
 
+    .line 2088
     const-wide/16 v0, 0x3e8
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeIntervalForceCall:J
 
     goto/16 :goto_0
 
+    .line 2070
     :cond_6
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorSamplingIntervalTime:[J
 
@@ -2365,6 +2629,7 @@
 
     goto/16 :goto_2
 
+    .line 2090
     :cond_7
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
@@ -2372,12 +2637,14 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 2094
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedLocation:J
 
     cmp-long v0, v0, v9
 
     if-eqz v0, :cond_1
 
+    .line 2095
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPreviousSampledTime:J
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedLocation:J
@@ -2391,8 +2658,10 @@
     .prologue
     const-wide/16 v3, 0x3e8
 
+    .line 2534
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingIncreaseUTC()V
 
+    .line 2536
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingUpdateNmea(Ljava/lang/String;)Ljava/lang/String;
@@ -2401,18 +2670,22 @@
 
     if-nez v0, :cond_0
 
+    .line 2558
     :goto_0
     return-void
 
+    .line 2541
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGGA:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
+    .line 2542
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2543
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2424,15 +2697,18 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2545
     :cond_1
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirRMC:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
+    .line 2546
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2547
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2444,15 +2720,18 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2549
     :cond_2
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
+    .line 2550
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2551
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2464,15 +2743,18 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2553
     :cond_3
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGLL:Ljava/lang/String;
 
     if-eqz v0, :cond_4
 
+    .line 2554
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2555
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2484,6 +2766,7 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2557
     :cond_4
     const/4 v0, 0x0
 
@@ -2502,12 +2785,15 @@
 
     const-string v3, ","
 
+    .line 2562
     if-nez p2, :cond_1
 
+    .line 2581
     :cond_0
     :goto_0
     return-void
 
+    .line 2566
     :cond_1
     const-string v0, "GpsLocationProvider"
 
@@ -2541,10 +2827,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2568
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingLogging:I
 
     if-eqz v0, :cond_0
 
+    .line 2572
     invoke-virtual {p2, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -2553,6 +2841,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 2574
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2579,11 +2868,13 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirLOG:Ljava/lang/String;
 
+    .line 2578
     :goto_1
     const/16 v0, 0x9
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
+    .line 2579
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2597,10 +2888,12 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->reportNmea(J)V
     invoke-static {v0, v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$5600(Lcom/android/server/location/GpsLocationProvider;J)V
 
+    .line 2580
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
     goto :goto_0
 
+    .line 2576
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2667,50 +2960,70 @@
 
     const-string v4, "GpsLocationProvider"
 
+    .line 1555
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccAccuracy:I
 
+    .line 1556
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagAccuracy:I
 
+    .line 1557
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriAccuracy:I
 
+    .line 1558
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrAccuracy:I
 
+    .line 1559
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPreviousSampledTime:J
 
+    .line 1560
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorPacketIndex:I
 
+    .line 1561
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyroSupported:Z
 
+    .line 1562
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedLocation:J
 
+    .line 1563
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeUTCLastReportedLocation:J
 
+    .line 1564
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvMasks_SensorAiding:[I
 
     const/4 v1, 0x2
 
     aput v2, v0, v1
 
+    .line 1565
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountView_SensorAiding:I
 
+    .line 1566
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountUsed_SensorAiding:I
 
+    .line 1567
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountSatInUse:I
 
+    .line 1568
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPPreviousMode:I
 
+    .line 1569
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPCurrentMode:I
 
+    .line 1571
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
+    .line 1572
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsValid:Z
 
+    .line 1573
     iput v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingFlags:I
 
+    .line 1575
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingActivateAllSensor(Z)V
 
+    .line 1579
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mContext:Landroid/content/Context;
@@ -2730,6 +3043,7 @@
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingLogging:I
 
+    .line 1588
     const-string v0, "GpsLocationProvider"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2759,6 +3073,7 @@
 
     invoke-static {v4, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1589
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingLogging:I
@@ -2766,8 +3081,10 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_hybrid_gps_initialize(I)V
     invoke-static {v0, v1}, Lcom/android/server/location/GpsLocationProvider;->access$2100(Lcom/android/server/location/GpsLocationProvider;I)V
 
+    .line 1595
     invoke-direct {p0, v2}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingSupportInversePortraitMode(I)V
 
+    .line 1596
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mContext:Landroid/content/Context;
@@ -2785,16 +3102,20 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->windowManager:Landroid/view/WindowManager;
 
+    .line 1597
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingRotationChanged()V
 
+    .line 1599
     const-string v0, "GpsLocationProvider"
 
     const-string v0, "SensorAidingRegister : Exit"
 
     invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1600
     return-void
 
+    .line 1588
     :cond_0
     const-string v1, "ON"
 
@@ -2813,6 +3134,7 @@
     .parameter "timestamp"
 
     .prologue
+    .line 1679
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mContext:Landroid/content/Context;
@@ -2832,20 +3154,25 @@
 
     move-result v3
 
+    .line 1680
     .local v3, CurrentSetting:I
     iget v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
     if-eq v3, v5, :cond_0
 
+    .line 1681
     const/4 v5, 0x1
 
     if-ne v3, v5, :cond_1
 
+    .line 1682
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingRegister()V
 
+    .line 1686
     :goto_0
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
+    .line 1687
     const-string v5, "GpsLocationProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2868,11 +3195,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1690
     :cond_0
     iget v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
     if-nez v5, :cond_2
 
+    .line 1692
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestValid:[I
 
     const/4 v6, 0x0
@@ -2881,14 +3210,17 @@
 
     aput v7, v5, v6
 
+    .line 1758
     :goto_1
     return-void
 
+    .line 1684
     :cond_1
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingDeregister()V
 
     goto :goto_0
 
+    .line 1696
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -2896,29 +3228,36 @@
 
     iput-wide v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedLocation:J
 
+    .line 1697
     move-wide/from16 v0, p11
 
     move-object v2, p0
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeUTCLastReportedLocation:J
 
+    .line 1699
     iput p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingFlags:I
 
+    .line 1700
     and-int/lit8 v5, p1, 0x1
 
     const/4 v6, 0x1
 
     if-ne v5, v6, :cond_3
 
+    .line 1701
     const-wide/16 v5, 0x5dc
 
     iput-wide v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeIntervalForceCall:J
 
+    .line 1704
     :cond_3
     invoke-direct/range {p0 .. p12}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingLocationChanged(IDDDFFFJ)V
 
+    .line 1705
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingRequestLocation()V
 
+    .line 1708
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetValid()I
 
     move-result v5
@@ -2927,10 +3266,12 @@
 
     if-ne v5, v6, :cond_8
 
+    .line 1709
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetAccuracy()F
 
     move-result v4
 
+    .line 1712
     .local v4, SensorAidingAccuracy:F
     float-to-double v5, v4
 
@@ -2940,14 +3281,17 @@
 
     if-lez v5, :cond_6
 
+    .line 1713
     const/4 v5, 0x0
 
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingFlags:I
 
+    .line 1714
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsValid:Z
 
+    .line 1716
     const-string v5, "GpsLocationProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2970,19 +3314,23 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1742
     .end local v4           #SensorAidingAccuracy:F
     :cond_4
     :goto_2
     if-nez p1, :cond_9
 
+    .line 1743
     iget-boolean v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsValid:Z
 
     const/4 v6, 0x1
 
     if-ne v5, v6, :cond_5
 
+    .line 1746
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingMakeVirtualNmea()V
 
+    .line 1754
     :cond_5
     :goto_3
     const-string v5, "RawGGA"
@@ -2995,6 +3343,7 @@
 
     iput-object v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGGA:Ljava/lang/String;
 
+    .line 1755
     const-string v5, "RawRMC"
 
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgRMC:Ljava/lang/String;
@@ -3005,6 +3354,7 @@
 
     iput-object v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgRMC:Ljava/lang/String;
 
+    .line 1756
     const-string v5, "RawVTG"
 
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgVTG:Ljava/lang/String;
@@ -3015,6 +3365,7 @@
 
     iput-object v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgVTG:Ljava/lang/String;
 
+    .line 1757
     const-string v5, "RawGLL"
 
     iget-object v6, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaOrgGLL:Ljava/lang/String;
@@ -3027,6 +3378,7 @@
 
     goto/16 :goto_1
 
+    .line 1721
     .restart local v4       #SensorAidingAccuracy:F
     :cond_6
     if-nez p1, :cond_7
@@ -3051,6 +3403,7 @@
 
     if-ne v5, v6, :cond_7
 
+    .line 1722
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     const/4 v6, 0x1
@@ -3058,25 +3411,30 @@
     #setter for: Lcom/android/server/location/GpsLocationProvider;->mTTFF:I
     invoke-static {v5, v6}, Lcom/android/server/location/GpsLocationProvider;->access$2402(Lcom/android/server/location/GpsLocationProvider;I)I
 
+    .line 1724
     const-string v5, "GpsLocationProvider"
 
     const-string v6, "SensorAidingReportLocation : Set mTTFF = 1 to be sent an intent GPS_FIX_CHANGE_ACTION"
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1727
     :cond_7
     const/16 v5, 0x1f
 
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingFlags:I
 
+    .line 1728
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsValid:Z
 
+    .line 1731
     cmpl-float v5, v4, p10
 
     if-eqz v5, :cond_4
 
+    .line 1732
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocationExt:[F
 
     const/4 v6, 0x2
@@ -3089,12 +3447,14 @@
 
     goto :goto_2
 
+    .line 1737
     .end local v4           #SensorAidingAccuracy:F
     :cond_8
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsValid:Z
 
+    .line 1739
     const-string v5, "GpsLocationProvider"
 
     const-string v6, "SensorAidingReportLocation : Bypass raw GPS"
@@ -3103,6 +3463,7 @@
 
     goto :goto_2
 
+    .line 1749
     :cond_9
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingMakeCompensatedNmea()V
 
@@ -3114,20 +3475,24 @@
     .parameter "NmeaOrg"
 
     .prologue
+    .line 1823
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
     if-nez v0, :cond_0
 
     move-object v0, p1
 
+    .line 1842
     :goto_0
     return-object v0
 
+    .line 1827
     :cond_0
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mReportNmeaCallFlag:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 1841
     :pswitch_0
     const-string v0, "GpsLocationProvider"
 
@@ -3137,8 +3502,10 @@
 
     move-object v0, p1
 
+    .line 1842
     goto :goto_0
 
+    .line 1829
     :pswitch_1
     invoke-direct {p0, p1}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingKeepOriginalNmea(Ljava/lang/String;)Ljava/lang/String;
 
@@ -3146,31 +3513,37 @@
 
     goto :goto_0
 
+    .line 1831
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGGA:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 1833
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirRMC:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 1835
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 1837
     :pswitch_5
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGLL:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 1839
     :pswitch_6
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirLOG:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 1827
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -3199,19 +3572,24 @@
 
     const/4 v5, 0x0
 
+    .line 1761
     iget v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
     if-nez v2, :cond_1
 
+    .line 1817
     :cond_0
     :goto_0
     return-void
 
+    .line 1765
     :cond_1
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingDeliverSvStatus()V
 
+    .line 1767
     const/4 v1, 0x0
 
+    .line 1768
     .local v1, svCountUse:I
     const/4 v0, 0x0
 
@@ -3219,6 +3597,7 @@
     :goto_1
     if-ge v0, p1, :cond_3
 
+    .line 1770
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mSvMasks:[I
@@ -3245,16 +3624,20 @@
 
     if-eqz v2, :cond_2
 
+    .line 1771
     add-int/lit8 v1, v1, 0x1
 
+    .line 1768
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
+    .line 1776
     :cond_3
     iput v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountSatInUse:I
 
+    .line 1779
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvMasks_SensorAiding:[I
 
     aget v2, v2, v6
@@ -3263,6 +3646,7 @@
 
     if-le v1, v6, :cond_5
 
+    .line 1780
     :cond_4
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -3275,6 +3659,7 @@
 
     invoke-static {v2, v5, v3, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 1781
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mSnrs:[F
@@ -3286,6 +3671,7 @@
 
     invoke-static {v2, v5, v3, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 1782
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mSvElevations:[F
@@ -3297,6 +3683,7 @@
 
     invoke-static {v2, v5, v3, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 1783
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mSvAzimuths:[F
@@ -3308,6 +3695,7 @@
 
     invoke-static {v2, v5, v3, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 1784
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mSvMasks:[I
@@ -3321,15 +3709,19 @@
 
     invoke-static {v2, v5, v3, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 1785
     iput p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountView_SensorAiding:I
 
+    .line 1786
     iput v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountUsed_SensorAiding:I
 
+    .line 1792
     :cond_5
     iget-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsValid:Z
 
     if-ne v2, v7, :cond_6
 
+    .line 1795
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvMasks_SensorAiding:[I
 
     aget v2, v2, v6
@@ -3349,11 +3741,13 @@
 
     goto :goto_0
 
+    .line 1812
     :cond_6
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvMasks_SensorAiding:[I
 
     aput v5, v2, v6
 
+    .line 1813
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSvCountUsed_SensorAiding:I
 
     goto/16 :goto_0
@@ -3371,6 +3765,7 @@
 
     const-string v4, ","
 
+    .line 1892
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocation:[D
@@ -3386,6 +3781,7 @@
 
     iput-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingIsPedestrian:Z
 
+    .line 1895
     const-string v0, "AidGPS"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3514,6 +3910,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingPutLogNmea(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 1898
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mRequestLocationExt:[F
 
     aget v1, v0, v6
@@ -3524,6 +3921,7 @@
 
     aput v1, v0, v6
 
+    .line 1899
     return-void
 .end method
 
@@ -3531,6 +3929,7 @@
     .locals 4
 
     .prologue
+    .line 1903
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
     const/4 v2, 0x1
@@ -3541,6 +3940,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 1905
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->windowManager:Landroid/view/WindowManager;
 
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -3551,6 +3951,7 @@
 
     move-result v0
 
+    .line 1906
     .local v0, nRotation:I
     const-string v1, "GpsLocationProvider"
 
@@ -3574,11 +3975,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1908
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_hybrid_gps_deliver_rotation_data(I)V
     invoke-static {v1, v0}, Lcom/android/server/location/GpsLocationProvider;->access$3300(Lcom/android/server/location/GpsLocationProvider;I)V
 
+    .line 1913
     .end local v0           #nRotation:I
     :cond_0
     return-void
@@ -3590,12 +3993,15 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 1658
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
+    .line 1659
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPPreviousMode:I
 
+    .line 1660
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mPositionMode:I
@@ -3605,6 +4011,7 @@
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPTest_PositionMode:I
 
+    .line 1662
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mContext:Landroid/content/Context;
@@ -3624,14 +4031,17 @@
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
+    .line 1663
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mSensorAidingSetting:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 1664
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingRegister()V
 
+    .line 1666
     :cond_0
     return-void
 .end method
@@ -3640,16 +4050,20 @@
     .locals 2
 
     .prologue
+    .line 1670
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mTimeStampLastReportedLocation:J
 
+    .line 1671
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingDeregister()V
 
+    .line 1672
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPPreviousMode:I
 
+    .line 1674
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
     return v0
@@ -3660,6 +4074,7 @@
     .parameter "isSupported"
 
     .prologue
+    .line 1922
     const-string v0, "GpsLocationProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3682,11 +4097,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1924
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_hybrid_gps_support_inverse_portrait_mode(I)V
     invoke-static {v0, p1}, Lcom/android/server/location/GpsLocationProvider;->access$3400(Lcom/android/server/location/GpsLocationProvider;I)V
 
+    .line 1928
     return-void
 .end method
 
@@ -3695,11 +4112,14 @@
     .parameter "NmeaOrg"
 
     .prologue
+    .line 2261
     const/4 v7, 0x0
 
+    .line 2262
     .local v7, nTemp:I
     const-wide/16 v4, 0x0
 
+    .line 2265
     .local v4, fTemp:D
     invoke-direct/range {p0 .. p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetValid()I
 
@@ -3722,11 +4142,13 @@
     :cond_0
     move-object/from16 v3, p1
 
+    .line 2454
     .end local p1
     .local v3, NmeaOrg:Ljava/lang/String;
     :goto_0
     return-object v3
 
+    .line 2270
     .end local v3           #NmeaOrg:Ljava/lang/String;
     .restart local p1
     :cond_1
@@ -3742,10 +4164,12 @@
 
     move-object/from16 v3, p1
 
+    .line 2271
     .end local p1
     .restart local v3       #NmeaOrg:Ljava/lang/String;
     goto :goto_0
 
+    .line 2275
     .end local v3           #NmeaOrg:Ljava/lang/String;
     .restart local p1
     :cond_2
@@ -3759,6 +4183,7 @@
 
     move v7, v0
 
+    .line 2276
     invoke-direct/range {p0 .. p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetLatitude()D
 
     move-result-wide v19
@@ -3771,6 +4196,7 @@
 
     sub-double v4, v19, v21
 
+    .line 2277
     mul-int/lit8 v19, v7, 0x64
 
     move/from16 v0, v19
@@ -3785,10 +4211,12 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLat:D
 
+    .line 2278
     const-wide/high16 v19, 0x404e
 
     mul-double v4, v4, v19
 
+    .line 2279
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLat:D
@@ -3803,6 +4231,7 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLat:D
 
+    .line 2280
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLat:D
@@ -3815,6 +4244,7 @@
 
     if-gez v19, :cond_6
 
+    .line 2281
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLat:D
@@ -3831,6 +4261,7 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLat:D
 
+    .line 2282
     const/16 v19, 0x53
 
     move/from16 v0, v19
@@ -3839,6 +4270,7 @@
 
     iput-char v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaNS:C
 
+    .line 2288
     :goto_1
     invoke-direct/range {p0 .. p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetLongitude()D
 
@@ -3850,6 +4282,7 @@
 
     move v7, v0
 
+    .line 2289
     invoke-direct/range {p0 .. p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetLongitude()D
 
     move-result-wide v19
@@ -3862,6 +4295,7 @@
 
     sub-double v4, v19, v21
 
+    .line 2290
     mul-int/lit8 v19, v7, 0x64
 
     move/from16 v0, v19
@@ -3876,10 +4310,12 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLon:D
 
+    .line 2291
     const-wide/high16 v19, 0x404e
 
     mul-double v4, v4, v19
 
+    .line 2292
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLon:D
@@ -3894,6 +4330,7 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLon:D
 
+    .line 2293
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLon:D
@@ -3906,6 +4343,7 @@
 
     if-gez v19, :cond_7
 
+    .line 2294
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLon:D
@@ -3922,6 +4360,7 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaLon:D
 
+    .line 2295
     const/16 v19, 0x57
 
     move/from16 v0, v19
@@ -3930,6 +4369,7 @@
 
     iput-char v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaEW:C
 
+    .line 2300
     :goto_2
     invoke-direct/range {p0 .. p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetAltitde()D
 
@@ -3949,6 +4389,7 @@
 
     iput-wide v0, v2, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaAlti:D
 
+    .line 2301
     invoke-direct/range {p0 .. p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetBearing()F
 
     move-result v19
@@ -3959,6 +4400,7 @@
 
     iput v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaHeading:F
 
+    .line 2302
     invoke-direct/range {p0 .. p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetSpeed()F
 
     move-result v19
@@ -3973,6 +4415,7 @@
 
     iput v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaSpeed:F
 
+    .line 2305
     const-string v19, "%.6f"
 
     const/16 v20, 0x1
@@ -4001,6 +4444,7 @@
 
     move-result-object v14
 
+    .line 2306
     .local v14, strLat:Ljava/lang/String;
     const-string v19, "%.6f"
 
@@ -4030,6 +4474,7 @@
 
     move-result-object v15
 
+    .line 2307
     .local v15, strLon:Ljava/lang/String;
     const-string v19, "%.1f"
 
@@ -4059,6 +4504,7 @@
 
     move-result-object v9
 
+    .line 2308
     .local v9, strAlti:Ljava/lang/String;
     const-string v19, "%.2f"
 
@@ -4088,6 +4534,7 @@
 
     move-result-object v16
 
+    .line 2309
     .local v16, strSpeed_K:Ljava/lang/String;
     const-string v19, "%.2f"
 
@@ -4121,6 +4568,7 @@
 
     move-result-object v17
 
+    .line 2310
     .local v17, strSpeed_N:Ljava/lang/String;
     const-string v19, "%.1f"
 
@@ -4150,9 +4598,11 @@
 
     move-result-object v13
 
+    .line 2312
     .local v13, strHeading:Ljava/lang/String;
     if-nez p1, :cond_8
 
+    .line 2314
     const-string v19, "%.1f"
 
     const/16 v20, 0x1
@@ -4187,6 +4637,7 @@
 
     move-result-object v12
 
+    .line 2315
     .local v12, strHDOP:Ljava/lang/String;
     const-string v19, "%.1f"
 
@@ -4216,6 +4667,7 @@
 
     move-result-object v10
 
+    .line 2316
     .local v10, strAltiDiff:Ljava/lang/String;
     const-string v19, "%06d"
 
@@ -4245,6 +4697,7 @@
 
     move-result-object v18
 
+    .line 2317
     .local v18, strUTC:Ljava/lang/String;
     const-string v19, "%06d"
 
@@ -4274,6 +4727,7 @@
 
     move-result-object v11
 
+    .line 2319
     .local v11, strDate:Ljava/lang/String;
     new-instance v19, Ljava/lang/String;
 
@@ -4415,6 +4869,7 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGGA:Ljava/lang/String;
 
+    .line 2320
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -4457,6 +4912,7 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGGA:Ljava/lang/String;
 
+    .line 2322
     new-instance v19, Ljava/lang/String;
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -4609,6 +5065,7 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirRMC:Ljava/lang/String;
 
+    .line 2323
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -4651,6 +5108,7 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirRMC:Ljava/lang/String;
 
+    .line 2326
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
@@ -4659,6 +5117,7 @@
 
     if-eqz v19, :cond_3
 
+    .line 2327
     new-instance v19, Ljava/lang/String;
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -4725,6 +5184,7 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
 
+    .line 2328
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -4767,6 +5227,7 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirVTG:Ljava/lang/String;
 
+    .line 2332
     :cond_3
     move-object/from16 v0, p0
 
@@ -4776,6 +5237,7 @@
 
     if-eqz v19, :cond_4
 
+    .line 2333
     new-instance v19, Ljava/lang/String;
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -4874,6 +5336,7 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGLL:Ljava/lang/String;
 
+    .line 2334
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -4916,6 +5379,7 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mNmeaVirGLL:Ljava/lang/String;
 
+    .line 2338
     :cond_4
     move-object/from16 v0, p0
 
@@ -4931,10 +5395,12 @@
     :goto_3
     move-object/from16 v3, p1
 
+    .line 2454
     .end local p1
     .restart local v3       #NmeaOrg:Ljava/lang/String;
     goto/16 :goto_0
 
+    .line 2284
     .end local v3           #NmeaOrg:Ljava/lang/String;
     .end local v9           #strAlti:Ljava/lang/String;
     .end local v13           #strHeading:Ljava/lang/String;
@@ -4954,6 +5420,7 @@
 
     goto/16 :goto_1
 
+    .line 2297
     :cond_7
     const/16 v19, 0x45
 
@@ -4965,6 +5432,7 @@
 
     goto/16 :goto_2
 
+    .line 2342
     .restart local v9       #strAlti:Ljava/lang/String;
     .restart local v13       #strHeading:Ljava/lang/String;
     .restart local v14       #strLat:Ljava/lang/String;
@@ -4982,6 +5450,7 @@
 
     move-result-object v8
 
+    .line 2344
     .local v8, splitNmea:[Ljava/lang/String;
     const-string v19, "$GPGGA"
 
@@ -5001,10 +5470,12 @@
 
     if-eq v0, v1, :cond_a
 
+    .line 2345
     const/16 v19, 0x0
 
     aget-object p1, v8, v19
 
+    .line 2346
     const/4 v6, 0x1
 
     .local v6, i:I
@@ -5025,8 +5496,10 @@
 
     if-ge v0, v1, :cond_9
 
+    .line 2347
     packed-switch v6, :pswitch_data_0
 
+    .line 2367
     :pswitch_0
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5056,11 +5529,13 @@
 
     move-result-object p1
 
+    .line 2346
     :goto_5
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_4
 
+    .line 2349
     :pswitch_1
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5092,8 +5567,10 @@
 
     move-result-object p1
 
+    .line 2350
     goto :goto_5
 
+    .line 2352
     :pswitch_2
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5127,8 +5604,10 @@
 
     move-result-object p1
 
+    .line 2353
     goto :goto_5
 
+    .line 2355
     :pswitch_3
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5160,8 +5639,10 @@
 
     move-result-object p1
 
+    .line 2356
     goto :goto_5
 
+    .line 2358
     :pswitch_4
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5195,8 +5676,10 @@
 
     move-result-object p1
 
+    .line 2359
     goto/16 :goto_5
 
+    .line 2361
     :pswitch_5
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5220,8 +5703,10 @@
 
     move-result-object p1
 
+    .line 2362
     goto/16 :goto_5
 
+    .line 2364
     :pswitch_6
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5253,8 +5738,10 @@
 
     move-result-object p1
 
+    .line 2365
     goto/16 :goto_5
 
+    .line 2371
     :cond_9
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5278,6 +5765,7 @@
 
     move-result-object p1
 
+    .line 2372
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -5304,6 +5792,7 @@
 
     goto/16 :goto_3
 
+    .line 2373
     .end local v6           #i:I
     :cond_a
     const-string v19, "$GPRMC"
@@ -5324,10 +5813,12 @@
 
     if-eq v0, v1, :cond_c
 
+    .line 2374
     const/16 v19, 0x0
 
     aget-object p1, v8, v19
 
+    .line 2375
     const/4 v6, 0x1
 
     .restart local v6       #i:I
@@ -5348,8 +5839,10 @@
 
     if-ge v0, v1, :cond_b
 
+    .line 2376
     packed-switch v6, :pswitch_data_1
 
+    .line 2399
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -5378,11 +5871,13 @@
 
     move-result-object p1
 
+    .line 2375
     :goto_7
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_6
 
+    .line 2378
     :pswitch_7
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5406,8 +5901,10 @@
 
     move-result-object p1
 
+    .line 2379
     goto :goto_7
 
+    .line 2381
     :pswitch_8
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5439,8 +5936,10 @@
 
     move-result-object p1
 
+    .line 2382
     goto :goto_7
 
+    .line 2384
     :pswitch_9
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5474,8 +5973,10 @@
 
     move-result-object p1
 
+    .line 2385
     goto :goto_7
 
+    .line 2387
     :pswitch_a
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5507,8 +6008,10 @@
 
     move-result-object p1
 
+    .line 2388
     goto :goto_7
 
+    .line 2390
     :pswitch_b
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5542,8 +6045,10 @@
 
     move-result-object p1
 
+    .line 2391
     goto/16 :goto_7
 
+    .line 2393
     :pswitch_c
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5575,8 +6080,10 @@
 
     move-result-object p1
 
+    .line 2394
     goto/16 :goto_7
 
+    .line 2396
     :pswitch_d
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5608,8 +6115,10 @@
 
     move-result-object p1
 
+    .line 2397
     goto/16 :goto_7
 
+    .line 2403
     :cond_b
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5633,6 +6142,7 @@
 
     move-result-object p1
 
+    .line 2404
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -5659,6 +6169,7 @@
 
     goto/16 :goto_3
 
+    .line 2405
     .end local v6           #i:I
     :cond_c
     const-string v19, "$GPVTG"
@@ -5679,10 +6190,12 @@
 
     if-eq v0, v1, :cond_e
 
+    .line 2406
     const/16 v19, 0x0
 
     aget-object p1, v8, v19
 
+    .line 2407
     const/4 v6, 0x1
 
     .restart local v6       #i:I
@@ -5703,8 +6216,10 @@
 
     if-ge v0, v1, :cond_d
 
+    .line 2408
     sparse-switch v6, :sswitch_data_0
 
+    .line 2419
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -5733,11 +6248,13 @@
 
     move-result-object p1
 
+    .line 2407
     :goto_9
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_8
 
+    .line 2410
     :sswitch_0
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5769,8 +6286,10 @@
 
     move-result-object p1
 
+    .line 2411
     goto :goto_9
 
+    .line 2413
     :sswitch_1
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5802,8 +6321,10 @@
 
     move-result-object p1
 
+    .line 2414
     goto :goto_9
 
+    .line 2416
     :sswitch_2
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5835,8 +6356,10 @@
 
     move-result-object p1
 
+    .line 2417
     goto :goto_9
 
+    .line 2423
     :cond_d
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5860,6 +6383,7 @@
 
     move-result-object p1
 
+    .line 2424
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -5886,6 +6410,7 @@
 
     goto/16 :goto_3
 
+    .line 2425
     .end local v6           #i:I
     :cond_e
     const-string v19, "$GPGLL"
@@ -5906,10 +6431,12 @@
 
     if-eq v0, v1, :cond_5
 
+    .line 2426
     const/16 v19, 0x0
 
     aget-object p1, v8, v19
 
+    .line 2427
     const/4 v6, 0x1
 
     .restart local v6       #i:I
@@ -5930,8 +6457,10 @@
 
     if-ge v0, v1, :cond_f
 
+    .line 2428
     packed-switch v6, :pswitch_data_2
 
+    .line 2445
     :pswitch_e
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5961,11 +6490,13 @@
 
     move-result-object p1
 
+    .line 2427
     :goto_b
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_a
 
+    .line 2430
     :pswitch_f
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -5997,8 +6528,10 @@
 
     move-result-object p1
 
+    .line 2431
     goto :goto_b
 
+    .line 2433
     :pswitch_10
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -6032,8 +6565,10 @@
 
     move-result-object p1
 
+    .line 2434
     goto :goto_b
 
+    .line 2436
     :pswitch_11
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -6065,8 +6600,10 @@
 
     move-result-object p1
 
+    .line 2437
     goto :goto_b
 
+    .line 2439
     :pswitch_12
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -6100,8 +6637,10 @@
 
     move-result-object p1
 
+    .line 2440
     goto/16 :goto_b
 
+    .line 2442
     :pswitch_13
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -6125,8 +6664,10 @@
 
     move-result-object p1
 
+    .line 2443
     goto/16 :goto_b
 
+    .line 2449
     :cond_f
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -6150,6 +6691,7 @@
 
     move-result-object p1
 
+    .line 2450
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -6176,6 +6718,7 @@
 
     goto/16 :goto_3
 
+    .line 2347
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1
@@ -6188,6 +6731,7 @@
         :pswitch_6
     .end packed-switch
 
+    .line 2376
     :pswitch_data_1
     .packed-switch 0x2
         :pswitch_7
@@ -6199,6 +6743,7 @@
         :pswitch_d
     .end packed-switch
 
+    .line 2408
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -6206,6 +6751,7 @@
         0x7 -> :sswitch_2
     .end sparse-switch
 
+    .line 2428
     :pswitch_data_2
     .packed-switch 0x1
         :pswitch_f
@@ -6222,6 +6768,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetValid()I
 
     move-result v0
@@ -6234,6 +6781,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetFlags()I
 
     move-result v0
@@ -6246,6 +6794,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetLatitude()D
 
     move-result-wide v0
@@ -6258,6 +6807,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetLongitude()D
 
     move-result-wide v0
@@ -6270,6 +6820,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetAltitde()D
 
     move-result-wide v0
@@ -6282,6 +6833,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetSpeed()F
 
     move-result v0
@@ -6294,6 +6846,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetBearing()F
 
     move-result v0
@@ -6306,6 +6859,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingGetAccuracy()F
 
     move-result v0
@@ -6319,6 +6873,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1419
     invoke-direct {p0, p1}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingReportSvStatus(I)V
 
     return-void
@@ -6330,6 +6885,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1419
     invoke-direct {p0, p1}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingReportNmea(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -6342,6 +6898,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingRotationChanged()V
 
     return-void
@@ -6352,6 +6909,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccAccuracy:I
 
     return v0
@@ -6363,6 +6921,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1419
     iput p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccAccuracy:I
 
     return p1
@@ -6373,6 +6932,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccRecent:[F
 
     return-object v0
@@ -6383,6 +6943,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyroSupported:Z
 
     return v0
@@ -6393,6 +6954,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mLPPIsInStop:Z
 
     return v0
@@ -6403,6 +6965,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingMakeSensorPacket()V
 
     return-void
@@ -6413,6 +6976,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagAccuracy:I
 
     return v0
@@ -6424,6 +6988,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1419
     iput p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagAccuracy:I
 
     return p1
@@ -6434,6 +6999,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriAccuracy:I
 
     return v0
@@ -6445,6 +7011,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1419
     iput p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriAccuracy:I
 
     return p1
@@ -6455,6 +7022,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagRecent:[F
 
     return-object v0
@@ -6465,6 +7033,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriRecent:[F
 
     return-object v0
@@ -6475,6 +7044,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrAccuracy:I
 
     return v0
@@ -6486,6 +7056,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1419
     iput p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrAccuracy:I
 
     return p1
@@ -6496,6 +7067,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyrRecent:[F
 
     return-object v0
@@ -6506,6 +7078,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingStartNavigating()V
 
     return-void
@@ -6516,6 +7089,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1419
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingStopNavigating()Z
 
     move-result v0
@@ -6536,6 +7110,7 @@
     .parameter "x8"
 
     .prologue
+    .line 1419
     invoke-direct/range {p0 .. p12}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingReportLocation(IDDDFFFJ)V
 
     return-void

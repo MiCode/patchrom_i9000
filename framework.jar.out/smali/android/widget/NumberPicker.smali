@@ -59,12 +59,14 @@
     .locals 1
 
     .prologue
+    .line 74
     new-instance v0, Landroid/widget/NumberPicker$1;
 
     invoke-direct {v0}, Landroid/widget/NumberPicker$1;-><init>()V
 
     sput-object v0, Landroid/widget/NumberPicker;->TWO_DIGIT_FORMATTER:Landroid/widget/NumberPicker$Formatter;
 
+    .line 484
     const/16 v0, 0xa
 
     new-array v0, v0, [C
@@ -97,10 +99,12 @@
     .parameter "context"
 
     .prologue
+    .line 137
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/NumberPicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 138
     return-void
 .end method
 
@@ -116,20 +120,25 @@
 
     const/4 v7, 0x0
 
+    .line 146
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 88
     new-instance v5, Landroid/widget/NumberPicker$2;
 
     invoke-direct {v5, p0}, Landroid/widget/NumberPicker$2;-><init>(Landroid/widget/NumberPicker;)V
 
     iput-object v5, p0, Landroid/widget/NumberPicker;->mRunnable:Ljava/lang/Runnable;
 
+    .line 127
     const-wide/16 v5, 0x12c
 
     iput-wide v5, p0, Landroid/widget/NumberPicker;->mSpeed:J
 
+    .line 147
     invoke-virtual {p0, v8}, Landroid/widget/NumberPicker;->setOrientation(I)V
 
+    .line 148
     iget-object v5, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     const-string v6, "layout_inflater"
@@ -140,36 +149,43 @@
 
     check-cast v2, Landroid/view/LayoutInflater;
 
+    .line 150
     .local v2, inflater:Landroid/view/LayoutInflater;
     const v5, 0x1090048
 
     invoke-virtual {v2, v5, p0, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
+    .line 151
     new-instance v5, Landroid/os/Handler;
 
     invoke-direct {v5}, Landroid/os/Handler;-><init>()V
 
     iput-object v5, p0, Landroid/widget/NumberPicker;->mHandler:Landroid/os/Handler;
 
+    .line 153
     new-instance v0, Landroid/widget/NumberPicker$3;
 
     invoke-direct {v0, p0}, Landroid/widget/NumberPicker$3;-><init>(Landroid/widget/NumberPicker;)V
 
+    .line 168
     .local v0, clickListener:Landroid/view/View$OnClickListener;
     new-instance v1, Landroid/widget/NumberPicker$4;
 
     invoke-direct {v1, p0}, Landroid/widget/NumberPicker$4;-><init>(Landroid/widget/NumberPicker;)V
 
+    .line 189
     .local v1, focusListener:Landroid/view/View$OnFocusChangeListener;
     new-instance v4, Landroid/widget/NumberPicker$5;
 
     invoke-direct {v4, p0}, Landroid/widget/NumberPicker$5;-><init>(Landroid/widget/NumberPicker;)V
 
+    .line 212
     .local v4, longClickListener:Landroid/view/View$OnLongClickListener;
     new-instance v3, Landroid/widget/NumberPicker$NumberPickerInputFilter;
 
     invoke-direct {v3, p0, v9}, Landroid/widget/NumberPicker$NumberPickerInputFilter;-><init>(Landroid/widget/NumberPicker;Landroid/widget/NumberPicker$1;)V
 
+    .line 213
     .local v3, inputFilter:Landroid/text/InputFilter;
     new-instance v5, Landroid/widget/NumberPicker$NumberRangeKeyListener;
 
@@ -177,6 +193,7 @@
 
     iput-object v5, p0, Landroid/widget/NumberPicker;->mNumberInputFilter:Landroid/text/InputFilter;
 
+    .line 214
     const v5, 0x1020216
 
     invoke-virtual {p0, v5}, Landroid/widget/NumberPicker;->findViewById(I)Landroid/view/View;
@@ -187,18 +204,22 @@
 
     iput-object v5, p0, Landroid/widget/NumberPicker;->mIncrementButton:Landroid/widget/NumberPickerButton;
 
+    .line 215
     iget-object v5, p0, Landroid/widget/NumberPicker;->mIncrementButton:Landroid/widget/NumberPickerButton;
 
     invoke-virtual {v5, v0}, Landroid/widget/NumberPickerButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 216
     iget-object v5, p0, Landroid/widget/NumberPicker;->mIncrementButton:Landroid/widget/NumberPickerButton;
 
     invoke-virtual {v5, v4}, Landroid/widget/NumberPickerButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
+    .line 217
     iget-object v5, p0, Landroid/widget/NumberPicker;->mIncrementButton:Landroid/widget/NumberPickerButton;
 
     invoke-virtual {v5, p0}, Landroid/widget/NumberPickerButton;->setNumberPicker(Landroid/widget/NumberPicker;)V
 
+    .line 219
     const v5, 0x1020218
 
     invoke-virtual {p0, v5}, Landroid/widget/NumberPicker;->findViewById(I)Landroid/view/View;
@@ -209,18 +230,22 @@
 
     iput-object v5, p0, Landroid/widget/NumberPicker;->mDecrementButton:Landroid/widget/NumberPickerButton;
 
+    .line 220
     iget-object v5, p0, Landroid/widget/NumberPicker;->mDecrementButton:Landroid/widget/NumberPickerButton;
 
     invoke-virtual {v5, v0}, Landroid/widget/NumberPickerButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 221
     iget-object v5, p0, Landroid/widget/NumberPicker;->mDecrementButton:Landroid/widget/NumberPickerButton;
 
     invoke-virtual {v5, v4}, Landroid/widget/NumberPickerButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
+    .line 222
     iget-object v5, p0, Landroid/widget/NumberPicker;->mDecrementButton:Landroid/widget/NumberPickerButton;
 
     invoke-virtual {v5, p0}, Landroid/widget/NumberPickerButton;->setNumberPicker(Landroid/widget/NumberPicker;)V
 
+    .line 224
     const v5, 0x1020217
 
     invoke-virtual {p0, v5}, Landroid/widget/NumberPicker;->findViewById(I)Landroid/view/View;
@@ -231,10 +256,12 @@
 
     iput-object v5, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
+    .line 225
     iget-object v5, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     invoke-virtual {v5, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
+    .line 226
     iget-object v5, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     new-array v6, v8, [Landroid/text/InputFilter;
@@ -243,18 +270,21 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
+    .line 227
     iget-object v5, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     const/4 v6, 0x2
 
     invoke-virtual {v5, v6}, Landroid/widget/EditText;->setRawInputType(I)V
 
+    .line 229
     iget-object v5, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     const/high16 v6, -0x8000
 
     invoke-virtual {v5, v6}, Landroid/widget/EditText;->setImeOptions(I)V
 
+    .line 230
     iget-object v5, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     new-instance v6, Landroid/widget/NumberPicker$6;
@@ -263,19 +293,23 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/EditText;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
+    .line 238
     invoke-virtual {p0}, Landroid/widget/NumberPicker;->isEnabled()Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
+    .line 239
     invoke-virtual {p0, v7}, Landroid/widget/NumberPicker;->setEnabled(Z)V
 
+    .line 252
     :cond_0
     iget-object v5, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     invoke-virtual {v5, v7}, Landroid/widget/EditText;->showCursorController(Z)V
 
+    .line 253
     return-void
 .end method
 
@@ -284,6 +318,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     return-object v0
@@ -294,6 +329,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-boolean v0, p0, Landroid/widget/NumberPicker;->mIncrement:Z
 
     return v0
@@ -305,6 +341,7 @@
     .parameter "x1"
 
     .prologue
+    .line 47
     iput-boolean p1, p0, Landroid/widget/NumberPicker;->mIncrement:Z
 
     return p1
@@ -315,6 +352,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-object v0, p0, Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
 
     return-object v0
@@ -325,6 +363,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-object v0, p0, Landroid/widget/NumberPicker;->mNumberInputFilter:Landroid/text/InputFilter;
 
     return-object v0
@@ -334,6 +373,7 @@
     .locals 1
 
     .prologue
+    .line 47
     sget-object v0, Landroid/widget/NumberPicker;->DIGIT_CHARACTERS:[C
 
     return-object v0
@@ -345,6 +385,7 @@
     .parameter "x1"
 
     .prologue
+    .line 47
     invoke-direct {p0, p1}, Landroid/widget/NumberPicker;->getSelectedPos(Ljava/lang/String;)I
 
     move-result v0
@@ -359,6 +400,7 @@
     .parameter "x2"
 
     .prologue
+    .line 47
     invoke-direct {p0, p1, p2}, Landroid/widget/NumberPicker;->checkFilterValue(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -371,6 +413,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget v0, p0, Landroid/widget/NumberPicker;->mEnd:I
 
     return v0
@@ -381,6 +424,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-object v0, p0, Landroid/widget/NumberPicker;->mIncrementButton:Landroid/widget/NumberPickerButton;
 
     return-object v0
@@ -391,6 +435,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget v0, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
     return v0
@@ -401,6 +446,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-wide v0, p0, Landroid/widget/NumberPicker;->mSpeed:J
 
     return-wide v0
@@ -411,6 +457,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-object v0, p0, Landroid/widget/NumberPicker;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -421,6 +468,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-boolean v0, p0, Landroid/widget/NumberPicker;->mDecrement:Z
 
     return v0
@@ -432,6 +480,7 @@
     .parameter "x1"
 
     .prologue
+    .line 47
     iput-boolean p1, p0, Landroid/widget/NumberPicker;->mDecrement:Z
 
     return p1
@@ -442,6 +491,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-object v0, p0, Landroid/widget/NumberPicker;->mDecrementButton:Landroid/widget/NumberPickerButton;
 
     return-object v0
@@ -453,6 +503,7 @@
     .parameter "x1"
 
     .prologue
+    .line 47
     invoke-direct {p0, p1}, Landroid/widget/NumberPicker;->validateInput(Landroid/view/View;)V
 
     return-void
@@ -463,6 +514,7 @@
     .parameter "x0"
 
     .prologue
+    .line 47
     iget-object v0, p0, Landroid/widget/NumberPicker;->mRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -474,10 +526,12 @@
     .parameter "result"
 
     .prologue
+    .line 579
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 580
     .local v0, inputStringSize:I
     iget v2, p0, Landroid/widget/NumberPicker;->mEnd:I
 
@@ -489,11 +543,14 @@
 
     move-result v1
 
+    .line 582
     .local v1, maxSize:I
     if-le v0, v1, :cond_0
 
+    .line 583
     const-string v2, ""
 
+    .line 585
     :goto_0
     return-object v2
 
@@ -508,6 +565,7 @@
     .parameter "value"
 
     .prologue
+    .line 388
     iget-object v0, p0, Landroid/widget/NumberPicker;->mFormatter:Landroid/widget/NumberPicker$Formatter;
 
     if-eqz v0, :cond_0
@@ -534,10 +592,12 @@
     .parameter "str"
 
     .prologue
+    .line 588
     iget-object v1, p0, Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
 
     if-nez v1, :cond_0
 
+    .line 590
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
@@ -545,9 +605,11 @@
 
     move-result v1
 
+    .line 613
     :goto_0
     return v1
 
+    .line 595
     :cond_0
     const/4 v0, 0x0
 
@@ -559,10 +621,12 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 597
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 598
     iget-object v1, p0, Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
 
     aget-object v1, v1, v0
@@ -577,17 +641,20 @@
 
     if-eqz v1, :cond_1
 
+    .line 599
     iget v1, p0, Landroid/widget/NumberPicker;->mStart:I
 
     add-int/2addr v1, v0
 
     goto :goto_0
 
+    .line 595
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
+    .line 607
     :cond_2
     :try_start_1
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -598,15 +665,18 @@
 
     goto :goto_0
 
+    .line 591
     .end local v0           #i:I
     :catch_0
     move-exception v1
 
+    .line 613
     :goto_2
     iget v1, p0, Landroid/widget/NumberPicker;->mStart:I
 
     goto :goto_0
 
+    .line 608
     .restart local v0       #i:I
     :catch_1
     move-exception v1
@@ -618,10 +688,12 @@
     .locals 3
 
     .prologue
+    .line 422
     iget-object v0, p0, Landroid/widget/NumberPicker;->mListener:Landroid/widget/NumberPicker$OnChangedListener;
 
     if-eqz v0, :cond_0
 
+    .line 423
     iget-object v0, p0, Landroid/widget/NumberPicker;->mListener:Landroid/widget/NumberPicker$OnChangedListener;
 
     iget v1, p0, Landroid/widget/NumberPicker;->mPrevious:I
@@ -630,6 +702,7 @@
 
     invoke-interface {v0, p0, v1, v2}, Landroid/widget/NumberPicker$OnChangedListener;->onChanged(Landroid/widget/NumberPicker;II)V
 
+    .line 425
     :cond_0
     return-void
 .end method
@@ -638,10 +711,12 @@
     .locals 4
 
     .prologue
+    .line 438
     iget-object v0, p0, Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
+    .line 439
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     iget v1, p0, Landroid/widget/NumberPicker;->mCurrent:I
@@ -652,6 +727,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
+    .line 443
     :goto_0
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
@@ -667,8 +743,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSelection(I)V
 
+    .line 444
     return-void
 
+    .line 441
     :cond_0
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
@@ -692,6 +770,7 @@
     .parameter "str"
 
     .prologue
+    .line 447
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -700,6 +779,7 @@
 
     move-result v0
 
+    .line 448
     .local v0, val:I
     iget v1, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
@@ -707,9 +787,11 @@
 
     if-eqz v0, :cond_0
 
+    .line 455
     :goto_0
     return-void
 
+    .line 449
     :cond_0
     iget v1, p0, Landroid/widget/NumberPicker;->mStart:I
 
@@ -719,14 +801,18 @@
 
     if-gt v0, v1, :cond_1
 
+    .line 450
     iget v1, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
     iput v1, p0, Landroid/widget/NumberPicker;->mPrevious:I
 
+    .line 451
     iput v0, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
+    .line 452
     invoke-direct {p0}, Landroid/widget/NumberPicker;->notifyChange()V
 
+    .line 454
     :cond_1
     invoke-direct {p0}, Landroid/widget/NumberPicker;->updateView()V
 
@@ -738,6 +824,7 @@
     .parameter "v"
 
     .prologue
+    .line 458
     check-cast p1, Landroid/widget/TextView;
 
     .end local p1
@@ -749,6 +836,7 @@
 
     move-result-object v0
 
+    .line 459
     .local v0, str:Ljava/lang/String;
     const-string v1, ""
 
@@ -758,11 +846,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 462
     invoke-direct {p0}, Landroid/widget/NumberPicker;->updateView()V
 
+    .line 468
     :goto_0
     return-void
 
+    .line 466
     :cond_0
     invoke-direct {p0, v0}, Landroid/widget/NumberPicker;->validateCurrentView(Ljava/lang/CharSequence;)V
 
@@ -775,10 +866,12 @@
     .locals 1
 
     .prologue
+    .line 481
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/NumberPicker;->mDecrement:Z
 
+    .line 482
     return-void
 .end method
 
@@ -786,10 +879,12 @@
     .locals 1
 
     .prologue
+    .line 474
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/NumberPicker;->mIncrement:Z
 
+    .line 475
     return-void
 .end method
 
@@ -798,41 +893,52 @@
     .parameter "current"
 
     .prologue
+    .line 404
     iget v0, p0, Landroid/widget/NumberPicker;->mEnd:I
 
     if-le p1, v0, :cond_1
 
+    .line 405
     iget p1, p0, Landroid/widget/NumberPicker;->mStart:I
 
+    .line 409
     :cond_0
     :goto_0
     iget v0, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
     iput v0, p0, Landroid/widget/NumberPicker;->mPrevious:I
 
+    .line 410
     iput p1, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
+    .line 411
     invoke-direct {p0}, Landroid/widget/NumberPicker;->notifyChange()V
 
+    .line 412
     invoke-direct {p0}, Landroid/widget/NumberPicker;->updateView()V
 
+    .line 413
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->selectAll()V
 
+    .line 414
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTag(Ljava/lang/Object;)V
 
+    .line 415
     return-void
 
+    .line 406
     :cond_1
     iget v0, p0, Landroid/widget/NumberPicker;->mStart:I
 
     if-ge p1, v0, :cond_0
 
+    .line 407
     iget p1, p0, Landroid/widget/NumberPicker;->mEnd:I
 
     goto :goto_0
@@ -842,6 +948,7 @@
     .locals 1
 
     .prologue
+    .line 637
     iget v0, p0, Landroid/widget/NumberPicker;->mStart:I
 
     return v0
@@ -851,6 +958,7 @@
     .locals 1
 
     .prologue
+    .line 621
     iget v0, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
     return v0
@@ -860,6 +968,7 @@
     .locals 1
 
     .prologue
+    .line 629
     iget v0, p0, Landroid/widget/NumberPicker;->mEnd:I
 
     return v0
@@ -869,6 +978,7 @@
     .locals 1
 
     .prologue
+    .line 266
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     return-object v0
@@ -879,6 +989,7 @@
     .parameter "current"
 
     .prologue
+    .line 361
     iget v0, p0, Landroid/widget/NumberPicker;->mStart:I
 
     if-lt p1, v0, :cond_0
@@ -887,6 +998,7 @@
 
     if-le p1, v0, :cond_1
 
+    .line 362
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -896,6 +1008,7 @@
 
     throw v0
 
+    .line 371
     :cond_1
     iget v0, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
@@ -903,12 +1016,15 @@
 
     if-eqz p1, :cond_2
 
+    .line 374
     :goto_0
     return-void
 
+    .line 372
     :cond_2
     iput p1, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
+    .line 373
     invoke-direct {p0}, Landroid/widget/NumberPicker;->updateView()V
 
     goto :goto_0
@@ -919,20 +1035,25 @@
     .parameter "enabled"
 
     .prologue
+    .line 282
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
+    .line 283
     iget-object v0, p0, Landroid/widget/NumberPicker;->mIncrementButton:Landroid/widget/NumberPickerButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/NumberPickerButton;->setEnabled(Z)V
 
+    .line 284
     iget-object v0, p0, Landroid/widget/NumberPicker;->mDecrementButton:Landroid/widget/NumberPickerButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/NumberPickerButton;->setEnabled(Z)V
 
+    .line 285
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setEnabled(Z)V
 
+    .line 286
     return-void
 .end method
 
@@ -941,8 +1062,10 @@
     .parameter "formatter"
 
     .prologue
+    .line 305
     iput-object p1, p0, Landroid/widget/NumberPicker;->mFormatter:Landroid/widget/NumberPicker$Formatter;
 
+    .line 306
     return-void
 .end method
 
@@ -951,8 +1074,10 @@
     .parameter "listener"
 
     .prologue
+    .line 296
     iput-object p1, p0, Landroid/widget/NumberPicker;->mListener:Landroid/widget/NumberPicker$OnChangedListener;
 
+    .line 297
     return-void
 .end method
 
@@ -962,10 +1087,12 @@
     .parameter "end"
 
     .prologue
+    .line 316
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/widget/NumberPicker;->setRange(II[Ljava/lang/String;)V
 
+    .line 317
     return-void
 .end method
 
@@ -976,24 +1103,32 @@
     .parameter "displayedValues"
 
     .prologue
+    .line 329
     iput-object p3, p0, Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
 
+    .line 330
     iput p1, p0, Landroid/widget/NumberPicker;->mStart:I
 
+    .line 331
     iput p2, p0, Landroid/widget/NumberPicker;->mEnd:I
 
+    .line 332
     iput p1, p0, Landroid/widget/NumberPicker;->mCurrent:I
 
+    .line 333
     invoke-direct {p0}, Landroid/widget/NumberPicker;->updateView()V
 
+    .line 335
     if-eqz p3, :cond_0
 
+    .line 337
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     const v1, 0x80001
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setRawInputType(I)V
 
+    .line 340
     :cond_0
     return-void
 .end method
@@ -1003,8 +1138,10 @@
     .parameter "speed"
 
     .prologue
+    .line 384
     iput-wide p1, p0, Landroid/widget/NumberPicker;->mSpeed:J
 
+    .line 385
     return-void
 .end method
 
@@ -1013,6 +1150,7 @@
     .parameter "enabled"
 
     .prologue
+    .line 288
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     if-eqz p1, :cond_0
@@ -1022,8 +1160,10 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
 
+    .line 289
     return-void
 
+    .line 288
     :cond_0
     const/4 v1, 0x2
 
@@ -1037,20 +1177,24 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 260
     iget-object v3, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     invoke-virtual {v3}, Landroid/widget/EditText;->getFilters()[Landroid/text/InputFilter;
 
     move-result-object v1
 
+    .line 261
     .local v1, filterArr:[Landroid/text/InputFilter;
     aget-object v0, v1, v5
 
+    .line 262
     .local v0, backupFilter:Landroid/text/InputFilter;
     new-instance v2, Landroid/text/InputFilter$LengthFilter;
 
     invoke-direct {v2, p1}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
 
+    .line 263
     .local v2, lengthFilter:Landroid/text/InputFilter;
     iget-object v3, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
@@ -1066,6 +1210,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
+    .line 264
     return-void
 .end method
 
@@ -1073,24 +1218,28 @@
     .locals 2
 
     .prologue
+    .line 269
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     const/high16 v1, -0x8000
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setImeOptions(I)V
 
+    .line 270
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     const-string v1, "inputType=month_edittext"
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setPrivateImeOptions(Ljava/lang/String;)V
 
+    .line 271
     iget-object v0, p0, Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
+    .line 272
     return-void
 .end method
 
@@ -1100,9 +1249,12 @@
     .parameter "end"
 
     .prologue
+    .line 349
     iput p1, p0, Landroid/widget/NumberPicker;->mStart:I
 
+    .line 350
     iput p2, p0, Landroid/widget/NumberPicker;->mEnd:I
 
+    .line 351
     return-void
 .end method

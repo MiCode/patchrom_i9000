@@ -15,9 +15,12 @@
     .parameter "dtmfString"
 
     .prologue
+    .line 97
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/gsm/stk/DisplayTextParams;-><init>(Lcom/android/internal/telephony/gsm/stk/CommandDetails;Lcom/android/internal/telephony/gsm/stk/TextMessage;)V
 
+    .line 98
     iput-object p3, p0, Lcom/android/internal/telephony/gsm/stk/SendDTMFParams;->dtmfString:[B
 
+    .line 99
     return-void
 .end method

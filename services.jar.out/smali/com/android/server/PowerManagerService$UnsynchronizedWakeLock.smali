@@ -39,26 +39,33 @@
     .parameter "refCounted"
 
     .prologue
+    .line 319
     iput-object p1, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 315
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mCount:I
 
+    .line 320
     iput p2, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mFlags:I
 
+    .line 321
     iput-object p3, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mTag:Ljava/lang/String;
 
+    .line 322
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mToken:Landroid/os/IBinder;
 
+    .line 323
     iput-boolean p4, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mRefCounted:Z
 
+    .line 324
     return-void
 .end method
 
@@ -68,6 +75,7 @@
     .locals 9
 
     .prologue
+    .line 327
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mRefCounted:Z
 
     if-eqz v0, :cond_0
@@ -80,11 +88,13 @@
 
     if-nez v0, :cond_1
 
+    .line 328
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v7
 
+    .line 330
     .local v7, ident:J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->this$0:Lcom/android/server/PowerManagerService;
@@ -113,18 +123,22 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/PowerManagerService;->acquireWakeLockLocked(ILandroid/os/IBinder;IILjava/lang/String;Landroid/os/WorkSource;)V
 
+    .line 332
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mHeld:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 334
     invoke-static {v7, v8}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 337
     .end local v7           #ident:J
     :cond_1
     return-void
 
+    .line 334
     .restart local v7       #ident:J
     :catchall_0
     move-exception v0
@@ -138,6 +152,7 @@
     .locals 1
 
     .prologue
+    .line 351
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mHeld:Z
 
     return v0
@@ -149,6 +164,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 340
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mRefCounted:Z
 
     if-eqz v0, :cond_0
@@ -163,6 +179,7 @@
 
     if-nez v0, :cond_1
 
+    .line 341
     :cond_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -171,13 +188,16 @@
     #calls: Lcom/android/server/PowerManagerService;->releaseWakeLockLocked(Landroid/os/IBinder;IZ)V
     invoke-static {v0, v1, v2, v2}, Lcom/android/server/PowerManagerService;->access$400(Lcom/android/server/PowerManagerService;Landroid/os/IBinder;IZ)V
 
+    .line 342
     iput-boolean v2, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mHeld:Z
 
+    .line 344
     :cond_1
     iget v0, p0, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mCount:I
 
     if-gez v0, :cond_2
 
+    .line 345
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -204,6 +224,7 @@
 
     throw v0
 
+    .line 347
     :cond_2
     return-void
 .end method
@@ -212,6 +233,7 @@
     .locals 2
 
     .prologue
+    .line 355
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

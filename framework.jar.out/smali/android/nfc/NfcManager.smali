@@ -13,8 +13,10 @@
     .parameter "context"
 
     .prologue
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 43
     :try_start_0
     new-instance v0, Landroid/nfc/NfcAdapter;
 
@@ -22,18 +24,22 @@
     :try_end_0
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 47
     .local v0, adapter:Landroid/nfc/NfcAdapter;
     :goto_0
     iput-object v0, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
 
+    .line 48
     return-void
 
+    .line 44
     .end local v0           #adapter:Landroid/nfc/NfcAdapter;
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 45
     .local v1, e:Ljava/lang/UnsupportedOperationException;
     const/4 v0, 0x0
 
@@ -47,6 +53,7 @@
     .locals 1
 
     .prologue
+    .line 56
     iget-object v0, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
 
     return-object v0

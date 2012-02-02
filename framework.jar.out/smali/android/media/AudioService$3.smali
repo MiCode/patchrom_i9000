@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 2127
     iput-object p1, p0, Landroid/media/AudioService$3;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -47,14 +48,17 @@
 
     const-string v5, "AudioFocus_For_Phone_Ring_And_Calls"
 
+    .line 2130
     if-ne p1, v0, :cond_1
 
+    .line 2132
     invoke-static {}, Landroid/media/AudioService;->access$5000()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2133
     :try_start_0
     iget-object v2, p0, Landroid/media/AudioService$3;->this$0:Landroid/media/AudioService;
 
@@ -63,19 +67,23 @@
     #setter for: Landroid/media/AudioService;->mIsRinging:Z
     invoke-static {v2, v4}, Landroid/media/AudioService;->access$5102(Landroid/media/AudioService;Z)Z
 
+    .line 2134
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2135
     iget-object v0, p0, Landroid/media/AudioService$3;->this$0:Landroid/media/AudioService;
 
     invoke-virtual {v0, v1}, Landroid/media/AudioService;->getStreamVolume(I)I
 
     move-result v6
 
+    .line 2136
     .local v6, ringVolume:I
     if-ltz v6, :cond_0
 
+    .line 2137
     iget-object v0, p0, Landroid/media/AudioService$3;->this$0:Landroid/media/AudioService;
 
     const-string v2, "AudioFocus_For_Phone_Ring_And_Calls"
@@ -86,11 +94,13 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/AudioService;->requestAudioFocus(IILandroid/os/IBinder;Landroid/media/IAudioFocusDispatcher;Ljava/lang/String;)I
 
+    .line 2162
     .end local v6           #ringVolume:I
     :cond_0
     :goto_0
     return-void
 
+    .line 2134
     :catchall_0
     move-exception v1
 
@@ -101,15 +111,18 @@
 
     throw v1
 
+    .line 2142
     :cond_1
     if-ne p1, v1, :cond_2
 
+    .line 2144
     invoke-static {}, Landroid/media/AudioService;->access$5000()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2145
     :try_start_2
     iget-object v2, p0, Landroid/media/AudioService$3;->this$0:Landroid/media/AudioService;
 
@@ -118,10 +131,12 @@
     #setter for: Landroid/media/AudioService;->mIsRinging:Z
     invoke-static {v2, v4}, Landroid/media/AudioService;->access$5102(Landroid/media/AudioService;Z)Z
 
+    .line 2146
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 2147
     iget-object v0, p0, Landroid/media/AudioService$3;->this$0:Landroid/media/AudioService;
 
     const-string v2, "AudioFocus_For_Phone_Ring_And_Calls"
@@ -134,6 +149,7 @@
 
     goto :goto_0
 
+    .line 2146
     :catchall_1
     move-exception v1
 
@@ -144,15 +160,18 @@
 
     throw v1
 
+    .line 2151
     :cond_2
     if-nez p1, :cond_0
 
+    .line 2153
     invoke-static {}, Landroid/media/AudioService;->access$5000()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2154
     :try_start_4
     iget-object v1, p0, Landroid/media/AudioService$3;->this$0:Landroid/media/AudioService;
 
@@ -161,14 +180,17 @@
     #setter for: Landroid/media/AudioService;->mIsRinging:Z
     invoke-static {v1, v2}, Landroid/media/AudioService;->access$5102(Landroid/media/AudioService;Z)Z
 
+    .line 2155
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 2158
     const-wide/16 v0, 0x3e8
 
     invoke-static {v0, v1}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 2160
     iget-object v0, p0, Landroid/media/AudioService$3;->this$0:Landroid/media/AudioService;
 
     const-string v1, "AudioFocus_For_Phone_Ring_And_Calls"
@@ -177,6 +199,7 @@
 
     goto :goto_0
 
+    .line 2155
     :catchall_2
     move-exception v1
 

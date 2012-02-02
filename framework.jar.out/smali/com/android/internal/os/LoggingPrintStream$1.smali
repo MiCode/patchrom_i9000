@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 62
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
     .end annotation
 
     .prologue
+    .line 64
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V

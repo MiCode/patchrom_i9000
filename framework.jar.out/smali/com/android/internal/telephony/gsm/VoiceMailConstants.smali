@@ -37,16 +37,20 @@
     .locals 1
 
     .prologue
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->CarrierVmMap:Ljava/util/HashMap;
 
+    .line 53
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->loadVoiceMail()V
 
+    .line 54
     return-void
 .end method
 
@@ -54,18 +58,20 @@
     .locals 12
 
     .prologue
-    const-string v7, "voicemail"
+    const-string/jumbo v7, "voicemail"
 
     const-string v11, "Exception in Voicemail parser "
 
     const-string v10, "GSM"
 
+    .line 81
     new-instance v5, Ljava/io/File;
 
     const-string v7, "/data/misc/radio/voicemail-conf.xml"
 
     invoke-direct {v5, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 84
     .local v5, vmFile:Ljava/io/File;
     :try_start_0
     new-instance v6, Ljava/io/FileReader;
@@ -74,28 +80,34 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 93
     .local v6, vmReader:Ljava/io/FileReader;
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v4
 
+    .line 94
     .local v4, parser:Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface {v4, v6}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    const-string v7, "voicemail"
+    .line 96
+    const-string/jumbo v7, "voicemail"
 
     invoke-static {v4, v7}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
+    .line 99
     :goto_0
     invoke-static {v4}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
+    .line 101
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 102
     .local v2, name:Ljava/lang/String;
-    const-string v7, "voicemail"
+    const-string/jumbo v7, "voicemail"
 
     invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_1
@@ -106,17 +118,20 @@
 
     if-nez v7, :cond_0
 
+    .line 124
     .end local v2           #name:Ljava/lang/String;
     .end local v4           #parser:Lorg/xmlpull/v1/XmlPullParser;
     .end local v6           #vmReader:Ljava/io/FileReader;
     :goto_1
     return-void
 
+    .line 85
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
+    .line 86
     .local v1, e:Ljava/io/FileNotFoundException;
     const-string v7, "GSM"
 
@@ -126,6 +141,7 @@
 
     goto :goto_1
 
+    .line 106
     .end local v1           #e:Ljava/io/FileNotFoundException;
     .restart local v2       #name:Ljava/lang/String;
     .restart local v4       #parser:Lorg/xmlpull/v1/XmlPullParser;
@@ -136,6 +152,7 @@
     :try_start_2
     new-array v0, v7, [Ljava/lang/String;
 
+    .line 112
     .local v0, data:[Ljava/lang/String;
     const/4 v7, 0x0
 
@@ -145,12 +162,13 @@
 
     move-result-object v3
 
+    .line 113
     .local v3, numeric:Ljava/lang/String;
     const/4 v7, 0x0
 
     const/4 v8, 0x0
 
-    const-string v9, "numeric"
+    const-string/jumbo v9, "numeric"
 
     invoke-interface {v4, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -158,11 +176,12 @@
 
     aput-object v8, v0, v7
 
+    .line 114
     const/4 v7, 0x1
 
     const/4 v8, 0x0
 
-    const-string v9, "vmnumber"
+    const-string/jumbo v9, "vmnumber"
 
     invoke-interface {v4, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -170,11 +189,12 @@
 
     aput-object v8, v0, v7
 
+    .line 115
     const/4 v7, 0x2
 
     const/4 v8, 0x0
 
-    const-string v9, "vmtag"
+    const-string/jumbo v9, "vmtag"
 
     invoke-interface {v4, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -182,6 +202,7 @@
 
     aput-object v8, v0, v7
 
+    .line 117
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->CarrierVmMap:Ljava/util/HashMap;
 
     invoke-virtual {v7, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -191,6 +212,7 @@
 
     goto :goto_0
 
+    .line 119
     .end local v0           #data:[Ljava/lang/String;
     .end local v2           #name:Ljava/lang/String;
     .end local v3           #numeric:Ljava/lang/String;
@@ -200,6 +222,7 @@
 
     move-object v1, v7
 
+    .line 120
     .local v1, e:Lorg/xmlpull/v1/XmlPullParserException;
     const-string v7, "GSM"
 
@@ -225,12 +248,14 @@
 
     goto :goto_1
 
+    .line 121
     .end local v1           #e:Lorg/xmlpull/v1/XmlPullParserException;
     :catch_2
     move-exception v7
 
     move-object v1, v7
 
+    .line 122
     .local v1, e:Ljava/io/IOException;
     const-string v7, "GSM"
 
@@ -264,6 +289,7 @@
     .parameter "carrier"
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->CarrierVmMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -278,6 +304,7 @@
     .parameter "carrier"
 
     .prologue
+    .line 61
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->CarrierVmMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -286,6 +313,7 @@
 
     check-cast v0, [Ljava/lang/String;
 
+    .line 62
     .local v0, data:[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -299,6 +327,7 @@
     .parameter "carrier"
 
     .prologue
+    .line 66
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->CarrierVmMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -307,6 +336,7 @@
 
     check-cast v0, [Ljava/lang/String;
 
+    .line 67
     .local v0, data:[Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -320,6 +350,7 @@
     .parameter "carrier"
 
     .prologue
+    .line 71
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->CarrierVmMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -328,6 +359,7 @@
 
     check-cast v0, [Ljava/lang/String;
 
+    .line 72
     .local v0, data:[Ljava/lang/String;
     const/4 v1, 0x2
 

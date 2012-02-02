@@ -56,6 +56,7 @@
     .locals 3
 
     .prologue
+    .line 166
     :try_start_0
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -63,20 +64,24 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    const-string v1, "vtmanager"
+    .line 167
+    const-string/jumbo v1, "vtmanager"
 
     invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 172
     :goto_0
     return-void
 
+    .line 169
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 170
     .local v0, ee:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -87,8 +92,10 @@
     .locals 4
 
     .prologue
+    .line 174
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 89
     const/16 v1, 0x38
 
     new-array v1, v1, [Ljava/lang/String;
@@ -431,6 +438,7 @@
 
     iput-object v1, p0, Lsiso/vt/VTManager;->vtStackEventStrings:[Ljava/lang/String;
 
+    .line 177
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -438,12 +446,14 @@
     .local v0, looper:Landroid/os/Looper;
     if-eqz v0, :cond_0
 
+    .line 178
     new-instance v1, Lsiso/vt/VTManager$EventHandler;
 
     invoke-direct {v1, p0, p0, v0}, Lsiso/vt/VTManager$EventHandler;-><init>(Lsiso/vt/VTManager;Lsiso/vt/VTManager;Landroid/os/Looper;)V
 
     iput-object v1, p0, Lsiso/vt/VTManager;->mEventHandler:Lsiso/vt/VTManager$EventHandler;
 
+    .line 184
     :goto_0
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -451,8 +461,10 @@
 
     invoke-direct {p0, v1}, Lsiso/vt/VTManager;->native_setup(Ljava/lang/Object;)V
 
+    .line 185
     return-void
 
+    .line 179
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -460,6 +472,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 180
     new-instance v1, Lsiso/vt/VTManager$EventHandler;
 
     invoke-direct {v1, p0, p0, v0}, Lsiso/vt/VTManager$EventHandler;-><init>(Lsiso/vt/VTManager;Lsiso/vt/VTManager;Landroid/os/Looper;)V
@@ -468,6 +481,7 @@
 
     goto :goto_0
 
+    .line 182
     :cond_1
     const/4 v1, 0x0
 
@@ -481,6 +495,7 @@
     .parameter "x0"
 
     .prologue
+    .line 12
     iget-object v0, p0, Lsiso/vt/VTManager;->vtStackEventStrings:[Ljava/lang/String;
 
     return-object v0
@@ -490,16 +505,19 @@
     .locals 1
 
     .prologue
+    .line 193
     sget-object v0, Lsiso/vt/VTManager;->vtInstance:Lsiso/vt/VTManager;
 
     if-nez v0, :cond_0
 
+    .line 194
     new-instance v0, Lsiso/vt/VTManager;
 
     invoke-direct {v0}, Lsiso/vt/VTManager;-><init>()V
 
     sput-object v0, Lsiso/vt/VTManager;->vtInstance:Lsiso/vt/VTManager;
 
+    .line 195
     :cond_0
     sget-object v0, Lsiso/vt/VTManager;->vtInstance:Lsiso/vt/VTManager;
 
@@ -518,42 +536,50 @@
     .parameter "obj"
 
     .prologue
-    const-string v3, "postEventFromNative"
+    const-string/jumbo v3, "postEventFromNative"
 
+    .line 408
     invoke-static {}, Lsiso/vt/VTManager;->getInstance()Lsiso/vt/VTManager;
 
     move-result-object v0
 
+    .line 410
     .local v0, c:Lsiso/vt/VTManager;
     if-nez v0, :cond_1
 
-    const-string v2, "postEventFromNative"
+    .line 411
+    const-string/jumbo v2, "postEventFromNative"
 
     const-string v2, "Object reference is NULL"
 
     invoke-static {v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 434
     :cond_0
     :goto_0
     return-void
 
+    .line 414
     :cond_1
     iget-object v2, v0, Lsiso/vt/VTManager;->mEventHandler:Lsiso/vt/VTManager$EventHandler;
 
     if-eqz v2, :cond_0
 
-    const-string v2, "postEventFromNative"
+    .line 415
+    const-string/jumbo v2, "postEventFromNative"
 
-    const-string v2, "posting message"
+    const-string/jumbo v2, "posting message"
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 431
     iget-object v2, v0, Lsiso/vt/VTManager;->mEventHandler:Lsiso/vt/VTManager$EventHandler;
 
     invoke-virtual {v2, p1, p2, p3, v0}, Lsiso/vt/VTManager$EventHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
+    .line 432
     .local v1, m:Landroid/os/Message;
     iget-object v2, v0, Lsiso/vt/VTManager;->mEventHandler:Lsiso/vt/VTManager$EventHandler;
 
@@ -606,14 +632,19 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 203
     iput-object v0, p0, Lsiso/vt/VTManager;->mSurface:Landroid/view/Surface;
 
+    .line 204
     iput-object v0, p0, Lsiso/vt/VTManager;->mNearSurface:Landroid/view/Surface;
 
+    .line 205
     iput-object v0, p0, Lsiso/vt/VTManager;->mEventHandler:Lsiso/vt/VTManager$EventHandler;
 
+    .line 206
     sput-object v0, Lsiso/vt/VTManager;->vtInstance:Lsiso/vt/VTManager;
 
+    .line 208
     return-void
 .end method
 
@@ -645,18 +676,21 @@
     .parameter "height"
 
     .prologue
+    .line 217
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object v0
 
     invoke-virtual {p0, v0, p2, p3}, Lsiso/vt/VTManager;->setPreviewDisplay(Landroid/view/Surface;II)V
 
+    .line 218
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object v0
 
     iput-object v0, p0, Lsiso/vt/VTManager;->mSurface:Landroid/view/Surface;
 
+    .line 219
     return-void
 .end method
 
@@ -668,14 +702,17 @@
     .parameter "listener"
 
     .prologue
-    const-string v0, "setStackStateListener"
+    .line 390
+    const-string/jumbo v0, "setStackStateListener"
 
     const-string v1, "Setting mStackStateListener"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 391
     iput-object p1, p0, Lsiso/vt/VTManager;->mStackStateListener:Lsiso/vt/VTManager$VTStackStateListener;
 
+    .line 392
     return-void
 .end method
 
@@ -689,18 +726,21 @@
     .parameter "height"
 
     .prologue
+    .line 360
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object v0
 
     invoke-virtual {p0, v0, p2, p3}, Lsiso/vt/VTManager;->startCamera(Landroid/view/Surface;II)V
 
+    .line 361
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object v0
 
     iput-object v0, p0, Lsiso/vt/VTManager;->mNearSurface:Landroid/view/Surface;
 
+    .line 362
     return-void
 .end method
 

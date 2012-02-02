@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 27
     iput-object p1, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-direct {p0}, Landroid/sec/clipboard/data/IClipboardDataList$Stub;-><init>()V
@@ -43,6 +44,7 @@
     .end annotation
 
     .prologue
+    .line 35
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/ClipboardDataMgr;->getItem(I)Landroid/sec/clipboard/data/ClipboardData;
@@ -61,6 +63,7 @@
     .end annotation
 
     .prologue
+    .line 30
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/ClipboardDataMgr;->size()I

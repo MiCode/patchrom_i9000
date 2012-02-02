@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 2160
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "accuracy"
 
     .prologue
+    .line 2162
     invoke-virtual {p1}, Landroid/hardware/Sensor;->getType()I
 
     move-result v0
@@ -50,11 +52,13 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2163
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriAccuracy:I
     invoke-static {v0, p2}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->access$5102(Lcom/android/server/location/GpsLocationProvider$SensorAiding;I)I
 
+    .line 2166
     :cond_0
     return-void
 .end method
@@ -72,8 +76,10 @@
 
     const/4 v3, 0x0
 
+    .line 2169
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
+    .line 2170
     .local v0, sensor:Landroid/hardware/Sensor;
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
@@ -81,6 +87,7 @@
 
     if-ne v1, v6, :cond_1
 
+    .line 2171
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriAccuracy:I
@@ -92,11 +99,13 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 2172
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriAccuracy:I
     invoke-static {v1, v3}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->access$5102(Lcom/android/server/location/GpsLocationProvider$SensorAiding;I)I
 
+    .line 2177
     :cond_0
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
@@ -111,6 +120,7 @@
 
     aput v2, v1, v3
 
+    .line 2178
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriRecent:[F
@@ -124,6 +134,7 @@
 
     aput v2, v1, v4
 
+    .line 2179
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriRecent:[F
@@ -137,6 +148,7 @@
 
     aput v2, v1, v5
 
+    .line 2180
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$3;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mOriRecent:[F
@@ -155,6 +167,7 @@
 
     aput v2, v1, v6
 
+    .line 2182
     :cond_1
     return-void
 .end method

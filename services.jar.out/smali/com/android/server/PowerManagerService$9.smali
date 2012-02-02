@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 2355
     iput-object p1, p0, Lcom/android/server/PowerManagerService$9;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .locals 4
 
     .prologue
+    .line 2357
     iget-object v1, p0, Lcom/android/server/PowerManagerService$9;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -49,6 +51,7 @@
 
     monitor-enter v1
 
+    .line 2358
     :try_start_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService$9;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -59,9 +62,11 @@
 
     float-to-int v0, v2
 
+    .line 2359
     .local v0, value:I
     if-ltz v0, :cond_0
 
+    .line 2360
     iget-object v2, p0, Lcom/android/server/PowerManagerService$9;->this$0:Lcom/android/server/PowerManagerService;
 
     const/high16 v3, -0x4080
@@ -69,16 +74,20 @@
     #setter for: Lcom/android/server/PowerManagerService;->mLightSensorPendingValue:F
     invoke-static {v2, v3}, Lcom/android/server/PowerManagerService;->access$5002(Lcom/android/server/PowerManagerService;F)F
 
+    .line 2361
     iget-object v2, p0, Lcom/android/server/PowerManagerService$9;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->lightSensorChangedLocked(I)V
     invoke-static {v2, v0}, Lcom/android/server/PowerManagerService;->access$5100(Lcom/android/server/PowerManagerService;I)V
 
+    .line 2363
     :cond_0
     monitor-exit v1
 
+    .line 2364
     return-void
 
+    .line 2363
     .end local v0           #value:I
     :catchall_0
     move-exception v2

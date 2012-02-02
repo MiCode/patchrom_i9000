@@ -50,14 +50,17 @@
     .locals 1
 
     .prologue
+    .line 439
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 441
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mParameterMap:Ljava/util/Map;
 
+    .line 443
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -72,6 +75,7 @@
     .parameter "x0"
 
     .prologue
+    .line 439
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyName:Ljava/lang/String;
 
     return-object v0
@@ -82,6 +86,7 @@
     .parameter "x0"
 
     .prologue
+    .line 439
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mParameterMap:Ljava/util/Map;
 
     return-object v0
@@ -92,6 +97,7 @@
     .parameter "x0"
 
     .prologue
+    .line 439
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyValueList:Ljava/util/List;
 
     return-object v0
@@ -102,6 +108,7 @@
     .parameter "x0"
 
     .prologue
+    .line 439
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyBytes:[B
 
     return-object v0
@@ -115,6 +122,7 @@
     .parameter "paramValue"
 
     .prologue
+    .line 452
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$Property;->mParameterMap:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -123,6 +131,7 @@
 
     if-nez v1, :cond_1
 
+    .line 453
     const-string v1, "TYPE"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -131,21 +140,26 @@
 
     if-eqz v1, :cond_0
 
+    .line 454
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 458
     .local v0, values:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
     :goto_0
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$Property;->mParameterMap:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 462
     :goto_1
     invoke-interface {v0, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 463
     return-void
 
+    .line 456
     .end local v0           #values:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
@@ -155,6 +169,7 @@
     .restart local v0       #values:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
     goto :goto_0
 
+    .line 460
     .end local v0           #values:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
     :cond_1
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$Property;->mParameterMap:Ljava/util/Map;
@@ -174,10 +189,12 @@
     .parameter "propertyValue"
 
     .prologue
+    .line 466
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyValueList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 467
     return-void
 .end method
 
@@ -187,18 +204,23 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 482
     iput-object v1, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyName:Ljava/lang/String;
 
+    .line 483
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mParameterMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
+    .line 484
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyValueList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 485
     iput-object v1, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyBytes:[B
 
+    .line 486
     return-void
 .end method
 
@@ -218,6 +240,7 @@
     .end annotation
 
     .prologue
+    .line 474
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mParameterMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -243,6 +266,7 @@
     .end annotation
 
     .prologue
+    .line 478
     iget-object v0, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyValueList:Ljava/util/List;
 
     return-object v0
@@ -253,8 +277,10 @@
     .parameter "propertyBytes"
 
     .prologue
+    .line 470
     iput-object p1, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyBytes:[B
 
+    .line 471
     return-void
 .end method
 
@@ -263,7 +289,9 @@
     .parameter "propertyName"
 
     .prologue
+    .line 447
     iput-object p1, p0, Landroid/pim/vcard/VCardEntry$Property;->mPropertyName:Ljava/lang/String;
 
+    .line 448
     return-void
 .end method

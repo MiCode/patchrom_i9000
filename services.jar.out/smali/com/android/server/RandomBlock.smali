@@ -20,14 +20,17 @@
     .locals 1
 
     .prologue
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 37
     const/16 v0, 0x1000
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/server/RandomBlock;->block:[B
 
+    .line 39
     return-void
 .end method
 
@@ -36,11 +39,14 @@
     .parameter "c"
 
     .prologue
+    .line 93
     if-nez p0, :cond_0
 
+    .line 100
     :goto_0
     return-void
 
+    .line 96
     :cond_0
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -49,9 +55,11 @@
 
     goto :goto_0
 
+    .line 97
     :catch_0
     move-exception v0
 
+    .line 98
     .local v0, e:Ljava/io/IOException;
     const-string v1, "RandomBlock"
 
@@ -72,8 +80,10 @@
     .end annotation
 
     .prologue
+    .line 43
     const/4 v0, 0x0
 
+    .line 45
     .local v0, stream:Ljava/io/InputStream;
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
@@ -82,6 +92,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 46
     .end local v0           #stream:Ljava/io/InputStream;
     .local v1, stream:Ljava/io/InputStream;
     :try_start_1
@@ -91,10 +102,13 @@
 
     move-result-object v2
 
+    .line 48
     invoke-static {v1}, Lcom/android/server/RandomBlock;->close(Ljava/io/Closeable;)V
 
+    .line 46
     return-object v2
 
+    .line 48
     .end local v1           #stream:Ljava/io/InputStream;
     .restart local v0       #stream:Ljava/io/InputStream;
     :catchall_0
@@ -129,17 +143,21 @@
     .prologue
     const/16 v5, 0x1000
 
+    .line 53
     new-instance v1, Lcom/android/server/RandomBlock;
 
     invoke-direct {v1}, Lcom/android/server/RandomBlock;-><init>()V
 
+    .line 54
     .local v1, retval:Lcom/android/server/RandomBlock;
     const/4 v2, 0x0
 
+    .line 55
     .local v2, total:I
     :goto_0
     if-ge v2, v5, :cond_1
 
+    .line 56
     iget-object v3, v1, Lcom/android/server/RandomBlock;->block:[B
 
     sub-int v4, v5, v2
@@ -148,22 +166,27 @@
 
     move-result v0
 
+    .line 57
     .local v0, result:I
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_0
 
+    .line 58
     new-instance v3, Ljava/io/EOFException;
 
     invoke-direct {v3}, Ljava/io/EOFException;-><init>()V
 
     throw v3
 
+    .line 60
     :cond_0
     add-int/2addr v2, v0
 
+    .line 61
     goto :goto_0
 
+    .line 62
     .end local v0           #result:I
     :cond_1
     return-object v1
@@ -179,10 +202,12 @@
     .end annotation
 
     .prologue
+    .line 88
     iget-object v0, p0, Lcom/android/server/RandomBlock;->block:[B
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->write([B)V
 
+    .line 89
     return-void
 .end method
 
@@ -191,6 +216,7 @@
     .parameter "f"
 
     .prologue
+    .line 79
     const-wide/16 v0, 0x1000
 
     :try_start_0
@@ -198,9 +224,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 85
     :goto_0
     return-void
 
+    .line 80
     :catch_0
     move-exception v0
 
@@ -219,8 +247,10 @@
     .end annotation
 
     .prologue
+    .line 67
     const/4 v0, 0x0
 
+    .line 69
     .local v0, out:Ljava/io/RandomAccessFile;
     :try_start_0
     new-instance v1, Ljava/io/RandomAccessFile;
@@ -231,19 +261,24 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 70
     .end local v0           #out:Ljava/io/RandomAccessFile;
     .local v1, out:Ljava/io/RandomAccessFile;
     :try_start_1
     invoke-direct {p0, v1}, Lcom/android/server/RandomBlock;->toDataOut(Ljava/io/DataOutput;)V
 
+    .line 71
     invoke-static {v1}, Lcom/android/server/RandomBlock;->truncateIfPossible(Ljava/io/RandomAccessFile;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 73
     invoke-static {v1}, Lcom/android/server/RandomBlock;->close(Ljava/io/Closeable;)V
 
+    .line 75
     return-void
 
+    .line 73
     .end local v1           #out:Ljava/io/RandomAccessFile;
     .restart local v0       #out:Ljava/io/RandomAccessFile;
     :catchall_0

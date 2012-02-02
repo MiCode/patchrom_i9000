@@ -46,6 +46,7 @@
     .parameter
 
     .prologue
+    .line 125
     iput-object p1, p0, Lcom/android/server/MountService$VolumeState;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

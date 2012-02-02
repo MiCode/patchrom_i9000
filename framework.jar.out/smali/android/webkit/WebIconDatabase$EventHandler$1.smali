@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 90
     iput-object p1, p0, Landroid/webkit/WebIconDatabase$EventHandler$1;->this$0:Landroid/webkit/WebIconDatabase$EventHandler;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,14 +39,17 @@
     .parameter "msg"
 
     .prologue
+    .line 95
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
+    .line 126
     .end local p0
     :goto_0
     return-void
 
+    .line 97
     .restart local p0
     :pswitch_0
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -58,6 +62,7 @@
 
     goto :goto_0
 
+    .line 101
     .restart local p0
     :pswitch_1
     #calls: Landroid/webkit/WebIconDatabase;->nativeClose()V
@@ -65,28 +70,32 @@
 
     goto :goto_0
 
+    .line 105
     :pswitch_2
     #calls: Landroid/webkit/WebIconDatabase;->nativeRemoveAllIcons()V
     invoke-static {}, Landroid/webkit/WebIconDatabase;->access$300()V
 
     goto :goto_0
 
+    .line 109
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/webkit/WebIconDatabase$IconListener;
 
+    .line 110
     .local v0, l:Landroid/webkit/WebIconDatabase$IconListener;
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
 
-    const-string v3, "url"
+    const-string/jumbo v3, "url"
 
     invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 111
     .local v1, url:Ljava/lang/String;
     iget-object v2, p0, Landroid/webkit/WebIconDatabase$EventHandler$1;->this$0:Landroid/webkit/WebIconDatabase$EventHandler;
 
@@ -95,6 +104,7 @@
 
     goto :goto_0
 
+    .line 115
     .end local v0           #l:Landroid/webkit/WebIconDatabase$IconListener;
     .end local v1           #url:Ljava/lang/String;
     :pswitch_4
@@ -105,6 +115,7 @@
 
     goto :goto_0
 
+    .line 119
     :pswitch_5
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -116,6 +127,7 @@
 
     goto :goto_0
 
+    .line 123
     .restart local p0
     :pswitch_6
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -128,6 +140,7 @@
 
     goto :goto_0
 
+    .line 95
     nop
 
     :pswitch_data_0

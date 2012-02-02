@@ -19,14 +19,17 @@
     .prologue
     const-string v1, "BluetoothAVRCPServiceStub"
 
+    .line 46
     invoke-direct {p0}, Lcom/broadcom/bt/service/avrcp/IBluetoothAVRCPService$Stub;-><init>()V
 
+    .line 48
     const-string v0, "BluetoothAVRCPServiceStub"
 
     const-string v0, "BluetoothAVRCPServiceStub"
 
     invoke-static {v1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 50
     const-string v0, "bluetooth_avrcp"
 
     invoke-static {v0}, Lcom/broadcom/bt/service/framework/BluetoothServiceManager;->getServiceEventLoop(Ljava/lang/String;)Lcom/broadcom/bt/service/framework/IBtService;
@@ -38,6 +41,7 @@
 
     sput-object p0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPServiceStub;->mService:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
 
+    .line 52
     return-void
 .end method
 
@@ -47,6 +51,7 @@
     .locals 2
 
     .prologue
+    .line 101
     monitor-enter p0
 
     :try_start_0
@@ -56,16 +61,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 102
     sget-object v0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPServiceStub;->mService:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
 
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;->disable()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 103
     monitor-exit p0
 
     return-void
 
+    .line 101
     :catchall_0
     move-exception v0
 
@@ -78,6 +86,7 @@
     .locals 2
 
     .prologue
+    .line 93
     monitor-enter p0
 
     :try_start_0
@@ -87,16 +96,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 94
     sget-object v0, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPServiceStub;->mService:Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;
 
     invoke-virtual {v0}, Lcom/broadcom/bt/service/avrcp/BluetoothAVRCPService;->enable()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 95
     monitor-exit p0
 
     return-void
 
+    .line 93
     :catchall_0
     move-exception v0
 
@@ -114,14 +126,17 @@
     .end annotation
 
     .prologue
+    .line 59
     const-string v0, "BluetoothAVRCPServiceStub"
 
     const-string v1, "finalize"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 61
     invoke-super {p0}, Lcom/broadcom/bt/service/avrcp/IBluetoothAVRCPService$Stub;->finalize()V
 
+    .line 62
     return-void
 .end method
 
@@ -135,6 +150,7 @@
     .end annotation
 
     .prologue
+    .line 73
     monitor-enter p0
 
     :try_start_0
@@ -144,10 +160,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 74
     monitor-exit p0
 
     return-void
 
+    .line 73
     :catchall_0
     move-exception v0
 
@@ -166,6 +184,7 @@
     .end annotation
 
     .prologue
+    .line 85
     monitor-enter p0
 
     :try_start_0
@@ -175,10 +194,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 86
     monitor-exit p0
 
     return-void
 
+    .line 85
     :catchall_0
     move-exception v0
 

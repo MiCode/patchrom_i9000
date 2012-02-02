@@ -47,6 +47,7 @@
     .locals 1
 
     .prologue
+    .line 162
     new-instance v0, Landroid/net/vpn/VpnProfile$1;
 
     invoke-direct {v0}, Landroid/net/vpn/VpnProfile$1;-><init>()V
@@ -60,8 +61,10 @@
     .locals 1
 
     .prologue
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 40
     sget-object v0, Landroid/net/vpn/VpnState;->IDLE:Landroid/net/vpn/VpnState;
 
     iput-object v0, p0, Landroid/net/vpn/VpnProfile;->mState:Landroid/net/vpn/VpnState;
@@ -75,6 +78,7 @@
     .locals 1
 
     .prologue
+    .line 192
     const/4 v0, 0x0
 
     return v0
@@ -84,6 +88,7 @@
     .locals 1
 
     .prologue
+    .line 84
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mDomainSuffices:Ljava/lang/String;
 
     return-object v0
@@ -93,6 +98,7 @@
     .locals 1
 
     .prologue
+    .line 112
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mExcludeRouteList:Ljava/lang/String;
 
     return-object v0
@@ -102,6 +108,7 @@
     .locals 1
 
     .prologue
+    .line 60
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mId:Ljava/lang/String;
 
     return-object v0
@@ -111,6 +118,7 @@
     .locals 1
 
     .prologue
+    .line 48
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mName:Ljava/lang/String;
 
     return-object v0
@@ -120,6 +128,7 @@
     .locals 1
 
     .prologue
+    .line 98
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mRouteList:Ljava/lang/String;
 
     return-object v0
@@ -129,6 +138,7 @@
     .locals 1
 
     .prologue
+    .line 120
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mSavedUsername:Ljava/lang/String;
 
     return-object v0
@@ -138,6 +148,7 @@
     .locals 1
 
     .prologue
+    .line 71
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mServerName:Ljava/lang/String;
 
     return-object v0
@@ -147,6 +158,7 @@
     .locals 1
 
     .prologue
+    .line 128
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mState:Landroid/net/vpn/VpnState;
 
     if-nez v0, :cond_0
@@ -169,6 +181,7 @@
     .locals 1
 
     .prologue
+    .line 140
     iget-boolean v0, p0, Landroid/net/vpn/VpnProfile;->mIsCustomized:Z
 
     return v0
@@ -178,6 +191,7 @@
     .locals 2
 
     .prologue
+    .line 132
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mState:Landroid/net/vpn/VpnState;
 
     sget-object v1, Landroid/net/vpn/VpnState;->IDLE:Landroid/net/vpn/VpnState;
@@ -200,48 +214,56 @@
     .parameter "in"
 
     .prologue
+    .line 153
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/VpnProfile;->mName:Ljava/lang/String;
 
+    .line 154
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/VpnProfile;->mId:Ljava/lang/String;
 
+    .line 155
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/VpnProfile;->mServerName:Ljava/lang/String;
 
+    .line 156
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/VpnProfile;->mDomainSuffices:Ljava/lang/String;
 
+    .line 157
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/VpnProfile;->mRouteList:Ljava/lang/String;
 
+    .line 158
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/VpnProfile;->mExcludeRouteList:Ljava/lang/String;
 
+    .line 159
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/vpn/VpnProfile;->mSavedUsername:Ljava/lang/String;
 
+    .line 160
     return-void
 .end method
 
@@ -250,8 +272,10 @@
     .parameter "customized"
 
     .prologue
+    .line 149
     iput-boolean p1, p0, Landroid/net/vpn/VpnProfile;->mIsCustomized:Z
 
+    .line 150
     return-void
 .end method
 
@@ -260,8 +284,10 @@
     .parameter "entries"
 
     .prologue
+    .line 80
     iput-object p1, p0, Landroid/net/vpn/VpnProfile;->mDomainSuffices:Ljava/lang/String;
 
+    .line 81
     return-void
 .end method
 
@@ -270,8 +296,10 @@
     .parameter "entries"
 
     .prologue
+    .line 108
     iput-object p1, p0, Landroid/net/vpn/VpnProfile;->mExcludeRouteList:Ljava/lang/String;
 
+    .line 109
     return-void
 .end method
 
@@ -280,8 +308,10 @@
     .parameter "id"
 
     .prologue
+    .line 56
     iput-object p1, p0, Landroid/net/vpn/VpnProfile;->mId:Ljava/lang/String;
 
+    .line 57
     return-void
 .end method
 
@@ -290,8 +320,10 @@
     .parameter "name"
 
     .prologue
+    .line 44
     iput-object p1, p0, Landroid/net/vpn/VpnProfile;->mName:Ljava/lang/String;
 
+    .line 45
     return-void
 .end method
 
@@ -300,8 +332,10 @@
     .parameter "entries"
 
     .prologue
+    .line 94
     iput-object p1, p0, Landroid/net/vpn/VpnProfile;->mRouteList:Ljava/lang/String;
 
+    .line 95
     return-void
 .end method
 
@@ -310,8 +344,10 @@
     .parameter "name"
 
     .prologue
+    .line 116
     iput-object p1, p0, Landroid/net/vpn/VpnProfile;->mSavedUsername:Ljava/lang/String;
 
+    .line 117
     return-void
 .end method
 
@@ -320,8 +356,10 @@
     .parameter "name"
 
     .prologue
+    .line 67
     iput-object p1, p0, Landroid/net/vpn/VpnProfile;->mServerName:Ljava/lang/String;
 
+    .line 68
     return-void
 .end method
 
@@ -330,8 +368,10 @@
     .parameter "state"
 
     .prologue
+    .line 124
     iput-object p1, p0, Landroid/net/vpn/VpnProfile;->mState:Landroid/net/vpn/VpnState;
 
+    .line 125
     return-void
 .end method
 
@@ -341,6 +381,7 @@
     .parameter "flags"
 
     .prologue
+    .line 180
     invoke-virtual {p0}, Landroid/net/vpn/VpnProfile;->getType()Landroid/net/vpn/VpnType;
 
     move-result-object v0
@@ -351,6 +392,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 181
     iget-boolean v0, p0, Landroid/net/vpn/VpnProfile;->mIsCustomized:Z
 
     if-eqz v0, :cond_0
@@ -360,36 +402,45 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 182
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 183
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 184
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mServerName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 185
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mDomainSuffices:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 186
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mRouteList:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 187
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mExcludeRouteList:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 188
     iget-object v0, p0, Landroid/net/vpn/VpnProfile;->mSavedUsername:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 189
     return-void
 
+    .line 181
     :cond_0
     const/4 v0, 0x0
 

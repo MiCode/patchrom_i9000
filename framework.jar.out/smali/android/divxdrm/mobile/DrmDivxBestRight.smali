@@ -24,6 +24,7 @@
     .locals 0
 
     .prologue
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
     .locals 1
 
     .prologue
+    .line 66
     iget-boolean v0, p0, Landroid/divxdrm/mobile/DrmDivxBestRight;->Composite:Z
 
     return v0
@@ -44,6 +46,7 @@
     .locals 2
 
     .prologue
+    .line 57
     iget-wide v0, p0, Landroid/divxdrm/mobile/DrmDivxBestRight;->curCount:J
 
     return-wide v0
@@ -53,6 +56,7 @@
     .locals 1
 
     .prologue
+    .line 45
     iget v0, p0, Landroid/divxdrm/mobile/DrmDivxBestRight;->version:I
 
     return v0
@@ -62,6 +66,7 @@
     .locals 1
 
     .prologue
+    .line 53
     iget v0, p0, Landroid/divxdrm/mobile/DrmDivxBestRight;->drmMode:I
 
     return v0
@@ -71,6 +76,7 @@
     .locals 1
 
     .prologue
+    .line 70
     iget-boolean v0, p0, Landroid/divxdrm/mobile/DrmDivxBestRight;->HDMI:Z
 
     return v0
@@ -80,6 +86,7 @@
     .locals 2
 
     .prologue
+    .line 61
     iget-wide v0, p0, Landroid/divxdrm/mobile/DrmDivxBestRight;->orgCount:J
 
     return-wide v0
@@ -89,6 +96,7 @@
     .locals 1
 
     .prologue
+    .line 49
     iget v0, p0, Landroid/divxdrm/mobile/DrmDivxBestRight;->rightStatus:I
 
     return v0

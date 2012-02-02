@@ -32,16 +32,21 @@
     .parameter "haveInputMethods"
 
     .prologue
+    .line 566
     const-string v0, "WindowManager"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
+    .line 567
     iput-object p1, p0, Lcom/android/server/WindowManagerService$WMThread;->mContext:Landroid/content/Context;
 
+    .line 568
     iput-object p2, p0, Lcom/android/server/WindowManagerService$WMThread;->mPM:Lcom/android/server/PowerManagerService;
 
+    .line 569
     iput-boolean p3, p0, Lcom/android/server/WindowManagerService$WMThread;->mHaveInputMethods:Z
 
+    .line 570
     return-void
 .end method
 
@@ -51,8 +56,10 @@
     .locals 5
 
     .prologue
+    .line 573
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
+    .line 574
     new-instance v0, Lcom/android/server/WindowManagerService;
 
     iget-object v1, p0, Lcom/android/server/WindowManagerService$WMThread;->mContext:Landroid/content/Context;
@@ -65,30 +72,39 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/WindowManagerService;-><init>(Landroid/content/Context;Lcom/android/server/PowerManagerService;ZLcom/android/server/WindowManagerService$1;)V
 
+    .line 576
     .local v0, s:Lcom/android/server/WindowManagerService;
     const/4 v1, -0x4
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
+    .line 578
     const/4 v1, 0x0
 
     invoke-static {v1}, Landroid/os/Process;->setCanSelfBackground(Z)V
 
+    .line 580
     monitor-enter p0
 
+    .line 581
     :try_start_0
     iput-object v0, p0, Lcom/android/server/WindowManagerService$WMThread;->mService:Lcom/android/server/WindowManagerService;
 
+    .line 582
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 583
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 585
     invoke-static {}, Landroid/os/Looper;->loop()V
 
+    .line 586
     return-void
 
+    .line 583
     :catchall_0
     move-exception v1
 

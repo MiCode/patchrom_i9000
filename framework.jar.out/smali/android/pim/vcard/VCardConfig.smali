@@ -135,18 +135,22 @@
 
     const/high16 v2, -0x4000
 
-    const-string v0, "v21_generic"
+    .line 295
+    const-string/jumbo v0, "v21_generic"
 
     sput-object v0, Landroid/pim/vcard/VCardConfig;->VCARD_TYPE_V21_GENERIC_STR:Ljava/lang/String;
 
+    .line 400
     sput v2, Landroid/pim/vcard/VCardConfig;->VCARD_TYPE_DEFAULT:I
 
+    .line 406
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
+    .line 407
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
     sget-object v1, Landroid/pim/vcard/VCardConfig;->VCARD_TYPE_V21_GENERIC_STR:Ljava/lang/String;
@@ -157,9 +161,10 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 408
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
-    const-string v1, "v30_generic"
+    const-string/jumbo v1, "v30_generic"
 
     const v2, -0x3fffffff
 
@@ -169,9 +174,10 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 409
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
-    const-string v1, "v21_europe"
+    const-string/jumbo v1, "v21_europe"
 
     const v2, -0x3ffffffc
 
@@ -181,9 +187,10 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 410
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
-    const-string v1, "v30_europe"
+    const-string/jumbo v1, "v30_europe"
 
     const v2, -0x3ffffffb
 
@@ -193,9 +200,10 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 411
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
-    const-string v1, "v21_japanese_utf8"
+    const-string/jumbo v1, "v21_japanese_utf8"
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -203,9 +211,10 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 412
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
-    const-string v1, "v30_japanese_utf8"
+    const-string/jumbo v1, "v30_japanese_utf8"
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -213,9 +222,10 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 413
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
-    const-string v1, "v21_japanese_mobile"
+    const-string/jumbo v1, "v21_japanese_mobile"
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -223,6 +233,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 414
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
     const-string v1, "docomo"
@@ -233,12 +244,14 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 416
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Landroid/pim/vcard/VCardConfig;->sJapaneseMobileTypeSet:Ljava/util/Set;
 
+    .line 417
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sJapaneseMobileTypeSet:Ljava/util/Set;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -247,6 +260,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 418
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sJapaneseMobileTypeSet:Ljava/util/Set;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -255,6 +269,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 419
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sJapaneseMobileTypeSet:Ljava/util/Set;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -263,6 +278,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 420
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sJapaneseMobileTypeSet:Ljava/util/Set;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -271,6 +287,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 421
     return-void
 .end method
 
@@ -278,8 +295,10 @@
     .locals 0
 
     .prologue
+    .line 503
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 504
     return-void
 .end method
 
@@ -288,6 +307,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 473
     invoke-static {p0}, Landroid/pim/vcard/VCardConfig;->isVersion30(I)Z
 
     move-result v0
@@ -317,6 +337,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 452
     and-int/lit8 v0, p0, 0xc
 
     return v0
@@ -327,10 +348,12 @@
     .parameter "vcardTypeString"
 
     .prologue
+    .line 424
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 425
     .local v0, loweredKey:Ljava/lang/String;
     sget-object v1, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
@@ -340,6 +363,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 426
     sget-object v1, Landroid/pim/vcard/VCardConfig;->sVCardTypeMap:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -353,9 +377,11 @@
 
     move-result v1
 
+    .line 431
     :goto_0
     return v1
 
+    .line 427
     .restart local p0
     :cond_0
     const-string v1, "default"
@@ -366,10 +392,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 428
     sget v1, Landroid/pim/vcard/VCardConfig;->VCARD_TYPE_DEFAULT:I
 
     goto :goto_0
 
+    .line 430
     :cond_1
     const-string v1, "VCardConfig"
 
@@ -399,6 +427,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 431
     sget v1, Landroid/pim/vcard/VCardConfig;->VCARD_TYPE_DEFAULT:I
 
     goto :goto_0
@@ -409,6 +438,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 500
     const/high16 v0, 0x2000
 
     and-int/2addr v0, p0
@@ -431,6 +461,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 484
     sget-object v0, Landroid/pim/vcard/VCardConfig;->sJapaneseMobileTypeSet:Ljava/util/Set;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -449,6 +480,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 436
     and-int/lit8 v0, p0, 0x3
 
     if-nez v0, :cond_0
@@ -471,6 +503,7 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 440
     and-int/lit8 v0, p0, 0x3
 
     if-ne v0, v1, :cond_0
@@ -491,6 +524,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 444
     and-int/lit8 v0, p0, 0x3
 
     const/4 v1, 0x2
@@ -513,6 +547,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 492
     const/high16 v0, 0x800
 
     and-int/2addr v0, p0
@@ -535,6 +570,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 496
     const v0, 0x38000008
 
     if-ne p0, v0, :cond_0
@@ -555,6 +591,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 488
     const/high16 v0, 0x200
 
     and-int/2addr v0, p0
@@ -577,6 +614,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 468
     invoke-static {p0}, Landroid/pim/vcard/VCardConfig;->shouldUseQuotedPrintable(I)Z
 
     move-result v0
@@ -606,6 +644,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 448
     invoke-static {p0}, Landroid/pim/vcard/VCardConfig;->isVersion30(I)Z
 
     move-result v0
@@ -627,6 +666,7 @@
     .locals 1
 
     .prologue
+    .line 464
     const/4 v0, 0x0
 
     return v0
@@ -637,6 +677,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 456
     const/high16 v0, -0x8000
 
     and-int/2addr v0, p0
@@ -659,6 +700,7 @@
     .parameter "vcardType"
 
     .prologue
+    .line 460
     const/high16 v0, 0x4000
 
     and-int/2addr v0, p0

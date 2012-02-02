@@ -51,12 +51,14 @@
     .locals 2
 
     .prologue
+    .line 43
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     sput-wide v0, Landroid/gesture/Gesture;->GESTURE_ID_BASE:J
 
+    .line 50
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -65,6 +67,7 @@
 
     sput-object v0, Landroid/gesture/Gesture;->sGestureCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 283
     new-instance v0, Landroid/gesture/Gesture$1;
 
     invoke-direct {v0}, Landroid/gesture/Gesture$1;-><init>()V
@@ -78,20 +81,24 @@
     .locals 4
 
     .prologue
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Landroid/gesture/Gesture;->mBoundingBox:Landroid/graphics/RectF;
 
+    .line 57
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
+    .line 60
     sget-wide v0, Landroid/gesture/Gesture;->GESTURE_ID_BASE:J
 
     sget-object v2, Landroid/gesture/Gesture;->sGestureCount:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -106,6 +113,7 @@
 
     iput-wide v0, p0, Landroid/gesture/Gesture;->mGestureID:J
 
+    .line 61
     return-void
 .end method
 
@@ -115,6 +123,7 @@
     .parameter "x1"
 
     .prologue
+    .line 42
     iput-wide p1, p0, Landroid/gesture/Gesture;->mGestureID:J
 
     return-wide p1
@@ -130,10 +139,12 @@
     .end annotation
 
     .prologue
+    .line 269
     new-instance v1, Landroid/gesture/Gesture;
 
     invoke-direct {v1}, Landroid/gesture/Gesture;-><init>()V
 
+    .line 272
     .local v1, gesture:Landroid/gesture/Gesture;
     invoke-virtual {p0}, Ljava/io/DataInputStream;->readLong()J
 
@@ -141,10 +152,12 @@
 
     iput-wide v3, v1, Landroid/gesture/Gesture;->mGestureID:J
 
+    .line 274
     invoke-virtual {p0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v0
 
+    .line 276
     .local v0, count:I
     const/4 v2, 0x0
 
@@ -152,16 +165,19 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 277
     invoke-static {p0}, Landroid/gesture/GestureStroke;->deserialize(Ljava/io/DataInputStream;)Landroid/gesture/GestureStroke;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Landroid/gesture/Gesture;->addStroke(Landroid/gesture/GestureStroke;)V
 
+    .line 276
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 280
     :cond_0
     return-object v1
 .end method
@@ -173,16 +189,19 @@
     .parameter "stroke"
 
     .prologue
+    .line 96
     iget-object v0, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 97
     iget-object v0, p0, Landroid/gesture/Gesture;->mBoundingBox:Landroid/graphics/RectF;
 
     iget-object v1, p1, Landroid/gesture/GestureStroke;->boundingBox:Landroid/graphics/RectF;
 
     invoke-virtual {v0, v1}, Landroid/graphics/RectF;->union(Landroid/graphics/RectF;)V
 
+    .line 98
     return-void
 .end method
 
@@ -190,10 +209,12 @@
     .locals 9
 
     .prologue
+    .line 65
     new-instance v1, Landroid/gesture/Gesture;
 
     invoke-direct {v1}, Landroid/gesture/Gesture;-><init>()V
 
+    .line 66
     .local v1, gesture:Landroid/gesture/Gesture;
     iget-object v4, v1, Landroid/gesture/Gesture;->mBoundingBox:Landroid/graphics/RectF;
 
@@ -215,12 +236,14 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Landroid/graphics/RectF;->set(FFFF)V
 
+    .line 68
     iget-object v4, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 69
     .local v0, count:I
     const/4 v2, 0x0
 
@@ -228,6 +251,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 70
     iget-object v4, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -236,6 +260,7 @@
 
     check-cast v3, Landroid/gesture/GestureStroke;
 
+    .line 71
     .local v3, stroke:Landroid/gesture/GestureStroke;
     iget-object v5, v1, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
@@ -247,10 +272,12 @@
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 69
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 73
     .end local v3           #stroke:Landroid/gesture/GestureStroke;
     :cond_0
     return-object v1
@@ -260,6 +287,7 @@
     .locals 1
 
     .prologue
+    .line 335
     const/4 v0, 0x0
 
     return v0
@@ -269,6 +297,7 @@
     .locals 1
 
     .prologue
+    .line 122
     iget-object v0, p0, Landroid/gesture/Gesture;->mBoundingBox:Landroid/graphics/RectF;
 
     return-object v0
@@ -278,6 +307,7 @@
     .locals 2
 
     .prologue
+    .line 172
     iget-wide v0, p0, Landroid/gesture/Gesture;->mGestureID:J
 
     return-wide v0
@@ -287,16 +317,20 @@
     .locals 6
 
     .prologue
+    .line 107
     const/4 v2, 0x0
 
+    .line 108
     .local v2, len:I
     iget-object v3, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
+    .line 109
     .local v3, strokes:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/GestureStroke;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 111
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -305,6 +339,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 112
     int-to-float v4, v2
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -319,10 +354,12 @@
 
     float-to-int v2, v4
 
+    .line 111
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 115
     :cond_0
     int-to-float v4, v2
 
@@ -342,6 +379,7 @@
     .end annotation
 
     .prologue
+    .line 80
     iget-object v0, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
     return-object v0
@@ -351,6 +389,7 @@
     .locals 1
 
     .prologue
+    .line 87
     iget-object v0, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -370,20 +409,25 @@
     .end annotation
 
     .prologue
+    .line 255
     iget-object v2, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
+    .line 256
     .local v2, strokes:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/GestureStroke;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 259
     .local v0, count:I
     iget-wide v3, p0, Landroid/gesture/Gesture;->mGestureID:J
 
     invoke-virtual {p1, v3, v4}, Ljava/io/DataOutputStream;->writeLong(J)V
 
+    .line 261
     invoke-virtual {p1, v0}, Ljava/io/DataOutputStream;->writeInt(I)V
 
+    .line 263
     const/4 v1, 0x0
 
     .end local p0
@@ -391,6 +435,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 264
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -399,10 +444,12 @@
 
     invoke-virtual {p0, p1}, Landroid/gesture/GestureStroke;->serialize(Ljava/io/DataOutputStream;)V
 
+    .line 263
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 266
     :cond_0
     return-void
 .end method
@@ -412,8 +459,10 @@
     .parameter "id"
 
     .prologue
+    .line 165
     iput-wide p1, p0, Landroid/gesture/Gesture;->mGestureID:J
 
+    .line 166
     return-void
 .end method
 
@@ -425,6 +474,7 @@
     .parameter "color"
 
     .prologue
+    .line 221
     sget-object v11, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     move/from16 v0, p1
@@ -437,61 +487,74 @@
 
     move-result-object v3
 
+    .line 223
     .local v3, bitmap:Landroid/graphics/Bitmap;
     new-instance v5, Landroid/graphics/Canvas;
 
     invoke-direct {v5, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 225
     .local v5, canvas:Landroid/graphics/Canvas;
     new-instance v6, Landroid/graphics/Paint;
 
     invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
 
+    .line 226
     .local v6, paint:Landroid/graphics/Paint;
     const/4 v11, 0x1
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    .line 227
     const/4 v11, 0x1
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setDither(Z)V
 
+    .line 228
     move-object v0, v6
 
     move/from16 v1, p4
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 229
     sget-object v11, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 230
     sget-object v11, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
+    .line 231
     sget-object v11, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
+    .line 232
     const/high16 v11, 0x4000
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
+    .line 234
     invoke-virtual {p0}, Landroid/gesture/Gesture;->toPath()Landroid/graphics/Path;
 
     move-result-object v7
 
+    .line 235
     .local v7, path:Landroid/graphics/Path;
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4}, Landroid/graphics/RectF;-><init>()V
 
+    .line 236
     .local v4, bounds:Landroid/graphics/RectF;
     const/4 v11, 0x1
 
     invoke-virtual {v7, v4, v11}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
 
+    .line 238
     mul-int/lit8 v11, p3, 0x2
 
     sub-int v11, p1, v11
@@ -504,6 +567,7 @@
 
     div-float v9, v11, v12
 
+    .line 239
     .local v9, sx:F
     mul-int/lit8 v11, p3, 0x2
 
@@ -517,6 +581,7 @@
 
     div-float v10, v11, v12
 
+    .line 240
     .local v10, sy:F
     cmpl-float v11, v9, v10
 
@@ -524,6 +589,7 @@
 
     move v8, v10
 
+    .line 241
     .local v8, scale:F
     :goto_0
     const/high16 v11, 0x4000
@@ -532,6 +598,7 @@
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
+    .line 243
     iget v11, v4, Landroid/graphics/RectF;->left:F
 
     neg-float v11, v11
@@ -582,6 +649,7 @@
 
     invoke-virtual {v7, v11, v12}, Landroid/graphics/Path;->offset(FF)V
 
+    .line 246
     move/from16 v0, p3
 
     int-to-float v0, v0
@@ -596,16 +664,20 @@
 
     invoke-virtual {v5, v11, v12}, Landroid/graphics/Canvas;->translate(FF)V
 
+    .line 247
     invoke-virtual {v5, v8, v8}, Landroid/graphics/Canvas;->scale(FF)V
 
+    .line 249
     invoke-virtual {v5, v7, v6}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
+    .line 251
     return-object v3
 
     .end local v8           #scale:F
     :cond_0
     move v8, v9
 
+    .line 240
     goto :goto_0
 .end method
 
@@ -620,17 +692,20 @@
     .prologue
     const/4 v9, 0x1
 
+    .line 186
     sget-object v7, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {p1, p2, v7}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
+    .line 187
     .local v0, bitmap:Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 189
     .local v1, canvas:Landroid/graphics/Canvas;
     int-to-float v7, p3
 
@@ -638,40 +713,51 @@
 
     invoke-virtual {v1, v7, v8}, Landroid/graphics/Canvas;->translate(FF)V
 
+    .line 191
     new-instance v4, Landroid/graphics/Paint;
 
     invoke-direct {v4}, Landroid/graphics/Paint;-><init>()V
 
+    .line 192
     .local v4, paint:Landroid/graphics/Paint;
     invoke-virtual {v4, v9}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    .line 193
     invoke-virtual {v4, v9}, Landroid/graphics/Paint;->setDither(Z)V
 
+    .line 194
     invoke-virtual {v4, p5}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 195
     sget-object v7, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 196
     sget-object v7, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
+    .line 197
     sget-object v7, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
+    .line 198
     const/high16 v7, 0x4000
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
+    .line 200
     iget-object v6, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
+    .line 201
     .local v6, strokes:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/GestureStroke;>;"
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
+    .line 203
     .local v2, count:I
     const/4 v3, 0x0
 
@@ -680,6 +766,7 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
+    .line 204
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -702,13 +789,16 @@
 
     move-result-object v5
 
+    .line 205
     .local v5, path:Landroid/graphics/Path;
     invoke-virtual {v1, v5, v4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
+    .line 203
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 208
     .end local v5           #path:Landroid/graphics/Path;
     :cond_0
     return-object v0
@@ -718,6 +808,7 @@
     .locals 1
 
     .prologue
+    .line 126
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/gesture/Gesture;->toPath(Landroid/graphics/Path;)Landroid/graphics/Path;
@@ -735,6 +826,7 @@
     .parameter "numSample"
 
     .prologue
+    .line 143
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -759,6 +851,7 @@
     .parameter "path"
 
     .prologue
+    .line 130
     if-nez p1, :cond_0
 
     new-instance p1, Landroid/graphics/Path;
@@ -766,15 +859,18 @@
     .end local p1
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
+    .line 132
     .restart local p1
     :cond_0
     iget-object v2, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
+    .line 133
     .local v2, strokes:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/GestureStroke;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 135
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -783,6 +879,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 136
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -795,10 +892,12 @@
 
     invoke-virtual {p1, v3}, Landroid/graphics/Path;->addPath(Landroid/graphics/Path;)V
 
+    .line 135
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 139
     :cond_1
     return-object p1
 .end method
@@ -812,6 +911,7 @@
     .parameter "numSample"
 
     .prologue
+    .line 147
     if-nez p1, :cond_0
 
     new-instance p1, Landroid/graphics/Path;
@@ -819,15 +919,18 @@
     .end local p1
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
+    .line 149
     .restart local p1
     :cond_0
     iget-object v2, p0, Landroid/gesture/Gesture;->mStrokes:Ljava/util/ArrayList;
 
+    .line 150
     .local v2, strokes:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/gesture/GestureStroke;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 152
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -836,6 +939,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 153
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -860,10 +964,12 @@
 
     invoke-virtual {p1, v3}, Landroid/graphics/Path;->addPath(Landroid/graphics/Path;)V
 
+    .line 152
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 156
     :cond_1
     return-object p1
 .end method
@@ -874,12 +980,15 @@
     .parameter "flags"
 
     .prologue
+    .line 312
     iget-wide v4, p0, Landroid/gesture/Gesture;->mGestureID:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 314
     const/4 v3, 0x0
 
+    .line 315
     .local v3, result:Z
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
@@ -887,11 +996,13 @@
 
     invoke-direct {v0, v4}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
+    .line 317
     .local v0, byteStream:Ljava/io/ByteArrayOutputStream;
     new-instance v2, Ljava/io/DataOutputStream;
 
     invoke-direct {v2, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
+    .line 320
     .local v2, outStream:Ljava/io/DataOutputStream;
     :try_start_0
     invoke-virtual {p0, v2}, Landroid/gesture/Gesture;->serialize(Ljava/io/DataOutputStream;)V
@@ -899,27 +1010,35 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 321
     const/4 v3, 0x1
 
+    .line 325
     invoke-static {v2}, Landroid/gesture/GestureUtils;->closeStream(Ljava/io/Closeable;)V
 
+    .line 326
     invoke-static {v0}, Landroid/gesture/GestureUtils;->closeStream(Ljava/io/Closeable;)V
 
+    .line 329
     :goto_0
     if-eqz v3, :cond_0
 
+    .line 330
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v4
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 332
     :cond_0
     return-void
 
+    .line 322
     :catch_0
     move-exception v1
 
+    .line 323
     .local v1, e:Ljava/io/IOException;
     :try_start_1
     const-string v4, "Gestures"
@@ -930,18 +1049,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 325
     invoke-static {v2}, Landroid/gesture/GestureUtils;->closeStream(Ljava/io/Closeable;)V
 
+    .line 326
     invoke-static {v0}, Landroid/gesture/GestureUtils;->closeStream(Ljava/io/Closeable;)V
 
     goto :goto_0
 
+    .line 325
     .end local v1           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v4
 
     invoke-static {v2}, Landroid/gesture/GestureUtils;->closeStream(Ljava/io/Closeable;)V
 
+    .line 326
     invoke-static {v0}, Landroid/gesture/GestureUtils;->closeStream(Ljava/io/Closeable;)V
 
     throw v4

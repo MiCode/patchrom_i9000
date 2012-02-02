@@ -12,6 +12,7 @@
     .locals 1
 
     .prologue
+    .line 244
     const/16 v0, 0x20
 
     new-array v0, v0, [F
@@ -25,6 +26,7 @@
     .locals 0
 
     .prologue
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,48 +37,58 @@
     .parameter "error"
 
     .prologue
+    .line 36
     sparse-switch p0, :sswitch_data_0
 
+    .line 52
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
+    .line 38
     :sswitch_0
     const-string v0, "no error"
 
     goto :goto_0
 
+    .line 40
     :sswitch_1
     const-string v0, "invalid enum"
 
     goto :goto_0
 
+    .line 42
     :sswitch_2
     const-string v0, "invalid value"
 
     goto :goto_0
 
+    .line 44
     :sswitch_3
     const-string v0, "invalid operation"
 
     goto :goto_0
 
+    .line 46
     :sswitch_4
-    const-string v0, "stack overflow"
+    const-string/jumbo v0, "stack overflow"
 
     goto :goto_0
 
+    .line 48
     :sswitch_5
-    const-string v0, "stack underflow"
+    const-string/jumbo v0, "stack underflow"
 
     goto :goto_0
 
+    .line 50
     :sswitch_6
-    const-string v0, "out of memory"
+    const-string/jumbo v0, "out of memory"
 
     goto :goto_0
 
+    .line 36
     nop
 
     :sswitch_data_0
@@ -105,11 +117,14 @@
     .parameter "upZ"
 
     .prologue
+    .line 75
     sget-object v0, Landroid/opengl/GLU;->sScratch:[F
 
+    .line 76
     .local v0, scratch:[F
     monitor-enter v0
 
+    .line 77
     const/4 v1, 0x0
 
     move v2, p1
@@ -133,15 +148,19 @@
     :try_start_0
     invoke-static/range {v0 .. v10}, Landroid/opengl/Matrix;->setLookAtM([FIFFFFFFFFF)V
 
+    .line 79
     const/4 p1, 0x0
 
     invoke-interface {p0, v0, p1}, Ljavax/microedition/khronos/opengles/GL10;->glMultMatrixf([FI)V
 
+    .line 80
     .end local p1
     monitor-exit v0
 
+    .line 81
     return-void
 
+    .line 80
     .end local p0
     :catchall_0
     move-exception p0
@@ -162,6 +181,7 @@
     .parameter "top"
 
     .prologue
+    .line 94
     const/high16 v5, -0x4080
 
     const/high16 v6, 0x3f80
@@ -178,6 +198,7 @@
 
     invoke-interface/range {v0 .. v6}, Ljavax/microedition/khronos/opengles/GL10;->glOrthof(FFFFFF)V
 
+    .line 95
     return-void
 .end method
 
@@ -190,6 +211,7 @@
     .parameter "zFar"
 
     .prologue
+    .line 113
     float-to-double v5, p1
 
     const-wide v7, 0x3f81df46a2529d39L
@@ -204,12 +226,15 @@
 
     mul-float v4, p3, v0
 
+    .line 114
     .local v4, top:F
     neg-float v3, v4
 
+    .line 115
     .local v3, bottom:F
     mul-float v1, v3, p2
 
+    .line 116
     .local v1, left:F
     mul-float v2, v4, p2
 
@@ -220,8 +245,10 @@
 
     move v6, p4
 
+    .line 117
     invoke-interface/range {v0 .. v6}, Ljavax/microedition/khronos/opengles/GL10;->glFrustumf(FFFFFF)V
 
+    .line 118
     return-void
 .end method
 
@@ -240,19 +267,25 @@
     .parameter "winOffset"
 
     .prologue
+    .line 150
     sget-object v0, Landroid/opengl/GLU;->sScratch:[F
 
+    .line 151
     .local v0, scratch:[F
     monitor-enter v0
 
+    .line 152
     const/4 v1, 0x0
 
+    .line 153
     .local v1, M_OFFSET:I
     const/16 v1, 0x10
 
+    .line 154
     .local v1, V_OFFSET:I
     const/16 v1, 0x14
 
+    .line 155
     .local v1, V2_OFFSET:I
     const/4 v1, 0x0
 
@@ -267,27 +300,32 @@
     :try_start_0
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
+    .line 158
     .end local v1           #V2_OFFSET:I
     const/16 p3, 0x10
 
     aput p0, v0, p3
 
+    .line 159
     .end local p3
     const/16 p0, 0x11
 
     aput p1, v0, p0
 
+    .line 160
     .end local p0
     const/16 p0, 0x12
 
     aput p2, v0, p0
 
+    .line 161
     const/16 p0, 0x13
 
     const/high16 p1, 0x3f80
 
     aput p1, v0, p0
 
+    .line 163
     .end local p1
     const/16 v1, 0x14
 
@@ -301,10 +339,12 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMV([FI[FI[FI)V
 
+    .line 166
     const/16 p0, 0x17
 
     aget p0, v0, p0
 
+    .line 167
     .local p0, w:F
     const/4 p1, 0x0
 
@@ -312,10 +352,12 @@
 
     if-nez p1, :cond_0
 
+    .line 168
     const/4 p0, 0x0
 
     monitor-exit v0
 
+    .line 183
     .end local p0           #w:F
     .end local p2
     .end local p4
@@ -323,6 +365,7 @@
     :goto_0
     return p0
 
+    .line 171
     .restart local p0       #w:F
     .restart local p2
     .restart local p4
@@ -332,6 +375,7 @@
 
     div-float p0, p1, p0
 
+    .line 173
     .local p0, rw:F
     aget p1, p7, p8
 
@@ -364,6 +408,7 @@
 
     aput p1, p9, p10
 
+    .line 177
     .end local p4
     add-int/lit8 p1, p10, 0x1
 
@@ -399,6 +444,7 @@
 
     aput p2, p9, p1
 
+    .line 180
     .end local p5
     add-int/lit8 p1, p10, 0x2
 
@@ -418,13 +464,16 @@
 
     aput p0, p9, p1
 
+    .line 181
     .end local p0           #rw:F
     monitor-exit v0
 
+    .line 183
     const/4 p0, 0x1
 
     goto :goto_0
 
+    .line 181
     :catchall_0
     move-exception p0
 
@@ -450,19 +499,25 @@
     .parameter "objOffset"
 
     .prologue
+    .line 216
     sget-object v6, Landroid/opengl/GLU;->sScratch:[F
 
+    .line 217
     .local v6, scratch:[F
     monitor-enter v6
 
+    .line 218
     const/4 v7, 0x0
 
+    .line 219
     .local v7, PM_OFFSET:I
     const/16 v7, 0x10
 
+    .line 220
     .local v7, INVPM_OFFSET:I
     const/4 v7, 0x0
 
+    .line 221
     .local v7, V_OFFSET:I
     const/4 v7, 0x0
 
@@ -477,6 +532,7 @@
     :try_start_0
     invoke-static/range {v6 .. v11}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
+    .line 224
     .end local v7           #V_OFFSET:I
     const/16 p3, 0x10
 
@@ -498,10 +554,12 @@
 
     if-nez p3, :cond_0
 
+    .line 225
     const/4 p0, 0x0
 
     monitor-exit v6
 
+    .line 241
     .end local p0
     .end local p1
     .end local p2
@@ -509,6 +567,7 @@
     :goto_0
     return p0
 
+    .line 228
     .restart local p0
     .restart local p1
     .restart local p2
@@ -552,6 +611,7 @@
 
     aput p0, v6, p3
 
+    .line 231
     const/4 p0, 0x1
 
     const/high16 p3, 0x4000
@@ -585,6 +645,7 @@
 
     aput p1, v6, p0
 
+    .line 234
     const/4 p0, 0x2
 
     const/high16 p1, 0x4000
@@ -597,6 +658,7 @@
 
     aput p1, v6, p0
 
+    .line 235
     .end local p2
     const/4 p0, 0x3
 
@@ -604,6 +666,7 @@
 
     aput p1, v6, p0
 
+    .line 237
     const/16 v7, 0x10
 
     const/4 v9, 0x0
@@ -624,12 +687,15 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMV([FI[FI[FI)V
 
+    .line 239
     monitor-exit v6
 
+    .line 241
     const/4 p0, 0x1
 
     goto :goto_0
 
+    .line 239
     :catchall_0
     move-exception p0
 

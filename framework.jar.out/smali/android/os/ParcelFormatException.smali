@@ -8,8 +8,10 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
+    .line 26
     return-void
 .end method
 
@@ -18,7 +20,9 @@
     .parameter "reason"
 
     .prologue
+    .line 29
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
+    .line 30
     return-void
 .end method

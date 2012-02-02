@@ -15,10 +15,13 @@
     .parameter "tileY"
 
     .prologue
+    .line 31
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
+    .line 32
     iput-object p1, p0, Landroid/graphics/BitmapShader;->mBitmap:Landroid/graphics/Bitmap;
 
+    .line 33
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->ni()I
 
     move-result v0
@@ -33,6 +36,7 @@
 
     iput v0, p0, Landroid/graphics/Shader;->native_instance:I
 
+    .line 35
     return-void
 .end method
 

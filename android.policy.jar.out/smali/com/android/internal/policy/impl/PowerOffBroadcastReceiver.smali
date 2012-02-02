@@ -16,6 +16,7 @@
     .locals 0
 
     .prologue
+    .line 13
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -27,8 +28,10 @@
     .prologue
     const/4 v5, 0x1
 
+    .line 33
     const/4 v1, 0x0
 
+    .line 35
     .local v1, value:I
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/PowerOffBroadcastReceiver;->mContext:Landroid/content/Context;
@@ -43,6 +46,7 @@
 
     move-result v1
 
+    .line 36
     const-string v2, "PowerOffBroadcastReceiver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -67,26 +71,32 @@
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 41
     :goto_0
     if-ne v1, v5, :cond_0
 
     move v2, v5
 
+    .line 44
     :goto_1
     return v2
 
+    .line 37
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 38
     .local v0, e:Landroid/provider/Settings$SettingNotFoundException;
     invoke-virtual {v0}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
+    .line 39
     const/4 v1, 0x0
 
     goto :goto_0
 
+    .line 44
     .end local v0           #e:Landroid/provider/Settings$SettingNotFoundException;
     :cond_0
     const/4 v2, 0x0
@@ -102,8 +112,10 @@
     .parameter "intent"
 
     .prologue
+    .line 25
     iput-object p1, p0, Lcom/android/internal/policy/impl/PowerOffBroadcastReceiver;->mContext:Landroid/content/Context;
 
+    .line 26
     const-string v0, "PowerOffBroadcastReceiver"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -130,6 +142,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 27
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PowerOffBroadcastReceiver;->isShutDownTrue()Z
 
     move-result v0
@@ -148,10 +161,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 28
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/internal/app/ShutdownThread;->shutdown(Landroid/content/Context;Z)V
 
+    .line 30
     :cond_0
     return-void
 .end method

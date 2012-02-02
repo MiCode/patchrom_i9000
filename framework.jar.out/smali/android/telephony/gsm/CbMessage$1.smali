@@ -23,6 +23,7 @@
     .locals 3
 
     .prologue
+    .line 353
     invoke-static {}, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_ALPHABET_TYPE;->values()[Landroid/telephony/gsm/CbMessage$MSGSMS_CB_ALPHABET_TYPE;
 
     move-result-object v0

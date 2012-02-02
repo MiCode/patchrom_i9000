@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "in"
 
     .prologue
+    .line 102
     new-instance v0, Landroid/net/wifi/ScanResult;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -76,6 +78,7 @@
     .parameter "x0"
 
     .prologue
+    .line 100
     invoke-virtual {p0, p1}, Landroid/net/wifi/ScanResult$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/ScanResult;
 
     move-result-object v0
@@ -88,6 +91,7 @@
     .parameter "size"
 
     .prologue
+    .line 112
     new-array v0, p1, [Landroid/net/wifi/ScanResult;
 
     return-object v0
@@ -98,6 +102,7 @@
     .parameter "x0"
 
     .prologue
+    .line 100
     invoke-virtual {p0, p1}, Landroid/net/wifi/ScanResult$1;->newArray(I)[Landroid/net/wifi/ScanResult;
 
     move-result-object v0

@@ -24,6 +24,7 @@
     .end annotation
 
     .prologue
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +40,7 @@
     .end annotation
 
     .prologue
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,6 +53,7 @@
     .parameter "tag"
 
     .prologue
+    .line 50
     const/4 v0, 0x0
 
     return-object v0
@@ -61,6 +64,7 @@
     .parameter "name"
 
     .prologue
+    .line 48
     const/4 v0, 0x0
 
     return-object v0

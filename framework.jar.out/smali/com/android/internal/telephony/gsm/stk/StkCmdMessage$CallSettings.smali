@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 52
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;->this$0:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

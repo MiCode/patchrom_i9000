@@ -39,6 +39,7 @@
 
     const/4 v2, 0x0
 
+    .line 26
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/FontSize;
 
     const-string v1, "NORMAL"
@@ -47,6 +48,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/FontSize;->NORMAL:Lcom/android/internal/telephony/gsm/stk/FontSize;
 
+    .line 27
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/FontSize;
 
     const-string v1, "LARGE"
@@ -55,6 +57,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/FontSize;->LARGE:Lcom/android/internal/telephony/gsm/stk/FontSize;
 
+    .line 28
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/FontSize;
 
     const-string v1, "SMALL"
@@ -63,6 +66,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/FontSize;->SMALL:Lcom/android/internal/telephony/gsm/stk/FontSize;
 
+    .line 25
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/telephony/gsm/stk/FontSize;
@@ -96,10 +100,13 @@
     .end annotation
 
     .prologue
+    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 33
     iput p3, p0, Lcom/android/internal/telephony/gsm/stk/FontSize;->mValue:I
 
+    .line 34
     return-void
 .end method
 
@@ -108,6 +115,7 @@
     .parameter "value"
 
     .prologue
+    .line 43
     invoke-static {}, Lcom/android/internal/telephony/gsm/stk/FontSize;->values()[Lcom/android/internal/telephony/gsm/stk/FontSize;
 
     move-result-object v0
@@ -124,6 +132,7 @@
 
     aget-object v1, v0, v2
 
+    .line 44
     .local v1, e:Lcom/android/internal/telephony/gsm/stk/FontSize;
     iget v4, v1, Lcom/android/internal/telephony/gsm/stk/FontSize;->mValue:I
 
@@ -131,16 +140,19 @@
 
     move-object v4, v1
 
+    .line 48
     .end local v1           #e:Lcom/android/internal/telephony/gsm/stk/FontSize;
     :goto_1
     return-object v4
 
+    .line 43
     .restart local v1       #e:Lcom/android/internal/telephony/gsm/stk/FontSize;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 48
     .end local v1           #e:Lcom/android/internal/telephony/gsm/stk/FontSize;
     :cond_1
     const/4 v4, 0x0
@@ -153,6 +165,7 @@
     .parameter "name"
 
     .prologue
+    .line 25
     const-class v0, Lcom/android/internal/telephony/gsm/stk/FontSize;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -169,6 +182,7 @@
     .locals 1
 
     .prologue
+    .line 25
     sget-object v0, Lcom/android/internal/telephony/gsm/stk/FontSize;->$VALUES:[Lcom/android/internal/telephony/gsm/stk/FontSize;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/gsm/stk/FontSize;->clone()Ljava/lang/Object;

@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "source"
 
     .prologue
+    .line 141
     new-instance v0, Landroid/accounts/AuthenticatorDescription;
 
     const/4 v1, 0x0
@@ -58,6 +60,7 @@
     .parameter "x0"
 
     .prologue
+    .line 138
     invoke-virtual {p0, p1}, Landroid/accounts/AuthenticatorDescription$1;->createFromParcel(Landroid/os/Parcel;)Landroid/accounts/AuthenticatorDescription;
 
     move-result-object v0
@@ -70,6 +73,7 @@
     .parameter "size"
 
     .prologue
+    .line 146
     new-array v0, p1, [Landroid/accounts/AuthenticatorDescription;
 
     return-object v0
@@ -80,6 +84,7 @@
     .parameter "x0"
 
     .prologue
+    .line 138
     invoke-virtual {p0, p1}, Landroid/accounts/AuthenticatorDescription$1;->newArray(I)[Landroid/accounts/AuthenticatorDescription;
 
     move-result-object v0

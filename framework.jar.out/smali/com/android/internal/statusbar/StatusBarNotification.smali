@@ -38,6 +38,7 @@
     .locals 1
 
     .prologue
+    .line 96
     new-instance v0, Lcom/android/internal/statusbar/StatusBarNotification$1;
 
     invoke-direct {v0}, Lcom/android/internal/statusbar/StatusBarNotification$1;-><init>()V
@@ -51,8 +52,10 @@
     .locals 0
 
     .prologue
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 46
     return-void
 .end method
 
@@ -61,10 +64,13 @@
     .parameter "in"
 
     .prologue
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 62
     invoke-virtual {p0, p1}, Lcom/android/internal/statusbar/StatusBarNotification;->readFromParcel(Landroid/os/Parcel;)V
 
+    .line 63
     return-void
 .end method
 
@@ -78,8 +84,10 @@
     .parameter "notification"
 
     .prologue
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 50
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -88,6 +96,7 @@
 
     throw v0
 
+    .line 51
     :cond_0
     if-nez p6, :cond_1
 
@@ -97,19 +106,26 @@
 
     throw v0
 
+    .line 53
     :cond_1
     iput-object p1, p0, Lcom/android/internal/statusbar/StatusBarNotification;->pkg:Ljava/lang/String;
 
+    .line 54
     iput p2, p0, Lcom/android/internal/statusbar/StatusBarNotification;->id:I
 
+    .line 55
     iput-object p3, p0, Lcom/android/internal/statusbar/StatusBarNotification;->tag:Ljava/lang/String;
 
+    .line 56
     iput p4, p0, Lcom/android/internal/statusbar/StatusBarNotification;->uid:I
 
+    .line 57
     iput p5, p0, Lcom/android/internal/statusbar/StatusBarNotification;->initialPid:I
 
+    .line 58
     iput-object p6, p0, Lcom/android/internal/statusbar/StatusBarNotification;->notification:Landroid/app/Notification;
 
+    .line 59
     return-void
 .end method
 
@@ -119,6 +135,7 @@
     .locals 7
 
     .prologue
+    .line 111
     new-instance v0, Lcom/android/internal/statusbar/StatusBarNotification;
 
     iget-object v1, p0, Lcom/android/internal/statusbar/StatusBarNotification;->pkg:Ljava/lang/String;
@@ -151,6 +168,7 @@
     .end annotation
 
     .prologue
+    .line 37
     invoke-virtual {p0}, Lcom/android/internal/statusbar/StatusBarNotification;->clone()Lcom/android/internal/statusbar/StatusBarNotification;
 
     move-result-object v0
@@ -162,6 +180,7 @@
     .locals 1
 
     .prologue
+    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -171,6 +190,7 @@
     .locals 1
 
     .prologue
+    .line 126
     iget-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->notification:Landroid/app/Notification;
 
     iget v0, v0, Landroid/app/Notification;->twQuickPanelEvent:I
@@ -194,6 +214,7 @@
     .locals 1
 
     .prologue
+    .line 121
     iget-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->notification:Landroid/app/Notification;
 
     iget v0, v0, Landroid/app/Notification;->flags:I
@@ -218,30 +239,35 @@
     .parameter "in"
 
     .prologue
+    .line 66
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->pkg:Ljava/lang/String;
 
+    .line 67
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->id:I
 
+    .line 68
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 69
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->tag:Ljava/lang/String;
 
+    .line 73
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -249,20 +275,24 @@
 
     iput v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->uid:I
 
+    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->initialPid:I
 
+    .line 75
     new-instance v0, Landroid/app/Notification;
 
     invoke-direct {v0, p1}, Landroid/app/Notification;-><init>(Landroid/os/Parcel;)V
 
     iput-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->notification:Landroid/app/Notification;
 
+    .line 76
     return-void
 
+    .line 71
     :cond_0
     const/4 v0, 0x0
 
@@ -275,6 +305,7 @@
     .locals 2
 
     .prologue
+    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -346,41 +377,51 @@
     .parameter "flags"
 
     .prologue
+    .line 79
     iget-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->pkg:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 80
     iget v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 81
     iget-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->tag:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
+    .line 82
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 83
     iget-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->tag:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 87
     :goto_0
     iget v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->uid:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 88
     iget v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->initialPid:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 89
     iget-object v0, p0, Lcom/android/internal/statusbar/StatusBarNotification;->notification:Landroid/app/Notification;
 
     invoke-virtual {v0, p1, p2}, Landroid/app/Notification;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 90
     return-void
 
+    .line 85
     :cond_0
     const/4 v0, 0x0
 

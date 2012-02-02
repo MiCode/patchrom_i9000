@@ -26,6 +26,7 @@
     .parameter "x1"
 
     .prologue
+    .line 107
     iput-object p1, p0, Lcom/android/server/WallpaperManagerService$1;->this$0:Lcom/android/server/WallpaperManagerService;
 
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
@@ -41,11 +42,14 @@
     .parameter "path"
 
     .prologue
+    .line 110
     if-nez p2, :cond_0
 
+    .line 125
     :goto_0
     return-void
 
+    .line 113
     :cond_0
     iget-object v4, p0, Lcom/android/server/WallpaperManagerService$1;->this$0:Lcom/android/server/WallpaperManagerService;
 
@@ -53,11 +57,13 @@
 
     monitor-enter v4
 
+    .line 115
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
+    .line 116
     .local v2, origId:J
     new-instance v0, Landroid/app/backup/BackupManager;
 
@@ -67,17 +73,21 @@
 
     invoke-direct {v0, v5}, Landroid/app/backup/BackupManager;-><init>(Landroid/content/Context;)V
 
+    .line 117
     .local v0, bm:Landroid/app/backup/BackupManager;
     invoke-virtual {v0}, Landroid/app/backup/BackupManager;->dataChanged()V
 
+    .line 118
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 120
     new-instance v1, Ljava/io/File;
 
     sget-object v5, Lcom/android/server/WallpaperManagerService;->WALLPAPER_DIR:Ljava/io/File;
 
     invoke-direct {v1, v5, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 121
     .local v1, changedFile:Ljava/io/File;
     sget-object v5, Lcom/android/server/WallpaperManagerService;->WALLPAPER_FILE:Ljava/io/File;
 
@@ -87,11 +97,13 @@
 
     if-eqz v5, :cond_1
 
+    .line 122
     iget-object v5, p0, Lcom/android/server/WallpaperManagerService$1;->this$0:Lcom/android/server/WallpaperManagerService;
 
     #calls: Lcom/android/server/WallpaperManagerService;->notifyCallbacksLocked()V
     invoke-static {v5}, Lcom/android/server/WallpaperManagerService;->access$000(Lcom/android/server/WallpaperManagerService;)V
 
+    .line 124
     :cond_1
     monitor-exit v4
 

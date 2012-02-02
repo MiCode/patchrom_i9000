@@ -34,10 +34,12 @@
     .parameter
 
     .prologue
+    .line 59
     iput-object p1, p0, Landroid/webkit/ViewManager$ChildView;->this$0:Landroid/webkit/ViewManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 60
     return-void
 .end method
 
@@ -46,6 +48,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     invoke-direct {p0}, Landroid/webkit/ViewManager$ChildView;->attachViewOnUIThread()V
 
     return-void
@@ -56,6 +59,7 @@
     .parameter "x0"
 
     .prologue
+    .line 52
     invoke-direct {p0}, Landroid/webkit/ViewManager$ChildView;->removeViewOnUIThread()V
 
     return-void
@@ -65,6 +69,7 @@
     .locals 2
 
     .prologue
+    .line 91
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->this$0:Landroid/webkit/ViewManager;
 
     #getter for: Landroid/webkit/ViewManager;->mWebView:Landroid/webkit/WebView;
@@ -76,6 +81,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->addView(Landroid/view/View;)V
 
+    .line 92
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->this$0:Landroid/webkit/ViewManager;
 
     #getter for: Landroid/webkit/ViewManager;->mChildren:Ljava/util/ArrayList;
@@ -85,6 +91,7 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 93
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->this$0:Landroid/webkit/ViewManager;
 
     #getter for: Landroid/webkit/ViewManager;->mReadyToDraw:Z
@@ -94,12 +101,14 @@
 
     if-nez v0, :cond_0
 
+    .line 94
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->mView:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 96
     :cond_0
     return-void
 .end method
@@ -108,6 +117,7 @@
     .locals 2
 
     .prologue
+    .line 110
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->this$0:Landroid/webkit/ViewManager;
 
     #getter for: Landroid/webkit/ViewManager;->mWebView:Landroid/webkit/WebView;
@@ -119,6 +129,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->removeView(Landroid/view/View;)V
 
+    .line 111
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->this$0:Landroid/webkit/ViewManager;
 
     #getter for: Landroid/webkit/ViewManager;->mChildren:Ljava/util/ArrayList;
@@ -128,6 +139,7 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 112
     return-void
 .end method
 
@@ -141,16 +153,20 @@
     .parameter "height"
 
     .prologue
+    .line 70
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->mView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
+    .line 88
     :goto_0
     return-void
 
+    .line 73
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/webkit/ViewManager$ChildView;->setBounds(IIII)V
 
+    .line 75
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->this$0:Landroid/webkit/ViewManager;
 
     #getter for: Landroid/webkit/ViewManager;->mWebView:Landroid/webkit/WebView;
@@ -173,13 +189,16 @@
     .locals 2
 
     .prologue
+    .line 99
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->mView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
+    .line 107
     :goto_0
     return-void
 
+    .line 102
     :cond_0
     iget-object v0, p0, Landroid/webkit/ViewManager$ChildView;->this$0:Landroid/webkit/ViewManager;
 
@@ -207,13 +226,18 @@
     .parameter "height"
 
     .prologue
+    .line 63
     iput p1, p0, Landroid/webkit/ViewManager$ChildView;->x:I
 
+    .line 64
     iput p2, p0, Landroid/webkit/ViewManager$ChildView;->y:I
 
+    .line 65
     iput p3, p0, Landroid/webkit/ViewManager$ChildView;->width:I
 
+    .line 66
     iput p4, p0, Landroid/webkit/ViewManager$ChildView;->height:I
 
+    .line 67
     return-void
 .end method

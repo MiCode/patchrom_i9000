@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 233
     iput-object p1, p0, Lcom/android/internal/policy/impl/UnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "v"
 
     .prologue
+    .line 236
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
@@ -52,5 +54,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->forgotPattern(Z)V
 
+    .line 237
     return-void
 .end method

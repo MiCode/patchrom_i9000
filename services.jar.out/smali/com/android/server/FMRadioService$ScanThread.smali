@@ -26,6 +26,7 @@
     .parameter
 
     .prologue
+    .line 1261
     iput-object p1, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -46,6 +47,7 @@
 
     const/4 v5, 0x0
 
+    .line 1276
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mBand:I
@@ -55,6 +57,7 @@
 
     if-ne v2, v6, :cond_0
 
+    .line 1277
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
@@ -66,6 +69,7 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/FMPlayerNative;->tune(J)V
 
+    .line 1280
     :goto_0
     iget v2, p0, Lcom/android/server/FMRadioService$ScanThread;->scanCount:I
 
@@ -73,6 +77,7 @@
 
     iput v2, p0, Lcom/android/server/FMRadioService$ScanThread;->scanCount:I
 
+    .line 1282
     :goto_1
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
@@ -83,12 +88,14 @@
 
     if-eqz v2, :cond_3
 
+    .line 1284
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v2}, Lcom/android/server/FMRadioService;->searchUp()J
 
     move-result-wide v0
 
+    .line 1285
     .local v0, freq:J
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -110,6 +117,7 @@
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1286
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
@@ -127,6 +135,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 1287
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,6 +158,7 @@
 
     goto :goto_1
 
+    .line 1279
     .end local v0           #freq:J
     :cond_0
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
@@ -164,6 +174,7 @@
 
     goto :goto_0
 
+    .line 1291
     .restart local v0       #freq:J
     :cond_1
     const-wide/16 v2, 0x0
@@ -172,6 +183,7 @@
 
     if-lez v2, :cond_2
 
+    .line 1292
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
@@ -185,6 +197,7 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 1293
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -195,6 +208,7 @@
 
     goto :goto_1
 
+    .line 1298
     :cond_2
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
@@ -229,10 +243,12 @@
 
     if-eqz v2, :cond_6
 
+    .line 1302
     iget v2, p0, Lcom/android/server/FMRadioService$ScanThread;->scanCount:I
 
     if-ne v2, v6, :cond_4
 
+    .line 1303
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,19 +280,24 @@
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1305
     invoke-direct {p0, v5, v5, v6}, Lcom/android/server/FMRadioService$ScanThread;->setSignalSetting(III)V
 
+    .line 1306
     const-string v2, "scan with 0 0 1"
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1307
     invoke-direct {p0}, Lcom/android/server/FMRadioService$ScanThread;->doScan()V
 
+    .line 1340
     .end local v0           #freq:J
     :cond_3
     :goto_2
     return-void
 
+    .line 1311
     .restart local v0       #freq:J
     :cond_4
     iget v2, p0, Lcom/android/server/FMRadioService$ScanThread;->scanCount:I
@@ -285,6 +306,7 @@
 
     if-ne v2, v3, :cond_5
 
+    .line 1312
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -316,21 +338,26 @@
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1314
     invoke-direct {p0, v5, v6, v5}, Lcom/android/server/FMRadioService$ScanThread;->setSignalSetting(III)V
 
+    .line 1315
     const-string v2, "scan with 0 1 0"
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1316
     invoke-direct {p0}, Lcom/android/server/FMRadioService$ScanThread;->doScan()V
 
     goto :goto_2
 
+    .line 1331
     :cond_5
     const-string v2, "already scan three times no action..."
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1334
     :cond_6
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
@@ -351,6 +378,7 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 1336
     const-wide/16 v2, 0x14
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
@@ -365,6 +393,7 @@
     .parameter "cnt"
 
     .prologue
+    .line 1266
     iget-object v0, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mIsOn:Z
@@ -374,9 +403,11 @@
 
     if-nez v0, :cond_0
 
+    .line 1272
     :goto_0
     return-void
 
+    .line 1269
     :cond_0
     iget-object v0, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
@@ -387,6 +418,7 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/FMPlayerNative;->setRSSI_th(I)V
 
+    .line 1270
     iget-object v0, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
@@ -396,6 +428,7 @@
 
     invoke-virtual {v0, p2}, Lcom/android/server/FMPlayerNative;->setSNR_th(I)V
 
+    .line 1271
     iget-object v0, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
@@ -422,6 +455,7 @@
 
     const-string v8, "Scan Thread resuming volume :"
 
+    .line 1343
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     iget-object v3, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
@@ -438,6 +472,7 @@
     #setter for: Lcom/android/server/FMRadioService;->mScanVolume:I
     invoke-static {v2, v3}, Lcom/android/server/FMRadioService;->access$2102(Lcom/android/server/FMRadioService;I)I
 
+    .line 1345
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mPowerManager:Landroid/os/PowerManager;
@@ -453,18 +488,22 @@
 
     move-result-object v1
 
+    .line 1346
     .local v1, wakelock:Landroid/os/PowerManager$WakeLock;
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
+    .line 1347
     const-string v2, "Scan thread gets the dimmed screen lock"
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1349
     :try_start_0
     const-string v2, "Scanning Thread started..."
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1350
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     const/4 v3, 0x2
@@ -473,6 +512,7 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/FMRadioService;->notifyEvent(ILjava/lang/Object;)V
 
+    .line 1352
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mPlayerNative:Lcom/android/server/FMPlayerNative;
@@ -482,6 +522,7 @@
 
     invoke-virtual {v2}, Lcom/android/server/FMPlayerNative;->muteOn()V
 
+    .line 1353
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
@@ -497,6 +538,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
+    .line 1355
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     iget-object v3, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
@@ -508,6 +550,7 @@
     #setter for: Lcom/android/server/FMRadioService;->mScanFreq:J
     invoke-static {v2, v3, v4}, Lcom/android/server/FMRadioService;->access$1702(Lcom/android/server/FMRadioService;J)J
 
+    .line 1357
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
@@ -517,6 +560,7 @@
 
     if-nez v2, :cond_1
 
+    .line 1358
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     new-instance v3, Ljava/util/ArrayList;
@@ -526,6 +570,7 @@
     #setter for: Lcom/android/server/FMRadioService;->mScanChannelList:Ljava/util/ArrayList;
     invoke-static {v2, v3}, Lcom/android/server/FMRadioService;->access$1602(Lcom/android/server/FMRadioService;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
+    .line 1373
     :goto_0
     const/4 v2, 0x1
 
@@ -535,16 +580,19 @@
 
     invoke-direct {p0, v2, v3, v4}, Lcom/android/server/FMRadioService$ScanThread;->setSignalSetting(III)V
 
+    .line 1376
     invoke-direct {p0}, Lcom/android/server/FMRadioService$ScanThread;->doScan()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1387
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #setter for: Lcom/android/server/FMRadioService;->mScanProgress:Z
     invoke-static {v2, v6}, Lcom/android/server/FMRadioService;->access$1502(Lcom/android/server/FMRadioService;Z)Z
 
+    .line 1389
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -572,6 +620,7 @@
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1390
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
@@ -588,26 +637,32 @@
 
     invoke-virtual {v2, v7, v3, v6}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
+    .line 1394
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 1395
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
+    .line 1396
     const-string v2, "Scan thread released the dimmed screen lock"
 
     :goto_1
     invoke-static {v9}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1399
     :cond_0
     const-string v2, "Scanning Thread work is done..."
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1401
     return-void
 
+    .line 1360
     :cond_1
     :try_start_1
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
@@ -624,22 +679,26 @@
 
     goto :goto_0
 
+    .line 1383
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 1385
     .local v0, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 1387
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #setter for: Lcom/android/server/FMRadioService;->mScanProgress:Z
     invoke-static {v2, v6}, Lcom/android/server/FMRadioService;->access$1502(Lcom/android/server/FMRadioService;Z)Z
 
+    .line 1389
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -667,6 +726,7 @@
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1390
     iget-object v2, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
@@ -683,18 +743,22 @@
 
     invoke-virtual {v2, v7, v3, v6}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
+    .line 1394
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 1395
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
+    .line 1396
     const-string v2, "Scan thread released the dimmed screen lock"
 
     goto :goto_1
 
+    .line 1387
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v2
@@ -704,6 +768,7 @@
     #setter for: Lcom/android/server/FMRadioService;->mScanProgress:Z
     invoke-static {v3, v6}, Lcom/android/server/FMRadioService;->access$1502(Lcom/android/server/FMRadioService;Z)Z
 
+    .line 1389
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -731,6 +796,7 @@
 
     invoke-static {v3}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1390
     iget-object v3, p0, Lcom/android/server/FMRadioService$ScanThread;->this$0:Lcom/android/server/FMRadioService;
 
     #getter for: Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
@@ -747,18 +813,22 @@
 
     invoke-virtual {v3, v7, v4, v6}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
+    .line 1394
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
+    .line 1395
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
+    .line 1396
     const-string v3, "Scan thread released the dimmed screen lock"
 
     invoke-static {v9}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
+    .line 1387
     :cond_2
     throw v2
 .end method

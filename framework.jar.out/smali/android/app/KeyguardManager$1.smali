@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 152
     iput-object p1, p0, Landroid/app/KeyguardManager$1;->this$0:Landroid/app/KeyguardManager;
 
     iput-object p2, p0, Landroid/app/KeyguardManager$1;->val$callback:Landroid/app/KeyguardManager$OnKeyguardExitResult;
@@ -48,9 +49,11 @@
     .end annotation
 
     .prologue
+    .line 154
     iget-object v0, p0, Landroid/app/KeyguardManager$1;->val$callback:Landroid/app/KeyguardManager$OnKeyguardExitResult;
 
     invoke-interface {v0, p1}, Landroid/app/KeyguardManager$OnKeyguardExitResult;->onKeyguardExitResult(Z)V
 
+    .line 155
     return-void
 .end method

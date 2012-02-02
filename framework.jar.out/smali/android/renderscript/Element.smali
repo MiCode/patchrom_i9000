@@ -39,22 +39,29 @@
     .parameter "size"
 
     .prologue
+    .line 234
     invoke-direct {p0, p1}, Landroid/renderscript/BaseObj;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 235
     iget v0, p2, Landroid/renderscript/Element$DataType;->mSize:I
 
     mul-int/2addr v0, p5
 
     iput v0, p0, Landroid/renderscript/Element;->mSize:I
 
+    .line 236
     iput-object p2, p0, Landroid/renderscript/Element;->mType:Landroid/renderscript/Element$DataType;
 
+    .line 237
     iput-object p3, p0, Landroid/renderscript/Element;->mKind:Landroid/renderscript/Element$DataKind;
 
+    .line 238
     iput-boolean p4, p0, Landroid/renderscript/Element;->mNormalized:Z
 
+    .line 239
     iput p5, p0, Landroid/renderscript/Element;->mVectorSize:I
 
+    .line 240
     iget v0, p2, Landroid/renderscript/Element$DataType;->mID:I
 
     iget v1, p3, Landroid/renderscript/Element$DataKind;->mID:I
@@ -65,6 +72,7 @@
 
     iput v0, p0, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 241
     return-void
 .end method
 
@@ -75,22 +83,28 @@
     .parameter "n"
 
     .prologue
+    .line 221
     invoke-direct {p0, p1}, Landroid/renderscript/BaseObj;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 222
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/renderscript/Element;->mSize:I
 
+    .line 223
     iput-object p2, p0, Landroid/renderscript/Element;->mElements:[Landroid/renderscript/Element;
 
+    .line 224
     iput-object p3, p0, Landroid/renderscript/Element;->mElementNames:[Ljava/lang/String;
 
+    .line 225
     iget-object v2, p0, Landroid/renderscript/Element;->mElements:[Landroid/renderscript/Element;
 
     array-length v2, v2
 
     new-array v1, v2, [I
 
+    .line 226
     .local v1, ids:[I
     const/4 v0, 0x0
 
@@ -102,6 +116,7 @@
 
     if-ge v0, v2, :cond_0
 
+    .line 227
     iget v2, p0, Landroid/renderscript/Element;->mSize:I
 
     iget-object v3, p0, Landroid/renderscript/Element;->mElements:[Landroid/renderscript/Element;
@@ -114,6 +129,7 @@
 
     iput v2, p0, Landroid/renderscript/Element;->mSize:I
 
+    .line 228
     iget-object v2, p0, Landroid/renderscript/Element;->mElements:[Landroid/renderscript/Element;
 
     aget-object v2, v2, v0
@@ -122,10 +138,12 @@
 
     aput v2, v1, v0
 
+    .line 226
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 230
     :cond_0
     iget-object v2, p0, Landroid/renderscript/Element;->mElementNames:[Ljava/lang/String;
 
@@ -135,6 +153,7 @@
 
     iput v2, p0, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 231
     return-void
 .end method
 
@@ -143,10 +162,12 @@
     .parameter "rs"
 
     .prologue
+    .line 214
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_COLOR_F32_4:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 215
     sget-object v0, Landroid/renderscript/Element$DataType;->FLOAT_32:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->COLOR:Landroid/renderscript/Element$DataKind;
@@ -159,6 +180,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_COLOR_F32_4:Landroid/renderscript/Element;
 
+    .line 217
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_COLOR_F32_4:Landroid/renderscript/Element;
 
@@ -170,10 +192,12 @@
     .parameter "rs"
 
     .prologue
+    .line 207
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_COLOR_U8_4:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 208
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_8:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->COLOR:Landroid/renderscript/Element$DataKind;
@@ -186,6 +210,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_COLOR_U8_4:Landroid/renderscript/Element;
 
+    .line 210
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_COLOR_U8_4:Landroid/renderscript/Element;
 
@@ -197,10 +222,12 @@
     .parameter "rs"
 
     .prologue
+    .line 200
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_NORMAL_3:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 201
     sget-object v0, Landroid/renderscript/Element$DataType;->FLOAT_32:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->NORMAL:Landroid/renderscript/Element$DataKind;
@@ -213,6 +240,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_NORMAL_3:Landroid/renderscript/Element;
 
+    .line 203
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_NORMAL_3:Landroid/renderscript/Element;
 
@@ -224,10 +252,12 @@
     .parameter "rs"
 
     .prologue
+    .line 179
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_POSITION_2:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 180
     sget-object v0, Landroid/renderscript/Element$DataType;->FLOAT_32:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->POSITION:Landroid/renderscript/Element$DataKind;
@@ -240,6 +270,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_POSITION_2:Landroid/renderscript/Element;
 
+    .line 182
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_POSITION_2:Landroid/renderscript/Element;
 
@@ -251,10 +282,12 @@
     .parameter "rs"
 
     .prologue
+    .line 186
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_POSITION_3:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 187
     sget-object v0, Landroid/renderscript/Element$DataType;->FLOAT_32:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->POSITION:Landroid/renderscript/Element$DataKind;
@@ -267,6 +300,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_POSITION_3:Landroid/renderscript/Element;
 
+    .line 189
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_POSITION_3:Landroid/renderscript/Element;
 
@@ -278,10 +312,12 @@
     .parameter "rs"
 
     .prologue
+    .line 193
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_TEXTURE_2:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 194
     sget-object v0, Landroid/renderscript/Element$DataType;->FLOAT_32:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->TEXTURE:Landroid/renderscript/Element$DataKind;
@@ -294,6 +330,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_TEXTURE_2:Landroid/renderscript/Element;
 
+    .line 196
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_TEXTURE_2:Landroid/renderscript/Element;
 
@@ -305,10 +342,12 @@
     .parameter "rs"
 
     .prologue
+    .line 130
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_A_8:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 131
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_8:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->PIXEL_A:Landroid/renderscript/Element$DataKind;
@@ -319,6 +358,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_A_8:Landroid/renderscript/Element;
 
+    .line 133
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_A_8:Landroid/renderscript/Element;
 
@@ -330,16 +370,19 @@
     .parameter "rs"
 
     .prologue
+    .line 172
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_INDEX_16:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 173
     invoke-static {p0}, Landroid/renderscript/Element;->createIndex(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_INDEX_16:Landroid/renderscript/Element;
 
+    .line 175
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_INDEX_16:Landroid/renderscript/Element;
 
@@ -351,10 +394,12 @@
     .parameter "rs"
 
     .prologue
+    .line 158
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_4444:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 159
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_4_4_4_4:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->PIXEL_RGBA:Landroid/renderscript/Element$DataKind;
@@ -365,6 +410,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_4444:Landroid/renderscript/Element;
 
+    .line 161
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_4444:Landroid/renderscript/Element;
 
@@ -376,10 +422,12 @@
     .parameter "rs"
 
     .prologue
+    .line 151
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_5551:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 152
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_5_5_5_1:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->PIXEL_RGBA:Landroid/renderscript/Element$DataKind;
@@ -390,6 +438,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_5551:Landroid/renderscript/Element;
 
+    .line 154
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_5551:Landroid/renderscript/Element;
 
@@ -401,10 +450,12 @@
     .parameter "rs"
 
     .prologue
+    .line 165
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_8888:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 166
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_8:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->PIXEL_RGBA:Landroid/renderscript/Element$DataKind;
@@ -415,6 +466,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_8888:Landroid/renderscript/Element;
 
+    .line 168
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGBA_8888:Landroid/renderscript/Element;
 
@@ -426,10 +478,12 @@
     .parameter "rs"
 
     .prologue
+    .line 137
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGB_565:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 138
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_5_6_5:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->PIXEL_RGB:Landroid/renderscript/Element$DataKind;
@@ -440,6 +494,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGB_565:Landroid/renderscript/Element;
 
+    .line 140
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGB_565:Landroid/renderscript/Element;
 
@@ -451,10 +506,12 @@
     .parameter "rs"
 
     .prologue
+    .line 144
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGB_888:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 145
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_8:Landroid/renderscript/Element$DataType;
 
     sget-object v1, Landroid/renderscript/Element$DataKind;->PIXEL_RGB:Landroid/renderscript/Element$DataKind;
@@ -465,6 +522,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGB_888:Landroid/renderscript/Element;
 
+    .line 147
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_RGB_888:Landroid/renderscript/Element;
 
@@ -476,10 +534,12 @@
     .parameter "rs"
 
     .prologue
+    .line 123
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_F32:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 124
     sget-object v0, Landroid/renderscript/Element$DataType;->FLOAT_32:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v0}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -488,6 +548,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_F32:Landroid/renderscript/Element;
 
+    .line 126
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_F32:Landroid/renderscript/Element;
 
@@ -499,10 +560,12 @@
     .parameter "rs"
 
     .prologue
+    .line 116
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_I32:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 117
     sget-object v0, Landroid/renderscript/Element$DataType;->SIGNED_32:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v0}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -511,6 +574,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_I32:Landroid/renderscript/Element;
 
+    .line 119
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_I32:Landroid/renderscript/Element;
 
@@ -522,10 +586,12 @@
     .parameter "rs"
 
     .prologue
+    .line 102
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_I8:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 103
     sget-object v0, Landroid/renderscript/Element$DataType;->SIGNED_8:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v0}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -534,6 +600,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_I8:Landroid/renderscript/Element;
 
+    .line 105
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_I8:Landroid/renderscript/Element;
 
@@ -545,10 +612,12 @@
     .parameter "rs"
 
     .prologue
+    .line 109
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_U32:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 110
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_32:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v0}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -557,6 +626,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_U32:Landroid/renderscript/Element;
 
+    .line 112
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_U32:Landroid/renderscript/Element;
 
@@ -568,10 +638,12 @@
     .parameter "rs"
 
     .prologue
+    .line 95
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_U8:Landroid/renderscript/Element;
 
     if-nez v0, :cond_0
 
+    .line 96
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_8:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v0}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -580,6 +652,7 @@
 
     iput-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_U8:Landroid/renderscript/Element;
 
+    .line 98
     :cond_0
     iget-object v0, p0, Landroid/renderscript/RenderScript;->mElement_USER_U8:Landroid/renderscript/Element;
 
@@ -602,6 +675,7 @@
 
     const-string v2, "Bad combo"
 
+    .line 287
     sget-object v0, Landroid/renderscript/Element$DataType;->FLOAT_32:Landroid/renderscript/Element$DataType;
 
     if-eq p1, v0, :cond_0
@@ -630,6 +704,7 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 294
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unsupported DataType"
@@ -638,6 +713,7 @@
 
     throw v0
 
+    .line 297
     :cond_0
     sget-object v0, Landroid/renderscript/Element$DataKind;->COLOR:Landroid/renderscript/Element$DataKind;
 
@@ -663,6 +739,7 @@
 
     if-eq p2, v0, :cond_1
 
+    .line 303
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unsupported DataKind"
@@ -671,6 +748,7 @@
 
     throw v0
 
+    .line 306
     :cond_1
     sget-object v0, Landroid/renderscript/Element$DataKind;->COLOR:Landroid/renderscript/Element$DataKind;
 
@@ -689,6 +767,7 @@
 
     if-le p3, v3, :cond_4
 
+    .line 309
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -698,6 +777,7 @@
 
     throw v0
 
+    .line 311
     :cond_4
     sget-object v0, Landroid/renderscript/Element$DataKind;->POSITION:Landroid/renderscript/Element$DataKind;
 
@@ -707,6 +787,7 @@
 
     if-le p3, v3, :cond_6
 
+    .line 312
     :cond_5
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -716,6 +797,7 @@
 
     throw v0
 
+    .line 314
     :cond_6
     sget-object v0, Landroid/renderscript/Element$DataKind;->TEXTURE:Landroid/renderscript/Element$DataKind;
 
@@ -729,6 +811,7 @@
 
     if-le p3, v3, :cond_8
 
+    .line 316
     :cond_7
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -738,6 +821,7 @@
 
     throw v0
 
+    .line 318
     :cond_8
     sget-object v0, Landroid/renderscript/Element$DataKind;->NORMAL:Landroid/renderscript/Element$DataKind;
 
@@ -749,6 +833,7 @@
 
     if-eq p3, v5, :cond_a
 
+    .line 320
     :cond_9
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -758,6 +843,7 @@
 
     throw v0
 
+    .line 322
     :cond_a
     sget-object v0, Landroid/renderscript/Element$DataKind;->POINT_SIZE:Landroid/renderscript/Element$DataKind;
 
@@ -769,6 +855,7 @@
 
     if-eq p3, v1, :cond_c
 
+    .line 324
     :cond_b
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -778,9 +865,11 @@
 
     throw v0
 
+    .line 327
     :cond_c
     const/4 v4, 0x0
 
+    .line 328
     .local v4, norm:Z
     sget-object v0, Landroid/renderscript/Element$DataKind;->COLOR:Landroid/renderscript/Element$DataKind;
 
@@ -790,8 +879,10 @@
 
     if-ne p1, v0, :cond_d
 
+    .line 329
     const/4 v4, 0x1
 
+    .line 332
     :cond_d
     new-instance v0, Landroid/renderscript/Element;
 
@@ -814,17 +905,21 @@
     .parameter "c"
 
     .prologue
+    .line 248
     invoke-virtual {p0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 249
     invoke-virtual {p1}, Ljava/lang/Class;->getFields()[Ljava/lang/reflect/Field;
 
     move-result-object v4
 
+    .line 250
     .local v4, fields:[Ljava/lang/reflect/Field;
     new-instance v1, Landroid/renderscript/Element$Builder;
 
     invoke-direct {v1, p0}, Landroid/renderscript/Element$Builder;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 252
     .local v1, b:Landroid/renderscript/Element$Builder;
     move-object v0, v4
 
@@ -840,16 +935,19 @@
 
     aget-object v2, v0, v5
 
+    .line 253
     .local v2, f:Ljava/lang/reflect/Field;
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v3
 
+    .line 254
     .local v3, fc:Ljava/lang/Class;
     sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-ne v3, v7, :cond_0
 
+    .line 255
     sget-object v7, Landroid/renderscript/Element$DataType;->SIGNED_32:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v7}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -862,16 +960,19 @@
 
     invoke-virtual {v1, v7, v8}, Landroid/renderscript/Element$Builder;->add(Landroid/renderscript/Element;Ljava/lang/String;)V
 
+    .line 252
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
+    .line 256
     :cond_0
     sget-object v7, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     if-ne v3, v7, :cond_1
 
+    .line 257
     sget-object v7, Landroid/renderscript/Element$DataType;->SIGNED_16:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v7}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -886,11 +987,13 @@
 
     goto :goto_1
 
+    .line 258
     :cond_1
     sget-object v7, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     if-ne v3, v7, :cond_2
 
+    .line 259
     sget-object v7, Landroid/renderscript/Element$DataType;->SIGNED_8:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v7}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -905,11 +1008,13 @@
 
     goto :goto_1
 
+    .line 260
     :cond_2
     sget-object v7, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     if-ne v3, v7, :cond_3
 
+    .line 261
     sget-object v7, Landroid/renderscript/Element$DataType;->FLOAT_32:Landroid/renderscript/Element$DataType;
 
     invoke-static {p0, v7}, Landroid/renderscript/Element;->createUser(Landroid/renderscript/RenderScript;Landroid/renderscript/Element$DataType;)Landroid/renderscript/Element;
@@ -924,6 +1029,7 @@
 
     goto :goto_1
 
+    .line 263
     :cond_3
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
@@ -933,6 +1039,7 @@
 
     throw v7
 
+    .line 266
     .end local v2           #f:Ljava/lang/reflect/Field;
     .end local v3           #fc:Ljava/lang/Class;
     :cond_4
@@ -948,6 +1055,7 @@
     .parameter "rs"
 
     .prologue
+    .line 283
     new-instance v0, Landroid/renderscript/Element;
 
     sget-object v2, Landroid/renderscript/Element$DataType;->UNSIGNED_16:Landroid/renderscript/Element$DataType;
@@ -974,6 +1082,7 @@
     .prologue
     const-string v2, "Bad kind and type combo"
 
+    .line 336
     sget-object v0, Landroid/renderscript/Element$DataKind;->PIXEL_L:Landroid/renderscript/Element$DataKind;
 
     if-eq p2, v0, :cond_0
@@ -994,6 +1103,7 @@
 
     if-eq p2, v0, :cond_0
 
+    .line 341
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unsupported DataKind"
@@ -1002,6 +1112,7 @@
 
     throw v0
 
+    .line 343
     :cond_0
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_8:Landroid/renderscript/Element$DataType;
 
@@ -1019,6 +1130,7 @@
 
     if-eq p1, v0, :cond_1
 
+    .line 347
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unsupported DataType"
@@ -1027,6 +1139,7 @@
 
     throw v0
 
+    .line 349
     :cond_1
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_5_6_5:Landroid/renderscript/Element$DataType;
 
@@ -1036,6 +1149,7 @@
 
     if-eq p2, v0, :cond_2
 
+    .line 350
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Bad kind and type combo"
@@ -1044,6 +1158,7 @@
 
     throw v0
 
+    .line 352
     :cond_2
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_5_5_5_1:Landroid/renderscript/Element$DataType;
 
@@ -1053,6 +1168,7 @@
 
     if-eq p2, v0, :cond_3
 
+    .line 353
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Bad kind and type combo"
@@ -1061,6 +1177,7 @@
 
     throw v0
 
+    .line 355
     :cond_3
     sget-object v0, Landroid/renderscript/Element$DataType;->UNSIGNED_4_4_4_4:Landroid/renderscript/Element$DataType;
 
@@ -1070,6 +1187,7 @@
 
     if-eq p2, v0, :cond_4
 
+    .line 356
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Bad kind and type combo"
@@ -1078,30 +1196,38 @@
 
     throw v0
 
+    .line 359
     :cond_4
     const/4 v5, 0x1
 
+    .line 360
     .local v5, size:I
     sget-object v0, Landroid/renderscript/Element$DataKind;->PIXEL_LA:Landroid/renderscript/Element$DataKind;
 
     if-ne p2, v0, :cond_5
 
+    .line 361
     const/4 v5, 0x2
 
+    .line 363
     :cond_5
     sget-object v0, Landroid/renderscript/Element$DataKind;->PIXEL_RGB:Landroid/renderscript/Element$DataKind;
 
     if-ne p2, v0, :cond_6
 
+    .line 364
     const/4 v5, 0x3
 
+    .line 366
     :cond_6
     sget-object v0, Landroid/renderscript/Element$DataKind;->PIXEL_RGBA:Landroid/renderscript/Element$DataKind;
 
     if-ne p2, v0, :cond_7
 
+    .line 367
     const/4 v5, 0x4
 
+    .line 370
     :cond_7
     new-instance v0, Landroid/renderscript/Element;
 
@@ -1124,6 +1250,7 @@
     .parameter "dt"
 
     .prologue
+    .line 272
     new-instance v0, Landroid/renderscript/Element;
 
     sget-object v3, Landroid/renderscript/Element$DataKind;->USER:Landroid/renderscript/Element$DataKind;
@@ -1148,6 +1275,7 @@
     .parameter "size"
 
     .prologue
+    .line 276
     const/4 v0, 0x2
 
     if-lt p2, v0, :cond_0
@@ -1156,6 +1284,7 @@
 
     if-le p2, v0, :cond_1
 
+    .line 277
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1165,6 +1294,7 @@
 
     throw v0
 
+    .line 279
     :cond_1
     new-instance v0, Landroid/renderscript/Element;
 
@@ -1192,6 +1322,7 @@
 
     const/4 v7, 0x1
 
+    .line 411
     sget-object v4, Landroid/renderscript/Element$DataType;->UNSIGNED_8:Landroid/renderscript/Element$DataType;
 
     iget v4, v4, Landroid/renderscript/Element$DataType;->mID:I
@@ -1204,6 +1335,7 @@
 
     move-result v0
 
+    .line 413
     .local v0, a8:I
     sget-object v4, Landroid/renderscript/Element$DataType;->UNSIGNED_4_4_4_4:Landroid/renderscript/Element$DataType;
 
@@ -1217,6 +1349,7 @@
 
     move-result v2
 
+    .line 415
     .local v2, rgba4444:I
     sget-object v4, Landroid/renderscript/Element$DataType;->UNSIGNED_8:Landroid/renderscript/Element$DataType;
 
@@ -1230,6 +1363,7 @@
 
     move-result v3
 
+    .line 417
     .local v3, rgba8888:I
     sget-object v4, Landroid/renderscript/Element$DataType;->UNSIGNED_5_6_5:Landroid/renderscript/Element$DataType;
 
@@ -1245,9 +1379,11 @@
 
     move-result v1
 
+    .line 419
     .local v1, rgb565:I
     invoke-virtual {p0, v0, v2, v3, v1}, Landroid/renderscript/RenderScript;->nInitElements(IIII)V
 
+    .line 420
     return-void
 .end method
 
@@ -1262,8 +1398,10 @@
     .end annotation
 
     .prologue
+    .line 244
     invoke-super {p0}, Landroid/renderscript/BaseObj;->destroy()V
 
+    .line 245
     return-void
 .end method
 
@@ -1271,6 +1409,7 @@
     .locals 1
 
     .prologue
+    .line 25
     invoke-super {p0}, Landroid/renderscript/BaseObj;->getID()I
 
     move-result v0
@@ -1282,6 +1421,7 @@
     .locals 1
 
     .prologue
+    .line 35
     iget v0, p0, Landroid/renderscript/Element;->mSize:I
 
     return v0
@@ -1298,6 +1438,7 @@
     .end annotation
 
     .prologue
+    .line 25
     invoke-super {p0, p1}, Landroid/renderscript/BaseObj;->setName(Ljava/lang/String;)V
 
     return-void

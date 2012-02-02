@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +20,7 @@
     .parameter "id"
 
     .prologue
+    .line 53
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
@@ -35,10 +37,12 @@
     .parameter "contentUri"
 
     .prologue
+    .line 40
     invoke-virtual {p0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 41
     .local v0, last:Ljava/lang/String;
     if-nez v0, :cond_0
 
@@ -61,6 +65,7 @@
     .parameter "id"
 
     .prologue
+    .line 65
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0

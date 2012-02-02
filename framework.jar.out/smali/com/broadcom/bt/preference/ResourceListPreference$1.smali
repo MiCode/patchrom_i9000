@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 175
     iput-object p1, p0, Lcom/broadcom/bt/preference/ResourceListPreference$1;->this$0:Lcom/broadcom/bt/preference/ResourceListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,17 +43,21 @@
     .parameter "which"
 
     .prologue
+    .line 177
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference$1;->this$0:Lcom/broadcom/bt/preference/ResourceListPreference;
 
     iput p2, v0, Lcom/broadcom/bt/preference/ResourceListPreference;->mClickedDialogEntryIndex:I
 
+    .line 183
     iget-object v0, p0, Lcom/broadcom/bt/preference/ResourceListPreference$1;->this$0:Lcom/broadcom/bt/preference/ResourceListPreference;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, p1, v1}, Lcom/broadcom/bt/preference/ResourceListPreference;->onClick(Landroid/content/DialogInterface;I)V
 
+    .line 185
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
+    .line 186
     return-void
 .end method

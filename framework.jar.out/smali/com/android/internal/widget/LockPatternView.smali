@@ -111,6 +111,7 @@
     .locals 1
 
     .prologue
+    .line 60
     const/4 v0, 0x4
 
     new-array v0, v0, [J
@@ -137,10 +138,12 @@
     .parameter "context"
 
     .prologue
+    .line 241
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/widget/LockPatternView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 242
     return-void
 .end method
 
@@ -158,22 +161,27 @@
 
     const/4 v4, 0x0
 
+    .line 245
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 63
     iput-boolean v4, p0, Lcom/android/internal/widget/LockPatternView;->mDrawingProfilingStarted:Z
 
+    .line 65
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPaint:Landroid/graphics/Paint;
 
+    .line 66
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPathPaint:Landroid/graphics/Paint;
 
+    .line 79
     new-instance v2, Ljava/util/ArrayList;
 
     const/16 v3, 0x9
@@ -182,6 +190,7 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
+    .line 87
     filled-new-array {v7, v7}, [I
 
     move-result-object v2
@@ -196,61 +205,76 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDrawLookup:[[Z
 
+    .line 94
     iput v6, p0, Lcom/android/internal/widget/LockPatternView;->mInProgressX:F
 
+    .line 95
     iput v6, p0, Lcom/android/internal/widget/LockPatternView;->mInProgressY:F
 
+    .line 99
     sget-object v2, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Correct:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDisplayMode:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
+    .line 100
     iput-boolean v5, p0, Lcom/android/internal/widget/LockPatternView;->mInputEnabled:Z
 
+    .line 101
     iput-boolean v4, p0, Lcom/android/internal/widget/LockPatternView;->mInStealthMode:Z
 
+    .line 102
     iput-boolean v5, p0, Lcom/android/internal/widget/LockPatternView;->mTactileFeedbackEnabled:Z
 
+    .line 103
     iput-boolean v4, p0, Lcom/android/internal/widget/LockPatternView;->mPatternInProgress:Z
 
+    .line 105
     const/high16 v2, 0x3f00
 
     iput v2, p0, Lcom/android/internal/widget/LockPatternView;->mDiameterFactor:F
 
+    .line 106
     const v2, 0x3f19999a
 
     iput v2, p0, Lcom/android/internal/widget/LockPatternView;->mHitFactor:F
 
+    .line 120
     new-instance v2, Landroid/graphics/Path;
 
     invoke-direct {v2}, Landroid/graphics/Path;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mCurrentPath:Landroid/graphics/Path;
 
+    .line 121
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mInvalidate:Landroid/graphics/Rect;
 
+    .line 246
     new-instance v2, Landroid/os/Vibrator;
 
     invoke-direct {v2}, Landroid/os/Vibrator;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->vibe:Landroid/os/Vibrator;
 
+    .line 248
     sget-object v2, Lcom/android/internal/R$styleable;->LockPatternView:[I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
+    .line 250
     .local v0, a:Landroid/content/res/TypedArray;
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 252
     .local v1, aspect:Ljava/lang/String;
-    const-string v2, "square"
+    const-string/jumbo v2, "square"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -258,49 +282,59 @@
 
     if-eqz v2, :cond_0
 
+    .line 253
     iput v4, p0, Lcom/android/internal/widget/LockPatternView;->mAspect:I
 
+    .line 262
     :goto_0
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/LockPatternView;->setClickable(Z)V
 
+    .line 264
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPathPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    .line 265
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPathPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v5}, Landroid/graphics/Paint;->setDither(Z)V
 
+    .line 266
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPathPaint:Landroid/graphics/Paint;
 
     const/4 v3, -0x1
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 267
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPathPaint:Landroid/graphics/Paint;
 
     const/16 v3, 0x80
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 268
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPathPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 269
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPathPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
+    .line 270
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPathPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
+    .line 273
     const v2, 0x10800d0
 
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
@@ -309,6 +343,7 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapBtnDefault:Landroid/graphics/Bitmap;
 
+    .line 274
     const v2, 0x10800d1
 
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
@@ -317,6 +352,7 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapBtnTouched:Landroid/graphics/Bitmap;
 
+    .line 275
     const v2, 0x10801ef
 
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
@@ -325,6 +361,7 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapCircleDefault:Landroid/graphics/Bitmap;
 
+    .line 276
     const v2, 0x10801f0
 
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
@@ -333,6 +370,7 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapCircleGreen:Landroid/graphics/Bitmap;
 
+    .line 277
     const v2, 0x10801f1
 
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
@@ -341,6 +379,7 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapCircleRed:Landroid/graphics/Bitmap;
 
+    .line 279
     const v2, 0x10801ed
 
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
@@ -349,6 +388,7 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapArrowGreenUp:Landroid/graphics/Bitmap;
 
+    .line 280
     const v2, 0x10801ee
 
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
@@ -357,6 +397,7 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapArrowRedUp:Landroid/graphics/Bitmap;
 
+    .line 283
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapBtnDefault:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
@@ -365,6 +406,7 @@
 
     iput v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapWidth:I
 
+    .line 284
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapBtnDefault:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
@@ -373,6 +415,7 @@
 
     iput v2, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapHeight:I
 
+    .line 287
     const v2, 0x1070015
 
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternView;->loadVibratePattern(I)[J
@@ -381,8 +424,10 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mVibePattern:[J
 
+    .line 288
     return-void
 
+    .line 254
     :cond_0
     const-string v2, "lock_width"
 
@@ -392,10 +437,12 @@
 
     if-eqz v2, :cond_1
 
+    .line 255
     iput v5, p0, Lcom/android/internal/widget/LockPatternView;->mAspect:I
 
     goto/16 :goto_0
 
+    .line 256
     :cond_1
     const-string v2, "lock_height"
 
@@ -405,12 +452,14 @@
 
     if-eqz v2, :cond_2
 
+    .line 257
     const/4 v2, 0x2
 
     iput v2, p0, Lcom/android/internal/widget/LockPatternView;->mAspect:I
 
     goto/16 :goto_0
 
+    .line 259
     :cond_2
     iput v4, p0, Lcom/android/internal/widget/LockPatternView;->mAspect:I
 
@@ -422,6 +471,7 @@
     .parameter "newCell"
 
     .prologue
+    .line 515
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDrawLookup:[[Z
 
     invoke-virtual {p1}, Lcom/android/internal/widget/LockPatternView$Cell;->getRow()I
@@ -438,20 +488,24 @@
 
     aput-boolean v2, v0, v1
 
+    .line 516
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 517
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
 
     if-eqz v0, :cond_0
 
+    .line 518
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
 
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     invoke-interface {v0, v1}, Lcom/android/internal/widget/LockPatternView$OnPatternListener;->onPatternCellAdded(Ljava/util/List;)V
 
+    .line 520
     :cond_0
     return-void
 .end method
@@ -464,30 +518,37 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 525
     invoke-direct {p0, p2}, Lcom/android/internal/widget/LockPatternView;->getRowHit(F)I
 
     move-result v1
 
+    .line 526
     .local v1, rowHit:I
     if-gez v1, :cond_0
 
     move-object v2, v3
 
+    .line 537
     :goto_0
     return-object v2
 
+    .line 529
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/internal/widget/LockPatternView;->getColumnHit(F)I
 
     move-result v0
 
+    .line 530
     .local v0, columnHit:I
     if-gez v0, :cond_1
 
     move-object v2, v3
 
+    .line 531
     goto :goto_0
 
+    .line 534
     :cond_1
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDrawLookup:[[Z
 
@@ -499,8 +560,10 @@
 
     move-object v2, v3
 
+    .line 535
     goto :goto_0
 
+    .line 537
     :cond_2
     invoke-static {v1, v0}, Lcom/android/internal/widget/LockPatternView$Cell;->of(II)Lcom/android/internal/widget/LockPatternView$Cell;
 
@@ -515,18 +578,21 @@
     .prologue
     const/4 v4, 0x3
 
+    .line 415
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
     if-ge v0, v4, :cond_1
 
+    .line 416
     const/4 v1, 0x0
 
     .local v1, j:I
     :goto_1
     if-ge v1, v4, :cond_0
 
+    .line 417
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDrawLookup:[[Z
 
     aget-object v2, v2, v0
@@ -535,15 +601,18 @@
 
     aput-boolean v3, v2, v1
 
+    .line 416
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 415
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 420
     .end local v1           #j:I
     :cond_1
     return-void
@@ -561,18 +630,23 @@
 
     const/4 v10, 0x1
 
+    .line 476
     invoke-direct {p0, p1, p2}, Lcom/android/internal/widget/LockPatternView;->checkForNewHit(FF)Lcom/android/internal/widget/LockPatternView$Cell;
 
     move-result-object v0
 
+    .line 477
     .local v0, cell:Lcom/android/internal/widget/LockPatternView$Cell;
     if-eqz v0, :cond_7
 
+    .line 480
     const/4 v4, 0x0
 
+    .line 481
     .local v4, fillInGapCell:Lcom/android/internal/widget/LockPatternView$Cell;
     iget-object v7, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
+    .line 482
     .local v7, pattern:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     invoke-virtual {v7}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -580,6 +654,7 @@
 
     if-nez v8, :cond_2
 
+    .line 483
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v8
@@ -592,6 +667,7 @@
 
     check-cast v6, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 484
     .local v6, lastCell:Lcom/android/internal/widget/LockPatternView$Cell;
     iget v8, v0, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
@@ -599,6 +675,7 @@
 
     sub-int v2, v8, v9
 
+    .line 485
     .local v2, dRow:I
     iget v8, v0, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
 
@@ -606,12 +683,15 @@
 
     sub-int v1, v8, v9
 
+    .line 487
     .local v1, dColumn:I
     iget v5, v6, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
+    .line 488
     .local v5, fillInRow:I
     iget v3, v6, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
 
+    .line 490
     .local v3, fillInColumn:I
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
@@ -625,6 +705,7 @@
 
     if-eq v8, v10, :cond_0
 
+    .line 491
     iget v8, v6, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
     if-lez v2, :cond_5
@@ -634,6 +715,7 @@
     :goto_0
     add-int v5, v8, v9
 
+    .line 494
     :cond_0
     invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
@@ -647,6 +729,7 @@
 
     if-eq v8, v10, :cond_1
 
+    .line 495
     iget v8, v6, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
 
     if-lez v1, :cond_6
@@ -656,11 +739,13 @@
     :goto_1
     add-int v3, v8, v9
 
+    .line 498
     :cond_1
     invoke-static {v5, v3}, Lcom/android/internal/widget/LockPatternView$Cell;->of(II)Lcom/android/internal/widget/LockPatternView$Cell;
 
     move-result-object v4
 
+    .line 501
     .end local v1           #dColumn:I
     .end local v2           #dRow:I
     .end local v3           #fillInColumn:I
@@ -681,15 +766,19 @@
 
     if-nez v8, :cond_3
 
+    .line 503
     invoke-direct {p0, v4}, Lcom/android/internal/widget/LockPatternView;->addCellToPattern(Lcom/android/internal/widget/LockPatternView$Cell;)V
 
+    .line 505
     :cond_3
     invoke-direct {p0, v0}, Lcom/android/internal/widget/LockPatternView;->addCellToPattern(Lcom/android/internal/widget/LockPatternView$Cell;)V
 
+    .line 506
     iget-boolean v8, p0, Lcom/android/internal/widget/LockPatternView;->mTactileFeedbackEnabled:Z
 
     if-eqz v8, :cond_4
 
+    .line 507
     iget-object v8, p0, Lcom/android/internal/widget/LockPatternView;->vibe:Landroid/os/Vibrator;
 
     iget-object v9, p0, Lcom/android/internal/widget/LockPatternView;->mVibePattern:[J
@@ -699,6 +788,7 @@
     :cond_4
     move-object v8, v0
 
+    .line 511
     .end local v4           #fillInGapCell:Lcom/android/internal/widget/LockPatternView$Cell;
     .end local v7           #pattern:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     :goto_2
@@ -714,13 +804,16 @@
     :cond_5
     move v9, v11
 
+    .line 491
     goto :goto_0
 
     :cond_6
     move v9, v11
 
+    .line 495
     goto :goto_1
 
+    .line 511
     .end local v1           #dColumn:I
     .end local v2           #dRow:I
     .end local v3           #fillInColumn:I
@@ -743,6 +836,7 @@
     .parameter "end"
 
     .prologue
+    .line 911
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mPatternDisplayMode:Lcom/android/internal/widget/LockPatternView$DisplayMode;
@@ -761,6 +855,7 @@
 
     move/from16 v10, v17
 
+    .line 913
     .local v10, green:Z
     :goto_0
     move-object/from16 v0, p5
@@ -769,6 +864,7 @@
 
     move v9, v0
 
+    .line 914
     .local v9, endRow:I
     move-object/from16 v0, p4
 
@@ -776,6 +872,7 @@
 
     move v15, v0
 
+    .line 915
     .local v15, startRow:I
     move-object/from16 v0, p5
 
@@ -783,6 +880,7 @@
 
     move v8, v0
 
+    .line 916
     .local v8, endColumn:I
     move-object/from16 v0, p4
 
@@ -790,6 +888,7 @@
 
     move v14, v0
 
+    .line 919
     .local v14, startColumn:I
     move-object/from16 v0, p0
 
@@ -813,6 +912,7 @@
 
     div-int/lit8 v12, v17, 0x2
 
+    .line 920
     .local v12, offsetX:I
     move-object/from16 v0, p0
 
@@ -836,6 +936,7 @@
 
     div-int/lit8 v13, v17, 0x2
 
+    .line 925
     .local v13, offsetY:I
     if-eqz v10, :cond_1
 
@@ -847,12 +948,14 @@
 
     move-object/from16 v5, v17
 
+    .line 926
     .local v5, arrow:Landroid/graphics/Bitmap;
     :goto_1
     new-instance v11, Landroid/graphics/Matrix;
 
     invoke-direct {v11}, Landroid/graphics/Matrix;-><init>()V
 
+    .line 927
     .local v11, matrix:Landroid/graphics/Matrix;
     move-object/from16 v0, p0
 
@@ -864,6 +967,7 @@
 
     move-result v7
 
+    .line 928
     .local v7, cellWidth:I
     move-object/from16 v0, p0
 
@@ -875,6 +979,7 @@
 
     move-result v6
 
+    .line 931
     .local v6, cellHeight:I
     sub-int v17, v9, v15
 
@@ -902,6 +1007,7 @@
 
     move/from16 v16, v0
 
+    .line 933
     .local v16, theta:F
     move/from16 v0, v16
 
@@ -923,6 +1029,7 @@
 
     add-float v4, v17, v18
 
+    .line 936
     .local v4, angle:F
     move v0, v12
 
@@ -948,6 +1055,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
+    .line 937
     move v0, v7
 
     int-to-float v0, v0
@@ -978,6 +1086,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Matrix;->preRotate(FFF)Z
 
+    .line 938
     invoke-virtual {v5}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v17
@@ -1004,6 +1113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
+    .line 939
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mPaint:Landroid/graphics/Paint;
@@ -1020,8 +1130,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
+    .line 940
     return-void
 
+    .line 911
     .end local v4           #angle:F
     .end local v5           #arrow:Landroid/graphics/Bitmap;
     .end local v6           #cellHeight:I
@@ -1042,6 +1154,7 @@
 
     goto/16 :goto_0
 
+    .line 925
     .restart local v8       #endColumn:I
     .restart local v9       #endRow:I
     .restart local v10       #green:Z
@@ -1071,6 +1184,7 @@
     .prologue
     const/high16 v10, 0x4000
 
+    .line 952
     if-eqz p4, :cond_0
 
     iget-boolean v8, p0, Lcom/android/internal/widget/LockPatternView;->mInStealthMode:Z
@@ -1083,25 +1197,32 @@
 
     if-eq v8, v9, :cond_1
 
+    .line 954
     :cond_0
     iget-object v4, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapCircleDefault:Landroid/graphics/Bitmap;
 
+    .line 955
     .local v4, outerCircle:Landroid/graphics/Bitmap;
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapBtnDefault:Landroid/graphics/Bitmap;
 
+    .line 973
     .local v1, innerCircle:Landroid/graphics/Bitmap;
     :goto_0
     iget v7, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapWidth:I
 
+    .line 974
     .local v7, width:I
     iget v0, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapHeight:I
 
+    .line 976
     .local v0, height:I
     iget v6, p0, Lcom/android/internal/widget/LockPatternView;->mSquareWidth:F
 
+    .line 977
     .local v6, squareWidth:F
     iget v5, p0, Lcom/android/internal/widget/LockPatternView;->mSquareHeight:F
 
+    .line 979
     .local v5, squareHeight:F
     int-to-float v8, v7
 
@@ -1111,6 +1232,7 @@
 
     float-to-int v2, v8
 
+    .line 980
     .local v2, offsetX:I
     int-to-float v8, v0
 
@@ -1120,6 +1242,7 @@
 
     float-to-int v3, v8
 
+    .line 982
     .local v3, offsetY:I
     add-int v8, p2, v2
 
@@ -1133,6 +1256,7 @@
 
     invoke-virtual {p1, v4, v8, v9, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 983
     add-int v8, p2, v2
 
     int-to-float v8, v8
@@ -1145,8 +1269,10 @@
 
     invoke-virtual {p1, v1, v8, v9, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 984
     return-void
 
+    .line 956
     .end local v0           #height:I
     .end local v1           #innerCircle:Landroid/graphics/Bitmap;
     .end local v2           #offsetX:I
@@ -1160,14 +1286,17 @@
 
     if-eqz v8, :cond_2
 
+    .line 958
     iget-object v4, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapCircleGreen:Landroid/graphics/Bitmap;
 
+    .line 959
     .restart local v4       #outerCircle:Landroid/graphics/Bitmap;
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapBtnTouched:Landroid/graphics/Bitmap;
 
     .restart local v1       #innerCircle:Landroid/graphics/Bitmap;
     goto :goto_0
 
+    .line 960
     .end local v1           #innerCircle:Landroid/graphics/Bitmap;
     .end local v4           #outerCircle:Landroid/graphics/Bitmap;
     :cond_2
@@ -1177,14 +1306,17 @@
 
     if-ne v8, v9, :cond_3
 
+    .line 962
     iget-object v4, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapCircleRed:Landroid/graphics/Bitmap;
 
+    .line 963
     .restart local v4       #outerCircle:Landroid/graphics/Bitmap;
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapBtnDefault:Landroid/graphics/Bitmap;
 
     .restart local v1       #innerCircle:Landroid/graphics/Bitmap;
     goto :goto_0
 
+    .line 964
     .end local v1           #innerCircle:Landroid/graphics/Bitmap;
     .end local v4           #outerCircle:Landroid/graphics/Bitmap;
     :cond_3
@@ -1200,15 +1332,18 @@
 
     if-ne v8, v9, :cond_5
 
+    .line 967
     :cond_4
     iget-object v4, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapCircleGreen:Landroid/graphics/Bitmap;
 
+    .line 968
     .restart local v4       #outerCircle:Landroid/graphics/Bitmap;
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView;->mBitmapBtnDefault:Landroid/graphics/Bitmap;
 
     .restart local v1       #innerCircle:Landroid/graphics/Bitmap;
     goto :goto_0
 
+    .line 970
     .end local v1           #innerCircle:Landroid/graphics/Bitmap;
     .end local v4           #outerCircle:Landroid/graphics/Bitmap;
     :cond_5
@@ -1218,7 +1353,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "unknown display mode "
+    const-string/jumbo v10, "unknown display mode "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1244,6 +1379,7 @@
     .parameter "resId"
 
     .prologue
+    .line 309
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1264,6 +1400,7 @@
     .parameter "column"
 
     .prologue
+    .line 773
     iget v0, p0, Landroid/view/View;->mPaddingLeft:I
 
     int-to-float v0, v0
@@ -1292,6 +1429,7 @@
     .parameter "row"
 
     .prologue
+    .line 777
     iget v0, p0, Landroid/view/View;->mPaddingTop:I
 
     int-to-float v0, v0
@@ -1320,13 +1458,16 @@
     .parameter "x"
 
     .prologue
+    .line 567
     iget v4, p0, Lcom/android/internal/widget/LockPatternView;->mSquareWidth:F
 
+    .line 568
     .local v4, squareWidth:F
     iget v5, p0, Lcom/android/internal/widget/LockPatternView;->mHitFactor:F
 
     mul-float v1, v4, v5
 
+    .line 570
     .local v1, hitSize:F
     iget v5, p0, Landroid/view/View;->mPaddingLeft:I
 
@@ -1340,6 +1481,7 @@
 
     add-float v3, v5, v6
 
+    .line 571
     .local v3, offset:F
     const/4 v2, 0x0
 
@@ -1349,12 +1491,14 @@
 
     if-ge v2, v5, :cond_1
 
+    .line 573
     int-to-float v5, v2
 
     mul-float/2addr v5, v4
 
     add-float v0, v3, v5
 
+    .line 574
     .local v0, hitLeft:F
     cmpl-float v5, p1, v0
 
@@ -1368,16 +1512,19 @@
 
     move v5, v2
 
+    .line 578
     .end local v0           #hitLeft:F
     :goto_1
     return v5
 
+    .line 571
     .restart local v0       #hitLeft:F
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 578
     .end local v0           #hitLeft:F
     :cond_1
     const/4 v5, -0x1
@@ -1390,13 +1537,16 @@
     .parameter "y"
 
     .prologue
+    .line 547
     iget v4, p0, Lcom/android/internal/widget/LockPatternView;->mSquareHeight:F
 
+    .line 548
     .local v4, squareHeight:F
     iget v5, p0, Lcom/android/internal/widget/LockPatternView;->mHitFactor:F
 
     mul-float v0, v4, v5
 
+    .line 550
     .local v0, hitSize:F
     iget v5, p0, Landroid/view/View;->mPaddingTop:I
 
@@ -1410,6 +1560,7 @@
 
     add-float v3, v5, v6
 
+    .line 551
     .local v3, offset:F
     const/4 v2, 0x0
 
@@ -1419,12 +1570,14 @@
 
     if-ge v2, v5, :cond_1
 
+    .line 553
     int-to-float v5, v2
 
     mul-float/2addr v5, v4
 
     add-float v1, v3, v5
 
+    .line 554
     .local v1, hitTop:F
     cmpl-float v5, p1, v1
 
@@ -1438,16 +1591,19 @@
 
     move v5, v2
 
+    .line 558
     .end local v1           #hitTop:F
     :goto_1
     return v5
 
+    .line 551
     .restart local v1       #hitTop:F
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 558
     .end local v1           #hitTop:F
     :cond_1
     const/4 v5, -0x1
@@ -1460,8 +1616,10 @@
     .parameter "id"
 
     .prologue
+    .line 291
     const/4 v2, 0x0
 
+    .line 293
     .local v2, pattern:[I
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternView;->getResources()Landroid/content/res/Resources;
@@ -1474,19 +1632,24 @@
 
     move-result-object v2
 
+    .line 297
     :goto_0
     if-nez v2, :cond_0
 
+    .line 298
     sget-object v4, Lcom/android/internal/widget/LockPatternView;->DEFAULT_VIBE_PATTERN:[J
 
+    .line 305
     :goto_1
     return-object v4
 
+    .line 294
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
+    .line 295
     .local v0, e:Landroid/content/res/Resources$NotFoundException;
     const-string v4, "LockPatternView"
 
@@ -1496,12 +1659,14 @@
 
     goto :goto_0
 
+    .line 301
     .end local v0           #e:Landroid/content/res/Resources$NotFoundException;
     :cond_0
     array-length v4, v2
 
     new-array v3, v4, [J
 
+    .line 302
     .local v3, tmpPattern:[J
     const/4 v1, 0x0
 
@@ -1511,12 +1676,14 @@
 
     if-ge v1, v4, :cond_1
 
+    .line 303
     aget v4, v2, v1
 
     int-to-long v4, v4
 
     aput-wide v4, v3, v1
 
+    .line 302
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
@@ -1524,6 +1691,7 @@
     :cond_1
     move-object v4, v3
 
+    .line 305
     goto :goto_1
 .end method
 
@@ -1531,18 +1699,23 @@
     .locals 1
 
     .prologue
+    .line 405
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
+    .line 406
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternView;->clearPatternDrawLookup()V
 
+    .line 407
     sget-object v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Correct:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     iput-object v0, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDisplayMode:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
+    .line 408
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternView;->invalidate()V
 
+    .line 409
     return-void
 .end method
 
@@ -1552,8 +1725,10 @@
     .locals 0
 
     .prologue
+    .line 398
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternView;->resetPattern()V
 
+    .line 399
     return-void
 .end method
 
@@ -1561,10 +1736,12 @@
     .locals 1
 
     .prologue
+    .line 427
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/widget/LockPatternView;->mInputEnabled:Z
 
+    .line 428
     return-void
 .end method
 
@@ -1572,10 +1749,12 @@
     .locals 1
 
     .prologue
+    .line 434
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/widget/LockPatternView;->mInputEnabled:Z
 
+    .line 435
     return-void
 .end method
 
@@ -1583,6 +1762,7 @@
     .locals 1
 
     .prologue
+    .line 316
     iget-boolean v0, p0, Lcom/android/internal/widget/LockPatternView;->mInStealthMode:Z
 
     return v0
@@ -1592,6 +1772,7 @@
     .locals 1
 
     .prologue
+    .line 323
     iget-boolean v0, p0, Lcom/android/internal/widget/LockPatternView;->mTactileFeedbackEnabled:Z
 
     return v0
@@ -1602,17 +1783,20 @@
     .parameter "canvas"
 
     .prologue
+    .line 782
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     move-object/from16 v30, v0
 
+    .line 783
     .local v30, pattern:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     invoke-virtual/range {v30 .. v30}, Ljava/util/ArrayList;->size()I
 
     move-result v14
 
+    .line 784
     .local v14, count:I
     move-object/from16 v0, p0
 
@@ -1620,6 +1804,7 @@
 
     move-object/from16 v17, v0
 
+    .line 786
     .local v17, drawLookup:[[Z
     move-object/from16 v0, p0
 
@@ -1631,6 +1816,7 @@
 
     if-ne v5, v6, :cond_2
 
+    .line 791
     add-int/lit8 v5, v14, 0x1
 
     move v0, v5
@@ -1639,6 +1825,7 @@
 
     move/from16 v27, v0
 
+    .line 792
     .local v27, oneCycle:I
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1656,6 +1843,7 @@
 
     rem-int v33, v5, v27
 
+    .line 794
     .local v33, spotInCycle:I
     move/from16 v0, v33
 
@@ -1663,9 +1851,11 @@
 
     move/from16 v25, v0
 
+    .line 796
     .local v25, numCircles:I
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/widget/LockPatternView;->clearPatternDrawLookup()V
 
+    .line 797
     const/16 v21, 0x0
 
     .local v21, i:I
@@ -1676,6 +1866,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 798
     move-object/from16 v0, v30
 
     move/from16 v1, v21
@@ -1686,6 +1877,7 @@
 
     check-cast v9, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 799
     .local v9, cell:Lcom/android/internal/widget/LockPatternView$Cell;
     invoke-virtual {v9}, Lcom/android/internal/widget/LockPatternView$Cell;->getRow()I
 
@@ -1701,10 +1893,12 @@
 
     aput-boolean v7, v5, v6
 
+    .line 797
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_0
 
+    .line 804
     .end local v9           #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     :cond_0
     if-lez v25, :cond_8
@@ -1719,10 +1913,12 @@
 
     move/from16 v23, v5
 
+    .line 807
     .local v23, needToUpdateInProgressPoint:Z
     :goto_1
     if-eqz v23, :cond_1
 
+    .line 808
     move/from16 v0, v33
 
     rem-int/lit16 v0, v0, 0x2bc
@@ -1735,6 +1931,7 @@
 
     div-float v31, v5, v6
 
+    .line 812
     .local v31, percentageOfNextCircle:F
     const/4 v5, 0x1
 
@@ -1750,6 +1947,7 @@
 
     check-cast v15, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 813
     .local v15, currentCell:Lcom/android/internal/widget/LockPatternView$Cell;
     iget v5, v15, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
 
@@ -1761,6 +1959,7 @@
 
     move-result v12
 
+    .line 814
     .local v12, centerX:F
     iget v5, v15, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
@@ -1772,6 +1971,7 @@
 
     move-result v13
 
+    .line 816
     .local v13, centerY:F
     move-object/from16 v0, v30
 
@@ -1783,6 +1983,7 @@
 
     check-cast v24, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 817
     .local v24, nextCell:Lcom/android/internal/widget/LockPatternView$Cell;
     move-object/from16 v0, v24
 
@@ -1802,6 +2003,7 @@
 
     mul-float v19, v31, v5
 
+    .line 819
     .local v19, dx:F
     move-object/from16 v0, v24
 
@@ -1821,6 +2023,7 @@
 
     mul-float v20, v31, v5
 
+    .line 821
     .local v20, dy:F
     add-float v5, v12, v19
 
@@ -1830,6 +2033,7 @@
 
     iput v0, v1, Lcom/android/internal/widget/LockPatternView;->mInProgressX:F
 
+    .line 822
     add-float v5, v13, v20
 
     move v0, v5
@@ -1838,6 +2042,7 @@
 
     iput v0, v1, Lcom/android/internal/widget/LockPatternView;->mInProgressY:F
 
+    .line 825
     .end local v12           #centerX:F
     .end local v13           #centerY:F
     .end local v15           #currentCell:Lcom/android/internal/widget/LockPatternView$Cell;
@@ -1848,6 +2053,7 @@
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/LockPatternView;->invalidate()V
 
+    .line 828
     .end local v21           #i:I
     .end local v23           #needToUpdateInProgressPoint:Z
     .end local v25           #numCircles:I
@@ -1860,6 +2066,7 @@
 
     move/from16 v35, v0
 
+    .line 829
     .local v35, squareWidth:F
     move-object/from16 v0, p0
 
@@ -1867,6 +2074,7 @@
 
     move/from16 v34, v0
 
+    .line 831
     .local v34, squareHeight:F
     move-object/from16 v0, p0
 
@@ -1880,6 +2088,7 @@
 
     mul-float v32, v5, v6
 
+    .line 832
     .local v32, radius:F
     move-object/from16 v0, p0
 
@@ -1893,15 +2102,18 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
+    .line 834
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mCurrentPath:Landroid/graphics/Path;
 
     move-object/from16 v16, v0
 
+    .line 835
     .local v16, currentPath:Landroid/graphics/Path;
     invoke-virtual/range {v16 .. v16}, Landroid/graphics/Path;->rewind()V
 
+    .line 841
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/internal/widget/LockPatternView;->mInStealthMode:Z
@@ -1925,12 +2137,15 @@
 
     move/from16 v18, v5
 
+    .line 842
     .local v18, drawPath:Z
     :goto_2
     if-eqz v18, :cond_7
 
+    .line 843
     const/4 v11, 0x0
 
+    .line 844
     .local v11, anyCircles:Z
     const/16 v21, 0x0
 
@@ -1942,6 +2157,7 @@
 
     if-ge v0, v1, :cond_4
 
+    .line 845
     move-object/from16 v0, v30
 
     move/from16 v1, v21
@@ -1952,6 +2168,7 @@
 
     check-cast v9, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 850
     .restart local v9       #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     iget v5, v9, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
@@ -1963,6 +2180,7 @@
 
     if-nez v5, :cond_a
 
+    .line 865
     .end local v9           #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     :cond_4
     move-object/from16 v0, p0
@@ -1986,6 +2204,7 @@
     :cond_5
     if-eqz v11, :cond_6
 
+    .line 867
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/internal/widget/LockPatternView;->mInProgressX:F
@@ -2006,6 +2225,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
+    .line 869
     :cond_6
     move-object/from16 v0, p0
 
@@ -2021,6 +2241,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
+    .line 873
     .end local v11           #anyCircles:Z
     .end local v21           #i:I
     :cond_7
@@ -2030,6 +2251,7 @@
 
     move/from16 v29, v0
 
+    .line 874
     .local v29, paddingTop:I
     move-object/from16 v0, p0
 
@@ -2037,6 +2259,7 @@
 
     move/from16 v28, v0
 
+    .line 876
     .local v28, paddingLeft:I
     const/16 v21, 0x0
 
@@ -2050,6 +2273,7 @@
 
     if-ge v0, v1, :cond_d
 
+    .line 877
     move/from16 v0, v29
 
     int-to-float v0, v0
@@ -2066,6 +2290,7 @@
 
     add-float v8, v5, v6
 
+    .line 879
     .local v8, topY:F
     const/16 v22, 0x0
 
@@ -2079,6 +2304,7 @@
 
     if-ge v0, v1, :cond_c
 
+    .line 880
     move/from16 v0, v28
 
     int-to-float v0, v0
@@ -2095,6 +2321,7 @@
 
     add-float v7, v5, v6
 
+    .line 881
     .local v7, leftX:F
     float-to-int v5, v7
 
@@ -2117,10 +2344,12 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/internal/widget/LockPatternView;->drawCircle(Landroid/graphics/Canvas;IIZ)V
 
+    .line 879
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_5
 
+    .line 804
     .end local v8           #topY:F
     .end local v16           #currentPath:Landroid/graphics/Path;
     .end local v18           #drawPath:Z
@@ -2140,6 +2369,7 @@
 
     goto/16 :goto_1
 
+    .line 841
     .end local v21           #i:I
     .end local v25           #numCircles:I
     .end local v27           #oneCycle:I
@@ -2155,6 +2385,7 @@
 
     goto/16 :goto_2
 
+    .line 853
     .restart local v9       #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     .restart local v11       #anyCircles:Z
     .restart local v18       #drawPath:Z
@@ -2162,6 +2393,7 @@
     :cond_a
     const/4 v11, 0x1
 
+    .line 855
     iget v5, v9, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
 
     move-object/from16 v0, p0
@@ -2172,6 +2404,7 @@
 
     move-result v12
 
+    .line 856
     .restart local v12       #centerX:F
     iget v5, v9, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
@@ -2183,9 +2416,11 @@
 
     move-result v13
 
+    .line 857
     .restart local v13       #centerY:F
     if-nez v21, :cond_b
 
+    .line 858
     move-object/from16 v0, v16
 
     move v1, v12
@@ -2194,11 +2429,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->moveTo(FF)V
 
+    .line 844
     :goto_6
     add-int/lit8 v21, v21, 0x1
 
     goto/16 :goto_3
 
+    .line 860
     :cond_b
     move-object/from16 v0, v16
 
@@ -2210,6 +2447,7 @@
 
     goto :goto_6
 
+    .line 876
     .end local v9           #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     .end local v11           #anyCircles:Z
     .end local v12           #centerX:F
@@ -2223,6 +2461,7 @@
 
     goto :goto_4
 
+    .line 887
     .end local v8           #topY:F
     .end local v22           #j:I
     :cond_d
@@ -2244,6 +2483,7 @@
 
     move/from16 v26, v5
 
+    .line 888
     .local v26, oldFlag:Z
     :goto_7
     move-object/from16 v0, p0
@@ -2256,8 +2496,10 @@
 
     invoke-virtual {v5, v6}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
+    .line 889
     if-eqz v18, :cond_e
 
+    .line 890
     const/16 v21, 0x0
 
     :goto_8
@@ -2271,6 +2513,7 @@
 
     if-ge v0, v1, :cond_e
 
+    .line 891
     move-object/from16 v0, v30
 
     move/from16 v1, v21
@@ -2281,6 +2524,7 @@
 
     check-cast v9, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 892
     .restart local v9       #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     add-int/lit8 v5, v21, 0x1
 
@@ -2294,6 +2538,7 @@
 
     check-cast v10, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 897
     .local v10, next:Lcom/android/internal/widget/LockPatternView$Cell;
     iget v5, v10, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
 
@@ -2305,6 +2550,7 @@
 
     if-nez v5, :cond_10
 
+    .line 907
     .end local v9           #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     .end local v10           #next:Lcom/android/internal/widget/LockPatternView$Cell;
     :cond_e
@@ -2320,8 +2566,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
+    .line 908
     return-void
 
+    .line 887
     .end local v26           #oldFlag:Z
     :cond_f
     const/4 v5, 0x0
@@ -2330,6 +2578,7 @@
 
     goto :goto_7
 
+    .line 901
     .restart local v9       #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     .restart local v10       #next:Lcom/android/internal/widget/LockPatternView$Cell;
     .restart local v26       #oldFlag:Z
@@ -2348,6 +2597,7 @@
 
     add-float v7, v5, v6
 
+    .line 902
     .restart local v7       #leftX:F
     move/from16 v0, v29
 
@@ -2368,8 +2618,10 @@
 
     move-object/from16 v6, p1
 
+    .line 904
     invoke-direct/range {v5 .. v10}, Lcom/android/internal/widget/LockPatternView;->drawArrow(Landroid/graphics/Canvas;FFLcom/android/internal/widget/LockPatternView$Cell;Lcom/android/internal/widget/LockPatternView$Cell;)V
 
+    .line 890
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_8
@@ -2381,31 +2633,39 @@
     .parameter "heightMeasureSpec"
 
     .prologue
+    .line 448
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v3
 
+    .line 449
     .local v3, width:I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
+    .line 450
     .local v0, height:I
     move v2, v3
 
+    .line 451
     .local v2, viewWidth:I
     move v1, v0
 
+    .line 452
     .local v1, viewHeight:I
     iget v4, p0, Lcom/android/internal/widget/LockPatternView;->mAspect:I
 
     packed-switch v4, :pswitch_data_0
 
+    .line 465
     :goto_0
     invoke-virtual {p0, v2, v1}, Lcom/android/internal/widget/LockPatternView;->setMeasuredDimension(II)V
 
+    .line 466
     return-void
 
+    .line 454
     :pswitch_0
     invoke-static {v3, v0}, Ljava/lang/Math;->min(II)I
 
@@ -2413,26 +2673,33 @@
 
     move v2, v1
 
+    .line 455
     goto :goto_0
 
+    .line 457
     :pswitch_1
     move v2, v3
 
+    .line 458
     invoke-static {v3, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
+    .line 459
     goto :goto_0
 
+    .line 461
     :pswitch_2
     invoke-static {v3, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v2
 
+    .line 462
     move v1, v0
 
     goto :goto_0
 
+    .line 452
     nop
 
     :pswitch_data_0
@@ -2448,12 +2715,14 @@
     .parameter "state"
 
     .prologue
+    .line 997
     move-object v0, p1
 
     check-cast v0, Lcom/android/internal/widget/LockPatternView$SavedState;
 
     move-object v1, v0
 
+    .line 998
     .local v1, ss:Lcom/android/internal/widget/LockPatternView$SavedState;
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternView$SavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -2461,6 +2730,7 @@
 
     invoke-super {p0, v2}, Landroid/view/View;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
+    .line 999
     sget-object v2, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Correct:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternView$SavedState;->getSerializedPattern()Ljava/lang/String;
@@ -2473,6 +2743,7 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/android/internal/widget/LockPatternView;->setPattern(Lcom/android/internal/widget/LockPatternView$DisplayMode;Ljava/util/List;)V
 
+    .line 1002
     invoke-static {}, Lcom/android/internal/widget/LockPatternView$DisplayMode;->values()[Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     move-result-object v2
@@ -2485,24 +2756,28 @@
 
     iput-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDisplayMode:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
+    .line 1003
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternView$SavedState;->isInputEnabled()Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/android/internal/widget/LockPatternView;->mInputEnabled:Z
 
+    .line 1004
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternView$SavedState;->isInStealthMode()Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/android/internal/widget/LockPatternView;->mInStealthMode:Z
 
+    .line 1005
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternView$SavedState;->isTactileFeedbackEnabled()Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/android/internal/widget/LockPatternView;->mTactileFeedbackEnabled:Z
 
+    .line 1006
     return-void
 .end method
 
@@ -2510,10 +2785,12 @@
     .locals 8
 
     .prologue
+    .line 988
     invoke-super {p0}, Landroid/view/View;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
+    .line 989
     .local v1, superState:Landroid/os/Parcelable;
     new-instance v0, Lcom/android/internal/widget/LockPatternView$SavedState;
 
@@ -2552,6 +2829,7 @@
     .prologue
     const/high16 v4, 0x4040
 
+    .line 439
     iget v2, p0, Landroid/view/View;->mPaddingLeft:I
 
     sub-int v2, p1, v2
@@ -2560,6 +2838,7 @@
 
     sub-int v1, v2, v3
 
+    .line 440
     .local v1, width:I
     int-to-float v2, v1
 
@@ -2567,6 +2846,7 @@
 
     iput v2, p0, Lcom/android/internal/widget/LockPatternView;->mSquareWidth:F
 
+    .line 442
     iget v2, p0, Landroid/view/View;->mPaddingTop:I
 
     sub-int v2, p2, v2
@@ -2575,6 +2855,7 @@
 
     sub-int v0, v2, v3
 
+    .line 443
     .local v0, height:I
     int-to-float v2, v0
 
@@ -2582,6 +2863,7 @@
 
     iput v2, p0, Lcom/android/internal/widget/LockPatternView;->mSquareHeight:F
 
+    .line 444
     return-void
 .end method
 
@@ -2590,6 +2872,7 @@
     .parameter "motionEvent"
 
     .prologue
+    .line 583
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/internal/widget/LockPatternView;->mInputEnabled:Z
@@ -2604,22 +2887,27 @@
 
     if-nez v26, :cond_1
 
+    .line 584
     :cond_0
     const/16 v26, 0x0
 
+    .line 769
     :goto_0
     return v26
 
+    .line 587
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v24
 
+    .line 588
     .local v24, x:F
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v25
 
+    .line 590
     .local v25, y:F
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -2627,13 +2915,16 @@
 
     packed-switch v26, :pswitch_data_0
 
+    .line 769
     const/16 v26, 0x0
 
     goto :goto_0
 
+    .line 592
     :pswitch_0
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/widget/LockPatternView;->resetPattern()V
 
+    .line 593
     move-object/from16 v0, p0
 
     move/from16 v1, v24
@@ -2644,6 +2935,7 @@
 
     move-result-object v9
 
+    .line 594
     .local v9, hitCell:Lcom/android/internal/widget/LockPatternView$Cell;
     if-eqz v9, :cond_4
 
@@ -2655,6 +2947,7 @@
 
     if-eqz v26, :cond_4
 
+    .line 595
     const/16 v26, 0x1
 
     move/from16 v0, v26
@@ -2663,6 +2956,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/widget/LockPatternView;->mPatternInProgress:Z
 
+    .line 596
     sget-object v26, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Correct:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     move-object/from16 v0, v26
@@ -2671,6 +2965,7 @@
 
     iput-object v0, v1, Lcom/android/internal/widget/LockPatternView;->mPatternDisplayMode:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
+    .line 597
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
@@ -2679,10 +2974,12 @@
 
     invoke-interface/range {v26 .. v26}, Lcom/android/internal/widget/LockPatternView$OnPatternListener;->onPatternStart()V
 
+    .line 602
     :cond_2
     :goto_1
     if-eqz v9, :cond_3
 
+    .line 603
     move-object v0, v9
 
     iget v0, v0, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
@@ -2697,6 +2994,7 @@
 
     move-result v20
 
+    .line 604
     .local v20, startX:F
     move-object v0, v9
 
@@ -2712,6 +3010,7 @@
 
     move-result v21
 
+    .line 606
     .local v21, startY:F
     move-object/from16 v0, p0
 
@@ -2723,6 +3022,7 @@
 
     div-float v23, v26, v27
 
+    .line 607
     .local v23, widthOffset:F
     move-object/from16 v0, p0
 
@@ -2734,6 +3034,7 @@
 
     div-float v8, v26, v27
 
+    .line 609
     .local v8, heightOffset:F
     sub-float v26, v20, v23
 
@@ -2779,6 +3080,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/internal/widget/LockPatternView;->invalidate(IIII)V
 
+    .line 612
     .end local v8           #heightOffset:F
     .end local v20           #startX:F
     .end local v21           #startY:F
@@ -2790,16 +3092,19 @@
 
     iput v0, v1, Lcom/android/internal/widget/LockPatternView;->mInProgressX:F
 
+    .line 613
     move/from16 v0, v25
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/widget/LockPatternView;->mInProgressY:F
 
+    .line 620
     const/16 v26, 0x1
 
     goto/16 :goto_0
 
+    .line 598
     :cond_4
     move-object/from16 v0, p0
 
@@ -2809,6 +3114,7 @@
 
     if-eqz v26, :cond_2
 
+    .line 599
     const/16 v26, 0x0
 
     move/from16 v0, v26
@@ -2817,6 +3123,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/widget/LockPatternView;->mPatternInProgress:Z
 
+    .line 600
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
@@ -2827,6 +3134,7 @@
 
     goto/16 :goto_1
 
+    .line 623
     .end local v9           #hitCell:Lcom/android/internal/widget/LockPatternView$Cell;
     :pswitch_1
     move-object/from16 v0, p0
@@ -2849,6 +3157,7 @@
 
     if-eqz v26, :cond_5
 
+    .line 624
     const/16 v26, 0x0
 
     move/from16 v0, v26
@@ -2857,6 +3166,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/widget/LockPatternView;->mPatternInProgress:Z
 
+    .line 625
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
@@ -2871,13 +3181,16 @@
 
     invoke-interface/range {v26 .. v27}, Lcom/android/internal/widget/LockPatternView$OnPatternListener;->onPatternDetected(Ljava/util/List;)V
 
+    .line 626
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/LockPatternView;->invalidate()V
 
+    .line 634
     :cond_5
     const/16 v26, 0x1
 
     goto/16 :goto_0
 
+    .line 636
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -2889,6 +3202,7 @@
 
     move-result v17
 
+    .line 637
     .local v17, patternSizePreHitDetect:I
     move-object/from16 v0, p0
 
@@ -2900,6 +3214,7 @@
 
     move-result-object v9
 
+    .line 638
     .restart local v9       #hitCell:Lcom/android/internal/widget/LockPatternView$Cell;
     move-object/from16 v0, p0
 
@@ -2911,6 +3226,7 @@
 
     move-result v16
 
+    .line 639
     .local v16, patternSize:I
     if-eqz v9, :cond_6
 
@@ -2930,6 +3246,7 @@
 
     if-ne v0, v1, :cond_6
 
+    .line 640
     const/16 v26, 0x1
 
     move/from16 v0, v26
@@ -2938,6 +3255,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/widget/LockPatternView;->mPatternInProgress:Z
 
+    .line 641
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
@@ -2946,6 +3264,7 @@
 
     invoke-interface/range {v26 .. v26}, Lcom/android/internal/widget/LockPatternView$OnPatternListener;->onPatternStart()V
 
+    .line 645
     :cond_6
     move-object/from16 v0, p0
 
@@ -2959,6 +3278,7 @@
 
     move-result v6
 
+    .line 646
     .local v6, dx:F
     move-object/from16 v0, p0
 
@@ -2972,6 +3292,7 @@
 
     move-result v7
 
+    .line 647
     .local v7, dy:F
     add-float v26, v6, v7
 
@@ -2989,12 +3310,14 @@
 
     if-lez v26, :cond_8
 
+    .line 648
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/internal/widget/LockPatternView;->mInProgressX:F
 
     move v13, v0
 
+    .line 649
     .local v13, oldX:F
     move-object/from16 v0, p0
 
@@ -3002,6 +3325,7 @@
 
     move v14, v0
 
+    .line 651
     .local v14, oldY:F
     move/from16 v0, v24
 
@@ -3009,12 +3333,14 @@
 
     iput v0, v1, Lcom/android/internal/widget/LockPatternView;->mInProgressX:F
 
+    .line 652
     move/from16 v0, v25
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/widget/LockPatternView;->mInProgressY:F
 
+    .line 654
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/internal/widget/LockPatternView;->mPatternInProgress:Z
@@ -3025,12 +3351,14 @@
 
     if-lez v16, :cond_10
 
+    .line 655
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     move-object v15, v0
 
+    .line 656
     .local v15, pattern:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     move-object/from16 v0, p0
 
@@ -3050,6 +3378,7 @@
 
     mul-float v18, v26, v27
 
+    .line 658
     .local v18, radius:F
     const/16 v26, 0x1
 
@@ -3065,6 +3394,7 @@
 
     check-cast v11, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 660
     .local v11, lastCell:Lcom/android/internal/widget/LockPatternView$Cell;
     move-object v0, v11
 
@@ -3080,6 +3410,7 @@
 
     move-result v20
 
+    .line 661
     .restart local v20       #startX:F
     move-object v0, v11
 
@@ -3095,6 +3426,7 @@
 
     move-result v21
 
+    .line 668
     .restart local v21       #startY:F
     move-object/from16 v0, p0
 
@@ -3102,27 +3434,34 @@
 
     move-object v10, v0
 
+    .line 670
     .local v10, invalidateRect:Landroid/graphics/Rect;
     cmpg-float v26, v20, v24
 
     if-gez v26, :cond_9
 
+    .line 671
     move/from16 v12, v20
 
+    .line 672
     .local v12, left:F
     move/from16 v19, v24
 
+    .line 678
     .local v19, right:F
     :goto_2
     cmpg-float v26, v21, v25
 
     if-gez v26, :cond_a
 
+    .line 679
     move/from16 v22, v21
 
+    .line 680
     .local v22, top:F
     move/from16 v5, v25
 
+    .line 687
     .local v5, bottom:F
     :goto_3
     sub-float v26, v12, v18
@@ -3169,23 +3508,30 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 690
     cmpg-float v26, v20, v13
 
     if-gez v26, :cond_b
 
+    .line 691
     move/from16 v12, v20
 
+    .line 692
     move/from16 v19, v13
 
+    .line 698
     :goto_4
     cmpg-float v26, v21, v14
 
     if-gez v26, :cond_c
 
+    .line 699
     move/from16 v22, v21
 
+    .line 700
     move v5, v14
 
+    .line 707
     :goto_5
     sub-float v26, v12, v18
 
@@ -3231,8 +3577,10 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->union(IIII)V
 
+    .line 711
     if-eqz v9, :cond_7
 
+    .line 712
     move-object v0, v9
 
     iget v0, v0, Lcom/android/internal/widget/LockPatternView$Cell;->column:I
@@ -3247,6 +3595,7 @@
 
     move-result v20
 
+    .line 713
     move-object v0, v9
 
     iget v0, v0, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
@@ -3261,6 +3610,7 @@
 
     move-result v21
 
+    .line 715
     const/16 v26, 0x2
 
     move/from16 v0, v16
@@ -3269,6 +3619,7 @@
 
     if-lt v0, v1, :cond_f
 
+    .line 717
     const/16 v26, 0x1
 
     sub-int v26, v16, v26
@@ -3288,6 +3639,7 @@
     .end local v9           #hitCell:Lcom/android/internal/widget/LockPatternView$Cell;
     check-cast v9, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 718
     .restart local v9       #hitCell:Lcom/android/internal/widget/LockPatternView$Cell;
     move-object v0, v9
 
@@ -3303,6 +3655,7 @@
 
     move-result v13
 
+    .line 719
     move-object v0, v9
 
     iget v0, v0, Lcom/android/internal/widget/LockPatternView$Cell;->row:I
@@ -3317,23 +3670,30 @@
 
     move-result v14
 
+    .line 721
     cmpg-float v26, v20, v13
 
     if-gez v26, :cond_d
 
+    .line 722
     move/from16 v12, v20
 
+    .line 723
     move/from16 v19, v13
 
+    .line 729
     :goto_6
     cmpg-float v26, v21, v14
 
     if-gez v26, :cond_e
 
+    .line 730
     move/from16 v22, v21
 
+    .line 731
     move v5, v14
 
+    .line 741
     :goto_7
     move-object/from16 v0, p0
 
@@ -3345,6 +3705,7 @@
 
     div-float v23, v26, v27
 
+    .line 742
     .restart local v23       #widthOffset:F
     move-object/from16 v0, p0
 
@@ -3356,6 +3717,7 @@
 
     div-float v8, v26, v27
 
+    .line 744
     .restart local v8       #heightOffset:F
     sub-float v26, v12, v23
 
@@ -3401,6 +3763,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 749
     .end local v8           #heightOffset:F
     .end local v23           #widthOffset:F
     :cond_7
@@ -3410,6 +3773,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternView;->invalidate(Landroid/graphics/Rect;)V
 
+    .line 754
     .end local v5           #bottom:F
     .end local v10           #invalidateRect:Landroid/graphics/Rect;
     .end local v11           #lastCell:Lcom/android/internal/widget/LockPatternView$Cell;
@@ -3428,6 +3792,7 @@
 
     goto/16 :goto_0
 
+    .line 674
     .restart local v10       #invalidateRect:Landroid/graphics/Rect;
     .restart local v11       #lastCell:Lcom/android/internal/widget/LockPatternView$Cell;
     .restart local v13       #oldX:F
@@ -3439,60 +3804,74 @@
     :cond_9
     move/from16 v12, v24
 
+    .line 675
     .restart local v12       #left:F
     move/from16 v19, v20
 
     .restart local v19       #right:F
     goto/16 :goto_2
 
+    .line 682
     :cond_a
     move/from16 v22, v25
 
+    .line 683
     .restart local v22       #top:F
     move/from16 v5, v21
 
     .restart local v5       #bottom:F
     goto/16 :goto_3
 
+    .line 694
     :cond_b
     move v12, v13
 
+    .line 695
     move/from16 v19, v20
 
     goto/16 :goto_4
 
+    .line 702
     :cond_c
     move/from16 v22, v14
 
+    .line 703
     move/from16 v5, v21
 
     goto/16 :goto_5
 
+    .line 725
     :cond_d
     move v12, v13
 
+    .line 726
     move/from16 v19, v20
 
     goto :goto_6
 
+    .line 733
     :cond_e
     move/from16 v22, v14
 
+    .line 734
     move/from16 v5, v21
 
     goto :goto_7
 
+    .line 737
     :cond_f
     move/from16 v19, v20
 
     move/from16 v12, v20
 
+    .line 738
     move/from16 v5, v21
 
     move/from16 v22, v21
 
     goto :goto_7
 
+    .line 751
     .end local v5           #bottom:F
     .end local v10           #invalidateRect:Landroid/graphics/Rect;
     .end local v11           #lastCell:Lcom/android/internal/widget/LockPatternView$Cell;
@@ -3508,6 +3887,7 @@
 
     goto :goto_8
 
+    .line 756
     .end local v6           #dx:F
     .end local v7           #dy:F
     .end local v9           #hitCell:Lcom/android/internal/widget/LockPatternView$Cell;
@@ -3518,6 +3898,7 @@
     :pswitch_3
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/widget/LockPatternView;->resetPattern()V
 
+    .line 757
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
@@ -3526,6 +3907,7 @@
 
     if-eqz v26, :cond_11
 
+    .line 758
     const/16 v26, 0x0
 
     move/from16 v0, v26
@@ -3534,6 +3916,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/widget/LockPatternView;->mPatternInProgress:Z
 
+    .line 759
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
@@ -3542,11 +3925,13 @@
 
     invoke-interface/range {v26 .. v26}, Lcom/android/internal/widget/LockPatternView$OnPatternListener;->onPatternCleared()V
 
+    .line 767
     :cond_11
     const/16 v26, 0x1
 
     goto/16 :goto_0
 
+    .line 590
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -3561,12 +3946,15 @@
     .parameter "displayMode"
 
     .prologue
+    .line 379
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDisplayMode:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
+    .line 380
     sget-object v1, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Animate:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     if-ne p1, v1, :cond_1
 
+    .line 381
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -3575,14 +3963,16 @@
 
     if-nez v1, :cond_0
 
+    .line 382
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string v2, "you must have a pattern to animate if you want to set the display mode to animate"
+    const-string/jumbo v2, "you must have a pattern to animate if you want to set the display mode to animate"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
+    .line 385
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -3590,6 +3980,7 @@
 
     iput-wide v1, p0, Lcom/android/internal/widget/LockPatternView;->mAnimatingPeriodStart:J
 
+    .line 386
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
@@ -3600,6 +3991,7 @@
 
     check-cast v0, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 387
     .local v0, first:Lcom/android/internal/widget/LockPatternView$Cell;
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternView$Cell;->getColumn()I
 
@@ -3611,6 +4003,7 @@
 
     iput v1, p0, Lcom/android/internal/widget/LockPatternView;->mInProgressX:F
 
+    .line 388
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternView$Cell;->getRow()I
 
     move-result v1
@@ -3621,12 +4014,15 @@
 
     iput v1, p0, Lcom/android/internal/widget/LockPatternView;->mInProgressY:F
 
+    .line 389
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternView;->clearPatternDrawLookup()V
 
+    .line 391
     .end local v0           #first:Lcom/android/internal/widget/LockPatternView$Cell;
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternView;->invalidate()V
 
+    .line 392
     return-void
 .end method
 
@@ -3635,8 +4031,10 @@
     .parameter "inStealthMode"
 
     .prologue
+    .line 333
     iput-boolean p1, p0, Lcom/android/internal/widget/LockPatternView;->mInStealthMode:Z
 
+    .line 334
     return-void
 .end method
 
@@ -3645,8 +4043,10 @@
     .parameter "onPatternListener"
 
     .prologue
+    .line 352
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternView;->mOnPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
 
+    .line 353
     return-void
 .end method
 
@@ -3666,17 +4066,21 @@
     .end annotation
 
     .prologue
+    .line 362
     .local p2, pattern:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
+    .line 363
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPattern:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
+    .line 364
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternView;->clearPatternDrawLookup()V
 
+    .line 365
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -3695,6 +4099,7 @@
 
     check-cast v0, Lcom/android/internal/widget/LockPatternView$Cell;
 
+    .line 366
     .local v0, cell:Lcom/android/internal/widget/LockPatternView$Cell;
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternView;->mPatternDrawLookup:[[Z
 
@@ -3714,10 +4119,12 @@
 
     goto :goto_0
 
+    .line 369
     .end local v0           #cell:Lcom/android/internal/widget/LockPatternView$Cell;
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternView;->setDisplayMode(Lcom/android/internal/widget/LockPatternView$DisplayMode;)V
 
+    .line 370
     return-void
 .end method
 
@@ -3726,7 +4133,9 @@
     .parameter "tactileFeedbackEnabled"
 
     .prologue
+    .line 343
     iput-boolean p1, p0, Lcom/android/internal/widget/LockPatternView;->mTactileFeedbackEnabled:Z
 
+    .line 344
     return-void
 .end method

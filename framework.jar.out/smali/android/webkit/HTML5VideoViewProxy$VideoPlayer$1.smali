@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,14 +36,17 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 132
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$000()Ljava/util/Timer;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
 
+    .line 133
     invoke-static {v2}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$002(Ljava/util/Timer;)Ljava/util/Timer;
 
+    .line 134
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$100()Landroid/widget/VideoView;
 
     move-result-object v0
@@ -53,23 +57,27 @@
 
     if-eqz v0, :cond_0
 
+    .line 135
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$100()Landroid/widget/VideoView;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->stopPlayback()V
 
+    .line 137
     :cond_0
     sget-boolean v0, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->isVideoSelfEnded:Z
 
     if-eqz v0, :cond_2
 
+    .line 138
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$200()Landroid/webkit/HTML5VideoViewProxy;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/webkit/HTML5VideoViewProxy;->dispatchOnEnded()V
 
+    .line 143
     :goto_0
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$200()Landroid/webkit/HTML5VideoViewProxy;
 
@@ -85,12 +93,15 @@
 
     invoke-virtual {v0}, Landroid/webkit/ViewManager;->showAll()V
 
+    .line 145
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->isVideoSelfEnded:Z
 
+    .line 146
     invoke-static {v2}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$202(Landroid/webkit/HTML5VideoViewProxy;)Landroid/webkit/HTML5VideoViewProxy;
 
+    .line 147
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$300()Landroid/widget/FrameLayout;
 
     move-result-object v0
@@ -101,14 +112,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
+    .line 148
     invoke-static {v2}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$102(Landroid/widget/VideoView;)Landroid/widget/VideoView;
 
+    .line 149
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$400()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 150
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$300()Landroid/widget/FrameLayout;
 
     move-result-object v0
@@ -119,13 +133,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
+    .line 151
     invoke-static {v2}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$402(Landroid/view/View;)Landroid/view/View;
 
+    .line 153
     :cond_1
     invoke-static {v2}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$302(Landroid/widget/FrameLayout;)Landroid/widget/FrameLayout;
 
+    .line 154
     return-void
 
+    .line 140
     :cond_2
     invoke-static {}, Landroid/webkit/HTML5VideoViewProxy$VideoPlayer;->access$200()Landroid/webkit/HTML5VideoViewProxy;
 

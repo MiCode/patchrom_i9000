@@ -78,6 +78,7 @@
     .locals 1
 
     .prologue
+    .line 196
     new-instance v0, Lcom/broadcom/bt/service/map/MessageInfo$1;
 
     invoke-direct {v0}, Lcom/broadcom/bt/service/map/MessageInfo$1;-><init>()V
@@ -95,56 +96,74 @@
 
     const-string v1, ""
 
+    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     iput v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mParameterMask:I
 
+    .line 33
     iput v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgSize:I
 
+    .line 34
     iput v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mAttachmentSize:I
 
+    .line 35
     iput-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mText:Z
 
+    .line 36
     iput-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsHighPriority:Z
 
+    .line 37
     iput-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsRead:Z
 
+    .line 38
     iput-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsSent:Z
 
+    .line 39
     iput-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsProtected:Z
 
+    .line 40
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgHandle:Ljava/lang/String;
 
+    .line 43
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSubject:Ljava/lang/String;
 
+    .line 44
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mDateTime:Ljava/lang/String;
 
+    .line 45
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderName:Ljava/lang/String;
 
+    .line 46
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderAddressing:Ljava/lang/String;
 
+    .line 47
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientName:Ljava/lang/String;
 
+    .line 48
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientRddressing:Ljava/lang/String;
 
+    .line 49
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReplyToAddressing:Ljava/lang/String;
 
+    .line 148
     return-void
 .end method
 
@@ -170,132 +189,168 @@
     .parameter "replyto_addressing"
 
     .prologue
+    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mParameterMask:I
 
+    .line 33
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgSize:I
 
+    .line 34
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mAttachmentSize:I
 
+    .line 35
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mText:Z
 
+    .line 36
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsHighPriority:Z
 
+    .line 37
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsRead:Z
 
+    .line 38
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsSent:Z
 
+    .line 39
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsProtected:Z
 
+    .line 40
     const-string v2, ""
 
     iput-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgHandle:Ljava/lang/String;
 
+    .line 43
     const-string v2, ""
 
     iput-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSubject:Ljava/lang/String;
 
+    .line 44
     const-string v2, ""
 
     iput-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mDateTime:Ljava/lang/String;
 
+    .line 45
     const-string v2, ""
 
     iput-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderName:Ljava/lang/String;
 
+    .line 46
     const-string v2, ""
 
     iput-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderAddressing:Ljava/lang/String;
 
+    .line 47
     const-string v2, ""
 
     iput-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientName:Ljava/lang/String;
 
+    .line 48
     const-string v2, ""
 
     iput-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientRddressing:Ljava/lang/String;
 
+    .line 49
     const-string v2, ""
 
     iput-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReplyToAddressing:Ljava/lang/String;
 
+    .line 126
     iput p1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mParameterMask:I
 
+    .line 127
     iput p2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgSize:I
 
+    .line 128
     iput p3, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mAttachmentSize:I
 
+    .line 129
     iput-boolean p4, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mText:Z
 
+    .line 130
     iput-boolean p5, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsHighPriority:Z
 
+    .line 131
     iput-boolean p6, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsRead:Z
 
+    .line 132
     iput-boolean p7, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsSent:Z
 
+    .line 133
     iput-boolean p8, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsProtected:Z
 
+    .line 134
     iput-object p9, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgHandle:Ljava/lang/String;
 
+    .line 135
     iput-byte p10, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgType:B
 
+    .line 136
     iput-byte p11, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReceptionStatus:B
 
+    .line 137
     iput-object p12, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSubject:Ljava/lang/String;
 
+    .line 138
     move-object/from16 v0, p13
 
     move-object v1, p0
 
     iput-object v0, v1, Lcom/broadcom/bt/service/map/MessageInfo;->mDateTime:Ljava/lang/String;
 
+    .line 139
     move-object/from16 v0, p14
 
     move-object v1, p0
 
     iput-object v0, v1, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderName:Ljava/lang/String;
 
+    .line 140
     move-object/from16 v0, p15
 
     move-object v1, p0
 
     iput-object v0, v1, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderAddressing:Ljava/lang/String;
 
+    .line 141
     move-object/from16 v0, p16
 
     move-object v1, p0
 
     iput-object v0, v1, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientName:Ljava/lang/String;
 
+    .line 142
     move-object/from16 v0, p17
 
     move-object v1, p0
 
     iput-object v0, v1, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientRddressing:Ljava/lang/String;
 
+    .line 143
     move-object/from16 v0, p18
 
     move-object v1, p0
 
     iput-object v0, v1, Lcom/broadcom/bt/service/map/MessageInfo;->mReplyToAddressing:Ljava/lang/String;
 
+    .line 145
     return-void
 .end method
 
@@ -310,56 +365,74 @@
 
     const-string v1, ""
 
+    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     iput v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mParameterMask:I
 
+    .line 33
     iput v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgSize:I
 
+    .line 34
     iput v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mAttachmentSize:I
 
+    .line 35
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mText:Z
 
+    .line 36
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsHighPriority:Z
 
+    .line 37
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsRead:Z
 
+    .line 38
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsSent:Z
 
+    .line 39
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsProtected:Z
 
+    .line 40
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgHandle:Ljava/lang/String;
 
+    .line 43
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSubject:Ljava/lang/String;
 
+    .line 44
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mDateTime:Ljava/lang/String;
 
+    .line 45
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderName:Ljava/lang/String;
 
+    .line 46
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderAddressing:Ljava/lang/String;
 
+    .line 47
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientName:Ljava/lang/String;
 
+    .line 48
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientRddressing:Ljava/lang/String;
 
+    .line 49
     const-string v0, ""
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReplyToAddressing:Ljava/lang/String;
 
+    .line 79
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -368,6 +441,7 @@
 
     iput v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mParameterMask:I
 
+    .line 80
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -376,6 +450,7 @@
 
     iput v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgSize:I
 
+    .line 81
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -384,14 +459,17 @@
 
     iput v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mAttachmentSize:I
 
+    .line 82
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 83
     iput-boolean v3, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mText:Z
 
+    .line 87
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -399,8 +477,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 88
     iput-boolean v3, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsHighPriority:Z
 
+    .line 92
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -408,8 +488,10 @@
 
     if-eqz v0, :cond_2
 
+    .line 93
     iput-boolean v3, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsRead:Z
 
+    .line 97
     :goto_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -417,8 +499,10 @@
 
     if-eqz v0, :cond_3
 
+    .line 98
     iput-boolean v3, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsSent:Z
 
+    .line 102
     :goto_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -426,8 +510,10 @@
 
     if-eqz v0, :cond_4
 
+    .line 103
     iput-boolean v3, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsProtected:Z
 
+    .line 108
     :goto_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -435,82 +521,97 @@
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgHandle:Ljava/lang/String;
 
+    .line 109
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgType:B
 
+    .line 110
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReceptionStatus:B
 
+    .line 111
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSubject:Ljava/lang/String;
 
+    .line 112
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mDateTime:Ljava/lang/String;
 
+    .line 113
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderName:Ljava/lang/String;
 
+    .line 114
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderAddressing:Ljava/lang/String;
 
+    .line 115
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientName:Ljava/lang/String;
 
+    .line 116
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientRddressing:Ljava/lang/String;
 
+    .line 117
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReplyToAddressing:Ljava/lang/String;
 
+    .line 118
     return-void
 
+    .line 85
     :cond_0
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mText:Z
 
     goto :goto_0
 
+    .line 90
     :cond_1
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsHighPriority:Z
 
     goto :goto_1
 
+    .line 95
     :cond_2
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsRead:Z
 
     goto :goto_2
 
+    .line 100
     :cond_3
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsSent:Z
 
     goto :goto_3
 
+    .line 105
     :cond_4
     iput-boolean v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsProtected:Z
 
@@ -523,6 +624,7 @@
     .locals 1
 
     .prologue
+    .line 151
     const/4 v0, 0x0
 
     return v0
@@ -534,14 +636,16 @@
     .prologue
     const-string v3, ""
 
+    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0xc8
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 54
     .local v0, s:Ljava/lang/StringBuilder;
-    const-string v1, "parameter_mask = "
+    const-string/jumbo v1, "parameter_mask = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -551,6 +655,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 55
     const-string v1, " msg_size = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -561,6 +666,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 56
     const-string v1, " attachment_size = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -571,6 +677,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 57
     const-string v1, " text = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -581,6 +688,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    .line 58
     const-string v1, " highpriority = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -591,6 +699,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    .line 59
     const-string v1, " read = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -601,6 +710,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    .line 60
     const-string v1, " sent = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -611,6 +721,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    .line 61
     const-string v1, " is_protected = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -621,6 +732,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    .line 62
     const-string v1, " msg_handle  = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -631,6 +743,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 63
     const-string v1, " msg_type = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -641,6 +754,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 64
     const-string v1, " reception_status = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -651,6 +765,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 65
     const-string v1, " subject = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -668,6 +783,7 @@
     :goto_0
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 66
     const-string v1, " date_time = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -678,6 +794,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 67
     const-string v1, " sender_name = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -695,6 +812,7 @@
     :goto_1
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 68
     const-string v1, " sender_addressing = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -712,6 +830,7 @@
     :goto_2
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 70
     const-string v1, " recepient_name = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -729,6 +848,7 @@
     :goto_3
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 71
     const-string v1, " recipient_addressing = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -746,6 +866,7 @@
     :goto_4
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 73
     const-string v1, " replyto_addressing = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -763,37 +884,44 @@
     :goto_5
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 75
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
+    .line 65
     :cond_0
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSubject:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 67
     :cond_1
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderName:Ljava/lang/String;
 
     goto :goto_1
 
+    .line 68
     :cond_2
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderAddressing:Ljava/lang/String;
 
     goto :goto_2
 
+    .line 70
     :cond_3
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientName:Ljava/lang/String;
 
     goto :goto_3
 
+    .line 71
     :cond_4
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientRddressing:Ljava/lang/String;
 
     goto :goto_4
 
+    .line 73
     :cond_5
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReplyToAddressing:Ljava/lang/String;
 
@@ -810,121 +938,150 @@
 
     const/4 v2, 0x1
 
+    .line 155
     iget v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mParameterMask:I
 
     int-to-long v0, v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 156
     iget v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgSize:I
 
     int-to-long v0, v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 157
     iget v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mAttachmentSize:I
 
     int-to-long v0, v0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 158
     iget-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mText:Z
 
     if-ne v0, v2, :cond_0
 
+    .line 159
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 163
     :goto_0
     iget-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsHighPriority:Z
 
     if-ne v0, v2, :cond_1
 
+    .line 164
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 168
     :goto_1
     iget-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsRead:Z
 
     if-ne v0, v2, :cond_2
 
+    .line 169
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 173
     :goto_2
     iget-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsSent:Z
 
     if-ne v0, v2, :cond_3
 
+    .line 174
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 178
     :goto_3
     iget-boolean v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mIsProtected:Z
 
     if-ne v0, v2, :cond_4
 
+    .line 179
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 184
     :goto_4
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgHandle:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 185
     iget-byte v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mMsgType:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 186
     iget-byte v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReceptionStatus:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 187
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSubject:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 188
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mDateTime:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 189
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 190
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mSenderAddressing:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 191
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 192
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mRecipientRddressing:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 193
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MessageInfo;->mReplyToAddressing:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 194
     return-void
 
+    .line 161
     :cond_0
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByte(B)V
 
     goto :goto_0
 
+    .line 166
     :cond_1
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByte(B)V
 
     goto :goto_1
 
+    .line 171
     :cond_2
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByte(B)V
 
     goto :goto_2
 
+    .line 176
     :cond_3
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByte(B)V
 
     goto :goto_3
 
+    .line 181
     :cond_4
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByte(B)V
 

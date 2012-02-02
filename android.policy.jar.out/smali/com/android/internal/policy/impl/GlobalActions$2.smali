@@ -29,6 +29,7 @@
     .parameter "x4"
 
     .prologue
+    .line 166
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     move-object v0, p0
@@ -55,6 +56,7 @@
     .parameter "on"
 
     .prologue
+    .line 169
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$2;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mConnectivityManager:Landroid/net/ConnectivityManager;
@@ -69,8 +71,10 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->setMobileDataEnabled(Z)V
 
+    .line 170
     return-void
 
+    .line 169
     :cond_0
     const/4 v1, 0x0
 
@@ -81,6 +85,7 @@
     .locals 1
 
     .prologue
+    .line 177
     const/4 v0, 0x0
 
     return v0
@@ -90,6 +95,7 @@
     .locals 1
 
     .prologue
+    .line 173
     const/4 v0, 0x1
 
     return v0

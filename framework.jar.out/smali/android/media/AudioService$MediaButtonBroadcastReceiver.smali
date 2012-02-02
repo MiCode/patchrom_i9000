@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 2415
     iput-object p1, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 2415
     invoke-direct {p0, p1}, Landroid/media/AudioService$MediaButtonBroadcastReceiver;-><init>(Landroid/media/AudioService;)V
 
     return-void
@@ -54,10 +56,12 @@
 
     const-string v6, "AudioService"
 
+    .line 2418
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2419
     .local v0, action:Ljava/lang/String;
     const-string v6, "android.intent.action.MEDIA_BUTTON"
 
@@ -67,10 +71,12 @@
 
     if-nez v6, :cond_1
 
+    .line 2457
     :cond_0
     :goto_0
     return-void
 
+    .line 2422
     :cond_1
     const-string v6, "android.intent.extra.KEY_EVENT"
 
@@ -80,20 +86,24 @@
 
     check-cast v2, Landroid/view/KeyEvent;
 
+    .line 2423
     .local v2, event:Landroid/view/KeyEvent;
     if-eqz v2, :cond_0
 
+    .line 2427
     invoke-static {}, Landroid/media/AudioService;->access$5000()Ljava/lang/Object;
 
     move-result-object v6
 
     monitor-enter v6
 
+    .line 2428
     const/4 v3, 0x0
 
+    .line 2430
     .local v3, isIdle:Z
     :try_start_0
-    const-string v7, "phone"
+    const-string/jumbo v7, "phone"
 
     invoke-static {v7}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -103,6 +113,7 @@
 
     move-result-object v4
 
+    .line 2431
     .local v4, phone:Lcom/android/internal/telephony/ITelephony;
     if-eqz v4, :cond_2
 
@@ -113,6 +124,7 @@
 
     move-result v3
 
+    .line 2436
     .end local v4           #phone:Lcom/android/internal/telephony/ITelephony;
     :cond_2
     :goto_1
@@ -168,6 +180,7 @@
 
     if-nez v3, :cond_4
 
+    .line 2440
     :cond_3
     const-string v7, "AudioService"
 
@@ -197,10 +210,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2441
     monitor-exit v6
 
     goto :goto_0
 
+    .line 2443
     :catchall_0
     move-exception v7
 
@@ -210,11 +225,13 @@
 
     throw v7
 
+    .line 2432
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
+    .line 2433
     .local v1, e:Landroid/os/RemoteException;
     :try_start_2
     const-string v7, "AudioService"
@@ -225,12 +242,14 @@
 
     goto :goto_1
 
+    .line 2443
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_4
     monitor-exit v6
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 2444
     iget-object v6, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mRCStack:Ljava/util/Stack;
@@ -240,6 +259,7 @@
 
     monitor-enter v7
 
+    .line 2445
     :try_start_3
     iget-object v6, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
@@ -254,12 +274,14 @@
 
     if-nez v6, :cond_5
 
+    .line 2447
     new-instance v5, Landroid/content/Intent;
 
     const-string v6, "android.intent.action.MEDIA_BUTTON"
 
     invoke-direct {v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 2448
     .local v5, targetedIntent:Landroid/content/Intent;
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -267,6 +289,7 @@
 
     invoke-virtual {v5, v6}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
+    .line 2449
     iget-object v6, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mRCStack:Ljava/util/Stack;
@@ -284,12 +307,15 @@
 
     invoke-virtual {v5, v6}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
+    .line 2451
     invoke-virtual {p0}, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->abortBroadcast()V
 
+    .line 2453
     const/4 v6, 0x0
 
     invoke-virtual {p1, v5, v6}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    .line 2455
     .end local v5           #targetedIntent:Landroid/content/Intent;
     :cond_5
     monitor-exit v7

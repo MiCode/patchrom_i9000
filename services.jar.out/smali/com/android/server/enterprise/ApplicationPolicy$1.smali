@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 114
     iput-object p1, p0, Lcom/android/server/enterprise/ApplicationPolicy$1;->this$0:Lcom/android/server/enterprise/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,6 +46,7 @@
 
     const-string v4, "ApplicationPolicy"
 
+    .line 118
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/ApplicationPolicy$1;->this$0:Lcom/android/server/enterprise/ApplicationPolicy;
 
@@ -53,6 +55,7 @@
 
     move-result-object v3
 
+    .line 119
     .local v3, pkgName:Ljava/lang/String;
     const-string v4, "ApplicationPolicy"
 
@@ -76,6 +79,7 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 120
     if-eqz v3, :cond_1
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -88,6 +92,7 @@
 
     if-lez v4, :cond_1
 
+    .line 121
     const-string v4, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -98,6 +103,7 @@
 
     if-ne v4, v5, :cond_0
 
+    .line 123
     const-wide/16 v4, 0xbb8
 
     :try_start_1
@@ -105,6 +111,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 128
     :cond_0
     :goto_0
     :try_start_2
@@ -114,6 +121,7 @@
 
     move-result-object v0
 
+    .line 129
     .local v0, appInfo:[Landroid/app/enterprise/ManagedAppInfo;
     if-eqz v0, :cond_1
 
@@ -121,6 +129,7 @@
 
     if-ne v8, v4, :cond_1
 
+    .line 130
     const/4 v4, 0x0
 
     aget-object v4, v0, v4
@@ -131,6 +140,7 @@
 
     move v1, v8
 
+    .line 131
     .local v1, disabledInMDM:Z
     :goto_1
     if-eqz v1, :cond_1
@@ -143,12 +153,14 @@
 
     if-eqz v4, :cond_1
 
+    .line 132
     iget-object v4, p0, Lcom/android/server/enterprise/ApplicationPolicy$1;->this$0:Lcom/android/server/enterprise/ApplicationPolicy;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v3, v5}, Lcom/android/server/enterprise/ApplicationPolicy;->setApplicationState(Ljava/lang/String;Z)Z
 
+    .line 133
     const-string v4, "ApplicationPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -171,6 +183,7 @@
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 140
     .end local v0           #appInfo:[Landroid/app/enterprise/ManagedAppInfo;
     .end local v1           #disabledInMDM:Z
     .end local v3           #pkgName:Ljava/lang/String;
@@ -178,10 +191,12 @@
     :goto_2
     return-void
 
+    .line 124
     .restart local v3       #pkgName:Ljava/lang/String;
     :catch_0
     move-exception v2
 
+    .line 125
     .local v2, e:Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
@@ -189,6 +204,7 @@
 
     goto :goto_0
 
+    .line 137
     .end local v2           #e:Ljava/lang/Exception;
     .end local v3           #pkgName:Ljava/lang/String;
     :catch_1
@@ -196,6 +212,7 @@
 
     move-object v2, v4
 
+    .line 138
     .restart local v2       #e:Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -207,5 +224,6 @@
     :cond_2
     move v1, v7
 
+    .line 130
     goto :goto_1
 .end method

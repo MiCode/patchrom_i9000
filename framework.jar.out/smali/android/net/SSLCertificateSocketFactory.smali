@@ -30,6 +30,7 @@
     .locals 3
 
     .prologue
+    .line 89
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljavax/net/ssl/TrustManager;
@@ -44,6 +45,7 @@
 
     sput-object v0, Landroid/net/SSLCertificateSocketFactory;->INSECURE_TRUST_MANAGER:[Ljavax/net/ssl/TrustManager;
 
+    .line 97
     invoke-static {}, Ljavax/net/ssl/HttpsURLConnection;->getDefaultHostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
 
     move-result-object v0
@@ -60,12 +62,14 @@
     .end annotation
 
     .prologue
+    .line 115
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p1, v0, v1}, Landroid/net/SSLCertificateSocketFactory;-><init>(ILandroid/net/SSLSessionCache;Z)V
 
+    .line 116
     return-void
 .end method
 
@@ -78,25 +82,34 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 119
     invoke-direct {p0}, Ljavax/net/ssl/SSLSocketFactory;-><init>()V
 
+    .line 101
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mKeyManager:[Ljavax/net/ssl/KeyManager;
 
+    .line 104
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
+    .line 105
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
+    .line 120
     iput p1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
+    .line 121
     if-nez p2, :cond_0
 
     :goto_0
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSessionCache:Lorg/apache/harmony/xnet/provider/jsse/SSLClientSessionCache;
 
+    .line 122
     iput-boolean p3, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
+    .line 123
     return-void
 
+    .line 121
     :cond_0
     iget-object v0, p2, Landroid/net/SSLSessionCache;->mSessionCache:Lorg/apache/harmony/xnet/provider/jsse/SSLClientSessionCache;
 
@@ -108,6 +121,7 @@
     .parameter "handshakeTimeoutMillis"
 
     .prologue
+    .line 133
     new-instance v0, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v1, 0x0
@@ -125,6 +139,7 @@
     .parameter "cache"
 
     .prologue
+    .line 146
     new-instance v0, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v1, 0x1
@@ -141,15 +156,18 @@
     .parameter "cache"
 
     .prologue
+    .line 151
     new-instance v0, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, p1, p2, v1}, Landroid/net/SSLCertificateSocketFactory;-><init>(ILandroid/net/SSLSessionCache;Z)V
 
+    .line 152
     .local v0, ret:Landroid/net/SSLCertificateSocketFactory;
     iput-object p0, v0, Landroid/net/SSLCertificateSocketFactory;->mKeyManager:[Ljavax/net/ssl/KeyManager;
 
+    .line 153
     return-object v0
 .end method
 
@@ -159,6 +177,7 @@
     .prologue
     const-string v0, "SSLCertificateSocketFactory"
 
+    .line 257
     monitor-enter p0
 
     :try_start_0
@@ -172,21 +191,25 @@
 
     if-eqz v0, :cond_3
 
+    .line 258
     :cond_0
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
     if-nez v0, :cond_1
 
+    .line 259
     iget-boolean v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
     if-eqz v0, :cond_2
 
+    .line 260
     const-string v0, "SSLCertificateSocketFactory"
 
     const-string v1, "*** BYPASSING SSL SECURITY CHECKS (socket.relaxsslcheck=yes) ***"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 264
     :goto_0
     sget-object v0, Landroid/net/SSLCertificateSocketFactory;->INSECURE_TRUST_MANAGER:[Ljavax/net/ssl/TrustManager;
 
@@ -196,16 +219,19 @@
 
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
+    .line 266
     :cond_1
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 271
     :goto_1
     monitor-exit p0
 
     return-object v0
 
+    .line 262
     :cond_2
     :try_start_1
     const-string v0, "SSLCertificateSocketFactory"
@@ -218,6 +244,7 @@
 
     goto :goto_0
 
+    .line 257
     :catchall_0
     move-exception v0
 
@@ -225,12 +252,14 @@
 
     throw v0
 
+    .line 268
     :cond_3
     :try_start_2
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
     if-nez v0, :cond_4
 
+    .line 269
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/net/SSLCertificateSocketFactory;->makeSocketFactory([Ljavax/net/ssl/TrustManager;)Ljavax/net/ssl/SSLSocketFactory;
@@ -239,6 +268,7 @@
 
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
+    .line 271
     :cond_4
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
     :try_end_2
@@ -253,6 +283,7 @@
     .parameter "cache"
 
     .prologue
+    .line 193
     new-instance v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;
 
     new-instance v1, Landroid/net/SSLCertificateSocketFactory;
@@ -272,6 +303,7 @@
     .parameter "cache"
 
     .prologue
+    .line 170
     new-instance v0, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v1, 0x0
@@ -288,15 +320,18 @@
     .parameter "cache"
 
     .prologue
+    .line 175
     new-instance v0, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, p2, v1}, Landroid/net/SSLCertificateSocketFactory;-><init>(ILandroid/net/SSLSessionCache;Z)V
 
+    .line 176
     .local v0, ret:Landroid/net/SSLCertificateSocketFactory;
     iput-object p0, v0, Landroid/net/SSLCertificateSocketFactory;->mKeyManager:[Ljavax/net/ssl/KeyManager;
 
+    .line 177
     return-object v0
 .end method
 
@@ -304,9 +339,10 @@
     .locals 2
 
     .prologue
+    .line 251
     const-string v0, "1"
 
-    const-string v1, "ro.debuggable"
+    const-string/jumbo v1, "ro.debuggable"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -318,9 +354,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "yes"
+    const-string/jumbo v0, "yes"
 
-    const-string v1, "socket.relaxsslcheck"
+    const-string/jumbo v1, "socket.relaxsslcheck"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -348,11 +384,13 @@
     .parameter "trustManagers"
 
     .prologue
+    .line 237
     :try_start_0
     new-instance v1, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;
 
     invoke-direct {v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;-><init>()V
 
+    .line 240
     .local v1, sslContext:Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;
     iget-object v2, p0, Landroid/net/SSLCertificateSocketFactory;->mKeyManager:[Ljavax/net/ssl/KeyManager;
 
@@ -360,6 +398,7 @@
 
     invoke-virtual {v1, v2, p1, v3}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;->engineInit([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
+    .line 242
     invoke-virtual {v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;->engineGetClientSessionContext()Lorg/apache/harmony/xnet/provider/jsse/ClientSessionContext;
 
     move-result-object v2
@@ -368,28 +407,33 @@
 
     invoke-virtual {v2, v3}, Lorg/apache/harmony/xnet/provider/jsse/ClientSessionContext;->setPersistentCache(Lorg/apache/harmony/xnet/provider/jsse/SSLClientSessionCache;)V
 
+    .line 243
     invoke-virtual {v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;->engineGetSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
     :try_end_0
     .catch Ljava/security/KeyManagementException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
+    .line 246
     .end local v1           #sslContext:Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;
     .end local p0
     :goto_0
     return-object v2
 
+    .line 244
     .restart local p0
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 245
     .local v0, e:Ljava/security/KeyManagementException;
     const-string v2, "SSLCertificateSocketFactory"
 
     invoke-static {v2, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 246
     invoke-static {}, Ljavax/net/ssl/SSLSocketFactory;->getDefault()Ljavax/net/SocketFactory;
 
     move-result-object p0
@@ -413,10 +457,12 @@
     .end annotation
 
     .prologue
+    .line 215
     instance-of v3, p0, Ljavax/net/ssl/SSLSocket;
 
     if-nez v3, :cond_0
 
+    .line 216
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "Attempt to verify non-SSL socket"
@@ -425,6 +471,7 @@
 
     throw v3
 
+    .line 219
     :cond_0
     invoke-static {}, Landroid/net/SSLCertificateSocketFactory;->isSslCheckRelaxed()Z
 
@@ -432,22 +479,27 @@
 
     if-nez v3, :cond_2
 
+    .line 222
     move-object v0, p0
 
     check-cast v0, Ljavax/net/ssl/SSLSocket;
 
     move-object v2, v0
 
+    .line 223
     .local v2, ssl:Ljavax/net/ssl/SSLSocket;
     invoke-virtual {v2}, Ljavax/net/ssl/SSLSocket;->startHandshake()V
 
+    .line 225
     invoke-virtual {v2}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
 
     move-result-object v1
 
+    .line 226
     .local v1, session:Ljavax/net/ssl/SSLSession;
     if-nez v1, :cond_1
 
+    .line 227
     new-instance v3, Ljavax/net/ssl/SSLException;
 
     const-string v4, "Cannot verify SSL socket without session"
@@ -456,6 +508,7 @@
 
     throw v3
 
+    .line 229
     :cond_1
     sget-object v3, Landroid/net/SSLCertificateSocketFactory;->HOSTNAME_VERIFIER:Ljavax/net/ssl/HostnameVerifier;
 
@@ -465,6 +518,7 @@
 
     if-nez v3, :cond_2
 
+    .line 230
     new-instance v3, Ljavax/net/ssl/SSLPeerUnverifiedException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -489,6 +543,7 @@
 
     throw v3
 
+    .line 233
     .end local v1           #session:Ljavax/net/ssl/SSLSession;
     .end local v2           #ssl:Ljavax/net/ssl/SSLSocket;
     :cond_2
@@ -506,6 +561,7 @@
     .end annotation
 
     .prologue
+    .line 301
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -516,11 +572,13 @@
 
     check-cast v0, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
 
+    .line 302
     .local v0, s:Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
+    .line 303
     return-object v0
 .end method
 
@@ -535,6 +593,7 @@
     .end annotation
 
     .prologue
+    .line 362
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -545,17 +604,21 @@
 
     check-cast v0, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
 
+    .line 363
     .local v0, s:Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
+    .line 364
     iget-boolean v1, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
     if-eqz v1, :cond_0
 
+    .line 365
     invoke-static {v0, p1}, Landroid/net/SSLCertificateSocketFactory;->verifyHostname(Ljava/net/Socket;Ljava/lang/String;)V
 
+    .line 367
     :cond_0
     return-object v0
 .end method
@@ -573,6 +636,7 @@
     .end annotation
 
     .prologue
+    .line 345
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -583,17 +647,21 @@
 
     check-cast v0, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
 
+    .line 347
     .local v0, s:Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
+    .line 348
     iget-boolean v1, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
     if-eqz v1, :cond_0
 
+    .line 349
     invoke-static {v0, p1}, Landroid/net/SSLCertificateSocketFactory;->verifyHostname(Ljava/net/Socket;Ljava/lang/String;)V
 
+    .line 351
     :cond_0
     return-object v0
 .end method
@@ -609,6 +677,7 @@
     .end annotation
 
     .prologue
+    .line 331
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -619,11 +688,13 @@
 
     check-cast v0, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
 
+    .line 332
     .local v0, s:Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
+    .line 333
     return-object v0
 .end method
 
@@ -640,6 +711,7 @@
     .end annotation
 
     .prologue
+    .line 316
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -650,11 +722,13 @@
 
     check-cast v0, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
 
+    .line 318
     .local v0, s:Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
+    .line 319
     return-object v0
 .end method
 
@@ -671,6 +745,7 @@
     .end annotation
 
     .prologue
+    .line 283
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -681,17 +756,21 @@
 
     check-cast v0, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
 
+    .line 284
     .local v0, s:Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
+    .line 285
     iget-boolean v1, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
     if-eqz v1, :cond_0
 
+    .line 286
     invoke-static {v0, p2}, Landroid/net/SSLCertificateSocketFactory;->verifyHostname(Ljava/net/Socket;Ljava/lang/String;)V
 
+    .line 288
     :cond_0
     return-object v0
 .end method
@@ -700,6 +779,7 @@
     .locals 1
 
     .prologue
+    .line 372
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
@@ -715,6 +795,7 @@
     .locals 1
 
     .prologue
+    .line 377
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0

@@ -48,10 +48,12 @@
     .parameter "context"
 
     .prologue
+    .line 1147
     iput-object p1, p0, Lcom/android/server/sip/SipService$WakeupTimer;->this$0:Lcom/android/server/sip/SipService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 1142
     new-instance v1, Ljava/util/TreeSet;
 
     new-instance v2, Lcom/android/server/sip/SipService$MyEventComparator;
@@ -64,8 +66,10 @@
 
     iput-object v1, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
+    .line 1148
     iput-object p2, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mContext:Landroid/content/Context;
 
+    .line 1149
     const-string v1, "alarm"
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -76,6 +80,7 @@
 
     iput-object v1, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mAlarmManager:Landroid/app/AlarmManager;
 
+    .line 1152
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->getAction()Ljava/lang/String;
@@ -84,9 +89,11 @@
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 1153
     .local v0, filter:Landroid/content/IntentFilter;
     invoke-virtual {p2, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 1154
     return-void
 .end method
 
@@ -94,16 +101,19 @@
     .locals 2
 
     .prologue
+    .line 1179
     iget-object v0, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mAlarmManager:Landroid/app/AlarmManager;
 
     iget-object v1, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mPendingIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
+    .line 1180
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mPendingIntent:Landroid/app/PendingIntent;
 
+    .line 1181
     return-void
 .end method
 
@@ -112,6 +122,7 @@
     .parameter "triggerTime"
 
     .prologue
+    .line 1350
     monitor-enter p0
 
     :try_start_0
@@ -131,12 +142,14 @@
 
     if-eqz v2, :cond_1
 
+    .line 1367
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 1352
     :cond_1
     :try_start_1
     iget-object v2, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
@@ -159,6 +172,7 @@
 
     check-cast v0, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1353
     .local v0, event:Lcom/android/server/sip/SipService$MyEvent;
     iget-wide v2, v0, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
@@ -166,6 +180,7 @@
 
     if-eqz v2, :cond_3
 
+    .line 1366
     .end local v0           #event:Lcom/android/server/sip/SipService$MyEvent;
     :cond_2
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->scheduleNext()V
@@ -174,6 +189,7 @@
 
     goto :goto_0
 
+    .line 1350
     .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
     move-exception v2
@@ -182,6 +198,7 @@
 
     throw v2
 
+    .line 1356
     .restart local v0       #event:Lcom/android/server/sip/SipService$MyEvent;
     .restart local v1       #i$:Ljava/util/Iterator;
     :cond_3
@@ -190,6 +207,7 @@
 
     iput-wide v2, v0, Lcom/android/server/sip/SipService$MyEvent;->mLastTriggerTime:J
 
+    .line 1357
     iget-wide v2, v0, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
     iget v4, v0, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
@@ -200,6 +218,7 @@
 
     iput-wide v2, v0, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
+    .line 1360
     iget-object v2, p0, Lcom/android/server/sip/SipService$WakeupTimer;->this$0:Lcom/android/server/sip/SipService;
 
     #calls: Lcom/android/server/sip/SipService;->getExecutor()Lcom/android/server/sip/SipService$MyExecutor;
@@ -220,6 +239,7 @@
     .locals 1
 
     .prologue
+    .line 1370
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -232,10 +252,12 @@
     .parameter "event"
 
     .prologue
+    .line 1210
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
 
+    .line 1211
     .local v3, now:J
     iget-object v7, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
@@ -245,6 +267,7 @@
 
     if-eqz v7, :cond_0
 
+    .line 1212
     iget v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
 
     int-to-long v7, v7
@@ -253,13 +276,16 @@
 
     iput-wide v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
+    .line 1213
     iget-object v7, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v7, p1}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
+    .line 1236
     :goto_0
     return-void
 
+    .line 1216
     :cond_0
     iget-object v7, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
@@ -269,14 +295,17 @@
 
     check-cast v0, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1217
     .local v0, firstEvent:Lcom/android/server/sip/SipService$MyEvent;
     iget v2, v0, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
 
+    .line 1218
     .local v2, minPeriod:I
     iget v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mMaxPeriod:I
 
     if-gt v2, v7, :cond_1
 
+    .line 1219
     iget v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mMaxPeriod:I
 
     div-int/2addr v7, v2
@@ -285,8 +314,10 @@
 
     iput v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
 
+    .line 1220
     iget v1, p1, Lcom/android/server/sip/SipService$MyEvent;->mMaxPeriod:I
 
+    .line 1221
     .local v1, interval:I
     iget-wide v7, v0, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
@@ -296,10 +327,12 @@
 
     sub-int/2addr v1, v7
 
+    .line 1222
     div-int v7, v1, v2
 
     mul-int v1, v7, v2
 
+    .line 1223
     iget-wide v7, v0, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
     int-to-long v9, v1
@@ -308,12 +341,14 @@
 
     iput-wide v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
+    .line 1224
     iget-object v7, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v7, p1}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 1226
     .end local v1           #interval:I
     :cond_1
     iget v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
@@ -322,6 +357,7 @@
 
     add-long v5, v3, v7
 
+    .line 1227
     .local v5, triggerTime:J
     iget-wide v7, v0, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
@@ -329,10 +365,12 @@
 
     if-gez v7, :cond_2
 
+    .line 1228
     iget-wide v7, v0, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
     iput-wide v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
+    .line 1229
     iget-wide v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mLastTriggerTime:J
 
     iget v9, p1, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
@@ -343,15 +381,18 @@
 
     iput-wide v7, p1, Lcom/android/server/sip/SipService$MyEvent;->mLastTriggerTime:J
 
+    .line 1233
     :goto_1
     iget-object v7, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v7, p1}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
+    .line 1234
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->recalculatePeriods()V
 
     goto :goto_0
 
+    .line 1231
     :cond_2
     iput-wide v5, p1, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
@@ -364,8 +405,10 @@
     .prologue
     const-string v6, "_SIP.WkTimer_"
 
+    .line 1333
     const/4 v0, 0x0
 
+    .line 1334
     .local v0, count:I
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
@@ -387,6 +430,7 @@
 
     check-cast v1, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1335
     .local v1, event:Lcom/android/server/sip/SipService$MyEvent;
     const-string v3, "_SIP.WkTimer_"
 
@@ -442,12 +486,14 @@
 
     invoke-static {v6, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1338
     add-int/lit8 v0, v0, 0x1
 
     const/4 v3, 0x5
 
     if-lt v0, v3, :cond_0
 
+    .line 1340
     .end local v1           #event:Lcom/android/server/sip/SipService$MyEvent;
     :cond_1
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
@@ -458,19 +504,23 @@
 
     if-le v3, v0, :cond_3
 
+    .line 1341
     const-string v3, "_SIP.WkTimer_"
 
     const-string v3, "     ....."
 
     invoke-static {v6, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1345
     :cond_2
     :goto_0
     return-void
 
+    .line 1342
     :cond_3
     if-nez v0, :cond_2
 
+    .line 1343
     const-string v3, "_SIP.WkTimer_"
 
     const-string v3, "     <empty>"
@@ -484,6 +534,7 @@
     .locals 12
 
     .prologue
+    .line 1184
     iget-object v8, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v8}, Ljava/util/TreeSet;->isEmpty()Z
@@ -492,9 +543,11 @@
 
     if-eqz v8, :cond_0
 
+    .line 1205
     :goto_0
     return-void
 
+    .line 1186
     :cond_0
     iget-object v8, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
@@ -504,12 +557,15 @@
 
     check-cast v1, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1187
     .local v1, firstEvent:Lcom/android/server/sip/SipService$MyEvent;
     iget v4, v1, Lcom/android/server/sip/SipService$MyEvent;->mMaxPeriod:I
 
+    .line 1188
     .local v4, minPeriod:I
     iget-wide v5, v1, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
+    .line 1189
     .local v5, minTriggerTime:J
     iget-object v8, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
@@ -531,6 +587,7 @@
 
     check-cast v0, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1190
     .local v0, e:Lcom/android/server/sip/SipService$MyEvent;
     iget v8, v0, Lcom/android/server/sip/SipService$MyEvent;->mMaxPeriod:I
 
@@ -540,6 +597,7 @@
 
     iput v8, v0, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
 
+    .line 1191
     iget-wide v8, v0, Lcom/android/server/sip/SipService$MyEvent;->mLastTriggerTime:J
 
     iget v10, v0, Lcom/android/server/sip/SipService$MyEvent;->mMaxPeriod:I
@@ -552,11 +610,13 @@
 
     long-to-int v3, v8
 
+    .line 1193
     .local v3, interval:I
     div-int v8, v3, v4
 
     mul-int v3, v8, v4
 
+    .line 1194
     int-to-long v8, v3
 
     add-long/2addr v8, v5
@@ -565,6 +625,7 @@
 
     goto :goto_1
 
+    .line 1196
     .end local v0           #e:Lcom/android/server/sip/SipService$MyEvent;
     .end local v3           #interval:I
     :cond_1
@@ -578,15 +639,18 @@
 
     invoke-direct {v7, v8}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
 
+    .line 1198
     .local v7, newQueue:Ljava/util/TreeSet;,"Ljava/util/TreeSet<Lcom/android/server/sip/SipService$MyEvent;>;"
     iget-object v8, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v7, v8}, Ljava/util/TreeSet;->addAll(Ljava/util/Collection;)Z
 
+    .line 1199
     iget-object v8, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v8}, Ljava/util/TreeSet;->clear()V
 
+    .line 1200
     iput-object v7, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     goto :goto_0
@@ -596,6 +660,7 @@
     .locals 7
 
     .prologue
+    .line 1302
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->stopped()Z
 
     move-result v3
@@ -610,23 +675,27 @@
 
     if-eqz v3, :cond_1
 
+    .line 1316
     :cond_0
     :goto_0
     return-void
 
+    .line 1304
     :cond_1
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mPendingIntent:Landroid/app/PendingIntent;
 
     if-eqz v3, :cond_2
 
+    .line 1305
     new-instance v3, Ljava/lang/RuntimeException;
 
-    const-string v4, "pendingIntent is not null!"
+    const-string/jumbo v4, "pendingIntent is not null!"
 
     invoke-direct {v3, v4}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v3
 
+    .line 1308
     :cond_2
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
@@ -636,6 +705,7 @@
 
     check-cast v0, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1309
     .local v0, event:Lcom/android/server/sip/SipService$MyEvent;
     new-instance v1, Landroid/content/Intent;
 
@@ -645,6 +715,7 @@
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 1310
     .local v1, intent:Landroid/content/Intent;
     const-string v3, "TriggerTime"
 
@@ -652,6 +723,7 @@
 
     invoke-virtual {v1, v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
+    .line 1311
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mContext:Landroid/content/Context;
 
     const/4 v4, 0x0
@@ -664,6 +736,7 @@
 
     iput-object v2, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mPendingIntent:Landroid/app/PendingIntent;
 
+    .line 1314
     .local v2, pendingIntent:Landroid/app/PendingIntent;
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mAlarmManager:Landroid/app/AlarmManager;
 
@@ -683,21 +756,26 @@
     .prologue
     const-wide/16 v5, 0x3e8
 
+    .line 1374
     rem-long v3, p1, v5
 
     long-to-int v1, v3
 
+    .line 1375
     .local v1, ms:I
     div-long v3, p1, v5
 
     long-to-int v2, v3
 
+    .line 1376
     .local v2, s:I
     div-int/lit8 v0, v2, 0x3c
 
+    .line 1377
     .local v0, m:I
     rem-int/lit8 v2, v2, 0x3c
 
+    .line 1378
     const-string v3, "%d.%d.%d"
 
     const/4 v4, 0x3
@@ -739,6 +817,7 @@
     .locals 2
 
     .prologue
+    .line 1170
     monitor-enter p0
 
     :try_start_0
@@ -746,6 +825,7 @@
 
     if-nez v0, :cond_0
 
+    .line 1171
     const-string v0, "_SIP.WkTimer_"
 
     const-string v1, "Timer stopped"
@@ -754,8 +834,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1172
     const/4 v0, 0x1
 
+    .line 1174
     :goto_0
     monitor-exit p0
 
@@ -766,6 +848,7 @@
 
     goto :goto_0
 
+    .line 1170
     :catchall_0
     move-exception v0
 
@@ -781,6 +864,7 @@
     .parameter "callback"
 
     .prologue
+    .line 1272
     monitor-enter p0
 
     :try_start_0
@@ -800,12 +884,14 @@
 
     if-eqz v3, :cond_1
 
+    .line 1299
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 1275
     :cond_1
     :try_start_1
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
@@ -816,6 +902,7 @@
 
     check-cast v1, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1276
     .local v1, firstEvent:Lcom/android/server/sip/SipService$MyEvent;
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
@@ -823,6 +910,7 @@
 
     move-result-object v2
 
+    .line 1277
     .local v2, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/android/server/sip/SipService$MyEvent;>;"
     :cond_2
     :goto_1
@@ -832,23 +920,27 @@
 
     if-eqz v3, :cond_3
 
+    .line 1278
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1279
     .local v0, event:Lcom/android/server/sip/SipService$MyEvent;
     iget-object v3, v0, Lcom/android/server/sip/SipService$MyEvent;->mCallback:Ljava/lang/Runnable;
 
     if-ne v3, p1, :cond_2
 
+    .line 1280
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
+    .line 1272
     .end local v0           #event:Lcom/android/server/sip/SipService$MyEvent;
     .end local v1           #firstEvent:Lcom/android/server/sip/SipService$MyEvent;
     .end local v2           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/android/server/sip/SipService$MyEvent;>;"
@@ -859,6 +951,7 @@
 
     throw v3
 
+    .line 1284
     .restart local v1       #firstEvent:Lcom/android/server/sip/SipService$MyEvent;
     .restart local v2       #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/android/server/sip/SipService$MyEvent;>;"
     :cond_3
@@ -871,10 +964,12 @@
 
     if-eqz v3, :cond_4
 
+    .line 1285
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->cancelAlarm()V
 
     goto :goto_0
 
+    .line 1286
     :cond_4
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
@@ -884,8 +979,10 @@
 
     if-eq v3, v1, :cond_0
 
+    .line 1287
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->cancelAlarm()V
 
+    .line 1288
     iget-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v3}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
@@ -895,11 +992,13 @@
     .end local v1           #firstEvent:Lcom/android/server/sip/SipService$MyEvent;
     check-cast v1, Lcom/android/server/sip/SipService$MyEvent;
 
+    .line 1289
     .restart local v1       #firstEvent:Lcom/android/server/sip/SipService$MyEvent;
     iget v3, v1, Lcom/android/server/sip/SipService$MyEvent;->mMaxPeriod:I
 
     iput v3, v1, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
 
+    .line 1290
     iget-wide v3, v1, Lcom/android/server/sip/SipService$MyEvent;->mLastTriggerTime:J
 
     iget v5, v1, Lcom/android/server/sip/SipService$MyEvent;->mPeriod:I
@@ -910,8 +1009,10 @@
 
     iput-wide v3, v1, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
 
+    .line 1292
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->recalculatePeriods()V
 
+    .line 1293
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->scheduleNext()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -927,10 +1028,12 @@
     .prologue
     const-string v5, "TriggerTime"
 
+    .line 1321
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 1322
     .local v0, action:Ljava/lang/String;
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->getAction()Ljava/lang/String;
 
@@ -954,10 +1057,12 @@
 
     if-eqz v3, :cond_0
 
+    .line 1324
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mPendingIntent:Landroid/app/PendingIntent;
 
+    .line 1325
     const-string v3, "TriggerTime"
 
     const-wide/16 v3, -0x1
@@ -966,13 +1071,16 @@
 
     move-result-wide v1
 
+    .line 1326
     .local v1, triggerTime:J
     invoke-direct {p0, v1, v2}, Lcom/android/server/sip/SipService$WakeupTimer;->execute(J)V
 
+    .line 1330
     .end local v1           #triggerTime:J
     :goto_0
     return-void
 
+    .line 1328
     :cond_0
     const-string v3, "_SIP.WkTimer_"
 
@@ -980,7 +1088,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "unrecognized intent: "
+    const-string/jumbo v5, "unrecognized intent: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1005,6 +1113,7 @@
     .parameter "callback"
 
     .prologue
+    .line 1246
     monitor-enter p0
 
     :try_start_0
@@ -1016,25 +1125,30 @@
 
     if-eqz v5, :cond_0
 
+    .line 1264
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 1248
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
+    .line 1249
     .local v1, now:J
     new-instance v0, Lcom/android/server/sip/SipService$MyEvent;
 
     invoke-direct {v0, p1, p2, v1, v2}, Lcom/android/server/sip/SipService$MyEvent;-><init>(ILjava/lang/Runnable;J)V
 
+    .line 1250
     .local v0, event:Lcom/android/server/sip/SipService$MyEvent;
     invoke-direct {p0, v0}, Lcom/android/server/sip/SipService$WakeupTimer;->insertEvent(Lcom/android/server/sip/SipService$MyEvent;)V
 
+    .line 1252
     iget-object v5, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v5}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
@@ -1043,6 +1157,7 @@
 
     if-ne v5, v0, :cond_2
 
+    .line 1253
     iget-object v5, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v5}, Ljava/util/TreeSet;->size()I
@@ -1055,17 +1170,21 @@
 
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->cancelAlarm()V
 
+    .line 1254
     :cond_1
     invoke-direct {p0}, Lcom/android/server/sip/SipService$WakeupTimer;->scheduleNext()V
 
+    .line 1257
     :cond_2
     iget-wide v3, v0, Lcom/android/server/sip/SipService$MyEvent;->mTriggerTime:J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 1264
     .local v3, triggerTime:J
     goto :goto_0
 
+    .line 1246
     .end local v0           #event:Lcom/android/server/sip/SipService$MyEvent;
     .end local v1           #now:J
     .end local v3           #triggerTime:J
@@ -1081,6 +1200,7 @@
     .locals 2
 
     .prologue
+    .line 1160
     monitor-enter p0
 
     :try_start_0
@@ -1088,35 +1208,42 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 1161
     iget-object v0, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mPendingIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_0
 
+    .line 1162
     iget-object v0, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mAlarmManager:Landroid/app/AlarmManager;
 
     iget-object v1, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mPendingIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
+    .line 1163
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mPendingIntent:Landroid/app/PendingIntent;
 
+    .line 1165
     :cond_0
     iget-object v0, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->clear()V
 
+    .line 1166
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/sip/SipService$WakeupTimer;->mEventQueue:Ljava/util/TreeSet;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1167
     monitor-exit p0
 
     return-void
 
+    .line 1160
     :catchall_0
     move-exception v0
 

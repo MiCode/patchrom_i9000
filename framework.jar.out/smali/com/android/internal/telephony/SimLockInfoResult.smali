@@ -72,22 +72,31 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 45
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->num_lock_type:I
 
+    .line 46
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->lockType:I
 
+    .line 47
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->lockKey:I
 
+    .line 48
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->numRetry:I
 
+    .line 49
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->Pin_Retry:I
 
+    .line 50
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->Pin2_Retry:I
 
+    .line 51
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->Puk_Retry:I
 
+    .line 52
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->Puk2_Retry:I
 
+    .line 54
     sput v0, Lcom/android/internal/telephony/SimLockInfoResult;->isPermBlocked:I
 
     return-void
@@ -103,16 +112,22 @@
     .prologue
     const-string v2, "SimLockInfoResult"
 
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 59
     sput p1, Lcom/android/internal/telephony/SimLockInfoResult;->num_lock_type:I
 
+    .line 60
     sput p2, Lcom/android/internal/telephony/SimLockInfoResult;->lockType:I
 
+    .line 61
     sput p3, Lcom/android/internal/telephony/SimLockInfoResult;->lockKey:I
 
+    .line 62
     sput p4, Lcom/android/internal/telephony/SimLockInfoResult;->numRetry:I
 
+    .line 63
     const-string v0, "SimLockInfoResult"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -165,23 +180,29 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 65
     const/16 v0, 0xa
 
     if-ne p2, v0, :cond_0
 
+    .line 66
     sput p4, Lcom/android/internal/telephony/SimLockInfoResult;->Puk2_Retry:I
 
+    .line 112
     :goto_0
     return-void
 
+    .line 69
     :cond_0
     packed-switch p3, :pswitch_data_0
 
     goto :goto_0
 
+    .line 72
     :pswitch_0
     sput p4, Lcom/android/internal/telephony/SimLockInfoResult;->Pin_Retry:I
 
+    .line 73
     const-string v0, "SimLockInfoResult"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -208,9 +229,11 @@
 
     goto :goto_0
 
+    .line 77
     :pswitch_1
     sput p4, Lcom/android/internal/telephony/SimLockInfoResult;->Pin_Retry:I
 
+    .line 78
     const-string v0, "SimLockInfoResult"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -237,9 +260,11 @@
 
     goto :goto_0
 
+    .line 92
     :pswitch_2
     sput p4, Lcom/android/internal/telephony/SimLockInfoResult;->Puk_Retry:I
 
+    .line 93
     const-string v0, "SimLockInfoResult"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -266,9 +291,11 @@
 
     goto :goto_0
 
+    .line 98
     :pswitch_3
     sput p4, Lcom/android/internal/telephony/SimLockInfoResult;->Pin2_Retry:I
 
+    .line 99
     const-string v0, "SimLockInfoResult"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -295,9 +322,11 @@
 
     goto :goto_0
 
+    .line 103
     :pswitch_4
     sput p4, Lcom/android/internal/telephony/SimLockInfoResult;->Puk2_Retry:I
 
+    .line 104
     const-string v0, "SimLockInfoResult"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -324,6 +353,7 @@
 
     goto/16 :goto_0
 
+    .line 69
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -342,6 +372,7 @@
     .locals 1
 
     .prologue
+    .line 116
     sget v0, Lcom/android/internal/telephony/SimLockInfoResult;->lockKey:I
 
     return v0
@@ -351,6 +382,7 @@
     .locals 1
 
     .prologue
+    .line 125
     sget v0, Lcom/android/internal/telephony/SimLockInfoResult;->Pin2_Retry:I
 
     return v0
@@ -360,6 +392,7 @@
     .locals 1
 
     .prologue
+    .line 120
     sget v0, Lcom/android/internal/telephony/SimLockInfoResult;->Pin_Retry:I
 
     return v0
@@ -369,6 +402,7 @@
     .locals 1
 
     .prologue
+    .line 135
     sget v0, Lcom/android/internal/telephony/SimLockInfoResult;->Puk2_Retry:I
 
     return v0
@@ -378,6 +412,7 @@
     .locals 1
 
     .prologue
+    .line 130
     sget v0, Lcom/android/internal/telephony/SimLockInfoResult;->Puk_Retry:I
 
     return v0
@@ -387,6 +422,7 @@
     .locals 1
 
     .prologue
+    .line 142
     sget v0, Lcom/android/internal/telephony/SimLockInfoResult;->isPermBlocked:I
 
     return v0

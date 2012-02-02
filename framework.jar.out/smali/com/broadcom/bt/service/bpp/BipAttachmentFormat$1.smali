@@ -37,6 +37,7 @@
     .parameter
 
     .prologue
+    .line 37
     iput-object p1, p0, Lcom/broadcom/bt/service/bpp/BipAttachmentFormat$1;->this$0:Lcom/broadcom/bt/service/bpp/BipAttachmentFormat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +52,7 @@
     .parameter "in"
 
     .prologue
+    .line 39
     new-instance v0, Lcom/broadcom/bt/service/bpp/BipAttachmentFormat;
 
     const/4 v1, 0x0
@@ -65,6 +67,7 @@
     .parameter "x0"
 
     .prologue
+    .line 37
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/bpp/BipAttachmentFormat$1;->createFromParcel(Landroid/os/Parcel;)Lcom/broadcom/bt/service/bpp/BipAttachmentFormat;
 
     move-result-object v0
@@ -77,6 +80,7 @@
     .parameter "size"
 
     .prologue
+    .line 43
     new-array v0, p1, [Lcom/broadcom/bt/service/bpp/BipAttachmentFormat;
 
     return-object v0
@@ -87,6 +91,7 @@
     .parameter "x0"
 
     .prologue
+    .line 37
     invoke-virtual {p0, p1}, Lcom/broadcom/bt/service/bpp/BipAttachmentFormat$1;->newArray(I)[Lcom/broadcom/bt/service/bpp/BipAttachmentFormat;
 
     move-result-object v0

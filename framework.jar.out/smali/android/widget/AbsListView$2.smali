@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 3958
     iput-object p1, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,21 +43,25 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 3960
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     iget-boolean v0, v0, Landroid/widget/AbsListView;->mCachingStarted:Z
 
     if-eqz v0, :cond_1
 
+    .line 3961
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     iput-boolean v1, v0, Landroid/widget/AbsListView;->mCachingStarted:Z
 
+    .line 3962
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     #calls: Landroid/widget/AbsListView;->setChildrenDrawnWithCacheEnabled(Z)V
     invoke-static {v0, v1}, Landroid/widget/AbsListView;->access$3400(Landroid/widget/AbsListView;Z)V
 
+    .line 3963
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     #getter for: Landroid/view/ViewGroup;->mPersistentDrawingCache:I
@@ -68,11 +73,13 @@
 
     if-nez v0, :cond_0
 
+    .line 3964
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     #calls: Landroid/widget/AbsListView;->setChildrenDrawingCacheEnabled(Z)V
     invoke-static {v0, v1}, Landroid/widget/AbsListView;->access$3600(Landroid/widget/AbsListView;Z)V
 
+    .line 3966
     :cond_0
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
@@ -82,10 +89,12 @@
 
     if-nez v0, :cond_1
 
+    .line 3967
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v0}, Landroid/widget/AbsListView;->invalidate()V
 
+    .line 3970
     :cond_1
     return-void
 .end method

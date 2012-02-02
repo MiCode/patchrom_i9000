@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 163
     iput-object p1, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatterSd;
 
     iput-object p2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->val$mountService:Landroid/os/storage/IMountService;
@@ -51,8 +52,10 @@
 
     const-string v5, "ExternalStorageFormatterSd"
 
+    .line 165
     const/4 v1, 0x0
 
+    .line 167
     .local v1, success:Z
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->val$mountService:Landroid/os/storage/IMountService;
@@ -63,11 +66,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 168
     const/4 v1, 0x1
 
+    .line 173
     :goto_0
     if-eqz v1, :cond_0
 
+    .line 174
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatterSd;
 
     #getter for: Lcom/android/internal/os/storage/ExternalStorageFormatterSd;->mFactoryReset:Z
@@ -77,6 +83,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 175
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatterSd;
 
     new-instance v3, Landroid/content/Intent;
@@ -87,18 +94,22 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/os/storage/ExternalStorageFormatterSd;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 177
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatterSd;
 
     invoke-virtual {v2}, Lcom/android/internal/os/storage/ExternalStorageFormatterSd;->stopSelf()V
 
+    .line 197
     :goto_1
     return-void
 
+    .line 169
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 170
     .local v0, e:Ljava/lang/Exception;
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatterSd;
 
@@ -114,10 +125,12 @@
 
     goto :goto_0
 
+    .line 183
     .end local v0           #e:Ljava/lang/Exception;
     :cond_0
     if-eqz v1, :cond_2
 
+    .line 184
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatterSd;
 
     #getter for: Lcom/android/internal/os/storage/ExternalStorageFormatterSd;->mAlwaysReset:Z
@@ -127,6 +140,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 185
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatterSd;
 
     new-instance v3, Landroid/content/Intent;
@@ -137,6 +151,7 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/os/storage/ExternalStorageFormatterSd;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 196
     :goto_2
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatterSd;
 
@@ -144,6 +159,7 @@
 
     goto :goto_1
 
+    .line 188
     :cond_1
     :try_start_1
     iget-object v2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatterSd$2;->val$mountService:Landroid/os/storage/IMountService;
@@ -156,11 +172,13 @@
 
     goto :goto_2
 
+    .line 189
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
+    .line 190
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "ExternalStorageFormatterSd"
 
@@ -170,11 +188,12 @@
 
     goto :goto_2
 
+    .line 194
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_2
     const-string v2, "ExternalStorageFormatterSd"
 
-    const-string v2, "updateProgressState :: Failed format volume."
+    const-string/jumbo v2, "updateProgressState :: Failed format volume."
 
     invoke-static {v5, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

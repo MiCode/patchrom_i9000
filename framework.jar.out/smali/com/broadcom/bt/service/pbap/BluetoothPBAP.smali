@@ -69,6 +69,7 @@
     .locals 1
 
     .prologue
+    .line 144
     const-string v0, "com.broadcom.bt.app.pbap.action."
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -84,12 +85,15 @@
     .locals 1
 
     .prologue
+    .line 351
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;-><init>()V
 
+    .line 317
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->mEventHandler:Lcom/broadcom/bt/service/pbap/IPBAPEventHandler;
 
+    .line 352
     return-void
 .end method
 
@@ -98,6 +102,7 @@
     .parameter "x0"
 
     .prologue
+    .line 123
     iget-object v0, p0, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->mEventHandler:Lcom/broadcom/bt/service/pbap/IPBAPEventHandler;
 
     return-object v0
@@ -110,6 +115,7 @@
     .parameter "x2"
 
     .prologue
+    .line 123
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -124,6 +130,7 @@
     .parameter "x2"
 
     .prologue
+    .line 123
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -138,6 +145,7 @@
     .parameter "x2"
 
     .prologue
+    .line 123
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -152,6 +160,7 @@
     .parameter "x2"
 
     .prologue
+    .line 123
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -164,31 +173,38 @@
     .parameter "filter"
 
     .prologue
+    .line 577
     if-nez p0, :cond_0
 
+    .line 578
     new-instance p0, Landroid/content/IntentFilter;
 
     .end local p0
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 580
     .restart local p0
     :cond_0
     const-string v0, "broadcom.android.bluetooth.intent.action.BT_SERVICE_ACCESS"
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 581
     const-string v0, "com.broadcom.bt.app.pbap.action.ON_PBAP_OPENED"
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 582
     const-string v0, "com.broadcom.bt.app.pbap.action.ON_PBAP_CLOSED"
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 583
     const-string v0, "com.broadcom.bt.app.pbap.action.ON_PBAP_OP_COMPLETED"
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 584
     return-object p0
 .end method
 
@@ -197,23 +213,28 @@
     .parameter "filter"
 
     .prologue
+    .line 597
     if-nez p0, :cond_0
 
+    .line 598
     new-instance p0, Landroid/content/IntentFilter;
 
     .end local p0
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 600
     .restart local p0
     :cond_0
     const-string v0, "broadcom.android.bluetooth.intent.action.BT_SERVICE_ACCESS"
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 601
     const-string v0, "broadcom.android.bluetooth.intent.action.BT_SERVICE_CONNECTION"
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 602
     return-object p0
 .end method
 
@@ -223,6 +244,7 @@
     .parameter "cb"
 
     .prologue
+    .line 334
     const-string v1, "bluetooth_pbap"
 
     invoke-static {p0, v1}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceEnabled(Landroid/content/Context;Ljava/lang/String;)Z
@@ -231,22 +253,27 @@
 
     if-nez v1, :cond_0
 
+    .line 335
     const-string v1, "BluetoothPBAP"
 
     const-string v2, "Unable to get BluetoothFTP proxy: service is not enabled."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 337
     const/4 v1, 0x0
 
+    .line 340
     :goto_0
     return v1
 
+    .line 339
     :cond_0
     new-instance v0, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;
 
     invoke-direct {v0}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;-><init>()V
 
+    .line 340
     .local v0, p:Lcom/broadcom/bt/service/pbap/BluetoothPBAP;
     const-string v1, "com.broadcom.bt.app.system"
 
@@ -265,8 +292,10 @@
     .locals 0
 
     .prologue
+    .line 711
     invoke-super {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;->finalize()V
 
+    .line 712
     return-void
 .end method
 
@@ -274,6 +303,7 @@
     .locals 2
 
     .prologue
+    .line 645
     monitor-enter p0
 
     :try_start_0
@@ -281,34 +311,41 @@
 
     if-eqz v0, :cond_0
 
+    .line 646
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->mEventHandler:Lcom/broadcom/bt/service/pbap/IPBAPEventHandler;
 
+    .line 650
     :cond_0
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_1
 
+    .line 651
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 652
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 664
     :cond_1
     invoke-super {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;->finish()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 665
     monitor-exit p0
 
     return-void
 
+    .line 645
     :catchall_0
     move-exception v0
 
@@ -322,6 +359,7 @@
     .parameter "service"
 
     .prologue
+    .line 361
     :try_start_0
     invoke-static {p1}, Lcom/broadcom/bt/service/pbap/IBluetoothPBAP$Stub;->asInterface(Landroid/os/IBinder;)Lcom/broadcom/bt/service/pbap/IBluetoothPBAP;
 
@@ -331,16 +369,20 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 363
     const/4 v1, 0x1
 
+    .line 366
     :goto_0
     return v1
 
+    .line 364
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 365
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothPBAP"
 
@@ -348,6 +390,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 366
     const/4 v1, 0x0
 
     goto :goto_0
@@ -360,6 +403,7 @@
     .parameter "filepath"
 
     .prologue
+    .line 683
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->mService:Lcom/broadcom/bt/service/pbap/IBluetoothPBAP;
 
@@ -367,14 +411,17 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 687
     :goto_0
     return-void
 
+    .line 684
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 685
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothPBAP"
 
@@ -390,15 +437,17 @@
     .parameter "handler"
 
     .prologue
+    .line 386
     monitor-enter p0
 
     :try_start_0
     const-string v0, "BluetoothPBAP"
 
-    const-string v1, "registerEventHandler()"
+    const-string/jumbo v1, "registerEventHandler()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 387
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -409,10 +458,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 389
     monitor-exit p0
 
     return-void
 
+    .line 386
     :catchall_0
     move-exception v0
 
@@ -429,19 +480,23 @@
     .parameter "receiverPriority"
 
     .prologue
+    .line 526
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->mEventHandler:Lcom/broadcom/bt/service/pbap/IPBAPEventHandler;
 
+    .line 531
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v1, :cond_1
 
+    .line 533
     if-nez p2, :cond_0
 
+    .line 534
     const/4 v1, 0x0
 
     :try_start_1
@@ -449,9 +504,11 @@
 
     move-result-object p2
 
+    .line 536
     :cond_0
     invoke-virtual {p2, p4}, Landroid/content/IntentFilter;->setPriority(I)V
 
+    .line 537
     new-instance v1, Lcom/broadcom/bt/service/pbap/BluetoothPBAP$PBAPBroadcastReceiver;
 
     const/4 v2, 0x0
@@ -460,6 +517,7 @@
 
     iput-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 538
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
@@ -471,17 +529,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 568
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 540
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 541
     .local v0, t:Ljava/lang/Throwable;
     :try_start_2
     const-string v1, "BluetoothPBAP"
@@ -494,6 +555,7 @@
 
     goto :goto_0
 
+    .line 526
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -511,11 +573,13 @@
     .parameter "receiverPriority"
 
     .prologue
+    .line 454
     monitor-enter p0
 
     :try_start_0
     invoke-virtual {p0}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->initEventCallbackHandler()Landroid/os/Handler;
 
+    .line 455
     if-eqz p3, :cond_0
 
     invoke-virtual {p0}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->initEventCallbackHandler()Landroid/os/Handler;
@@ -527,15 +591,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 461
     monitor-exit p0
 
     return-void
 
+    .line 455
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
+    .line 454
     :catchall_0
     move-exception v0
 
@@ -548,6 +615,7 @@
     .locals 1
 
     .prologue
+    .line 695
     const/4 v0, 0x1
 
     return v0
@@ -560,6 +628,7 @@
     .parameter "name"
 
     .prologue
+    .line 704
     int-to-byte v0, p1
 
     check-cast p3, Ljava/lang/String;
@@ -567,6 +636,7 @@
     .end local p3
     invoke-virtual {p0, v0, p2, p3}, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->pbapServerAccessRsp(BZLjava/lang/String;)V
 
+    .line 705
     return-void
 .end method
 
@@ -574,40 +644,47 @@
     .locals 2
 
     .prologue
+    .line 620
     monitor-enter p0
 
     :try_start_0
     const-string v0, "BluetoothPBAP"
 
-    const-string v1, "unregisterEventHandler()"
+    const-string/jumbo v1, "unregisterEventHandler()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 622
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/pbap/BluetoothPBAP;->mEventHandler:Lcom/broadcom/bt/service/pbap/IPBAPEventHandler;
 
+    .line 626
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
+    .line 627
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 628
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 637
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 620
     :catchall_0
     move-exception v0
 

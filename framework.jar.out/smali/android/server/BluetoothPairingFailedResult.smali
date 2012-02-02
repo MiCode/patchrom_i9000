@@ -74,12 +74,14 @@
 
     const/4 v3, 0x3
 
+    .line 24
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
+    .line 50
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/4 v1, 0x7
@@ -94,6 +96,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 51
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x9
@@ -108,6 +111,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 52
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0xa
@@ -122,6 +126,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 53
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0xd
@@ -136,6 +141,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 54
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x13
@@ -150,6 +156,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 55
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x14
@@ -164,6 +171,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 56
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x16
@@ -178,6 +186,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 58
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/4 v1, 0x5
@@ -192,6 +201,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 59
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0xe
@@ -206,6 +216,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 60
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x2f
@@ -220,6 +231,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 61
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x25
@@ -234,6 +246,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 62
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x26
@@ -248,6 +261,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 63
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x29
@@ -262,6 +276,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 65
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x10
@@ -276,6 +291,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 66
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x22
@@ -290,6 +306,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 67
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x28
@@ -304,6 +321,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 69
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -316,6 +334,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 70
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x18
@@ -330,6 +349,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 72
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -342,6 +362,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 73
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x8
@@ -356,6 +377,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 74
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     const/16 v1, 0x17
@@ -372,6 +394,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 75
     return-void
 .end method
 
@@ -379,6 +402,7 @@
     .locals 0
 
     .prologue
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -389,6 +413,7 @@
     .parameter "errCode"
 
     .prologue
+    .line 78
     sget-object v0, Landroid/server/BluetoothPairingFailedResult;->mPairingFailedErrorCodeMap:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 1269
     iput-object p1, p0, Landroid/webkit/LoadListener$1;->this$0:Landroid/webkit/LoadListener;
 
     iput p2, p0, Landroid/webkit/LoadListener$1;->val$nativeResponse:I
@@ -47,6 +48,7 @@
     .parameter "value"
 
     .prologue
+    .line 1271
     iget-object v0, p0, Landroid/webkit/LoadListener$1;->this$0:Landroid/webkit/LoadListener;
 
     iget v1, p0, Landroid/webkit/LoadListener$1;->val$nativeResponse:I
@@ -54,5 +56,6 @@
     #calls: Landroid/webkit/LoadListener;->nativeSetResponseHeader(ILjava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, p1, p2}, Landroid/webkit/LoadListener;->access$000(Landroid/webkit/LoadListener;ILjava/lang/String;Ljava/lang/String;)V
 
+    .line 1272
     return-void
 .end method

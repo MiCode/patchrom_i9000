@@ -52,6 +52,7 @@
 
     const/4 v3, 0x0
 
+    .line 136
     new-instance v0, Landroid/util/Xml$Encoding;
 
     const-string v1, "US_ASCII"
@@ -62,6 +63,7 @@
 
     sput-object v0, Landroid/util/Xml$Encoding;->US_ASCII:Landroid/util/Xml$Encoding;
 
+    .line 137
     new-instance v0, Landroid/util/Xml$Encoding;
 
     const-string v1, "UTF_8"
@@ -72,6 +74,7 @@
 
     sput-object v0, Landroid/util/Xml$Encoding;->UTF_8:Landroid/util/Xml$Encoding;
 
+    .line 138
     new-instance v0, Landroid/util/Xml$Encoding;
 
     const-string v1, "UTF_16"
@@ -82,6 +85,7 @@
 
     sput-object v0, Landroid/util/Xml$Encoding;->UTF_16:Landroid/util/Xml$Encoding;
 
+    .line 139
     new-instance v0, Landroid/util/Xml$Encoding;
 
     const-string v1, "ISO_8859_1"
@@ -92,6 +96,7 @@
 
     sput-object v0, Landroid/util/Xml$Encoding;->ISO_8859_1:Landroid/util/Xml$Encoding;
 
+    .line 134
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/util/Xml$Encoding;
@@ -131,10 +136,13 @@
     .end annotation
 
     .prologue
+    .line 143
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 144
     iput-object p3, p0, Landroid/util/Xml$Encoding;->expatName:Ljava/lang/String;
 
+    .line 145
     return-void
 .end method
 
@@ -143,6 +151,7 @@
     .parameter "name"
 
     .prologue
+    .line 134
     const-class v0, Landroid/util/Xml$Encoding;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -159,6 +168,7 @@
     .locals 1
 
     .prologue
+    .line 134
     sget-object v0, Landroid/util/Xml$Encoding;->$VALUES:[Landroid/util/Xml$Encoding;
 
     invoke-virtual {v0}, [Landroid/util/Xml$Encoding;->clone()Ljava/lang/Object;

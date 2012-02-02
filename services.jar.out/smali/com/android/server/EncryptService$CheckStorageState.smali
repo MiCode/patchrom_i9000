@@ -36,30 +36,36 @@
     .prologue
     const/4 v1, 0x2
 
+    .line 1145
     iput-object p1, p0, Lcom/android/server/EncryptService$CheckStorageState;->this$0:Lcom/android/server/EncryptService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1148
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->INTERNAL_STORAGE:I
 
+    .line 1149
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->EXTERNAL_STORAGE:I
 
+    .line 1151
     new-array v0, v1, [Z
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bSharedStorage:[Z
 
+    .line 1152
     new-array v0, v1, [Z
 
     fill-array-data v0, :array_1
 
     iput-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bFormatStorage:[Z
 
+    .line 1153
     new-array v0, v1, [Z
 
     fill-array-data v0, :array_2
@@ -68,12 +74,14 @@
 
     return-void
 
+    .line 1151
     :array_0
     .array-data 0x1
         0x0t
         0x0t
     .end array-data
 
+    .line 1152
     nop
 
     :array_1
@@ -82,6 +90,7 @@
         0x0t
     .end array-data
 
+    .line 1153
     nop
 
     :array_2
@@ -98,8 +107,10 @@
     .parameter "sPath"
 
     .prologue
+    .line 1196
     const/4 v0, 0x0
 
+    .line 1200
     .local v0, bRet:Z
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
@@ -115,16 +126,19 @@
 
     if-eqz v1, :cond_1
 
+    .line 1202
     iget-object v1, p0, Lcom/android/server/EncryptService$CheckStorageState;->bBootingStorage:[Z
 
     const/4 v2, 0x0
 
     aget-boolean v0, v1, v2
 
+    .line 1210
     :cond_0
     :goto_0
     return v0
 
+    .line 1203
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectorySd()Ljava/io/File;
 
@@ -140,6 +154,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 1205
     iget-object v1, p0, Lcom/android/server/EncryptService$CheckStorageState;->bBootingStorage:[Z
 
     const/4 v2, 0x1
@@ -154,8 +169,10 @@
     .parameter "sPath"
 
     .prologue
+    .line 1177
     const/4 v0, 0x0
 
+    .line 1181
     .local v0, bRet:Z
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
@@ -171,16 +188,19 @@
 
     if-eqz v1, :cond_1
 
+    .line 1183
     iget-object v1, p0, Lcom/android/server/EncryptService$CheckStorageState;->bFormatStorage:[Z
 
     const/4 v2, 0x0
 
     aget-boolean v0, v1, v2
 
+    .line 1191
     :cond_0
     :goto_0
     return v0
 
+    .line 1184
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectorySd()Ljava/io/File;
 
@@ -196,6 +216,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 1186
     iget-object v1, p0, Lcom/android/server/EncryptService$CheckStorageState;->bFormatStorage:[Z
 
     const/4 v2, 0x1
@@ -210,8 +231,10 @@
     .parameter "sPath"
 
     .prologue
+    .line 1158
     const/4 v0, 0x0
 
+    .line 1162
     .local v0, bRet:Z
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
@@ -227,16 +250,19 @@
 
     if-eqz v1, :cond_1
 
+    .line 1164
     iget-object v1, p0, Lcom/android/server/EncryptService$CheckStorageState;->bSharedStorage:[Z
 
     const/4 v2, 0x0
 
     aget-boolean v0, v1, v2
 
+    .line 1172
     :cond_0
     :goto_0
     return v0
 
+    .line 1165
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectorySd()Ljava/io/File;
 
@@ -252,6 +278,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 1167
     iget-object v1, p0, Lcom/android/server/EncryptService$CheckStorageState;->bSharedStorage:[Z
 
     const/4 v2, 0x1
@@ -267,6 +294,7 @@
     .parameter "bSet"
 
     .prologue
+    .line 1218
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -281,16 +309,19 @@
 
     if-eqz v0, :cond_1
 
+    .line 1220
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bBootingStorage:[Z
 
     const/4 v1, 0x0
 
     aput-boolean p2, v0, v1
 
+    .line 1225
     :cond_0
     :goto_0
     return-void
 
+    .line 1221
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectorySd()Ljava/io/File;
 
@@ -306,6 +337,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1223
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bBootingStorage:[Z
 
     const/4 v1, 0x1
@@ -321,6 +353,7 @@
     .parameter "bSet"
 
     .prologue
+    .line 1232
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -335,16 +368,19 @@
 
     if-eqz v0, :cond_1
 
+    .line 1234
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bFormatStorage:[Z
 
     const/4 v1, 0x0
 
     aput-boolean p2, v0, v1
 
+    .line 1239
     :cond_0
     :goto_0
     return-void
 
+    .line 1235
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectorySd()Ljava/io/File;
 
@@ -360,6 +396,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 1237
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bFormatStorage:[Z
 
     const/4 v1, 0x1
@@ -383,16 +420,19 @@
 
     const-string v3, "mounted"
 
+    .line 1242
     invoke-static {}, Landroid/os/Environment;->isExternalStorageFirstInsalled()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 1292
     :cond_0
     :goto_0
     return-void
 
+    .line 1248
     :cond_1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
@@ -408,6 +448,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 1250
     const-string v0, "shared"
 
     invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -416,6 +457,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 1252
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->this$0:Lcom/android/server/EncryptService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/EncryptService;->checkPolicyInfo(Ljava/lang/String;)Z
@@ -424,12 +466,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 1254
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bSharedStorage:[Z
 
     aput-boolean v2, v0, v1
 
     goto :goto_0
 
+    .line 1258
     :cond_2
     const-string v0, "mounted"
 
@@ -439,20 +483,24 @@
 
     if-eqz v0, :cond_0
 
+    .line 1260
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bBootingStorage:[Z
 
     aput-boolean v1, v0, v1
 
+    .line 1261
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bFormatStorage:[Z
 
     aput-boolean v1, v0, v1
 
+    .line 1262
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bSharedStorage:[Z
 
     aput-boolean v1, v0, v1
 
     goto :goto_0
 
+    .line 1266
     :cond_3
     invoke-static {}, Landroid/os/Environment;->isExternalStorageSecondInsalled()Z
 
@@ -474,6 +522,7 @@
 
     if-eqz v0, :cond_5
 
+    .line 1270
     const-string v0, "shared"
 
     invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -482,6 +531,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 1272
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->this$0:Lcom/android/server/EncryptService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/EncryptService;->checkPolicyInfo(Ljava/lang/String;)Z
@@ -490,12 +540,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 1274
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bSharedStorage:[Z
 
     aput-boolean v2, v0, v2
 
     goto :goto_0
 
+    .line 1278
     :cond_4
     const-string v0, "mounted"
 
@@ -505,20 +557,24 @@
 
     if-eqz v0, :cond_0
 
+    .line 1280
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bBootingStorage:[Z
 
     aput-boolean v1, v0, v2
 
+    .line 1281
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bFormatStorage:[Z
 
     aput-boolean v1, v0, v2
 
+    .line 1282
     iget-object v0, p0, Lcom/android/server/EncryptService$CheckStorageState;->bSharedStorage:[Z
 
     aput-boolean v1, v0, v2
 
     goto :goto_0
 
+    .line 1288
     :cond_5
     const-string v0, "EncryptService"
 

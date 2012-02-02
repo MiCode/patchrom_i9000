@@ -33,22 +33,28 @@
     .prologue
     const-wide/16 v1, -0x1
 
+    .line 175
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 176
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/Downloads$StatusInfo;->completed:Z
 
+    .line 178
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/Downloads$StatusInfo;->filename:Ljava/lang/String;
 
+    .line 180
     iput-wide v1, p0, Landroid/net/Downloads$StatusInfo;->id:J
 
+    .line 182
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/net/Downloads$StatusInfo;->statusCode:I
 
+    .line 184
     iput-wide v1, p0, Landroid/net/Downloads$StatusInfo;->bytesSoFar:J
 
     return-void
@@ -60,6 +66,7 @@
     .locals 1
 
     .prologue
+    .line 191
     iget v0, p0, Landroid/net/Downloads$StatusInfo;->statusCode:I
 
     invoke-static {v0}, Landroid/provider/Downloads$Impl;->isStatusCompleted(I)Z
@@ -73,6 +80,7 @@
     .locals 1
 
     .prologue
+    .line 199
     iget v0, p0, Landroid/net/Downloads$StatusInfo;->statusCode:I
 
     invoke-static {v0}, Landroid/provider/Downloads$Impl;->isStatusCompleted(I)Z

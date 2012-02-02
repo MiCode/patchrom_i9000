@@ -23,6 +23,7 @@
     .locals 3
 
     .prologue
+    .line 125
     invoke-static {}, Lcom/android/internal/telephony/gsm/stk/AppInterface$CommandType;->values()[Lcom/android/internal/telephony/gsm/stk/AppInterface$CommandType;
 
     move-result-object v0

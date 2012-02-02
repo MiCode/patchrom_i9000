@@ -17,8 +17,10 @@
     .locals 0
 
     .prologue
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     return-void
 .end method
 
@@ -27,6 +29,7 @@
     .parameter "path"
 
     .prologue
+    .line 40
     new-instance v0, Landroid/gesture/GestureLibraries$FileGestureLibrary;
 
     invoke-direct {v0, p0}, Landroid/gesture/GestureLibraries$FileGestureLibrary;-><init>(Ljava/io/File;)V
@@ -39,6 +42,7 @@
     .parameter "path"
 
     .prologue
+    .line 36
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -56,6 +60,7 @@
     .parameter "name"
 
     .prologue
+    .line 44
     invoke-virtual {p0, p1}, Landroid/content/Context;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
@@ -73,6 +78,7 @@
     .parameter "resourceId"
 
     .prologue
+    .line 48
     new-instance v0, Landroid/gesture/GestureLibraries$ResourceGestureLibrary;
 
     invoke-direct {v0, p0, p1}, Landroid/gesture/GestureLibraries$ResourceGestureLibrary;-><init>(Landroid/content/Context;I)V

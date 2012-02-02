@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 220
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnLongClickPendingIntent$1;->this$1:Landroid/widget/RemoteViews$SetOnLongClickPendingIntent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +44,7 @@
     .prologue
     const/4 v7, 0x1
 
+    .line 222
     invoke-static {}, Landroid/widget/RemoteViews;->access$100()Ljava/util/HashMap;
 
     move-result-object v0
@@ -57,6 +59,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 226
     :try_start_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -82,14 +85,17 @@
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 234
     :goto_0
     return v7
 
+    .line 230
     :catch_0
     move-exception v0
 
     move-object v6, v0
 
+    .line 231
     .local v6, e:Landroid/content/IntentSender$SendIntentException;
     const-string v0, "RemoteViews"
 

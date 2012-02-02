@@ -23,6 +23,7 @@
     .locals 1
 
     .prologue
+    .line 32
     invoke-static {}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isStandaloneProcess()Z
 
     move-result v0
@@ -36,6 +37,7 @@
     .locals 0
 
     .prologue
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

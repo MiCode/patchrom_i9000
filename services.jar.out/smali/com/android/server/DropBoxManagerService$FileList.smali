@@ -47,12 +47,15 @@
     .locals 1
 
     .prologue
+    .line 399
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 400
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/DropBoxManagerService$FileList;->blocks:I
 
+    .line 401
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
@@ -67,6 +70,7 @@
     .parameter "x0"
 
     .prologue
+    .line 399
     invoke-direct {p0}, Lcom/android/server/DropBoxManagerService$FileList;-><init>()V
 
     return-void
@@ -81,6 +85,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 405
     iget v0, p0, Lcom/android/server/DropBoxManagerService$FileList;->blocks:I
 
     iget v1, p1, Lcom/android/server/DropBoxManagerService$FileList;->blocks:I
@@ -93,9 +98,11 @@
 
     sub-int/2addr v0, v1
 
+    .line 409
     :goto_0
     return v0
 
+    .line 406
     :cond_0
     if-ne p0, p1, :cond_1
 
@@ -103,6 +110,7 @@
 
     goto :goto_0
 
+    .line 407
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -118,6 +126,7 @@
 
     goto :goto_0
 
+    .line 408
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -136,6 +145,7 @@
     :cond_3
     move v0, v2
 
+    .line 409
     goto :goto_0
 .end method
 
@@ -144,6 +154,7 @@
     .parameter "x0"
 
     .prologue
+    .line 399
     check-cast p1, Lcom/android/server/DropBoxManagerService$FileList;
 
     .end local p1

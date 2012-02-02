@@ -59,14 +59,18 @@
 
     const/4 v3, -0x2
 
+    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 177
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->currentState:I
 
+    .line 178
     iput v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment:I
 
+    .line 191
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -77,16 +81,19 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
+    .line 192
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
+    .line 193
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
+    .line 194
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/view/ViewGroup$LayoutParams;
@@ -95,6 +102,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 198
     new-instance v0, Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -105,6 +113,7 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
+    .line 199
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     new-instance v1, Landroid/view/ViewGroup$LayoutParams;
@@ -115,10 +124,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 201
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
+    .line 202
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -129,6 +140,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
+    .line 206
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -139,16 +151,19 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
+    .line 207
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p4}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 208
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
+    .line 209
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/view/ViewGroup$LayoutParams;
@@ -157,22 +172,27 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 211
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 213
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
+    .line 214
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
+    .line 215
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
+    .line 216
     return-void
 .end method
 
@@ -181,6 +201,7 @@
     .parameter "x0"
 
     .prologue
+    .line 157
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     return-object v0
@@ -191,6 +212,7 @@
     .parameter "x0"
 
     .prologue
+    .line 157
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     return-object v0
@@ -202,6 +224,7 @@
     .locals 1
 
     .prologue
+    .line 416
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredHeight()I
@@ -215,6 +238,7 @@
     .locals 1
 
     .prologue
+    .line 408
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredWidth()I
@@ -234,6 +258,7 @@
 
     const/4 v6, 0x0
 
+    .line 235
     iget v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment:I
 
     if-eqz v4, :cond_0
@@ -245,6 +270,7 @@
     :cond_0
     move v2, v7
 
+    .line 236
     .local v2, horiz:Z
     :goto_0
     if-eqz v2, :cond_3
@@ -265,12 +291,14 @@
 
     move v0, v4
 
+    .line 238
     .local v0, dx:I
     :goto_1
     if-eqz v2, :cond_4
 
     move v1, v6
 
+    .line 241
     .local v1, dy:I
     :goto_2
     new-instance v3, Landroid/view/animation/TranslateAnimation;
@@ -281,27 +309,33 @@
 
     invoke-direct {v3, v8, v4, v8, v5}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
+    .line 242
     .local v3, trans:Landroid/view/animation/Animation;
     const-wide/16 v4, 0xfa
 
     invoke-virtual {v3, v4, v5}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
+    .line 243
     invoke-virtual {v3, v7}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
+    .line 244
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v3}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 245
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 246
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     const/4 v5, 0x4
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 247
     return-void
 
     .end local v0           #dx:I
@@ -311,8 +345,10 @@
     :cond_1
     move v2, v6
 
+    .line 235
     goto :goto_0
 
+    .line 236
     .restart local v2       #horiz:Z
     :cond_2
     iget v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment_value:I
@@ -334,6 +370,7 @@
 
     goto :goto_1
 
+    .line 238
     .restart local v0       #dx:I
     :cond_4
     iget v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment:I
@@ -376,16 +413,19 @@
     .locals 2
 
     .prologue
+    .line 432
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
+    .line 433
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 434
     return-void
 .end method
 
@@ -398,12 +438,14 @@
     .parameter "alignment"
 
     .prologue
+    .line 335
     move/from16 v0, p5
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/widget/SlidingTab$Slider;->alignment:I
 
+    .line 336
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
@@ -414,16 +456,19 @@
 
     move-result-object v14
 
+    .line 337
     .local v14, tabBackground:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v14}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v7
 
+    .line 338
     .local v7, handleWidth:I
     invoke-virtual {v14}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v6
 
+    .line 339
     .local v6, handleHeight:I
     move-object/from16 v0, p0
 
@@ -435,22 +480,27 @@
 
     move-result-object v16
 
+    .line 340
     .local v16, targetDrawable:Landroid/graphics/drawable/Drawable;
     invoke-virtual/range {v16 .. v16}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v21
 
+    .line 341
     .local v21, targetWidth:I
     invoke-virtual/range {v16 .. v16}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v17
 
+    .line 342
     .local v17, targetHeight:I
     sub-int v11, p3, p1
 
+    .line 343
     .local v11, parentWidth:I
     sub-int v10, p4, p2
 
+    .line 345
     .local v10, parentHeight:I
     const v23, 0x3f2aaaab
 
@@ -474,6 +524,7 @@
 
     add-int v9, v23, v24
 
+    .line 346
     .local v9, leftTarget:I
     const v23, 0x3eaaaaaa
 
@@ -495,14 +546,17 @@
 
     sub-int v13, v23, v24
 
+    .line 347
     .local v13, rightTarget:I
     sub-int v23, v11, v7
 
     div-int/lit8 v8, v23, 0x2
 
+    .line 348
     .local v8, left:I
     add-int v12, v8, v7
 
+    .line 350
     .local v12, right:I
     if-eqz p5, :cond_0
 
@@ -514,27 +568,33 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 352
     :cond_0
     sub-int v23, v10, v17
 
     div-int/lit8 v20, v23, 0x2
 
+    .line 353
     .local v20, targetTop:I
     add-int v15, v20, v17
 
+    .line 354
     .local v15, targetBottom:I
     sub-int v23, v10, v6
 
     div-int/lit8 v22, v23, 0x2
 
+    .line 355
     .local v22, top:I
     add-int v23, v10, v6
 
     div-int/lit8 v5, v23, 0x2
 
+    .line 356
     .local v5, bottom:I
     if-nez p5, :cond_1
 
+    .line 357
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
@@ -555,6 +615,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ImageView;->layout(IIII)V
 
+    .line 358
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
@@ -579,6 +640,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->layout(IIII)V
 
+    .line 359
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
@@ -589,6 +651,7 @@
 
     invoke-virtual/range {v23 .. v24}, Landroid/widget/TextView;->setGravity(I)V
 
+    .line 360
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
@@ -609,17 +672,20 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ImageView;->layout(IIII)V
 
+    .line 361
     move/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/widget/SlidingTab$Slider;->alignment_value:I
 
+    .line 387
     .end local v15           #targetBottom:I
     .end local v20           #targetTop:I
     :goto_0
     return-void
 
+    .line 363
     .restart local v15       #targetBottom:I
     .restart local v20       #targetTop:I
     :cond_1
@@ -643,6 +709,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ImageView;->layout(IIII)V
 
+    .line 364
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
@@ -663,6 +730,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->layout(IIII)V
 
+    .line 365
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
@@ -683,6 +751,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ImageView;->layout(IIII)V
 
+    .line 366
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
@@ -693,6 +762,7 @@
 
     invoke-virtual/range {v23 .. v24}, Landroid/widget/TextView;->setGravity(I)V
 
+    .line 367
     move/from16 v0, p3
 
     move-object/from16 v1, p0
@@ -701,6 +771,7 @@
 
     goto :goto_0
 
+    .line 371
     .end local v5           #bottom:I
     .end local v15           #targetBottom:I
     .end local v20           #targetTop:I
@@ -710,11 +781,13 @@
 
     div-int/lit8 v18, v23, 0x2
 
+    .line 372
     .local v18, targetLeft:I
     add-int v23, v11, v21
 
     div-int/lit8 v19, v23, 0x2
 
+    .line 373
     .local v19, targetRight:I
     const v23, 0x3f2aaaab
 
@@ -738,6 +811,7 @@
 
     sub-int v22, v23, v17
 
+    .line 374
     .restart local v22       #top:I
     const v23, 0x3eaaaaaa
 
@@ -759,6 +833,7 @@
 
     sub-int v5, v23, v24
 
+    .line 375
     .restart local v5       #bottom:I
     const/16 v23, 0x2
 
@@ -768,6 +843,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 376
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
@@ -788,6 +864,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ImageView;->layout(IIII)V
 
+    .line 377
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
@@ -812,6 +889,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->layout(IIII)V
 
+    .line 378
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
@@ -832,6 +910,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ImageView;->layout(IIII)V
 
+    .line 379
     move/from16 v0, p2
 
     move-object/from16 v1, p0
@@ -840,6 +919,7 @@
 
     goto/16 :goto_0
 
+    .line 381
     :cond_3
     move-object/from16 v0, p0
 
@@ -861,6 +941,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ImageView;->layout(IIII)V
 
+    .line 382
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
@@ -881,6 +962,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->layout(IIII)V
 
+    .line 383
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
@@ -901,6 +983,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/ImageView;->layout(IIII)V
 
+    .line 384
     move/from16 v0, p4
 
     move-object/from16 v1, p0
@@ -916,6 +999,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 397
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-static {v3, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -928,6 +1012,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/ImageView;->measure(II)V
 
+    .line 399
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-static {v3, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -940,6 +1025,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->measure(II)V
 
+    .line 401
     return-void
 .end method
 
@@ -954,12 +1040,15 @@
 
     const/4 v7, 0x0
 
+    .line 291
     invoke-virtual {p0, v7}, Lcom/android/internal/widget/SlidingTab$Slider;->setState(I)V
 
+    .line 292
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 293
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
@@ -972,16 +1061,19 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
+    .line 294
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 295
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     const/4 v5, 0x4
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 296
     iget v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment:I
 
     if-eqz v4, :cond_0
@@ -993,6 +1085,7 @@
     :cond_0
     move v2, v9
 
+    .line 297
     .local v2, horiz:Z
     :goto_0
     if-eqz v2, :cond_3
@@ -1013,16 +1106,19 @@
 
     move v0, v4
 
+    .line 299
     .local v0, dx:I
     :goto_1
     if-eqz v2, :cond_4
 
     move v1, v7
 
+    .line 301
     .local v1, dy:I
     :goto_2
     if-eqz p1, :cond_6
 
+    .line 302
     new-instance v3, Landroid/view/animation/TranslateAnimation;
 
     int-to-float v4, v0
@@ -1031,21 +1127,26 @@
 
     invoke-direct {v3, v8, v4, v8, v5}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
+    .line 303
     .local v3, trans:Landroid/view/animation/TranslateAnimation;
     const-wide/16 v4, 0xfa
 
     invoke-virtual {v3, v4, v5}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
+    .line 304
     invoke-virtual {v3, v7}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
 
+    .line 305
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 306
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v3}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 319
     .end local v3           #trans:Landroid/view/animation/TranslateAnimation;
     :goto_3
     return-void
@@ -1056,8 +1157,10 @@
     :cond_1
     move v2, v7
 
+    .line 296
     goto :goto_0
 
+    .line 297
     .restart local v2       #horiz:Z
     :cond_2
     iget v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment_value:I
@@ -1079,6 +1182,7 @@
 
     goto :goto_1
 
+    .line 299
     .restart local v0       #dx:I
     :cond_4
     iget v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment:I
@@ -1116,38 +1220,46 @@
 
     goto :goto_2
 
+    .line 308
     .restart local v1       #dy:I
     :cond_6
     if-eqz v2, :cond_7
 
+    .line 309
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v4, v0}, Landroid/widget/TextView;->offsetLeftAndRight(I)V
 
+    .line 310
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v0}, Landroid/widget/ImageView;->offsetLeftAndRight(I)V
 
+    .line 315
     :goto_4
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->clearAnimation()V
 
+    .line 316
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v4}, Landroid/widget/ImageView;->clearAnimation()V
 
+    .line 317
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     invoke-virtual {v4}, Landroid/widget/ImageView;->clearAnimation()V
 
     goto :goto_3
 
+    .line 312
     :cond_7
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->offsetTopAndBottom(I)V
 
+    .line 313
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v1}, Landroid/widget/ImageView;->offsetTopAndBottom(I)V
@@ -1160,10 +1272,12 @@
     .parameter "barId"
 
     .prologue
+    .line 227
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
+    .line 228
     return-void
 .end method
 
@@ -1172,10 +1286,12 @@
     .parameter "resId"
 
     .prologue
+    .line 231
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
 
+    .line 232
     return-void
 .end method
 
@@ -1184,10 +1300,12 @@
     .parameter "iconId"
 
     .prologue
+    .line 219
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 220
     return-void
 .end method
 
@@ -1200,6 +1318,7 @@
 
     const/4 v3, 0x1
 
+    .line 266
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     if-ne p1, v3, :cond_2
@@ -1209,6 +1328,7 @@
     :goto_0
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setPressed(Z)V
 
+    .line 267
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     if-ne p1, v3, :cond_3
@@ -1218,16 +1338,19 @@
     :goto_1
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setPressed(Z)V
 
+    .line 268
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_4
 
+    .line 269
     new-array v0, v3, [I
 
     const v1, 0x10100a2
 
     aput v1, v0, v4
 
+    .line 270
     .local v0, activeState:[I
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
@@ -1241,6 +1364,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 271
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1249,6 +1373,7 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
+    .line 273
     :cond_0
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
@@ -1262,6 +1387,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 274
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1270,6 +1396,7 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
+    .line 276
     :cond_1
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
@@ -1283,22 +1410,27 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
+    .line 280
     .end local v0           #activeState:[I
     :goto_2
     iput p1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->currentState:I
 
+    .line 281
     return-void
 
     :cond_2
     move v2, v4
 
+    .line 266
     goto :goto_0
 
     :cond_3
     move v2, v4
 
+    .line 267
     goto :goto_1
 
+    .line 278
     :cond_4
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
@@ -1320,10 +1452,12 @@
     .parameter "tabId"
 
     .prologue
+    .line 223
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
+    .line 224
     return-void
 .end method
 
@@ -1332,10 +1466,12 @@
     .parameter "targetId"
 
     .prologue
+    .line 322
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 323
     return-void
 .end method
 
@@ -1350,16 +1486,20 @@
 
     const/4 v5, 0x0
 
+    .line 250
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 251
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 253
     if-eqz p1, :cond_1
 
+    .line 254
     iget v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment:I
 
     if-eqz v4, :cond_0
@@ -1371,6 +1511,7 @@
     :cond_0
     move v2, v7
 
+    .line 255
     .local v2, horiz:Z
     :goto_0
     if-eqz v2, :cond_4
@@ -1387,12 +1528,14 @@
 
     move v0, v4
 
+    .line 256
     .local v0, dx:I
     :goto_1
     if-eqz v2, :cond_5
 
     move v1, v5
 
+    .line 258
     .local v1, dy:I
     :goto_2
     new-instance v3, Landroid/view/animation/TranslateAnimation;
@@ -1407,19 +1550,23 @@
 
     invoke-direct {v3, v4, v6, v5, v6}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
+    .line 259
     .local v3, trans:Landroid/view/animation/Animation;
     const-wide/16 v4, 0xfa
 
     invoke-virtual {v3, v4, v5}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
+    .line 260
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v3}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 261
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 263
     .end local v0           #dx:I
     .end local v1           #dy:I
     .end local v2           #horiz:Z
@@ -1430,8 +1577,10 @@
     :cond_2
     move v2, v5
 
+    .line 254
     goto :goto_0
 
+    .line 255
     .restart local v2       #horiz:Z
     :cond_3
     iget-object v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
@@ -1451,6 +1600,7 @@
 
     goto :goto_1
 
+    .line 256
     .restart local v0       #dx:I
     :cond_5
     iget v4, p0, Lcom/android/internal/widget/SlidingTab$Slider;->alignment:I
@@ -1487,6 +1637,7 @@
     .locals 3
 
     .prologue
+    .line 284
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -1495,21 +1646,25 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
+    .line 285
     .local v0, alphaAnim:Landroid/view/animation/AlphaAnimation;
     const-wide/16 v1, 0x1f4
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
+    .line 286
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 287
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$Slider;->target:Landroid/widget/ImageView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 288
     return-void
 .end method
 
@@ -1519,14 +1674,17 @@
     .parameter "anim2"
 
     .prologue
+    .line 427
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->tab:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 428
     iget-object v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->text:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
+    .line 429
     return-void
 .end method
 
@@ -1534,9 +1692,11 @@
     .locals 1
 
     .prologue
+    .line 390
     iget v0, p0, Lcom/android/internal/widget/SlidingTab$Slider;->currentState:I
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/SlidingTab$Slider;->setState(I)V
 
+    .line 391
     return-void
 .end method

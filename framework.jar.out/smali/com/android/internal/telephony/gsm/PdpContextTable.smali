@@ -36,6 +36,7 @@
 
     const/4 v6, 0x3
 
+    .line 44
     const/16 v0, 0x140
 
     new-array v0, v0, [Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;
@@ -3259,8 +3260,10 @@
     .locals 0
 
     .prologue
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 27
     return-void
 .end method
 
@@ -3272,6 +3275,7 @@
     .prologue
     const/4 v6, 0x0
 
+    .line 520
     sget-object v0, Lcom/android/internal/telephony/gsm/PdpContextTable;->pdpContextTable:[Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;
 
     .local v0, arr$:[Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;
@@ -3286,6 +3290,7 @@
 
     aget-object v1, v0, v2
 
+    .line 521
     .local v1, entry:Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;
     iget-object v4, v1, Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;->mccmnc:Ljava/lang/String;
 
@@ -3295,26 +3300,32 @@
 
     if-eqz v4, :cond_2
 
+    .line 522
     const/4 v4, 0x1
 
     if-ne p1, v4, :cond_0
 
+    .line 523
     iget v4, v1, Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;->context2gNum:I
 
+    .line 536
     .end local v1           #entry:Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;
     :goto_1
     return v4
 
+    .line 525
     .restart local v1       #entry:Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;
     :cond_0
     const/4 v4, 0x2
 
     if-ne p1, v4, :cond_1
 
+    .line 526
     iget v4, v1, Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;->context3gNum:I
 
     goto :goto_1
 
+    .line 529
     :cond_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3338,13 +3349,16 @@
 
     move v4, v6
 
+    .line 530
     goto :goto_1
 
+    .line 520
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 535
     .end local v1           #entry:Lcom/android/internal/telephony/gsm/PdpContextTable$PdpContextEntry;
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3369,6 +3383,7 @@
 
     move v4, v6
 
+    .line 536
     goto :goto_1
 .end method
 
@@ -3377,6 +3392,7 @@
     .parameter "s"
 
     .prologue
+    .line 540
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3399,5 +3415,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 541
     return-void
 .end method

@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 92
     iput-object p1, p0, Lcom/android/server/DataRouterService$1;->this$0:Lcom/android/server/DataRouterService;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -40,10 +41,12 @@
     .parameter "newState"
 
     .prologue
+    .line 96
     iget-object v0, p0, Lcom/android/server/DataRouterService$1;->this$0:Lcom/android/server/DataRouterService;
 
     #calls: Lcom/android/server/DataRouterService;->updateData(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, p1, p3}, Lcom/android/server/DataRouterService;->access$000(Lcom/android/server/DataRouterService;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 97
     return-void
 .end method

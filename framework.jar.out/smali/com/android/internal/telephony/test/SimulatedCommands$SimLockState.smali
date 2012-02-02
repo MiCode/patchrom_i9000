@@ -48,6 +48,7 @@
 
     const/4 v2, 0x0
 
+    .line 46
     new-instance v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
     const-string v1, "NONE"
@@ -56,6 +57,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;->NONE:Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
+    .line 47
     new-instance v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
     const-string v1, "REQUIRE_PIN"
@@ -64,6 +66,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;->REQUIRE_PIN:Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
+    .line 48
     new-instance v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
     const-string v1, "REQUIRE_PUK"
@@ -72,6 +75,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;->REQUIRE_PUK:Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
+    .line 49
     new-instance v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
     const-string v1, "SIM_PERM_LOCKED"
@@ -80,6 +84,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;->SIM_PERM_LOCKED:Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
+    .line 45
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
@@ -116,6 +121,7 @@
     .end annotation
 
     .prologue
+    .line 45
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -126,6 +132,7 @@
     .parameter "name"
 
     .prologue
+    .line 45
     const-class v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -142,6 +149,7 @@
     .locals 1
 
     .prologue
+    .line 45
     sget-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;->$VALUES:[Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/test/SimulatedCommands$SimLockState;->clone()Ljava/lang/Object;

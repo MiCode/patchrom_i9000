@@ -12,10 +12,13 @@
     .locals 0
 
     .prologue
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 23
     invoke-direct {p0}, Landroid/graphics/Camera;->nativeConstructor()V
 
+    .line 24
     return-void
 .end method
 
@@ -38,10 +41,12 @@
     .parameter "canvas"
 
     .prologue
+    .line 38
     iget v0, p1, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-direct {p0, v0}, Landroid/graphics/Camera;->nativeApplyToCanvas(I)V
 
+    .line 39
     return-void
 .end method
 
@@ -57,8 +62,10 @@
     .end annotation
 
     .prologue
+    .line 44
     invoke-direct {p0}, Landroid/graphics/Camera;->nativeDestructor()V
 
+    .line 45
     return-void
 .end method
 
@@ -67,10 +74,12 @@
     .parameter "matrix"
 
     .prologue
+    .line 35
     iget v0, p1, Landroid/graphics/Matrix;->native_instance:I
 
     invoke-direct {p0, v0}, Landroid/graphics/Camera;->nativeGetMatrix(I)V
 
+    .line 36
     return-void
 .end method
 

@@ -45,10 +45,13 @@
     .parameter "delimiter"
 
     .prologue
+    .line 374
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 375
     iput-char p1, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mDelimiter:C
 
+    .line 376
     return-void
 .end method
 
@@ -58,6 +61,7 @@
     .locals 2
 
     .prologue
+    .line 393
     iget v0, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mPosition:I
 
     iget v1, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mLength:I
@@ -88,6 +92,7 @@
     .end annotation
 
     .prologue
+    .line 389
     return-object p0
 .end method
 
@@ -95,6 +100,7 @@
     .locals 1
 
     .prologue
+    .line 364
     invoke-virtual {p0}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v0
@@ -106,6 +112,7 @@
     .locals 5
 
     .prologue
+    .line 397
     iget-object v2, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mString:Ljava/lang/String;
 
     iget-char v3, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mDelimiter:C
@@ -116,13 +123,16 @@
 
     move-result v0
 
+    .line 398
     .local v0, end:I
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_0
 
+    .line 399
     iget v0, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mLength:I
 
+    .line 401
     :cond_0
     iget-object v2, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mString:Ljava/lang/String;
 
@@ -132,11 +142,13 @@
 
     move-result-object v1
 
+    .line 402
     .local v1, nextString:Ljava/lang/String;
     add-int/lit8 v2, v0, 0x1
 
     iput v2, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mPosition:I
 
+    .line 403
     return-object v1
 .end method
 
@@ -144,6 +156,7 @@
     .locals 1
 
     .prologue
+    .line 407
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -156,12 +169,15 @@
     .parameter "string"
 
     .prologue
+    .line 383
     iput-object p1, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mString:Ljava/lang/String;
 
+    .line 384
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mPosition:I
 
+    .line 385
     iget-object v0, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mString:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -170,5 +186,6 @@
 
     iput v0, p0, Landroid/text/TextUtils$SimpleStringSplitter;->mLength:I
 
+    .line 386
     return-void
 .end method

@@ -23,10 +23,12 @@
     .parameter "context"
 
     .prologue
+    .line 86
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 87
     return-void
 .end method
 
@@ -36,10 +38,12 @@
     .parameter "attrs"
 
     .prologue
+    .line 90
     const v0, 0x101006e
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 91
     return-void
 .end method
 
@@ -50,8 +54,10 @@
     .parameter "defStyle"
 
     .prologue
+    .line 94
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 99
     invoke-virtual {p0}, Landroid/widget/EditText;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -66,6 +72,7 @@
 
     iput-object v0, p0, Landroid/widget/EditText;->imm:Landroid/view/inputmethod/InputMethodManager;
 
+    .line 102
     new-instance v0, Landroid/view/GestureDetector;
 
     invoke-virtual {p0}, Landroid/widget/EditText;->getContext()Landroid/content/Context;
@@ -80,6 +87,7 @@
 
     iput-object v0, p0, Landroid/widget/EditText;->doubleTapDetector:Landroid/view/GestureDetector;
 
+    .line 121
     return-void
 .end method
 
@@ -89,6 +97,7 @@
     .parameter "x1"
 
     .prologue
+    .line 56
     invoke-direct {p0, p1}, Landroid/widget/EditText;->sendTapNotificationToIME(Z)V
 
     return-void
@@ -99,18 +108,21 @@
     .parameter "isSingleTap"
 
     .prologue
+    .line 131
     if-eqz p1, :cond_1
 
     const-string v1, "com.swype.android.inputmethod/cmd_tap"
 
     move-object v0, v1
 
+    .line 133
     .local v0, command:Ljava/lang/String;
     :goto_0
     iget-object v1, p0, Landroid/widget/EditText;->imm:Landroid/view/inputmethod/InputMethodManager;
 
     if-eqz v1, :cond_0
 
+    .line 134
     iget-object v1, p0, Landroid/widget/EditText;->imm:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-virtual {v1, p0}, Landroid/view/inputmethod/InputMethodManager;->isActive(Landroid/view/View;)Z
@@ -119,15 +131,18 @@
 
     if-eqz v1, :cond_0
 
+    .line 135
     iget-object v1, p0, Landroid/widget/EditText;->imm:Landroid/view/inputmethod/InputMethodManager;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, p0, v0, v2}, Landroid/view/inputmethod/InputMethodManager;->sendAppPrivateCommand(Landroid/view/View;Ljava/lang/String;Landroid/os/Bundle;)V
 
+    .line 139
     :cond_0
     return-void
 
+    .line 131
     .end local v0           #command:Ljava/lang/String;
     :cond_1
     const-string v1, "com.swype.android.inputmethod/cmd_doubletap"
@@ -144,12 +159,14 @@
     .parameter "index"
 
     .prologue
+    .line 206
     invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Landroid/text/Selection;->extendSelection(Landroid/text/Spannable;I)V
 
+    .line 207
     return-void
 .end method
 
@@ -157,6 +174,7 @@
     .locals 1
 
     .prologue
+    .line 163
     const/4 v0, 0x1
 
     return v0
@@ -166,6 +184,7 @@
     .locals 1
 
     .prologue
+    .line 168
     invoke-static {}, Landroid/text/method/ArrowKeyMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
 
     move-result-object v0
@@ -177,6 +196,7 @@
     .locals 0
 
     .prologue
+    .line 173
     invoke-super {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -191,6 +211,7 @@
     .locals 1
 
     .prologue
+    .line 56
     invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
@@ -204,6 +225,7 @@
     .parameter "data"
 
     .prologue
+    .line 150
     const-string v0, "com.swype.android.inputmethod/relaunch"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -212,14 +234,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 152
     iget-object v0, p0, Landroid/widget/EditText;->imm:Landroid/view/inputmethod/InputMethodManager;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
+    .line 153
     const/4 v0, 0x1
 
+    .line 155
     :goto_0
     return v0
 
@@ -236,15 +261,18 @@
     .parameter "event"
 
     .prologue
+    .line 143
     invoke-super {p0, p1}, Landroid/widget/TextView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
+    .line 144
     .local v0, result:Z
     iget-object v1, p0, Landroid/widget/EditText;->doubleTapDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v1, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
+    .line 145
     return v0
 .end method
 
@@ -252,12 +280,14 @@
     .locals 1
 
     .prologue
+    .line 199
     invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
     invoke-static {v0}, Landroid/text/Selection;->selectAll(Landroid/text/Spannable;)V
 
+    .line 200
     return-void
 .end method
 
@@ -266,10 +296,12 @@
     .parameter "ellipsis"
 
     .prologue
+    .line 211
     sget-object v0, Landroid/text/TextUtils$TruncateAt;->MARQUEE:Landroid/text/TextUtils$TruncateAt;
 
     if-ne p1, v0, :cond_0
 
+    .line 212
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "EditText cannot use the ellipsize mode TextUtils.TruncateAt.MARQUEE"
@@ -278,9 +310,11 @@
 
     throw v0
 
+    .line 215
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
+    .line 216
     return-void
 .end method
 
@@ -289,12 +323,14 @@
     .parameter "index"
 
     .prologue
+    .line 192
     invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
+    .line 193
     return-void
 .end method
 
@@ -304,12 +340,14 @@
     .parameter "stop"
 
     .prologue
+    .line 185
     invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
     invoke-static {v0, p1, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
+    .line 186
     return-void
 .end method
 
@@ -319,9 +357,11 @@
     .parameter "type"
 
     .prologue
+    .line 178
     sget-object v0, Landroid/widget/TextView$BufferType;->EDITABLE:Landroid/widget/TextView$BufferType;
 
     invoke-super {p0, p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
+    .line 179
     return-void
 .end method

@@ -47,22 +47,29 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 525
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 526
     iput-object v1, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->tag:Ljava/lang/String;
 
+    .line 527
     iput-wide p1, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
 
+    .line 528
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->flags:I
 
+    .line 529
     iput-object v1, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
+    .line 530
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->blocks:I
 
+    .line 531
     return-void
 .end method
 
@@ -72,10 +79,13 @@
     .parameter "blockSize"
 
     .prologue
+    .line 482
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 483
     iput-object p1, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
+    .line 484
     iget-object v6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
     invoke-virtual {v6}, Ljava/io/File;->length()J
@@ -98,10 +108,12 @@
 
     iput v6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->blocks:I
 
+    .line 486
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 487
     .local v5, name:Ljava/lang/String;
     const/16 v6, 0x40
 
@@ -109,27 +121,34 @@
 
     move-result v0
 
+    .line 488
     .local v0, at:I
     if-gez v0, :cond_0
 
+    .line 489
     const/4 v6, 0x0
 
     iput-object v6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->tag:Ljava/lang/String;
 
+    .line 490
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
 
+    .line 491
     const/4 v6, 0x1
 
     iput v6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->flags:I
 
+    .line 519
     :goto_0
     return-void
 
+    .line 495
     :cond_0
     const/4 v2, 0x0
 
+    .line 496
     .local v2, flags:I
     const/4 v6, 0x0
 
@@ -143,6 +162,7 @@
 
     iput-object v6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->tag:Ljava/lang/String;
 
+    .line 497
     const-string v6, ".gz"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -151,8 +171,10 @@
 
     if-eqz v6, :cond_1
 
+    .line 498
     or-int/lit8 v2, v2, 0x4
 
+    .line 499
     const/4 v6, 0x0
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
@@ -167,6 +189,7 @@
 
     move-result-object v5
 
+    .line 501
     :cond_1
     const-string v6, ".lost"
 
@@ -176,8 +199,10 @@
 
     if-eqz v6, :cond_2
 
+    .line 502
     or-int/lit8 v2, v2, 0x1
 
+    .line 503
     add-int/lit8 v6, v0, 0x1
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
@@ -192,9 +217,11 @@
 
     move-result-object v5
 
+    .line 514
     :goto_1
     iput v2, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->flags:I
 
+    .line 517
     :try_start_0
     invoke-static {v5}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -206,12 +233,14 @@
 
     move-result-wide v3
 
+    .line 518
     .local v3, millis:J
     :goto_2
     iput-wide v3, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
 
     goto :goto_0
 
+    .line 504
     .end local v3           #millis:J
     :cond_2
     const-string v6, ".txt"
@@ -222,8 +251,10 @@
 
     if-eqz v6, :cond_3
 
+    .line 505
     or-int/lit8 v2, v2, 0x2
 
+    .line 506
     add-int/lit8 v6, v0, 0x1
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
@@ -240,6 +271,7 @@
 
     goto :goto_1
 
+    .line 507
     :cond_3
     const-string v6, ".dat"
 
@@ -249,6 +281,7 @@
 
     if-eqz v6, :cond_4
 
+    .line 508
     add-int/lit8 v6, v0, 0x1
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
@@ -265,17 +298,20 @@
 
     goto :goto_1
 
+    .line 510
     :cond_4
     const/4 v6, 0x1
 
     iput v6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->flags:I
 
+    .line 511
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
 
     goto :goto_0
 
+    .line 517
     :catch_0
     move-exception v6
 
@@ -303,8 +339,10 @@
     .end annotation
 
     .prologue
+    .line 445
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 446
     and-int/lit8 v0, p6, 0x1
 
     if-eqz v0, :cond_0
@@ -315,13 +353,17 @@
 
     throw v0
 
+    .line 448
     :cond_0
     iput-object p3, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->tag:Ljava/lang/String;
 
+    .line 449
     iput-wide p4, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
 
+    .line 450
     iput p6, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->flags:I
 
+    .line 451
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -376,6 +418,7 @@
 
     iput-object v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
+    .line 455
     iget-object v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
     invoke-virtual {p1, v0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
@@ -384,6 +427,7 @@
 
     if-nez v0, :cond_3
 
+    .line 456
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -420,6 +464,7 @@
 
     throw v0
 
+    .line 451
     :cond_1
     const-string v2, ".dat"
 
@@ -430,6 +475,7 @@
 
     goto :goto_1
 
+    .line 458
     :cond_3
     iget-object v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
@@ -453,6 +499,7 @@
 
     iput v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->blocks:I
 
+    .line 459
     return-void
 .end method
 
@@ -468,16 +515,21 @@
     .end annotation
 
     .prologue
+    .line 468
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 469
     iput-object p2, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->tag:Ljava/lang/String;
 
+    .line 470
     iput-wide p3, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
 
+    .line 471
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->flags:I
 
+    .line 472
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -516,10 +568,12 @@
 
     iput-object v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
+    .line 473
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->blocks:I
 
+    .line 474
     new-instance v0, Ljava/io/FileOutputStream;
 
     iget-object v1, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
@@ -528,6 +582,7 @@
 
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
+    .line 475
     return-void
 .end method
 
@@ -544,6 +599,7 @@
 
     const/4 v4, -0x1
 
+    .line 423
     iget-wide v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
 
     iget-wide v2, p1, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
@@ -554,9 +610,11 @@
 
     move v0, v4
 
+    .line 431
     :goto_0
     return v0
 
+    .line 424
     :cond_0
     iget-wide v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->timestampMillis:J
 
@@ -570,6 +628,7 @@
 
     goto :goto_0
 
+    .line 425
     :cond_1
     iget-object v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
@@ -589,6 +648,7 @@
 
     goto :goto_0
 
+    .line 426
     :cond_2
     iget-object v0, p1, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
@@ -598,6 +658,7 @@
 
     goto :goto_0
 
+    .line 427
     :cond_3
     iget-object v0, p0, Lcom/android/server/DropBoxManagerService$EntryFile;->file:Ljava/io/File;
 
@@ -607,6 +668,7 @@
 
     goto :goto_0
 
+    .line 428
     :cond_4
     if-ne p0, p1, :cond_5
 
@@ -614,6 +676,7 @@
 
     goto :goto_0
 
+    .line 429
     :cond_5
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -629,6 +692,7 @@
 
     goto :goto_0
 
+    .line 430
     :cond_6
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -647,6 +711,7 @@
     :cond_7
     move v0, v6
 
+    .line 431
     goto :goto_0
 .end method
 
@@ -655,6 +720,7 @@
     .parameter "x0"
 
     .prologue
+    .line 414
     check-cast p1, Lcom/android/server/DropBoxManagerService$EntryFile;
 
     .end local p1

@@ -27,11 +27,15 @@
     .parameter "values"
 
     .prologue
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 59
     iput-object p1, p0, Landroid/content/Entity$NamedContentValues;->uri:Landroid/net/Uri;
 
+    .line 60
     iput-object p2, p0, Landroid/content/Entity$NamedContentValues;->values:Landroid/content/ContentValues;
 
+    .line 61
     return-void
 .end method

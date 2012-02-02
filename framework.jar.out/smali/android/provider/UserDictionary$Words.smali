@@ -46,6 +46,7 @@
     .locals 1
 
     .prologue
+    .line 50
     const-string v0, "content://user_dictionary/words"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -61,6 +62,7 @@
     .locals 0
 
     .prologue
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -76,10 +78,12 @@
     .prologue
     const/4 v5, 0x1
 
+    .line 111
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
+    .line 113
     .local v1, resolver:Landroid/content/ContentResolver;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -91,15 +95,18 @@
 
     if-le p3, v5, :cond_1
 
+    .line 136
     :cond_0
     :goto_0
     return-void
 
+    .line 117
     :cond_1
     if-gez p2, :cond_2
 
     const/4 p2, 0x0
 
+    .line 118
     :cond_2
     const/16 v4, 0xff
 
@@ -107,12 +114,15 @@
 
     const/16 p2, 0xff
 
+    .line 120
     :cond_3
     const/4 v0, 0x0
 
+    .line 123
     .local v0, locale:Ljava/lang/String;
     if-ne p3, v5, :cond_4
 
+    .line 124
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v4
@@ -121,6 +131,7 @@
 
     move-result-object v0
 
+    .line 126
     :cond_4
     new-instance v3, Landroid/content/ContentValues;
 
@@ -128,11 +139,13 @@
 
     invoke-direct {v3, v4}, Landroid/content/ContentValues;-><init>(I)V
 
+    .line 128
     .local v3, values:Landroid/content/ContentValues;
-    const-string v4, "word"
+    const-string/jumbo v4, "word"
 
     invoke-virtual {v3, v4, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 129
     const-string v4, "frequency"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -141,10 +154,12 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 130
     const-string v4, "locale"
 
     invoke-virtual {v3, v4, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 131
     const-string v4, "appid"
 
     const/4 v5, 0x0
@@ -155,12 +170,14 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 133
     sget-object v4, Landroid/provider/UserDictionary$Words;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v1, v4, v3}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v2
 
+    .line 136
     .local v2, result:Landroid/net/Uri;
     goto :goto_0
 .end method

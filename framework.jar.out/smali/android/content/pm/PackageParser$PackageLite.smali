@@ -29,11 +29,15 @@
     .parameter "installLocation"
 
     .prologue
+    .line 151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 152
     iput-object p1, p0, Landroid/content/pm/PackageParser$PackageLite;->packageName:Ljava/lang/String;
 
+    .line 153
     iput p2, p0, Landroid/content/pm/PackageParser$PackageLite;->installLocation:I
 
+    .line 154
     return-void
 .end method

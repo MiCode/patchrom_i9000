@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 68
     iput-object p1, p0, Landroid/renderscript/SimpleMesh$Builder$Entry;->this$0:Landroid/renderscript/SimpleMesh$Builder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

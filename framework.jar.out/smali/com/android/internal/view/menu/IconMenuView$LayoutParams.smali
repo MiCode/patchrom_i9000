@@ -35,8 +35,10 @@
     .parameter "height"
 
     .prologue
+    .line 819
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
+    .line 820
     return-void
 .end method
 
@@ -46,7 +48,9 @@
     .parameter "attrs"
 
     .prologue
+    .line 815
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 816
     return-void
 .end method

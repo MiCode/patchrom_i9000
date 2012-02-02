@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 100
     invoke-direct {p0}, Landroid/content/res/PluralRules;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
     .parameter "x0"
 
     .prologue
+    .line 100
     invoke-direct {p0}, Landroid/content/res/PluralRules$en;-><init>()V
 
     return-void
@@ -41,12 +43,15 @@
     .parameter "n"
 
     .prologue
+    .line 102
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
+    .line 103
     const/4 v0, 0x2
 
+    .line 106
     :goto_0
     return v0
 

@@ -37,10 +37,12 @@
     .parameter "context"
 
     .prologue
+    .line 48
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
+    .line 49
     return-void
 .end method
 
@@ -52,8 +54,10 @@
     .prologue
     const v0, 0x3e23d70a
 
+    .line 58
     invoke-direct {p0, p1, p2, v0, v0}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;FF)V
 
+    .line 60
     return-void
 .end method
 
@@ -65,36 +69,45 @@
     .parameter "bounceCoefficientY"
 
     .prologue
+    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 135
     const/high16 v0, 0x447a
 
     iput v0, p0, Landroid/widget/OverScroller;->VELOCITY_ADJUSTMENT:F
 
+    .line 74
     iput-object p2, p0, Landroid/widget/OverScroller;->mInterpolator:Landroid/view/animation/Interpolator;
 
+    .line 75
     new-instance v0, Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-direct {v0}, Landroid/widget/OverScroller$MagneticOverScroller;-><init>()V
 
     iput-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
+    .line 76
     new-instance v0, Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-direct {v0}, Landroid/widget/OverScroller$MagneticOverScroller;-><init>()V
 
     iput-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
+    .line 77
     invoke-static {p1}, Landroid/widget/OverScroller$MagneticOverScroller;->initializeFromContext(Landroid/content/Context;)V
 
+    .line 79
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p3}, Landroid/widget/OverScroller$MagneticOverScroller;->setBounceCoefficient(F)V
 
+    .line 80
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p4}, Landroid/widget/OverScroller$MagneticOverScroller;->setBounceCoefficient(F)V
 
+    .line 81
     return-void
 .end method
 
@@ -104,14 +117,17 @@
     .locals 1
 
     .prologue
+    .line 461
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller$MagneticOverScroller;->finish()V
 
+    .line 462
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller$MagneticOverScroller;->finish()V
 
+    .line 463
     return-void
 .end method
 
@@ -119,33 +135,40 @@
     .locals 8
 
     .prologue
+    .line 252
     invoke-virtual {p0}, Landroid/widget/OverScroller;->isFinished()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
+    .line 253
     const/4 v6, 0x0
 
+    .line 299
     :goto_0
     return v6
 
+    .line 256
     :cond_0
     iget v6, p0, Landroid/widget/OverScroller;->mMode:I
 
     packed-switch v6, :pswitch_data_0
 
+    .line 299
     :cond_1
     :goto_1
     const/4 v6, 0x1
 
     goto :goto_0
 
+    .line 258
     :pswitch_0
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v4
 
+    .line 261
     .local v4, time:J
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
@@ -153,11 +176,13 @@
 
     sub-long v1, v4, v6
 
+    .line 263
     .local v1, elapsedTime:J
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v6, Landroid/widget/OverScroller$MagneticOverScroller;->mDuration:I
 
+    .line 264
     .local v0, duration:I
     int-to-long v6, v0
 
@@ -165,32 +190,38 @@
 
     if-gez v6, :cond_3
 
+    .line 265
     long-to-float v6, v1
 
     int-to-float v7, v0
 
     div-float v3, v6, v7
 
+    .line 267
     .local v3, q:F
     iget-object v6, p0, Landroid/widget/OverScroller;->mInterpolator:Landroid/view/animation/Interpolator;
 
     if-nez v6, :cond_2
 
+    .line 268
     invoke-static {v3}, Landroid/widget/Scroller;->viscousFluid(F)F
 
     move-result v3
 
+    .line 272
     :goto_2
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v6, v3}, Landroid/widget/OverScroller$MagneticOverScroller;->updateScroll(F)V
 
+    .line 273
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v6, v3}, Landroid/widget/OverScroller$MagneticOverScroller;->updateScroll(F)V
 
     goto :goto_1
 
+    .line 270
     :cond_2
     iget-object v6, p0, Landroid/widget/OverScroller;->mInterpolator:Landroid/view/animation/Interpolator;
 
@@ -200,12 +231,14 @@
 
     goto :goto_2
 
+    .line 275
     .end local v3           #q:F
     :cond_3
     invoke-virtual {p0}, Landroid/widget/OverScroller;->abortAnimation()V
 
     goto :goto_1
 
+    .line 280
     .end local v0           #duration:I
     .end local v1           #elapsedTime:J
     .end local v4           #time:J
@@ -216,6 +249,7 @@
 
     if-nez v6, :cond_4
 
+    .line 281
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v6}, Landroid/widget/OverScroller$MagneticOverScroller;->update()Z
@@ -224,6 +258,7 @@
 
     if-nez v6, :cond_4
 
+    .line 282
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v6}, Landroid/widget/OverScroller$MagneticOverScroller;->continueWhenFinished()Z
@@ -232,10 +267,12 @@
 
     if-nez v6, :cond_4
 
+    .line 283
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v6}, Landroid/widget/OverScroller$MagneticOverScroller;->finish()V
 
+    .line 288
     :cond_4
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
@@ -243,6 +280,7 @@
 
     if-nez v6, :cond_1
 
+    .line 289
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v6}, Landroid/widget/OverScroller$MagneticOverScroller;->update()Z
@@ -251,6 +289,7 @@
 
     if-nez v6, :cond_1
 
+    .line 290
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v6}, Landroid/widget/OverScroller$MagneticOverScroller;->continueWhenFinished()Z
@@ -259,12 +298,14 @@
 
     if-nez v6, :cond_1
 
+    .line 291
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v6}, Landroid/widget/OverScroller$MagneticOverScroller;->finish()V
 
     goto :goto_1
 
+    .line 256
     nop
 
     :pswitch_data_0
@@ -279,14 +320,17 @@
     .parameter "extend"
 
     .prologue
+    .line 209
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$MagneticOverScroller;->extendDuration(I)V
 
+    .line 210
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$MagneticOverScroller;->extendDuration(I)V
 
+    .line 211
     return-void
 .end method
 
@@ -302,6 +346,7 @@
     .parameter "maxY"
 
     .prologue
+    .line 362
     const/4 v9, 0x0
 
     const/4 v10, 0x0
@@ -326,6 +371,7 @@
 
     invoke-virtual/range {v0 .. v10}, Landroid/widget/OverScroller;->fling(IIIIIIIIII)V
 
+    .line 363
     return-void
 .end method
 
@@ -343,10 +389,12 @@
     .parameter "overY"
 
     .prologue
+    .line 394
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/widget/OverScroller;->mMode:I
 
+    .line 395
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     move v1, p1
@@ -361,6 +409,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller$MagneticOverScroller;->fling(IIIII)V
 
+    .line 396
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     move v1, p2
@@ -375,6 +424,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller$MagneticOverScroller;->fling(IIIII)V
 
+    .line 397
     return-void
 .end method
 
@@ -383,6 +433,7 @@
     .parameter "finished"
 
     .prologue
+    .line 102
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
@@ -391,6 +442,7 @@
 
     iput-boolean p1, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mFinished:Z
 
+    .line 103
     return-void
 .end method
 
@@ -398,6 +450,7 @@
     .locals 3
 
     .prologue
+    .line 130
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v1, v1, Landroid/widget/OverScroller$MagneticOverScroller;->mCurrVelocity:F
@@ -408,6 +461,7 @@
 
     mul-float v0, v1, v2
 
+    .line 131
     .local v0, squaredNorm:F
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
@@ -421,6 +475,7 @@
 
     add-float/2addr v0, v1
 
+    .line 132
     invoke-static {v0}, Landroid/util/FloatMath;->sqrt(F)F
 
     move-result v1
@@ -433,12 +488,15 @@
     .parameter "isYVelocity"
 
     .prologue
+    .line 138
     if-eqz p1, :cond_0
 
+    .line 139
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mCurrVelocity:F
 
+    .line 141
     :goto_0
     return v0
 
@@ -454,6 +512,7 @@
     .locals 1
 
     .prologue
+    .line 111
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mCurrentPosition:I
@@ -465,6 +524,7 @@
     .locals 1
 
     .prologue
+    .line 120
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mCurrentPosition:I
@@ -476,6 +536,7 @@
     .locals 2
 
     .prologue
+    .line 191
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mDuration:I
@@ -495,6 +556,7 @@
     .locals 1
 
     .prologue
+    .line 169
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mFinal:I
@@ -506,6 +568,7 @@
     .locals 1
 
     .prologue
+    .line 178
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mFinal:I
@@ -517,6 +580,7 @@
     .locals 1
 
     .prologue
+    .line 151
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mStart:I
@@ -528,6 +592,7 @@
     .locals 1
 
     .prologue
+    .line 160
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mStart:I
@@ -539,6 +604,7 @@
     .locals 1
 
     .prologue
+    .line 90
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget-boolean v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mFinished:Z
@@ -566,6 +632,7 @@
     .locals 1
 
     .prologue
+    .line 447
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     iget-boolean v0, v0, Landroid/widget/OverScroller$MagneticOverScroller;->mFinished:Z
@@ -616,10 +683,12 @@
     .parameter "overX"
 
     .prologue
+    .line 413
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/widget/OverScroller$MagneticOverScroller;->notifyEdgeReached(III)V
 
+    .line 414
     return-void
 .end method
 
@@ -630,10 +699,12 @@
     .parameter "overY"
 
     .prologue
+    .line 430
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/widget/OverScroller$MagneticOverScroller;->notifyEdgeReached(III)V
 
+    .line 431
     return-void
 .end method
 
@@ -642,10 +713,12 @@
     .parameter "newX"
 
     .prologue
+    .line 227
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$MagneticOverScroller;->setFinalPosition(I)V
 
+    .line 228
     return-void
 .end method
 
@@ -654,10 +727,12 @@
     .parameter "newY"
 
     .prologue
+    .line 244
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$MagneticOverScroller;->setFinalPosition(I)V
 
+    .line 245
     return-void
 .end method
 
@@ -673,14 +748,17 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 352
     iput v3, p0, Landroid/widget/OverScroller;->mMode:I
 
+    .line 355
     iget-object v2, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v2, p1, p3, p4}, Landroid/widget/OverScroller$MagneticOverScroller;->springback(III)Z
 
     move-result v0
 
+    .line 356
     .local v0, spingbackX:Z
     iget-object v2, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
@@ -688,6 +766,7 @@
 
     move-result v1
 
+    .line 357
     .local v1, spingbackY:Z
     if-nez v0, :cond_0
 
@@ -713,6 +792,7 @@
     .parameter "dy"
 
     .prologue
+    .line 317
     const/16 v5, 0xfa
 
     move-object v0, p0
@@ -727,6 +807,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
 
+    .line 318
     return-void
 .end method
 
@@ -739,18 +820,22 @@
     .parameter "duration"
 
     .prologue
+    .line 334
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/OverScroller;->mMode:I
 
+    .line 335
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p1, p3, p5}, Landroid/widget/OverScroller$MagneticOverScroller;->startScroll(III)V
 
+    .line 336
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$MagneticOverScroller;
 
     invoke-virtual {v0, p2, p4, p5}, Landroid/widget/OverScroller$MagneticOverScroller;->startScroll(III)V
 
+    .line 337
     return-void
 .end method
 
@@ -758,10 +843,12 @@
     .locals 8
 
     .prologue
+    .line 473
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v2
 
+    .line 474
     .local v2, time:J
     iget-object v4, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$MagneticOverScroller;
 
@@ -775,6 +862,7 @@
 
     move-result-wide v0
 
+    .line 475
     .local v0, startTime:J
     sub-long v4, v2, v0
 

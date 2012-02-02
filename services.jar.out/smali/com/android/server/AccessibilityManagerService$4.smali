@@ -25,6 +25,7 @@
     .parameter "x0"
 
     .prologue
+    .line 260
     iput-object p1, p0, Lcom/android/server/AccessibilityManagerService$4;->this$0:Lcom/android/server/AccessibilityManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,24 +40,30 @@
     .parameter "selfChange"
 
     .prologue
+    .line 263
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
+    .line 265
     iget-object v0, p0, Lcom/android/server/AccessibilityManagerService$4;->this$0:Lcom/android/server/AccessibilityManagerService;
 
     iget-object v0, v0, Lcom/android/server/AccessibilityManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 266
     :try_start_0
     iget-object v1, p0, Lcom/android/server/AccessibilityManagerService$4;->this$0:Lcom/android/server/AccessibilityManagerService;
 
     #calls: Lcom/android/server/AccessibilityManagerService;->manageServicesLocked()V
     invoke-static {v1}, Lcom/android/server/AccessibilityManagerService;->access$300(Lcom/android/server/AccessibilityManagerService;)V
 
+    .line 267
     monitor-exit v0
 
+    .line 268
     return-void
 
+    .line 267
     :catchall_0
     move-exception v1
 

@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 53
     iput-object p1, p0, Landroid/widget/BounceController$1;->this$0:Landroid/widget/BounceController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "input"
 
     .prologue
+    .line 56
     const/high16 v0, 0x3f00
 
     mul-float/2addr v0, p1

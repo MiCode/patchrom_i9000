@@ -19,8 +19,10 @@
     .locals 0
 
     .prologue
+    .line 49
     invoke-direct {p0}, Landroid/util/AndroidException;-><init>()V
 
+    .line 50
     return-void
 .end method
 
@@ -29,7 +31,9 @@
     .parameter "name"
 
     .prologue
+    .line 53
     invoke-direct {p0, p1}, Landroid/util/AndroidException;-><init>(Ljava/lang/String;)V
 
+    .line 54
     return-void
 .end method

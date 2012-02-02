@@ -26,6 +26,7 @@
     .parameter "x1"
 
     .prologue
+    .line 571
     iput-object p1, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -39,6 +40,7 @@
     .locals 3
 
     .prologue
+    .line 584
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
@@ -50,6 +52,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternView;->setEnabled(Z)V
 
+    .line 585
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
@@ -67,11 +70,13 @@
     #setter for: Lcom/android/internal/policy/impl/UnlockScreen;->mInstructions:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/UnlockScreen;->access$502(Lcom/android/internal/policy/impl/UnlockScreen;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 586
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     #calls: Lcom/android/internal/policy/impl/UnlockScreen;->updateStatusLines()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/UnlockScreen;->access$600(Lcom/android/internal/policy/impl/UnlockScreen;)V
 
+    .line 588
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     const/4 v1, 0x0
@@ -79,6 +84,7 @@
     #setter for: Lcom/android/internal/policy/impl/UnlockScreen;->mFailedPatternAttemptsSinceLastTimeout:I
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/UnlockScreen;->access$802(Lcom/android/internal/policy/impl/UnlockScreen;I)I
 
+    .line 589
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/UnlockScreen;->mEnableFallback:Z
@@ -88,6 +94,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 590
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     sget-object v1, Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;->ForgotLockPattern:Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;
@@ -95,9 +102,11 @@
     #calls: Lcom/android/internal/policy/impl/UnlockScreen;->updateFooter(Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;)V
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/UnlockScreen;->access$1100(Lcom/android/internal/policy/impl/UnlockScreen;Lcom/android/internal/policy/impl/UnlockScreen$FooterMode;)V
 
+    .line 594
     :goto_0
     return-void
 
+    .line 592
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
@@ -114,12 +123,14 @@
     .parameter "millisUntilFinished"
 
     .prologue
+    .line 575
     const-wide/16 v1, 0x3e8
 
     div-long v1, p1, v1
 
     long-to-int v0, v1
 
+    .line 576
     .local v0, secondsRemaining:I
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
@@ -150,10 +161,12 @@
     #setter for: Lcom/android/internal/policy/impl/UnlockScreen;->mInstructions:Ljava/lang/String;
     invoke-static {v1, v2}, Lcom/android/internal/policy/impl/UnlockScreen;->access$502(Lcom/android/internal/policy/impl/UnlockScreen;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 579
     iget-object v1, p0, Lcom/android/internal/policy/impl/UnlockScreen$4;->this$0:Lcom/android/internal/policy/impl/UnlockScreen;
 
     #calls: Lcom/android/internal/policy/impl/UnlockScreen;->updateStatusLines()V
     invoke-static {v1}, Lcom/android/internal/policy/impl/UnlockScreen;->access$600(Lcom/android/internal/policy/impl/UnlockScreen;)V
 
+    .line 580
     return-void
 .end method

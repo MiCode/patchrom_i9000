@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 2132
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "accuracy"
 
     .prologue
+    .line 2134
     invoke-virtual {p1}, Landroid/hardware/Sensor;->getType()I
 
     move-result v0
@@ -50,11 +52,13 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2135
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagAccuracy:I
     invoke-static {v0, p2}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->access$5002(Lcom/android/server/location/GpsLocationProvider$SensorAiding;I)I
 
+    .line 2138
     :cond_0
     return-void
 .end method
@@ -70,8 +74,10 @@
 
     const/4 v3, 0x0
 
+    .line 2141
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
+    .line 2142
     .local v0, sensor:Landroid/hardware/Sensor;
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
@@ -79,6 +85,7 @@
 
     if-ne v1, v4, :cond_1
 
+    .line 2145
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
@@ -91,6 +98,7 @@
     #setter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagAccuracy:I
     invoke-static {v1, v2}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->access$5002(Lcom/android/server/location/GpsLocationProvider$SensorAiding;I)I
 
+    .line 2146
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagAccuracy:I
@@ -102,11 +110,13 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 2147
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagAccuracy:I
     invoke-static {v1, v3}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->access$5002(Lcom/android/server/location/GpsLocationProvider$SensorAiding;I)I
 
+    .line 2152
     :cond_0
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
@@ -121,6 +131,7 @@
 
     aput v2, v1, v3
 
+    .line 2153
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagRecent:[F
@@ -134,6 +145,7 @@
 
     aput v2, v1, v5
 
+    .line 2154
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagRecent:[F
@@ -147,6 +159,7 @@
 
     aput v2, v1, v4
 
+    .line 2155
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$2;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mMagRecent:[F
@@ -167,6 +180,7 @@
 
     aput v3, v1, v2
 
+    .line 2157
     :cond_1
     return-void
 .end method

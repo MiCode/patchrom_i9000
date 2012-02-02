@@ -24,6 +24,7 @@
     .parameter "childLayout"
 
     .prologue
+    .line 94
     move-object v0, p0
 
     move-object v1, p1
@@ -40,6 +41,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/widget/ResourceCursorTreeAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;IIII)V
 
+    .line 95
     return-void
 .end method
 
@@ -52,6 +54,7 @@
     .parameter "childLayout"
 
     .prologue
+    .line 78
     move-object v0, p0
 
     move-object v1, p1
@@ -68,6 +71,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/widget/ResourceCursorTreeAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;IIII)V
 
+    .line 79
     return-void
 .end method
 
@@ -81,16 +85,22 @@
     .parameter "lastChildLayout"
 
     .prologue
+    .line 53
     invoke-direct {p0, p2, p1}, Landroid/widget/CursorTreeAdapter;-><init>(Landroid/database/Cursor;Landroid/content/Context;)V
 
+    .line 55
     iput p3, p0, Landroid/widget/ResourceCursorTreeAdapter;->mCollapsedGroupLayout:I
 
+    .line 56
     iput p4, p0, Landroid/widget/ResourceCursorTreeAdapter;->mExpandedGroupLayout:I
 
+    .line 57
     iput p5, p0, Landroid/widget/ResourceCursorTreeAdapter;->mChildLayout:I
 
+    .line 58
     iput p6, p0, Landroid/widget/ResourceCursorTreeAdapter;->mLastChildLayout:I
 
+    .line 60
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -101,6 +111,7 @@
 
     iput-object v0, p0, Landroid/widget/ResourceCursorTreeAdapter;->mInflater:Landroid/view/LayoutInflater;
 
+    .line 61
     return-void
 .end method
 
@@ -114,6 +125,7 @@
     .parameter "parent"
 
     .prologue
+    .line 100
     iget-object v0, p0, Landroid/widget/ResourceCursorTreeAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     if-eqz p3, :cond_0
@@ -143,6 +155,7 @@
     .parameter "parent"
 
     .prologue
+    .line 105
     iget-object v0, p0, Landroid/widget/ResourceCursorTreeAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     if-eqz p3, :cond_0

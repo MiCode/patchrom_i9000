@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 823
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +38,7 @@
     .parameter "res"
 
     .prologue
+    .line 838
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0

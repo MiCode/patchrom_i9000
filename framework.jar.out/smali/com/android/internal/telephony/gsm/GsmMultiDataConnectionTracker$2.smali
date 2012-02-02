@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1194
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +41,17 @@
     .locals 20
 
     .prologue
+    .line 1198
     const-wide/16 v9, -0x1
 
     .local v9, preTxPkts:J
     const-wide/16 v7, -0x1
 
+    .line 1200
     .local v7, preRxPkts:J
     sget-object v4, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->NONE:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
+    .line 1202
     .local v4, newActivity:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
     move-object/from16 v0, p0
 
@@ -60,6 +64,7 @@
 
     move-result-wide v9
 
+    .line 1203
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -71,6 +76,7 @@
 
     move-result-wide v7
 
+    .line 1205
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -84,6 +90,7 @@
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->txPkts:J
     invoke-static/range {v16 .. v18}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$1502(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;J)J
 
+    .line 1206
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -97,6 +104,7 @@
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->rxPkts:J
     invoke-static/range {v16 .. v18}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$1602(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;J)J
 
+    .line 1210
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -122,6 +130,7 @@
 
     if-lez v16, :cond_1
 
+    .line 1211
     :cond_0
     move-object/from16 v0, p0
 
@@ -136,6 +145,7 @@
 
     sub-long v13, v16, v9
 
+    .line 1212
     .local v13, sent:J
     move-object/from16 v0, p0
 
@@ -150,6 +160,7 @@
 
     sub-long v11, v16, v7
 
+    .line 1214
     .local v11, received:J
     const-wide/16 v16, 0x0
 
@@ -163,6 +174,7 @@
 
     if-lez v16, :cond_4
 
+    .line 1215
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -174,8 +186,10 @@
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->sentSinceLastRecv:J
     invoke-static/range {v16 .. v18}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$2002(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;J)J
 
+    .line 1216
     sget-object v4, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAINANDOUT:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
+    .line 1217
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -187,6 +201,7 @@
     #setter for: Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->mPdpResetCount:I
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$2102(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;I)I
 
+    .line 1236
     :goto_0
     move-object/from16 v0, p0
 
@@ -218,6 +233,7 @@
 
     if-eqz v16, :cond_1
 
+    .line 1237
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -231,6 +247,7 @@
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->activity:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$2802(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;Lcom/android/internal/telephony/DataConnectionTracker$Activity;)Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
+    .line 1238
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -244,6 +261,7 @@
 
     invoke-virtual/range {v16 .. v16}, Lcom/android/internal/telephony/PhoneBase;->notifyDataActivity()V
 
+    .line 1242
     .end local v11           #received:J
     .end local v13           #sent:J
     :cond_1
@@ -258,7 +276,7 @@
 
     move-result-object v16
 
-    const-string v17, "pdp_watchdog_trigger_packet_count"
+    const-string/jumbo v17, "pdp_watchdog_trigger_packet_count"
 
     const/16 v18, 0xa
 
@@ -266,6 +284,7 @@
 
     move-result v15
 
+    .line 1246
     .local v15, watchdogTrigger:I
     move-object/from16 v0, p0
 
@@ -288,6 +307,7 @@
 
     if-ltz v16, :cond_a
 
+    .line 1248
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -301,6 +321,7 @@
 
     if-nez v16, :cond_2
 
+    .line 1249
     const v16, 0xc3b5
 
     move-object/from16 v0, p0
@@ -316,6 +337,7 @@
 
     invoke-static/range {v16 .. v18}, Landroid/util/EventLog;->writeEvent(IJ)I
 
+    .line 1253
     :cond_2
     move-object/from16 v0, p0
 
@@ -328,7 +350,7 @@
 
     move-result-object v16
 
-    const-string v17, "pdp_watchdog_error_poll_count"
+    const-string/jumbo v17, "pdp_watchdog_error_poll_count"
 
     const/16 v18, 0x18
 
@@ -336,6 +358,7 @@
 
     move-result v5
 
+    .line 1256
     .local v5, noRecvPollLimit:I
     move-object/from16 v0, p0
 
@@ -354,6 +377,7 @@
 
     if-ge v0, v1, :cond_9
 
+    .line 1259
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -364,6 +388,7 @@
 
     invoke-virtual/range {v16 .. v17}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 1260
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -395,6 +420,7 @@
 
     invoke-interface/range {v16 .. v17}, Lcom/android/internal/telephony/CommandsInterface;->getDataCallList(Landroid/os/Message;)V
 
+    .line 1262
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -403,6 +429,7 @@
 
     invoke-static/range {v16 .. v16}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$3608(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;)I
 
+    .line 1265
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -420,7 +447,7 @@
 
     move-result-object v17
 
-    const-string v18, "pdp_watchdog_error_poll_interval_ms"
+    const-string/jumbo v18, "pdp_watchdog_error_poll_interval_ms"
 
     const/16 v19, 0x1388
 
@@ -431,6 +458,7 @@
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->netStatPollPeriod:I
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$3702(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;I)I
 
+    .line 1294
     .end local v5           #noRecvPollLimit:I
     :goto_1
     move-object/from16 v0, p0
@@ -446,6 +474,7 @@
 
     if-eqz v16, :cond_3
 
+    .line 1295
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -482,9 +511,11 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 1297
     :cond_3
     return-void
 
+    .line 1218
     .end local v15           #watchdogTrigger:I
     .restart local v11       #received:J
     .restart local v13       #sent:J
@@ -501,6 +532,7 @@
 
     if-nez v16, :cond_6
 
+    .line 1219
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -524,6 +556,7 @@
 
     if-ne v0, v1, :cond_5
 
+    .line 1220
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -536,11 +569,13 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$2314(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;J)J
 
+    .line 1224
     :goto_2
     sget-object v4, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAOUT:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     goto/16 :goto_0
 
+    .line 1222
     :cond_5
     move-object/from16 v0, p0
 
@@ -555,6 +590,7 @@
 
     goto :goto_2
 
+    .line 1225
     :cond_6
     const-wide/16 v16, 0x0
 
@@ -568,6 +604,7 @@
 
     if-lez v16, :cond_7
 
+    .line 1226
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -579,8 +616,10 @@
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->sentSinceLastRecv:J
     invoke-static/range {v16 .. v18}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$2502(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;J)J
 
+    .line 1227
     sget-object v4, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAIN:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
+    .line 1228
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -594,6 +633,7 @@
 
     goto/16 :goto_0
 
+    .line 1229
     :cond_7
     const-wide/16 v16, 0x0
 
@@ -607,10 +647,12 @@
 
     if-nez v16, :cond_8
 
+    .line 1230
     sget-object v4, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->NONE:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     goto/16 :goto_0
 
+    .line 1232
     :cond_8
     move-object/from16 v0, p0
 
@@ -623,10 +665,12 @@
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->sentSinceLastRecv:J
     invoke-static/range {v16 .. v18}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$2602(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;J)J
 
+    .line 1233
     sget-object v4, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->NONE:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     goto/16 :goto_0
 
+    .line 1269
     .end local v11           #received:J
     .end local v13           #sent:J
     .restart local v5       #noRecvPollLimit:I
@@ -679,6 +723,7 @@
 
     invoke-virtual/range {v16 .. v17}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->log(Ljava/lang/String;)V
 
+    .line 1273
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -687,6 +732,7 @@
 
     invoke-virtual/range {v16 .. v16}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->stopNetStatPoll()V
 
+    .line 1274
     new-instance v6, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2$1;
 
     move-object v0, v6
@@ -695,6 +741,7 @@
 
     invoke-direct {v0, v1}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2$1;-><init>(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;)V
 
+    .line 1279
     .local v6, pingTest:Ljava/lang/Thread;
     move-object/from16 v0, p0
 
@@ -707,10 +754,12 @@
     #setter for: Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->mPingTestActive:Z
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$4002(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;Z)Z
 
+    .line 1280
     invoke-virtual {v6}, Ljava/lang/Thread;->start()V
 
     goto/16 :goto_1
 
+    .line 1283
     .end local v5           #noRecvPollLimit:I
     .end local v6           #pingTest:Ljava/lang/Thread;
     :cond_a
@@ -725,6 +774,7 @@
     #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->mNoRecvPollCount:I
     invoke-static/range {v16 .. v17}, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;->access$4102(Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;I)I
 
+    .line 1284
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -738,6 +788,7 @@
 
     if-eqz v16, :cond_b
 
+    .line 1285
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/gsm/GsmMultiDataConnectionTracker;
@@ -755,7 +806,7 @@
 
     move-result-object v17
 
-    const-string v18, "pdp_watchdog_poll_interval_ms"
+    const-string/jumbo v18, "pdp_watchdog_poll_interval_ms"
 
     const/16 v19, 0x3e8
 
@@ -768,6 +819,7 @@
 
     goto/16 :goto_1
 
+    .line 1288
     :cond_b
     move-object/from16 v0, p0
 
@@ -786,7 +838,7 @@
 
     move-result-object v17
 
-    const-string v18, "pdp_watchdog_long_poll_interval_ms"
+    const-string/jumbo v18, "pdp_watchdog_long_poll_interval_ms"
 
     const v19, 0x927c0
 

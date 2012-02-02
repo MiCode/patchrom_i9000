@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 2100
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "accuracy"
 
     .prologue
+    .line 2102
     invoke-virtual {p1}, Landroid/hardware/Sensor;->getType()I
 
     move-result v0
@@ -50,11 +52,13 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2103
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccAccuracy:I
     invoke-static {v0, p2}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->access$4502(Lcom/android/server/location/GpsLocationProvider$SensorAiding;I)I
 
+    .line 2106
     :cond_0
     return-void
 .end method
@@ -70,8 +74,10 @@
 
     const/4 v4, 0x1
 
+    .line 2109
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
+    .line 2110
     .local v0, sensor:Landroid/hardware/Sensor;
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
@@ -79,6 +85,7 @@
 
     if-ne v1, v4, :cond_2
 
+    .line 2111
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccAccuracy:I
@@ -90,11 +97,13 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 2112
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccAccuracy:I
     invoke-static {v1, v3}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->access$4502(Lcom/android/server/location/GpsLocationProvider$SensorAiding;I)I
 
+    .line 2117
     :cond_0
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
@@ -109,6 +118,7 @@
 
     aput v2, v1, v3
 
+    .line 2118
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccRecent:[F
@@ -122,6 +132,7 @@
 
     aput v2, v1, v4
 
+    .line 2119
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccRecent:[F
@@ -135,6 +146,7 @@
 
     aput v2, v1, v5
 
+    .line 2120
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mAccRecent:[F
@@ -155,6 +167,7 @@
 
     aput v3, v1, v2
 
+    .line 2124
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->mGyroSupported:Z
@@ -173,12 +186,14 @@
 
     if-ne v1, v4, :cond_2
 
+    .line 2126
     :cond_1
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$SensorAiding$1;->this$1:Lcom/android/server/location/GpsLocationProvider$SensorAiding;
 
     #calls: Lcom/android/server/location/GpsLocationProvider$SensorAiding;->SensorAidingMakeSensorPacket()V
     invoke-static {v1}, Lcom/android/server/location/GpsLocationProvider$SensorAiding;->access$4900(Lcom/android/server/location/GpsLocationProvider$SensorAiding;)V
 
+    .line 2129
     :cond_2
     return-void
 .end method

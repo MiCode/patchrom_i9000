@@ -50,6 +50,7 @@
 
     const/4 v2, 0x1
 
+    .line 71
     new-instance v0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
     const-string v1, "REPLACE"
@@ -58,6 +59,7 @@
 
     sput-object v0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;->REPLACE:Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
+    .line 72
     new-instance v0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
     const-string v1, "MODULATE"
@@ -66,6 +68,7 @@
 
     sput-object v0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;->MODULATE:Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
+    .line 73
     new-instance v0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
     const-string v1, "DECAL"
@@ -74,6 +77,7 @@
 
     sput-object v0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;->DECAL:Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
+    .line 70
     new-array v0, v5, [Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
     sget-object v1, Landroid/renderscript/ProgramFragment$Builder$EnvMode;->REPLACE:Landroid/renderscript/ProgramFragment$Builder$EnvMode;
@@ -105,10 +109,13 @@
     .end annotation
 
     .prologue
+    .line 76
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 77
     iput p3, p0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;->mID:I
 
+    .line 78
     return-void
 .end method
 
@@ -117,6 +124,7 @@
     .parameter "name"
 
     .prologue
+    .line 70
     const-class v0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -133,6 +141,7 @@
     .locals 1
 
     .prologue
+    .line 70
     sget-object v0, Landroid/renderscript/ProgramFragment$Builder$EnvMode;->$VALUES:[Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
     invoke-virtual {v0}, [Landroid/renderscript/ProgramFragment$Builder$EnvMode;->clone()Ljava/lang/Object;

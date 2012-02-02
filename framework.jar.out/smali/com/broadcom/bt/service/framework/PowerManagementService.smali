@@ -30,8 +30,10 @@
     .locals 0
 
     .prologue
+    .line 29
     invoke-static {}, Lcom/broadcom/bt/service/framework/PowerManagementService;->classInitNative()V
 
+    .line 30
     return-void
 .end method
 
@@ -40,12 +42,16 @@
     .parameter "context"
 
     .prologue
+    .line 32
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/IPowerManager$Stub;-><init>()V
 
+    .line 33
     iput-object p1, p0, Lcom/broadcom/bt/service/framework/PowerManagementService;->mContext:Landroid/content/Context;
 
+    .line 34
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/PowerManagementService;->initializeNativeDataNative()V
 
+    .line 35
     return-void
 .end method
 
@@ -78,10 +84,12 @@
     .parameter "msg"
 
     .prologue
+    .line 97
     const-string v0, "PowerManagmentService"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 98
     return-void
 .end method
 
@@ -93,6 +101,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 66
     :try_start_0
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/PowerManagementService;->disableBtNative()I
     :try_end_0
@@ -106,17 +115,21 @@
 
     move v1, v3
 
+    .line 70
     :goto_0
     return v1
 
+    .line 66
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_0
 
+    .line 67
     :catch_0
     move-exception v0
 
+    .line 68
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "PowerManagmentService"
 
@@ -126,6 +139,7 @@
 
     move v1, v3
 
+    .line 70
     goto :goto_0
 .end method
 
@@ -135,6 +149,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 48
     :try_start_0
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/PowerManagementService;->disableFmNative()I
     :try_end_0
@@ -148,17 +163,21 @@
 
     move v1, v3
 
+    .line 52
     :goto_0
     return v1
 
+    .line 48
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_0
 
+    .line 49
     :catch_0
     move-exception v0
 
+    .line 50
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "PowerManagmentService"
 
@@ -168,6 +187,7 @@
 
     move v1, v3
 
+    .line 52
     goto :goto_0
 .end method
 
@@ -177,6 +197,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 57
     :try_start_0
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/PowerManagementService;->enableBtNative()I
     :try_end_0
@@ -190,17 +211,21 @@
 
     move v1, v3
 
+    .line 61
     :goto_0
     return v1
 
+    .line 57
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_0
 
+    .line 58
     :catch_0
     move-exception v0
 
+    .line 59
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "PowerManagmentService"
 
@@ -210,6 +235,7 @@
 
     move v1, v3
 
+    .line 61
     goto :goto_0
 .end method
 
@@ -219,6 +245,7 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 39
     :try_start_0
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/PowerManagementService;->enableFmNative()I
     :try_end_0
@@ -232,17 +259,21 @@
 
     move v1, v3
 
+    .line 42
     :goto_0
     return v1
 
+    .line 39
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_0
 
+    .line 40
     :catch_0
     move-exception v0
 
+    .line 41
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "PowerManagmentService"
 
@@ -252,6 +283,7 @@
 
     move v1, v3
 
+    .line 42
     goto :goto_0
 .end method
 
@@ -261,6 +293,7 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 86
     :try_start_0
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/PowerManagementService;->getCurrentStateNative()I
     :try_end_0
@@ -268,6 +301,7 @@
 
     move-result v0
 
+    .line 87
     .local v0, mCurrentState:I
     if-eq v0, v3, :cond_0
 
@@ -278,13 +312,16 @@
     :cond_0
     move v2, v3
 
+    .line 92
     .end local v0           #mCurrentState:I
     :goto_0
     return v2
 
+    .line 89
     :catch_0
     move-exception v1
 
+    .line 90
     .local v1, t:Ljava/lang/Throwable;
     const-string v2, "PowerManagmentService"
 
@@ -292,6 +329,7 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 92
     .end local v1           #t:Ljava/lang/Throwable;
     :cond_1
     const/4 v2, 0x0
@@ -303,6 +341,7 @@
     .locals 4
 
     .prologue
+    .line 75
     :try_start_0
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/PowerManagementService;->getCurrentStateNative()I
     :try_end_0
@@ -310,6 +349,7 @@
 
     move-result v0
 
+    .line 76
     .local v0, mCurrentState:I
     const/4 v2, 0x2
 
@@ -319,23 +359,28 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 77
     :cond_0
     const/4 v2, 0x1
 
+    .line 81
     .end local v0           #mCurrentState:I
     :goto_0
     return v2
 
+    .line 78
     :catch_0
     move-exception v1
 
+    .line 79
     .local v1, t:Ljava/lang/Throwable;
     const-string v2, "PowerManagmentService"
 
-    const-string v3, "unable to get current FM state"
+    const-string/jumbo v3, "unable to get current FM state"
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 81
     .end local v1           #t:Ljava/lang/Throwable;
     :cond_1
     const/4 v2, 0x0

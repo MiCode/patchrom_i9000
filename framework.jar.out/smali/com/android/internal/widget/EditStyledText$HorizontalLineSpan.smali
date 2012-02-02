@@ -26,13 +26,16 @@
     .parameter "view"
 
     .prologue
+    .line 1589
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$HorizontalLineSpan;->this$0:Lcom/android/internal/widget/EditStyledText;
 
+    .line 1590
     new-instance v0, Lcom/android/internal/widget/EditStyledText$HorizontalLineDrawable;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/android/internal/widget/EditStyledText$HorizontalLineDrawable;-><init>(Lcom/android/internal/widget/EditStyledText;ILandroid/view/View;)V
 
     invoke-direct {p0, v0}, Landroid/text/style/ImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
 
+    .line 1591
     return-void
 .end method

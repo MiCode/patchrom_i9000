@@ -23,6 +23,7 @@
     .locals 3
 
     .prologue
+    .line 211
     invoke-static {}, Lcom/android/internal/policy/impl/PukUnlockScreen$SimLockState;->values()[Lcom/android/internal/policy/impl/PukUnlockScreen$SimLockState;
 
     move-result-object v0

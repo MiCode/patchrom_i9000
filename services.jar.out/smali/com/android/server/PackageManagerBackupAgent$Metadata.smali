@@ -30,13 +30,17 @@
     .parameter "sigs"
 
     .prologue
+    .line 77
     iput-object p1, p0, Lcom/android/server/PackageManagerBackupAgent$Metadata;->this$0:Lcom/android/server/PackageManagerBackupAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 78
     iput p2, p0, Lcom/android/server/PackageManagerBackupAgent$Metadata;->versionCode:I
 
+    .line 79
     iput-object p3, p0, Lcom/android/server/PackageManagerBackupAgent$Metadata;->signatures:[Landroid/content/pm/Signature;
 
+    .line 80
     return-void
 .end method

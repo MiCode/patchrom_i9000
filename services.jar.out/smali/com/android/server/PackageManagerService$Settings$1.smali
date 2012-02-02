@@ -34,6 +34,7 @@
     .parameter
 
     .prologue
+    .line 8141
     iput-object p1, p0, Lcom/android/server/PackageManagerService$Settings$1;->this$0:Lcom/android/server/PackageManagerService$Settings;
 
     invoke-direct {p0}, Lcom/android/server/IntentResolver;-><init>()V
@@ -50,6 +51,7 @@
     .parameter "x2"
 
     .prologue
+    .line 8141
     check-cast p3, Lcom/android/server/PackageManagerService$PreferredActivity;
 
     .end local p3
@@ -65,6 +67,7 @@
     .parameter "filter"
 
     .prologue
+    .line 8149
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-static {p3}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
@@ -77,10 +80,12 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 8151
     const/16 v1, 0x20
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(C)V
 
+    .line 8152
     iget-object v1, p3, Lcom/android/server/PackageManagerService$PreferredActivity;->mActivity:Landroid/content/ComponentName;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
@@ -89,10 +94,12 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 8153
     const-string v1, " match=0x"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 8154
     iget v1, p3, Lcom/android/server/PackageManagerService$PreferredActivity;->mMatch:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -101,16 +108,19 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 8155
     iget-object v1, p3, Lcom/android/server/PackageManagerService$PreferredActivity;->mSetComponents:[Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
+    .line 8156
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "  Selected from:"
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 8157
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -121,22 +131,26 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 8158
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "    "
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 8159
     iget-object v1, p3, Lcom/android/server/PackageManagerService$PreferredActivity;->mSetComponents:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 8157
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 8162
     .end local v0           #i:I
     :cond_0
     return-void
@@ -147,6 +161,7 @@
     .parameter "x0"
 
     .prologue
+    .line 8141
     check-cast p1, Lcom/android/server/PackageManagerService$PreferredActivity;
 
     .end local p1
@@ -162,6 +177,7 @@
     .parameter "filter"
 
     .prologue
+    .line 8144
     iget-object v0, p1, Lcom/android/server/PackageManagerService$PreferredActivity;->mActivity:Landroid/content/ComponentName;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;

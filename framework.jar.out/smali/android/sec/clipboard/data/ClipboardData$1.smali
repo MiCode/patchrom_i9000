@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,20 +45,25 @@
     .parameter "source"
 
     .prologue
+    .line 167
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 168
     .local v1, format:I
     invoke-static {v1}, Landroid/sec/clipboard/data/ClipboardDataFactory;->CreateClipBoardData(I)Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v0
 
+    .line 170
     .local v0, Result:Landroid/sec/clipboard/data/ClipboardData;
     if-eqz v0, :cond_0
 
+    .line 175
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/ClipboardData;->readFormSource(Landroid/os/Parcel;)V
 
+    .line 177
     :cond_0
     return-object v0
 .end method
@@ -67,6 +73,7 @@
     .parameter "x0"
 
     .prologue
+    .line 164
     invoke-virtual {p0, p1}, Landroid/sec/clipboard/data/ClipboardData$1;->createFromParcel(Landroid/os/Parcel;)Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v0
@@ -79,6 +86,7 @@
     .parameter "size"
 
     .prologue
+    .line 182
     new-array v0, p1, [Landroid/sec/clipboard/data/ClipboardData;
 
     return-object v0
@@ -89,6 +97,7 @@
     .parameter "x0"
 
     .prologue
+    .line 164
     invoke-virtual {p0, p1}, Landroid/sec/clipboard/data/ClipboardData$1;->newArray(I)[Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v0

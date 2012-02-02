@@ -55,20 +55,28 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 796
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 778
     iput-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertSQL:Ljava/lang/String;
 
+    .line 779
     iput-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 780
     iput-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 781
     iput-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 797
     iput-object p1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
+    .line 798
     iput-object p2, p0, Landroid/database/DatabaseUtils$InsertHelper;->mTableName:Ljava/lang/String;
 
+    .line 799
     return-void
 .end method
 
@@ -89,37 +97,46 @@
 
     const-string v6, "\'"
 
+    .line 802
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4, v7}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 803
     .local v4, sb:Ljava/lang/StringBuilder;
     const-string v6, "INSERT INTO "
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 804
     iget-object v6, p0, Landroid/database/DatabaseUtils$InsertHelper;->mTableName:Ljava/lang/String;
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 805
     const-string v6, " ("
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 807
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5, v7}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 808
     .local v5, sbv:Ljava/lang/StringBuilder;
     const-string v6, "VALUES ("
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 810
     const/4 v3, 0x1
 
+    .line 811
     .local v3, i:I
     const/4 v1, 0x0
 
+    .line 813
     .local v1, cur:Landroid/database/Cursor;
     :try_start_0
     iget-object v6, p0, Landroid/database/DatabaseUtils$InsertHelper;->mDb:Landroid/database/sqlite/SQLiteDatabase;
@@ -156,6 +173,7 @@
 
     move-result-object v1
 
+    .line 814
     new-instance v6, Ljava/util/HashMap;
 
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
@@ -166,6 +184,7 @@
 
     iput-object v6, p0, Landroid/database/DatabaseUtils$InsertHelper;->mColumns:Ljava/util/HashMap;
 
+    .line 815
     :goto_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -173,12 +192,14 @@
 
     if-eqz v6, :cond_4
 
+    .line 816
     const/4 v6, 0x1
 
     invoke-interface {v1, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 817
     .local v0, columnName:Ljava/lang/String;
     const/4 v6, 0x4
 
@@ -186,6 +207,7 @@
 
     move-result-object v2
 
+    .line 819
     .local v2, defaultValue:Ljava/lang/String;
     iget-object v6, p0, Landroid/database/DatabaseUtils$InsertHelper;->mColumns:Ljava/util/HashMap;
 
@@ -195,22 +217,28 @@
 
     invoke-virtual {v6, v0, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 820
     const-string v6, "\'"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 821
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 822
     const-string v6, "\'"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 824
     if-nez v2, :cond_0
 
+    .line 825
     const-string v6, "?"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 832
     :goto_1
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
@@ -223,6 +251,7 @@
     :goto_2
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 833
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
     move-result v6
@@ -234,17 +263,22 @@
     :goto_3
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 834
     add-int/lit8 v3, v3, 0x1
 
+    .line 835
     goto :goto_0
 
+    .line 827
     :cond_0
     const-string v6, "COALESCE(?, "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 828
     invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 829
     const-string v6, ")"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -253,6 +287,7 @@
 
     goto :goto_1
 
+    .line 837
     .end local v0           #columnName:Ljava/lang/String;
     .end local v2           #defaultValue:Ljava/lang/String;
     :catchall_0
@@ -265,6 +300,7 @@
     :cond_1
     throw v6
 
+    .line 832
     .restart local v0       #columnName:Ljava/lang/String;
     .restart local v2       #defaultValue:Ljava/lang/String;
     :cond_2
@@ -275,6 +311,7 @@
 
     goto :goto_2
 
+    .line 833
     :cond_3
     const-string v6, ", "
     :try_end_1
@@ -284,6 +321,7 @@
 
     goto :goto_3
 
+    .line 837
     .end local v0           #columnName:Ljava/lang/String;
     .end local v2           #defaultValue:Ljava/lang/String;
     :cond_4
@@ -291,15 +329,18 @@
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
+    .line 840
     :cond_5
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
+    .line 842
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
     iput-object v6, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertSQL:Ljava/lang/String;
 
+    .line 844
     return-void
 .end method
 
@@ -313,18 +354,22 @@
     .end annotation
 
     .prologue
+    .line 847
     if-eqz p1, :cond_2
 
+    .line 848
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
 
     if-nez v1, :cond_1
 
+    .line 849
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertSQL:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
     invoke-direct {p0}, Landroid/database/DatabaseUtils$InsertHelper;->buildSQL()V
 
+    .line 851
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -352,6 +397,7 @@
 
     move-result-object v0
 
+    .line 852
     .local v0, replaceSQL:Ljava/lang/String;
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -361,24 +407,29 @@
 
     iput-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 854
     .end local v0           #replaceSQL:Ljava/lang/String;
     :cond_1
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 860
     :goto_0
     return-object v1
 
+    .line 856
     :cond_2
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
 
     if-nez v1, :cond_4
 
+    .line 857
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertSQL:Ljava/lang/String;
 
     if-nez v1, :cond_3
 
     invoke-direct {p0}, Landroid/database/DatabaseUtils$InsertHelper;->buildSQL()V
 
+    .line 858
     :cond_3
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -390,6 +441,7 @@
 
     iput-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 860
     :cond_4
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
 
@@ -402,6 +454,7 @@
     .parameter "allowReplace"
 
     .prologue
+    .line 878
     monitor-enter p0
 
     :try_start_0
@@ -409,9 +462,11 @@
 
     move-result-object v5
 
+    .line 879
     .local v5, stmt:Landroid/database/sqlite/SQLiteStatement;
     invoke-virtual {v5}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
 
+    .line 881
     invoke-virtual {p1}, Landroid/content/ContentValues;->valueSet()Ljava/util/Set;
 
     move-result-object v6
@@ -434,6 +489,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 882
     .local v1, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -441,11 +497,13 @@
 
     check-cast v4, Ljava/lang/String;
 
+    .line 883
     .local v4, key:Ljava/lang/String;
     invoke-virtual {p0, v4}, Landroid/database/DatabaseUtils$InsertHelper;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
+    .line 884
     .local v2, i:I
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -458,6 +516,7 @@
 
     goto :goto_0
 
+    .line 891
     .end local v1           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;"
     .end local v2           #i:I
     .end local v3           #i$:Ljava/util/Iterator;
@@ -468,6 +527,7 @@
 
     move-object v0, v6
 
+    .line 892
     .local v0, e:Landroid/database/SQLException;
     :try_start_1
     const-string v6, "DatabaseUtils"
@@ -506,6 +566,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 893
     const-wide/16 v6, -0x1
 
     .end local v0           #e:Landroid/database/SQLException;
@@ -514,6 +575,7 @@
 
     return-wide v6
 
+    .line 890
     .restart local v3       #i$:Ljava/util/Iterator;
     .restart local v5       #stmt:Landroid/database/sqlite/SQLiteStatement;
     :cond_0
@@ -527,6 +589,7 @@
 
     goto :goto_1
 
+    .line 878
     .end local v3           #i$:Ljava/util/Iterator;
     .end local v5           #stmt:Landroid/database/sqlite/SQLiteStatement;
     :catchall_0
@@ -545,10 +608,12 @@
     .parameter "value"
 
     .prologue
+    .line 919
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteStatement;->bindDouble(ID)V
 
+    .line 920
     return-void
 .end method
 
@@ -558,12 +623,14 @@
     .parameter "value"
 
     .prologue
+    .line 929
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     float-to-double v1, p2
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindDouble(ID)V
 
+    .line 930
     return-void
 .end method
 
@@ -573,12 +640,14 @@
     .parameter "value"
 
     .prologue
+    .line 949
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     int-to-long v1, p2
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
+    .line 950
     return-void
 .end method
 
@@ -588,10 +657,12 @@
     .parameter "value"
 
     .prologue
+    .line 939
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
+    .line 940
     return-void
 .end method
 
@@ -601,15 +672,19 @@
     .parameter "value"
 
     .prologue
+    .line 992
     if-nez p2, :cond_0
 
+    .line 993
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteStatement;->bindNull(I)V
 
+    .line 997
     :goto_0
     return-void
 
+    .line 995
     :cond_0
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
@@ -624,6 +699,7 @@
     .parameter "value"
 
     .prologue
+    .line 959
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     if-eqz p2, :cond_0
@@ -633,8 +709,10 @@
     :goto_0
     invoke-virtual {v0, p1, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
+    .line 960
     return-void
 
+    .line 959
     :cond_0
     const-wide/16 v1, 0x0
 
@@ -647,15 +725,19 @@
     .parameter "value"
 
     .prologue
+    .line 978
     if-nez p2, :cond_0
 
+    .line 979
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteStatement;->bindNull(I)V
 
+    .line 983
     :goto_0
     return-void
 
+    .line 981
     :cond_0
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
@@ -669,10 +751,12 @@
     .parameter "index"
 
     .prologue
+    .line 968
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteStatement;->bindNull(I)V
 
+    .line 969
     return-void
 .end method
 
@@ -682,32 +766,41 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 1094
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
 
     if-eqz v0, :cond_0
 
+    .line 1095
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->close()V
 
+    .line 1096
     iput-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 1098
     :cond_0
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
 
     if-eqz v0, :cond_1
 
+    .line 1099
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->close()V
 
+    .line 1100
     iput-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 1102
     :cond_1
     iput-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertSQL:Ljava/lang/String;
 
+    .line 1103
     iput-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mColumns:Ljava/util/HashMap;
 
+    .line 1104
     return-void
 .end method
 
@@ -717,18 +810,21 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 1025
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     if-nez v1, :cond_0
 
+    .line 1026
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string v2, "you must prepare this inserter before calling execute"
+    const-string/jumbo v2, "you must prepare this inserter before calling execute"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
+    .line 1031
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
@@ -740,16 +836,19 @@
 
     move-result-wide v1
 
+    .line 1037
     iput-object v4, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     :goto_0
     return-wide v1
 
+    .line 1032
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 1033
     .local v0, e:Landroid/database/SQLException;
     :try_start_1
     const-string v1, "DatabaseUtils"
@@ -778,8 +877,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 1034
     const-wide/16 v1, -0x1
 
+    .line 1037
     iput-object v4, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     goto :goto_0
@@ -798,10 +899,12 @@
     .parameter "key"
 
     .prologue
+    .line 904
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Landroid/database/DatabaseUtils$InsertHelper;->getStatement(Z)Landroid/database/sqlite/SQLiteStatement;
 
+    .line 905
     iget-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mColumns:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -810,9 +913,11 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    .line 906
     .local v0, index:Ljava/lang/Integer;
     if-nez v0, :cond_0
 
+    .line 907
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -843,6 +948,7 @@
 
     throw v1
 
+    .line 909
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -856,6 +962,7 @@
     .parameter "values"
 
     .prologue
+    .line 1011
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/database/DatabaseUtils$InsertHelper;->insertInternal(Landroid/content/ContentValues;Z)J
@@ -869,6 +976,7 @@
     .locals 1
 
     .prologue
+    .line 1053
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/DatabaseUtils$InsertHelper;->getStatement(Z)Landroid/database/sqlite/SQLiteStatement;
@@ -877,10 +985,12 @@
 
     iput-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 1054
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
 
+    .line 1055
     return-void
 .end method
 
@@ -888,6 +998,7 @@
     .locals 1
 
     .prologue
+    .line 1069
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/database/DatabaseUtils$InsertHelper;->getStatement(Z)Landroid/database/sqlite/SQLiteStatement;
@@ -896,10 +1007,12 @@
 
     iput-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
+    .line 1070
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
 
+    .line 1071
     return-void
 .end method
 
@@ -908,6 +1021,7 @@
     .parameter "values"
 
     .prologue
+    .line 1085
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Landroid/database/DatabaseUtils$InsertHelper;->insertInternal(Landroid/content/ContentValues;Z)J

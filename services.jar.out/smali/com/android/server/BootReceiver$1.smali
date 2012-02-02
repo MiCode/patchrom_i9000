@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 74
     iput-object p1, p0, Lcom/android/server/BootReceiver$1;->this$0:Lcom/android/server/BootReceiver;
 
     iput-object p2, p0, Lcom/android/server/BootReceiver$1;->val$context:Landroid/content/Context;
@@ -44,6 +45,7 @@
     .prologue
     const-string v3, "BootReceiver"
 
+    .line 78
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BootReceiver$1;->this$0:Lcom/android/server/BootReceiver;
 
@@ -54,6 +56,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 83
     :goto_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/BootReceiver$1;->this$0:Lcom/android/server/BootReceiver;
@@ -65,14 +68,17 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 88
     :goto_1
     return-void
 
+    .line 79
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 80
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "BootReceiver"
 
@@ -82,12 +88,14 @@
 
     goto :goto_0
 
+    .line 84
     .end local v0           #e:Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
+    .line 85
     .restart local v0       #e:Ljava/lang/Exception;
     const-string v1, "BootReceiver"
 

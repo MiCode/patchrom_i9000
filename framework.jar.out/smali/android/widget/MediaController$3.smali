@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 446
     iput-object p1, p0, Landroid/widget/MediaController$3;->this$0:Landroid/widget/MediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,16 +42,19 @@
     .parameter "v"
 
     .prologue
+    .line 448
     iget-object v0, p0, Landroid/widget/MediaController$3;->this$0:Landroid/widget/MediaController;
 
     #calls: Landroid/widget/MediaController;->doPauseResume()V
     invoke-static {v0}, Landroid/widget/MediaController;->access$400(Landroid/widget/MediaController;)V
 
+    .line 449
     iget-object v0, p0, Landroid/widget/MediaController$3;->this$0:Landroid/widget/MediaController;
 
     const/16 v1, 0xbb8
 
     invoke-virtual {v0, v1}, Landroid/widget/MediaController;->show(I)V
 
+    .line 450
     return-void
 .end method

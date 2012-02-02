@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 286
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,29 +34,34 @@
     .locals 3
 
     .prologue
+    .line 289
     const-wide/16 v1, 0x320
 
     :try_start_0
     invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
 
+    .line 290
     const-string v1, "ShutdownThread"
 
     const-string v2, "Playing sound file"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 291
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$500()Landroid/media/MediaPlayer;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->prepare()V
 
+    .line 292
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$500()Landroid/media/MediaPlayer;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->start()V
 
+    .line 293
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$500()Landroid/media/MediaPlayer;
 
     move-result-object v1
@@ -72,30 +78,36 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
 
+    .line 303
     :goto_0
     return-void
 
+    .line 294
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 295
     .local v0, e:Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_0
 
+    .line 297
     .end local v0           #e:Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
+    .line 298
     .local v0, e:Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
+    .line 300
     .end local v0           #e:Ljava/io/IOException;
     :catch_2
     move-exception v1

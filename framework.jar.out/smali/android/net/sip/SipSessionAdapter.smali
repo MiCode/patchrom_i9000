@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 24
     invoke-direct {p0}, Landroid/net/sip/ISipSessionListener$Stub;-><init>()V
 
     return-void
@@ -20,6 +21,7 @@
     .parameter "session"
 
     .prologue
+    .line 43
     return-void
 .end method
 
@@ -30,6 +32,7 @@
     .parameter "message"
 
     .prologue
+    .line 47
     return-void
 .end method
 
@@ -38,6 +41,7 @@
     .parameter "session"
 
     .prologue
+    .line 40
     return-void
 .end method
 
@@ -47,6 +51,7 @@
     .parameter "sessionDescription"
 
     .prologue
+    .line 37
     return-void
 .end method
 
@@ -55,6 +60,7 @@
     .parameter "session"
 
     .prologue
+    .line 26
     return-void
 .end method
 
@@ -65,6 +71,7 @@
     .parameter "message"
 
     .prologue
+    .line 50
     return-void
 .end method
 
@@ -73,6 +80,7 @@
     .parameter "session"
 
     .prologue
+    .line 53
     return-void
 .end method
 
@@ -82,6 +90,7 @@
     .parameter "duration"
 
     .prologue
+    .line 56
     return-void
 .end method
 
@@ -92,6 +101,7 @@
     .parameter "message"
 
     .prologue
+    .line 60
     return-void
 .end method
 
@@ -100,6 +110,7 @@
     .parameter "session"
 
     .prologue
+    .line 63
     return-void
 .end method
 
@@ -110,6 +121,7 @@
     .parameter "sessionDescription"
 
     .prologue
+    .line 30
     return-void
 .end method
 
@@ -118,5 +130,6 @@
     .parameter "session"
 
     .prologue
+    .line 33
     return-void
 .end method

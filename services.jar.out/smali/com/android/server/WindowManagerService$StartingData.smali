@@ -36,17 +36,24 @@
     .parameter "_icon"
 
     .prologue
+    .line 8047
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8048
     iput-object p1, p0, Lcom/android/server/WindowManagerService$StartingData;->pkg:Ljava/lang/String;
 
+    .line 8049
     iput p2, p0, Lcom/android/server/WindowManagerService$StartingData;->theme:I
 
+    .line 8050
     iput-object p3, p0, Lcom/android/server/WindowManagerService$StartingData;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
+    .line 8051
     iput p4, p0, Lcom/android/server/WindowManagerService$StartingData;->labelRes:I
 
+    .line 8052
     iput p5, p0, Lcom/android/server/WindowManagerService$StartingData;->icon:I
 
+    .line 8053
     return-void
 .end method

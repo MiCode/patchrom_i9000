@@ -53,6 +53,7 @@
     .prologue
     const-string v3, "N/A"
 
+    .line 337
     const/16 v0, 0x1a
 
     new-array v0, v0, [Ljava/lang/String;
@@ -65,13 +66,13 @@
 
     const/4 v1, 0x1
 
-    const-string v2, "vCard 2.1"
+    const-string/jumbo v2, "vCard 2.1"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x2
 
-    const-string v2, "vCalendar 1.0"
+    const-string/jumbo v2, "vCalendar 1.0"
 
     aput-object v2, v0, v1
 
@@ -83,13 +84,13 @@
 
     const/4 v1, 0x4
 
-    const-string v2, "vNote"
+    const-string/jumbo v2, "vNote"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string v2, "vMessage"
+    const-string/jumbo v2, "vMessage"
 
     aput-object v2, v0, v1
 
@@ -222,6 +223,7 @@
     .locals 0
 
     .prologue
+    .line 334
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -234,6 +236,7 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 380
     if-ltz p0, :cond_0
 
     sget-object v0, Lcom/broadcom/bt/service/bpp/BluetoothPrinter$PRINT_FORMAT;->prettyText:[Ljava/lang/String;
@@ -244,10 +247,12 @@
 
     if-ge p0, v0, :cond_0
 
+    .line 381
     sget-object v0, Lcom/broadcom/bt/service/bpp/BluetoothPrinter$PRINT_FORMAT;->prettyText:[Ljava/lang/String;
 
     aget-object v0, v0, p0
 
+    .line 383
     :goto_0
     return-object v0
 

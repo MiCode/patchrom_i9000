@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 885
     iput-object p1, p0, Lcom/android/internal/policy/impl/PuzzleLockScreen$LockTouchListener;->this$0:Lcom/android/internal/policy/impl/PuzzleLockScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .parameter "x1"
 
     .prologue
+    .line 885
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PuzzleLockScreen$LockTouchListener;-><init>(Lcom/android/internal/policy/impl/PuzzleLockScreen;)V
 
     return-void
@@ -52,6 +54,7 @@
     .parameter "opened"
 
     .prologue
+    .line 894
     return-void
 .end method
 
@@ -60,11 +63,13 @@
     .parameter "visible"
 
     .prologue
+    .line 897
     iget-object v0, p0, Lcom/android/internal/policy/impl/PuzzleLockScreen$LockTouchListener;->this$0:Lcom/android/internal/policy/impl/PuzzleLockScreen;
 
     #setter for: Lcom/android/internal/policy/impl/PuzzleLockScreen;->mMediaOpened:Z
     invoke-static {v0, p1}, Lcom/android/internal/policy/impl/PuzzleLockScreen;->access$2402(Lcom/android/internal/policy/impl/PuzzleLockScreen;Z)Z
 
+    .line 898
     return-void
 .end method
 
@@ -72,6 +77,7 @@
     .locals 1
 
     .prologue
+    .line 889
     iget-object v0, p0, Lcom/android/internal/policy/impl/PuzzleLockScreen$LockTouchListener;->this$0:Lcom/android/internal/policy/impl/PuzzleLockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PuzzleLockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
@@ -81,5 +87,6 @@
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->pokeWakelock()V
 
+    .line 890
     return-void
 .end method

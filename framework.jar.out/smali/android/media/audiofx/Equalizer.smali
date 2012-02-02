@@ -73,56 +73,69 @@
 
     const/4 v7, 0x0
 
+    .line 149
     sget-object v5, Landroid/media/audiofx/Equalizer;->EFFECT_TYPE_EQUALIZER:Ljava/util/UUID;
 
     sget-object v6, Landroid/media/audiofx/Equalizer;->EFFECT_TYPE_NULL:Ljava/util/UUID;
 
     invoke-direct {p0, v5, v6, p1, p2}, Landroid/media/audiofx/AudioEffect;-><init>(Ljava/util/UUID;Ljava/util/UUID;II)V
 
+    .line 105
     iput-short v7, p0, Landroid/media/audiofx/Equalizer;->mNumBands:S
 
+    .line 119
     iput-object v8, p0, Landroid/media/audiofx/Equalizer;->mParamListener:Landroid/media/audiofx/Equalizer$OnParameterChangeListener;
 
+    .line 124
     iput-object v8, p0, Landroid/media/audiofx/Equalizer;->mBaseParamListener:Landroid/media/audiofx/Equalizer$BaseParameterListener;
 
+    .line 129
     new-instance v5, Ljava/lang/Object;
 
     invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
     iput-object v5, p0, Landroid/media/audiofx/Equalizer;->mParamListenerLock:Ljava/lang/Object;
 
+    .line 151
     invoke-virtual {p0}, Landroid/media/audiofx/Equalizer;->getNumberOfBands()S
 
+    .line 153
     invoke-virtual {p0}, Landroid/media/audiofx/Equalizer;->getNumberOfPresets()S
 
     move-result v5
 
     iput v5, p0, Landroid/media/audiofx/Equalizer;->mNumPresets:I
 
+    .line 155
     iget v5, p0, Landroid/media/audiofx/Equalizer;->mNumPresets:I
 
     if-eqz v5, :cond_1
 
+    .line 156
     iget v5, p0, Landroid/media/audiofx/Equalizer;->mNumPresets:I
 
     new-array v5, v5, [Ljava/lang/String;
 
     iput-object v5, p0, Landroid/media/audiofx/Equalizer;->mPresetNames:[Ljava/lang/String;
 
+    .line 157
     const/16 v5, 0x20
 
     new-array v4, v5, [B
 
+    .line 158
     .local v4, value:[B
     const/4 v5, 0x2
 
     new-array v3, v5, [I
 
+    .line 159
     .local v3, param:[I
     const/16 v5, 0x8
 
     aput v5, v3, v7
 
+    .line 160
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -131,18 +144,22 @@
 
     if-ge v1, v5, :cond_1
 
+    .line 161
     const/4 v5, 0x1
 
     aput v1, v3, v5
 
+    .line 162
     invoke-virtual {p0, v3, v4}, Landroid/media/audiofx/Equalizer;->getParameter([I[B)I
 
     move-result v5
 
     invoke-virtual {p0, v5}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 163
     const/4 v2, 0x0
 
+    .line 164
     .local v2, length:I
     :goto_1
     aget-byte v5, v4, v2
@@ -153,6 +170,7 @@
 
     goto :goto_1
 
+    .line 166
     :cond_0
     :try_start_0
     iget-object v5, p0, Landroid/media/audiofx/Equalizer;->mPresetNames:[Ljava/lang/String;
@@ -169,25 +187,29 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 160
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 167
     :catch_0
     move-exception v5
 
     move-object v0, v5
 
+    .line 168
     .local v0, e:Ljava/io/UnsupportedEncodingException;
     const-string v5, "Equalizer"
 
-    const-string v6, "preset name decode error"
+    const-string/jumbo v6, "preset name decode error"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
+    .line 172
     .end local v0           #e:Ljava/io/UnsupportedEncodingException;
     .end local v1           #i:I
     .end local v2           #length:I
@@ -202,6 +224,7 @@
     .parameter "x0"
 
     .prologue
+    .line 51
     iget-object v0, p0, Landroid/media/audiofx/Equalizer;->mParamListenerLock:Ljava/lang/Object;
 
     return-object v0
@@ -212,6 +235,7 @@
     .parameter "x0"
 
     .prologue
+    .line 51
     iget-object v0, p0, Landroid/media/audiofx/Equalizer;->mParamListener:Landroid/media/audiofx/Equalizer$OnParameterChangeListener;
 
     return-object v0
@@ -235,26 +259,32 @@
 
     const/4 v3, 0x0
 
+    .line 306
     const/4 v2, 0x2
 
     new-array v0, v2, [I
 
+    .line 307
     .local v0, param:[I
     new-array v1, v4, [S
 
+    .line 309
     .local v1, result:[S
     const/4 v2, 0x5
 
     aput v2, v0, v3
 
+    .line 310
     aput p1, v0, v4
 
+    .line 311
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/Equalizer;->getParameter([I[S)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 313
     aget-short v2, v1, v3
 
     return v2
@@ -274,11 +304,14 @@
     .prologue
     const/4 v2, 0x2
 
+    .line 287
     new-array v0, v2, [I
 
+    .line 288
     .local v0, param:[I
     new-array v1, v2, [I
 
+    .line 289
     .local v1, result:[I
     const/4 v2, 0x0
 
@@ -286,16 +319,19 @@
 
     aput v3, v0, v2
 
+    .line 290
     const/4 v2, 0x1
 
     aput p1, v0, v2
 
+    .line 291
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/Equalizer;->getParameter([I[I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 293
     return-object v1
 .end method
 
@@ -317,22 +353,28 @@
 
     const/4 v3, 0x0
 
+    .line 243
     new-array v0, v4, [I
 
+    .line 244
     .local v0, param:[I
     new-array v1, v2, [S
 
+    .line 246
     .local v1, result:[S
     aput v4, v0, v3
 
+    .line 247
     aput p1, v0, v2
 
+    .line 248
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/Equalizer;->getParameter([I[S)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 250
     aget-short v2, v1, v3
 
     return v2
@@ -349,10 +391,12 @@
     .end annotation
 
     .prologue
+    .line 205
     const/4 v1, 0x2
 
     new-array v0, v1, [S
 
+    .line 206
     .local v0, result:[S
     const/4 v1, 0x1
 
@@ -362,6 +406,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 207
     return-object v0
 .end method
 
@@ -381,26 +426,32 @@
 
     const/4 v3, 0x0
 
+    .line 265
     const/4 v2, 0x2
 
     new-array v0, v2, [I
 
+    .line 266
     .local v0, param:[I
     new-array v1, v4, [I
 
+    .line 268
     .local v1, result:[I
     const/4 v2, 0x3
 
     aput v2, v0, v3
 
+    .line 269
     aput p1, v0, v4
 
+    .line 270
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/Equalizer;->getParameter([I[I)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 272
     aget v2, v1, v3
 
     return v2
@@ -417,10 +468,12 @@
     .end annotation
 
     .prologue
+    .line 325
     const/4 v1, 0x1
 
     new-array v0, v1, [S
 
+    .line 326
     .local v0, result:[S
     const/4 v1, 0x6
 
@@ -430,6 +483,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 327
     const/4 v1, 0x0
 
     aget-short v1, v0, v1
@@ -452,23 +506,30 @@
 
     const/4 v3, 0x0
 
+    .line 183
     iget-short v2, p0, Landroid/media/audiofx/Equalizer;->mNumBands:S
 
     if-eqz v2, :cond_0
 
+    .line 184
     iget-short v2, p0, Landroid/media/audiofx/Equalizer;->mNumBands:S
 
+    .line 191
     :goto_0
     return v2
 
+    .line 186
     :cond_0
     new-array v0, v4, [I
 
+    .line 187
     .local v0, param:[I
     aput v3, v0, v3
 
+    .line 188
     new-array v1, v4, [S
 
+    .line 189
     .local v1, result:[S
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/Equalizer;->getParameter([I[S)I
 
@@ -476,10 +537,12 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 190
     aget-short v2, v1, v3
 
     iput-short v2, p0, Landroid/media/audiofx/Equalizer;->mNumBands:S
 
+    .line 191
     iget-short v2, p0, Landroid/media/audiofx/Equalizer;->mNumBands:S
 
     goto :goto_0
@@ -496,10 +559,12 @@
     .end annotation
 
     .prologue
+    .line 354
     const/4 v1, 0x1
 
     new-array v0, v1, [S
 
+    .line 355
     .local v0, result:[S
     const/4 v1, 0x7
 
@@ -509,6 +574,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 356
     const/4 v1, 0x0
 
     aget-short v1, v0, v1
@@ -521,16 +587,19 @@
     .parameter "preset"
 
     .prologue
+    .line 369
     if-ltz p1, :cond_0
 
     iget v0, p0, Landroid/media/audiofx/Equalizer;->mNumPresets:I
 
     if-ge p1, v0, :cond_0
 
+    .line 370
     iget-object v0, p0, Landroid/media/audiofx/Equalizer;->mPresetNames:[Ljava/lang/String;
 
     aget-object v0, v0, p1
 
+    .line 372
     :goto_0
     return-object v0
 
@@ -551,6 +620,7 @@
     .end annotation
 
     .prologue
+    .line 530
     iget-short v3, p0, Landroid/media/audiofx/Equalizer;->mNumBands:S
 
     mul-int/lit8 v3, v3, 0x2
@@ -559,6 +629,7 @@
 
     new-array v1, v3, [B
 
+    .line 531
     .local v1, param:[B
     const/16 v3, 0x9
 
@@ -568,10 +639,12 @@
 
     invoke-virtual {p0, v3}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 532
     new-instance v2, Landroid/media/audiofx/Equalizer$Settings;
 
     invoke-direct {v2}, Landroid/media/audiofx/Equalizer$Settings;-><init>()V
 
+    .line 533
     .local v2, settings:Landroid/media/audiofx/Equalizer$Settings;
     const/4 v3, 0x0
 
@@ -581,6 +654,7 @@
 
     iput-short v3, v2, Landroid/media/audiofx/Equalizer$Settings;->curPreset:S
 
+    .line 534
     const/4 v3, 0x2
 
     invoke-virtual {p0, v1, v3}, Landroid/media/audiofx/Equalizer;->byteArrayToShort([BI)S
@@ -589,12 +663,14 @@
 
     iput-short v3, v2, Landroid/media/audiofx/Equalizer$Settings;->numBands:S
 
+    .line 535
     iget-short v3, p0, Landroid/media/audiofx/Equalizer;->mNumBands:S
 
     new-array v3, v3, [S
 
     iput-object v3, v2, Landroid/media/audiofx/Equalizer$Settings;->bandLevels:[S
 
+    .line 536
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -603,6 +679,7 @@
 
     if-ge v0, v3, :cond_0
 
+    .line 537
     iget-object v3, v2, Landroid/media/audiofx/Equalizer$Settings;->bandLevels:[S
 
     mul-int/lit8 v4, v0, 0x2
@@ -615,10 +692,12 @@
 
     aput-short v4, v3, v0
 
+    .line 536
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 539
     :cond_0
     return-object v2
 .end method
@@ -642,24 +721,31 @@
 
     const/4 v2, 0x0
 
+    .line 223
     new-array v0, v4, [I
 
+    .line 224
     .local v0, param:[I
     new-array v1, v3, [S
 
+    .line 226
     .local v1, value:[S
     aput v4, v0, v2
 
+    .line 227
     aput p1, v0, v3
 
+    .line 228
     aput-short p2, v1, v2
 
+    .line 229
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/Equalizer;->setParameter([I[S)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 230
     return-void
 .end method
 
@@ -668,17 +754,21 @@
     .parameter "listener"
 
     .prologue
+    .line 439
     iget-object v0, p0, Landroid/media/audiofx/Equalizer;->mParamListenerLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 440
     :try_start_0
     iget-object v1, p0, Landroid/media/audiofx/Equalizer;->mParamListener:Landroid/media/audiofx/Equalizer$OnParameterChangeListener;
 
     if-nez v1, :cond_0
 
+    .line 441
     iput-object p1, p0, Landroid/media/audiofx/Equalizer;->mParamListener:Landroid/media/audiofx/Equalizer$OnParameterChangeListener;
 
+    .line 442
     new-instance v1, Landroid/media/audiofx/Equalizer$BaseParameterListener;
 
     const/4 v2, 0x0
@@ -687,15 +777,19 @@
 
     iput-object v1, p0, Landroid/media/audiofx/Equalizer;->mBaseParamListener:Landroid/media/audiofx/Equalizer$BaseParameterListener;
 
+    .line 443
     iget-object v1, p0, Landroid/media/audiofx/Equalizer;->mBaseParamListener:Landroid/media/audiofx/Equalizer$BaseParameterListener;
 
     invoke-super {p0, v1}, Landroid/media/audiofx/AudioEffect;->setParameterListener(Landroid/media/audiofx/AudioEffect$OnParameterChangeListener;)V
 
+    .line 445
     :cond_0
     monitor-exit v0
 
+    .line 446
     return-void
 
+    .line 445
     :catchall_0
     move-exception v1
 
@@ -724,6 +818,7 @@
 
     const/4 v4, 0x0
 
+    .line 552
     iget-short v2, p1, Landroid/media/audiofx/Equalizer$Settings;->numBands:S
 
     iget-object v3, p1, Landroid/media/audiofx/Equalizer$Settings;->bandLevels:[S
@@ -738,6 +833,7 @@
 
     if-eq v2, v3, :cond_1
 
+    .line 554
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -745,7 +841,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "settings invalid band count: "
+    const-string/jumbo v4, "settings invalid band count: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -765,6 +861,7 @@
 
     throw v2
 
+    .line 557
     :cond_1
     new-array v2, v6, [[B
 
@@ -788,6 +885,7 @@
 
     move-result-object v1
 
+    .line 559
     .local v1, param:[B
     const/4 v0, 0x0
 
@@ -797,6 +895,7 @@
 
     if-ge v0, v2, :cond_2
 
+    .line 560
     new-array v2, v6, [[B
 
     aput-object v1, v2, v4
@@ -815,10 +914,12 @@
 
     move-result-object v1
 
+    .line 559
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 563
     :cond_2
     const/16 v2, 0x9
 
@@ -828,6 +929,7 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 564
     return-void
 .end method
 
@@ -843,6 +945,7 @@
     .end annotation
 
     .prologue
+    .line 341
     const/4 v0, 0x6
 
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/Equalizer;->setParameter(IS)I
@@ -851,5 +954,6 @@
 
     invoke-virtual {p0, v0}, Landroid/media/audiofx/Equalizer;->checkStatus(I)V
 
+    .line 342
     return-void
 .end method

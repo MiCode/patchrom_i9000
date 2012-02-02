@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 88
     iput-object p1, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .locals 3
 
     .prologue
+    .line 90
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
     #getter for: Landroid/widget/NumberPicker;->mText:Landroid/widget/EditText;
@@ -47,10 +49,11 @@
 
     move-result-object v0
 
-    const-string v1, "onLongClick"
+    const-string/jumbo v1, "onLongClick"
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTag(Ljava/lang/Object;)V
 
+    .line 91
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
     #getter for: Landroid/widget/NumberPicker;->mIncrement:Z
@@ -73,6 +76,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 92
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
     iget-object v1, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
@@ -86,6 +90,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->changeCurrent(I)V
 
+    .line 93
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
     #getter for: Landroid/widget/NumberPicker;->mHandler:Landroid/os/Handler;
@@ -102,10 +107,12 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 98
     :cond_0
     :goto_0
     return-void
 
+    .line 94
     :cond_1
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
@@ -129,6 +136,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 95
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
     iget-object v1, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
@@ -144,6 +152,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->changeCurrent(I)V
 
+    .line 96
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
     #getter for: Landroid/widget/NumberPicker;->mHandler:Landroid/os/Handler;

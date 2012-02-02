@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1438
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog$4;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "which"
 
     .prologue
+    .line 1440
     const-string v1, "EditStyledText"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -64,11 +66,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1441
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
+    .line 1442
     .local v0, align:Landroid/text/Layout$Alignment;
     packed-switch p2, :pswitch_data_0
 
+    .line 1455
     :goto_0
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog$4;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
@@ -76,23 +81,31 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/widget/EditStyledText;->setAlignment(Landroid/text/Layout$Alignment;)V
 
+    .line 1456
     return-void
 
+    .line 1444
     :pswitch_0
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
+    .line 1445
     goto :goto_0
 
+    .line 1447
     :pswitch_1
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
+    .line 1448
     goto :goto_0
 
+    .line 1450
     :pswitch_2
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
 
+    .line 1451
     goto :goto_0
 
+    .line 1442
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

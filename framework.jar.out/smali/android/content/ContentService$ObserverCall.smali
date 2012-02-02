@@ -30,13 +30,18 @@
     .parameter "selfNotify"
 
     .prologue
+    .line 186
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 187
     iput-object p1, p0, Landroid/content/ContentService$ObserverCall;->mNode:Landroid/content/ContentService$ObserverNode;
 
+    .line 188
     iput-object p2, p0, Landroid/content/ContentService$ObserverCall;->mObserver:Landroid/database/IContentObserver;
 
+    .line 189
     iput-boolean p3, p0, Landroid/content/ContentService$ObserverCall;->mSelfNotify:Z
 
+    .line 190
     return-void
 .end method

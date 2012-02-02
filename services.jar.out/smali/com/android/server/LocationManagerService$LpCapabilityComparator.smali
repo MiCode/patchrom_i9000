@@ -45,6 +45,7 @@
     .parameter
 
     .prologue
+    .line 728
     iput-object p1, p0, Lcom/android/server/LocationManagerService$LpCapabilityComparator;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,6 +59,7 @@
     .parameter "x1"
 
     .prologue
+    .line 728
     invoke-direct {p0, p1}, Lcom/android/server/LocationManagerService$LpCapabilityComparator;-><init>(Lcom/android/server/LocationManagerService;)V
 
     return-void
@@ -72,6 +74,7 @@
 
     const/4 v2, 0x0
 
+    .line 735
     invoke-interface {p1}, Lcom/android/server/location/LocationProviderInterface;->supportsAltitude()Z
 
     move-result v0
@@ -129,6 +132,7 @@
     .parameter "l2"
 
     .prologue
+    .line 741
     invoke-direct {p0, p2}, Lcom/android/server/LocationManagerService$LpCapabilityComparator;->score(Lcom/android/server/location/LocationProviderInterface;)I
 
     move-result v0
@@ -148,6 +152,7 @@
     .parameter "x1"
 
     .prologue
+    .line 728
     check-cast p1, Lcom/android/server/location/LocationProviderInterface;
 
     .end local p1
@@ -167,6 +172,7 @@
     .parameter "l2"
 
     .prologue
+    .line 745
     invoke-direct {p0, p1}, Lcom/android/server/LocationManagerService$LpCapabilityComparator;->score(Lcom/android/server/location/LocationProviderInterface;)I
 
     move-result v0

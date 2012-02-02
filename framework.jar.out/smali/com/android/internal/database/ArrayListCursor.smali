@@ -41,13 +41,17 @@
 
     const-string v7, "_id"
 
+    .line 34
     invoke-direct {p0}, Landroid/database/AbstractCursor;-><init>()V
 
+    .line 35
     array-length v0, p1
 
+    .line 36
     .local v0, colCount:I
     const/4 v1, 0x0
 
+    .line 38
     .local v1, foundID:Z
     const/4 v2, 0x0
 
@@ -55,6 +59,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 39
     aget-object v4, p1, v2
 
     const-string v5, "_id"
@@ -65,46 +70,56 @@
 
     if-nez v4, :cond_3
 
+    .line 40
     iput-object p1, p0, Lcom/android/internal/database/ArrayListCursor;->mColumnNames:[Ljava/lang/String;
 
+    .line 41
     const/4 v1, 0x1
 
+    .line 46
     :cond_0
     if-nez v1, :cond_1
 
+    .line 47
     add-int/lit8 v4, v0, 0x1
 
     new-array v4, v4, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/android/internal/database/ArrayListCursor;->mColumnNames:[Ljava/lang/String;
 
+    .line 48
     iget-object v4, p0, Lcom/android/internal/database/ArrayListCursor;->mColumnNames:[Ljava/lang/String;
 
     array-length v5, p1
 
     invoke-static {p1, v6, v4, v6, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 49
     iget-object v4, p0, Lcom/android/internal/database/ArrayListCursor;->mColumnNames:[Ljava/lang/String;
 
     const-string v5, "_id"
 
     aput-object v7, v4, v0
 
+    .line 52
     :cond_1
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
+    .line 53
     .local v3, rowCount:I
     new-array v4, v3, [Ljava/util/ArrayList;
 
     iput-object v4, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
+    .line 55
     const/4 v2, 0x0
 
     :goto_1
     if-ge v2, v3, :cond_4
 
+    .line 56
     iget-object v5, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -115,8 +130,10 @@
 
     aput-object v4, v5, v2
 
+    .line 57
     if-nez v1, :cond_2
 
+    .line 58
     iget-object v4, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     aget-object v4, v4, v2
@@ -127,17 +144,20 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 55
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
+    .line 38
     .end local v3           #rowCount:I
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 61
     .restart local v3       #rowCount:I
     :cond_4
     return-void
@@ -149,6 +169,7 @@
     .locals 1
 
     .prologue
+    .line 118
     const/4 v0, 0x0
 
     return v0
@@ -160,6 +181,7 @@
     .parameter "window"
 
     .prologue
+    .line 65
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Lcom/android/internal/database/ArrayListCursor;->getCount()I
@@ -168,16 +190,20 @@
 
     if-le p1, v6, :cond_1
 
+    .line 109
     :cond_0
     :goto_0
     return-void
 
+    .line 69
     :cond_1
     invoke-virtual {p2}, Landroid/database/CursorWindow;->acquireReference()V
 
+    .line 71
     :try_start_0
     iget v5, p0, Landroid/database/AbstractCursor;->mPos:I
 
+    .line 72
     .local v5, oldpos:I
     const/4 v6, 0x1
 
@@ -185,17 +211,22 @@
 
     iput v6, p0, Landroid/database/AbstractCursor;->mPos:I
 
+    .line 73
     invoke-virtual {p2}, Landroid/database/CursorWindow;->clear()V
 
+    .line 74
     invoke-virtual {p2, p1}, Landroid/database/CursorWindow;->setStartPosition(I)V
 
+    .line 75
     invoke-virtual {p0}, Lcom/android/internal/database/ArrayListCursor;->getColumnCount()I
 
     move-result v1
 
+    .line 76
     .local v1, columnNum:I
     invoke-virtual {p2, v1}, Landroid/database/CursorWindow;->setNumColumns(I)Z
 
+    .line 77
     :cond_2
     :goto_1
     invoke-virtual {p0}, Lcom/android/internal/database/ArrayListCursor;->moveToNext()Z
@@ -210,12 +241,14 @@
 
     if-eqz v6, :cond_6
 
+    .line 78
     const/4 v4, 0x0
 
     .local v4, i:I
     :goto_2
     if-ge v4, v1, :cond_2
 
+    .line 79
     iget-object v6, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v7, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -226,13 +259,16 @@
 
     move-result-object v2
 
+    .line 80
     .local v2, data:Ljava/lang/Object;
     if-eqz v2, :cond_4
 
+    .line 81
     instance-of v6, v2, [B
 
     if-eqz v6, :cond_3
 
+    .line 82
     check-cast v2, [B
 
     .end local v2           #data:Ljava/lang/Object;
@@ -242,6 +278,7 @@
 
     move-object v3, v0
 
+    .line 83
     .local v3, field:[B
     iget v6, p0, Landroid/database/AbstractCursor;->mPos:I
 
@@ -251,6 +288,7 @@
 
     if-nez v6, :cond_5
 
+    .line 84
     invoke-virtual {p2}, Landroid/database/CursorWindow;->freeLastRow()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -258,6 +296,7 @@
 
     goto :goto_1
 
+    .line 104
     .end local v1           #columnNum:I
     .end local v3           #field:[B
     .end local v4           #i:I
@@ -265,11 +304,13 @@
     :catch_0
     move-exception v6
 
+    .line 107
     :goto_3
     invoke-virtual {p2}, Landroid/database/CursorWindow;->releaseReference()V
 
     goto :goto_0
 
+    .line 88
     .restart local v1       #columnNum:I
     .restart local v2       #data:Ljava/lang/Object;
     .restart local v4       #i:I
@@ -280,6 +321,7 @@
 
     move-result-object v3
 
+    .line 89
     .local v3, field:Ljava/lang/String;
     iget v6, p0, Landroid/database/AbstractCursor;->mPos:I
 
@@ -289,6 +331,7 @@
 
     if-nez v6, :cond_5
 
+    .line 90
     invoke-virtual {p2}, Landroid/database/CursorWindow;->freeLastRow()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -296,6 +339,7 @@
 
     goto :goto_1
 
+    .line 107
     .end local v1           #columnNum:I
     .end local v2           #data:Ljava/lang/Object;
     .end local v3           #field:Ljava/lang/String;
@@ -308,6 +352,7 @@
 
     throw v6
 
+    .line 95
     .restart local v1       #columnNum:I
     .restart local v2       #data:Ljava/lang/Object;
     .restart local v4       #i:I
@@ -322,16 +367,19 @@
 
     if-nez v6, :cond_5
 
+    .line 96
     invoke-virtual {p2}, Landroid/database/CursorWindow;->freeLastRow()V
 
     goto :goto_1
 
+    .line 78
     .end local v2           #data:Ljava/lang/Object;
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
+    .line 103
     .end local v4           #i:I
     :cond_6
     iput v5, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -347,6 +395,7 @@
     .parameter "columnIndex"
 
     .prologue
+    .line 128
     iget-object v0, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v1, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -369,6 +418,7 @@
     .locals 1
 
     .prologue
+    .line 123
     iget-object v0, p0, Lcom/android/internal/database/ArrayListCursor;->mColumnNames:[Ljava/lang/String;
 
     return-object v0
@@ -378,6 +428,7 @@
     .locals 1
 
     .prologue
+    .line 113
     iget-object v0, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     array-length v0, v0
@@ -390,6 +441,7 @@
     .parameter "columnIndex"
 
     .prologue
+    .line 163
     iget-object v1, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v2, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -402,6 +454,7 @@
 
     check-cast v0, Ljava/lang/Number;
 
+    .line 164
     .local v0, num:Ljava/lang/Number;
     invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
 
@@ -415,6 +468,7 @@
     .parameter "columnIndex"
 
     .prologue
+    .line 157
     iget-object v1, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v2, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -427,6 +481,7 @@
 
     check-cast v0, Ljava/lang/Number;
 
+    .line 158
     .local v0, num:Ljava/lang/Number;
     invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
@@ -440,6 +495,7 @@
     .parameter "columnIndex"
 
     .prologue
+    .line 145
     iget-object v1, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v2, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -452,6 +508,7 @@
 
     check-cast v0, Ljava/lang/Number;
 
+    .line 146
     .local v0, num:Ljava/lang/Number;
     invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
@@ -465,6 +522,7 @@
     .parameter "columnIndex"
 
     .prologue
+    .line 151
     iget-object v1, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v2, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -477,6 +535,7 @@
 
     check-cast v0, Ljava/lang/Number;
 
+    .line 152
     .local v0, num:Ljava/lang/Number;
     invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
@@ -490,6 +549,7 @@
     .parameter "columnIndex"
 
     .prologue
+    .line 139
     iget-object v1, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v2, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -502,6 +562,7 @@
 
     check-cast v0, Ljava/lang/Number;
 
+    .line 140
     .local v0, num:Ljava/lang/Number;
     invoke-virtual {v0}, Ljava/lang/Number;->shortValue()S
 
@@ -515,6 +576,7 @@
     .parameter "columnIndex"
 
     .prologue
+    .line 133
     iget-object v1, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v2, p0, Landroid/database/AbstractCursor;->mPos:I
@@ -525,6 +587,7 @@
 
     move-result-object v0
 
+    .line 134
     .local v0, cell:Ljava/lang/Object;
     if-nez v0, :cond_0
 
@@ -546,6 +609,7 @@
     .parameter "columnIndex"
 
     .prologue
+    .line 169
     iget-object v0, p0, Lcom/android/internal/database/ArrayListCursor;->mRows:[Ljava/util/ArrayList;
 
     iget v1, p0, Landroid/database/AbstractCursor;->mPos:I

@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 70
     iput-object p1, p0, Lcom/android/internal/policy/impl/RecentApplicationsDialog$1;->this$0:Lcom/android/internal/policy/impl/RecentApplicationsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 73
     iget-object v4, p0, Lcom/android/internal/policy/impl/RecentApplicationsDialog$1;->this$0:Lcom/android/internal/policy/impl/RecentApplicationsDialog;
 
     iget-object v0, v4, Lcom/android/internal/policy/impl/RecentApplicationsDialog;->mButtons:[Landroid/view/View;
@@ -58,18 +60,22 @@
 
     aget-object v1, v0, v2
 
+    .line 74
     .local v1, b:Landroid/view/View;
     iget-object v4, p0, Lcom/android/internal/policy/impl/RecentApplicationsDialog$1;->this$0:Lcom/android/internal/policy/impl/RecentApplicationsDialog;
 
     #calls: Lcom/android/internal/policy/impl/RecentApplicationsDialog;->setButtonAppearance(Landroid/view/View;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
     invoke-static {v4, v1, v5, v5}, Lcom/android/internal/policy/impl/RecentApplicationsDialog;->access$000(Lcom/android/internal/policy/impl/RecentApplicationsDialog;Landroid/view/View;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
+    .line 75
     invoke-virtual {v1, v5}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 73
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 77
     .end local v1           #b:Landroid/view/View;
     :cond_0
     return-void

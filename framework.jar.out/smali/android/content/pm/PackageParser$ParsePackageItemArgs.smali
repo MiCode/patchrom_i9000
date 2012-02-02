@@ -43,19 +43,27 @@
     .parameter "_logoRes"
 
     .prologue
+    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 116
     iput-object p1, p0, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->owner:Landroid/content/pm/PackageParser$Package;
 
+    .line 117
     iput-object p2, p0, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->outError:[Ljava/lang/String;
 
+    .line 118
     iput p3, p0, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->nameRes:I
 
+    .line 119
     iput p4, p0, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->labelRes:I
 
+    .line 120
     iput p5, p0, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->iconRes:I
 
+    .line 121
     iput p6, p0, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->logoRes:I
 
+    .line 122
     return-void
 .end method

@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 253
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Lcom/android/internal/view/BaseInputHandler;-><init>()V
@@ -39,14 +40,17 @@
     .parameter "finishedCallback"
 
     .prologue
+    .line 256
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
+    .line 258
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 259
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -54,17 +58,21 @@
 
     if-eqz v1, :cond_0
 
+    .line 260
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$1;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPointerLocationView:Lcom/android/internal/widget/PointerLocationView;
 
     invoke-virtual {v1, p1}, Lcom/android/internal/widget/PointerLocationView;->addTouchEvent(Landroid/view/MotionEvent;)V
 
+    .line 262
     :cond_0
     monitor-exit v0
 
+    .line 263
     return-void
 
+    .line 262
     :catchall_0
     move-exception v1
 

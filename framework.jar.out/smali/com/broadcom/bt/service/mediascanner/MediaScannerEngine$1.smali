@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 40
     iput-object p1, p0, Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine$1;->this$0:Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +43,14 @@
     .prologue
     const-string v5, "MediaScannerEngine"
 
+    .line 43
     const-string v3, "MediaScannerEngine"
 
     const-string v3, "Connected to media scanner"
 
     invoke-static {v5, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 44
     iget-object v3, p0, Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine$1;->this$0:Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;
 
     #getter for: Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;->mFilesToScan:Ljava/util/ArrayList;
@@ -73,6 +76,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 46
     .local v0, fileName:Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine$1;->this$0:Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;
@@ -90,11 +94,13 @@
 
     goto :goto_0
 
+    .line 47
     :catch_0
     move-exception v3
 
     move-object v2, v3
 
+    .line 48
     .local v2, t:Ljava/lang/Throwable;
     const-string v3, "MediaScannerEngine"
 
@@ -104,6 +110,7 @@
 
     goto :goto_0
 
+    .line 51
     .end local v0           #fileName:Ljava/lang/String;
     .end local v2           #t:Ljava/lang/Throwable;
     :cond_0
@@ -118,6 +125,7 @@
     .prologue
     const-string v4, "MediaScannerEngine"
 
+    .line 55
     iget-object v1, p0, Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine$1;->this$0:Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;
 
     #getter for: Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;->mNewuris:Ljava/util/ArrayList;
@@ -127,6 +135,7 @@
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 56
     iget-object v1, p0, Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine$1;->this$0:Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;
 
     #getter for: Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;->mFilesToScan:Ljava/util/ArrayList;
@@ -160,6 +169,7 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 58
     iget-object v1, p0, Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine$1;->this$0:Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;
 
     #getter for: Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;->mCallback:Lcom/broadcom/bt/service/mediascanner/IMediaScannerCallback;
@@ -169,6 +179,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 59
     iget-object v1, p0, Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine$1;->this$0:Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;
 
     #getter for: Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;->mCallback:Lcom/broadcom/bt/service/mediascanner/IMediaScannerCallback;
@@ -192,6 +203,7 @@
 
     invoke-interface {v1, v2, v3}, Lcom/broadcom/bt/service/mediascanner/IMediaScannerCallback;->onResultsAvailable(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
+    .line 62
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine$1;->this$0:Lcom/broadcom/bt/service/mediascanner/MediaScannerEngine;
@@ -203,6 +215,7 @@
 
     invoke-virtual {v1}, Landroid/media/MediaScannerConnection;->disconnect()V
 
+    .line 63
     const-string v1, "MediaScannerEngine"
 
     const-string v2, "Disconnected from media scanner"
@@ -211,15 +224,18 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 68
     :cond_1
     :goto_0
     return-void
 
+    .line 64
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 65
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "MediaScannerEngine"
 

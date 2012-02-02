@@ -31,26 +31,31 @@
     .parameter "context"
 
     .prologue
+    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 139
     new-instance v0, Landroid/webkit/SslErrorHandler;
 
     invoke-direct {v0}, Landroid/webkit/SslErrorHandler;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/Network;->mSslErrorHandler:Landroid/webkit/SslErrorHandler;
 
+    .line 140
     new-instance v0, Landroid/webkit/HttpAuthHandler;
 
     invoke-direct {v0, p0}, Landroid/webkit/HttpAuthHandler;-><init>(Landroid/webkit/Network;)V
 
     iput-object v0, p0, Landroid/webkit/Network;->mHttpAuthHandler:Landroid/webkit/HttpAuthHandler;
 
+    .line 142
     new-instance v0, Landroid/net/http/RequestQueue;
 
     invoke-direct {v0, p1}, Landroid/net/http/RequestQueue;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
+    .line 143
     return-void
 .end method
 
@@ -58,6 +63,7 @@
     .locals 2
 
     .prologue
+    .line 121
     sget v0, Landroid/webkit/Network;->sPlatformNotificationEnableRefCount:I
 
     const/4 v1, 0x1
@@ -68,20 +74,24 @@
 
     if-nez v0, :cond_0
 
+    .line 122
     sget-object v0, Landroid/webkit/Network;->sNetwork:Landroid/webkit/Network;
 
     if-eqz v0, :cond_1
 
+    .line 123
     sget-object v0, Landroid/webkit/Network;->sNetwork:Landroid/webkit/Network;
 
     iget-object v0, v0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
     invoke-virtual {v0}, Landroid/net/http/RequestQueue;->disablePlatformNotifications()V
 
+    .line 128
     :cond_0
     :goto_0
     return-void
 
+    .line 125
     :cond_1
     const/4 v0, 0x0
 
@@ -96,6 +106,7 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 107
     sget v0, Landroid/webkit/Network;->sPlatformNotificationEnableRefCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -104,20 +115,24 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 108
     sget-object v0, Landroid/webkit/Network;->sNetwork:Landroid/webkit/Network;
 
     if-eqz v0, :cond_1
 
+    .line 109
     sget-object v0, Landroid/webkit/Network;->sNetwork:Landroid/webkit/Network;
 
     iget-object v0, v0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
     invoke-virtual {v0}, Landroid/net/http/RequestQueue;->enablePlatformNotifications()V
 
+    .line 114
     :cond_0
     :goto_0
     return-void
 
+    .line 111
     :cond_1
     sput-boolean v1, Landroid/webkit/Network;->sPlatformNotifications:Z
 
@@ -129,6 +144,7 @@
     .parameter "context"
 
     .prologue
+    .line 83
     const-class v0, Landroid/webkit/Network;
 
     monitor-enter v0
@@ -138,6 +154,7 @@
 
     if-nez v1, :cond_0
 
+    .line 90
     new-instance v1, Landroid/webkit/Network;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -148,10 +165,12 @@
 
     sput-object v1, Landroid/webkit/Network;->sNetwork:Landroid/webkit/Network;
 
+    .line 91
     sget-boolean v1, Landroid/webkit/Network;->sPlatformNotifications:Z
 
     if-eqz v1, :cond_0
 
+    .line 95
     sget v1, Landroid/webkit/Network;->sPlatformNotificationEnableRefCount:I
 
     const/4 v2, 0x1
@@ -160,8 +179,10 @@
 
     sput v1, Landroid/webkit/Network;->sPlatformNotificationEnableRefCount:I
 
+    .line 96
     invoke-static {}, Landroid/webkit/Network;->enablePlatformNotifications()V
 
+    .line 99
     :cond_0
     sget-object v1, Landroid/webkit/Network;->sNetwork:Landroid/webkit/Network;
     :try_end_0
@@ -171,6 +192,7 @@
 
     return-object v1
 
+    .line 83
     :catchall_0
     move-exception v1
 
@@ -187,16 +209,19 @@
     .parameter "error"
 
     .prologue
+    .line 313
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
+    .line 314
     iget-object v0, p0, Landroid/webkit/Network;->mSslErrorHandler:Landroid/webkit/SslErrorHandler;
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/SslErrorHandler;->checkSslPrefTable(Landroid/webkit/LoadListener;Landroid/net/http/SslError;)Z
 
     move-result v0
 
+    .line 316
     :goto_0
     return v0
 
@@ -210,10 +235,12 @@
     .locals 1
 
     .prologue
+    .line 296
     iget-object v0, p0, Landroid/webkit/Network;->mSslErrorHandler:Landroid/webkit/SslErrorHandler;
 
     invoke-virtual {v0}, Landroid/webkit/SslErrorHandler;->clear()V
 
+    .line 297
     return-void
 .end method
 
@@ -221,6 +248,7 @@
     .locals 1
 
     .prologue
+    .line 221
     iget-object v0, p0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
     invoke-virtual {v0}, Landroid/net/http/RequestQueue;->getProxyHost()Lorg/apache/http/HttpHost;
@@ -238,6 +266,7 @@
     .locals 1
 
     .prologue
+    .line 248
     monitor-enter p0
 
     :try_start_0
@@ -261,6 +290,7 @@
     .locals 1
 
     .prologue
+    .line 228
     monitor-enter p0
 
     :try_start_0
@@ -285,12 +315,15 @@
     .parameter "loader"
 
     .prologue
+    .line 327
     if-eqz p1, :cond_0
 
+    .line 328
     iget-object v0, p0, Landroid/webkit/Network;->mHttpAuthHandler:Landroid/webkit/HttpAuthHandler;
 
     invoke-virtual {v0, p1}, Landroid/webkit/HttpAuthHandler;->handleAuthRequest(Landroid/webkit/LoadListener;)V
 
+    .line 330
     :cond_0
     return-void
 .end method
@@ -300,12 +333,15 @@
     .parameter "loader"
 
     .prologue
+    .line 306
     if-eqz p1, :cond_0
 
+    .line 307
     iget-object v0, p0, Landroid/webkit/Network;->mSslErrorHandler:Landroid/webkit/SslErrorHandler;
 
     invoke-virtual {v0, p1}, Landroid/webkit/SslErrorHandler;->handleSslErrorRequest(Landroid/webkit/LoadListener;)V
 
+    .line 309
     :cond_0
     return-void
 .end method
@@ -314,10 +350,12 @@
     .locals 2
 
     .prologue
+    .line 210
     iget-object v0, p0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
     monitor-enter v0
 
+    .line 211
     :try_start_0
     iget-object v1, p0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
@@ -339,6 +377,7 @@
 
     goto :goto_0
 
+    .line 212
     :catchall_0
     move-exception v1
 
@@ -373,10 +412,12 @@
     .local p2, headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v3, 0x0
 
+    .line 159
     invoke-virtual {p4}, Landroid/webkit/LoadListener;->url()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 162
     .local v1, url:Ljava/lang/String;
     invoke-static {v1}, Landroid/webkit/URLUtil;->isValidUrl(Ljava/lang/String;)Z
 
@@ -386,9 +427,11 @@
 
     move v2, v3
 
+    .line 201
     :goto_0
     return v2
 
+    .line 168
     :cond_0
     invoke-static {v1}, Landroid/webkit/URLUtil;->isAssetUrl(Ljava/lang/String;)Z
 
@@ -417,31 +460,40 @@
     :cond_1
     move v2, v3
 
+    .line 170
     goto :goto_0
 
+    .line 175
     :cond_2
     const/4 v6, 0x0
 
+    .line 176
     .local v6, bodyProvider:Ljava/io/InputStream;
     const/4 v7, 0x0
 
+    .line 177
     .local v7, bodyLength:I
     if-eqz p3, :cond_3
 
+    .line 178
     array-length v7, p3
 
+    .line 179
     new-instance v6, Ljava/io/ByteArrayInputStream;
 
     .end local v6           #bodyProvider:Ljava/io/InputStream;
     invoke-direct {v6, p3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
+    .line 182
     .restart local v6       #bodyProvider:Ljava/io/InputStream;
     :cond_3
     iget-object v0, p0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
+    .line 183
     .local v0, q:Landroid/net/http/RequestQueue;
     const/4 v8, 0x0
 
+    .line 184
     .local v8, handle:Landroid/net/http/RequestHandle;
     invoke-virtual {p4}, Landroid/webkit/LoadListener;->isSynchronous()Z
 
@@ -449,6 +501,7 @@
 
     if-eqz v2, :cond_4
 
+    .line 185
     invoke-virtual {p4}, Landroid/webkit/LoadListener;->getWebAddress()Landroid/net/WebAddress;
 
     move-result-object v2
@@ -463,17 +516,22 @@
 
     move-result-object v8
 
+    .line 187
     invoke-virtual {p4, v8}, Landroid/webkit/LoadListener;->attachRequestHandle(Landroid/net/http/RequestHandle;)V
 
+    .line 188
     invoke-virtual {v8}, Landroid/net/http/RequestHandle;->processRequest()V
 
+    .line 189
     invoke-virtual {p4}, Landroid/webkit/LoadListener;->loadSynchronousMessages()V
 
+    .line 201
     :goto_1
     const/4 v2, 0x1
 
     goto :goto_0
 
+    .line 191
     :cond_4
     invoke-virtual {p4}, Landroid/webkit/LoadListener;->getWebAddress()Landroid/net/WebAddress;
 
@@ -489,6 +547,7 @@
 
     move-result-object v8
 
+    .line 198
     invoke-virtual {p4, v8}, Landroid/webkit/LoadListener;->attachRequestHandle(Landroid/net/http/RequestHandle;)V
 
     goto :goto_1
@@ -499,6 +558,7 @@
     .parameter "inState"
 
     .prologue
+    .line 289
     iget-object v0, p0, Landroid/webkit/Network;->mSslErrorHandler:Landroid/webkit/SslErrorHandler;
 
     invoke-virtual {v0, p1}, Landroid/webkit/SslErrorHandler;->restoreState(Landroid/os/Bundle;)Z
@@ -513,6 +573,7 @@
     .parameter "outState"
 
     .prologue
+    .line 275
     iget-object v0, p0, Landroid/webkit/Network;->mSslErrorHandler:Landroid/webkit/SslErrorHandler;
 
     invoke-virtual {v0, p1}, Landroid/webkit/SslErrorHandler;->saveState(Landroid/os/Bundle;)Z
@@ -527,6 +588,7 @@
     .parameter "proxyPassword"
 
     .prologue
+    .line 261
     monitor-enter p0
 
     :try_start_0
@@ -534,10 +596,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 262
     monitor-exit p0
 
     return-void
 
+    .line 261
     :catchall_0
     move-exception v0
 
@@ -551,6 +615,7 @@
     .parameter "proxyUsername"
 
     .prologue
+    .line 241
     monitor-enter p0
 
     :try_start_0
@@ -558,10 +623,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 242
     monitor-exit p0
 
     return-void
 
+    .line 241
     :catchall_0
     move-exception v0
 
@@ -574,10 +641,12 @@
     .locals 1
 
     .prologue
+    .line 334
     iget-object v0, p0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
     invoke-virtual {v0}, Landroid/net/http/RequestQueue;->startTiming()V
 
+    .line 335
     return-void
 .end method
 
@@ -585,9 +654,11 @@
     .locals 1
 
     .prologue
+    .line 338
     iget-object v0, p0, Landroid/webkit/Network;->mRequestQueue:Landroid/net/http/RequestQueue;
 
     invoke-virtual {v0}, Landroid/net/http/RequestQueue;->stopTiming()V
 
+    .line 339
     return-void
 .end method

@@ -27,6 +27,7 @@
     .locals 1
 
     .prologue
+    .line 1217
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -40,6 +41,7 @@
     .locals 0
 
     .prologue
+    .line 1208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,6 +58,7 @@
 
     const/4 v3, 0x1
 
+    .line 1291
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -70,6 +73,7 @@
 
     goto :goto_0
 
+    .line 1296
     :cond_0
     sget-object v1, Lcom/android/server/WifiWatchdogService$DnsPinger;->sRandom:Ljava/util/Random;
 
@@ -81,6 +85,7 @@
 
     aput-byte v1, p0, v2
 
+    .line 1297
     sget-object v1, Lcom/android/server/WifiWatchdogService$DnsPinger;->sRandom:Ljava/util/Random;
 
     invoke-virtual {v1, v4}, Ljava/util/Random;->nextInt(I)I
@@ -91,40 +96,48 @@
 
     aput-byte v1, p0, v3
 
+    .line 1300
     const/4 v1, 0x2
 
     aput-byte v3, p0, v1
 
+    .line 1303
     const/4 v1, 0x5
 
     aput-byte v3, p0, v1
 
+    .line 1308
     const/16 v1, 0xc
 
     const-string v2, "www"
 
     invoke-static {p0, v1, v2}, Lcom/android/server/WifiWatchdogService$DnsPinger;->writeString([BILjava/lang/String;)V
 
+    .line 1311
     const/16 v1, 0x10
 
     const-string v2, "android"
 
     invoke-static {p0, v1, v2}, Lcom/android/server/WifiWatchdogService$DnsPinger;->writeString([BILjava/lang/String;)V
 
+    .line 1314
     const/16 v1, 0x18
 
     const-string v2, "com"
 
     invoke-static {p0, v1, v2}, Lcom/android/server/WifiWatchdogService$DnsPinger;->writeString([BILjava/lang/String;)V
 
+    .line 1317
     const/16 v1, 0x1e
 
     aput-byte v3, p0, v1
 
+    .line 1320
     const/16 v1, 0x20
 
     aput-byte v3, p0, v1
 
+    .line 1321
     return-void
 .end method
 
@@ -138,8 +151,10 @@
 
     const/4 v10, 0x0
 
+    .line 1220
     const/4 v6, 0x0
 
+    .line 1222
     .local v6, socket:Ljava/net/DatagramSocket;
     :try_start_0
     new-instance v7, Ljava/net/DatagramSocket;
@@ -153,22 +168,27 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
+    .line 1225
     .end local v6           #socket:Ljava/net/DatagramSocket;
     .local v7, socket:Ljava/net/DatagramSocket;
     :try_start_1
     invoke-virtual {v7, p1}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
 
+    .line 1227
     const/16 v8, 0x21
 
     new-array v0, v8, [B
 
+    .line 1228
     .local v0, buf:[B
     invoke-static {v0}, Lcom/android/server/WifiWatchdogService$DnsPinger;->fillQuery([B)V
 
+    .line 1231
     const/4 v8, 0x4
 
     new-array v4, v8, [B
 
+    .line 1232
     .local v4, parts:[B
     const/4 v8, 0x0
 
@@ -178,6 +198,7 @@
 
     aput-byte v9, v4, v8
 
+    .line 1233
     const/4 v8, 0x1
 
     shr-int/lit8 v9, p0, 0x8
@@ -188,6 +209,7 @@
 
     aput-byte v9, v4, v8
 
+    .line 1234
     const/4 v8, 0x2
 
     shr-int/lit8 v9, p0, 0x10
@@ -198,6 +220,7 @@
 
     aput-byte v9, v4, v8
 
+    .line 1235
     const/4 v8, 0x3
 
     shr-int/lit8 v9, p0, 0x18
@@ -208,10 +231,12 @@
 
     aput-byte v9, v4, v8
 
+    .line 1237
     invoke-static {v4}, Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;
 
     move-result-object v1
 
+    .line 1238
     .local v1, dnsAddress:Ljava/net/InetAddress;
     new-instance v3, Ljava/net/DatagramPacket;
 
@@ -221,15 +246,18 @@
 
     invoke-direct {v3, v0, v8, v1, v9}, Ljava/net/DatagramPacket;-><init>([BILjava/net/InetAddress;I)V
 
+    .line 1240
     .local v3, packet:Ljava/net/DatagramPacket;
     invoke-virtual {v7, v3}, Ljava/net/DatagramSocket;->send(Ljava/net/DatagramPacket;)V
 
+    .line 1243
     new-instance v5, Ljava/net/DatagramPacket;
 
     array-length v8, v0
 
     invoke-direct {v5, v0, v8}, Ljava/net/DatagramPacket;-><init>([BI)V
 
+    .line 1244
     .local v5, replyPacket:Ljava/net/DatagramPacket;
     invoke-virtual {v7, v5}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
     :try_end_1
@@ -240,8 +268,10 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_5
 
+    .line 1276
     if-eqz v7, :cond_0
 
+    .line 1277
     invoke-virtual {v7}, Ljava/net/DatagramSocket;->close()V
 
     :cond_0
@@ -251,6 +281,7 @@
     .restart local v6       #socket:Ljava/net/DatagramSocket;
     move v8, v11
 
+    .line 1274
     .end local v0           #buf:[B
     .end local v1           #dnsAddress:Ljava/net/InetAddress;
     .end local v3           #packet:Ljava/net/DatagramPacket;
@@ -259,79 +290,97 @@
     :goto_0
     return v8
 
+    .line 1249
     :catch_0
     move-exception v8
 
     move-object v2, v8
 
+    .line 1276
     .local v2, e:Ljava/net/SocketException;
     :goto_1
     if-eqz v6, :cond_1
 
+    .line 1277
     invoke-virtual {v6}, Ljava/net/DatagramSocket;->close()V
 
     :cond_1
     move v8, v10
 
+    .line 1253
     goto :goto_0
 
+    .line 1255
     .end local v2           #e:Ljava/net/SocketException;
     :catch_1
     move-exception v8
 
     move-object v2, v8
 
+    .line 1276
     .local v2, e:Ljava/net/UnknownHostException;
     :goto_2
     if-eqz v6, :cond_2
 
+    .line 1277
     invoke-virtual {v6}, Ljava/net/DatagramSocket;->close()V
 
     :cond_2
     move v8, v10
 
+    .line 1259
     goto :goto_0
 
+    .line 1261
     .end local v2           #e:Ljava/net/UnknownHostException;
     :catch_2
     move-exception v8
 
     move-object v2, v8
 
+    .line 1276
     .local v2, e:Ljava/net/SocketTimeoutException;
     :goto_3
     if-eqz v6, :cond_3
 
+    .line 1277
     invoke-virtual {v6}, Ljava/net/DatagramSocket;->close()V
 
     :cond_3
     move v8, v10
 
+    .line 1262
     goto :goto_0
 
+    .line 1264
     .end local v2           #e:Ljava/net/SocketTimeoutException;
     :catch_3
     move-exception v8
 
     move-object v2, v8
 
+    .line 1276
     .local v2, e:Ljava/io/IOException;
     :goto_4
     if-eqz v6, :cond_4
 
+    .line 1277
     invoke-virtual {v6}, Ljava/net/DatagramSocket;->close()V
 
     :cond_4
     move v8, v10
 
+    .line 1268
     goto :goto_0
 
+    .line 1270
     .end local v2           #e:Ljava/io/IOException;
     :catch_4
     move-exception v8
 
     move-object v2, v8
 
+    .line 1272
     .local v2, e:Ljava/lang/Exception;
     :goto_5
     :try_start_2
@@ -343,15 +392,19 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 1276
     if-eqz v6, :cond_5
 
+    .line 1277
     invoke-virtual {v6}, Ljava/net/DatagramSocket;->close()V
 
     :cond_5
     move v8, v10
 
+    .line 1274
     goto :goto_0
 
+    .line 1276
     .end local v2           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v8
@@ -359,8 +412,10 @@
     :goto_6
     if-eqz v6, :cond_6
 
+    .line 1277
     invoke-virtual {v6}, Ljava/net/DatagramSocket;->close()V
 
+    .line 1276
     :cond_6
     throw v8
 
@@ -375,6 +430,7 @@
     .restart local v6       #socket:Ljava/net/DatagramSocket;
     goto :goto_6
 
+    .line 1270
     .end local v6           #socket:Ljava/net/DatagramSocket;
     .restart local v7       #socket:Ljava/net/DatagramSocket;
     :catch_5
@@ -388,6 +444,7 @@
     .restart local v6       #socket:Ljava/net/DatagramSocket;
     goto :goto_5
 
+    .line 1264
     .end local v6           #socket:Ljava/net/DatagramSocket;
     .restart local v7       #socket:Ljava/net/DatagramSocket;
     :catch_6
@@ -401,6 +458,7 @@
     .restart local v6       #socket:Ljava/net/DatagramSocket;
     goto :goto_4
 
+    .line 1261
     .end local v6           #socket:Ljava/net/DatagramSocket;
     .restart local v7       #socket:Ljava/net/DatagramSocket;
     :catch_7
@@ -414,6 +472,7 @@
     .restart local v6       #socket:Ljava/net/DatagramSocket;
     goto :goto_3
 
+    .line 1255
     .end local v6           #socket:Ljava/net/DatagramSocket;
     .restart local v7       #socket:Ljava/net/DatagramSocket;
     :catch_8
@@ -427,6 +486,7 @@
     .restart local v6       #socket:Ljava/net/DatagramSocket;
     goto :goto_2
 
+    .line 1249
     .end local v6           #socket:Ljava/net/DatagramSocket;
     .restart local v7       #socket:Ljava/net/DatagramSocket;
     :catch_9
@@ -448,8 +508,10 @@
     .parameter "string"
 
     .prologue
+    .line 1324
     move v1, p1
 
+    .line 1327
     .local v1, pos:I
     add-int/lit8 v2, v1, 0x1
 
@@ -463,6 +525,7 @@
 
     aput-byte v3, p0, v1
 
+    .line 1328
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -477,6 +540,7 @@
 
     if-ge v0, v3, :cond_0
 
+    .line 1329
     add-int/lit8 v2, v1, 0x1
 
     .end local v1           #pos:I
@@ -489,6 +553,7 @@
 
     aput-byte v3, p0, v1
 
+    .line 1328
     add-int/lit8 v0, v0, 0x1
 
     move v1, v2
@@ -497,6 +562,7 @@
     .restart local v1       #pos:I
     goto :goto_0
 
+    .line 1331
     :cond_0
     return-void
 .end method

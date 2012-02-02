@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 135
     iput-object p1, p0, Lcom/android/server/UsbStorageService$2;->this$0:Lcom/android/server/UsbStorageService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,10 +40,12 @@
     .parameter "intent"
 
     .prologue
+    .line 137
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 139
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -52,6 +55,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 141
     iget-object v1, p0, Lcom/android/server/UsbStorageService$2;->this$0:Lcom/android/server/UsbStorageService;
 
     const/4 v2, 0x1
@@ -59,12 +63,14 @@
     #setter for: Lcom/android/server/UsbStorageService;->mBooted:Z
     invoke-static {v1, v2}, Lcom/android/server/UsbStorageService;->access$102(Lcom/android/server/UsbStorageService;Z)Z
 
+    .line 142
     new-instance v1, Lcom/android/server/UsbStorageService$2$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/UsbStorageService$2$1;-><init>(Lcom/android/server/UsbStorageService$2;)V
 
     invoke-virtual {v1}, Lcom/android/server/UsbStorageService$2$1;->start()V
 
+    .line 192
     :cond_0
     return-void
 .end method

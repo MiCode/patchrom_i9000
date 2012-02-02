@@ -144,6 +144,7 @@
     .parameter
 
     .prologue
+    .line 63
     iput-object p1, p0, Landroid/util/Config$TelephonyFeature;->this$0:Landroid/util/Config;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

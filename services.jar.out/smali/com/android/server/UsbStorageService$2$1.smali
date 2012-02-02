@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 142
     iput-object p1, p0, Lcom/android/server/UsbStorageService$2$1;->this$1:Lcom/android/server/UsbStorageService$2;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,8 +38,10 @@
     .locals 17
 
     .prologue
+    .line 145
     const/4 v3, 0x0
 
+    .line 147
     .local v3, bfind:Z
     :try_start_0
     invoke-static {}, Landroid/os/Environment;->isUsbHostStorageInsalled()Z
@@ -47,10 +50,12 @@
 
     if-nez v14, :cond_1
 
+    .line 188
     :cond_0
     :goto_0
     return-void
 
+    .line 149
     :cond_1
     const/16 v10, 0xc
 
@@ -58,10 +63,12 @@
     :goto_1
     if-lez v10, :cond_3
 
+    .line 150
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectoryUsbHost()Ljava/io/File;
 
     move-result-object v11
 
+    .line 151
     .local v11, tmpFile:Ljava/io/File;
     invoke-virtual {v11}, Ljava/io/File;->isDirectory()Z
 
@@ -69,14 +76,17 @@
 
     if-nez v14, :cond_2
 
+    .line 153
     const-wide/16 v14, 0x3e8
 
     invoke-static {v14, v15}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 149
     add-int/lit8 v10, v10, -0x1
 
     goto :goto_1
 
+    .line 155
     :cond_2
     const-string v14, "UsbStorageService"
 
@@ -110,12 +120,15 @@
 
     invoke-static {v14, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 156
     const/4 v3, 0x1
 
+    .line 161
     .end local v11           #tmpFile:Ljava/io/File;
     :cond_3
     if-eqz v3, :cond_0
 
+    .line 162
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService$2$1;->this$1:Lcom/android/server/UsbStorageService$2;
@@ -129,6 +142,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 167
     :try_start_1
     move-object/from16 v0, p0
 
@@ -166,6 +180,7 @@
 
     move-result-object v1
 
+    .line 174
     .local v1, Disks:[Ljava/lang/String;
     move-object v2, v1
 
@@ -182,6 +197,7 @@
 
     aget-object v13, v2, v7
 
+    .line 175
     .local v13, volstr:Ljava/lang/String;
     const-string v14, " "
 
@@ -189,11 +205,13 @@
 
     move-result-object v12
 
+    .line 176
     .local v12, tok:[Ljava/lang/String;
     const/4 v14, 0x0
 
     aget-object v4, v12, v14
 
+    .line 177
     .local v4, diskLabel:Ljava/lang/String;
     const/4 v14, 0x1
 
@@ -203,6 +221,7 @@
 
     move-result v9
 
+    .line 179
     .local v9, nParti:I
     move-object/from16 v0, p0
 
@@ -215,6 +234,7 @@
     #calls: Lcom/android/server/UsbStorageService;->updatePartitionsList(Ljava/lang/String;)V
     invoke-static {v14, v4}, Lcom/android/server/UsbStorageService;->access$400(Lcom/android/server/UsbStorageService;Ljava/lang/String;)V
 
+    .line 180
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService$2$1;->this$1:Lcom/android/server/UsbStorageService$2;
@@ -230,10 +250,12 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
+    .line 174
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
+    .line 168
     .end local v1           #Disks:[Ljava/lang/String;
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v4           #diskLabel:Ljava/lang/String;
@@ -247,6 +269,7 @@
 
     move-object v5, v14
 
+    .line 169
     .local v5, e:Lcom/android/server/NativeDaemonConnectorException;
     :try_start_3
     const-string v14, "UsbStorageService"
@@ -275,6 +298,7 @@
 
     goto/16 :goto_0
 
+    .line 185
     .end local v5           #e:Lcom/android/server/NativeDaemonConnectorException;
     .end local v10           #retries:I
     :catch_1
@@ -282,6 +306,7 @@
 
     move-object v6, v14
 
+    .line 186
     .local v6, ex:Ljava/lang/Exception;
     const-string v14, "UsbStorageService"
 
@@ -291,6 +316,7 @@
 
     goto/16 :goto_0
 
+    .line 182
     .end local v6           #ex:Ljava/lang/Exception;
     .restart local v1       #Disks:[Ljava/lang/String;
     .restart local v2       #arr$:[Ljava/lang/String;
@@ -300,6 +326,7 @@
 
     move-object v5, v14
 
+    .line 183
     .local v5, e:Ljava/lang/Exception;
     :try_start_4
     const-string v14, "UsbStorageService"

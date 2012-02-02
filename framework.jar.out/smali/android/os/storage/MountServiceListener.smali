@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +23,7 @@
     .parameter "newState"
 
     .prologue
+    .line 43
     return-void
 .end method
 
@@ -30,5 +32,6 @@
     .parameter "connected"
 
     .prologue
+    .line 31
     return-void
 .end method

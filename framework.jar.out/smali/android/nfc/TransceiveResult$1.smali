@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +49,7 @@
 
     const/4 v5, 0x1
 
+    .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -56,6 +58,7 @@
 
     move v2, v5
 
+    .line 71
     .local v2, success:Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -66,20 +69,25 @@
 
     move v3, v5
 
+    .line 74
     .local v3, tagLost:Z
     :goto_1
     if-eqz v2, :cond_2
 
+    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 76
     .local v1, responseLength:I
     new-array v0, v1, [B
 
+    .line 77
     .local v0, responseData:[B
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
+    .line 81
     .end local v1           #responseLength:I
     :goto_2
     new-instance v4, Landroid/nfc/TransceiveResult;
@@ -94,14 +102,17 @@
     :cond_0
     move v2, v6
 
+    .line 70
     goto :goto_0
 
     .restart local v2       #success:Z
     :cond_1
     move v3, v6
 
+    .line 71
     goto :goto_1
 
+    .line 79
     .restart local v3       #tagLost:Z
     :cond_2
     const/4 v0, 0x0
@@ -115,6 +126,7 @@
     .parameter "x0"
 
     .prologue
+    .line 67
     invoke-virtual {p0, p1}, Landroid/nfc/TransceiveResult$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/TransceiveResult;
 
     move-result-object v0
@@ -127,6 +139,7 @@
     .parameter "size"
 
     .prologue
+    .line 86
     new-array v0, p1, [Landroid/nfc/TransceiveResult;
 
     return-object v0
@@ -137,6 +150,7 @@
     .parameter "x0"
 
     .prologue
+    .line 67
     invoke-virtual {p0, p1}, Landroid/nfc/TransceiveResult$1;->newArray(I)[Landroid/nfc/TransceiveResult;
 
     move-result-object v0

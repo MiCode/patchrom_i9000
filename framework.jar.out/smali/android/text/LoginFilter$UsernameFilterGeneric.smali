@@ -23,10 +23,12 @@
     .locals 1
 
     .prologue
+    .line 168
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/text/LoginFilter;-><init>(Z)V
 
+    .line 169
     return-void
 .end method
 
@@ -35,8 +37,10 @@
     .parameter "appendInvalid"
 
     .prologue
+    .line 172
     invoke-direct {p0, p1}, Landroid/text/LoginFilter;-><init>(Z)V
 
+    .line 173
     return-void
 .end method
 
@@ -49,6 +53,7 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 178
     const/16 v0, 0x30
 
     if-gt v0, p1, :cond_0
@@ -59,9 +64,11 @@
 
     move v0, v2
 
+    .line 186
     :goto_0
     return v0
 
+    .line 180
     :cond_0
     const/16 v0, 0x61
 
@@ -73,8 +80,10 @@
 
     move v0, v2
 
+    .line 181
     goto :goto_0
 
+    .line 182
     :cond_1
     const/16 v0, 0x41
 
@@ -86,8 +95,10 @@
 
     move v0, v2
 
+    .line 183
     goto :goto_0
 
+    .line 184
     :cond_2
     const-string v0, "@_-+."
 
@@ -101,8 +112,10 @@
 
     move v0, v2
 
+    .line 185
     goto :goto_0
 
+    .line 186
     :cond_3
     const/4 v0, 0x0
 

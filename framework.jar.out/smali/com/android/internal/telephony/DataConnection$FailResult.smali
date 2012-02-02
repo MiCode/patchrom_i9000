@@ -30,14 +30,18 @@
     .parameter "conn"
 
     .prologue
+    .line 271
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnection$FailResult;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 272
     iput-object p2, p0, Lcom/android/internal/telephony/DataConnection$FailResult;->cause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 273
     iput-object p3, p0, Lcom/android/internal/telephony/DataConnection$FailResult;->connection:Ljava/lang/Object;
 
+    .line 274
     return-void
 .end method
 
@@ -47,6 +51,7 @@
     .locals 1
 
     .prologue
+    .line 281
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$FailResult;->connection:Ljava/lang/Object;
 
     return-object v0
@@ -56,6 +61,7 @@
     .locals 1
 
     .prologue
+    .line 277
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$FailResult;->cause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
     return-object v0

@@ -26,12 +26,16 @@
     .parameter "rs"
 
     .prologue
+    .line 191
     iput-object p1, p0, Landroid/renderscript/Allocation$Adapter2D;->this$0:Landroid/renderscript/Allocation;
 
+    .line 192
     invoke-direct {p0, p3}, Landroid/renderscript/BaseObj;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 193
     iput p2, p0, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 194
     return-void
 .end method
 
@@ -42,16 +46,19 @@
     .parameter "d"
 
     .prologue
+    .line 207
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 208
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
 
     invoke-virtual {v0, v1, p1}, Landroid/renderscript/RenderScript;->nAdapter2DData(I[F)V
 
+    .line 209
     return-void
 .end method
 
@@ -60,16 +67,19 @@
     .parameter "d"
 
     .prologue
+    .line 202
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 203
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
 
     invoke-virtual {v0, v1, p1}, Landroid/renderscript/RenderScript;->nAdapter2DData(I[I)V
 
+    .line 204
     return-void
 .end method
 
@@ -77,6 +87,7 @@
     .locals 0
 
     .prologue
+    .line 190
     invoke-super {p0}, Landroid/renderscript/BaseObj;->destroy()V
 
     return-void
@@ -86,6 +97,7 @@
     .locals 1
 
     .prologue
+    .line 190
     invoke-super {p0}, Landroid/renderscript/BaseObj;->getID()I
 
     move-result v0
@@ -99,10 +111,12 @@
     .parameter "value"
 
     .prologue
+    .line 197
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 198
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
@@ -111,6 +125,7 @@
 
     invoke-virtual {v0, v1, v2, p2}, Landroid/renderscript/RenderScript;->nAdapter2DSetConstraint(III)V
 
+    .line 199
     return-void
 .end method
 
@@ -125,6 +140,7 @@
     .end annotation
 
     .prologue
+    .line 190
     invoke-super {p0, p1}, Landroid/renderscript/BaseObj;->setName(Ljava/lang/String;)V
 
     return-void
@@ -139,10 +155,12 @@
     .parameter "d"
 
     .prologue
+    .line 217
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 218
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
@@ -159,6 +177,7 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/renderscript/RenderScript;->nAdapter2DSubData(IIIII[F)V
 
+    .line 219
     return-void
 .end method
 
@@ -171,10 +190,12 @@
     .parameter "d"
 
     .prologue
+    .line 212
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/RenderScript;->validate()V
 
+    .line 213
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget v1, p0, Landroid/renderscript/BaseObj;->mID:I
@@ -191,5 +212,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/renderscript/RenderScript;->nAdapter2DSubData(IIIII[I)V
 
+    .line 214
     return-void
 .end method

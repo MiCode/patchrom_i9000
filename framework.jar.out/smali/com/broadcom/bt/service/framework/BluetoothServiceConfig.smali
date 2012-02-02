@@ -50,8 +50,10 @@
 
     const/4 v3, 0x0
 
+    .line 69
     sput-boolean v3, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->IS_STANDALONE_PROCESS:Z
 
+    .line 77
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "bluetooth_bpp_service"
@@ -120,20 +122,24 @@
 
     sput-object v0, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->SERVICES:[Ljava/lang/String;
 
+    .line 99
     new-array v0, v4, [Z
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->SERVICES_AVAILABLE:[Z
 
+    .line 124
     new-array v0, v4, [Z
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->SERVICES_STARTUP_ENABLED:[Z
 
+    .line 185
     sput-boolean v3, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->dualhf_enabled:Z
 
+    .line 190
     const-string v0, "com.brcm.bt.dualhf"
 
     invoke-static {v0, v3}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
@@ -142,8 +148,10 @@
 
     sput-boolean v0, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->dualhf_enabled:Z
 
+    .line 191
     return-void
 
+    .line 99
     nop
 
     :array_0
@@ -161,6 +169,7 @@
         0x0t
     .end array-data
 
+    .line 124
     :array_1
     .array-data 0x1
         0x1t
@@ -181,6 +190,7 @@
     .locals 0
 
     .prologue
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -190,18 +200,20 @@
     .locals 3
 
     .prologue
-    const-string v1, "service.brcm.bt.secure_mode"
+    .line 286
+    const-string/jumbo v1, "service.brcm.bt.secure_mode"
 
-    const-string v2, "property not found"
+    const-string/jumbo v2, "property not found"
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 288
     .local v0, mSecureModeProperty:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    const-string v1, "true"
+    const-string/jumbo v1, "true"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -224,6 +236,7 @@
     .locals 1
 
     .prologue
+    .line 216
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
@@ -246,8 +259,10 @@
     .parameter "ctx"
 
     .prologue
+    .line 260
     if-eqz p0, :cond_0
 
+    .line 273
     :cond_0
     const/4 v0, 0x1
 
@@ -266,6 +281,7 @@
 
     const-string v7, "BluetoothServiceConfig"
 
+    .line 227
     if-eqz p0, :cond_1
 
     if-eqz p1, :cond_1
@@ -276,10 +292,12 @@
 
     if-eqz v3, :cond_1
 
+    .line 229
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
+    .line 232
     .local v0, cr:Landroid/content/ContentResolver;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -303,6 +321,7 @@
 
     move-result v1
 
+    .line 234
     .local v1, result_bt:I
     const-string v3, "BluetoothServiceConfig"
 
@@ -326,6 +345,7 @@
 
     invoke-static {v7, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 237
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -348,6 +368,7 @@
 
     move-result v2
 
+    .line 239
     .local v2, result_fm:I
     const-string v3, "BluetoothServiceConfig"
 
@@ -371,6 +392,7 @@
 
     invoke-static {v7, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 241
     if-eq v1, v6, :cond_0
 
     if-ne v2, v6, :cond_1
@@ -378,6 +400,7 @@
     :cond_0
     move v3, v6
 
+    .line 251
     .end local v0           #cr:Landroid/content/ContentResolver;
     .end local v1           #result_bt:I
     .end local v2           #result_fm:I
@@ -395,6 +418,7 @@
     .parameter "svcName"
 
     .prologue
+    .line 201
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -405,6 +429,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 202
     sget-object v1, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->SERVICES:[Ljava/lang/String;
 
     aget-object v1, v1, v0
@@ -415,18 +440,22 @@
 
     if-eqz v1, :cond_0
 
+    .line 203
     sget-object v1, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->SERVICES_AVAILABLE:[Z
 
     aget-boolean v1, v1, v0
 
+    .line 206
     :goto_1
     return v1
 
+    .line 201
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 206
     :cond_1
     const/4 v1, 0x0
 
@@ -437,7 +466,8 @@
     .locals 3
 
     .prologue
-    const-string v1, "service.brcm.bt.soft_onoff"
+    .line 277
+    const-string/jumbo v1, "service.brcm.bt.soft_onoff"
 
     const-string v2, "0"
 
@@ -445,6 +475,7 @@
 
     move-result-object v0
 
+    .line 279
     .local v0, softOnOff:Ljava/lang/String;
     const-string v1, "1"
 
@@ -459,13 +490,14 @@
     .locals 4
 
     .prologue
+    .line 293
     sget-boolean v1, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->IS_STANDALONE_PROCESS:Z
 
     if-nez v1, :cond_0
 
     const-string v1, "1"
 
-    const-string v2, "service.brcm.bt.is_sta"
+    const-string/jumbo v2, "service.brcm.bt.is_sta"
 
     const-string v3, "0"
 
@@ -484,10 +516,12 @@
 
     move v0, v1
 
+    .line 295
     .local v0, isStandalone:Z
     :goto_0
     return v0
 
+    .line 293
     .end local v0           #isStandalone:Z
     :cond_1
     const/4 v1, 0x0

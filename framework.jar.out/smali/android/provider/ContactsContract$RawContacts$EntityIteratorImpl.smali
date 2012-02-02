@@ -23,6 +23,7 @@
     .locals 3
 
     .prologue
+    .line 1790
     const/16 v0, 0x13
 
     new-array v0, v0, [Ljava/lang/String;
@@ -151,8 +152,10 @@
     .parameter "cursor"
 
     .prologue
+    .line 1812
     invoke-direct {p0, p1}, Landroid/content/CursorEntityIterator;-><init>(Landroid/database/Cursor;)V
 
+    .line 1813
     return-void
 .end method
 
@@ -259,15 +262,18 @@
 
     if-eqz v11, :cond_1
 
+    .line 1895
     :goto_0
     return-object v3
 
+    .line 1851
     :cond_1
     new-instance v4, Landroid/content/ContentValues;
 
     .end local v4           #cv:Landroid/content/ContentValues;
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
+    .line 1852
     .restart local v4       #cv:Landroid/content/ContentValues;
     const-string v11, "_id"
 
@@ -329,11 +335,13 @@
 
     aget-object v7, v0, v6
 
+    .line 1868
     .local v7, key:Ljava/lang/String;
     invoke-interface {p1, v7}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
+    .line 1869
     .local v1, columnIndex:I
     invoke-interface {p1, v1}, Landroid/database/Cursor;->isNull(I)Z
 
@@ -341,11 +349,13 @@
 
     if-eqz v11, :cond_2
 
+    .line 1867
     :goto_2
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
+    .line 1873
     :cond_2
     :try_start_0
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -358,11 +368,13 @@
 
     goto :goto_2
 
+    .line 1874
     :catch_0
     move-exception v11
 
     move-object v5, v11
 
+    .line 1875
     .local v5, e:Landroid/database/sqlite/SQLiteException;
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getBlob(I)[B
 
@@ -372,6 +384,7 @@
 
     goto :goto_2
 
+    .line 1892
     .end local v1           #columnIndex:I
     .end local v5           #e:Landroid/database/sqlite/SQLiteException;
     .end local v7           #key:Ljava/lang/String;
@@ -380,6 +393,7 @@
 
     invoke-virtual {v3, v11, v4}, Landroid/content/Entity;->addSubValue(Landroid/net/Uri;Landroid/content/ContentValues;)V
 
+    .line 1893
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v11

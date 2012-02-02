@@ -29,6 +29,7 @@
     .parameter
 
     .prologue
+    .line 351
     iput-object p1, p0, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;->this$0:Landroid/widget/RadioGroup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "x1"
 
     .prologue
+    .line 351
     invoke-direct {p0, p1}, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;-><init>(Landroid/widget/RadioGroup;)V
 
     return-void
@@ -53,6 +55,7 @@
     .parameter "x1"
 
     .prologue
+    .line 351
     iput-object p1, p0, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;->mOnHierarchyChangeListener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     return-object p1
@@ -66,6 +69,7 @@
     .parameter "child"
 
     .prologue
+    .line 359
     iget-object v2, p0, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;->this$0:Landroid/widget/RadioGroup;
 
     if-ne p1, v2, :cond_1
@@ -74,21 +78,26 @@
 
     if-eqz v2, :cond_1
 
+    .line 360
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
     move-result v1
 
+    .line 362
     .local v1, id:I
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_0
 
+    .line 363
     invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
+    .line 364
     invoke-virtual {p2, v1}, Landroid/view/View;->setId(I)V
 
+    .line 366
     :cond_0
     move-object v0, p2
 
@@ -105,16 +114,19 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/RadioButton;->setOnCheckedChangeWidgetListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
+    .line 370
     .end local v1           #id:I
     :cond_1
     iget-object v2, p0, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;->mOnHierarchyChangeListener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     if-eqz v2, :cond_2
 
+    .line 371
     iget-object v2, p0, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;->mOnHierarchyChangeListener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     invoke-interface {v2, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
 
+    .line 373
     :cond_2
     return-void
 .end method
@@ -125,6 +137,7 @@
     .parameter "child"
 
     .prologue
+    .line 379
     iget-object v1, p0, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;->this$0:Landroid/widget/RadioGroup;
 
     if-ne p1, v1, :cond_0
@@ -133,6 +146,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 380
     move-object v0, p2
 
     check-cast v0, Landroid/widget/RadioButton;
@@ -143,15 +157,18 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setOnCheckedChangeWidgetListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
+    .line 383
     :cond_0
     iget-object v1, p0, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;->mOnHierarchyChangeListener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     if-eqz v1, :cond_1
 
+    .line 384
     iget-object v1, p0, Landroid/widget/RadioGroup$PassThroughHierarchyChangeListener;->mOnHierarchyChangeListener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     invoke-interface {v1, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
 
+    .line 386
     :cond_1
     return-void
 .end method

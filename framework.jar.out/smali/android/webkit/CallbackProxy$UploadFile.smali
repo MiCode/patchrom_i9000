@@ -39,6 +39,7 @@
     .parameter
 
     .prologue
+    .line 1477
     iput-object p1, p0, Landroid/webkit/CallbackProxy$UploadFile;->this$0:Landroid/webkit/CallbackProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,6 +53,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1477
     invoke-direct {p0, p1}, Landroid/webkit/CallbackProxy$UploadFile;-><init>(Landroid/webkit/CallbackProxy;)V
 
     return-void
@@ -63,6 +65,7 @@
     .locals 1
 
     .prologue
+    .line 1486
     iget-object v0, p0, Landroid/webkit/CallbackProxy$UploadFile;->mValue:Landroid/net/Uri;
 
     return-object v0
@@ -73,21 +76,27 @@
     .parameter "value"
 
     .prologue
+    .line 1480
     iput-object p1, p0, Landroid/webkit/CallbackProxy$UploadFile;->mValue:Landroid/net/Uri;
 
+    .line 1481
     iget-object v0, p0, Landroid/webkit/CallbackProxy$UploadFile;->this$0:Landroid/webkit/CallbackProxy;
 
     monitor-enter v0
 
+    .line 1482
     :try_start_0
     iget-object v1, p0, Landroid/webkit/CallbackProxy$UploadFile;->this$0:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
+    .line 1483
     monitor-exit v0
 
+    .line 1484
     return-void
 
+    .line 1483
     :catchall_0
     move-exception v1
 
@@ -103,6 +112,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1477
     check-cast p1, Landroid/net/Uri;
 
     .end local p1

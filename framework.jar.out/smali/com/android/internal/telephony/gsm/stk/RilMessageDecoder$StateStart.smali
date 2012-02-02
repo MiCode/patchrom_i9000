@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 101
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder;
 
     invoke-direct {p0}, Landroid/os/HandlerState;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 101
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder$StateStart;-><init>(Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder;)V
 
     return-void
@@ -49,12 +51,14 @@
     .parameter "msg"
 
     .prologue
+    .line 103
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
+    .line 104
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -68,6 +72,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 105
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder;
 
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder;
@@ -79,10 +84,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gsm/stk/RilMessageDecoder;->transitionTo(Landroid/os/HandlerState;)V
 
+    .line 111
     :cond_0
     :goto_0
     return-void
 
+    .line 108
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 

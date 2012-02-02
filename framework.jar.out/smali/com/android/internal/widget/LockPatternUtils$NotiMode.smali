@@ -44,6 +44,7 @@
 
     const/4 v2, 0x0
 
+    .line 143
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$NotiMode;
 
     const-string v1, "MissedCall"
@@ -52,6 +53,7 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$NotiMode;->MissedCall:Lcom/android/internal/widget/LockPatternUtils$NotiMode;
 
+    .line 144
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$NotiMode;
 
     const-string v1, "MissedMsg"
@@ -60,6 +62,7 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$NotiMode;->MissedMsg:Lcom/android/internal/widget/LockPatternUtils$NotiMode;
 
+    .line 145
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$NotiMode;
 
     const-string v1, "MissedEMail"
@@ -68,6 +71,7 @@
 
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils$NotiMode;->MissedEMail:Lcom/android/internal/widget/LockPatternUtils$NotiMode;
 
+    .line 142
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/widget/LockPatternUtils$NotiMode;
@@ -100,6 +104,7 @@
     .end annotation
 
     .prologue
+    .line 142
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,6 +115,7 @@
     .parameter "name"
 
     .prologue
+    .line 142
     const-class v0, Lcom/android/internal/widget/LockPatternUtils$NotiMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,6 +132,7 @@
     .locals 1
 
     .prologue
+    .line 142
     sget-object v0, Lcom/android/internal/widget/LockPatternUtils$NotiMode;->$VALUES:[Lcom/android/internal/widget/LockPatternUtils$NotiMode;
 
     invoke-virtual {v0}, [Lcom/android/internal/widget/LockPatternUtils$NotiMode;->clone()Ljava/lang/Object;

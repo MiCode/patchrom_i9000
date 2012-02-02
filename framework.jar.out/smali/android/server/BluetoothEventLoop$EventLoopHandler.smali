@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 97
     iput-object p1, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 97
     invoke-direct {p0, p1}, Landroid/server/BluetoothEventLoop$EventLoopHandler;-><init>(Landroid/server/BluetoothEventLoop;)V
 
     return-void
@@ -53,21 +55,26 @@
 
     const/4 v6, 0x1
 
+    .line 100
     const/4 v1, 0x0
 
+    .line 101
     .local v1, address:Ljava/lang/String;
     const/4 v3, 0x0
 
+    .line 102
     .local v3, objs:[Ljava/lang/Object;
     iget v4, p1, Landroid/os/Message;->what:I
 
     sparse-switch v4, :sswitch_data_0
 
+    .line 147
     .end local p0
     :cond_0
     :goto_0
     return-void
 
+    .line 104
     .restart local p0
     :sswitch_0
     iget-object v4, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
@@ -81,15 +88,18 @@
 
     goto :goto_0
 
+    .line 107
     :sswitch_1
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .end local v1           #address:Ljava/lang/String;
     check-cast v1, Ljava/lang/String;
 
+    .line 108
     .restart local v1       #address:Ljava/lang/String;
     if-eqz v1, :cond_0
 
+    .line 109
     iget-object v4, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
 
     #getter for: Landroid/server/BluetoothEventLoop;->mBluetoothService:Landroid/server/BluetoothService;
@@ -101,6 +111,7 @@
 
     goto :goto_0
 
+    .line 115
     :sswitch_2
     iget-object v4, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
 
@@ -115,15 +126,18 @@
 
     move-result-object v2
 
+    .line 116
     .local v2, devices:[Ljava/lang/String;
     array-length v4, v2
 
     if-eqz v4, :cond_0
 
+    .line 118
     array-length v4, v2
 
     if-le v4, v6, :cond_1
 
+    .line 119
     const-string v4, "BluetoothEventLoop"
 
     const-string v5, " There is more than one device in the Bonding State"
@@ -132,9 +146,11 @@
 
     goto :goto_0
 
+    .line 122
     :cond_1
     aget-object v1, v2, v7
 
+    .line 123
     iget-object v4, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
 
     #getter for: Landroid/server/BluetoothEventLoop;->mBluetoothService:Landroid/server/BluetoothService;
@@ -150,6 +166,7 @@
 
     goto :goto_0
 
+    .line 129
     .end local v2           #devices:[Ljava/lang/String;
     :sswitch_3
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -162,6 +179,7 @@
 
     move-object v3, v0
 
+    .line 130
     iget-object v5, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
 
     aget-object p0, v3, v7
@@ -180,6 +198,7 @@
 
     goto :goto_0
 
+    .line 133
     .restart local p0
     :sswitch_4
     iget-object v4, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
@@ -196,6 +215,7 @@
 
     goto :goto_0
 
+    .line 136
     .restart local p0
     :sswitch_5
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -208,6 +228,7 @@
 
     move-object v3, v0
 
+    .line 137
     iget-object v5, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
 
     aget-object p0, v3, v7
@@ -226,6 +247,7 @@
 
     goto :goto_0
 
+    .line 140
     .restart local p0
     :sswitch_6
     iget-object v4, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
@@ -240,6 +262,7 @@
 
     goto/16 :goto_0
 
+    .line 143
     .restart local p0
     :sswitch_7
     iget-object v4, p0, Landroid/server/BluetoothEventLoop$EventLoopHandler;->this$0:Landroid/server/BluetoothEventLoop;
@@ -254,6 +277,7 @@
 
     goto/16 :goto_0
 
+    .line 102
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0

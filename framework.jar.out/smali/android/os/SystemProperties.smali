@@ -14,6 +14,7 @@
     .locals 0
 
     .prologue
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,6 +25,7 @@
     .parameter "key"
 
     .prologue
+    .line 44
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -32,6 +34,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 45
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "key.length > 31"
@@ -40,6 +43,7 @@
 
     throw v0
 
+    .line 47
     :cond_0
     invoke-static {p0}, Landroid/os/SystemProperties;->native_get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -54,6 +58,7 @@
     .parameter "def"
 
     .prologue
+    .line 56
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -62,6 +67,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 57
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "key.length > 31"
@@ -70,6 +76,7 @@
 
     throw v0
 
+    .line 59
     :cond_0
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->native_get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -84,6 +91,7 @@
     .parameter "def"
 
     .prologue
+    .line 106
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -92,6 +100,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 107
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "key.length > 31"
@@ -100,6 +109,7 @@
 
     throw v0
 
+    .line 109
     :cond_0
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->native_get_boolean(Ljava/lang/String;Z)Z
 
@@ -114,6 +124,7 @@
     .parameter "def"
 
     .prologue
+    .line 71
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -122,6 +133,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 72
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "key.length > 31"
@@ -130,6 +142,7 @@
 
     throw v0
 
+    .line 74
     :cond_0
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->native_get_int(Ljava/lang/String;I)I
 
@@ -144,6 +157,7 @@
     .parameter "def"
 
     .prologue
+    .line 86
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -152,6 +166,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 87
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "key.length > 31"
@@ -160,6 +175,7 @@
 
     throw v0
 
+    .line 89
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/os/SystemProperties;->native_get_long(Ljava/lang/String;J)J
 
@@ -192,6 +208,7 @@
     .parameter "val"
 
     .prologue
+    .line 118
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -200,6 +217,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 119
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "key.length > 31"
@@ -208,6 +226,7 @@
 
     throw v0
 
+    .line 121
     :cond_0
     if-eqz p1, :cond_1
 
@@ -219,16 +238,19 @@
 
     if-le v0, v1, :cond_1
 
+    .line 122
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "val.length > 91"
+    const-string/jumbo v1, "val.length > 91"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 125
     :cond_1
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->native_set(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 126
     return-void
 .end method

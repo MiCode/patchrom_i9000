@@ -29,6 +29,7 @@
     .locals 3
 
     .prologue
+    .line 303
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -66,6 +67,7 @@
     .locals 0
 
     .prologue
+    .line 300
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,8 +80,10 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 319
     sparse-switch p0, :sswitch_data_0
 
+    .line 323
     sget-object v0, Lcom/broadcom/bt/service/bpp/Bpp$QUALITY;->prettyText:[Ljava/lang/String;
 
     sget-object v1, Lcom/broadcom/bt/service/bpp/Bpp$QUALITY;->prettyText:[Ljava/lang/String;
@@ -93,6 +97,7 @@
     :goto_0
     return-object v0
 
+    .line 320
     :sswitch_0
     sget-object v0, Lcom/broadcom/bt/service/bpp/Bpp$QUALITY;->prettyText:[Ljava/lang/String;
 
@@ -102,6 +107,7 @@
 
     goto :goto_0
 
+    .line 321
     :sswitch_1
     sget-object v0, Lcom/broadcom/bt/service/bpp/Bpp$QUALITY;->prettyText:[Ljava/lang/String;
 
@@ -109,6 +115,7 @@
 
     goto :goto_0
 
+    .line 322
     :sswitch_2
     sget-object v0, Lcom/broadcom/bt/service/bpp/Bpp$QUALITY;->prettyText:[Ljava/lang/String;
 
@@ -118,6 +125,7 @@
 
     goto :goto_0
 
+    .line 319
     :sswitch_data_0
     .sparse-switch
         0x10 -> :sswitch_0

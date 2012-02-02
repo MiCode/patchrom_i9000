@@ -33,13 +33,18 @@
     .parameter "id"
 
     .prologue
+    .line 387
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 388
     iput-object p1, p0, Landroid/widget/AdapterView$AdapterContextMenuInfo;->targetView:Landroid/view/View;
 
+    .line 389
     iput p2, p0, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
+    .line 390
     iput-wide p3, p0, Landroid/widget/AdapterView$AdapterContextMenuInfo;->id:J
 
+    .line 391
     return-void
 .end method

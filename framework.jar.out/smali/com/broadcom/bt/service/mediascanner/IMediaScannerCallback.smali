@@ -32,12 +32,14 @@
     .locals 1
 
     .prologue
+    .line 28
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/broadcom/bt/service/mediascanner/IMediaScannerCallback;->mFilenames:Ljava/util/ArrayList;
 
+    .line 29
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V

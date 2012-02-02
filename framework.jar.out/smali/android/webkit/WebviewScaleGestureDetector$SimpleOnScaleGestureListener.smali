@@ -22,6 +22,7 @@
     .locals 0
 
     .prologue
+    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +35,7 @@
     .parameter "detector"
 
     .prologue
+    .line 104
     const/4 v0, 0x0
 
     return v0
@@ -44,6 +46,7 @@
     .parameter "detector"
 
     .prologue
+    .line 108
     const/4 v0, 0x1
 
     return v0
@@ -54,5 +57,6 @@
     .parameter "detector"
 
     .prologue
+    .line 113
     return-void
 .end method

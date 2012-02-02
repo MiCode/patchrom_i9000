@@ -50,20 +50,24 @@
     .parameter "rs"
 
     .prologue
+    .line 47
     invoke-direct {p0, p1}, Landroid/renderscript/Script$Builder;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 43
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/renderscript/ScriptC$Builder;->mIntDefines:Ljava/util/HashMap;
 
+    .line 44
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/renderscript/ScriptC$Builder;->mFloatDefines:Ljava/util/HashMap;
 
+    .line 48
     return-void
 .end method
 
@@ -72,6 +76,7 @@
     .parameter "b"
 
     .prologue
+    .line 94
     const-class v7, Landroid/renderscript/ScriptC$Builder;
 
     monitor-enter v7
@@ -81,8 +86,10 @@
 
     invoke-virtual {v5}, Landroid/renderscript/RenderScript;->nScriptCBegin()V
 
+    .line 95
     invoke-virtual {p0}, Landroid/renderscript/ScriptC$Builder;->transferCreate()V
 
+    .line 97
     iget-object v5, p0, Landroid/renderscript/ScriptC$Builder;->mIntDefines:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -107,6 +114,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 98
     .local v1, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     iget-object v8, p0, Landroid/renderscript/Script$Builder;->mRS:Landroid/renderscript/RenderScript;
 
@@ -132,6 +140,7 @@
 
     goto :goto_0
 
+    .line 94
     .end local v1           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v2           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -141,6 +150,7 @@
 
     throw v5
 
+    .line 100
     .restart local v2       #i$:Ljava/util/Iterator;
     :cond_0
     :try_start_1
@@ -167,6 +177,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 101
     .local v0, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Float;>;"
     iget-object v8, p0, Landroid/renderscript/Script$Builder;->mRS:Landroid/renderscript/RenderScript;
 
@@ -190,6 +201,7 @@
 
     goto :goto_1
 
+    .line 104
     .end local v0           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Float;>;"
     :cond_1
     iget-object v5, p0, Landroid/renderscript/Script$Builder;->mRS:Landroid/renderscript/RenderScript;
@@ -202,12 +214,14 @@
 
     invoke-virtual {v5, v6, v8, v9}, Landroid/renderscript/RenderScript;->nScriptCSetScript([BII)V
 
+    .line 106
     iget-object v5, p0, Landroid/renderscript/Script$Builder;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v5}, Landroid/renderscript/RenderScript;->nScriptCCreate()I
 
     move-result v3
 
+    .line 107
     .local v3, id:I
     new-instance v4, Landroid/renderscript/ScriptC;
 
@@ -215,11 +229,13 @@
 
     invoke-direct {v4, v3, v5}, Landroid/renderscript/ScriptC;-><init>(ILandroid/renderscript/RenderScript;)V
 
+    .line 108
     .local v4, obj:Landroid/renderscript/ScriptC;
     invoke-virtual {p0, v4}, Landroid/renderscript/ScriptC$Builder;->transferObject(Landroid/renderscript/Script;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 110
     monitor-exit v7
 
     return-object v4
@@ -233,6 +249,7 @@
     .parameter "value"
 
     .prologue
+    .line 118
     iget-object v0, p0, Landroid/renderscript/ScriptC$Builder;->mFloatDefines:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -241,6 +258,7 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 119
     return-void
 .end method
 
@@ -250,6 +268,7 @@
     .parameter "value"
 
     .prologue
+    .line 114
     iget-object v0, p0, Landroid/renderscript/ScriptC$Builder;->mIntDefines:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -258,6 +277,7 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 115
     return-void
 .end method
 
@@ -266,6 +286,7 @@
     .parameter "cl"
 
     .prologue
+    .line 126
     invoke-virtual {p1}, Ljava/lang/Class;->getFields()[Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -276,6 +297,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/renderscript/ScriptC$Builder;->addDefines([Ljava/lang/reflect/Field;ILjava/lang/Object;)V
 
+    .line 127
     return-void
 .end method
 
@@ -284,6 +306,7 @@
     .parameter "o"
 
     .prologue
+    .line 134
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -296,6 +319,7 @@
 
     invoke-virtual {p0, v0, v1, p1}, Landroid/renderscript/ScriptC$Builder;->addDefines([Ljava/lang/reflect/Field;ILjava/lang/Object;)V
 
+    .line 135
     return-void
 .end method
 
@@ -306,6 +330,7 @@
     .parameter "o"
 
     .prologue
+    .line 138
     move-object v0, p1
 
     .local v0, arr$:[Ljava/lang/reflect/Field;
@@ -320,6 +345,7 @@
 
     aget-object v2, v0, v3
 
+    .line 140
     .local v2, f:Ljava/lang/reflect/Field;
     :try_start_0
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getModifiers()I
@@ -330,15 +356,18 @@
 
     if-ne v6, p2, :cond_0
 
+    .line 141
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v5
 
+    .line 142
     .local v5, t:Ljava/lang/Class;
     sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-ne v5, v6, :cond_1
 
+    .line 143
     iget-object v6, p0, Landroid/renderscript/ScriptC$Builder;->mIntDefines:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
@@ -355,6 +384,7 @@
 
     invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 138
     .end local v5           #t:Ljava/lang/Class;
     :cond_0
     :goto_1
@@ -362,12 +392,14 @@
 
     goto :goto_0
 
+    .line 145
     .restart local v5       #t:Ljava/lang/Class;
     :cond_1
     sget-object v6, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     if-ne v5, v6, :cond_0
 
+    .line 146
     iget-object v6, p0, Landroid/renderscript/ScriptC$Builder;->mFloatDefines:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
@@ -388,12 +420,14 @@
 
     goto :goto_1
 
+    .line 149
     .end local v5           #t:Ljava/lang/Class;
     :catch_0
     move-exception v6
 
     move-object v1, v6
 
+    .line 151
     .local v1, ex:Ljava/lang/IllegalAccessException;
     const-string v6, "ScriptC"
 
@@ -423,6 +457,7 @@
 
     goto :goto_1
 
+    .line 154
     .end local v1           #ex:Ljava/lang/IllegalAccessException;
     .end local v2           #f:Ljava/lang/reflect/Field;
     :cond_2
@@ -433,6 +468,7 @@
     .locals 1
 
     .prologue
+    .line 157
     invoke-static {p0}, Landroid/renderscript/ScriptC$Builder;->internalCreate(Landroid/renderscript/ScriptC$Builder;)Landroid/renderscript/ScriptC;
 
     move-result-object v0
@@ -446,21 +482,26 @@
     .parameter "id"
 
     .prologue
+    .line 60
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
     move-result-object v1
 
+    .line 63
     .local v1, is:Ljava/io/InputStream;
     :try_start_0
     invoke-virtual {p0, v1}, Landroid/renderscript/ScriptC$Builder;->setScript(Ljava/io/InputStream;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 65
     :try_start_1
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
 
+    .line 70
     return-void
 
+    .line 65
     :catchall_0
     move-exception v2
 
@@ -470,11 +511,13 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 67
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 68
     .local v0, e:Ljava/io/IOException;
     new-instance v2, Landroid/content/res/Resources$NotFoundException;
 
@@ -495,57 +538,72 @@
     .prologue
     const/4 v6, 0x0
 
+    .line 73
     const/16 v5, 0x400
 
     new-array v0, v5, [B
 
+    .line 74
     .local v0, buf:[B
     const/4 v4, 0x0
 
+    .line 76
     .local v4, currentPos:I
     :goto_0
     array-length v5, v0
 
     sub-int v2, v5, v4
 
+    .line 77
     .local v2, bytesLeft:I
     if-nez v2, :cond_0
 
+    .line 78
     array-length v5, v0
 
     mul-int/lit8 v5, v5, 0x2
 
     new-array v1, v5, [B
 
+    .line 79
     .local v1, buf2:[B
     array-length v5, v0
 
     invoke-static {v0, v6, v1, v6, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 80
     move-object v0, v1
 
+    .line 81
     array-length v5, v0
 
     sub-int v2, v5, v4
 
+    .line 83
     .end local v1           #buf2:[B
     :cond_0
     invoke-virtual {p1, v0, v4, v2}, Ljava/io/InputStream;->read([BII)I
 
     move-result v3
 
+    .line 84
     .local v3, bytesRead:I
     if-gtz v3, :cond_1
 
+    .line 89
     iput-object v0, p0, Landroid/renderscript/ScriptC$Builder;->mProgram:[B
 
+    .line 90
     iput v4, p0, Landroid/renderscript/ScriptC$Builder;->mProgramLength:I
 
+    .line 91
     return-void
 
+    .line 87
     :cond_1
     add-int/2addr v4, v3
 
+    .line 88
     goto :goto_0
 .end method
 
@@ -554,6 +612,7 @@
     .parameter "s"
 
     .prologue
+    .line 52
     :try_start_0
     const-string v1, "UTF-8"
 
@@ -563,6 +622,7 @@
 
     iput-object v1, p0, Landroid/renderscript/ScriptC$Builder;->mProgram:[B
 
+    .line 53
     iget-object v1, p0, Landroid/renderscript/ScriptC$Builder;->mProgram:[B
 
     array-length v1, v1
@@ -571,13 +631,16 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 57
     return-void
 
+    .line 54
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 55
     .local v0, e:Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/RuntimeException;
 

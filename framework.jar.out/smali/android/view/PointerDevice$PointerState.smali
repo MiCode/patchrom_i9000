@@ -29,6 +29,7 @@
     .locals 0
 
     .prologue
+    .line 201
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,22 +42,27 @@
     .parameter "other"
 
     .prologue
+    .line 207
     iget v0, p1, Landroid/view/PointerDevice$PointerState;->x:I
 
     iput v0, p0, Landroid/view/PointerDevice$PointerState;->x:I
 
+    .line 208
     iget v0, p1, Landroid/view/PointerDevice$PointerState;->y:I
 
     iput v0, p0, Landroid/view/PointerDevice$PointerState;->y:I
 
+    .line 209
     iget v0, p1, Landroid/view/PointerDevice$PointerState;->id:I
 
     iput v0, p0, Landroid/view/PointerDevice$PointerState;->id:I
 
+    .line 210
     iget-boolean v0, p1, Landroid/view/PointerDevice$PointerState;->pressed:Z
 
     iput-boolean v0, p0, Landroid/view/PointerDevice$PointerState;->pressed:Z
 
+    .line 211
     return-void
 .end method
 
@@ -65,6 +71,7 @@
     .parameter "other"
 
     .prologue
+    .line 214
     iget v0, p0, Landroid/view/PointerDevice$PointerState;->x:I
 
     iget v1, p1, Landroid/view/PointerDevice$PointerState;->x:I

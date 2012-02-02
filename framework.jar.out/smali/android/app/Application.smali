@@ -11,10 +11,12 @@
     .locals 1
 
     .prologue
+    .line 42
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
+    .line 43
     return-void
 .end method
 
@@ -25,8 +27,10 @@
     .parameter "context"
 
     .prologue
+    .line 77
     invoke-virtual {p0, p1}, Landroid/app/Application;->attachBaseContext(Landroid/content/Context;)V
 
+    .line 78
     return-void
 .end method
 
@@ -35,6 +39,7 @@
     .parameter "newConfig"
 
     .prologue
+    .line 66
     return-void
 .end method
 
@@ -42,6 +47,7 @@
     .locals 0
 
     .prologue
+    .line 54
     return-void
 .end method
 
@@ -49,6 +55,7 @@
     .locals 0
 
     .prologue
+    .line 69
     return-void
 .end method
 
@@ -56,5 +63,6 @@
     .locals 0
 
     .prologue
+    .line 63
     return-void
 .end method

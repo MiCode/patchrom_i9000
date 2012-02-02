@@ -85,16 +85,20 @@
     .parameter "height"
 
     .prologue
+    .line 1414
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
+    .line 1380
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
+    .line 1415
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
+    .line 1416
     return-void
 .end method
 
@@ -105,14 +109,18 @@
     .parameter "weight"
 
     .prologue
+    .line 1429
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
+    .line 1380
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
+    .line 1430
     iput p3, p0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
+    .line 1431
     return-void
 .end method
 
@@ -124,16 +132,20 @@
     .prologue
     const/4 v3, -0x1
 
+    .line 1400
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 1380
     iput v3, p0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
+    .line 1401
     sget-object v1, Lcom/android/internal/R$styleable;->LinearLayout_Layout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
+    .line 1404
     .local v0, a:Landroid/content/res/TypedArray;
     const/4 v1, 0x3
 
@@ -145,6 +157,7 @@
 
     iput v1, p0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
+    .line 1405
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -153,8 +166,10 @@
 
     iput v1, p0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
+    .line 1407
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 1408
     return-void
 .end method
 
@@ -163,12 +178,15 @@
     .parameter "p"
 
     .prologue
+    .line 1437
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 1380
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
+    .line 1438
     return-void
 .end method
 
@@ -177,12 +195,15 @@
     .parameter "source"
 
     .prologue
+    .line 1444
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
+    .line 1380
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
+    .line 1445
     return-void
 .end method
 
@@ -193,6 +214,7 @@
     .parameter "output"
 
     .prologue
+    .line 1449
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,7 +267,7 @@
 
     move-result-object v0
 
-    const-string v1, "}"
+    const-string/jumbo v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

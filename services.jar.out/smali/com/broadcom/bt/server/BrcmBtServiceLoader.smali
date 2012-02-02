@@ -14,6 +14,7 @@
     .locals 0
 
     .prologue
+    .line 29
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
 
     const-string v5, "BrcmBtServiceLoader"
 
+    .line 35
     :try_start_0
     const-string v3, "BrcmBtServiceLoader"
 
@@ -36,10 +38,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 36
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
+    .line 37
     .local v1, pkgMgr:Landroid/content/pm/PackageManager;
     const-string v3, "com.broadcom.bt.app.system"
 
@@ -49,6 +53,7 @@
 
     move-result-object v0
 
+    .line 38
     .local v0, info:Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_0
 
@@ -62,31 +67,37 @@
 
     if-eqz v3, :cond_0
 
+    .line 39
     const-string v3, "BrcmBtServiceLoader"
 
     const-string v4, "********BT/Fm services configured to run in system process..."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 40
     const-string v3, "service.brcm.bt.is_sta"
 
     const-string v4, "0"
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 44
     const-string v3, "BrcmBtServiceLoader"
 
     const-string v4, "Soft On/Off enabled...Starting FM services..."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 45
     invoke-static {p0}, Lcom/broadcom/bt/service/fm/FmServiceManager;->init(Landroid/content/Context;)V
 
+    .line 55
     .end local v0           #info:Landroid/content/pm/ApplicationInfo;
     .end local v1           #pkgMgr:Landroid/content/pm/PackageManager;
     :goto_0
     return-void
 
+    .line 49
     .restart local v0       #info:Landroid/content/pm/ApplicationInfo;
     .restart local v1       #pkgMgr:Landroid/content/pm/PackageManager;
     :cond_0
@@ -96,6 +107,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 50
     const-string v3, "service.brcm.bt.is_sta"
 
     const-string v4, "1"
@@ -106,6 +118,7 @@
 
     goto :goto_0
 
+    .line 52
     .end local v0           #info:Landroid/content/pm/ApplicationInfo;
     .end local v1           #pkgMgr:Landroid/content/pm/PackageManager;
     :catch_0
@@ -113,6 +126,7 @@
 
     move-object v2, v3
 
+    .line 53
     .local v2, t:Ljava/lang/Throwable;
     const-string v3, "BrcmBtServiceLoader"
 

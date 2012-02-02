@@ -28,12 +28,16 @@
     .parameter "looper"
 
     .prologue
+    .line 395
     iput-object p1, p0, Landroid/media/JetPlayer$NativeEventHandler;->this$0:Landroid/media/JetPlayer;
 
+    .line 396
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 397
     iput-object p2, p0, Landroid/media/JetPlayer$NativeEventHandler;->mJet:Landroid/media/JetPlayer;
 
+    .line 398
     return-void
 .end method
 
@@ -44,8 +48,10 @@
     .parameter "msg"
 
     .prologue
+    .line 402
     const/4 v7, 0x0
 
+    .line 403
     .local v7, listener:Landroid/media/JetPlayer$OnJetEventListener;
     iget-object v0, p0, Landroid/media/JetPlayer$NativeEventHandler;->this$0:Landroid/media/JetPlayer;
 
@@ -56,6 +62,7 @@
 
     monitor-enter v0
 
+    .line 404
     :try_start_0
     iget-object v1, p0, Landroid/media/JetPlayer$NativeEventHandler;->mJet:Landroid/media/JetPlayer;
 
@@ -64,14 +71,17 @@
 
     move-result-object v7
 
+    .line 405
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 406
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 438
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,10 +105,12 @@
     #calls: Landroid/media/JetPlayer;->loge(Ljava/lang/String;)V
     invoke-static {v0}, Landroid/media/JetPlayer;->access$200(Ljava/lang/String;)V
 
+    .line 439
     :cond_0
     :goto_0
     return-void
 
+    .line 405
     :catchall_0
     move-exception v1
 
@@ -109,9 +121,11 @@
 
     throw v1
 
+    .line 408
     :pswitch_0
     if-eqz v7, :cond_0
 
+    .line 411
     iget-object v0, p0, Landroid/media/JetPlayer$NativeEventHandler;->this$0:Landroid/media/JetPlayer;
 
     #getter for: Landroid/media/JetPlayer;->mJetEventListener:Landroid/media/JetPlayer$OnJetEventListener;
@@ -171,9 +185,11 @@
 
     goto :goto_0
 
+    .line 423
     :pswitch_1
     if-eqz v7, :cond_0
 
+    .line 424
     iget-object v0, p0, Landroid/media/JetPlayer$NativeEventHandler;->mJet:Landroid/media/JetPlayer;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -184,9 +200,11 @@
 
     goto :goto_0
 
+    .line 428
     :pswitch_2
     if-eqz v7, :cond_0
 
+    .line 429
     iget-object v0, p0, Landroid/media/JetPlayer$NativeEventHandler;->mJet:Landroid/media/JetPlayer;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -195,9 +213,11 @@
 
     goto :goto_0
 
+    .line 433
     :pswitch_3
     if-eqz v7, :cond_0
 
+    .line 434
     iget-object v0, p0, Landroid/media/JetPlayer$NativeEventHandler;->mJet:Landroid/media/JetPlayer;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -206,6 +226,7 @@
 
     goto :goto_0
 
+    .line 406
     nop
 
     :pswitch_data_0

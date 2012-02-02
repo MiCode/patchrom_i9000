@@ -12,6 +12,7 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,9 +32,11 @@
     .end annotation
 
     .prologue
+    .line 28
     iget v0, p0, Landroid/graphics/ColorFilter;->native_instance:I
 
     invoke-static {v0}, Landroid/graphics/ColorFilter;->finalizer(I)V
 
+    .line 29
     return-void
 .end method

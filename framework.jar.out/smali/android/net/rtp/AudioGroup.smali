@@ -36,10 +36,12 @@
     .locals 1
 
     .prologue
-    const-string v0, "rtp_jni"
+    .line 86
+    const-string/jumbo v0, "rtp_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
+    .line 87
     return-void
 .end method
 
@@ -47,18 +49,22 @@
     .locals 1
 
     .prologue
+    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 82
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/rtp/AudioGroup;->mMode:I
 
+    .line 93
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/net/rtp/AudioGroup;->mStreams:Ljava/util/Map;
 
+    .line 94
     return-void
 .end method
 
@@ -77,6 +83,7 @@
     .parameter "dtmfType"
 
     .prologue
+    .line 117
     monitor-enter p0
 
     :try_start_0
@@ -90,11 +97,13 @@
 
     if-nez v0, :cond_0
 
+    .line 119
     :try_start_1
     invoke-virtual {p1}, Landroid/net/rtp/AudioStream;->dup()I
 
     move-result v2
 
+    .line 120
     .local v2, socket:I
     const-string v0, "%d %s %s"
 
@@ -128,6 +137,7 @@
 
     move-result-object v5
 
+    .line 122
     .local v5, codecSpec:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/net/rtp/AudioStream;->getMode()I
 
@@ -151,6 +161,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/net/rtp/AudioGroup;->add(IILjava/lang/String;ILjava/lang/String;I)V
 
+    .line 125
     iget-object v0, p0, Landroid/net/rtp/AudioGroup;->mStreams:Ljava/util/Map;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -162,6 +173,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 130
     .end local v2           #socket:I
     .end local v5           #codecSpec:Ljava/lang/String;
     :cond_0
@@ -169,11 +181,13 @@
 
     return-void
 
+    .line 126
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
+    .line 127
     .local v7, e:Ljava/lang/NullPointerException;
     :try_start_2
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -184,6 +198,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 117
     .end local v7           #e:Ljava/lang/NullPointerException;
     :catchall_0
     move-exception v0
@@ -197,6 +212,7 @@
     .locals 1
 
     .prologue
+    .line 153
     monitor-enter p0
 
     const/4 v0, -0x1
@@ -206,10 +222,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 154
     monitor-exit p0
 
     return-void
 
+    .line 153
     :catchall_0
     move-exception v0
 
@@ -227,10 +245,13 @@
     .end annotation
 
     .prologue
+    .line 158
     invoke-virtual {p0}, Landroid/net/rtp/AudioGroup;->clear()V
 
+    .line 159
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 160
     return-void
 .end method
 
@@ -238,6 +259,7 @@
     .locals 1
 
     .prologue
+    .line 100
     iget v0, p0, Landroid/net/rtp/AudioGroup;->mMode:I
 
     return v0
@@ -248,6 +270,7 @@
     .parameter "stream"
 
     .prologue
+    .line 135
     monitor-enter p0
 
     :try_start_0
@@ -259,9 +282,11 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    .line 136
     .local v0, socket:Ljava/lang/Integer;
     if-eqz v0, :cond_0
 
+    .line 137
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -270,11 +295,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 139
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 135
     .end local v0           #socket:Ljava/lang/Integer;
     :catchall_0
     move-exception v1

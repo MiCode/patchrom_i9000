@@ -19,10 +19,13 @@
     .parameter "rs"
 
     .prologue
+    .line 50
     invoke-direct {p0, p2}, Landroid/renderscript/BaseObj;-><init>(Landroid/renderscript/RenderScript;)V
 
+    .line 51
     iput p1, p0, Landroid/renderscript/BaseObj;->mID:I
 
+    .line 52
     return-void
 .end method
 
@@ -32,6 +35,7 @@
     .locals 0
 
     .prologue
+    .line 35
     invoke-super {p0}, Landroid/renderscript/BaseObj;->destroy()V
 
     return-void
@@ -41,6 +45,7 @@
     .locals 1
 
     .prologue
+    .line 35
     invoke-super {p0}, Landroid/renderscript/BaseObj;->getID()I
 
     move-result v0
@@ -59,6 +64,7 @@
     .end annotation
 
     .prologue
+    .line 35
     invoke-super {p0, p1}, Landroid/renderscript/BaseObj;->setName(Ljava/lang/String;)V
 
     return-void

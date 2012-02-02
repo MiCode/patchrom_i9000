@@ -27,12 +27,15 @@
     .parameter "menuType"
 
     .prologue
+    .line 1131
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
+    .line 1132
     iput p2, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuAdapter;->mMenuType:I
 
+    .line 1133
     return-void
 .end method
 
@@ -42,6 +45,7 @@
     .locals 2
 
     .prologue
+    .line 1144
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
@@ -66,6 +70,7 @@
     .parameter "position"
 
     .prologue
+    .line 1148
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
@@ -93,6 +98,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1128
     invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder$MenuAdapter;->getItem(I)Lcom/android/internal/view/menu/MenuItemImpl;
 
     move-result-object v0
@@ -105,6 +111,7 @@
     .parameter "position"
 
     .prologue
+    .line 1154
     int-to-long v0, p1
 
     return-wide v0
@@ -114,12 +121,14 @@
     .locals 2
 
     .prologue
+    .line 1136
     iget v0, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuAdapter;->mMenuType:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 1137
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuBuilder$MenuAdapter;->this$0:Lcom/android/internal/view/menu/MenuBuilder;
 
     #calls: Lcom/android/internal/view/menu/MenuBuilder;->getNumIconMenuItemsShown()I
@@ -127,6 +136,7 @@
 
     move-result v0
 
+    .line 1139
     :goto_0
     return v0
 
@@ -143,6 +153,7 @@
     .parameter "parent"
 
     .prologue
+    .line 1158
     invoke-virtual {p0, p1}, Lcom/android/internal/view/menu/MenuBuilder$MenuAdapter;->getItem(I)Lcom/android/internal/view/menu/MenuItemImpl;
 
     move-result-object v0

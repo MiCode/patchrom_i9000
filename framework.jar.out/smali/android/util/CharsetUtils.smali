@@ -12,8 +12,10 @@
     .locals 0
 
     .prologue
+    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 55
     return-void
 .end method
 
@@ -28,6 +30,7 @@
     .end annotation
 
     .prologue
+    .line 140
     invoke-static {}, Landroid/util/CharsetUtils;->getDefaultVendor()Ljava/lang/String;
 
     move-result-object v0
@@ -51,10 +54,12 @@
     .end annotation
 
     .prologue
+    .line 117
     invoke-static {p0, p1}, Landroid/util/CharsetUtils;->nameForVendor(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 118
     invoke-static {p0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -66,6 +71,7 @@
     .locals 1
 
     .prologue
+    .line 172
     sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     return-object v0
@@ -78,18 +84,22 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 153
     if-nez p0, :cond_0
 
     move v1, v2
 
+    .line 161
     :goto_0
     return v1
 
+    .line 156
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 157
     .local v0, length:I
     const/4 v1, 0x4
 
@@ -101,10 +111,12 @@
 
     move v1, v2
 
+    .line 158
     goto :goto_0
 
+    .line 161
     :cond_1
-    const-string v1, "shift_jis"
+    const-string/jumbo v1, "shift_jis"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -112,7 +124,7 @@
 
     if-nez v1, :cond_2
 
-    const-string v1, "shift-jis"
+    const-string/jumbo v1, "shift-jis"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -120,7 +132,7 @@
 
     if-nez v1, :cond_2
 
-    const-string v1, "sjis"
+    const-string/jumbo v1, "sjis"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -144,6 +156,7 @@
     .parameter "charsetName"
 
     .prologue
+    .line 93
     invoke-static {}, Landroid/util/CharsetUtils;->getDefaultVendor()Ljava/lang/String;
 
     move-result-object v0
@@ -161,6 +174,7 @@
     .parameter "vendor"
 
     .prologue
+    .line 72
     const-string v0, "docomo"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -175,8 +189,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 74
     const-string v0, "docomo-shift_jis-2007"
 
+    .line 77
     :goto_0
     return-object v0
 

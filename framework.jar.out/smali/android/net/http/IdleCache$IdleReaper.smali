@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 144
     iput-object p1, p0, Landroid/net/http/IdleCache$IdleReaper;->this$0:Landroid/net/http/IdleCache;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,6 +38,7 @@
     .parameter "x1"
 
     .prologue
+    .line 144
     invoke-direct {p0, p1}, Landroid/net/http/IdleCache$IdleReaper;-><init>(Landroid/net/http/IdleCache;)V
 
     return-void
@@ -48,26 +50,32 @@
     .locals 5
 
     .prologue
+    .line 147
     const/4 v0, 0x0
 
+    .line 149
     .local v0, check:I
     const-string v1, "IdleReaper"
 
     invoke-virtual {p0, v1}, Landroid/net/http/IdleCache$IdleReaper;->setName(Ljava/lang/String;)V
 
+    .line 150
     const/16 v1, 0xa
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
+    .line 152
     iget-object v1, p0, Landroid/net/http/IdleCache$IdleReaper;->this$0:Landroid/net/http/IdleCache;
 
     monitor-enter v1
 
+    .line 153
     :goto_0
     const/4 v2, 0x5
 
     if-ge v0, v2, :cond_1
 
+    .line 155
     :try_start_0
     iget-object v2, p0, Landroid/net/http/IdleCache$IdleReaper;->this$0:Landroid/net/http/IdleCache;
 
@@ -78,6 +86,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 158
     :goto_1
     :try_start_1
     iget-object v2, p0, Landroid/net/http/IdleCache$IdleReaper;->this$0:Landroid/net/http/IdleCache;
@@ -89,13 +98,16 @@
 
     if-nez v2, :cond_0
 
+    .line 159
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 161
     :cond_0
     const/4 v0, 0x0
 
+    .line 162
     iget-object v2, p0, Landroid/net/http/IdleCache$IdleReaper;->this$0:Landroid/net/http/IdleCache;
 
     #calls: Landroid/net/http/IdleCache;->clearIdle()V
@@ -103,6 +115,7 @@
 
     goto :goto_0
 
+    .line 166
     :catchall_0
     move-exception v2
 
@@ -112,6 +125,7 @@
 
     throw v2
 
+    .line 165
     :cond_1
     :try_start_2
     iget-object v2, p0, Landroid/net/http/IdleCache$IdleReaper;->this$0:Landroid/net/http/IdleCache;
@@ -121,12 +135,15 @@
     #setter for: Landroid/net/http/IdleCache;->mThread:Landroid/net/http/IdleCache$IdleReaper;
     invoke-static {v2, v3}, Landroid/net/http/IdleCache;->access$302(Landroid/net/http/IdleCache;Landroid/net/http/IdleCache$IdleReaper;)Landroid/net/http/IdleCache$IdleReaper;
 
+    .line 166
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 173
     return-void
 
+    .line 156
     :catch_0
     move-exception v2
 

@@ -98,6 +98,7 @@
     .locals 1
 
     .prologue
+    .line 63
     const-string v0, "CTRL-EVENT-"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -106,6 +107,7 @@
 
     sput v0, Landroid/net/wifi/WifiMonitor;->eventPrefixLen:I
 
+    .line 67
     const-string v0, "WPS-"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -114,6 +116,7 @@
 
     sput v0, Landroid/net/wifi/WifiMonitor;->wpsEventPrefixLen:I
 
+    .line 186
     const-string v0, "((?:[0-9a-f]{2}:){5}[0-9a-f]{2}) .* \\[id=([0-9]+) "
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -130,14 +133,18 @@
     .parameter "tracker"
 
     .prologue
+    .line 211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 204
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/wifi/WifiMonitor;->mRecvErrors:I
 
+    .line 212
     iput-object p1, p0, Landroid/net/wifi/WifiMonitor;->mWifiStateTracker:Landroid/net/wifi/WifiStateTracker;
 
+    .line 213
     return-void
 .end method
 
@@ -146,6 +153,7 @@
     .parameter "x0"
 
     .prologue
+    .line 33
     iget-object v0, p0, Landroid/net/wifi/WifiMonitor;->mWifiStateTracker:Landroid/net/wifi/WifiStateTracker;
 
     return-object v0
@@ -155,6 +163,7 @@
     .locals 1
 
     .prologue
+    .line 33
     sget v0, Landroid/net/wifi/WifiMonitor;->eventPrefixLen:I
 
     return v0
@@ -164,6 +173,7 @@
     .locals 1
 
     .prologue
+    .line 33
     sget v0, Landroid/net/wifi/WifiMonitor;->wpsEventPrefixLen:I
 
     return v0
@@ -175,6 +185,7 @@
     .parameter "x1"
 
     .prologue
+    .line 33
     iput p1, p0, Landroid/net/wifi/WifiMonitor;->mRecvErrors:I
 
     return p1
@@ -185,6 +196,7 @@
     .parameter "x0"
 
     .prologue
+    .line 33
     iget v0, p0, Landroid/net/wifi/WifiMonitor;->mRecvErrors:I
 
     add-int/lit8 v0, v0, 0x1
@@ -199,6 +211,7 @@
     .parameter "x0"
 
     .prologue
+    .line 33
     invoke-static {p0}, Landroid/net/wifi/WifiMonitor;->nap(I)V
 
     return-void
@@ -211,6 +224,7 @@
     .parameter "x2"
 
     .prologue
+    .line 33
     invoke-direct {p0, p1, p2}, Landroid/net/wifi/WifiMonitor;->handleNetworkStateChange(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;)V
 
     return-void
@@ -222,22 +236,27 @@
     .parameter "data"
 
     .prologue
+    .line 540
     const/4 v0, 0x0
 
+    .line 541
     .local v0, BSSID:Ljava/lang/String;
     const/4 v3, -0x1
 
+    .line 542
     .local v3, networkId:I
     sget-object v4, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     if-ne p1, v4, :cond_0
 
+    .line 543
     sget-object v4, Landroid/net/wifi/WifiMonitor;->mConnectedEventPattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v4, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v2
 
+    .line 544
     .local v2, match:Ljava/util/regex/Matcher;
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
 
@@ -245,12 +264,14 @@
 
     if-nez v4, :cond_1
 
+    .line 545
     const-string v4, "WifiMonitor"
 
     const-string v5, "Could not find BSSID in CONNECTED event string"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 555
     .end local v2           #match:Ljava/util/regex/Matcher;
     :cond_0
     :goto_0
@@ -258,8 +279,10 @@
 
     invoke-virtual {v4, p1, v0, v3}, Landroid/net/wifi/WifiStateTracker;->notifyStateChange(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;I)V
 
+    .line 556
     return-void
 
+    .line 547
     .restart local v2       #match:Ljava/util/regex/Matcher;
     :cond_1
     const/4 v4, 0x1
@@ -268,6 +291,7 @@
 
     move-result-object v0
 
+    .line 549
     const/4 v4, 0x2
 
     :try_start_0
@@ -283,11 +307,13 @@
 
     goto :goto_0
 
+    .line 550
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 551
     .local v1, e:Ljava/lang/NumberFormatException;
     const/4 v3, -0x1
 
@@ -299,6 +325,7 @@
     .parameter "secs"
 
     .prologue
+    .line 564
     mul-int/lit16 v0, p0, 0x3e8
 
     int-to-long v0, v0
@@ -308,9 +335,11 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 567
     :goto_0
     return-void
 
+    .line 565
     :catch_0
     move-exception v0
 
@@ -323,6 +352,7 @@
     .locals 1
 
     .prologue
+    .line 220
     iget-object v0, p0, Landroid/net/wifi/WifiMonitor;->mWifiStateTracker:Landroid/net/wifi/WifiStateTracker;
 
     return-object v0
@@ -332,11 +362,13 @@
     .locals 1
 
     .prologue
+    .line 216
     new-instance v0, Landroid/net/wifi/WifiMonitor$MonitorThread;
 
     invoke-direct {v0, p0}, Landroid/net/wifi/WifiMonitor$MonitorThread;-><init>(Landroid/net/wifi/WifiMonitor;)V
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiMonitor$MonitorThread;->start()V
 
+    .line 217
     return-void
 .end method

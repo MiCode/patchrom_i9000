@@ -37,6 +37,7 @@
     .parameter
 
     .prologue
+    .line 969
     iput-object p1, p0, Landroid/widget/RelativeLayout$TopToBottomLeftToRightComparator;->this$0:Landroid/widget/RelativeLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,6 +51,7 @@
     .parameter "x1"
 
     .prologue
+    .line 969
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout$TopToBottomLeftToRightComparator;-><init>(Landroid/widget/RelativeLayout;)V
 
     return-void
@@ -63,6 +65,7 @@
     .parameter "second"
 
     .prologue
+    .line 972
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v4
@@ -73,14 +76,17 @@
 
     sub-int v2, v4, v5
 
+    .line 973
     .local v2, topDifference:I
     if-eqz v2, :cond_0
 
     move v4, v2
 
+    .line 991
     :goto_0
     return v4
 
+    .line 977
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -92,13 +98,16 @@
 
     sub-int v1, v4, v5
 
+    .line 978
     .local v1, leftDifference:I
     if-eqz v1, :cond_1
 
     move v4, v1
 
+    .line 979
     goto :goto_0
 
+    .line 982
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
@@ -110,13 +119,16 @@
 
     sub-int v0, v4, v5
 
+    .line 983
     .local v0, heightDiference:I
     if-eqz v0, :cond_2
 
     move v4, v0
 
+    .line 984
     goto :goto_0
 
+    .line 987
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
@@ -128,13 +140,16 @@
 
     sub-int v3, v4, v5
 
+    .line 988
     .local v3, widthDiference:I
     if-eqz v3, :cond_3
 
     move v4, v3
 
+    .line 989
     goto :goto_0
 
+    .line 991
     :cond_3
     const/4 v4, 0x0
 
@@ -147,6 +162,7 @@
     .parameter "x1"
 
     .prologue
+    .line 969
     check-cast p1, Landroid/view/View;
 
     .end local p1

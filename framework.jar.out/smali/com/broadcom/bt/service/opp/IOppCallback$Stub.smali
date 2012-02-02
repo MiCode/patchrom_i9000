@@ -56,12 +56,15 @@
     .locals 1
 
     .prologue
+    .line 20
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 21
     const-string v0, "com.broadcom.bt.service.opp.IOppCallback"
 
     invoke-virtual {p0, p0, v0}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 22
     return-void
 .end method
 
@@ -70,13 +73,17 @@
     .parameter "obj"
 
     .prologue
+    .line 29
     if-nez p0, :cond_0
 
+    .line 30
     const/4 v1, 0x0
 
+    .line 36
     :goto_0
     return-object v1
 
+    .line 32
     :cond_0
     const-string v1, "com.broadcom.bt.service.opp.IOppCallback"
 
@@ -84,6 +91,7 @@
 
     move-result-object v0
 
+    .line 33
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -91,6 +99,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 34
     check-cast v0, Lcom/broadcom/bt/service/opp/IOppCallback;
 
     .end local v0           #iin:Landroid/os/IInterface;
@@ -98,6 +107,7 @@
 
     goto :goto_0
 
+    .line 36
     .restart local v0       #iin:Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcom/broadcom/bt/service/opp/IOppCallback$Stub$Proxy;
@@ -113,6 +123,7 @@
     .locals 0
 
     .prologue
+    .line 40
     return-object p0
 .end method
 
@@ -133,8 +144,10 @@
 
     const-string v8, "com.broadcom.bt.service.opp.IOppCallback"
 
+    .line 44
     sparse-switch p1, :sswitch_data_0
 
+    .line 172
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -142,6 +155,7 @@
     :goto_0
     return v0
 
+    .line 48
     :sswitch_0
     const-string v0, "com.broadcom.bt.service.opp.IOppCallback"
 
@@ -149,57 +163,73 @@
 
     move v0, v7
 
+    .line 49
     goto :goto_0
 
+    .line 53
     :sswitch_1
     const-string v0, "com.broadcom.bt.service.opp.IOppCallback"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 54
     invoke-virtual {p0}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpcEnable()V
 
+    .line 55
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 56
     goto :goto_0
 
+    .line 60
     :sswitch_2
     const-string v0, "com.broadcom.bt.service.opp.IOppCallback"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 61
     invoke-virtual {p0}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpcOpen()V
 
+    .line 62
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 63
     goto :goto_0
 
+    .line 67
     :sswitch_3
     const-string v0, "com.broadcom.bt.service.opp.IOppCallback"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 69
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 71
     .local v1, _arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 72
     .local v2, _arg1:I
     invoke-virtual {p0, v1, v2}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpcProgress(II)V
 
+    .line 73
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 74
     goto :goto_0
 
+    .line 78
     .end local v1           #_arg0:I
     .end local v2           #_arg1:I
     :sswitch_4
@@ -207,24 +237,30 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 80
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 82
     .restart local v1       #_arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 83
     .local v2, _arg1:Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpcObjectReceived(ILjava/lang/String;)V
 
+    .line 84
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 85
     goto :goto_0
 
+    .line 89
     .end local v1           #_arg0:I
     .end local v2           #_arg1:Ljava/lang/String;
     :sswitch_5
@@ -232,24 +268,30 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 91
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 93
     .restart local v1       #_arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 94
     .restart local v2       #_arg1:Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpcObjectPushed(ILjava/lang/String;)V
 
+    .line 95
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 96
     goto :goto_0
 
+    .line 100
     .end local v1           #_arg0:I
     .end local v2           #_arg1:Ljava/lang/String;
     :sswitch_6
@@ -257,43 +299,54 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 102
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 103
     .restart local v1       #_arg0:I
     invoke-virtual {p0, v1}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpcClose(I)V
 
+    .line 104
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 105
     goto :goto_0
 
+    .line 109
     .end local v1           #_arg0:I
     :sswitch_7
     const-string v0, "com.broadcom.bt.service.opp.IOppCallback"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 111
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 113
     .restart local v1       #_arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 114
     .local v2, _arg1:I
     invoke-virtual {p0, v1, v2}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpsProgress(II)V
 
+    .line 115
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 116
     goto/16 :goto_0
 
+    .line 120
     .end local v1           #_arg0:I
     .end local v2           #_arg1:I
     :sswitch_8
@@ -301,24 +354,30 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 122
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 124
     .restart local v1       #_arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 125
     .local v2, _arg1:Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpsObjectReceived(ILjava/lang/String;)V
 
+    .line 126
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 127
     goto/16 :goto_0
 
+    .line 131
     .end local v1           #_arg0:I
     .end local v2           #_arg1:Ljava/lang/String;
     :sswitch_9
@@ -326,43 +385,53 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 132
     invoke-virtual {p0}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpsOpen()V
 
+    .line 133
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 134
     goto/16 :goto_0
 
+    .line 138
     :sswitch_a
     const-string v0, "com.broadcom.bt.service.opp.IOppCallback"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 140
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 142
     .local v1, _arg0:Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 144
     .restart local v2       #_arg1:Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
+    .line 146
     .local v3, _arg2:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
+    .line 148
     .local v4, _arg3:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 150
     .local v5, _arg4:Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -371,14 +440,18 @@
     .local v6, _arg5:I
     move-object v0, p0
 
+    .line 151
     invoke-virtual/range {v0 .. v6}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpsAccessRequest(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;I)V
 
+    .line 152
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 153
     goto/16 :goto_0
 
+    .line 157
     .end local v1           #_arg0:Ljava/lang/String;
     .end local v2           #_arg1:Ljava/lang/String;
     .end local v3           #_arg2:I
@@ -390,32 +463,41 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 158
     invoke-virtual {p0}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpsClose()V
 
+    .line 159
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 160
     goto/16 :goto_0
 
+    .line 164
     :sswitch_c
     const-string v0, "com.broadcom.bt.service.opp.IOppCallback"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 166
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 167
     .restart local v1       #_arg0:Ljava/lang/String;
     invoke-virtual {p0, v1}, Lcom/broadcom/bt/service/opp/IOppCallback$Stub;->onOpOwnerVcardNotSet(Ljava/lang/String;)V
 
+    .line 168
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 169
     goto/16 :goto_0
 
+    .line 44
     nop
 
     :sswitch_data_0

@@ -72,8 +72,10 @@
     .prologue
     const/16 v1, -0x64
 
+    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 112
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPathPrefix:Ljava/lang/String;
@@ -110,6 +112,7 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/AccountMetaData;->mDisplayName:Ljava/lang/String;
 
+    .line 114
     iput v1, p0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPort:I
 
     iput v1, p0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPort:I
@@ -118,6 +121,7 @@
 
     iput v1, p0, Lcom/android/server/enterprise/AccountMetaData;->mSyncLookback:I
 
+    .line 116
     iput-byte v1, p0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAcceptAllCertificates:B
 
     iput-byte v1, p0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseTLS:B
@@ -136,5 +140,6 @@
 
     iput-byte v1, p0, Lcom/android/server/enterprise/AccountMetaData;->mIsDefault:B
 
+    .line 117
     return-void
 .end method

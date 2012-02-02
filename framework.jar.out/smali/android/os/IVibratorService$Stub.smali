@@ -52,12 +52,15 @@
     .locals 1
 
     .prologue
+    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 16
     const-string v0, "android.os.IVibratorService"
 
     invoke-virtual {p0, p0, v0}, Landroid/os/IVibratorService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 17
     return-void
 .end method
 
@@ -66,13 +69,17 @@
     .parameter "obj"
 
     .prologue
+    .line 24
     if-nez p0, :cond_0
 
+    .line 25
     const/4 v1, 0x0
 
+    .line 31
     :goto_0
     return-object v1
 
+    .line 27
     :cond_0
     const-string v1, "android.os.IVibratorService"
 
@@ -80,6 +87,7 @@
 
     move-result-object v0
 
+    .line 28
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -87,6 +95,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 29
     check-cast v0, Landroid/os/IVibratorService;
 
     .end local v0           #iin:Landroid/os/IInterface;
@@ -94,6 +103,7 @@
 
     goto :goto_0
 
+    .line 31
     .restart local v0       #iin:Landroid/os/IInterface;
     :cond_1
     new-instance v1, Landroid/os/IVibratorService$Stub$Proxy;
@@ -109,6 +119,7 @@
     .locals 0
 
     .prologue
+    .line 35
     return-object p0
 .end method
 
@@ -129,8 +140,10 @@
 
     const-string v6, "android.os.IVibratorService"
 
+    .line 39
     sparse-switch p1, :sswitch_data_0
 
+    .line 149
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -138,6 +151,7 @@
     :goto_0
     return v4
 
+    .line 43
     :sswitch_0
     const-string v4, "android.os.IVibratorService"
 
@@ -145,31 +159,39 @@
 
     move v4, v5
 
+    .line 44
     goto :goto_0
 
+    .line 48
     :sswitch_1
     const-string v4, "android.os.IVibratorService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 50
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
+    .line 52
     .local v0, _arg0:J
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
 
+    .line 53
     .local v2, _arg1:Landroid/os/IBinder;
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/IVibratorService$Stub;->vibrate(JLandroid/os/IBinder;)V
 
+    .line 54
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 55
     goto :goto_0
 
+    .line 59
     .end local v0           #_arg0:J
     .end local v2           #_arg1:Landroid/os/IBinder;
     :sswitch_2
@@ -177,29 +199,36 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 61
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
+    .line 63
     .restart local v0       #_arg0:J
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
 
+    .line 65
     .restart local v2       #_arg1:Landroid/os/IBinder;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
+    .line 66
     .local v3, _arg2:I
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/os/IVibratorService$Stub;->vibrateMagnitude(JLandroid/os/IBinder;I)V
 
+    .line 67
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 68
     goto :goto_0
 
+    .line 72
     .end local v0           #_arg0:J
     .end local v2           #_arg1:Landroid/os/IBinder;
     .end local v3           #_arg2:I
@@ -208,29 +237,36 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 74
     invoke-virtual {p2}, Landroid/os/Parcel;->createLongArray()[J
 
     move-result-object v0
 
+    .line 76
     .local v0, _arg0:[J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 78
     .local v2, _arg1:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
+    .line 79
     .local v3, _arg2:Landroid/os/IBinder;
     invoke-virtual {p0, v0, v2, v3}, Landroid/os/IVibratorService$Stub;->vibratePattern([JILandroid/os/IBinder;)V
 
+    .line 80
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 81
     goto :goto_0
 
+    .line 85
     .end local v0           #_arg0:[J
     .end local v2           #_arg1:I
     .end local v3           #_arg2:Landroid/os/IBinder;
@@ -239,43 +275,54 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 87
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
+    .line 88
     .local v0, _arg0:Landroid/os/IBinder;
     invoke-virtual {p0, v0}, Landroid/os/IVibratorService$Stub;->cancelVibrate(Landroid/os/IBinder;)V
 
+    .line 89
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 90
     goto :goto_0
 
+    .line 94
     .end local v0           #_arg0:Landroid/os/IBinder;
     :sswitch_5
     const-string v4, "android.os.IVibratorService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 96
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 98
     .local v0, _arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 99
     .restart local v2       #_arg1:I
     invoke-virtual {p0, v0, v2}, Landroid/os/IVibratorService$Stub;->vibrateImmVibe(II)V
 
+    .line 100
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 101
     goto :goto_0
 
+    .line 105
     .end local v0           #_arg0:I
     .end local v2           #_arg1:I
     :sswitch_6
@@ -283,24 +330,30 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 107
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
+    .line 109
     .local v0, _arg0:[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 110
     .restart local v2       #_arg1:I
     invoke-virtual {p0, v0, v2}, Landroid/os/IVibratorService$Stub;->vibrateImmVibePattern([BI)V
 
+    .line 111
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 112
     goto/16 :goto_0
 
+    .line 116
     .end local v0           #_arg0:[B
     .end local v2           #_arg1:I
     :sswitch_7
@@ -308,71 +361,90 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 118
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 119
     .local v0, _arg0:I
     invoke-virtual {p0, v0}, Landroid/os/IVibratorService$Stub;->vibrateCall(I)V
 
+    .line 120
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 121
     goto/16 :goto_0
 
+    .line 125
     .end local v0           #_arg0:I
     :sswitch_8
     const-string v4, "android.os.IVibratorService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 127
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 128
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Landroid/os/IVibratorService$Stub;->vibrateNotification(I)V
 
+    .line 129
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 130
     goto/16 :goto_0
 
+    .line 134
     .end local v0           #_arg0:I
     :sswitch_9
     const-string v4, "android.os.IVibratorService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 136
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 137
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Landroid/os/IVibratorService$Stub;->setMagnitude(I)V
 
+    .line 138
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 139
     goto/16 :goto_0
 
+    .line 143
     .end local v0           #_arg0:I
     :sswitch_a
     const-string v4, "android.os.IVibratorService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 144
     invoke-virtual {p0}, Landroid/os/IVibratorService$Stub;->resetMagnitude()V
 
+    .line 145
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v4, v5
 
+    .line 146
     goto/16 :goto_0
 
+    .line 39
     nop
 
     :sswitch_data_0

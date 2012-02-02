@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 83
     iput-object p1, p0, Landroid/accounts/GrantCredentialsPermissionActivity$1;->this$0:Landroid/accounts/GrantCredentialsPermissionActivity;
 
     iput-object p2, p0, Landroid/accounts/GrantCredentialsPermissionActivity$1;->val$authTokenTypeView:Landroid/widget/TextView;
@@ -44,6 +45,7 @@
     .parameter "message"
 
     .prologue
+    .line 100
     return-void
 .end method
 
@@ -52,12 +54,14 @@
     .parameter "bundle"
 
     .prologue
+    .line 85
     const-string v1, "authTokenLabelKey"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 87
     .local v0, authTokenLabel:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -65,6 +69,7 @@
 
     if-nez v1, :cond_0
 
+    .line 88
     iget-object v1, p0, Landroid/accounts/GrantCredentialsPermissionActivity$1;->this$0:Landroid/accounts/GrantCredentialsPermissionActivity;
 
     new-instance v2, Landroid/accounts/GrantCredentialsPermissionActivity$1$1;
@@ -73,6 +78,7 @@
 
     invoke-virtual {v1, v2}, Landroid/accounts/GrantCredentialsPermissionActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
+    .line 97
     :cond_0
     return-void
 .end method

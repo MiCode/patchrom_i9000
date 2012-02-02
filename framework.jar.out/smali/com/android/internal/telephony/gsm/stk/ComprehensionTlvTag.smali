@@ -91,6 +91,7 @@
 
     const/4 v4, 0x1
 
+    .line 161
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "COMMAND_DETAILS"
@@ -101,6 +102,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->COMMAND_DETAILS:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 162
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "DEVICE_IDENTITIES"
@@ -109,6 +111,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->DEVICE_IDENTITIES:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 163
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "RESULT"
@@ -117,6 +120,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->RESULT:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 164
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "DURATION"
@@ -125,6 +129,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->DURATION:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 165
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "ALPHA_ID"
@@ -133,6 +138,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->ALPHA_ID:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 166
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "ADDRESS"
@@ -143,6 +149,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->ADDRESS:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 167
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "SUBADDRESS"
@@ -155,6 +162,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->SUBADDRESS:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 168
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "SS_STRING"
@@ -167,6 +175,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->SS_STRING:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 169
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "USSD_STRING"
@@ -179,6 +188,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->USSD_STRING:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 170
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "SMSTPDUTAG"
@@ -191,6 +201,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->SMSTPDUTAG:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 171
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "TEXT_STRING"
@@ -203,6 +214,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->TEXT_STRING:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 172
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "TONE"
@@ -215,6 +227,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->TONE:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 173
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "ITEM"
@@ -227,6 +240,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->ITEM:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 174
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "ITEM_ID"
@@ -239,6 +253,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->ITEM_ID:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 175
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "RESPONSE_LENGTH"
@@ -251,6 +266,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->RESPONSE_LENGTH:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 176
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "FILE_LIST"
@@ -263,6 +279,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->FILE_LIST:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 177
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "HELP_REQUEST"
@@ -275,6 +292,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->HELP_REQUEST:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 178
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "DEFAULT_TEXT"
@@ -287,6 +305,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->DEFAULT_TEXT:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 179
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "EVENT_LIST"
@@ -299,6 +318,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->EVENT_LIST:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 180
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "ICON_ID"
@@ -311,6 +331,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->ICON_ID:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 181
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "ITEM_ICON_ID_LIST"
@@ -323,6 +344,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->ITEM_ICON_ID_LIST:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 182
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "IMMEDIATE_RESPONSE"
@@ -335,6 +357,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->IMMEDIATE_RESPONSE:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 183
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "DTMF_STRING"
@@ -347,6 +370,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->DTMF_STRING:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 184
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "LANGUAGE"
@@ -359,6 +383,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->LANGUAGE:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 185
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "URL"
@@ -371,6 +396,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->URL:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 186
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "BROWSER_TERMINATION_CAUSE"
@@ -383,6 +409,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->BROWSER_TERMINATION_CAUSE:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 187
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     const-string v1, "TEXT_ATTRIBUTE"
@@ -395,6 +422,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->TEXT_ATTRIBUTE:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
+    .line 160
     const/16 v0, 0x1b
 
     new-array v0, v0, [Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
@@ -568,10 +596,13 @@
     .end annotation
 
     .prologue
+    .line 191
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 192
     iput p3, p0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->mValue:I
 
+    .line 193
     return-void
 .end method
 
@@ -580,6 +611,7 @@
     .parameter "value"
 
     .prologue
+    .line 205
     invoke-static {}, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->values()[Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     move-result-object v0
@@ -596,6 +628,7 @@
 
     aget-object v1, v0, v2
 
+    .line 206
     .local v1, e:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
     iget v4, v1, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->mValue:I
 
@@ -603,16 +636,19 @@
 
     move-object v4, v1
 
+    .line 210
     .end local v1           #e:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
     :goto_1
     return-object v4
 
+    .line 205
     .restart local v1       #e:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 210
     .end local v1           #e:Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
     :cond_1
     const/4 v4, 0x0
@@ -625,6 +661,7 @@
     .parameter "name"
 
     .prologue
+    .line 160
     const-class v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -641,6 +678,7 @@
     .locals 1
 
     .prologue
+    .line 160
     sget-object v0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->$VALUES:[Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->clone()Ljava/lang/Object;
@@ -658,6 +696,7 @@
     .locals 1
 
     .prologue
+    .line 201
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/ComprehensionTlvTag;->mValue:I
 
     return v0

@@ -38,20 +38,24 @@
     .prologue
     const-string v1, "SmsDeletedFolder"
 
+    .line 110
     iput-object p1, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->this$0:Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 107
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
+    .line 111
     const-string v0, "SmsDeletedFolder"
 
     const-string v0, "SmsDeletedFolder"
 
     invoke-static {v1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 113
     return-void
 .end method
 
@@ -75,8 +79,10 @@
     .parameter "locked"
 
     .prologue
+    .line 169
     const/4 v3, 0x1
 
+    .line 170
     .local v3, fRet:Z
     const-string v5, "SmsDeletedFolder"
 
@@ -84,14 +90,17 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 171
     iget-object v5, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v5, :cond_1
 
+    .line 173
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
+    .line 174
     .local v4, values:Landroid/content/ContentValues;
     const-string v5, "_id"
 
@@ -101,7 +110,8 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v5, "thread_id"
+    .line 175
+    const-string/jumbo v5, "thread_id"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -109,11 +119,13 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 176
     const-string v5, "address"
 
     invoke-virtual {v4, v5, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v5, "person"
+    .line 177
+    const-string/jumbo v5, "person"
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -121,6 +133,7 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 178
     const-string v5, "date"
 
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -129,7 +142,8 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v5, "protocol"
+    .line 179
+    const-string/jumbo v5, "protocol"
 
     invoke-static {p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -137,7 +151,8 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v5, "read"
+    .line 180
+    const-string/jumbo v5, "read"
 
     invoke-static/range {p7 .. p7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -145,7 +160,8 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v5, "status"
+    .line 181
+    const-string/jumbo v5, "status"
 
     invoke-static/range {p8 .. p8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -153,7 +169,8 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v5, "type"
+    .line 182
+    const-string/jumbo v5, "type"
 
     invoke-static/range {p9 .. p9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -161,7 +178,8 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v5, "reply_path_present"
+    .line 183
+    const-string/jumbo v5, "reply_path_present"
 
     invoke-static/range {p10 .. p10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -169,7 +187,8 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v5, "subject"
+    .line 184
+    const-string/jumbo v5, "subject"
 
     move-object v0, v4
 
@@ -179,6 +198,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 185
     const-string v5, "body"
 
     move-object v0, v4
@@ -189,7 +209,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v5, "service_center"
+    .line 186
+    const-string/jumbo v5, "service_center"
 
     move-object v0, v4
 
@@ -199,6 +220,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 187
     const-string v5, "locked"
 
     invoke-static/range {p14 .. p14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -207,13 +229,15 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 188
     iget-object v5, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v5}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
+    .line 189
     iget-object v5, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v6, "sms"
+    const-string/jumbo v6, "sms"
 
     const-string v7, ""
 
@@ -227,8 +251,10 @@
 
     if-gez v5, :cond_0
 
+    .line 191
     const/4 v3, 0x0
 
+    .line 192
     const-string v5, "SmsDeletedFolder"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -255,21 +281,25 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 199
     :goto_0
     iget-object v5, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v5}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
+    .line 205
     .end local v4           #values:Landroid/content/ContentValues;
     :goto_1
     return v3
 
+    .line 196
     .restart local v4       #values:Landroid/content/ContentValues;
     :cond_0
     iget-object v5, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v5}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
 
+    .line 197
     const-string v5, "SmsDeletedFolder"
 
     const-string v6, "Successfully added row in deleted folder"
@@ -278,6 +308,7 @@
 
     goto :goto_0
 
+    .line 203
     .end local v4           #values:Landroid/content/ContentValues;
     :cond_1
     const/4 v3, 0x0
@@ -289,20 +320,24 @@
     .locals 2
 
     .prologue
+    .line 157
     const-string v0, "SmsDeletedFolder"
 
     const-string v1, "SmsDeletedFolder::closeDeletedFolderDatabase"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 158
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_0
 
+    .line 160
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
+    .line 162
     :cond_0
     return-void
 .end method
@@ -314,8 +349,10 @@
     .prologue
     const-string v7, "SmsDeletedFolder"
 
+    .line 210
     const/4 v0, 0x1
 
+    .line 211
     .local v0, fRet:Z
     const-string v1, "SmsDeletedFolder"
 
@@ -323,17 +360,20 @@
 
     invoke-static {v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 212
     iget-object v1, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v1, :cond_1
 
+    .line 214
     iget-object v1, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
+    .line 215
     iget-object v1, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v2, "sms"
+    const-string/jumbo v2, "sms"
 
     const-string v3, "_id=?"
 
@@ -355,6 +395,7 @@
 
     if-nez v1, :cond_0
 
+    .line 217
     const-string v1, "SmsDeletedFolder"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -377,16 +418,20 @@
 
     invoke-static {v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 218
     const/4 v0, 0x0
 
+    .line 225
     :goto_0
     iget-object v1, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
+    .line 231
     :goto_1
     return v0
 
+    .line 222
     :cond_0
     const-string v1, "SmsDeletedFolder"
 
@@ -410,12 +455,14 @@
 
     invoke-static {v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 223
     iget-object v1, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
 
     goto :goto_0
 
+    .line 229
     :cond_1
     const/4 v0, 0x0
 
@@ -428,19 +475,22 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 236
     const-string v0, "SmsDeletedFolder"
 
     const-string v1, "SmsDeletedFolder::getAllItems"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 237
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_0
 
+    .line 239
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v1, "sms"
+    const-string/jumbo v1, "sms"
 
     move-object v3, v2
 
@@ -459,6 +509,7 @@
     .local v8, c:Landroid/database/Cursor;
     move-object v0, v8
 
+    .line 242
     .end local v8           #c:Landroid/database/Cursor;
     :goto_0
     return-object v0
@@ -476,19 +527,22 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 247
     const-string v0, "SmsDeletedFolder"
 
     const-string v1, "SmsDeletedFolder::getAllItemsGreaterThan"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 248
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_0
 
+    .line 250
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v1, "sms"
+    const-string/jumbo v1, "sms"
 
     const-string v3, "_id>?"
 
@@ -519,6 +573,7 @@
     .local v9, c:Landroid/database/Cursor;
     move-object v0, v9
 
+    .line 253
     .end local v9           #c:Landroid/database/Cursor;
     :goto_0
     return-object v0
@@ -536,19 +591,22 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 258
     const-string v0, "SmsDeletedFolder"
 
     const-string v1, "SmsDeletedFolder::getItemById"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 259
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_0
 
+    .line 261
     iget-object v0, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v1, "sms"
+    const-string/jumbo v1, "sms"
 
     const-string v3, "_id=?"
 
@@ -577,6 +635,7 @@
     .local v8, c:Landroid/database/Cursor;
     move-object v0, v8
 
+    .line 264
     .end local v8           #c:Landroid/database/Cursor;
     :goto_0
     return-object v0
@@ -593,8 +652,10 @@
     .prologue
     const-string v6, "SmsDeletedFolder"
 
+    .line 120
     const/4 v2, 0x0
 
+    .line 122
     .local v2, fRet:Z
     const-string v3, "SmsDeletedFolder"
 
@@ -602,12 +663,14 @@
 
     invoke-static {v6, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 125
     new-instance v0, Ljava/io/File;
 
     const-string v3, "/data/data/com.broadcom.bt.app.system/map"
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 126
     .local v0, dbDirectory:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -621,6 +684,7 @@
 
     if-nez v3, :cond_0
 
+    .line 128
     const-string v3, "SmsDeletedFolder"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -647,6 +711,7 @@
 
     invoke-static {v6, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 134
     :cond_0
     :try_start_0
     const-string v3, "/data/data/com.broadcom.bt.app.system/map/SmsDeletedFolder"
@@ -661,6 +726,7 @@
 
     iput-object v3, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
+    .line 140
     iget-object v3, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v4, "CREATE TABLE IF NOT EXISTS sms (_id INTEGER PRIMARY KEY,thread_id INTEGER,address TEXT,person INTEGER,date INTEGER,protocol INTEGER,read INTEGER DEFAULT 0,status INTEGER DEFAULT -1,type INTEGER,reply_path_present INTEGER,subject TEXT,body TEXT,service_center TEXT,locked INTEGER DEFAULT 0);"
@@ -669,27 +735,33 @@
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 147
     :goto_0
     iget-object v3, p0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider$SmsDeletedFolder;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v3, :cond_1
 
+    .line 149
     const-string v3, "SmsDeletedFolder"
 
     const-string v3, "Created deleted folder database successfully."
 
     invoke-static {v6, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 150
     const/4 v2, 0x1
 
+    .line 152
     :cond_1
     return v2
 
+    .line 143
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 145
     .local v1, e:Landroid/database/sqlite/SQLiteException;
     const-string v3, "SmsDeletedFolder"
 

@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 485
     iput-object p1, p0, Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler$StateInfo;->this$0:Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +44,7 @@
     .parameter "x1"
 
     .prologue
+    .line 485
     invoke-direct {p0, p1}, Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler$StateInfo;-><init>(Lcom/android/internal/util/HierarchicalStateMachine$HsmHandler;)V
 
     return-void
@@ -54,11 +56,12 @@
     .locals 2
 
     .prologue
+    .line 500
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "state="
+    const-string/jumbo v1, "state="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

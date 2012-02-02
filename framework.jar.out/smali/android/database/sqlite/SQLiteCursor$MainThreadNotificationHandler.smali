@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 169
     iput-object p1, p0, Landroid/database/sqlite/SQLiteCursor$MainThreadNotificationHandler;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,10 +39,12 @@
     .parameter "msg"
 
     .prologue
+    .line 171
     iget-object v0, p0, Landroid/database/sqlite/SQLiteCursor$MainThreadNotificationHandler;->this$0:Landroid/database/sqlite/SQLiteCursor;
 
     #calls: Landroid/database/sqlite/SQLiteCursor;->notifyDataSetChange()V
     invoke-static {v0}, Landroid/database/sqlite/SQLiteCursor;->access$700(Landroid/database/sqlite/SQLiteCursor;)V
 
+    .line 172
     return-void
 .end method

@@ -28,6 +28,7 @@
     .parameter
 
     .prologue
+    .line 1059
     iput-object p1, p0, Lcom/google/android/mms/pdu/PduComposer$PositionMarker;->this$0:Lcom/google/android/mms/pdu/PduComposer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1059
     invoke-direct {p0, p1}, Lcom/google/android/mms/pdu/PduComposer$PositionMarker;-><init>(Lcom/google/android/mms/pdu/PduComposer;)V
 
     return-void
@@ -52,6 +54,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1059
     iput p1, p0, Lcom/google/android/mms/pdu/PduComposer$PositionMarker;->c_pos:I
 
     return p1
@@ -63,6 +66,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1059
     iput p1, p0, Lcom/google/android/mms/pdu/PduComposer$PositionMarker;->currentStackSize:I
 
     return p1
@@ -74,6 +78,7 @@
     .locals 2
 
     .prologue
+    .line 1067
     iget v0, p0, Lcom/google/android/mms/pdu/PduComposer$PositionMarker;->currentStackSize:I
 
     iget-object v1, p0, Lcom/google/android/mms/pdu/PduComposer$PositionMarker;->this$0:Lcom/google/android/mms/pdu/PduComposer;
@@ -87,6 +92,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 1068
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "BUG: Invalid call to getLength()"
@@ -95,6 +101,7 @@
 
     throw v0
 
+    .line 1071
     :cond_0
     iget-object v0, p0, Lcom/google/android/mms/pdu/PduComposer$PositionMarker;->this$0:Lcom/google/android/mms/pdu/PduComposer;
 

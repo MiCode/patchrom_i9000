@@ -29,12 +29,15 @@
     .parameter "listener"
 
     .prologue
+    .line 277
     iput-object p1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 278
     iput-object p2, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mStorageEventListener:Landroid/os/storage/StorageEventListener;
 
+    .line 279
     new-instance v0, Landroid/os/storage/StorageManager$ListenerDelegate$1;
 
     iget-object v1, p1, Landroid/os/storage/StorageManager;->mTgtLooper:Landroid/os/Looper;
@@ -43,6 +46,7 @@
 
     iput-object v0, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mHandler:Landroid/os/Handler;
 
+    .line 298
     return-void
 .end method
 
@@ -52,6 +56,7 @@
     .locals 1
 
     .prologue
+    .line 301
     iget-object v0, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mStorageEventListener:Landroid/os/storage/StorageEventListener;
 
     return-object v0
@@ -62,12 +67,14 @@
     .parameter "available"
 
     .prologue
+    .line 305
     new-instance v0, Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
 
     iget-object v1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {v0, v1, p1}, Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;-><init>(Landroid/os/storage/StorageManager;Z)V
 
+    .line 306
     .local v0, e:Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
     iget-object v1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mHandler:Landroid/os/Handler;
 
@@ -77,6 +84,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 307
     return-void
 .end method
 
@@ -87,12 +95,14 @@
     .parameter "newState"
 
     .prologue
+    .line 310
     new-instance v0, Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
 
     iget-object v1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {v0, v1, p1, p2, p3}, Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;-><init>(Landroid/os/storage/StorageManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 311
     .local v0, e:Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
     iget-object v1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mHandler:Landroid/os/Handler;
 
@@ -102,6 +112,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 312
     return-void
 .end method
 
@@ -112,12 +123,14 @@
     .parameter "newState"
 
     .prologue
+    .line 315
     new-instance v0, Landroid/os/storage/StorageManager$UsbStorageStateChangedStorageEvent;
 
     iget-object v1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {v0, v1, p1, p2, p3}, Landroid/os/storage/StorageManager$UsbStorageStateChangedStorageEvent;-><init>(Landroid/os/storage/StorageManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 316
     .local v0, e:Landroid/os/storage/StorageManager$UsbStorageStateChangedStorageEvent;
     iget-object v1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mHandler:Landroid/os/Handler;
 
@@ -127,5 +140,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 317
     return-void
 .end method

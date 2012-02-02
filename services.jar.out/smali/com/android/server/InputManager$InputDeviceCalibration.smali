@@ -25,6 +25,7 @@
     .locals 0
 
     .prologue
+    .line 348
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
     .parameter "x0"
 
     .prologue
+    .line 348
     invoke-direct {p0}, Lcom/android/server/InputManager$InputDeviceCalibration;-><init>()V
 
     return-void

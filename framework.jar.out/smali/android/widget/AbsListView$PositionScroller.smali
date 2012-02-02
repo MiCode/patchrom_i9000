@@ -51,10 +51,12 @@
     .parameter
 
     .prologue
+    .line 3672
     iput-object p1, p0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3673
     #getter for: Landroid/view/View;->mContext:Landroid/content/Context;
     invoke-static {p1}, Landroid/widget/AbsListView;->access$3300(Landroid/widget/AbsListView;)Landroid/content/Context;
 
@@ -70,6 +72,7 @@
 
     iput v0, p0, Landroid/widget/AbsListView$PositionScroller;->mExtraScroll:I
 
+    .line 3674
     return-void
 .end method
 
@@ -79,6 +82,7 @@
     .locals 24
 
     .prologue
+    .line 3772
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -89,6 +93,7 @@
 
     move-result v15
 
+    .line 3773
     .local v15, listHeight:I
     move-object/from16 v0, p0
 
@@ -102,6 +107,7 @@
 
     move v5, v0
 
+    .line 3775
     .local v5, firstPos:I
     move-object/from16 v0, p0
 
@@ -111,10 +117,12 @@
 
     packed-switch v21, :pswitch_data_0
 
+    .line 3899
     :cond_0
     :goto_0
     return-void
 
+    .line 3777
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -130,12 +138,15 @@
 
     sub-int v12, v21, v22
 
+    .line 3778
     .local v12, lastViewIndex:I
     add-int v8, v5, v12
 
+    .line 3780
     .local v8, lastPos:I
     if-ltz v12, :cond_0
 
+    .line 3784
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/AbsListView$PositionScroller;->mLastSeenPos:I
@@ -148,6 +159,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 3786
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -162,6 +174,7 @@
 
     goto :goto_0
 
+    .line 3790
     :cond_1
     move-object/from16 v0, p0
 
@@ -177,19 +190,23 @@
 
     move-result-object v9
 
+    .line 3791
     .local v9, lastView:Landroid/view/View;
     invoke-virtual {v9}, Landroid/view/View;->getHeight()I
 
     move-result v11
 
+    .line 3792
     .local v11, lastViewHeight:I
     invoke-virtual {v9}, Landroid/view/View;->getTop()I
 
     move-result v14
 
+    .line 3793
     .local v14, lastViewTop:I
     sub-int v13, v15, v14
 
+    .line 3794
     .local v13, lastViewPixelsShowing:I
     move-object/from16 v0, p0
 
@@ -221,6 +238,7 @@
 
     move/from16 v4, v21
 
+    .line 3796
     .local v4, extraScroll:I
     :goto_1
     move-object/from16 v0, p0
@@ -241,12 +259,14 @@
 
     invoke-virtual/range {v21 .. v23}, Landroid/widget/AbsListView;->smoothScrollBy(II)V
 
+    .line 3799
     move v0, v8
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/widget/AbsListView$PositionScroller;->mLastSeenPos:I
 
+    .line 3800
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/AbsListView$PositionScroller;->mTargetPos:I
@@ -259,6 +279,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 3801
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -273,6 +294,7 @@
 
     goto/16 :goto_0
 
+    .line 3794
     .end local v4           #extraScroll:I
     :cond_2
     move-object/from16 v0, p0
@@ -297,6 +319,7 @@
 
     goto :goto_1
 
+    .line 3807
     .end local v8           #lastPos:I
     .end local v9           #lastView:Landroid/view/View;
     .end local v11           #lastViewHeight:I
@@ -306,6 +329,7 @@
     :pswitch_1
     const/16 v19, 0x1
 
+    .line 3808
     .local v19, nextViewIndex:I
     move-object/from16 v0, p0
 
@@ -317,6 +341,7 @@
 
     move-result v3
 
+    .line 3810
     .local v3, childCount:I
     move-object/from16 v0, p0
 
@@ -358,8 +383,10 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 3814
     add-int/lit8 v16, v5, 0x1
 
+    .line 3816
     .local v16, nextPos:I
     move-object/from16 v0, p0
 
@@ -373,6 +400,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 3818
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -387,6 +415,7 @@
 
     goto/16 :goto_0
 
+    .line 3822
     :cond_3
     move-object/from16 v0, p0
 
@@ -400,16 +429,19 @@
 
     move-result-object v17
 
+    .line 3823
     .local v17, nextView:Landroid/view/View;
     invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getHeight()I
 
     move-result v18
 
+    .line 3824
     .local v18, nextViewHeight:I
     invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getTop()I
 
     move-result v20
 
+    .line 3825
     .local v20, nextViewTop:I
     move-object/from16 v0, p0
 
@@ -417,6 +449,7 @@
 
     move v4, v0
 
+    .line 3826
     .restart local v4       #extraScroll:I
     move-object/from16 v0, p0
 
@@ -430,6 +463,7 @@
 
     if-ge v0, v1, :cond_4
 
+    .line 3827
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -454,12 +488,14 @@
 
     invoke-virtual/range {v21 .. v23}, Landroid/widget/AbsListView;->smoothScrollBy(II)V
 
+    .line 3830
     move/from16 v0, v16
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/widget/AbsListView$PositionScroller;->mLastSeenPos:I
 
+    .line 3832
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -474,6 +510,7 @@
 
     goto/16 :goto_0
 
+    .line 3834
     :cond_4
     move/from16 v0, v20
 
@@ -481,6 +518,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 3835
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -499,6 +537,7 @@
 
     goto/16 :goto_0
 
+    .line 3842
     .end local v3           #childCount:I
     .end local v4           #extraScroll:I
     .end local v16           #nextPos:I
@@ -519,6 +558,7 @@
 
     if-ne v0, v1, :cond_5
 
+    .line 3844
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -533,6 +573,7 @@
 
     goto/16 :goto_0
 
+    .line 3848
     :cond_5
     move-object/from16 v0, p0
 
@@ -546,13 +587,16 @@
 
     move-result-object v6
 
+    .line 3849
     .local v6, firstView:Landroid/view/View;
     if-eqz v6, :cond_0
 
+    .line 3852
     invoke-virtual {v6}, Landroid/view/View;->getTop()I
 
     move-result v7
 
+    .line 3853
     .local v7, firstViewTop:I
     if-lez v5, :cond_6
 
@@ -564,6 +608,7 @@
 
     move/from16 v4, v21
 
+    .line 3855
     .restart local v4       #extraScroll:I
     :goto_2
     move-object/from16 v0, p0
@@ -582,12 +627,14 @@
 
     invoke-virtual/range {v21 .. v23}, Landroid/widget/AbsListView;->smoothScrollBy(II)V
 
+    .line 3857
     move v0, v5
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/widget/AbsListView$PositionScroller;->mLastSeenPos:I
 
+    .line 3859
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/AbsListView$PositionScroller;->mTargetPos:I
@@ -600,6 +647,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 3860
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -614,6 +662,7 @@
 
     goto/16 :goto_0
 
+    .line 3853
     .end local v4           #extraScroll:I
     :cond_6
     move-object/from16 v0, p0
@@ -638,6 +687,7 @@
 
     goto :goto_2
 
+    .line 3866
     .end local v6           #firstView:Landroid/view/View;
     .end local v7           #firstViewTop:I
     :pswitch_3
@@ -655,11 +705,14 @@
 
     sub-int v12, v21, v22
 
+    .line 3867
     .restart local v12       #lastViewIndex:I
     if-ltz v12, :cond_0
 
+    .line 3870
     add-int v8, v5, v12
 
+    .line 3872
     .restart local v8       #lastPos:I
     move-object/from16 v0, p0
 
@@ -673,6 +726,7 @@
 
     if-ne v0, v1, :cond_7
 
+    .line 3874
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -687,6 +741,7 @@
 
     goto/16 :goto_0
 
+    .line 3878
     :cond_7
     move-object/from16 v0, p0
 
@@ -702,19 +757,23 @@
 
     move-result-object v9
 
+    .line 3879
     .restart local v9       #lastView:Landroid/view/View;
     invoke-virtual {v9}, Landroid/view/View;->getHeight()I
 
     move-result v11
 
+    .line 3880
     .restart local v11       #lastViewHeight:I
     invoke-virtual {v9}, Landroid/view/View;->getTop()I
 
     move-result v14
 
+    .line 3881
     .restart local v14       #lastViewTop:I
     sub-int v13, v15, v14
 
+    .line 3882
     .restart local v13       #lastViewPixelsShowing:I
     move v0, v8
 
@@ -722,6 +781,7 @@
 
     iput v0, v1, Landroid/widget/AbsListView$PositionScroller;->mLastSeenPos:I
 
+    .line 3883
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/widget/AbsListView$PositionScroller;->mBoundPos:I
@@ -734,6 +794,7 @@
 
     if-le v0, v1, :cond_8
 
+    .line 3884
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -762,6 +823,7 @@
 
     invoke-virtual/range {v21 .. v23}, Landroid/widget/AbsListView;->smoothScrollBy(II)V
 
+    .line 3885
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -776,6 +838,7 @@
 
     goto/16 :goto_0
 
+    .line 3887
     :cond_8
     move-object/from16 v0, p0
 
@@ -785,12 +848,15 @@
 
     sub-int v2, v15, v21
 
+    .line 3888
     .local v2, bottom:I
     add-int v10, v14, v11
 
+    .line 3889
     .local v10, lastViewBottom:I
     if-le v2, v10, :cond_0
 
+    .line 3890
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
@@ -815,6 +881,7 @@
 
     goto/16 :goto_0
 
+    .line 3775
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -835,12 +902,15 @@
 
     const/4 v4, -0x1
 
+    .line 3677
     invoke-virtual {p0}, Landroid/widget/AbsListView$PositionScroller;->stop()V
 
+    .line 3679
     iget-object v3, p0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
 
     iget v0, v3, Landroid/widget/AdapterView;->mFirstPosition:I
 
+    .line 3680
     .local v0, firstPos:I
     iget-object v3, p0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
 
@@ -852,52 +922,67 @@
 
     sub-int v1, v3, v5
 
+    .line 3682
     .local v1, lastPos:I
     const/4 v2, 0x0
 
+    .line 3683
     .local v2, viewTravelCount:I
     if-gt p1, v0, :cond_1
 
+    .line 3684
     sub-int v3, v0, p1
 
     add-int/lit8 v2, v3, 0x1
 
+    .line 3685
     const/4 v3, 0x2
 
     iput v3, p0, Landroid/widget/AbsListView$PositionScroller;->mMode:I
 
+    .line 3694
     :goto_0
     if-lez v2, :cond_2
 
+    .line 3695
     div-int v3, v6, v2
 
     iput v3, p0, Landroid/widget/AbsListView$PositionScroller;->mScrollDuration:I
 
+    .line 3699
     :goto_1
     iput p1, p0, Landroid/widget/AbsListView$PositionScroller;->mTargetPos:I
 
+    .line 3700
     iput v4, p0, Landroid/widget/AbsListView$PositionScroller;->mBoundPos:I
 
+    .line 3701
     iput v4, p0, Landroid/widget/AbsListView$PositionScroller;->mLastSeenPos:I
 
+    .line 3703
     iget-object v3, p0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v3, p0}, Landroid/widget/AbsListView;->post(Ljava/lang/Runnable;)Z
 
+    .line 3704
     :cond_0
     return-void
 
+    .line 3686
     :cond_1
     if-lt p1, v1, :cond_0
 
+    .line 3687
     sub-int v3, p1, v1
 
     add-int/lit8 v2, v3, 0x1
 
+    .line 3688
     iput v5, p0, Landroid/widget/AbsListView$PositionScroller;->mMode:I
 
     goto :goto_0
 
+    .line 3697
     :cond_2
     iput v6, p0, Landroid/widget/AbsListView$PositionScroller;->mScrollDuration:I
 
@@ -916,21 +1001,27 @@
 
     const/4 v8, 0x1
 
+    .line 3707
     invoke-virtual {p0}, Landroid/widget/AbsListView$PositionScroller;->stop()V
 
+    .line 3709
     if-ne p2, v9, :cond_1
 
+    .line 3710
     invoke-virtual {p0, p1}, Landroid/widget/AbsListView$PositionScroller;->start(I)V
 
+    .line 3765
     :cond_0
     :goto_0
     return-void
 
+    .line 3714
     :cond_1
     iget-object v7, p0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
 
     iget v3, v7, Landroid/widget/AdapterView;->mFirstPosition:I
 
+    .line 3715
     .local v3, firstPos:I
     iget-object v7, p0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
 
@@ -942,100 +1033,128 @@
 
     sub-int v4, v7, v8
 
+    .line 3717
     .local v4, lastPos:I
     const/4 v6, 0x0
 
+    .line 3718
     .local v6, viewTravelCount:I
     if-gt p1, v3, :cond_3
 
+    .line 3719
     sub-int v1, v4, p2
 
+    .line 3720
     .local v1, boundPosFromLast:I
     if-lt v1, v8, :cond_0
 
+    .line 3725
     sub-int v7, v3, p1
 
     add-int/lit8 v5, v7, 0x1
 
+    .line 3726
     .local v5, posTravel:I
     sub-int v2, v1, v8
 
+    .line 3727
     .local v2, boundTravel:I
     if-ge v2, v5, :cond_2
 
+    .line 3728
     move v6, v2
 
+    .line 3729
     const/4 v7, 0x4
 
     iput v7, p0, Landroid/widget/AbsListView$PositionScroller;->mMode:I
 
+    .line 3755
     .end local v1           #boundPosFromLast:I
     :goto_1
     if-lez v6, :cond_5
 
+    .line 3756
     div-int v7, v10, v6
 
     iput v7, p0, Landroid/widget/AbsListView$PositionScroller;->mScrollDuration:I
 
+    .line 3760
     :goto_2
     iput p1, p0, Landroid/widget/AbsListView$PositionScroller;->mTargetPos:I
 
+    .line 3761
     iput p2, p0, Landroid/widget/AbsListView$PositionScroller;->mBoundPos:I
 
+    .line 3762
     iput v9, p0, Landroid/widget/AbsListView$PositionScroller;->mLastSeenPos:I
 
+    .line 3764
     iget-object v7, p0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v7, p0}, Landroid/widget/AbsListView;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
+    .line 3731
     .restart local v1       #boundPosFromLast:I
     :cond_2
     move v6, v5
 
+    .line 3732
     const/4 v7, 0x2
 
     iput v7, p0, Landroid/widget/AbsListView$PositionScroller;->mMode:I
 
     goto :goto_1
 
+    .line 3734
     .end local v1           #boundPosFromLast:I
     .end local v2           #boundTravel:I
     .end local v5           #posTravel:I
     :cond_3
     if-lt p1, v4, :cond_0
 
+    .line 3735
     sub-int v0, p2, v3
 
+    .line 3736
     .local v0, boundPosFromFirst:I
     if-lt v0, v8, :cond_0
 
+    .line 3741
     sub-int v7, p1, v4
 
     add-int/lit8 v5, v7, 0x1
 
+    .line 3742
     .restart local v5       #posTravel:I
     sub-int v2, v0, v8
 
+    .line 3743
     .restart local v2       #boundTravel:I
     if-ge v2, v5, :cond_4
 
+    .line 3744
     move v6, v2
 
+    .line 3745
     const/4 v7, 0x3
 
     iput v7, p0, Landroid/widget/AbsListView$PositionScroller;->mMode:I
 
     goto :goto_1
 
+    .line 3747
     :cond_4
     move v6, v5
 
+    .line 3748
     iput v8, p0, Landroid/widget/AbsListView$PositionScroller;->mMode:I
 
     goto :goto_1
 
+    .line 3758
     .end local v0           #boundPosFromFirst:I
     :cond_5
     iput v10, p0, Landroid/widget/AbsListView$PositionScroller;->mScrollDuration:I
@@ -1047,9 +1166,11 @@
     .locals 1
 
     .prologue
+    .line 3768
     iget-object v0, p0, Landroid/widget/AbsListView$PositionScroller;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/AbsListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 3769
     return-void
 .end method

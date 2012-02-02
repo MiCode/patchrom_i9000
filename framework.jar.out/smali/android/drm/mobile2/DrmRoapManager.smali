@@ -42,6 +42,7 @@
     .locals 3
 
     .prologue
+    .line 375
     :try_start_0
     const-string v1, "drm2_jni"
 
@@ -49,14 +50,17 @@
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 379
     :goto_0
     return-void
 
+    .line 376
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 377
     .local v0, ule:Ljava/lang/UnsatisfiedLinkError;
     sget-object v1, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
@@ -74,20 +78,27 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 19
     const-string v0, "SISODRM"
 
     iput-object v0, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
+    .line 20
     iput-object v1, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
+    .line 29
     iput-object v1, p0, Landroid/drm/mobile2/DrmRoapManager;->httpThread:Ljava/lang/Thread;
 
+    .line 31
     iput-object p1, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
+    .line 41
     invoke-direct {p0}, Landroid/drm/mobile2/DrmRoapManager;->roapInit()V
 
+    .line 42
     return-void
 .end method
 
@@ -110,6 +121,7 @@
     .parameter "x0"
 
     .prologue
+    .line 17
     iget-object v0, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -136,8 +148,10 @@
     .parameter "ext3"
 
     .prologue
+    .line 268
     packed-switch p1, :pswitch_data_0
 
+    .line 337
     :pswitch_0
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -145,11 +159,13 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 340
     .end local p4
     .end local p5
     :goto_0
     return-void
 
+    .line 270
     .restart local p4
     .restart local p5
     :pswitch_1
@@ -159,6 +175,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 271
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -185,12 +202,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 273
     move-object v0, p4
 
     check-cast v0, Landroid/drm/mobile2/HttpConfig;
 
     move-object v2, v0
 
+    .line 274
     .local v2, config:Landroid/drm/mobile2/HttpConfig;
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -218,10 +237,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 276
     invoke-direct {p0, p4, p1}, Landroid/drm/mobile2/DrmRoapManager;->sendHttpRequest(Ljava/lang/Object;I)V
 
     goto :goto_0
 
+    .line 280
     .end local v2           #config:Landroid/drm/mobile2/HttpConfig;
     :pswitch_2
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
@@ -230,6 +251,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 281
     check-cast p4, [I
 
     .end local p4
@@ -239,6 +261,7 @@
 
     move-object v1, v0
 
+    .line 282
     .local v1, a:[I
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -266,6 +289,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 283
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -292,6 +316,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 284
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -318,12 +343,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 285
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnRoapListener:Landroid/drm/mobile2/OMADRMManager$OnRoapListener;
 
     if-eqz v3, :cond_0
 
+    .line 286
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnRoapListener:Landroid/drm/mobile2/OMADRMManager$OnRoapListener;
@@ -344,6 +371,7 @@
 
     goto/16 :goto_0
 
+    .line 289
     :cond_0
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -353,6 +381,7 @@
 
     goto/16 :goto_0
 
+    .line 293
     .end local v1           #a:[I
     .restart local p4
     :pswitch_3
@@ -388,12 +417,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 295
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnRoapListener:Landroid/drm/mobile2/OMADRMManager$OnRoapListener;
 
     if-eqz v3, :cond_1
 
+    .line 296
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnRoapListener:Landroid/drm/mobile2/OMADRMManager$OnRoapListener;
@@ -402,6 +433,7 @@
 
     goto/16 :goto_0
 
+    .line 298
     :cond_1
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -411,6 +443,7 @@
 
     goto/16 :goto_0
 
+    .line 302
     :pswitch_4
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -445,12 +478,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 304
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnRoapListener:Landroid/drm/mobile2/OMADRMManager$OnRoapListener;
 
     if-eqz v3, :cond_2
 
+    .line 305
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnRoapListener:Landroid/drm/mobile2/OMADRMManager$OnRoapListener;
@@ -466,6 +501,7 @@
 
     goto/16 :goto_0
 
+    .line 308
     .restart local p4
     :cond_2
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
@@ -476,6 +512,7 @@
 
     goto/16 :goto_0
 
+    .line 312
     .restart local p5
     :pswitch_5
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
@@ -516,12 +553,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 314
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnDownloadListener:Landroid/drm/mobile2/OMADRMManager$OnDownloadListener;
 
     if-eqz v3, :cond_3
 
+    .line 315
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnDownloadListener:Landroid/drm/mobile2/OMADRMManager$OnDownloadListener;
@@ -533,6 +572,7 @@
 
     goto/16 :goto_0
 
+    .line 318
     .restart local p4
     :cond_3
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
@@ -543,6 +583,7 @@
 
     goto/16 :goto_0
 
+    .line 323
     :pswitch_6
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -550,12 +591,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 324
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnDownloadListener:Landroid/drm/mobile2/OMADRMManager$OnDownloadListener;
 
     if-eqz v3, :cond_4
 
+    .line 325
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnDownloadListener:Landroid/drm/mobile2/OMADRMManager$OnDownloadListener;
@@ -567,6 +610,7 @@
 
     invoke-interface {v3, p4, p2}, Landroid/drm/mobile2/OMADRMManager$OnDownloadListener;->onProgressDownload([BI)Z
 
+    .line 330
     :goto_1
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -576,6 +620,7 @@
 
     goto/16 :goto_0
 
+    .line 328
     .restart local p4
     :cond_4
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
@@ -586,6 +631,7 @@
 
     goto :goto_1
 
+    .line 333
     :pswitch_7
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -593,6 +639,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 334
     iget-object v3, p0, Landroid/drm/mobile2/DrmRoapManager;->omaDrmManager:Landroid/drm/mobile2/OMADRMManager;
 
     iget-object v3, v3, Landroid/drm/mobile2/OMADRMManager;->mOnDownloadListener:Landroid/drm/mobile2/OMADRMManager$OnDownloadListener;
@@ -603,6 +650,7 @@
 
     goto/16 :goto_0
 
+    .line 268
     nop
 
     :pswitch_data_0
@@ -628,12 +676,14 @@
     .parameter "type"
 
     .prologue
+    .line 132
     move-object v0, p1
 
     check-cast v0, Landroid/drm/mobile2/HttpConfig;
 
     move-object v1, v0
 
+    .line 133
     .local v1, config:Landroid/drm/mobile2/HttpConfig;
     iget-object v4, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -699,12 +749,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 137
     sget-object v4, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v5, "Http request rcvd"
 
     invoke-virtual {v4, v5}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 145
     new-instance v2, Landroid/drm/mobile2/DrmRoapManager$DataHandler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -713,6 +765,7 @@
 
     invoke-direct {v2, p0, v4}, Landroid/drm/mobile2/DrmRoapManager$DataHandler;-><init>(Landroid/drm/mobile2/DrmRoapManager;Landroid/os/Looper;)V
 
+    .line 147
     .local v2, datahandle:Landroid/drm/mobile2/DrmRoapManager$DataHandler;
     new-instance v3, Ljava/lang/Thread;
 
@@ -722,9 +775,11 @@
 
     invoke-direct {v3, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
+    .line 148
     .local v3, httpThread:Ljava/lang/Thread;
     invoke-virtual {v3}, Ljava/lang/Thread;->start()V
 
+    .line 150
     return-void
 .end method
 
@@ -751,33 +806,40 @@
     .end annotation
 
     .prologue
+    .line 203
     invoke-static {}, Landroid/drm/mobile2/HttpManager;->closeHttpConnection()Z
 
     move-result v0
 
+    .line 204
     .local v0, status:Z
     if-eqz v0, :cond_1
 
+    .line 205
     iget-object v1, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     const-string v2, "Client is closed succesfully.Interrupt the thread"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 206
     iget-object v1, p0, Landroid/drm/mobile2/DrmRoapManager;->httpThread:Ljava/lang/Thread;
 
     if-eqz v1, :cond_0
 
+    .line 207
     iget-object v1, p0, Landroid/drm/mobile2/DrmRoapManager;->httpThread:Ljava/lang/Thread;
 
     invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
+    .line 212
     :cond_0
     :goto_0
     invoke-direct {p0}, Landroid/drm/mobile2/DrmRoapManager;->Drm2DownloadCancel()Z
 
     move-result v0
 
+    .line 213
     iget-object v1, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -800,8 +862,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 214
     return v0
 
+    .line 209
     :cond_1
     iget-object v1, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
@@ -822,6 +886,7 @@
     .end annotation
 
     .prologue
+    .line 241
     invoke-direct {p0, p1}, Landroid/drm/mobile2/DrmRoapManager;->dcfHeaderInfo(Ljava/lang/String;)Landroid/drm/mobile2/DCFHeaderInfo;
 
     move-result-object v0
@@ -841,6 +906,7 @@
     .parameter "ext3"
 
     .prologue
+    .line 248
     iget-object v0, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -873,8 +939,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 262
     invoke-direct/range {p0 .. p6}, Landroid/drm/mobile2/DrmRoapManager;->handlenativecallback(IIILjava/lang/Object;J)V
 
+    .line 263
     return-void
 .end method
 
@@ -886,19 +954,21 @@
     .parameter "fileSize"
 
     .prologue
+    .line 220
     iget-object v0, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     const-string v1, "Inside ProcessRoap"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 221
     iget-object v0, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "trigger is"
+    const-string/jumbo v2, "trigger is"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -908,7 +978,7 @@
 
     move-result-object v1
 
-    const-string v2, "size:"
+    const-string/jumbo v2, "size:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -924,6 +994,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 222
     invoke-direct/range {p0 .. p5}, Landroid/drm/mobile2/DrmRoapManager;->DrmStore2Ro(Ljava/lang/String;ILjava/lang/String;J)Z
 
     move-result v0
@@ -937,19 +1008,21 @@
     .parameter "size"
 
     .prologue
+    .line 229
     iget-object v0, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     const-string v1, "Inside ProcessRoap"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 230
     iget-object v0, p0, Landroid/drm/mobile2/DrmRoapManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "trigger is"
+    const-string/jumbo v2, "trigger is"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -959,7 +1032,7 @@
 
     move-result-object v1
 
-    const-string v2, "size:"
+    const-string/jumbo v2, "size:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -975,6 +1048,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 231
     invoke-direct {p0, p2, p1}, Landroid/drm/mobile2/DrmRoapManager;->DrmStore2RoTrigger(I[B)Z
 
     move-result v0
@@ -994,6 +1068,7 @@
     .end annotation
 
     .prologue
+    .line 343
     monitor-enter p0
 
     :try_start_0

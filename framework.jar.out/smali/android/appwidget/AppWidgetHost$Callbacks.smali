@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 49
     iput-object p1, p0, Landroid/appwidget/AppWidgetHost$Callbacks;->this$0:Landroid/appwidget/AppWidgetHost;
 
     invoke-direct {p0}, Lcom/android/internal/appwidget/IAppWidgetHost$Stub;-><init>()V
@@ -39,6 +40,7 @@
     .parameter "info"
 
     .prologue
+    .line 58
     iget-object v1, p0, Landroid/appwidget/AppWidgetHost$Callbacks;->this$0:Landroid/appwidget/AppWidgetHost;
 
     iget-object v1, v1, Landroid/appwidget/AppWidgetHost;->mHandler:Landroid/os/Handler;
@@ -49,13 +51,17 @@
 
     move-result-object v0
 
+    .line 59
     .local v0, msg:Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
+    .line 60
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 61
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 62
     return-void
 .end method
 
@@ -65,6 +71,7 @@
     .parameter "views"
 
     .prologue
+    .line 51
     iget-object v1, p0, Landroid/appwidget/AppWidgetHost$Callbacks;->this$0:Landroid/appwidget/AppWidgetHost;
 
     iget-object v1, v1, Landroid/appwidget/AppWidgetHost;->mHandler:Landroid/os/Handler;
@@ -75,12 +82,16 @@
 
     move-result-object v0
 
+    .line 52
     .local v0, msg:Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
+    .line 53
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 54
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 55
     return-void
 .end method

@@ -32,10 +32,13 @@
     .parameter "powerManager"
 
     .prologue
+    .line 56
     invoke-direct {p0, p1}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
+    .line 57
     iput-object p2, p0, Lcom/android/internal/policy/impl/PowerDialog;->mPowerManager:Landroid/os/LocalPowerManager;
 
+    .line 58
     return-void
 .end method
 
@@ -45,20 +48,24 @@
     .locals 2
 
     .prologue
+    .line 178
     invoke-super {p0}, Landroid/app/Dialog;->dismiss()V
 
+    .line 179
     const-string v0, "PowerDialog"
 
     const-string v1, "dismiss... reenabling expand"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 180
     sget-object v0, Lcom/android/internal/policy/impl/PowerDialog;->sStatusBar:Landroid/app/StatusBarManager;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/StatusBarManager;->disable(I)V
 
+    .line 181
     return-void
 .end method
 
@@ -67,12 +74,15 @@
     .parameter "v"
 
     .prologue
+    .line 126
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->dismiss()V
 
+    .line 127
     iget-object v1, p0, Lcom/android/internal/policy/impl/PowerDialog;->mPower:Landroid/widget/Button;
 
     if-ne p1, v1, :cond_1
 
+    .line 129
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -81,15 +91,18 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/app/ShutdownThread;->shutdown(Landroid/content/Context;Z)V
 
+    .line 148
     :cond_0
     :goto_0
     return-void
 
+    .line 130
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/PowerDialog;->mRadioPower:Landroid/widget/Button;
 
     if-ne p1, v1, :cond_2
 
+    .line 132
     :try_start_0
     const-string v1, "phone"
 
@@ -101,38 +114,46 @@
 
     move-result-object v0
 
+    .line 133
     .local v0, phone:Lcom/android/internal/telephony/ITelephony;
     if-eqz v0, :cond_0
 
+    .line 134
     invoke-interface {v0}, Lcom/android/internal/telephony/ITelephony;->toggleRadioOnOff()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    .line 136
     .end local v0           #phone:Lcom/android/internal/telephony/ITelephony;
     :catch_0
     move-exception v1
 
     goto :goto_0
 
+    .line 139
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/PowerDialog;->mSilent:Landroid/widget/Button;
 
     if-eq p1, v1, :cond_0
 
+    .line 141
     iget-object v1, p0, Lcom/android/internal/policy/impl/PowerDialog;->mKeyguard:Landroid/widget/Button;
 
     if-ne p1, v1, :cond_0
 
+    .line 142
     invoke-virtual {p1}, Landroid/view/View;->isInTouchMode()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 144
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->dismiss()V
 
+    .line 145
     iget-object v1, p0, Lcom/android/internal/policy/impl/PowerDialog;->mPowerManager:Landroid/os/LocalPowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -157,17 +178,21 @@
 
     const/4 v5, 0x4
 
+    .line 62
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
+    .line 64
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
+    .line 66
     .local v0, context:Landroid/content/Context;
     sget-object v3, Lcom/android/internal/policy/impl/PowerDialog;->sStatusBar:Landroid/app/StatusBarManager;
 
     if-nez v3, :cond_0
 
+    .line 67
     const-string v3, "statusbar"
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -178,11 +203,13 @@
 
     sput-object v3, Lcom/android/internal/policy/impl/PowerDialog;->sStatusBar:Landroid/app/StatusBarManager;
 
+    .line 70
     :cond_0
     const v3, 0x109004b
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/PowerDialog;->setContentView(I)V
 
+    .line 72
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -191,6 +218,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setType(I)V
 
+    .line 73
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -207,12 +235,14 @@
 
     if-nez v3, :cond_1
 
+    .line 75
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
     invoke-virtual {v3, v5, v5}, Landroid/view/Window;->setFlags(II)V
 
+    .line 78
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->getWindow()Landroid/view/Window;
 
@@ -220,6 +250,7 @@
 
     invoke-virtual {v3, v6, v6}, Landroid/view/Window;->setFlags(II)V
 
+    .line 81
     const v3, 0x1040145
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -228,6 +259,7 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/PowerDialog;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 83
     const v3, 0x102021b
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/PowerDialog;->findViewById(I)Landroid/view/View;
@@ -238,6 +270,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mKeyguard:Landroid/widget/Button;
 
+    .line 84
     const v3, 0x102021c
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/PowerDialog;->findViewById(I)Landroid/view/View;
@@ -248,6 +281,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mPower:Landroid/widget/Button;
 
+    .line 85
     const v3, 0x102021e
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/PowerDialog;->findViewById(I)Landroid/view/View;
@@ -258,6 +292,7 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mRadioPower:Landroid/widget/Button;
 
+    .line 86
     const v3, 0x102021d
 
     invoke-virtual {p0, v3}, Lcom/android/internal/policy/impl/PowerDialog;->findViewById(I)Landroid/view/View;
@@ -268,51 +303,62 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mSilent:Landroid/widget/Button;
 
+    .line 88
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mKeyguard:Landroid/widget/Button;
 
     if-eqz v3, :cond_2
 
+    .line 89
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mKeyguard:Landroid/widget/Button;
 
     invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
+    .line 90
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mKeyguard:Landroid/widget/Button;
 
     invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 92
     :cond_2
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mPower:Landroid/widget/Button;
 
     if-eqz v3, :cond_3
 
+    .line 93
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mPower:Landroid/widget/Button;
 
     invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 95
     :cond_3
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mRadioPower:Landroid/widget/Button;
 
     if-eqz v3, :cond_4
 
+    .line 96
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mRadioPower:Landroid/widget/Button;
 
     invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 98
     :cond_4
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mSilent:Landroid/widget/Button;
 
     if-eqz v3, :cond_5
 
+    .line 99
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mSilent:Landroid/widget/Button;
 
     invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 101
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mSilent:Landroid/widget/Button;
 
     const/16 v4, 0x8
 
     invoke-virtual {v3, v4}, Landroid/widget/Button;->setVisibility(I)V
 
+    .line 107
     :cond_5
     const v3, 0x1040149
 
@@ -320,15 +366,18 @@
 
     move-result-object v2
 
+    .line 108
     .local v2, text:Ljava/lang/CharSequence;
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mKeyguard:Landroid/widget/Button;
 
     invoke-virtual {v3, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
+    .line 109
     iget-object v3, p0, Lcom/android/internal/policy/impl/PowerDialog;->mKeyguard:Landroid/widget/Button;
 
     invoke-virtual {v3}, Landroid/widget/Button;->requestFocus()Z
 
+    .line 112
     :try_start_0
     const-string v3, "phone"
 
@@ -340,9 +389,11 @@
 
     move-result-object v1
 
+    .line 113
     .local v1, phone:Lcom/android/internal/telephony/ITelephony;
     if-eqz v1, :cond_6
 
+    .line 114
     invoke-interface {v1}, Lcom/android/internal/telephony/ITelephony;->isRadioOn()Z
 
     move-result v3
@@ -359,6 +410,7 @@
 
     move-object v2, v3
 
+    .line 122
     .end local v1           #phone:Lcom/android/internal/telephony/ITelephony;
     :cond_6
     :goto_0
@@ -366,8 +418,10 @@
 
     invoke-virtual {v3, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
+    .line 123
     return-void
 
+    .line 114
     .restart local v1       #phone:Lcom/android/internal/telephony/ITelephony;
     :cond_7
     const v3, 0x1040147
@@ -383,6 +437,7 @@
 
     goto :goto_0
 
+    .line 118
     .end local v1           #phone:Lcom/android/internal/telephony/ITelephony;
     :catch_0
     move-exception v3
@@ -399,6 +454,7 @@
     .prologue
     const/4 v5, 0x1
 
+    .line 157
     const/16 v0, 0x17
 
     if-ne p2, v0, :cond_0
@@ -409,15 +465,19 @@
 
     if-eq v0, v5, :cond_1
 
+    .line 160
     :cond_0
     const/4 v0, 0x0
 
+    .line 168
     :goto_0
     return v0
 
+    .line 164
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PowerDialog;->dismiss()V
 
+    .line 167
     iget-object v0, p0, Lcom/android/internal/policy/impl/PowerDialog;->mPowerManager:Landroid/os/LocalPowerManager;
 
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getEventTime()J
@@ -432,6 +492,7 @@
 
     move v0, v5
 
+    .line 168
     goto :goto_0
 .end method
 
@@ -439,19 +500,23 @@
     .locals 2
 
     .prologue
+    .line 172
     invoke-super {p0}, Landroid/app/Dialog;->show()V
 
+    .line 173
     const-string v0, "PowerDialog"
 
     const-string v1, "show... disabling expand"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 174
     sget-object v0, Lcom/android/internal/policy/impl/PowerDialog;->sStatusBar:Landroid/app/StatusBarManager;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/StatusBarManager;->disable(I)V
 
+    .line 175
     return-void
 .end method

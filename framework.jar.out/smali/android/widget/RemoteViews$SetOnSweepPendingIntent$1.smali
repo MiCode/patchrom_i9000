@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 468
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnSweepPendingIntent$1;->this$1:Landroid/widget/RemoteViews$SetOnSweepPendingIntent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,6 +45,7 @@
     .prologue
     const/4 v8, 0x1
 
+    .line 470
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -55,9 +57,11 @@
     :pswitch_0
     move v0, v8
 
+    .line 491
     :goto_1
     return v0
 
+    .line 472
     :pswitch_1
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnSweepPendingIntent$1;->this$1:Landroid/widget/RemoteViews$SetOnSweepPendingIntent;
 
@@ -69,11 +73,13 @@
 
     goto :goto_0
 
+    .line 475
     :pswitch_2
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v6
 
+    .line 477
     .local v6, currentPoint:F
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnSweepPendingIntent$1;->this$1:Landroid/widget/RemoteViews$SetOnSweepPendingIntent;
 
@@ -95,6 +101,7 @@
 
     if-ltz v0, :cond_0
 
+    .line 480
     :try_start_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -123,13 +130,16 @@
     :goto_2
     move v0, v8
 
+    .line 487
     goto :goto_1
 
+    .line 484
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
+    .line 485
     .local v7, e:Landroid/content/IntentSender$SendIntentException;
     const-string v0, "RemoteViews"
 
@@ -139,6 +149,7 @@
 
     goto :goto_2
 
+    .line 470
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

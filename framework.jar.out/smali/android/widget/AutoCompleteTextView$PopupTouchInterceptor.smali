@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1515
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$PopupTouchInterceptor;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .parameter "x1"
 
     .prologue
+    .line 1515
     invoke-direct {p0, p1}, Landroid/widget/AutoCompleteTextView$PopupTouchInterceptor;-><init>(Landroid/widget/AutoCompleteTextView;)V
 
     return-void
@@ -53,10 +55,12 @@
     .parameter "event"
 
     .prologue
+    .line 1517
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
+    .line 1518
     .local v0, action:I
     if-nez v0, :cond_1
 
@@ -82,6 +86,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 1520
     iget-object v1, p0, Landroid/widget/AutoCompleteTextView$PopupTouchInterceptor;->this$0:Landroid/widget/AutoCompleteTextView;
 
     iget-object v2, p0, Landroid/widget/AutoCompleteTextView$PopupTouchInterceptor;->this$0:Landroid/widget/AutoCompleteTextView;
@@ -95,17 +100,20 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/widget/AutoCompleteTextView;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 1524
     :cond_0
     :goto_0
     const/4 v1, 0x0
 
     return v1
 
+    .line 1521
     :cond_1
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 1522
     iget-object v1, p0, Landroid/widget/AutoCompleteTextView$PopupTouchInterceptor;->this$0:Landroid/widget/AutoCompleteTextView;
 
     iget-object v2, p0, Landroid/widget/AutoCompleteTextView$PopupTouchInterceptor;->this$0:Landroid/widget/AutoCompleteTextView;

@@ -84,53 +84,66 @@
 
     const-string v7, "UsbStorageConnector"
 
+    .line 571
     invoke-direct {p0}, Landroid/os/storage/IUsbStorageService$Stub;-><init>()V
 
+    .line 71
     iput-boolean v6, p0, Lcom/android/server/UsbStorageService;->mBooted:Z
 
+    .line 72
     iput-boolean v6, p0, Lcom/android/server/UsbStorageService;->mReady:Z
 
+    .line 74
     iput-boolean v6, p0, Lcom/android/server/UsbStorageService;->mSafeUnmountedUsbHost:Z
 
+    .line 76
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
+    .line 135
     new-instance v2, Lcom/android/server/UsbStorageService$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/UsbStorageService$2;-><init>(Lcom/android/server/UsbStorageService;)V
 
     iput-object v2, p0, Lcom/android/server/UsbStorageService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 601
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
+    .line 572
     const-string v2, "UsbStorageService"
 
     const-string v2, "UsbStorageService :: "
 
     invoke-static {v4, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 573
     iput-object p1, p0, Lcom/android/server/UsbStorageService;->mContext:Landroid/content/Context;
 
+    .line 577
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 578
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 579
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v2, v0, v3, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
+    .line 581
     new-instance v2, Landroid/os/HandlerThread;
 
     const-string v3, "UsbStorageServiceEvent"
@@ -139,10 +152,12 @@
 
     iput-object v2, p0, Lcom/android/server/UsbStorageService;->mWorkQueueHandlerThread:Landroid/os/HandlerThread;
 
+    .line 582
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mWorkQueueHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
+    .line 583
     new-instance v2, Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mWorkQueueHandlerThread:Landroid/os/HandlerThread;
@@ -155,6 +170,7 @@
 
     iput-object v2, p0, Lcom/android/server/UsbStorageService;->mWorkQueueHandler:Landroid/os/Handler;
 
+    .line 585
     new-instance v2, Landroid/os/HandlerThread;
 
     const-string v3, "UsbStorageService"
@@ -163,10 +179,12 @@
 
     iput-object v2, p0, Lcom/android/server/UsbStorageService;->mHandlerThread:Landroid/os/HandlerThread;
 
+    .line 586
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
+    .line 587
     new-instance v2, Lcom/android/server/UsbStorageService$UsbStorageServiceHandler;
 
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -179,6 +197,7 @@
 
     iput-object v2, p0, Lcom/android/server/UsbStorageService;->mHandler:Landroid/os/Handler;
 
+    .line 589
     new-instance v2, Lcom/android/server/NativeDaemonConnector;
 
     const-string v3, "usbstorage"
@@ -191,10 +210,13 @@
 
     iput-object v2, p0, Lcom/android/server/UsbStorageService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
+    .line 591
     iput-boolean v6, p0, Lcom/android/server/UsbStorageService;->mSafeUnmountedUsbHost:Z
 
+    .line 593
     iput-boolean v6, p0, Lcom/android/server/UsbStorageService;->mReady:Z
 
+    .line 594
     new-instance v1, Ljava/lang/Thread;
 
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -203,9 +225,11 @@
 
     invoke-direct {v1, v2, v7}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
+    .line 595
     .local v1, thread:Ljava/lang/Thread;
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
+    .line 596
     return-void
 .end method
 
@@ -215,6 +239,7 @@
     .parameter "x1"
 
     .prologue
+    .line 59
     iput-boolean p1, p0, Lcom/android/server/UsbStorageService;->mReady:Z
 
     return p1
@@ -226,6 +251,7 @@
     .parameter "x1"
 
     .prologue
+    .line 59
     iput-boolean p1, p0, Lcom/android/server/UsbStorageService;->mBooted:Z
 
     return p1
@@ -236,6 +262,7 @@
     .parameter "x0"
 
     .prologue
+    .line 59
     invoke-direct {p0}, Lcom/android/server/UsbStorageService;->waitForReady()V
 
     return-void
@@ -246,6 +273,7 @@
     .parameter "x0"
 
     .prologue
+    .line 59
     iget-object v0, p0, Lcom/android/server/UsbStorageService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
     return-object v0
@@ -257,6 +285,7 @@
     .parameter "x1"
 
     .prologue
+    .line 59
     invoke-direct {p0, p1}, Lcom/android/server/UsbStorageService;->updatePartitionsList(Ljava/lang/String;)V
 
     return-void
@@ -269,6 +298,7 @@
     .parameter "x2"
 
     .prologue
+    .line 59
     invoke-direct {p0, p1, p2}, Lcom/android/server/UsbStorageService;->doMountVolume(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -284,6 +314,7 @@
     .parameter "x3"
 
     .prologue
+    .line 59
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/UsbStorageService;->onEventInner(ILjava/lang/String;[Ljava/lang/String;)Z
 
     move-result v0
@@ -296,6 +327,7 @@
     .parameter "x0"
 
     .prologue
+    .line 59
     iget-object v0, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
     return-object v0
@@ -308,10 +340,12 @@
     .prologue
     const-string v3, "UsbStorageService"
 
+    .line 556
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     monitor-enter v3
 
+    .line 557
     :try_start_0
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -321,8 +355,10 @@
 
     if-nez v4, :cond_0
 
+    .line 558
     const/4 v0, 0x0
 
+    .line 559
     .local v0, i:I
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -330,6 +366,7 @@
 
     move-result-object v1
 
+    .line 560
     .local v1, iter:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -338,12 +375,14 @@
 
     if-eqz v4, :cond_1
 
+    .line 561
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 562
     .local v2, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     const-string v4, "UsbStorageService"
 
@@ -389,10 +428,13 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 563
     add-int/lit8 v0, v0, 0x1
 
+    .line 564
     goto :goto_0
 
+    .line 566
     .end local v0           #i:I
     .end local v1           #iter:Ljava/util/Iterator;
     .end local v2           #map:Lcom/android/server/UsbStorageService$UsbStorageMap;
@@ -425,11 +467,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 568
     :cond_1
     monitor-exit v3
 
+    .line 569
     return-void
 
+    .line 568
     :catchall_0
     move-exception v4
 
@@ -449,13 +494,16 @@
 
     const-string v8, "UsbStorageService"
 
+    .line 491
     const/4 v2, 0x0
 
+    .line 493
     .local v2, rc:I
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectoryUsbHost()Ljava/io/File;
 
     move-result-object v3
 
+    .line 495
     .local v3, tmpFile:Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -463,6 +511,7 @@
 
     if-nez v4, :cond_1
 
+    .line 496
     const-string v4, "UsbStorageService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -489,8 +538,10 @@
 
     invoke-static {v8, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 497
     invoke-virtual {v3}, Ljava/io/File;->mkdir()Z
 
+    .line 503
     :cond_0
     :goto_0
     :try_start_0
@@ -514,9 +565,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 528
     :goto_1
     return v2
 
+    .line 498
     :cond_1
     invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
 
@@ -524,6 +577,7 @@
 
     if-nez v4, :cond_0
 
+    .line 499
     const-string v4, "UsbStorageService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -552,21 +606,25 @@
 
     goto :goto_0
 
+    .line 504
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 505
     .local v1, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonConnectorException;->getCode()I
 
     move-result v0
 
+    .line 506
     .local v0, code:I
     const/16 v4, 0x191
 
     if-ne v0, v4, :cond_2
 
+    .line 507
     const-string v4, "UsbStorageService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -595,15 +653,18 @@
 
     invoke-static {v8, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 508
     const/4 v2, -0x2
 
     goto :goto_1
 
+    .line 509
     :cond_2
     const/16 v4, 0x192
 
     if-ne v0, v4, :cond_3
 
+    .line 510
     const-string v4, "UsbStorageService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -632,19 +693,23 @@
 
     invoke-static {v8, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 511
     const-string v4, "nofs"
 
     invoke-direct {p0, p1, v4}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 512
     const/4 v2, -0x3
 
     goto :goto_1
 
+    .line 513
     :cond_3
     const/16 v4, 0x193
 
     if-ne v0, v4, :cond_4
 
+    .line 514
     const-string v4, "UsbStorageService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -673,14 +738,17 @@
 
     invoke-static {v8, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 515
     const-string v4, "unmountable"
 
     invoke-direct {p0, p1, v4}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 516
     const/4 v2, -0x4
 
     goto/16 :goto_1
 
+    .line 518
     :cond_4
     const-string v4, "UsbStorageService"
 
@@ -710,6 +778,7 @@
 
     invoke-static {v8, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 519
     const/4 v2, -0x1
 
     goto/16 :goto_1
@@ -721,6 +790,7 @@
     .parameter "with"
 
     .prologue
+    .line 532
     monitor-enter p0
 
     :try_start_0
@@ -756,6 +826,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 534
     const-string v3, "disk"
 
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -764,8 +835,10 @@
 
     if-eqz v3, :cond_2
 
+    .line 535
     const/4 v0, 0x0
 
+    .line 536
     .local v0, bMounted:Z
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -773,6 +846,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 537
     :try_start_1
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -782,12 +856,14 @@
 
     if-nez v4, :cond_1
 
+    .line 538
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     invoke-virtual {v4}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
+    .line 539
     .local v1, iter:Ljava/util/Iterator;
     :cond_0
     :goto_0
@@ -797,12 +873,14 @@
 
     if-eqz v4, :cond_1
 
+    .line 540
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 541
     .local v2, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     iget-object v4, v2, Lcom/android/server/UsbStorageService$UsbStorageMap;->label:Ljava/lang/String;
 
@@ -818,6 +896,7 @@
 
     if-eq v4, v5, :cond_0
 
+    .line 542
     iget-object v4, v2, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
 
     invoke-direct {p0, v4}, Lcom/android/server/UsbStorageService;->doMountVolume(Ljava/lang/String;)I
@@ -826,10 +905,12 @@
 
     if-nez v4, :cond_0
 
+    .line 543
     const/4 v0, 0x1
 
     goto :goto_0
 
+    .line 550
     .end local v1           #iter:Ljava/util/Iterator;
     .end local v2           #map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     :cond_1
@@ -837,6 +918,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 552
     .end local v0           #bMounted:Z
     :cond_2
     const/4 v3, 0x0
@@ -845,6 +927,7 @@
 
     return v3
 
+    .line 550
     .restart local v0       #bMounted:Z
     :catchall_0
     move-exception v4
@@ -859,6 +942,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 532
     .end local v0           #bMounted:Z
     :catchall_1
     move-exception v3
@@ -882,6 +966,7 @@
 
     const-string v8, "UsbStorageService"
 
+    .line 706
     const-string v3, "UsbStorageService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -914,6 +999,7 @@
 
     invoke-static {v8, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 708
     invoke-virtual {p0, p1}, Lcom/android/server/UsbStorageService;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -928,9 +1014,11 @@
 
     move v3, v10
 
+    .line 731
     :goto_0
     return v3
 
+    .line 712
     :cond_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -938,11 +1026,14 @@
 
     invoke-virtual {v3}, Ljava/lang/Runtime;->gc()V
 
+    .line 714
     const/4 v2, 0x0
 
+    .line 715
     .local v2, rc:I
     iput-boolean v5, p0, Lcom/android/server/UsbStorageService;->mSafeUnmountedUsbHost:Z
 
+    .line 718
     :try_start_0
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -973,8 +1064,10 @@
 
     move v3, v9
 
+    .line 720
     goto :goto_0
 
+    .line 718
     :cond_1
     const-string v7, ""
     :try_end_0
@@ -982,44 +1075,53 @@
 
     goto :goto_1
 
+    .line 721
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 722
     .local v1, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonConnectorException;->getCode()I
 
     move-result v0
 
+    .line 723
     .local v0, code:I
     if-ne v0, v10, :cond_2
 
+    .line 724
     const-string v3, "UsbStorageService"
 
     const-string v3, "doUnmountVolume :: result = OperationFailedStorageNotMounted"
 
     invoke-static {v8, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 725
     const/4 v3, -0x5
 
     goto :goto_0
 
+    .line 726
     :cond_2
     const/16 v3, 0x195
 
     if-ne v0, v3, :cond_3
 
+    .line 727
     const-string v3, "UsbStorageService"
 
     const-string v3, "doUnmountVolume :: result = OperationFailedStorageBusy"
 
     invoke-static {v8, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 728
     const/4 v3, -0x7
 
     goto :goto_0
 
+    .line 730
     :cond_3
     const-string v3, "UsbStorageService"
 
@@ -1027,6 +1129,7 @@
 
     invoke-static {v8, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 731
     const/4 v3, -0x1
 
     goto :goto_0
@@ -1045,6 +1148,7 @@
 
     const-string v11, "UsbStorageService"
 
+    .line 797
     :try_start_0
     iget-object v7, p0, Lcom/android/server/UsbStorageService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -1056,6 +1160,7 @@
 
     move-result-object v5
 
+    .line 803
     .local v5, rsp:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1074,6 +1179,7 @@
 
     check-cast v3, Ljava/lang/String;
 
+    .line 804
     .local v3, line:Ljava/lang/String;
     const-string v7, " "
 
@@ -1081,11 +1187,13 @@
 
     move-result-object v6
 
+    .line 805
     .local v6, tok:[Ljava/lang/String;
     array-length v7, v6
 
     if-ge v7, v12, :cond_0
 
+    .line 806
     const-string v7, "UsbStorageService"
 
     const-string v7, "Malformed response to volume connected"
@@ -1094,6 +1202,7 @@
 
     move v7, v10
 
+    .line 831
     .end local v2           #i$:Ljava/util/Iterator;
     .end local v3           #line:Ljava/lang/String;
     .end local v5           #rsp:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
@@ -1101,11 +1210,13 @@
     :goto_0
     return v7
 
+    .line 798
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
+    .line 799
     .local v1, ex:Lcom/android/server/NativeDaemonConnectorException;
     const-string v7, "UsbStorageService"
 
@@ -1115,8 +1226,10 @@
 
     move v7, v10
 
+    .line 800
     goto :goto_0
 
+    .line 812
     .end local v1           #ex:Lcom/android/server/NativeDaemonConnectorException;
     .restart local v2       #i$:Ljava/util/Iterator;
     .restart local v3       #line:Ljava/lang/String;
@@ -1134,11 +1247,13 @@
 
     move-result v0
 
+    .line 818
     .local v0, code:I
     const/16 v7, 0xd8
 
     if-ne v0, v7, :cond_2
 
+    .line 819
     const-string v7, "enabled"
 
     aget-object v8, v6, v12
@@ -1149,6 +1264,7 @@
 
     if-eqz v7, :cond_1
 
+    .line 820
     const-string v7, "UsbStorageService"
 
     const-string v7, " :::: isUsbStorageConnected :: result = true"
@@ -1157,14 +1273,17 @@
 
     move v7, v9
 
+    .line 821
     goto :goto_0
 
+    .line 813
     .end local v0           #code:I
     :catch_1
     move-exception v7
 
     move-object v4, v7
 
+    .line 814
     .local v4, nfe:Ljava/lang/NumberFormatException;
     const-string v7, "UsbStorageService"
 
@@ -1184,8 +1303,10 @@
 
     move v7, v10
 
+    .line 815
     goto :goto_0
 
+    .line 823
     .end local v4           #nfe:Ljava/lang/NumberFormatException;
     .restart local v0       #code:I
     :cond_1
@@ -1197,8 +1318,10 @@
 
     move v7, v10
 
+    .line 824
     goto :goto_0
 
+    .line 826
     :cond_2
     const-string v7, "UsbStorageService"
 
@@ -1220,8 +1343,10 @@
 
     move v7, v10
 
+    .line 827
     goto :goto_0
 
+    .line 830
     .end local v0           #code:I
     .end local v3           #line:Ljava/lang/String;
     .end local v6           #tok:[Ljava/lang/String;
@@ -1234,6 +1359,7 @@
 
     move v7, v10
 
+    .line 831
     goto :goto_0
 .end method
 
@@ -1249,37 +1375,46 @@
 
     const-string v5, "UsbStorageService"
 
+    .line 442
     invoke-virtual {p0, p2}, Lcom/android/server/UsbStorageService;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 443
     .local v1, vs:Ljava/lang/String;
     const/4 v0, 0x0
 
+    .line 445
     .local v0, in:Landroid/content/Intent;
     const/4 v2, -0x1
 
     if-ne p4, v2, :cond_2
 
+    .line 483
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 484
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 486
     :cond_1
     :goto_1
     return-void
 
+    .line 446
     :cond_2
     if-eqz p4, :cond_0
 
+    .line 448
     const/4 v2, 0x1
 
     if-ne p4, v2, :cond_4
 
+    .line 449
     const-string v2, "bad_removal"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1304,10 +1439,12 @@
 
     if-nez v2, :cond_3
 
+    .line 452
     const-string v2, "unmounted"
 
     invoke-direct {p0, p2, v2}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 453
     const-string v2, "UsbStorageService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1330,6 +1467,7 @@
 
     invoke-static {v5, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 454
     new-instance v0, Landroid/content/Intent;
 
     .end local v0           #in:Landroid/content/Intent;
@@ -1362,6 +1500,7 @@
     .restart local v0       #in:Landroid/content/Intent;
     goto :goto_0
 
+    .line 456
     :cond_3
     const-string v2, "UsbStorageService"
 
@@ -1387,19 +1526,23 @@
 
     goto :goto_0
 
+    .line 458
     :cond_4
     const/4 v2, 0x2
 
     if-eq p4, v2, :cond_0
 
+    .line 459
     const/4 v2, 0x3
 
     if-ne p4, v2, :cond_5
 
+    .line 460
     const-string v2, "checking"
 
     invoke-direct {p0, p2, v2}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 461
     const-string v2, "UsbStorageService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1422,6 +1565,7 @@
 
     invoke-static {v5, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 462
     new-instance v0, Landroid/content/Intent;
 
     .end local v0           #in:Landroid/content/Intent;
@@ -1454,15 +1598,18 @@
     .restart local v0       #in:Landroid/content/Intent;
     goto/16 :goto_0
 
+    .line 463
     :cond_5
     const/4 v2, 0x4
 
     if-ne p4, v2, :cond_6
 
+    .line 464
     const-string v2, "mounted"
 
     invoke-direct {p0, p2, v2}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 465
     new-instance v0, Landroid/content/Intent;
 
     .end local v0           #in:Landroid/content/Intent;
@@ -1492,6 +1639,7 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 466
     .restart local v0       #in:Landroid/content/Intent;
     const-string v2, "read-only"
 
@@ -1499,6 +1647,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    .line 467
     const-string v2, "UsbStorageService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1523,11 +1672,13 @@
 
     goto/16 :goto_0
 
+    .line 468
     :cond_6
     const/4 v2, 0x5
 
     if-ne p4, v2, :cond_7
 
+    .line 469
     new-instance v0, Landroid/content/Intent;
 
     .end local v0           #in:Landroid/content/Intent;
@@ -1557,6 +1708,7 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 470
     .restart local v0       #in:Landroid/content/Intent;
     const-string v2, "UsbStorageService"
 
@@ -1582,19 +1734,23 @@
 
     goto/16 :goto_0
 
+    .line 471
     :cond_7
     const/4 v2, 0x6
 
     if-eq p4, v2, :cond_0
 
+    .line 472
     const/4 v2, 0x7
 
     if-ne p4, v2, :cond_8
 
+    .line 473
     const-string v2, "shared"
 
     invoke-direct {p0, p2, v2}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 474
     new-instance v0, Landroid/content/Intent;
 
     .end local v0           #in:Landroid/content/Intent;
@@ -1624,6 +1780,7 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 475
     .restart local v0       #in:Landroid/content/Intent;
     const-string v2, "UsbStorageService"
 
@@ -1633,11 +1790,13 @@
 
     goto/16 :goto_0
 
+    .line 476
     :cond_8
     const/16 v2, 0x8
 
     if-ne p4, v2, :cond_9
 
+    .line 477
     const-string v2, "UsbStorageService"
 
     const-string v2, "Live shared mounts not supported yet!"
@@ -1646,6 +1805,7 @@
 
     goto/16 :goto_1
 
+    .line 480
     :cond_9
     const-string v2, "UsbStorageService"
 
@@ -1685,15 +1845,18 @@
     .parameter "cooked"
 
     .prologue
+    .line 226
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 227
     .local v6, builder:Ljava/lang/StringBuilder;
     const-string v15, "onEvent::"
 
     invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 228
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -1718,12 +1881,15 @@
 
     invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 229
     if-eqz p3, :cond_0
 
+    .line 230
     const-string v15, " cooked = "
 
     invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 231
     move-object/from16 v5, p3
 
     .local v5, arr$:[Ljava/lang/String;
@@ -1738,6 +1904,7 @@
 
     aget-object v14, v5, v7
 
+    .line 232
     .local v14, str:Ljava/lang/String;
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -1759,10 +1926,12 @@
 
     invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 231
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
+    .line 235
     .end local v5           #arr$:[Ljava/lang/String;
     .end local v7           #i$:I
     .end local v11           #len$:I
@@ -1776,6 +1945,7 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 238
     const/16 v15, 0x25d
 
     move/from16 v0, p1
@@ -1784,6 +1954,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 239
     const/4 v15, 0x2
 
     aget-object v15, p3, v15
@@ -1820,12 +1991,14 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/UsbStorageService;->notifyVolumeStateChange(Ljava/lang/String;Ljava/lang/String;II)V
 
+    .line 298
     :cond_1
     :goto_1
     const/4 v15, 0x1
 
     return v15
 
+    .line 241
     :cond_2
     const/16 v15, 0x276
 
@@ -1835,15 +2008,18 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 242
     const/4 v15, 0x2
 
     aget-object v10, p3, v15
 
+    .line 243
     .local v10, label:Ljava/lang/String;
     const/4 v15, 0x3
 
     aget-object v13, p3, v15
 
+    .line 245
     .local v13, path:Ljava/lang/String;
     new-instance v15, Lcom/android/server/UsbStorageService$4;
 
@@ -1859,6 +2035,7 @@
 
     goto :goto_1
 
+    .line 256
     .end local v10           #label:Ljava/lang/String;
     .end local v13           #path:Ljava/lang/String;
     :cond_3
@@ -1870,6 +2047,7 @@
 
     if-ne v0, v1, :cond_6
 
+    .line 257
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
@@ -1878,14 +2056,17 @@
 
     monitor-enter v15
 
+    .line 258
     const/16 v16, 0x3
 
     :try_start_0
     aget-object v10, p3, v16
 
+    .line 259
     .restart local v10       #label:Ljava/lang/String;
     const/4 v8, 0x0
 
+    .line 261
     .local v8, in:Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1899,6 +2080,7 @@
 
     if-nez v16, :cond_5
 
+    .line 262
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
@@ -1909,6 +2091,7 @@
 
     move-result-object v9
 
+    .line 263
     .local v9, iter:Ljava/util/Iterator;
     :cond_4
     :goto_2
@@ -1918,12 +2101,14 @@
 
     if-eqz v16, :cond_5
 
+    .line 264
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 265
     .local v12, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     move-object v0, v12
 
@@ -1941,6 +2126,7 @@
 
     if-eqz v16, :cond_4
 
+    .line 266
     move-object v0, v12
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
@@ -1963,6 +2149,7 @@
 
     if-nez v16, :cond_4
 
+    .line 269
     move-object v0, v12
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
@@ -1979,6 +2166,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 270
     new-instance v8, Landroid/content/Intent;
 
     .end local v8           #in:Landroid/content/Intent;
@@ -2020,6 +2208,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 271
     .restart local v8       #in:Landroid/content/Intent;
     const-string v16, "UsbStorageService"
 
@@ -2049,6 +2238,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 272
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService;->mContext:Landroid/content/Context;
@@ -2061,6 +2251,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 274
     move-object v0, v12
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
@@ -2077,6 +2268,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 275
     const-string v16, "UsbStorageService"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -2105,6 +2297,7 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 276
     new-instance v8, Landroid/content/Intent;
 
     .end local v8           #in:Landroid/content/Intent;
@@ -2146,6 +2339,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 277
     .restart local v8       #in:Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -2161,6 +2355,7 @@
 
     goto/16 :goto_2
 
+    .line 281
     .end local v8           #in:Landroid/content/Intent;
     .end local v9           #iter:Ljava/util/Iterator;
     .end local v10           #label:Ljava/lang/String;
@@ -2184,6 +2379,7 @@
 
     goto/16 :goto_1
 
+    .line 283
     .end local v8           #in:Landroid/content/Intent;
     .end local v10           #label:Ljava/lang/String;
     :cond_6
@@ -2195,13 +2391,16 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 284
     const/4 v8, 0x0
 
+    .line 285
     .restart local v8       #in:Landroid/content/Intent;
     const/4 v15, 0x3
 
     aget-object v13, p3, v15
 
+    .line 286
     .restart local v13       #path:Ljava/lang/String;
     const-string v15, "unmounted"
 
@@ -2213,6 +2412,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 287
     new-instance v8, Landroid/content/Intent;
 
     .end local v8           #in:Landroid/content/Intent;
@@ -2252,6 +2452,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 288
     .restart local v8       #in:Landroid/content/Intent;
     const-string v15, "UsbStorageService"
 
@@ -2279,6 +2480,7 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 289
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService;->mContext:Landroid/content/Context;
@@ -2287,6 +2489,7 @@
 
     invoke-virtual {v15, v8}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 291
     const-string v15, "bad_removal"
 
     move-object/from16 v0, p0
@@ -2297,6 +2500,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/UsbStorageService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 292
     new-instance v8, Landroid/content/Intent;
 
     .end local v8           #in:Landroid/content/Intent;
@@ -2336,6 +2540,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 293
     .restart local v8       #in:Landroid/content/Intent;
     const-string v15, "UsbStorageService"
 
@@ -2363,6 +2568,7 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 294
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/UsbStorageService;->mContext:Landroid/content/Context;
@@ -2379,113 +2585,135 @@
     .parameter "state"
 
     .prologue
+    .line 369
     const/4 v1, -0x1
 
     if-ne p1, v1, :cond_0
 
+    .line 370
     const-string v0, "init"
 
+    .line 393
     .local v0, ret:Ljava/lang/String;
     :goto_0
     return-object v0
 
+    .line 371
     .end local v0           #ret:Ljava/lang/String;
     :cond_0
     if-nez p1, :cond_1
 
+    .line 372
     const-string v0, "NoMedia"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 373
     .end local v0           #ret:Ljava/lang/String;
     :cond_1
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_2
 
+    .line 374
     const-string v0, "Idle"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 375
     .end local v0           #ret:Ljava/lang/String;
     :cond_2
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_3
 
+    .line 376
     const-string v0, "Pending"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 377
     .end local v0           #ret:Ljava/lang/String;
     :cond_3
     const/4 v1, 0x3
 
     if-ne p1, v1, :cond_4
 
+    .line 378
     const-string v0, "Checking"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 379
     .end local v0           #ret:Ljava/lang/String;
     :cond_4
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_5
 
+    .line 380
     const-string v0, "Mounted"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 381
     .end local v0           #ret:Ljava/lang/String;
     :cond_5
     const/4 v1, 0x5
 
     if-ne p1, v1, :cond_6
 
+    .line 382
     const-string v0, "Unmounting"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 383
     .end local v0           #ret:Ljava/lang/String;
     :cond_6
     const/4 v1, 0x6
 
     if-ne p1, v1, :cond_7
 
+    .line 384
     const-string v0, "Formatting"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 385
     .end local v0           #ret:Ljava/lang/String;
     :cond_7
     const/4 v1, 0x7
 
     if-ne p1, v1, :cond_8
 
+    .line 386
     const-string v0, "Shared"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 387
     .end local v0           #ret:Ljava/lang/String;
     :cond_8
     const/16 v1, 0x8
 
     if-ne p1, v1, :cond_9
 
+    .line 388
     const-string v0, "SharedMnt"
 
     .restart local v0       #ret:Ljava/lang/String;
     goto :goto_0
 
+    .line 390
     .end local v0           #ret:Ljava/lang/String;
     :cond_9
     const-string v0, "unknown"
@@ -2505,77 +2733,93 @@
 
     const-string v1, "mounted"
 
+    .line 348
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
+    .line 349
     const-string v0, "unmounted"
 
     move-object v0, v3
 
+    .line 363
     :goto_0
     return-object v0
 
+    .line 350
     :cond_0
     if-nez p1, :cond_1
 
+    .line 351
     const-string v0, "removed"
 
     move-object v0, v2
 
     goto :goto_0
 
+    .line 352
     :cond_1
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_2
 
+    .line 353
     const-string v0, "unmounted"
 
     move-object v0, v3
 
     goto :goto_0
 
+    .line 354
     :cond_2
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_3
 
+    .line 355
     const-string v0, "pending"
 
     goto :goto_0
 
+    .line 356
     :cond_3
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_4
 
+    .line 357
     const-string v0, "checking"
 
     goto :goto_0
 
+    .line 358
     :cond_4
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_5
 
+    .line 359
     const-string v0, "mounted"
 
     move-object v0, v1
 
     goto :goto_0
 
+    .line 360
     :cond_5
     const/4 v0, 0x5
 
     if-ne p1, v0, :cond_6
 
+    .line 361
     const-string v0, "mounted"
 
     move-object v0, v1
 
     goto :goto_0
 
+    .line 363
     :cond_6
     const-string v0, "removed"
 
@@ -2589,6 +2833,7 @@
     .parameter "label"
 
     .prologue
+    .line 308
     :try_start_0
     iget-object v10, p0, Lcom/android/server/UsbStorageService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2614,11 +2859,13 @@
 
     move-result-object v0
 
+    .line 316
     .local v0, Partitions:[Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     monitor-enter v10
 
+    .line 317
     :try_start_1
     iget-object v11, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -2628,6 +2875,7 @@
 
     if-nez v11, :cond_0
 
+    .line 318
     iget-object v11, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     new-instance v12, Lcom/android/server/UsbStorageService$UsbStorageMap;
@@ -2640,6 +2888,7 @@
 
     if-eqz v11, :cond_0
 
+    .line 319
     iget-object v11, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     new-instance v12, Lcom/android/server/UsbStorageService$UsbStorageMap;
@@ -2648,11 +2897,13 @@
 
     invoke-virtual {v11, v12}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
+    .line 322
     :cond_0
     monitor-exit v10
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 327
     move-object v1, v0
 
     .local v1, arr$:[Ljava/lang/String;
@@ -2668,6 +2919,7 @@
 
     aget-object v9, v1, v3
 
+    .line 328
     .local v9, volstr:Ljava/lang/String;
     const-string v10, " "
 
@@ -2675,11 +2927,13 @@
 
     move-result-object v8
 
+    .line 330
     .local v8, tok:[Ljava/lang/String;
     const/4 v10, 0x0
 
     aget-object v5, v8, v10
 
+    .line 331
     .local v5, mountpoint:Ljava/lang/String;
     const/4 v10, 0x1
 
@@ -2689,6 +2943,7 @@
 
     move-result v7
 
+    .line 332
     .local v7, st:I
     const/4 v10, 0x2
 
@@ -2698,6 +2953,7 @@
 
     move-result v6
 
+    .line 334
     .local v6, num:I
     iget-object v10, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -2705,6 +2961,7 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 335
     :try_start_3
     iget-object v11, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -2718,14 +2975,17 @@
 
     invoke-virtual {v11, v12}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 336
     monitor-exit v10
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 327
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 309
     .end local v0           #Partitions:[Ljava/lang/String;
     .end local v1           #arr$:[Ljava/lang/String;
     .end local v3           #i$:I
@@ -2740,6 +3000,7 @@
 
     move-object v2, v10
 
+    .line 310
     .local v2, e:Lcom/android/server/NativeDaemonConnectorException;
     const-string v10, "UsbStorageService"
 
@@ -2763,10 +3024,12 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 344
     .end local v2           #e:Lcom/android/server/NativeDaemonConnectorException;
     :goto_1
     return-void
 
+    .line 322
     .restart local v0       #Partitions:[Ljava/lang/String;
     :catchall_0
     move-exception v11
@@ -2778,6 +3041,7 @@
 
     throw v11
 
+    .line 336
     .restart local v1       #arr$:[Ljava/lang/String;
     .restart local v3       #i$:I
     .restart local v4       #len$:I
@@ -2799,6 +3063,7 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
 
+    .line 338
     .end local v3           #i$:I
     .end local v4           #len$:I
     .end local v5           #mountpoint:Ljava/lang/String;
@@ -2811,6 +3076,7 @@
 
     move-object v2, v10
 
+    .line 339
     .local v2, e:Ljava/lang/Exception;
     const-string v10, "UsbStorageService"
 
@@ -2834,6 +3100,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 342
     .end local v2           #e:Ljava/lang/Exception;
     :cond_1
     const-string v10, "i"
@@ -2855,6 +3122,7 @@
 
     const-string v11, "UsbStorageService"
 
+    .line 397
     const-string v8, "UsbStorageService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2887,11 +3155,14 @@
 
     invoke-static {v11, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 398
     const/4 v0, 0x0
 
+    .line 399
     .local v0, bFound:Z
     move-object v6, p2
 
+    .line 401
     .local v6, oldState:Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -2901,12 +3172,14 @@
 
     if-nez v8, :cond_1
 
+    .line 402
     iget-object v8, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     invoke-virtual {v8}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
+    .line 403
     .local v4, iter:Ljava/util/Iterator;
     :cond_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -2915,12 +3188,14 @@
 
     if-eqz v8, :cond_1
 
+    .line 404
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 405
     .local v5, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     iget-object v8, v5, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
 
@@ -2930,23 +3205,29 @@
 
     if-eqz v8, :cond_0
 
+    .line 406
     const/4 v0, 0x1
 
+    .line 407
     iget-object v6, v5, Lcom/android/server/UsbStorageService$UsbStorageMap;->state:Ljava/lang/String;
 
+    .line 408
     iput-object p2, v5, Lcom/android/server/UsbStorageService$UsbStorageMap;->state:Ljava/lang/String;
 
+    .line 414
     .end local v4           #iter:Ljava/util/Iterator;
     .end local v5           #map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     :cond_1
     if-eqz v0, :cond_4
 
+    .line 415
     invoke-virtual {p2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
 
     if-eqz v8, :cond_2
 
+    .line 416
     const-string v8, "UsbStorageService"
 
     const-string v8, "Duplicate state transition (%s -> %s) and path is %s"
@@ -2971,14 +3252,17 @@
 
     invoke-static {v11, v8}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 437
     :goto_0
     return-void
 
+    .line 420
     :cond_2
     iget-object v8, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v8
 
+    .line 421
     :try_start_0
     iget-object v9, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
@@ -2992,6 +3276,7 @@
     :goto_1
     if-ltz v3, :cond_3
 
+    .line 422
     iget-object v9, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3002,6 +3287,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 424
     .local v1, bl:Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
     :try_start_1
     iget-object v9, v1, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;->mListener:Landroid/os/storage/IUsbStorageServiceListener;
@@ -3012,16 +3298,19 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 421
     :goto_2
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_1
 
+    .line 425
     :catch_0
     move-exception v9
 
     move-object v7, v9
 
+    .line 426
     .local v7, rex:Landroid/os/RemoteException;
     :try_start_2
     const-string v9, "UsbStorageService"
@@ -3030,12 +3319,14 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 427
     iget-object v9, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_2
 
+    .line 432
     .end local v1           #bl:Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
     .end local v3           #i:I
     .end local v7           #rex:Landroid/os/RemoteException;
@@ -3048,6 +3339,7 @@
 
     throw v9
 
+    .line 428
     .restart local v1       #bl:Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
     .restart local v3       #i:I
     :catch_1
@@ -3055,6 +3347,7 @@
 
     move-object v2, v9
 
+    .line 429
     .local v2, ex:Ljava/lang/Exception;
     :try_start_3
     const-string v9, "UsbStorageService"
@@ -3065,6 +3358,7 @@
 
     goto :goto_2
 
+    .line 432
     .end local v1           #bl:Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
     .end local v2           #ex:Ljava/lang/Exception;
     :cond_3
@@ -3072,6 +3366,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 436
     .end local v3           #i:I
     :goto_3
     const-string v8, "u"
@@ -3080,6 +3375,7 @@
 
     goto :goto_0
 
+    .line 434
     :cond_4
     const-string v8, "UsbStorageService"
 
@@ -3121,6 +3417,7 @@
     .parameter "perm"
 
     .prologue
+    .line 605
     iget-object v0, p0, Lcom/android/server/UsbStorageService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
@@ -3129,6 +3426,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 606
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Requires %s permission"
@@ -3149,6 +3447,7 @@
 
     throw v0
 
+    .line 608
     :cond_0
     return-void
 .end method
@@ -3157,35 +3456,42 @@
     .locals 3
 
     .prologue
+    .line 114
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/UsbStorageService;->mReady:Z
 
     if-nez v1, :cond_0
 
+    .line 115
     const/4 v0, 0x5
 
     .local v0, retries:I
     :goto_1
     if-lez v0, :cond_2
 
+    .line 116
     iget-boolean v1, p0, Lcom/android/server/UsbStorageService;->mReady:Z
 
     if-eqz v1, :cond_1
 
+    .line 123
     .end local v0           #retries:I
     :cond_0
     return-void
 
+    .line 119
     .restart local v0       #retries:I
     :cond_1
     const-wide/16 v1, 0x3e8
 
     invoke-static {v1, v2}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 115
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
+    .line 121
     :cond_2
     const-string v1, "UsbStorageService"
 
@@ -3205,6 +3511,7 @@
     .parameter "args"
 
     .prologue
+    .line 848
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.DUMP"
@@ -3215,6 +3522,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 850
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3253,19 +3561,23 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 869
     :goto_0
     return-void
 
+    .line 856
     :cond_0
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     monitor-enter v2
 
+    .line 857
     :try_start_0
     const-string v3, "USB Storage State:"
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 858
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3288,6 +3600,7 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 859
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3310,6 +3623,7 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 861
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     invoke-virtual {v3}, Ljava/util/HashSet;->isEmpty()Z
@@ -3318,12 +3632,14 @@
 
     if-nez v3, :cond_1
 
+    .line 862
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     invoke-virtual {v3}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 863
     .local v0, iter:Ljava/util/Iterator;
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -3332,12 +3648,14 @@
 
     if-eqz v3, :cond_1
 
+    .line 864
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 865
     .local v1, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3387,6 +3705,7 @@
 
     goto :goto_1
 
+    .line 868
     .end local v0           #iter:Ljava/util/Iterator;
     .end local v1           #map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     :catchall_0
@@ -3412,6 +3731,7 @@
     .parameter "path"
 
     .prologue
+    .line 758
     const-string v0, "UsbStorageService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3434,12 +3754,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 759
     const-string v0, "android.permission.MOUNT_FORMAT_FILESYSTEMS"
 
     invoke-direct {p0, v0}, Lcom/android/server/UsbStorageService;->validatePermission(Ljava/lang/String;)V
 
+    .line 760
     invoke-direct {p0}, Lcom/android/server/UsbStorageService;->waitForReady()V
 
+    .line 762
     const/4 v0, 0x0
 
     return v0
@@ -3449,6 +3772,7 @@
     .locals 3
 
     .prologue
+    .line 836
     const-string v0, "UsbStorageService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3473,6 +3797,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 838
     iget-boolean v0, p0, Lcom/android/server/UsbStorageService;->mSafeUnmountedUsbHost:Z
 
     return v0
@@ -3482,10 +3807,12 @@
     .locals 7
 
     .prologue
+    .line 652
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     monitor-enter v4
 
+    .line 653
     :try_start_0
     iget-object v5, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -3495,13 +3822,16 @@
 
     if-nez v5, :cond_1
 
+    .line 654
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    .line 655
     .local v3, rdata:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
+    .line 656
     .local v0, i:I
     iget-object v5, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -3509,6 +3839,7 @@
 
     move-result-object v1
 
+    .line 657
     .local v1, iter:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -3517,21 +3848,26 @@
 
     if-eqz v5, :cond_0
 
+    .line 658
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 659
     .local v2, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     iget-object v5, v2, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 660
     add-int/lit8 v0, v0, 0x1
 
+    .line 661
     goto :goto_0
 
+    .line 662
     .end local v2           #map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     :cond_0
     new-array v5, v0, [Ljava/lang/String;
@@ -3549,12 +3885,14 @@
 
     move-object v4, p0
 
+    .line 668
     .end local v0           #i:I
     .end local v1           #iter:Ljava/util/Iterator;
     .end local v3           #rdata:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :goto_1
     return-object v4
 
+    .line 664
     .restart local p0
     :cond_1
     const-string v5, "UsbStorageService"
@@ -3563,16 +3901,19 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 666
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 668
     const/4 v4, 0x0
 
     new-array v4, v4, [Ljava/lang/String;
 
     goto :goto_1
 
+    .line 666
     .end local p0
     :catchall_0
     move-exception v5
@@ -3590,11 +3931,14 @@
     .parameter "mountPoint"
 
     .prologue
+    .line 674
     const-string v3, "removed"
 
+    .line 675
     .local v3, state:Ljava/lang/String;
     const/4 v0, 0x0
 
+    .line 676
     .local v0, bFound:Z
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -3604,12 +3948,14 @@
 
     if-nez v4, :cond_1
 
+    .line 677
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     invoke-virtual {v4}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
+    .line 678
     .local v1, iter:Ljava/util/Iterator;
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -3618,12 +3964,14 @@
 
     if-eqz v4, :cond_1
 
+    .line 679
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 680
     .local v2, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     iget-object v4, v2, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
 
@@ -3633,15 +3981,19 @@
 
     if-eqz v4, :cond_0
 
+    .line 681
     const/4 v0, 0x1
 
+    .line 682
     iget-object v4, v2, Lcom/android/server/UsbStorageService$UsbStorageMap;->state:Ljava/lang/String;
 
+    .line 689
     .end local v1           #iter:Ljava/util/Iterator;
     .end local v2           #map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     :goto_0
     return-object v4
 
+    .line 687
     :cond_1
     if-nez v0, :cond_2
 
@@ -3670,6 +4022,7 @@
     :cond_2
     move-object v4, v3
 
+    .line 689
     goto :goto_0
 .end method
 
@@ -3681,10 +4034,12 @@
 
     const-string v3, "UsbStorageService"
 
+    .line 767
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     monitor-enter v3
 
+    .line 768
     :try_start_0
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -3694,8 +4049,10 @@
 
     if-nez v4, :cond_2
 
+    .line 769
     const/4 v0, 0x0
 
+    .line 770
     .local v0, i:I
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -3703,6 +4060,7 @@
 
     move-result-object v1
 
+    .line 771
     .local v1, iter:Ljava/util/Iterator;
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -3711,12 +4069,14 @@
 
     if-eqz v4, :cond_3
 
+    .line 772
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 774
     .local v2, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     const-string v4, "pending"
 
@@ -3758,6 +4118,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 778
     :cond_1
     const-string v4, "UsbStorageService"
 
@@ -3789,18 +4150,21 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 779
     const/4 v4, 0x1
 
     monitor-exit v3
 
     move v3, v4
 
+    .line 788
     .end local v0           #i:I
     .end local v1           #iter:Ljava/util/Iterator;
     .end local v2           #map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     :goto_0
     return v3
 
+    .line 784
     :cond_2
     const-string v4, "UsbStorageService"
 
@@ -3808,12 +4172,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 785
     monitor-exit v3
 
     move v3, v6
 
     goto :goto_0
 
+    .line 787
     .restart local v0       #i:I
     .restart local v1       #iter:Ljava/util/Iterator;
     :cond_3
@@ -3823,12 +4189,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 788
     monitor-exit v3
 
     move v3, v6
 
     goto :goto_0
 
+    .line 789
     .end local v0           #i:I
     .end local v1           #iter:Ljava/util/Iterator;
     :catchall_0
@@ -3848,6 +4216,7 @@
     .prologue
     const-string v2, "UsbStorageService"
 
+    .line 693
     const-string v0, "UsbStorageService"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3870,12 +4239,15 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 694
     const-string v0, "android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
 
     invoke-direct {p0, v0}, Lcom/android/server/UsbStorageService;->validatePermission(Ljava/lang/String;)V
 
+    .line 696
     invoke-direct {p0}, Lcom/android/server/UsbStorageService;->waitForReady()V
 
+    .line 698
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectoryUsbHost()Ljava/io/File;
 
     move-result-object v0
@@ -3886,14 +4258,17 @@
 
     if-nez v0, :cond_0
 
+    .line 699
     const-string v0, "UsbStorageService"
 
     const-string v0, "mountVolume -> first SD card is not ready. "
 
     invoke-static {v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 700
     const/4 v0, -0x6
 
+    .line 702
     :goto_0
     return v0
 
@@ -3909,12 +4284,14 @@
     .locals 1
 
     .prologue
+    .line 128
     new-instance v0, Lcom/android/server/UsbStorageService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/UsbStorageService$1;-><init>(Lcom/android/server/UsbStorageService;)V
 
     invoke-virtual {v0}, Lcom/android/server/UsbStorageService$1;->start()V
 
+    .line 133
     return-void
 .end method
 
@@ -3927,10 +4304,12 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 211
     iget-boolean v0, p0, Lcom/android/server/UsbStorageService;->mBooted:Z
 
     if-nez v0, :cond_0
 
+    .line 212
     const-string v0, "UsbStorageService"
 
     const-string v1, "not ready to boot complete"
@@ -3939,9 +4318,11 @@
 
     move v0, v2
 
+    .line 221
     :goto_0
     return v0
 
+    .line 216
     :cond_0
     iget-object v0, p0, Lcom/android/server/UsbStorageService;->mWorkQueueHandler:Landroid/os/Handler;
 
@@ -3953,6 +4334,7 @@
 
     move v0, v2
 
+    .line 221
     goto :goto_0
 .end method
 
@@ -3961,10 +4343,12 @@
     .parameter "listener"
 
     .prologue
+    .line 611
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v2
 
+    .line 612
     :try_start_0
     new-instance v0, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
 
@@ -3972,6 +4356,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 614
     .local v0, bl:Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
     :try_start_1
     invoke-interface {p1}, Landroid/os/storage/IUsbStorageServiceListener;->asBinder()Landroid/os/IBinder;
@@ -3982,6 +4367,7 @@
 
     invoke-interface {v3, v0, v4}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
+    .line 615
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -3989,17 +4375,21 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 619
     :goto_0
     :try_start_2
     monitor-exit v2
 
+    .line 620
     return-void
 
+    .line 616
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
+    .line 617
     .local v1, rex:Landroid/os/RemoteException;
     const-string v3, "UsbStorageService"
 
@@ -4009,6 +4399,7 @@
 
     goto :goto_0
 
+    .line 619
     .end local v0           #bl:Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
     .end local v1           #rex:Landroid/os/RemoteException;
     :catchall_0
@@ -4026,6 +4417,7 @@
     .parameter "set"
 
     .prologue
+    .line 842
     const-string v0, "UsbStorageService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4048,8 +4440,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 843
     iput-boolean p1, p0, Lcom/android/server/UsbStorageService;->mSafeUnmountedUsbHost:Z
 
+    .line 844
     return-void
 .end method
 
@@ -4059,6 +4453,7 @@
     .parameter "force"
 
     .prologue
+    .line 737
     const-string v0, "UsbStorageService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4091,14 +4486,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 738
     const-string v0, "android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
 
     invoke-direct {p0, v0}, Lcom/android/server/UsbStorageService;->validatePermission(Ljava/lang/String;)V
 
+    .line 739
     invoke-direct {p0}, Lcom/android/server/UsbStorageService;->waitForReady()V
 
+    .line 741
     invoke-direct {p0, p1, p2}, Lcom/android/server/UsbStorageService;->doUnmountVolume(Ljava/lang/String;Z)I
 
+    .line 742
     return-void
 .end method
 
@@ -4107,6 +4506,7 @@
     .parameter "force"
 
     .prologue
+    .line 745
     const-string v2, "UsbStorageService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4129,10 +4529,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 746
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     monitor-enter v2
 
+    .line 747
     :try_start_0
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
@@ -4142,12 +4544,14 @@
 
     if-nez v3, :cond_0
 
+    .line 748
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mUsbStorageSet:Ljava/util/HashSet;
 
     invoke-virtual {v3}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 749
     .local v0, iter:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -4156,12 +4560,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 750
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/UsbStorageService$UsbStorageMap;
 
+    .line 751
     .local v1, map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     iget-object v3, v1, Lcom/android/server/UsbStorageService$UsbStorageMap;->path:Ljava/lang/String;
 
@@ -4169,6 +4575,7 @@
 
     goto :goto_0
 
+    .line 754
     .end local v0           #iter:Ljava/util/Iterator;
     .end local v1           #map:Lcom/android/server/UsbStorageService$UsbStorageMap;
     :catchall_0
@@ -4186,6 +4593,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 755
     return-void
 .end method
 
@@ -4194,10 +4602,12 @@
     .parameter "listener"
 
     .prologue
+    .line 623
     iget-object v2, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v2
 
+    .line 624
     :try_start_0
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
@@ -4219,11 +4629,13 @@
 
     check-cast v0, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
 
+    .line 625
     .local v0, bl:Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
     iget-object v3, v0, Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;->mListener:Landroid/os/storage/IUsbStorageServiceListener;
 
     if-ne v3, p1, :cond_0
 
+    .line 626
     iget-object v3, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
 
     iget-object v4, p0, Lcom/android/server/UsbStorageService;->mListeners:Ljava/util/ArrayList;
@@ -4234,12 +4646,15 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
+    .line 627
     monitor-exit v2
 
+    .line 631
     .end local v0           #bl:Lcom/android/server/UsbStorageService$UsbStorageServiceBinderListener;
     :goto_0
     return-void
 
+    .line 630
     :cond_1
     monitor-exit v2
 

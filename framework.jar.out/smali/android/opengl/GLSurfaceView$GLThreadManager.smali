@@ -39,6 +39,7 @@
     .locals 1
 
     .prologue
+    .line 1653
     const-string v0, "GLThreadManager"
 
     sput-object v0, Landroid/opengl/GLSurfaceView$GLThreadManager;->TAG:Ljava/lang/String;
@@ -50,6 +51,7 @@
     .locals 0
 
     .prologue
+    .line 1652
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,6 +62,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1652
     invoke-direct {p0}, Landroid/opengl/GLSurfaceView$GLThreadManager;-><init>()V
 
     return-void
@@ -71,11 +74,13 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 1734
     iget-boolean v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mGLESVersionCheckComplete:Z
 
     if-nez v0, :cond_1
 
-    const-string v0, "ro.opengles.version"
+    .line 1735
+    const-string/jumbo v0, "ro.opengles.version"
 
     const/4 v1, 0x0
 
@@ -85,14 +90,17 @@
 
     iput v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mGLESVersion:I
 
+    .line 1738
     iget v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mGLESVersion:I
 
     const/high16 v1, 0x2
 
     if-lt v0, v1, :cond_0
 
+    .line 1739
     iput-boolean v3, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mMultipleGLESContextsAllowed:Z
 
+    .line 1742
     :cond_0
     sget-object v0, Landroid/opengl/GLSurfaceView$GLThreadManager;->TAG:Ljava/lang/String;
 
@@ -130,8 +138,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1745
     iput-boolean v3, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mGLESVersionCheckComplete:Z
 
+    .line 1747
     :cond_1
     return-void
 .end method
@@ -145,6 +155,7 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 1717
     monitor-enter p0
 
     :try_start_0
@@ -152,20 +163,24 @@
 
     if-nez v1, :cond_1
 
+    .line 1718
     invoke-direct {p0}, Landroid/opengl/GLSurfaceView$GLThreadManager;->checkGLESVersion()V
 
+    .line 1719
     iget v1, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mGLESVersion:I
 
     const/high16 v2, 0x2
 
     if-ge v1, v2, :cond_0
 
+    .line 1720
     const/16 v1, 0x1f01
 
     invoke-interface {p1, v1}, Ljavax/microedition/khronos/opengles/GL10;->glGetString(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 1721
     .local v0, renderer:Ljava/lang/String;
     const-string v1, "Q3Dimension MSM7500 "
 
@@ -180,6 +195,7 @@
     :goto_0
     iput-boolean v1, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mMultipleGLESContextsAllowed:Z
 
+    .line 1724
     sget-object v1, Landroid/opengl/GLSurfaceView$GLThreadManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -214,8 +230,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1727
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 1729
     .end local v0           #renderer:Ljava/lang/String;
     :cond_0
     const/4 v1, 0x1
@@ -224,17 +242,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1731
     :cond_1
     monitor-exit p0
 
     return-void
 
+    .line 1721
     .restart local v0       #renderer:Ljava/lang/String;
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_0
 
+    .line 1717
     .end local v0           #renderer:Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -249,17 +270,21 @@
     .parameter "thread"
 
     .prologue
+    .line 1698
     iget-object v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mEglOwner:Landroid/opengl/GLSurfaceView$GLThread;
 
     if-ne v0, p1, :cond_0
 
+    .line 1699
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mEglOwner:Landroid/opengl/GLSurfaceView$GLThread;
 
+    .line 1701
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 1702
     return-void
 .end method
 
@@ -267,6 +292,7 @@
     .locals 1
 
     .prologue
+    .line 1708
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -280,11 +306,13 @@
     .locals 1
 
     .prologue
+    .line 1712
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Landroid/opengl/GLSurfaceView$GLThreadManager;->checkGLESVersion()V
 
+    .line 1713
     iget-boolean v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mMultipleGLESContextsAllowed:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -303,6 +331,7 @@
 
     goto :goto_0
 
+    .line 1712
     :catchall_0
     move-exception v0
 
@@ -316,6 +345,7 @@
     .parameter "thread"
 
     .prologue
+    .line 1659
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -324,23 +354,28 @@
     #setter for: Landroid/opengl/GLSurfaceView$GLThread;->mExited:Z
     invoke-static {p1, v0}, Landroid/opengl/GLSurfaceView$GLThread;->access$1102(Landroid/opengl/GLSurfaceView$GLThread;Z)Z
 
+    .line 1660
     iget-object v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mEglOwner:Landroid/opengl/GLSurfaceView$GLThread;
 
     if-ne v0, p1, :cond_0
 
+    .line 1661
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mEglOwner:Landroid/opengl/GLSurfaceView$GLThread;
 
+    .line 1663
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1664
     monitor-exit p0
 
     return-void
 
+    .line 1659
     :catchall_0
     move-exception v0
 
@@ -356,6 +391,7 @@
     .prologue
     const/4 v1, 0x1
 
+    .line 1674
     iget-object v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mEglOwner:Landroid/opengl/GLSurfaceView$GLThread;
 
     if-eq v0, p1, :cond_0
@@ -364,36 +400,45 @@
 
     if-nez v0, :cond_1
 
+    .line 1675
     :cond_0
     iput-object p1, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mEglOwner:Landroid/opengl/GLSurfaceView$GLThread;
 
+    .line 1676
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
     move v0, v1
 
+    .line 1690
     :goto_0
     return v0
 
+    .line 1679
     :cond_1
     invoke-direct {p0}, Landroid/opengl/GLSurfaceView$GLThreadManager;->checkGLESVersion()V
 
+    .line 1680
     iget-boolean v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mMultipleGLESContextsAllowed:Z
 
     if-eqz v0, :cond_2
 
     move v0, v1
 
+    .line 1681
     goto :goto_0
 
+    .line 1687
     :cond_2
     iget-object v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mEglOwner:Landroid/opengl/GLSurfaceView$GLThread;
 
     if-eqz v0, :cond_3
 
+    .line 1688
     iget-object v0, p0, Landroid/opengl/GLSurfaceView$GLThreadManager;->mEglOwner:Landroid/opengl/GLSurfaceView$GLThread;
 
     invoke-virtual {v0}, Landroid/opengl/GLSurfaceView$GLThread;->requestReleaseEglContextLocked()V
 
+    .line 1690
     :cond_3
     const/4 v0, 0x0
 

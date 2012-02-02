@@ -42,6 +42,7 @@
     .parameter
 
     .prologue
+    .line 333
     iput-object p1, p0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
 
     iput-object p2, p0, Lcom/android/server/am/ServiceRecord$1;->val$localPackageName:Ljava/lang/String;
@@ -69,24 +70,29 @@
 
     const/4 v9, 0x1
 
+    .line 335
     invoke-static {}, Landroid/app/NotificationManager;->getService()Landroid/app/INotificationManager;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/NotificationManagerService;
 
+    .line 337
     .local v0, nm:Lcom/android/server/NotificationManagerService;
     if-nez v0, :cond_0
 
+    .line 354
     :goto_0
     return-void
 
+    .line 341
     :cond_0
     const/4 v1, 0x1
 
     :try_start_0
     new-array v7, v1, [I
 
+    .line 342
     .local v7, outId:[I
     iget-object v1, p0, Lcom/android/server/am/ServiceRecord$1;->val$localPackageName:Ljava/lang/String;
 
@@ -106,12 +112,14 @@
 
     goto :goto_0
 
+    .line 344
     .end local v7           #outId:[I
     :catch_0
     move-exception v1
 
     move-object v8, v1
 
+    .line 345
     .local v8, e:Ljava/lang/RuntimeException;
     const-string v1, "ActivityManager"
 
@@ -119,6 +127,7 @@
 
     invoke-static {v1, v2, v8}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 349
     iget-object v1, p0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
 
     iget-object v1, v1, Lcom/android/server/am/ServiceRecord;->ams:Lcom/android/server/am/ActivityManagerService;
@@ -137,6 +146,7 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/ActivityManagerService;->setServiceForeground(Landroid/content/ComponentName;Landroid/os/IBinder;ILandroid/app/Notification;Z)V
 
+    .line 351
     iget-object v1, p0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
 
     iget-object v1, v1, Lcom/android/server/am/ServiceRecord;->ams:Lcom/android/server/am/ActivityManagerService;

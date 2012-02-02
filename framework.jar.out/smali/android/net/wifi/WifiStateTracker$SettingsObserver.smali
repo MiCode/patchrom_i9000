@@ -27,10 +27,13 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 2868
     iput-object p1, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
+    .line 2869
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
+    .line 2870
     #getter for: Landroid/net/NetworkStateTracker;->mContext:Landroid/content/Context;
     invoke-static {p1}, Landroid/net/wifi/WifiStateTracker;->access$1100(Landroid/net/wifi/WifiStateTracker;)Landroid/content/Context;
 
@@ -40,8 +43,9 @@
 
     move-result-object v0
 
+    .line 2871
     .local v0, cr:Landroid/content/ContentResolver;
-    const-string v1, "wifi_use_static_ip"
+    const-string/jumbo v1, "wifi_use_static_ip"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -49,7 +53,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    const-string v1, "wifi_static_ip"
+    .line 2873
+    const-string/jumbo v1, "wifi_static_ip"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -57,7 +62,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    const-string v1, "wifi_static_gateway"
+    .line 2875
+    const-string/jumbo v1, "wifi_static_gateway"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -65,7 +71,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    const-string v1, "wifi_static_netmask"
+    .line 2877
+    const-string/jumbo v1, "wifi_static_netmask"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -73,7 +80,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    const-string v1, "wifi_static_dns1"
+    .line 2879
+    const-string/jumbo v1, "wifi_static_dns1"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -81,7 +89,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    const-string v1, "wifi_static_dns2"
+    .line 2881
+    const-string/jumbo v1, "wifi_static_dns2"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -89,6 +98,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
+    .line 2883
     return-void
 .end method
 
@@ -101,8 +111,10 @@
     .prologue
     const/4 v10, 0x1
 
+    .line 2886
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
+    .line 2888
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/wifi/WifiStateTracker;->mUseStaticIp:Z
@@ -110,6 +122,7 @@
 
     move-result v7
 
+    .line 2890
     .local v7, wasStaticIp:Z
     const/4 v3, 0x0
 
@@ -125,9 +138,11 @@
     .local v4, oGw:I
     move v5, v3
 
+    .line 2891
     .local v5, oIp:I
     if-eqz v7, :cond_0
 
+    .line 2892
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/wifi/WifiStateTracker;->mDhcpInfo:Landroid/net/DhcpInfo;
@@ -137,6 +152,7 @@
 
     iget v5, v8, Landroid/net/DhcpInfo;->ipAddress:I
 
+    .line 2893
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/wifi/WifiStateTracker;->mDhcpInfo:Landroid/net/DhcpInfo;
@@ -146,6 +162,7 @@
 
     iget v4, v8, Landroid/net/DhcpInfo;->gateway:I
 
+    .line 2894
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/wifi/WifiStateTracker;->mDhcpInfo:Landroid/net/DhcpInfo;
@@ -155,6 +172,7 @@
 
     iget v6, v8, Landroid/net/DhcpInfo;->netmask:I
 
+    .line 2895
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/wifi/WifiStateTracker;->mDhcpInfo:Landroid/net/DhcpInfo;
@@ -164,6 +182,7 @@
 
     iget v2, v8, Landroid/net/DhcpInfo;->dns1:I
 
+    .line 2896
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/wifi/WifiStateTracker;->mDhcpInfo:Landroid/net/DhcpInfo;
@@ -173,12 +192,14 @@
 
     iget v3, v8, Landroid/net/DhcpInfo;->dns2:I
 
+    .line 2898
     :cond_0
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #calls: Landroid/net/wifi/WifiStateTracker;->checkUseStaticIp()V
     invoke-static {v8}, Landroid/net/wifi/WifiStateTracker;->access$1300(Landroid/net/wifi/WifiStateTracker;)V
 
+    .line 2900
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/wifi/WifiStateTracker;->mWifiInfo:Landroid/net/wifi/WifiInfo;
@@ -194,10 +215,12 @@
 
     if-ne v8, v9, :cond_2
 
+    .line 2921
     :cond_1
     :goto_0
     return-void
 
+    .line 2904
     :cond_2
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
@@ -268,19 +291,23 @@
     :cond_3
     move v0, v10
 
+    .line 2913
     .local v0, changed:Z
     :goto_1
     if-eqz v0, :cond_1
 
+    .line 2914
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     invoke-virtual {v8, v10}, Landroid/net/wifi/WifiStateTracker;->resetConnections(Z)V
 
+    .line 2915
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #calls: Landroid/net/wifi/WifiStateTracker;->configureInterface()V
     invoke-static {v8}, Landroid/net/wifi/WifiStateTracker;->access$1400(Landroid/net/wifi/WifiStateTracker;)V
 
+    .line 2916
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/wifi/WifiStateTracker;->mUseStaticIp:Z
@@ -290,6 +317,7 @@
 
     if-eqz v8, :cond_1
 
+    .line 2917
     iget-object v8, p0, Landroid/net/wifi/WifiStateTracker$SettingsObserver;->this$0:Landroid/net/wifi/WifiStateTracker;
 
     #getter for: Landroid/net/NetworkStateTracker;->mTarget:Landroid/os/Handler;
@@ -310,11 +338,13 @@
 
     move-result-object v1
 
+    .line 2918
     .local v1, msg:Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
+    .line 2904
     .end local v0           #changed:Z
     .end local v1           #msg:Landroid/os/Message;
     :cond_4

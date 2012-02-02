@@ -48,8 +48,10 @@
     .parameter "name"
 
     .prologue
+    .line 57
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/DataConnection;-><init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;)V
 
+    .line 58
     return-void
 .end method
 
@@ -58,10 +60,12 @@
     .parameter "address"
 
     .prologue
+    .line 236
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
+    .line 238
     :goto_0
     return v0
 
@@ -88,10 +92,12 @@
     .parameter "phone"
 
     .prologue
+    .line 67
     sget-object v1, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mCountLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 68
     :try_start_0
     sget v2, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mCount:I
 
@@ -99,10 +105,12 @@
 
     sput v2, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mCount:I
 
+    .line 69
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 70
     new-instance v0, Lcom/android/internal/telephony/gsm/GsmDataConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -127,9 +135,11 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/gsm/GsmDataConnection;-><init>(Lcom/android/internal/telephony/gsm/GSMPhone;Ljava/lang/String;)V
 
+    .line 71
     .local v0, gsmDc:Lcom/android/internal/telephony/gsm/GsmDataConnection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->start()V
 
+    .line 72
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,8 +164,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->log(Ljava/lang/String;)V
 
+    .line 73
     return-object v0
 
+    .line 69
     .end local v0           #gsmDc:Lcom/android/internal/telephony/gsm/GsmDataConnection;
     :catchall_0
     move-exception v2
@@ -176,6 +188,7 @@
     .prologue
     const-string v3, "net.gprs.http-proxy"
 
+    .line 222
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -184,6 +197,7 @@
 
     if-nez v0, :cond_1
 
+    .line 223
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -193,9 +207,11 @@
 
     invoke-virtual {v0, v3, v1}, Lcom/android/internal/telephony/PhoneBase;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 233
     :goto_0
     return-void
 
+    .line 227
     :cond_1
     if-eqz p2, :cond_2
 
@@ -205,9 +221,11 @@
 
     if-nez v0, :cond_3
 
+    .line 228
     :cond_2
     const-string p2, "8080"
 
+    .line 231
     :cond_3
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -258,12 +276,15 @@
     .locals 1
 
     .prologue
+    .line 124
     invoke-super {p0}, Lcom/android/internal/telephony/DataConnection;->clearSettings()V
 
+    .line 125
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
+    .line 126
     return-void
 .end method
 
@@ -272,6 +293,7 @@
     .parameter "onCompletedMsg"
 
     .prologue
+    .line 119
     const/4 v0, 0x6
 
     new-instance v1, Lcom/android/internal/telephony/DataConnection$DisconnectParams;
@@ -286,6 +308,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->sendMessage(Landroid/os/Message;)V
 
+    .line 120
     return-void
 .end method
 
@@ -293,6 +316,7 @@
     .locals 1
 
     .prologue
+    .line 214
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
     return-object v0
@@ -302,6 +326,7 @@
     .locals 1
 
     .prologue
+    .line 218
     iget v0, p0, Lcom/android/internal/telephony/DataConnection;->cid:I
 
     return v0
@@ -312,119 +337,153 @@
     .parameter "rilCause"
 
     .prologue
+    .line 139
     sparse-switch p1, :sswitch_data_0
 
+    .line 186
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->UNKNOWN:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 188
     .local v0, cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :goto_0
     return-object v0
 
+    .line 141
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_0
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 142
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 144
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_1
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->INSUFFICIENT_RESOURCES:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 145
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 147
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_2
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->MISSING_UNKNOWN_APN:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 148
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 150
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_3
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->UNKNOWN_PDP_ADDRESS:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 151
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 153
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_4
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->USER_AUTHENTICATION:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 154
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 156
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_5
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->ACTIVATION_REJECT_GGSN:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 157
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 159
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_6
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->ACTIVATION_REJECT_UNSPECIFIED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 160
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 162
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_7
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->SERVICE_OPTION_OUT_OF_ORDER:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 163
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 165
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_8
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->SERVICE_OPTION_NOT_SUPPORTED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 166
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 168
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_9
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->SERVICE_OPTION_NOT_SUBSCRIBED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 169
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 171
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_a
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->NSAPI_IN_USE:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 172
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 174
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_b
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->PROTOCOL_ERRORS:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 175
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 177
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_c
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->UNKNOWN:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 178
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 180
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_d
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->REGISTRATION_FAIL:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 181
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 183
     .end local v0           #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     :sswitch_e
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->GPRS_REGISTRATION_FAIL:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 184
     .restart local v0       #cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     goto :goto_0
 
+    .line 139
     nop
 
     :sswitch_data_0
@@ -458,6 +517,7 @@
 
     const-string v1, "0.0.0.0"
 
+    .line 193
     const-string v0, "0.0.0.0"
 
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->dnsServers:[Ljava/lang/String;
@@ -492,6 +552,7 @@
 
     if-nez v0, :cond_1
 
+    .line 200
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/ApnSetting;->types:[Ljava/lang/String;
@@ -519,6 +580,7 @@
     :cond_0
     move v0, v2
 
+    .line 205
     :goto_0
     return v0
 
@@ -533,6 +595,7 @@
     .parameter "s"
 
     .prologue
+    .line 210
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -569,6 +632,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 211
     return-void
 .end method
 
@@ -583,10 +647,12 @@
 
     const/4 v2, 0x0
 
+    .line 86
     iget-object v0, p1, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
+    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -653,6 +719,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->log(Ljava/lang/String;)V
 
+    .line 92
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/ApnSetting;->proxy:Ljava/lang/String;
@@ -663,30 +730,38 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->setHttpProxy(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 94
     iput-wide v4, p0, Lcom/android/internal/telephony/DataConnection;->createTime:J
 
+    .line 95
     iput-wide v4, p0, Lcom/android/internal/telephony/DataConnection;->lastFailTime:J
 
+    .line 96
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->NONE:Lcom/android/internal/telephony/DataConnection$FailCause;
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->lastFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 99
     invoke-virtual {p0, v3, p1}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v7
 
+    .line 100
     .local v7, msg:Landroid/os/Message;
     iput-object p1, v7, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 102
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
     iget v8, v0, Lcom/android/internal/telephony/gsm/ApnSetting;->authType:I
 
+    .line 103
     .local v8, authType:I
     const/4 v0, -0x1
 
     if-ne v8, v0, :cond_0
 
+    .line 104
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->apn:Lcom/android/internal/telephony/gsm/ApnSetting;
 
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/ApnSetting;->user:Ljava/lang/String;
@@ -695,6 +770,7 @@
 
     move v8, v3
 
+    .line 107
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
@@ -729,11 +805,13 @@
 
     invoke-interface/range {v0 .. v7}, Lcom/android/internal/telephony/CommandsInterface;->setupDataCall(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
+    .line 110
     return-void
 
     :cond_1
     move v8, v2
 
+    .line 104
     goto :goto_0
 .end method
 
@@ -741,6 +819,7 @@
     .locals 3
 
     .prologue
+    .line 130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

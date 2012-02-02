@@ -58,6 +58,7 @@
     .locals 1
 
     .prologue
+    .line 169
     new-instance v0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$1;-><init>()V
@@ -76,22 +77,31 @@
 
     const/4 v3, 0x0
 
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
+    .line 34
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mToneSettings:Lcom/android/internal/telephony/gsm/stk/ToneSettings;
 
+    .line 35
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
+    .line 36
     iput v4, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mNumberOfEventList:I
 
+    .line 37
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mEventList:[I
 
+    .line 38
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mLanguage:Ljava/lang/String;
 
+    .line 39
     iput-boolean v4, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mInitialLanguage:Z
 
+    .line 107
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -100,6 +110,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCmdDet:Lcom/android/internal/telephony/gsm/stk/CommandDetails;
 
+    .line 108
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -108,6 +119,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mTextMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
+    .line 109
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -116,6 +128,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mMenu:Lcom/android/internal/telephony/gsm/stk/Menu;
 
+    .line 110
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -124,6 +137,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mInput:Lcom/android/internal/telephony/gsm/stk/Input;
 
+    .line 111
     sget-object v1, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$2;->$SwitchMap$com$android$internal$telephony$gsm$stk$AppInterface$CommandType:[I
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->getCmdType()Lcom/android/internal/telephony/gsm/stk/AppInterface$CommandType;
@@ -138,10 +152,12 @@
 
     packed-switch v1, :pswitch_data_0
 
+    .line 137
     .end local p0
     :goto_0
     return-void
 
+    .line 113
     .restart local p0
     :pswitch_0
     new-instance v1, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
@@ -150,6 +166,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
+    .line 114
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -158,6 +175,7 @@
 
     iput-object v2, v1, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;->url:Ljava/lang/String;
 
+    .line 115
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
     invoke-static {}, Lcom/android/internal/telephony/gsm/stk/LaunchBrowserMode;->values()[Lcom/android/internal/telephony/gsm/stk/LaunchBrowserMode;
@@ -174,6 +192,7 @@
 
     goto :goto_0
 
+    .line 118
     :pswitch_1
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -185,6 +204,7 @@
 
     goto :goto_0
 
+    .line 121
     :pswitch_2
     new-instance v1, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
@@ -192,6 +212,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
+    .line 122
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -202,6 +223,7 @@
 
     iput-object v1, v2, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;->confirmMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
+    .line 123
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -215,6 +237,7 @@
 
     goto :goto_0
 
+    .line 126
     .restart local p0
     :pswitch_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -223,18 +246,21 @@
 
     iput v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mNumberOfEventList:I
 
+    .line 127
     iget v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mNumberOfEventList:I
 
     new-array v1, v1, [I
 
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mEventList:[I
 
+    .line 128
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mEventList:[I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
 
     goto :goto_0
 
+    .line 131
     :pswitch_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -242,19 +268,23 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mLanguage:Ljava/lang/String;
 
+    .line 132
     const/4 v1, 0x1
 
     new-array v0, v1, [Z
 
+    .line 133
     .local v0, tempBooleanArray:[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
+    .line 134
     aget-boolean v1, v0, v4
 
     iput-boolean v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mInitialLanguage:Z
 
     goto :goto_0
 
+    .line 111
     nop
 
     :pswitch_data_0
@@ -276,26 +306,36 @@
 
     const/4 v2, 0x0
 
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
+    .line 34
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mToneSettings:Lcom/android/internal/telephony/gsm/stk/ToneSettings;
 
+    .line 35
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
+    .line 36
     iput v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mNumberOfEventList:I
 
+    .line 37
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mEventList:[I
 
+    .line 38
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mLanguage:Ljava/lang/String;
 
+    .line 39
     iput-boolean v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mInitialLanguage:Z
 
+    .line 59
     iget-object v2, p1, Lcom/android/internal/telephony/gsm/stk/CommandParams;->cmdDet:Lcom/android/internal/telephony/gsm/stk/CommandDetails;
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCmdDet:Lcom/android/internal/telephony/gsm/stk/CommandDetails;
 
+    .line 60
     sget-object v2, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$2;->$SwitchMap$com$android$internal$telephony$gsm$stk$AppInterface$CommandType:[I
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->getCmdType()Lcom/android/internal/telephony/gsm/stk/AppInterface$CommandType;
@@ -310,10 +350,12 @@
 
     packed-switch v2, :pswitch_data_0
 
+    .line 104
     .end local p1
     :goto_0
     return-void
 
+    .line 63
     .restart local p1
     :pswitch_0
     check-cast p1, Lcom/android/internal/telephony/gsm/stk/SelectItemParams;
@@ -325,6 +367,7 @@
 
     goto :goto_0
 
+    .line 72
     .restart local p1
     :pswitch_1
     check-cast p1, Lcom/android/internal/telephony/gsm/stk/DisplayTextParams;
@@ -336,6 +379,7 @@
 
     goto :goto_0
 
+    .line 76
     .restart local p1
     :pswitch_2
     check-cast p1, Lcom/android/internal/telephony/gsm/stk/GetInputParams;
@@ -347,6 +391,7 @@
 
     goto :goto_0
 
+    .line 79
     .restart local p1
     :pswitch_3
     move-object v0, p1
@@ -359,12 +404,14 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mTextMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
+    .line 80
     new-instance v2, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
     invoke-direct {v2, p0}, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;-><init>(Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;)V
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
+    .line 81
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
     move-object v0, p1
@@ -377,6 +424,7 @@
 
     iput-object v2, v3, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;->url:Ljava/lang/String;
 
+    .line 82
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
     check-cast p1, Lcom/android/internal/telephony/gsm/stk/LaunchBrowserParams;
@@ -388,6 +436,7 @@
 
     goto :goto_0
 
+    .line 85
     .restart local p1
     :pswitch_4
     move-object v0, p1
@@ -396,17 +445,20 @@
 
     move-object v1, v0
 
+    .line 86
     .local v1, params:Lcom/android/internal/telephony/gsm/stk/PlayToneParams;
     iget-object v2, v1, Lcom/android/internal/telephony/gsm/stk/PlayToneParams;->settings:Lcom/android/internal/telephony/gsm/stk/ToneSettings;
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mToneSettings:Lcom/android/internal/telephony/gsm/stk/ToneSettings;
 
+    .line 87
     iget-object v2, v1, Lcom/android/internal/telephony/gsm/stk/PlayToneParams;->textMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mTextMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
     goto :goto_0
 
+    .line 90
     .end local v1           #params:Lcom/android/internal/telephony/gsm/stk/PlayToneParams;
     :pswitch_5
     new-instance v2, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
@@ -415,6 +467,7 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
+    .line 91
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
     move-object v0, p1
@@ -427,6 +480,7 @@
 
     iput-object v2, v3, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;->confirmMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
+    .line 92
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
     move-object v0, p1
@@ -439,6 +493,7 @@
 
     iput-object v2, v3, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;->callMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
+    .line 93
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
     check-cast p1, Lcom/android/internal/telephony/gsm/stk/CallSetupParams;
@@ -450,6 +505,7 @@
 
     goto :goto_0
 
+    .line 96
     .restart local p1
     :pswitch_6
     move-object v0, p1
@@ -462,6 +518,7 @@
 
     iput v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mNumberOfEventList:I
 
+    .line 97
     check-cast p1, Lcom/android/internal/telephony/gsm/stk/SetupEventListParams;
 
     .end local p1
@@ -471,6 +528,7 @@
 
     goto :goto_0
 
+    .line 100
     .restart local p1
     :pswitch_7
     move-object v0, p1
@@ -483,6 +541,7 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mLanguage:Ljava/lang/String;
 
+    .line 101
     check-cast p1, Lcom/android/internal/telephony/gsm/stk/LanguageNotificationParams;
 
     .end local p1
@@ -492,6 +551,7 @@
 
     goto/16 :goto_0
 
+    .line 60
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -519,6 +579,7 @@
     .locals 1
 
     .prologue
+    .line 180
     const/4 v0, 0x0
 
     return v0
@@ -528,6 +589,7 @@
     .locals 1
 
     .prologue
+    .line 193
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mInput:Lcom/android/internal/telephony/gsm/stk/Input;
 
     return-object v0
@@ -537,6 +599,7 @@
     .locals 1
 
     .prologue
+    .line 197
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mTextMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
     return-object v0
@@ -546,6 +609,7 @@
     .locals 1
 
     .prologue
+    .line 201
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
     return-object v0
@@ -555,6 +619,7 @@
     .locals 1
 
     .prologue
+    .line 209
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
     return-object v0
@@ -564,6 +629,7 @@
     .locals 1
 
     .prologue
+    .line 185
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCmdDet:Lcom/android/internal/telephony/gsm/stk/CommandDetails;
 
     iget v0, v0, Lcom/android/internal/telephony/gsm/stk/CommandDetails;->typeOfCommand:I
@@ -579,6 +645,7 @@
     .locals 1
 
     .prologue
+    .line 217
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mEventList:[I
 
     return-object v0
@@ -588,6 +655,7 @@
     .locals 1
 
     .prologue
+    .line 221
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mLanguage:Ljava/lang/String;
 
     return-object v0
@@ -597,6 +665,7 @@
     .locals 1
 
     .prologue
+    .line 189
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mMenu:Lcom/android/internal/telephony/gsm/stk/Menu;
 
     return-object v0
@@ -606,6 +675,7 @@
     .locals 1
 
     .prologue
+    .line 213
     iget v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mNumberOfEventList:I
 
     return v0
@@ -615,6 +685,7 @@
     .locals 1
 
     .prologue
+    .line 205
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mToneSettings:Lcom/android/internal/telephony/gsm/stk/ToneSettings;
 
     return-object v0
@@ -624,6 +695,7 @@
     .locals 1
 
     .prologue
+    .line 225
     iget-boolean v0, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mInitialLanguage:Z
 
     return v0
@@ -637,22 +709,27 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 140
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCmdDet:Lcom/android/internal/telephony/gsm/stk/CommandDetails;
 
     invoke-virtual {p1, v1, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 141
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mTextMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
 
     invoke-virtual {p1, v1, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 142
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mMenu:Lcom/android/internal/telephony/gsm/stk/Menu;
 
     invoke-virtual {p1, v1, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 143
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mInput:Lcom/android/internal/telephony/gsm/stk/Input;
 
     invoke-virtual {p1, v1, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 144
     sget-object v1, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$2;->$SwitchMap$com$android$internal$telephony$gsm$stk$AppInterface$CommandType:[I
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->getCmdType()Lcom/android/internal/telephony/gsm/stk/AppInterface$CommandType;
@@ -667,9 +744,11 @@
 
     packed-switch v1, :pswitch_data_0
 
+    .line 167
     :goto_0
     return-void
 
+    .line 146
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
@@ -677,6 +756,7 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 147
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mBrowserSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;
 
     iget-object v1, v1, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$BrowserSettings;->mode:Lcom/android/internal/telephony/gsm/stk/LaunchBrowserMode;
@@ -689,6 +769,7 @@
 
     goto :goto_0
 
+    .line 150
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mToneSettings:Lcom/android/internal/telephony/gsm/stk/ToneSettings;
 
@@ -696,6 +777,7 @@
 
     goto :goto_0
 
+    .line 153
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
@@ -703,6 +785,7 @@
 
     invoke-virtual {p1, v1, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 154
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mCallSettings:Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;
 
     iget-object v1, v1, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage$CallSettings;->callMsg:Lcom/android/internal/telephony/gsm/stk/TextMessage;
@@ -711,35 +794,42 @@
 
     goto :goto_0
 
+    .line 157
     :pswitch_3
     iget v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mNumberOfEventList:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 158
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mEventList:[I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeIntArray([I)V
 
     goto :goto_0
 
+    .line 161
     :pswitch_4
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mLanguage:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 162
     const/4 v1, 0x1
 
     new-array v0, v1, [Z
 
+    .line 163
     .local v0, tempBooleanArray:[Z
     iget-boolean v1, p0, Lcom/android/internal/telephony/gsm/stk/StkCmdMessage;->mInitialLanguage:Z
 
     aput-boolean v1, v0, v3
 
+    .line 164
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
     goto :goto_0
 
+    .line 144
     :pswitch_data_0
     .packed-switch 0xc
         :pswitch_0

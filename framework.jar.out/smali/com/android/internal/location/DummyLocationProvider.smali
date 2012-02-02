@@ -36,8 +36,10 @@
     .parameter "service"
 
     .prologue
+    .line 46
     invoke-direct {p0, p1, p2}, Landroid/location/LocationProvider;-><init>(Ljava/lang/String;Landroid/location/ILocationManager;)V
 
+    .line 47
     return-void
 .end method
 
@@ -47,6 +49,7 @@
     .locals 1
 
     .prologue
+    .line 168
     iget v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mAccuracy:I
 
     return v0
@@ -56,6 +59,7 @@
     .locals 1
 
     .prologue
+    .line 157
     iget v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mPowerRequirement:I
 
     return v0
@@ -65,6 +69,7 @@
     .locals 1
 
     .prologue
+    .line 117
     iget-boolean v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mHasMonetaryCost:Z
 
     return v0
@@ -74,6 +79,7 @@
     .locals 1
 
     .prologue
+    .line 108
     iget-boolean v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mRequiresCell:Z
 
     return v0
@@ -83,6 +89,7 @@
     .locals 1
 
     .prologue
+    .line 90
     iget-boolean v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mRequiresNetwork:Z
 
     return v0
@@ -92,6 +99,7 @@
     .locals 1
 
     .prologue
+    .line 99
     iget-boolean v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mRequiresSatellite:Z
 
     return v0
@@ -102,8 +110,10 @@
     .parameter "accuracy"
 
     .prologue
+    .line 82
     iput p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mAccuracy:I
 
+    .line 83
     return-void
 .end method
 
@@ -112,8 +122,10 @@
     .parameter "hasMonetaryCost"
 
     .prologue
+    .line 62
     iput-boolean p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mHasMonetaryCost:Z
 
+    .line 63
     return-void
 .end method
 
@@ -122,8 +134,10 @@
     .parameter "powerRequirement"
 
     .prologue
+    .line 78
     iput p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mPowerRequirement:I
 
+    .line 79
     return-void
 .end method
 
@@ -132,8 +146,10 @@
     .parameter "requiresCell"
 
     .prologue
+    .line 58
     iput-boolean p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mRequiresCell:Z
 
+    .line 59
     return-void
 .end method
 
@@ -142,8 +158,10 @@
     .parameter "requiresNetwork"
 
     .prologue
+    .line 50
     iput-boolean p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mRequiresNetwork:Z
 
+    .line 51
     return-void
 .end method
 
@@ -152,8 +170,10 @@
     .parameter "requiresSatellite"
 
     .prologue
+    .line 54
     iput-boolean p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mRequiresSatellite:Z
 
+    .line 55
     return-void
 .end method
 
@@ -162,8 +182,10 @@
     .parameter "supportsAltitude"
 
     .prologue
+    .line 66
     iput-boolean p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mSupportsAltitude:Z
 
+    .line 67
     return-void
 .end method
 
@@ -172,8 +194,10 @@
     .parameter "supportsBearing"
 
     .prologue
+    .line 74
     iput-boolean p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mSupportsBearing:Z
 
+    .line 75
     return-void
 .end method
 
@@ -182,8 +206,10 @@
     .parameter "supportsSpeed"
 
     .prologue
+    .line 70
     iput-boolean p1, p0, Lcom/android/internal/location/DummyLocationProvider;->mSupportsSpeed:Z
 
+    .line 71
     return-void
 .end method
 
@@ -191,6 +217,7 @@
     .locals 1
 
     .prologue
+    .line 127
     iget-boolean v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mSupportsAltitude:Z
 
     return v0
@@ -200,6 +227,7 @@
     .locals 1
 
     .prologue
+    .line 147
     iget-boolean v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mSupportsBearing:Z
 
     return v0
@@ -209,6 +237,7 @@
     .locals 1
 
     .prologue
+    .line 137
     iget-boolean v0, p0, Lcom/android/internal/location/DummyLocationProvider;->mSupportsSpeed:Z
 
     return v0

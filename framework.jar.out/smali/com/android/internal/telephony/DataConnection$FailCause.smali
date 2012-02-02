@@ -76,6 +76,7 @@
 
     const/4 v3, 0x0
 
+    .line 174
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "NONE"
@@ -84,6 +85,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->NONE:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 175
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "OPERATOR_BARRED"
@@ -92,6 +94,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 176
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "INSUFFICIENT_RESOURCES"
@@ -100,6 +103,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->INSUFFICIENT_RESOURCES:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 177
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "MISSING_UNKNOWN_APN"
@@ -108,6 +112,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->MISSING_UNKNOWN_APN:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 178
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "UNKNOWN_PDP_ADDRESS"
@@ -116,6 +121,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->UNKNOWN_PDP_ADDRESS:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 179
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "USER_AUTHENTICATION"
@@ -126,6 +132,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->USER_AUTHENTICATION:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 180
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "ACTIVATION_REJECT_GGSN"
@@ -136,6 +143,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->ACTIVATION_REJECT_GGSN:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 181
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "ACTIVATION_REJECT_UNSPECIFIED"
@@ -146,6 +154,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->ACTIVATION_REJECT_UNSPECIFIED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 182
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "SERVICE_OPTION_NOT_SUPPORTED"
@@ -156,6 +165,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->SERVICE_OPTION_NOT_SUPPORTED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 183
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "SERVICE_OPTION_NOT_SUBSCRIBED"
@@ -166,6 +176,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->SERVICE_OPTION_NOT_SUBSCRIBED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 184
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "SERVICE_OPTION_OUT_OF_ORDER"
@@ -176,6 +187,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->SERVICE_OPTION_OUT_OF_ORDER:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 185
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "NSAPI_IN_USE"
@@ -186,6 +198,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->NSAPI_IN_USE:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 186
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "PROTOCOL_ERRORS"
@@ -196,6 +209,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->PROTOCOL_ERRORS:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 187
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "REGISTRATION_FAIL"
@@ -206,6 +220,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->REGISTRATION_FAIL:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 188
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "GPRS_REGISTRATION_FAIL"
@@ -216,6 +231,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->GPRS_REGISTRATION_FAIL:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 189
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "UNKNOWN"
@@ -226,6 +242,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->UNKNOWN:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 191
     new-instance v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     const-string v1, "RADIO_NOT_AVAILABLE"
@@ -236,6 +253,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->RADIO_NOT_AVAILABLE:Lcom/android/internal/telephony/DataConnection$FailCause;
 
+    .line 173
     const/16 v0, 0x11
 
     new-array v0, v0, [Lcom/android/internal/telephony/DataConnection$FailCause;
@@ -348,6 +366,7 @@
     .end annotation
 
     .prologue
+    .line 173
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -358,6 +377,7 @@
     .parameter "name"
 
     .prologue
+    .line 173
     const-class v0, Lcom/android/internal/telephony/DataConnection$FailCause;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -374,6 +394,7 @@
     .locals 1
 
     .prologue
+    .line 173
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->$VALUES:[Lcom/android/internal/telephony/DataConnection$FailCause;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/DataConnection$FailCause;->clone()Ljava/lang/Object;
@@ -391,6 +412,7 @@
     .locals 1
 
     .prologue
+    .line 216
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
     if-eq p0, v0, :cond_0
@@ -453,9 +475,10 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 207
     const-string v0, "TIM"
 
-    const-string v1, "ro.csc.sales_code"
+    const-string/jumbo v1, "ro.csc.sales_code"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -467,6 +490,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 209
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/DataConnection$FailCause;
 
     if-eq p0, v0, :cond_0
@@ -478,17 +502,20 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 212
     :goto_0
     return v0
 
     :cond_1
     move v0, v2
 
+    .line 209
     goto :goto_0
 
     :cond_2
     move v0, v2
 
+    .line 212
     goto :goto_0
 .end method
 
@@ -496,6 +523,7 @@
     .locals 2
 
     .prologue
+    .line 227
     sget-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataConnection$FailCause:[I
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/DataConnection$FailCause;->ordinal()I
@@ -506,91 +534,109 @@
 
     packed-switch v0, :pswitch_data_0
 
+    .line 261
     const-string v0, "Unknown Data Error"
 
     :goto_0
     return-object v0
 
+    .line 229
     :pswitch_0
     const-string v0, "No Error"
 
     goto :goto_0
 
+    .line 231
     :pswitch_1
     const-string v0, "Operator Barred"
 
     goto :goto_0
 
+    .line 233
     :pswitch_2
     const-string v0, "Insufficient Resources"
 
     goto :goto_0
 
+    .line 235
     :pswitch_3
     const-string v0, "Missing / Unknown APN"
 
     goto :goto_0
 
+    .line 237
     :pswitch_4
     const-string v0, "Unknown PDP Address"
 
     goto :goto_0
 
+    .line 239
     :pswitch_5
     const-string v0, "Error User Authentication"
 
     goto :goto_0
 
+    .line 241
     :pswitch_6
     const-string v0, "Activation Reject GGSN"
 
     goto :goto_0
 
+    .line 243
     :pswitch_7
     const-string v0, "Activation Reject unspecified"
 
     goto :goto_0
 
+    .line 245
     :pswitch_8
     const-string v0, "Data Not Supported"
 
     goto :goto_0
 
+    .line 247
     :pswitch_9
     const-string v0, "Data Not subscribed"
 
     goto :goto_0
 
+    .line 249
     :pswitch_a
     const-string v0, "Data Services Out of Order"
 
     goto :goto_0
 
+    .line 251
     :pswitch_b
     const-string v0, "NSAPI in use"
 
     goto :goto_0
 
+    .line 253
     :pswitch_c
     const-string v0, "Protocol Errors"
 
     goto :goto_0
 
+    .line 255
     :pswitch_d
     const-string v0, "Network Registration Failure"
 
     goto :goto_0
 
+    .line 257
     :pswitch_e
     const-string v0, "Data Network Registration Failure"
 
     goto :goto_0
 
+    .line 259
     :pswitch_f
     const-string v0, "Radio Not Available"
 
     goto :goto_0
 
+    .line 227
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

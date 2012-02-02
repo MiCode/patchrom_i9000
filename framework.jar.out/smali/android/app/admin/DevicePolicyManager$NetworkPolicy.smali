@@ -26,10 +26,12 @@
     .parameter
 
     .prologue
+    .line 3898
     iput-object p1, p0, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;->this$0:Landroid/app/admin/DevicePolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3899
     const-string v0, "network_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -42,6 +44,7 @@
 
     iput-object v0, p0, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;->mService:Landroid/app/enterprise/INetworkPolicy;
 
+    .line 3900
     return-void
 .end method
 
@@ -51,6 +54,7 @@
     .parameter "x1"
 
     .prologue
+    .line 3894
     invoke-direct {p0, p1}, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;-><init>(Landroid/app/admin/DevicePolicyManager;)V
 
     return-void
@@ -76,6 +80,7 @@
     .parameter "authType"
 
     .prologue
+    .line 3915
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;->mService:Landroid/app/enterprise/INetworkPolicy;
@@ -84,6 +89,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 3917
     :try_start_0
     move-object/from16 v0, p0
 
@@ -125,14 +131,17 @@
 
     move-result-wide v3
 
+    .line 3923
     :goto_0
     return-wide v3
 
+    .line 3919
     :catch_0
     move-exception v3
 
     move-object/from16 v18, v3
 
+    .line 3920
     .local v18, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -148,6 +157,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 3923
     .end local v18           #e:Landroid/os/RemoteException;
     :cond_0
     const-wide/16 v3, -0x1
@@ -160,10 +170,12 @@
     .parameter "apId"
 
     .prologue
+    .line 3974
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;->mService:Landroid/app/enterprise/INetworkPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 3976
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;->mService:Landroid/app/enterprise/INetworkPolicy;
 
@@ -173,14 +185,17 @@
 
     move-result v1
 
+    .line 3981
     :goto_0
     return v1
 
+    .line 3977
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 3978
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -190,6 +205,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 3981
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -216,6 +232,7 @@
     .parameter "authType"
 
     .prologue
+    .line 3939
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;->mService:Landroid/app/enterprise/INetworkPolicy;
@@ -224,6 +241,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 3941
     :try_start_0
     move-object/from16 v0, p0
 
@@ -267,14 +285,17 @@
 
     move-result-wide v3
 
+    .line 3947
     :goto_0
     return-wide v3
 
+    .line 3943
     :catch_0
     move-exception v3
 
     move-object/from16 v20, v3
 
+    .line 3944
     .local v20, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -290,6 +311,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 3947
     .end local v20           #e:Landroid/os/RemoteException;
     :cond_0
     const-wide/16 v3, -0x1
@@ -302,10 +324,12 @@
     .parameter "apId"
 
     .prologue
+    .line 3957
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;->mService:Landroid/app/enterprise/INetworkPolicy;
 
     if-eqz v1, :cond_0
 
+    .line 3959
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager$NetworkPolicy;->mService:Landroid/app/enterprise/INetworkPolicy;
 
@@ -315,14 +339,17 @@
 
     move-result v1
 
+    .line 3964
     :goto_0
     return v1
 
+    .line 3960
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 3961
     .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->access$900()Ljava/lang/String;
 
@@ -332,6 +359,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 3964
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0

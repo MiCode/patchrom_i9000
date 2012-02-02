@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 106
     iput-object p1, p0, Lcom/android/internal/app/RingtonePickerActivity$1;->this$0:Lcom/android/internal/app/RingtonePickerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +43,13 @@
     .parameter "which"
 
     .prologue
+    .line 113
     iget-object v0, p0, Lcom/android/internal/app/RingtonePickerActivity$1;->this$0:Lcom/android/internal/app/RingtonePickerActivity;
 
     #setter for: Lcom/android/internal/app/RingtonePickerActivity;->mClickedPos:I
     invoke-static {v0, p2}, Lcom/android/internal/app/RingtonePickerActivity;->access$002(Lcom/android/internal/app/RingtonePickerActivity;I)I
 
+    .line 116
     iget-object v0, p0, Lcom/android/internal/app/RingtonePickerActivity$1;->this$0:Lcom/android/internal/app/RingtonePickerActivity;
 
     const/4 v1, 0x0
@@ -54,5 +57,6 @@
     #calls: Lcom/android/internal/app/RingtonePickerActivity;->playRingtone(II)V
     invoke-static {v0, p2, v1}, Lcom/android/internal/app/RingtonePickerActivity;->access$100(Lcom/android/internal/app/RingtonePickerActivity;II)V
 
+    .line 117
     return-void
 .end method

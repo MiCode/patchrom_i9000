@@ -66,6 +66,7 @@
     .parameter
 
     .prologue
+    .line 610
     iput-object p1, p0, Lcom/android/server/ServerThread$1;->this$0:Lcom/android/server/ServerThread;
 
     iput-object p2, p0, Lcom/android/server/ServerThread$1;->val$statusBarF:Lcom/android/server/StatusBarManagerService;
@@ -107,12 +108,14 @@
     .prologue
     const-string v2, "SystemServer"
 
+    .line 612
     const-string v0, "SystemServer"
 
     const-string v0, "Making services ready"
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 613
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$statusBarF:Lcom/android/server/StatusBarManagerService;
 
     if-eqz v0, :cond_0
@@ -121,6 +124,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/StatusBarManagerService;->systemReady2()V
 
+    .line 614
     :cond_0
     const-string v0, "SystemServer"
 
@@ -128,6 +132,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 615
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$batteryF:Lcom/android/server/BatteryService;
 
     if-eqz v0, :cond_1
@@ -136,6 +141,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/BatteryService;->systemReady()V
 
+    .line 616
     :cond_1
     const-string v0, "SystemServer"
 
@@ -143,6 +149,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 617
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$connectivityF:Lcom/android/server/ConnectivityService;
 
     if-eqz v0, :cond_2
@@ -151,6 +158,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/ConnectivityService;->systemReady()V
 
+    .line 618
     :cond_2
     const-string v0, "SystemServer"
 
@@ -158,6 +166,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 619
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$dockF:Lcom/android/server/DockObserver;
 
     if-eqz v0, :cond_3
@@ -166,6 +175,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/DockObserver;->systemReady()V
 
+    .line 620
     :cond_3
     const-string v0, "SystemServer"
 
@@ -173,6 +183,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 621
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$usbF:Lcom/android/server/usb/UsbService;
 
     if-eqz v0, :cond_4
@@ -181,6 +192,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/usb/UsbService;->systemReady()V
 
+    .line 622
     :cond_4
     const-string v0, "SystemServer"
 
@@ -188,6 +200,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 623
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$uiModeF:Lcom/android/server/UiModeManagerService;
 
     if-eqz v0, :cond_5
@@ -196,6 +209,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/UiModeManagerService;->systemReady()V
 
+    .line 624
     :cond_5
     const-string v0, "SystemServer"
 
@@ -203,6 +217,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 625
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$recognitionF:Lcom/android/server/RecognitionManagerService;
 
     if-eqz v0, :cond_6
@@ -211,6 +226,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/RecognitionManagerService;->systemReady()V
 
+    .line 626
     :cond_6
     const-string v0, "SystemServer"
 
@@ -218,12 +234,14 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 627
     invoke-static {}, Lcom/android/server/Watchdog;->getInstance()Lcom/android/server/Watchdog;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/Watchdog;->start()V
 
+    .line 631
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$appWidgetF:Lcom/android/server/AppWidgetService;
 
     if-eqz v0, :cond_7
@@ -234,6 +252,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/AppWidgetService;->systemReady(Z)V
 
+    .line 632
     :cond_7
     const-string v0, "SystemServer"
 
@@ -241,6 +260,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 633
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$wallpaperF:Lcom/android/server/WallpaperManagerService;
 
     if-eqz v0, :cond_8
@@ -249,6 +269,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/WallpaperManagerService;->systemReady()V
 
+    .line 634
     :cond_8
     const-string v0, "SystemServer"
 
@@ -256,6 +277,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 635
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$immF:Lcom/android/server/InputMethodManagerService;
 
     if-eqz v0, :cond_9
@@ -264,6 +286,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/InputMethodManagerService;->systemReady()V
 
+    .line 636
     :cond_9
     const-string v0, "SystemServer"
 
@@ -271,6 +294,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 637
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$locationF:Lcom/android/server/LocationManagerService;
 
     if-eqz v0, :cond_a
@@ -279,6 +303,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/LocationManagerService;->systemReady()V
 
+    .line 638
     :cond_a
     const-string v0, "SystemServer"
 
@@ -286,6 +311,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 639
     iget-object v0, p0, Lcom/android/server/ServerThread$1;->val$throttleF:Lcom/android/server/ThrottleService;
 
     if-eqz v0, :cond_b
@@ -294,6 +320,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/ThrottleService;->systemReady()V
 
+    .line 640
     :cond_b
     const-string v0, "SystemServer"
 
@@ -301,11 +328,13 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 641
     const-string v0, "SystemServer"
 
     const-string v0, "!@endofActivityManagersystemReady()"
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 642
     return-void
 .end method

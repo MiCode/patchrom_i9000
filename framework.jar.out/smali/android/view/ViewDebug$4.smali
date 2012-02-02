@@ -37,6 +37,7 @@
     .parameter
 
     .prologue
+    .line 995
     iput-object p1, p0, Landroid/view/ViewDebug$4;->val$view:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +52,7 @@
     .parameter "data"
 
     .prologue
+    .line 1013
     const/4 v0, 0x0
 
     aget-object p0, p1, v0
@@ -60,6 +62,7 @@
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 1014
     return-void
 .end method
 
@@ -67,6 +70,7 @@
     .locals 6
 
     .prologue
+    .line 997
     iget-object v3, p0, Landroid/view/ViewDebug$4;->val$view:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -77,6 +81,7 @@
 
     move-result-object v2
 
+    .line 999
     .local v2, metrics:Landroid/util/DisplayMetrics;
     iget v3, v2, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -88,11 +93,13 @@
 
     move-result-object v0
 
+    .line 1002
     .local v0, bitmap:Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 1003
     .local v1, canvas:Landroid/graphics/Canvas;
     const/4 v3, 0x2
 
@@ -114,6 +121,7 @@
     .parameter "data"
 
     .prologue
+    .line 1009
     iget-object v0, p0, Landroid/view/ViewDebug$4;->val$view:Landroid/view/View;
 
     const/4 v1, 0x1
@@ -125,5 +133,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
+    .line 1010
     return-void
 .end method

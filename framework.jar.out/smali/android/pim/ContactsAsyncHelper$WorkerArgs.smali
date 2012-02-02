@@ -37,6 +37,7 @@
     .locals 0
 
     .prologue
+    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +48,7 @@
     .parameter "x0"
 
     .prologue
+    .line 70
     invoke-direct {p0}, Landroid/pim/ContactsAsyncHelper$WorkerArgs;-><init>()V
 
     return-void

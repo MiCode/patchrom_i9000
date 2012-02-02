@@ -27,12 +27,15 @@
     .parameter "context"
 
     .prologue
+    .line 939
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->this$0:Landroid/service/wallpaper/WallpaperService;
 
     invoke-direct {p0}, Landroid/service/wallpaper/IWallpaperService$Stub;-><init>()V
 
+    .line 940
     iput-object p2, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->mTarget:Landroid/service/wallpaper/WallpaperService;
 
+    .line 941
     return-void
 .end method
 
@@ -48,6 +51,7 @@
     .parameter "reqHeight"
 
     .prologue
+    .line 945
     new-instance v0, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;
 
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->this$0:Landroid/service/wallpaper/WallpaperService;
@@ -68,5 +72,6 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;-><init>(Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/IWallpaperConnection;Landroid/os/IBinder;IZII)V
 
+    .line 947
     return-void
 .end method

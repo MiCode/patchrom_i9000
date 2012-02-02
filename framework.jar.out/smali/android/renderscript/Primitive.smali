@@ -49,6 +49,7 @@
 
     const/4 v4, 0x0
 
+    .line 23
     new-instance v0, Landroid/renderscript/Primitive;
 
     const-string v1, "POINT"
@@ -57,6 +58,7 @@
 
     sput-object v0, Landroid/renderscript/Primitive;->POINT:Landroid/renderscript/Primitive;
 
+    .line 24
     new-instance v0, Landroid/renderscript/Primitive;
 
     const-string v1, "LINE"
@@ -65,6 +67,7 @@
 
     sput-object v0, Landroid/renderscript/Primitive;->LINE:Landroid/renderscript/Primitive;
 
+    .line 25
     new-instance v0, Landroid/renderscript/Primitive;
 
     const-string v1, "LINE_STRIP"
@@ -73,6 +76,7 @@
 
     sput-object v0, Landroid/renderscript/Primitive;->LINE_STRIP:Landroid/renderscript/Primitive;
 
+    .line 26
     new-instance v0, Landroid/renderscript/Primitive;
 
     const-string v1, "TRIANGLE"
@@ -81,6 +85,7 @@
 
     sput-object v0, Landroid/renderscript/Primitive;->TRIANGLE:Landroid/renderscript/Primitive;
 
+    .line 27
     new-instance v0, Landroid/renderscript/Primitive;
 
     const-string v1, "TRIANGLE_STRIP"
@@ -89,6 +94,7 @@
 
     sput-object v0, Landroid/renderscript/Primitive;->TRIANGLE_STRIP:Landroid/renderscript/Primitive;
 
+    .line 28
     new-instance v0, Landroid/renderscript/Primitive;
 
     const-string v1, "TRIANGLE_FAN"
@@ -101,6 +107,7 @@
 
     sput-object v0, Landroid/renderscript/Primitive;->TRIANGLE_FAN:Landroid/renderscript/Primitive;
 
+    .line 22
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/renderscript/Primitive;
@@ -148,10 +155,13 @@
     .end annotation
 
     .prologue
+    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 32
     iput p3, p0, Landroid/renderscript/Primitive;->mID:I
 
+    .line 33
     return-void
 .end method
 
@@ -160,6 +170,7 @@
     .parameter "name"
 
     .prologue
+    .line 22
     const-class v0, Landroid/renderscript/Primitive;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -176,6 +187,7 @@
     .locals 1
 
     .prologue
+    .line 22
     sget-object v0, Landroid/renderscript/Primitive;->$VALUES:[Landroid/renderscript/Primitive;
 
     invoke-virtual {v0}, [Landroid/renderscript/Primitive;->clone()Ljava/lang/Object;

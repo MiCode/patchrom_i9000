@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 557
     iput-object p1, p0, Lcom/android/server/enterprise/EmailAccountPolicy$1;->this$0:Lcom/android/server/enterprise/EmailAccountPolicy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,6 +39,7 @@
     .parameter "msg"
 
     .prologue
+    .line 561
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -62,13 +64,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 562
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
+    .line 569
     :goto_0
     return-void
 
+    .line 565
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/enterprise/EmailAccountPolicy$1;->this$0:Lcom/android/server/enterprise/EmailAccountPolicy;
 
@@ -85,6 +90,7 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
+    .line 566
     .local v0, am:Landroid/app/ActivityManager;
     const-string v1, "com.android.email"
 
@@ -92,6 +98,7 @@
 
     goto :goto_0
 
+    .line 562
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

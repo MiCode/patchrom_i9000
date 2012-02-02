@@ -27,12 +27,15 @@
     .parameter "method"
 
     .prologue
+    .line 454
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$MethodCallback;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/view/IInputMethodCallback$Stub;-><init>()V
 
+    .line 455
     iput-object p2, p0, Lcom/android/server/InputMethodManagerService$MethodCallback;->mMethod:Lcom/android/internal/view/IInputMethod;
 
+    .line 456
     return-void
 .end method
 
@@ -49,6 +52,7 @@
     .end annotation
 
     .prologue
+    .line 459
     return-void
 .end method
 
@@ -62,11 +66,13 @@
     .end annotation
 
     .prologue
+    .line 462
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$MethodCallback;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$MethodCallback;->mMethod:Lcom/android/internal/view/IInputMethod;
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/InputMethodManagerService;->onSessionCreated(Lcom/android/internal/view/IInputMethod;Lcom/android/internal/view/IInputMethodSession;)V
 
+    .line 463
     return-void
 .end method

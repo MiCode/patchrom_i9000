@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 138
     iput-object p1, p0, Lcom/android/internal/policy/impl/RecoveryPasswordScreen$3;->this$0:Lcom/android/internal/policy/impl/RecoveryPasswordScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,8 +44,10 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 140
     sput-boolean v1, Lcom/android/internal/policy/impl/RecoveryPasswordScreen;->recoveryScreen:Z
 
+    .line 141
     iget-object v0, p0, Lcom/android/internal/policy/impl/RecoveryPasswordScreen$3;->this$0:Lcom/android/internal/policy/impl/RecoveryPasswordScreen;
 
     #getter for: Lcom/android/internal/policy/impl/RecoveryPasswordScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
@@ -54,5 +57,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->reportDeviceWipe(I)V
 
+    .line 142
     return-void
 .end method

@@ -38,6 +38,7 @@
     .locals 1
 
     .prologue
+    .line 38
     const-string v0, "MemoryFile"
 
     sput-object v0, Landroid/os/MemoryFile;->TAG:Ljava/lang/String;
@@ -59,12 +60,16 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 60
     iput-boolean v2, p0, Landroid/os/MemoryFile;->mAllowPurging:Z
 
+    .line 95
     if-nez p1, :cond_0
 
+    .line 96
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "File descriptor is null."
@@ -73,6 +78,7 @@
 
     throw v0
 
+    .line 98
     :cond_0
     invoke-static {p1}, Landroid/os/MemoryFile;->isMemoryFile(Ljava/io/FileDescriptor;)Z
 
@@ -80,6 +86,7 @@
 
     if-nez v0, :cond_1
 
+    .line 99
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Not a memory file."
@@ -88,11 +95,14 @@
 
     throw v0
 
+    .line 101
     :cond_1
     iput p2, p0, Landroid/os/MemoryFile;->mLength:I
 
+    .line 102
     iput-object p1, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
+    .line 103
     iget-object v0, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
     invoke-static {p3}, Landroid/os/MemoryFile;->modeToProt(Ljava/lang/String;)I
@@ -105,8 +115,10 @@
 
     iput v0, p0, Landroid/os/MemoryFile;->mAddress:I
 
+    .line 104
     iput-boolean v2, p0, Landroid/os/MemoryFile;->mOwnsRegion:Z
 
+    .line 105
     return-void
 .end method
 
@@ -121,20 +133,25 @@
     .end annotation
 
     .prologue
+    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 60
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/os/MemoryFile;->mAllowPurging:Z
 
+    .line 71
     iput p2, p0, Landroid/os/MemoryFile;->mLength:I
 
+    .line 72
     invoke-static {p1, p2}, Landroid/os/MemoryFile;->native_open(Ljava/lang/String;I)Ljava/io/FileDescriptor;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
+    .line 73
     iget-object v0, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
     const/4 v1, 0x3
@@ -145,10 +162,12 @@
 
     iput v0, p0, Landroid/os/MemoryFile;->mAddress:I
 
+    .line 74
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/os/MemoryFile;->mOwnsRegion:Z
 
+    .line 75
     return-void
 .end method
 
@@ -157,6 +176,7 @@
     .parameter "x0"
 
     .prologue
+    .line 36
     iget v0, p0, Landroid/os/MemoryFile;->mLength:I
 
     return v0
@@ -172,6 +192,7 @@
     .end annotation
 
     .prologue
+    .line 316
     invoke-static {p0}, Landroid/os/MemoryFile;->native_get_size(Ljava/io/FileDescriptor;)I
 
     move-result v0
@@ -183,6 +204,7 @@
     .locals 1
 
     .prologue
+    .line 147
     iget-object v0, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
     invoke-virtual {v0}, Ljava/io/FileDescriptor;->valid()Z
@@ -206,6 +228,7 @@
     .locals 1
 
     .prologue
+    .line 140
     iget v0, p0, Landroid/os/MemoryFile;->mAddress:I
 
     if-nez v0, :cond_0
@@ -231,6 +254,7 @@
     .end annotation
 
     .prologue
+    .line 304
     invoke-static {p0}, Landroid/os/MemoryFile;->native_get_size(Ljava/io/FileDescriptor;)I
 
     move-result v0
@@ -253,7 +277,8 @@
     .parameter "mode"
 
     .prologue
-    const-string v0, "r"
+    .line 326
+    const-string/jumbo v0, "r"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -261,10 +286,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 327
     const/4 v0, 0x1
 
     return v0
 
+    .line 329
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -368,6 +395,7 @@
     .end annotation
 
     .prologue
+    .line 184
     monitor-enter p0
 
     :try_start_0
@@ -375,6 +403,7 @@
 
     if-nez v1, :cond_0
 
+    .line 185
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Only the owner can make ashmem regions purgable."
@@ -385,6 +414,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 184
     :catchall_0
     move-exception v1
 
@@ -392,13 +422,16 @@
 
     throw v1
 
+    .line 187
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Landroid/os/MemoryFile;->mAllowPurging:Z
 
+    .line 188
     .local v0, oldValue:Z
     if-eq v0, p1, :cond_1
 
+    .line 189
     iget-object v1, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
     if-nez p1, :cond_2
@@ -408,15 +441,18 @@
     :goto_0
     invoke-static {v1, v2}, Landroid/os/MemoryFile;->native_pin(Ljava/io/FileDescriptor;Z)V
 
+    .line 190
     iput-boolean p1, p0, Landroid/os/MemoryFile;->mAllowPurging:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 192
     :cond_1
     monitor-exit p0
 
     return v0
 
+    .line 189
     :cond_2
     const/4 v2, 0x0
 
@@ -427,18 +463,22 @@
     .locals 1
 
     .prologue
+    .line 112
     invoke-virtual {p0}, Landroid/os/MemoryFile;->deactivate()V
 
+    .line 113
     invoke-direct {p0}, Landroid/os/MemoryFile;->isClosed()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 114
     iget-object v0, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
     invoke-static {v0}, Landroid/os/MemoryFile;->native_close(Ljava/io/FileDescriptor;)V
 
+    .line 116
     :cond_0
     return-void
 .end method
@@ -447,12 +487,14 @@
     .locals 3
 
     .prologue
+    .line 126
     invoke-direct {p0}, Landroid/os/MemoryFile;->isDeactivated()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 128
     :try_start_0
     iget v1, p0, Landroid/os/MemoryFile;->mAddress:I
 
@@ -460,21 +502,25 @@
 
     invoke-static {v1, v2}, Landroid/os/MemoryFile;->native_munmap(II)V
 
+    .line 129
     const/4 v1, 0x0
 
     iput v1, p0, Landroid/os/MemoryFile;->mAddress:I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 134
     :cond_0
     :goto_0
     return-void
 
+    .line 130
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 131
     .local v0, ex:Ljava/io/IOException;
     sget-object v1, Landroid/os/MemoryFile;->TAG:Ljava/lang/String;
 
@@ -491,20 +537,24 @@
     .locals 2
 
     .prologue
+    .line 152
     invoke-direct {p0}, Landroid/os/MemoryFile;->isClosed()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 153
     sget-object v0, Landroid/os/MemoryFile;->TAG:Ljava/lang/String;
 
     const-string v1, "MemoryFile.finalize() called while ashmem still open"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 154
     invoke-virtual {p0}, Landroid/os/MemoryFile;->close()V
 
+    .line 156
     :cond_0
     return-void
 .end method
@@ -518,6 +568,7 @@
     .end annotation
 
     .prologue
+    .line 293
     iget-object v0, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
     return-object v0
@@ -527,6 +578,7 @@
     .locals 2
 
     .prologue
+    .line 201
     new-instance v0, Landroid/os/MemoryFile$MemoryInputStream;
 
     const/4 v1, 0x0
@@ -540,6 +592,7 @@
     .locals 2
 
     .prologue
+    .line 210
     new-instance v0, Landroid/os/MemoryFile$MemoryOutputStream;
 
     const/4 v1, 0x0
@@ -558,10 +611,12 @@
     .end annotation
 
     .prologue
+    .line 276
     invoke-virtual {p0}, Landroid/os/MemoryFile;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
+    .line 277
     .local v0, fd:Ljava/io/FileDescriptor;
     if-eqz v0, :cond_0
 
@@ -582,6 +637,7 @@
     .locals 1
 
     .prologue
+    .line 173
     iget-boolean v0, p0, Landroid/os/MemoryFile;->mAllowPurging:Z
 
     return v0
@@ -591,6 +647,7 @@
     .locals 1
 
     .prologue
+    .line 164
     iget v0, p0, Landroid/os/MemoryFile;->mLength:I
 
     return v0
@@ -609,12 +666,14 @@
     .end annotation
 
     .prologue
+    .line 226
     invoke-direct {p0}, Landroid/os/MemoryFile;->isDeactivated()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 227
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Can\'t read from deactivated memory file."
@@ -623,6 +682,7 @@
 
     throw v0
 
+    .line 229
     :cond_0
     if-ltz p3, :cond_1
 
@@ -650,6 +710,7 @@
 
     if-le p4, v0, :cond_2
 
+    .line 233
     :cond_1
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -657,6 +718,7 @@
 
     throw v0
 
+    .line 235
     :cond_2
     iget-object v0, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
@@ -692,12 +754,14 @@
     .end annotation
 
     .prologue
+    .line 250
     invoke-direct {p0}, Landroid/os/MemoryFile;->isDeactivated()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 251
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Can\'t write to deactivated memory file."
@@ -706,6 +770,7 @@
 
     throw v0
 
+    .line 253
     :cond_0
     if-ltz p2, :cond_1
 
@@ -733,6 +798,7 @@
 
     if-le p4, v0, :cond_2
 
+    .line 257
     :cond_1
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -740,6 +806,7 @@
 
     throw v0
 
+    .line 259
     :cond_2
     iget-object v0, p0, Landroid/os/MemoryFile;->mFD:Ljava/io/FileDescriptor;
 
@@ -757,5 +824,6 @@
 
     invoke-static/range {v0 .. v6}, Landroid/os/MemoryFile;->native_write(Ljava/io/FileDescriptor;I[BIIIZ)V
 
+    .line 260
     return-void
 .end method

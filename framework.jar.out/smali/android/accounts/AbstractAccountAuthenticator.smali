@@ -28,8 +28,10 @@
     .parameter "context"
 
     .prologue
+    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 342
     new-instance v0, Landroid/accounts/AbstractAccountAuthenticator$Transport;
 
     const/4 v1, 0x0
@@ -38,8 +40,10 @@
 
     iput-object v0, p0, Landroid/accounts/AbstractAccountAuthenticator;->mTransport:Landroid/accounts/AbstractAccountAuthenticator$Transport;
 
+    .line 115
     iput-object p1, p0, Landroid/accounts/AbstractAccountAuthenticator;->mContext:Landroid/content/Context;
 
+    .line 116
     return-void
 .end method
 
@@ -48,6 +52,7 @@
     .parameter "x0"
 
     .prologue
+    .line 109
     invoke-direct {p0}, Landroid/accounts/AbstractAccountAuthenticator;->checkBinderPermission()V
 
     return-void
@@ -59,13 +64,16 @@
     .prologue
     const-string v5, "android.permission.ACCOUNT_MANAGER"
 
+    .line 335
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
+    .line 336
     .local v1, uid:I
     const-string v0, "android.permission.ACCOUNT_MANAGER"
 
+    .line 337
     .local v0, perm:Ljava/lang/String;
     iget-object v2, p0, Landroid/accounts/AbstractAccountAuthenticator;->mContext:Landroid/content/Context;
 
@@ -77,6 +85,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 338
     new-instance v2, Ljava/lang/SecurityException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -113,6 +122,7 @@
 
     throw v2
 
+    .line 340
     :cond_0
     return-void
 .end method
@@ -149,10 +159,12 @@
     .end annotation
 
     .prologue
+    .line 498
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 499
     .local v0, result:Landroid/os/Bundle;
     const-string v1, "booleanResult"
 
@@ -160,6 +172,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
+    .line 500
     return-object v0
 .end method
 
@@ -178,6 +191,7 @@
     .locals 1
 
     .prologue
+    .line 348
     iget-object v0, p0, Landroid/accounts/AbstractAccountAuthenticator;->mTransport:Landroid/accounts/AbstractAccountAuthenticator$Transport;
 
     invoke-virtual {v0}, Landroid/accounts/AbstractAccountAuthenticator$Transport;->asBinder()Landroid/os/IBinder;

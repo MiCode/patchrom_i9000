@@ -20,8 +20,10 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 30
     return-void
 .end method
 
@@ -45,10 +47,12 @@
     .end annotation
 
     .prologue
+    .line 72
     iget v0, p0, Landroid/graphics/Shader;->native_instance:I
 
     invoke-static {v0}, Landroid/graphics/Shader;->nativeDestructor(I)V
 
+    .line 73
     return-void
 .end method
 
@@ -57,6 +61,7 @@
     .parameter "localM"
 
     .prologue
+    .line 58
     iget v0, p0, Landroid/graphics/Shader;->native_instance:I
 
     iget v1, p1, Landroid/graphics/Matrix;->native_instance:I
@@ -73,6 +78,7 @@
     .parameter "localM"
 
     .prologue
+    .line 67
     iget v0, p0, Landroid/graphics/Shader;->native_instance:I
 
     if-eqz p1, :cond_0
@@ -82,8 +88,10 @@
     :goto_0
     invoke-static {v0, v1}, Landroid/graphics/Shader;->nativeSetLocalMatrix(II)V
 
+    .line 69
     return-void
 
+    .line 67
     :cond_0
     const/4 v1, 0x0
 

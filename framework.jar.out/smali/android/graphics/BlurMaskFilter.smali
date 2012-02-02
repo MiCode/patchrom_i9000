@@ -18,8 +18,10 @@
     .parameter "style"
 
     .prologue
+    .line 46
     invoke-direct {p0}, Landroid/graphics/MaskFilter;-><init>()V
 
+    .line 47
     iget v0, p2, Landroid/graphics/BlurMaskFilter$Blur;->native_int:I
 
     invoke-static {p1, v0}, Landroid/graphics/BlurMaskFilter;->nativeConstructor(FI)I
@@ -28,6 +30,7 @@
 
     iput v0, p0, Landroid/graphics/MaskFilter;->native_instance:I
 
+    .line 48
     return-void
 .end method
 

@@ -58,6 +58,7 @@
 
     const/4 v3, 0x0
 
+    .line 164
     new-instance v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
     const-string v1, "Normal"
@@ -66,6 +67,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->Normal:Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
+    .line 169
     new-instance v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
     const-string v1, "NetworkLocked"
@@ -74,6 +76,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->NetworkLocked:Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
+    .line 174
     new-instance v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
     const-string v1, "SimMissing"
@@ -82,6 +85,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->SimMissing:Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
+    .line 180
     new-instance v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
     const-string v1, "SimMissingLocked"
@@ -90,6 +94,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->SimMissingLocked:Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
+    .line 186
     new-instance v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
     const-string v1, "SimPukLocked"
@@ -98,6 +103,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->SimPukLocked:Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
+    .line 191
     new-instance v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
     const-string v1, "SimLocked"
@@ -108,6 +114,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->SimLocked:Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
+    .line 160
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
@@ -155,10 +162,13 @@
     .end annotation
 
     .prologue
+    .line 195
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 196
     iput-boolean p3, p0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->mShowStatusLines:Z
 
+    .line 197
     return-void
 .end method
 
@@ -167,6 +177,7 @@
     .parameter "name"
 
     .prologue
+    .line 160
     const-class v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -183,6 +194,7 @@
     .locals 1
 
     .prologue
+    .line 160
     sget-object v0, Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->$VALUES:[Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;
 
     invoke-virtual {v0}, [Lcom/android/internal/policy/impl/PuzzleLockScreen$Status;->clone()Ljava/lang/Object;

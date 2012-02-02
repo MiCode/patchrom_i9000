@@ -41,8 +41,10 @@
     .locals 1
 
     .prologue
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 117
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -57,6 +59,7 @@
     .parameter "x0"
 
     .prologue
+    .line 112
     invoke-direct {p0}, Lcom/android/server/AlarmManagerService$BroadcastStats;-><init>()V
 
     return-void

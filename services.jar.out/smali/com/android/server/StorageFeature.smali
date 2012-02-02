@@ -33,24 +33,28 @@
     .locals 1
 
     .prologue
+    .line 93
     invoke-static {}, Landroid/os/Environment;->isExternalStorageFirstInsalled()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/StorageFeature;->INSTALLED_FIRST_DISK:Z
 
+    .line 94
     invoke-static {}, Landroid/os/Environment;->isExternalStorageSecondInsalled()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/StorageFeature;->INSTALLED_SECOND_DISK:Z
 
+    .line 95
     invoke-static {}, Landroid/os/Environment;->isUsbHostStorageInsalled()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/StorageFeature;->INSTALLED_USBHOST_DISK:Z
 
+    .line 98
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/StorageFeature;->STORAGE_WAKE_LOCK:Z
@@ -62,7 +66,9 @@
     .locals 0
 
     .prologue
+    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 101
     return-void
 .end method

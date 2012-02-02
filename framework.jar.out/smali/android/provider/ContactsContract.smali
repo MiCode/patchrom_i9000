@@ -62,6 +62,7 @@
     .locals 1
 
     .prologue
+    .line 109
     const-string v0, "content://com.android.contacts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -77,7 +78,9 @@
     .locals 0
 
     .prologue
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5685
     return-void
 .end method

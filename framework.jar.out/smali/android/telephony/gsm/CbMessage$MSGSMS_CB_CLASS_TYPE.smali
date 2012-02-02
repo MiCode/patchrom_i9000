@@ -58,6 +58,7 @@
 
     const/4 v4, 0x0
 
+    .line 80
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
     const-string v1, "MSGSMS_CB_CLASS_0"
@@ -66,6 +67,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->MSGSMS_CB_CLASS_0:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
+    .line 81
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
     const-string v1, "MSGSMS_CB_CLASS_1"
@@ -74,6 +76,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->MSGSMS_CB_CLASS_1:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
+    .line 82
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
     const-string v1, "MSGSMS_CB_CLASS_2"
@@ -82,6 +85,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->MSGSMS_CB_CLASS_2:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
+    .line 83
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
     const-string v1, "MSGSMS_CB_CLASS_3"
@@ -90,6 +94,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->MSGSMS_CB_CLASS_3:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
+    .line 84
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
     const-string v1, "MSGSMS_CB_CLASS_NONE"
@@ -98,6 +103,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->MSGSMS_CB_CLASS_NONE:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
+    .line 86
     new-instance v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
     const-string v1, "MSGSMS_CB_CLASS_MAX"
@@ -110,6 +116,7 @@
 
     sput-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->MSGSMS_CB_CLASS_MAX:Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
+    .line 79
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
@@ -157,6 +164,7 @@
     .end annotation
 
     .prologue
+    .line 88
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->value:I
@@ -169,6 +177,7 @@
     .parameter "name"
 
     .prologue
+    .line 79
     const-class v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -185,6 +194,7 @@
     .locals 1
 
     .prologue
+    .line 79
     sget-object v0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->$VALUES:[Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;
 
     invoke-virtual {v0}, [Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->clone()Ljava/lang/Object;
@@ -203,6 +213,7 @@
     .parameter "EnumValue"
 
     .prologue
+    .line 93
     iput p1, p0, Landroid/telephony/gsm/CbMessage$MSGSMS_CB_CLASS_TYPE;->value:I
 
     return-void

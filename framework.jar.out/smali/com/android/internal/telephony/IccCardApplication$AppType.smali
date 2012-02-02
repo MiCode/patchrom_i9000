@@ -52,6 +52,7 @@
 
     const/4 v2, 0x0
 
+    .line 27
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$AppType;
 
     const-string v1, "APPTYPE_UNKNOWN"
@@ -60,6 +61,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$AppType;->APPTYPE_UNKNOWN:Lcom/android/internal/telephony/IccCardApplication$AppType;
 
+    .line 28
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$AppType;
 
     const-string v1, "APPTYPE_SIM"
@@ -68,6 +70,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$AppType;->APPTYPE_SIM:Lcom/android/internal/telephony/IccCardApplication$AppType;
 
+    .line 29
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$AppType;
 
     const-string v1, "APPTYPE_USIM"
@@ -76,6 +79,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$AppType;->APPTYPE_USIM:Lcom/android/internal/telephony/IccCardApplication$AppType;
 
+    .line 30
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$AppType;
 
     const-string v1, "APPTYPE_RUIM"
@@ -84,6 +88,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$AppType;->APPTYPE_RUIM:Lcom/android/internal/telephony/IccCardApplication$AppType;
 
+    .line 31
     new-instance v0, Lcom/android/internal/telephony/IccCardApplication$AppType;
 
     const-string v1, "APPTYPE_CSIM"
@@ -92,6 +97,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardApplication$AppType;->APPTYPE_CSIM:Lcom/android/internal/telephony/IccCardApplication$AppType;
 
+    .line 26
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/IccCardApplication$AppType;
@@ -132,6 +138,7 @@
     .end annotation
 
     .prologue
+    .line 26
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,6 +149,7 @@
     .parameter "name"
 
     .prologue
+    .line 26
     const-class v0, Lcom/android/internal/telephony/IccCardApplication$AppType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,6 +166,7 @@
     .locals 1
 
     .prologue
+    .line 26
     sget-object v0, Lcom/android/internal/telephony/IccCardApplication$AppType;->$VALUES:[Lcom/android/internal/telephony/IccCardApplication$AppType;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/IccCardApplication$AppType;->clone()Ljava/lang/Object;

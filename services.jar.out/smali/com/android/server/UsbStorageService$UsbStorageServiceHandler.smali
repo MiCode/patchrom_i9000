@@ -25,10 +25,13 @@
     .parameter "l"
 
     .prologue
+    .line 197
     iput-object p1, p0, Lcom/android/server/UsbStorageService$UsbStorageServiceHandler;->this$0:Lcom/android/server/UsbStorageService;
 
+    .line 198
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 199
     return-void
 .end method
 
@@ -39,7 +42,9 @@
     .parameter "msg"
 
     .prologue
+    .line 202
     iget v0, p1, Landroid/os/Message;->what:I
 
+    .line 205
     return-void
 .end method

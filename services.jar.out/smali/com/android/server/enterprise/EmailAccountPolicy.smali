@@ -23,16 +23,20 @@
     .parameter "ctx"
 
     .prologue
+    .line 21
     invoke-direct {p0}, Landroid/app/enterprise/IEmailAccountPolicy$Stub;-><init>()V
 
+    .line 557
     new-instance v0, Lcom/android/server/enterprise/EmailAccountPolicy$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/EmailAccountPolicy$1;-><init>(Lcom/android/server/enterprise/EmailAccountPolicy;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mHandler:Landroid/os/Handler;
 
+    .line 22
     iput-object p1, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
 
+    .line 23
     return-void
 .end method
 
@@ -41,6 +45,7 @@
     .parameter "x0"
 
     .prologue
+    .line 16
     iget-object v0, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -51,6 +56,7 @@
     .parameter "value"
 
     .prologue
+    .line 496
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -74,10 +80,12 @@
     .parameter "inComing"
 
     .prologue
+    .line 448
     monitor-enter p0
 
     const-wide/16 v40, -0x1
 
+    .line 450
     .local v40, newAccountId:J
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -147,18 +155,22 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 452
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 453
     invoke-static/range {p2 .. p2}, Lcom/android/server/enterprise/SettingsUtils;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 455
     if-nez p1, :cond_1
 
     if-nez p2, :cond_1
 
+    .line 456
     const-string v3, "reCreate() : Error :: Invalid input parameters."
 
     invoke-static {v3}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
@@ -166,19 +178,23 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 457
     const-wide/16 v3, -0x1
 
+    .line 492
     :goto_1
     monitor-exit p0
 
     return-wide v3
 
+    .line 450
     :cond_0
     :try_start_1
     const-string v4, "OutGoing"
 
     goto :goto_0
 
+    .line 460
     :cond_1
     move-object/from16 v0, p0
 
@@ -188,6 +204,7 @@
 
     move-result-object v37
 
+    .line 461
     .local v37, acc:Landroid/app/enterprise/Account;
     const-string v3, "EmailAccountPolicy"
 
@@ -197,38 +214,47 @@
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 463
     move-object/from16 v0, p0
 
     move-wide/from16 v1, p3
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/enterprise/EmailAccountPolicy;->deleteAccount(J)Z
 
+    .line 465
     new-instance v38, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct/range {v38 .. v38}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 466
     .local v38, accountMData:Lcom/android/server/enterprise/AccountMetaData;
     invoke-static/range {v37 .. v38}, Lcom/android/server/enterprise/SettingsUtils;->fillExistingAccountInfo(Landroid/app/enterprise/Account;Lcom/android/server/enterprise/AccountMetaData;)V
 
+    .line 467
     if-eqz p5, :cond_4
 
+    .line 468
     if-eqz p1, :cond_2
 
+    .line 469
     move-object/from16 v0, p1
 
     move-object/from16 v1, v38
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerLogin:Ljava/lang/String;
 
+    .line 470
     :cond_2
     if-eqz p2, :cond_3
 
+    .line 471
     move-object/from16 v0, p2
 
     move-object/from16 v1, v38
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAddress:Ljava/lang/String;
 
+    .line 479
     :cond_3
     :goto_2
     move-object/from16 v0, v38
@@ -419,6 +445,7 @@
 
     move-result-wide v40
 
+    .line 487
     move-object/from16 v0, p0
 
     move-wide/from16 v1, v40
@@ -427,6 +454,7 @@
 
     move-result-object v37
 
+    .line 488
     const-string v3, "EmailAccountPolicy"
 
     invoke-virtual/range {v37 .. v37}, Landroid/app/enterprise/Account;->toString()Ljava/lang/String;
@@ -440,22 +468,27 @@
     :goto_3
     move-wide/from16 v3, v40
 
+    .line 492
     goto/16 :goto_1
 
+    .line 473
     .restart local v37       #acc:Landroid/app/enterprise/Account;
     .restart local v38       #accountMData:Lcom/android/server/enterprise/AccountMetaData;
     :cond_4
     if-eqz p1, :cond_5
 
+    .line 474
     move-object/from16 v0, p1
 
     move-object/from16 v1, v38
 
     iput-object v0, v1, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerLogin:Ljava/lang/String;
 
+    .line 475
     :cond_5
     if-eqz p2, :cond_3
 
+    .line 476
     move-object/from16 v0, p2
 
     move-object/from16 v1, v38
@@ -467,6 +500,7 @@
 
     goto/16 :goto_2
 
+    .line 489
     .end local v37           #acc:Landroid/app/enterprise/Account;
     .end local v38           #accountMData:Lcom/android/server/enterprise/AccountMetaData;
     :catch_0
@@ -474,6 +508,7 @@
 
     move-object/from16 v39, v3
 
+    .line 490
     .local v39, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual/range {v39 .. v39}, Ljava/lang/Exception;->printStackTrace()V
@@ -482,6 +517,7 @@
 
     goto :goto_3
 
+    .line 448
     .end local v39           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -498,6 +534,7 @@
     .parameter "mContext"
 
     .prologue
+    .line 62
     monitor-enter p0
 
     :try_start_0
@@ -687,11 +724,13 @@
 
     move-result-wide v36
 
+    .line 68
     .local v36, accId:J
     monitor-exit p0
 
     return-wide v36
 
+    .line 62
     .end local v36           #accId:J
     :catchall_0
     move-exception v1
@@ -735,6 +774,7 @@
     .parameter "outGoingServerPathPrefix"
 
     .prologue
+    .line 55
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -873,6 +913,7 @@
     .parameter "accId"
 
     .prologue
+    .line 542
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -893,6 +934,7 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 543
     iget-object v0, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p2, v0}, Lcom/android/server/enterprise/SettingsUtils;->deleteAccount(JLandroid/content/Context;)Z
@@ -907,6 +949,7 @@
     .parameter "accId"
 
     .prologue
+    .line 531
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -927,6 +970,7 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 532
     iget-object v0, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p2, v0}, Lcom/android/server/enterprise/SettingsUtils;->getAccountDetails(JLandroid/content/Context;)Landroid/app/enterprise/Account;
@@ -943,6 +987,7 @@
     .parameter "protocol"
 
     .prologue
+    .line 520
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -963,6 +1008,7 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 521
     const/4 v0, 0x0
 
     const/4 v4, 0x0
@@ -986,10 +1032,12 @@
     .locals 4
 
     .prologue
+    .line 550
     iget-object v0, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/SettingsUtils;->sendAccountsChangedBroadcast(Landroid/content/Context;)V
 
+    .line 551
     iget-object v0, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mHandler:Landroid/os/Handler;
@@ -1004,6 +1052,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
+    .line 552
     return-void
 .end method
 
@@ -1013,6 +1062,7 @@
     .parameter "accId"
 
     .prologue
+    .line 76
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1033,13 +1083,16 @@
 
     invoke-static {v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 78
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 79
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mDisplayName:Ljava/lang/String;
 
+    .line 80
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1069,6 +1122,7 @@
     .parameter "accId"
 
     .prologue
+    .line 179
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1091,10 +1145,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 181
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 182
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/EmailAccountPolicy;->booleanToByte(Z)B
 
@@ -1102,6 +1158,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateAlways:B
 
+    .line 183
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1130,6 +1187,7 @@
     .parameter "accId"
 
     .prologue
+    .line 508
     const-string v0, "EmailAccountPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1152,6 +1210,7 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 509
     iget-object v0, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p2, v0}, Lcom/android/server/enterprise/SettingsUtils;->setAsDefaultAccount(JLandroid/content/Context;)Z
@@ -1167,6 +1226,7 @@
     .parameter "accId"
 
     .prologue
+    .line 84
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1189,13 +1249,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 86
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 87
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mEmailAddress:Ljava/lang/String;
 
+    .line 88
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1225,6 +1288,7 @@
     .parameter "accId"
 
     .prologue
+    .line 207
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1245,13 +1309,16 @@
 
     invoke-static {v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 209
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 210
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingProtocol:Ljava/lang/String;
 
+    .line 211
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1281,6 +1348,7 @@
     .parameter "accId"
 
     .prologue
+    .line 274
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1303,10 +1371,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 276
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 277
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/EmailAccountPolicy;->booleanToByte(Z)B
 
@@ -1314,6 +1384,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerAcceptAllCertificates:B
 
+    .line 278
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1343,6 +1414,7 @@
     .parameter "accId"
 
     .prologue
+    .line 215
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1363,6 +1435,7 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 217
     const/4 v1, 0x0
 
     const/4 v5, 0x1
@@ -1377,6 +1450,7 @@
 
     move-result-wide p2
 
+    .line 218
     return-wide p2
 .end method
 
@@ -1386,6 +1460,7 @@
     .parameter "accId"
 
     .prologue
+    .line 282
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1406,6 +1481,7 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 284
     const/4 v2, 0x0
 
     const/4 v5, 0x1
@@ -1420,6 +1496,7 @@
 
     move-result-wide p2
 
+    .line 285
     return-wide p2
 .end method
 
@@ -1429,6 +1506,7 @@
     .parameter "accId"
 
     .prologue
+    .line 298
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1451,13 +1529,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 300
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 301
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPassword:Ljava/lang/String;
 
+    .line 302
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1487,6 +1568,7 @@
     .parameter "accId"
 
     .prologue
+    .line 315
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1509,13 +1591,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 317
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 318
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPathPrefix:Ljava/lang/String;
 
+    .line 319
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1545,6 +1630,7 @@
     .parameter "accId"
 
     .prologue
+    .line 222
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1565,13 +1651,16 @@
 
     invoke-static {v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 224
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 225
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerPort:I
 
+    .line 226
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1601,6 +1690,7 @@
     .parameter "accId"
 
     .prologue
+    .line 239
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1623,10 +1713,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 241
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 242
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/EmailAccountPolicy;->booleanToByte(Z)B
 
@@ -1634,6 +1726,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseSSL:B
 
+    .line 243
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1663,6 +1756,7 @@
     .parameter "accId"
 
     .prologue
+    .line 257
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1685,10 +1779,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 259
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 260
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/EmailAccountPolicy;->booleanToByte(Z)B
 
@@ -1696,6 +1792,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mInComingServerUseTLS:B
 
+    .line 261
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1725,6 +1822,7 @@
     .parameter "accId"
 
     .prologue
+    .line 328
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1745,13 +1843,16 @@
 
     invoke-static {v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 330
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 331
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingProtocol:Ljava/lang/String;
 
+    .line 332
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1781,6 +1882,7 @@
     .parameter "accId"
 
     .prologue
+    .line 395
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1803,10 +1905,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 397
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 398
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/EmailAccountPolicy;->booleanToByte(Z)B
 
@@ -1814,6 +1918,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerAcceptAllCertificates:B
 
+    .line 399
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1843,6 +1948,7 @@
     .parameter "accId"
 
     .prologue
+    .line 336
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1863,6 +1969,7 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 338
     const/4 v1, 0x0
 
     const/4 v5, 0x0
@@ -1877,6 +1984,7 @@
 
     move-result-wide p2
 
+    .line 339
     return-wide p2
 .end method
 
@@ -1886,6 +1994,7 @@
     .parameter "accId"
 
     .prologue
+    .line 404
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1906,6 +2015,7 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 406
     const/4 v2, 0x0
 
     const/4 v5, 0x0
@@ -1920,6 +2030,7 @@
 
     move-result-wide p2
 
+    .line 407
     return-wide p2
 .end method
 
@@ -1929,6 +2040,7 @@
     .parameter "accId"
 
     .prologue
+    .line 421
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1951,13 +2063,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 423
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 424
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPassword:Ljava/lang/String;
 
+    .line 425
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -1987,6 +2102,7 @@
     .parameter "accId"
 
     .prologue
+    .line 438
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2009,13 +2125,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 440
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 441
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPathPrefix:Ljava/lang/String;
 
+    .line 442
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -2045,6 +2164,7 @@
     .parameter "accId"
 
     .prologue
+    .line 343
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2065,13 +2185,16 @@
 
     invoke-static {v1}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;)V
 
+    .line 345
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 346
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerPort:I
 
+    .line 347
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -2101,6 +2224,7 @@
     .parameter "accId"
 
     .prologue
+    .line 361
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2123,10 +2247,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 363
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 364
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/EmailAccountPolicy;->booleanToByte(Z)B
 
@@ -2134,6 +2260,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseSSL:B
 
+    .line 365
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -2163,6 +2290,7 @@
     .parameter "accId"
 
     .prologue
+    .line 378
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2185,10 +2313,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 380
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 381
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/EmailAccountPolicy;->booleanToByte(Z)B
 
@@ -2196,6 +2326,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mOutGoingServerUseTLS:B
 
+    .line 382
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -2225,6 +2356,7 @@
     .parameter "accId"
 
     .prologue
+    .line 103
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2247,13 +2379,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 105
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 106
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mSyncLookback:I
 
+    .line 107
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -2283,6 +2418,7 @@
     .parameter "accId"
 
     .prologue
+    .line 146
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2305,13 +2441,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 148
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 149
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mSenderName:Ljava/lang/String;
 
+    .line 150
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -2341,6 +2480,7 @@
     .parameter "accId"
 
     .prologue
+    .line 163
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2363,13 +2503,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 165
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 166
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput-object p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mSignature:Ljava/lang/String;
 
+    .line 167
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -2399,6 +2542,7 @@
     .parameter "accId"
 
     .prologue
+    .line 195
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2421,10 +2565,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 197
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 198
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/EmailAccountPolicy;->booleanToByte(Z)B
 
@@ -2432,6 +2578,7 @@
 
     iput-byte v1, v0, Lcom/android/server/enterprise/AccountMetaData;->mEmailNotificationVibrateWhenSilent:B
 
+    .line 199
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;
@@ -2461,6 +2608,7 @@
     .parameter "accId"
 
     .prologue
+    .line 128
     const-string v1, "EmailAccountPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2483,13 +2631,16 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 130
     new-instance v0, Lcom/android/server/enterprise/AccountMetaData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/AccountMetaData;-><init>()V
 
+    .line 131
     .local v0, amd:Lcom/android/server/enterprise/AccountMetaData;
     iput p1, v0, Lcom/android/server/enterprise/AccountMetaData;->mSyncInterval:I
 
+    .line 132
     const-wide/16 v1, -0x1
 
     iget-object v3, p0, Lcom/android/server/enterprise/EmailAccountPolicy;->mContext:Landroid/content/Context;

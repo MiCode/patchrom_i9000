@@ -38,12 +38,15 @@
     .locals 1
 
     .prologue
+    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 19
     const-string v0, "com.broadcom.bt.service.bpp.IBluetoothPrinterCallback"
 
     invoke-virtual {p0, p0, v0}, Lcom/broadcom/bt/service/bpp/IBluetoothPrinterCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 20
     return-void
 .end method
 
@@ -52,13 +55,17 @@
     .parameter "obj"
 
     .prologue
+    .line 27
     if-nez p0, :cond_0
 
+    .line 28
     const/4 v1, 0x0
 
+    .line 34
     :goto_0
     return-object v1
 
+    .line 30
     :cond_0
     const-string v1, "com.broadcom.bt.service.bpp.IBluetoothPrinterCallback"
 
@@ -66,6 +73,7 @@
 
     move-result-object v0
 
+    .line 31
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -73,6 +81,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 32
     check-cast v0, Lcom/broadcom/bt/service/bpp/IBluetoothPrinterCallback;
 
     .end local v0           #iin:Landroid/os/IInterface;
@@ -80,6 +89,7 @@
 
     goto :goto_0
 
+    .line 34
     .restart local v0       #iin:Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcom/broadcom/bt/service/bpp/IBluetoothPrinterCallback$Stub$Proxy;
@@ -95,6 +105,7 @@
     .locals 0
 
     .prologue
+    .line 38
     return-object p0
 .end method
 
@@ -115,8 +126,10 @@
 
     const-string v8, "com.broadcom.bt.service.bpp.IBluetoothPrinterCallback"
 
+    .line 42
     sparse-switch p1, :sswitch_data_0
 
+    .line 101
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -124,6 +137,7 @@
     :goto_0
     return v0
 
+    .line 46
     :sswitch_0
     const-string v0, "com.broadcom.bt.service.bpp.IBluetoothPrinterCallback"
 
@@ -131,40 +145,50 @@
 
     move v0, v7
 
+    .line 47
     goto :goto_0
 
+    .line 51
     :sswitch_1
     const-string v0, "com.broadcom.bt.service.bpp.IBluetoothPrinterCallback"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 52
     invoke-virtual {p0}, Lcom/broadcom/bt/service/bpp/IBluetoothPrinterCallback$Stub;->onPrinterSessionOpen()V
 
+    .line 53
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 54
     goto :goto_0
 
+    .line 58
     :sswitch_2
     const-string v0, "com.broadcom.bt.service.bpp.IBluetoothPrinterCallback"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 60
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 62
     .local v1, _arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 64
     .local v2, _arg1:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
+    .line 66
     .local v3, _arg2:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -174,16 +198,20 @@
 
     move v4, v7
 
+    .line 67
     .local v4, _arg3:Z
     :goto_1
     invoke-virtual {p0, v1, v2, v3, v4}, Lcom/broadcom/bt/service/bpp/IBluetoothPrinterCallback$Stub;->onAuthorizePrinter(IIIZ)V
 
+    .line 68
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 69
     goto :goto_0
 
+    .line 66
     .end local v4           #_arg3:Z
     :cond_0
     const/4 v0, 0x0
@@ -192,6 +220,7 @@
 
     goto :goto_1
 
+    .line 73
     .end local v1           #_arg0:I
     .end local v2           #_arg1:I
     .end local v3           #_arg2:I
@@ -200,25 +229,30 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 75
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
+    .line 77
     .restart local v1       #_arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 79
     .restart local v2       #_arg1:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
+    .line 81
     .restart local v3       #_arg2:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
+    .line 83
     .local v4, _arg3:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -226,6 +260,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 84
     sget-object v0, Lcom/broadcom/bt/service/bpp/BipCapabilities;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -234,6 +269,7 @@
 
     check-cast v5, Lcom/broadcom/bt/service/bpp/BipCapabilities;
 
+    .line 90
     .local v5, _arg4:Lcom/broadcom/bt/service/bpp/BipCapabilities;
     :goto_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -242,6 +278,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 91
     sget-object v0, Lcom/broadcom/bt/service/bpp/BppAttributes;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -254,14 +291,18 @@
     :goto_3
     move-object v0, p0
 
+    .line 96
     invoke-virtual/range {v0 .. v6}, Lcom/broadcom/bt/service/bpp/IBluetoothPrinterCallback$Stub;->onGetPrinterCapabilities(IIIILcom/broadcom/bt/service/bpp/BipCapabilities;Lcom/broadcom/bt/service/bpp/BppAttributes;)V
 
+    .line 97
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     move v0, v7
 
+    .line 98
     goto :goto_0
 
+    .line 87
     .end local v5           #_arg4:Lcom/broadcom/bt/service/bpp/BipCapabilities;
     .end local v6           #_arg5:Lcom/broadcom/bt/service/bpp/BppAttributes;
     :cond_1
@@ -270,12 +311,14 @@
     .restart local v5       #_arg4:Lcom/broadcom/bt/service/bpp/BipCapabilities;
     goto :goto_2
 
+    .line 94
     :cond_2
     const/4 v6, 0x0
 
     .restart local v6       #_arg5:Lcom/broadcom/bt/service/bpp/BppAttributes;
     goto :goto_3
 
+    .line 42
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

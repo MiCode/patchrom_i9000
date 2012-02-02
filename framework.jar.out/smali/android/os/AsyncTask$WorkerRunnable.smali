@@ -45,6 +45,7 @@
     .locals 0
 
     .prologue
+    .line 441
     .local p0, this:Landroid/os/AsyncTask$WorkerRunnable;,"Landroid/os/AsyncTask$WorkerRunnable<TParams;TResult;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,6 +57,7 @@
     .parameter "x0"
 
     .prologue
+    .line 441
     .local p0, this:Landroid/os/AsyncTask$WorkerRunnable;,"Landroid/os/AsyncTask$WorkerRunnable<TParams;TResult;>;"
     invoke-direct {p0}, Landroid/os/AsyncTask$WorkerRunnable;-><init>()V
 

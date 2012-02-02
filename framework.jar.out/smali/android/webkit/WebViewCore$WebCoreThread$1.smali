@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 660
     iput-object p1, p0, Landroid/webkit/WebViewCore$WebCoreThread$1;->this$0:Landroid/webkit/WebViewCore$WebCoreThread;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,24 +39,29 @@
     .parameter "msg"
 
     .prologue
+    .line 663
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
+    .line 681
     :goto_0
     return-void
 
+    .line 665
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/webkit/WebViewCore;
 
+    .line 666
     .local v0, core:Landroid/webkit/WebViewCore;
     #calls: Landroid/webkit/WebViewCore;->initialize()V
     invoke-static {v0}, Landroid/webkit/WebViewCore;->access$500(Landroid/webkit/WebViewCore;)V
 
     goto :goto_0
 
+    .line 671
     .end local v0           #core:Landroid/webkit/WebViewCore;
     :pswitch_1
     const/4 v1, 0x3
@@ -64,6 +70,7 @@
 
     goto :goto_0
 
+    .line 677
     :pswitch_2
     const/4 v1, 0x0
 
@@ -71,6 +78,7 @@
 
     goto :goto_0
 
+    .line 663
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

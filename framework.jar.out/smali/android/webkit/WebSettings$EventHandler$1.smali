@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 244
     iput-object p1, p0, Landroid/webkit/WebSettings$EventHandler$1;->this$1:Landroid/webkit/WebSettings$EventHandler;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,13 +41,16 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 247
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
+    .line 272
     :goto_0
     return-void
 
+    .line 249
     :pswitch_0
     iget-object v1, p0, Landroid/webkit/WebSettings$EventHandler$1;->this$1:Landroid/webkit/WebSettings$EventHandler;
 
@@ -54,6 +58,7 @@
 
     monitor-enter v1
 
+    .line 250
     :try_start_0
     iget-object v2, p0, Landroid/webkit/WebSettings$EventHandler$1;->this$1:Landroid/webkit/WebSettings$EventHandler;
 
@@ -68,6 +73,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 251
     iget-object v2, p0, Landroid/webkit/WebSettings$EventHandler$1;->this$1:Landroid/webkit/WebSettings$EventHandler;
 
     iget-object v2, v2, Landroid/webkit/WebSettings$EventHandler;->this$0:Landroid/webkit/WebSettings;
@@ -86,6 +92,7 @@
     #calls: Landroid/webkit/WebSettings;->nativeSync(I)V
     invoke-static {v2, v3}, Landroid/webkit/WebSettings;->access$100(Landroid/webkit/WebSettings;I)V
 
+    .line 253
     :cond_0
     iget-object v2, p0, Landroid/webkit/WebSettings$EventHandler$1;->this$1:Landroid/webkit/WebSettings$EventHandler;
 
@@ -96,6 +103,7 @@
     #setter for: Landroid/webkit/WebSettings;->mSyncPending:Z
     invoke-static {v2, v3}, Landroid/webkit/WebSettings;->access$202(Landroid/webkit/WebSettings;Z)Z
 
+    .line 254
     monitor-exit v1
 
     goto :goto_0
@@ -109,6 +117,7 @@
 
     throw v2
 
+    .line 258
     :pswitch_1
     iget-object v1, p0, Landroid/webkit/WebSettings$EventHandler$1;->this$1:Landroid/webkit/WebSettings$EventHandler;
 
@@ -117,6 +126,7 @@
 
     goto :goto_0
 
+    .line 263
     :pswitch_2
     iget-object v1, p0, Landroid/webkit/WebSettings$EventHandler$1;->this$1:Landroid/webkit/WebSettings$EventHandler;
 
@@ -137,6 +147,7 @@
 
     move-result-object v0
 
+    .line 266
     .local v0, editor:Landroid/content/SharedPreferences$Editor;
     const-string v1, "double_tap_toast_count"
 
@@ -146,10 +157,12 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
+    .line 268
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     goto :goto_0
 
+    .line 247
     nop
 
     :pswitch_data_0

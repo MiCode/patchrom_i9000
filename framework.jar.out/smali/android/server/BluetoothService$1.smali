@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 813
     iput-object p1, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -48,15 +49,18 @@
 
     const-string v5, "BluetoothService"
 
+    .line 816
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
+    .line 939
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
+    .line 818
     :pswitch_1
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -67,12 +71,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 828
     iget v3, p1, Landroid/os/Message;->arg1:I
 
     packed-switch v3, :pswitch_data_1
 
     goto :goto_0
 
+    .line 830
     :pswitch_2
     const-string v3, "BluetoothService"
 
@@ -80,10 +86,12 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 831
     const-string v3, "hfag"
 
     invoke-static {v3}, Landroid/os/SystemService;->start(Ljava/lang/String;)V
 
+    .line 832
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mHandler:Landroid/os/Handler;
@@ -108,6 +116,7 @@
 
     goto :goto_0
 
+    .line 836
     :pswitch_3
     const-string v3, "BluetoothService"
 
@@ -115,10 +124,12 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 837
     const-string v3, "hsag"
 
     invoke-static {v3}, Landroid/os/SystemService;->start(Ljava/lang/String;)V
 
+    .line 838
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mHandler:Landroid/os/Handler;
@@ -143,6 +154,7 @@
 
     goto :goto_0
 
+    .line 842
     :pswitch_4
     const-string v3, "BluetoothService"
 
@@ -150,10 +162,12 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v3, "opush"
+    .line 843
+    const-string/jumbo v3, "opush"
 
     invoke-static {v3}, Landroid/os/SystemService;->start(Ljava/lang/String;)V
 
+    .line 844
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mHandler:Landroid/os/Handler;
@@ -178,6 +192,7 @@
 
     goto :goto_0
 
+    .line 848
     :pswitch_5
     const-string v3, "BluetoothService"
 
@@ -185,12 +200,14 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v3, "pbap"
+    .line 849
+    const-string/jumbo v3, "pbap"
 
     invoke-static {v3}, Landroid/os/SystemService;->start(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 858
     :pswitch_6
     const-string v3, "BluetoothService"
 
@@ -198,6 +215,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 859
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
@@ -212,39 +230,47 @@
 
     goto/16 :goto_0
 
+    .line 863
     :pswitch_7
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
+    .line 864
     .local v0, address:Ljava/lang/String;
     if-eqz v0, :cond_0
 
+    .line 865
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v3, v0}, Landroid/server/BluetoothService;->sendUuidIntent(Ljava/lang/String;)V
 
+    .line 866
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v3, v0}, Landroid/server/BluetoothService;->makeServiceChannelCallbacks(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
+    .line 881
     .end local v0           #address:Ljava/lang/String;
     :pswitch_8
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
+    .line 882
     .restart local v0       #address:Ljava/lang/String;
     if-eqz v0, :cond_0
 
+    .line 883
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v3, v0}, Landroid/server/BluetoothService;->createBond(Ljava/lang/String;)Z
 
     goto/16 :goto_0
 
+    .line 890
     .end local v0           #address:Ljava/lang/String;
     :pswitch_9
     const-string v3, "BluetoothService"
@@ -253,12 +279,14 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v3, "service.brcm.bt.soft_onoff"
+    .line 893
+    const-string/jumbo v3, "service.brcm.bt.soft_onoff"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 894
     .local v2, soft_onoff_prop:Ljava/lang/String;
     if-eqz v2, :cond_1
 
@@ -270,31 +298,36 @@
 
     if-eqz v3, :cond_2
 
+    .line 895
     :cond_1
-    const-string v3, "service.brcm.bt.hcid_active"
+    const-string/jumbo v3, "service.brcm.bt.hcid_active"
 
     const-string v4, "0"
 
     invoke-static {v3, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v3, "service.brcm.bt.srv_active"
+    .line 896
+    const-string/jumbo v3, "service.brcm.bt.srv_active"
 
     const-string v4, "0"
 
     invoke-static {v3, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v3, "service.brcm.bt.btld"
+    .line 897
+    const-string/jumbo v3, "service.brcm.bt.btld"
 
     const-string v4, "0"
 
     invoke-static {v3, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v3, "service.brcm.bt.activation"
+    .line 898
+    const-string/jumbo v3, "service.brcm.bt.activation"
 
     const-string v4, "0"
 
     invoke-static {v3, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 900
     :cond_2
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -315,15 +348,18 @@
 
     move-result v1
 
+    .line 902
     .local v1, bluetoothOn:I
     if-lez v1, :cond_0
 
+    .line 903
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v3, v6}, Landroid/server/BluetoothService;->enable(Z)Z
 
     goto/16 :goto_0
 
+    .line 907
     .end local v1           #bluetoothOn:I
     .end local v2           #soft_onoff_prop:Ljava/lang/String;
     :pswitch_a
@@ -333,7 +369,8 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v3, "service.brcm.bt.avrcp_pass_thru"
+    .line 908
+    const-string/jumbo v3, "service.brcm.bt.avrcp_pass_thru"
 
     const-string v4, "1"
 
@@ -341,6 +378,7 @@
 
     goto/16 :goto_0
 
+    .line 911
     :pswitch_b
     const-string v3, "BluetoothService"
 
@@ -348,6 +386,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 912
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mWaitingForHeadsetDisconnected:Z
@@ -357,12 +396,14 @@
 
     if-eqz v3, :cond_3
 
+    .line 913
     const-string v3, "BluetoothService"
 
     const-string v3, "Oops: Force to disable BT even though HSP/HFP is yet to be disconnected"
 
     invoke-static {v5, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 915
     :cond_3
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -373,12 +414,14 @@
 
     if-eqz v3, :cond_4
 
+    .line 916
     const-string v3, "BluetoothService"
 
     const-string v3, "Oops: Force to disable BT even though A2DP is yet to be disconnected"
 
     invoke-static {v5, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 918
     :cond_4
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -389,12 +432,14 @@
 
     if-eqz v3, :cond_5
 
+    .line 919
     const-string v3, "BluetoothService"
 
     const-string v3, "Oops: Force to disable BT even though HID is yet to be disconnected"
 
     invoke-static {v5, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 921
     :cond_5
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -405,6 +450,7 @@
 
     if-eqz v3, :cond_6
 
+    .line 922
     const-string v3, "BluetoothService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -440,6 +486,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 924
     :cond_6
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -460,6 +507,7 @@
 
     goto :goto_1
 
+    .line 930
     :pswitch_c
     invoke-static {}, Landroid/server/BluetoothService;->access$1000()I
 
@@ -467,6 +515,7 @@
 
     if-nez v3, :cond_9
 
+    .line 931
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mContext:Landroid/content/Context;
@@ -493,6 +542,7 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
+    .line 935
     :cond_8
     :goto_2
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
@@ -508,6 +558,7 @@
 
     goto/16 :goto_0
 
+    .line 932
     :cond_9
     invoke-static {}, Landroid/server/BluetoothService;->access$1000()I
 
@@ -515,6 +566,7 @@
 
     if-ne v3, v6, :cond_8
 
+    .line 933
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mContext:Landroid/content/Context;
@@ -543,6 +595,7 @@
 
     goto :goto_2
 
+    .line 816
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -556,6 +609,7 @@
         :pswitch_c
     .end packed-switch
 
+    .line 828
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_2

@@ -56,12 +56,15 @@
     .end annotation
 
     .prologue
+    .line 83
     .local p0, this:Lcom/android/internal/util/Predicates$AndPredicate;,"Lcom/android/internal/util/Predicates$AndPredicate<TT;>;"
     .local p1, components:Ljava/lang/Iterable;,"Ljava/lang/Iterable<+Lcom/android/internal/util/Predicate<-TT;>;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 84
     iput-object p1, p0, Lcom/android/internal/util/Predicates$AndPredicate;->components:Ljava/lang/Iterable;
 
+    .line 85
     return-void
 .end method
 
@@ -71,6 +74,7 @@
     .parameter "x1"
 
     .prologue
+    .line 80
     .local p0, this:Lcom/android/internal/util/Predicates$AndPredicate;,"Lcom/android/internal/util/Predicates$AndPredicate<TT;>;"
     invoke-direct {p0, p1}, Lcom/android/internal/util/Predicates$AndPredicate;-><init>(Ljava/lang/Iterable;)V
 
@@ -89,6 +93,7 @@
     .end annotation
 
     .prologue
+    .line 88
     .local p0, this:Lcom/android/internal/util/Predicates$AndPredicate;,"Lcom/android/internal/util/Predicates$AndPredicate<TT;>;"
     .local p1, t:Ljava/lang/Object;,"TT;"
     iget-object v2, p0, Lcom/android/internal/util/Predicates$AndPredicate;->components:Ljava/lang/Iterable;
@@ -111,6 +116,7 @@
 
     check-cast v1, Lcom/android/internal/util/Predicate;
 
+    .line 89
     .local v1, predicate:Lcom/android/internal/util/Predicate;,"Lcom/android/internal/util/Predicate<-TT;>;"
     invoke-interface {v1, p1}, Lcom/android/internal/util/Predicate;->apply(Ljava/lang/Object;)Z
 
@@ -118,8 +124,10 @@
 
     if-nez v2, :cond_0
 
+    .line 90
     const/4 v2, 0x0
 
+    .line 93
     .end local v1           #predicate:Lcom/android/internal/util/Predicate;,"Lcom/android/internal/util/Predicate<-TT;>;"
     :goto_0
     return v2

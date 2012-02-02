@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 876
     iput-object p1, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->this$0:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->val$dialog:Lcom/android/internal/app/AlertController;
@@ -49,6 +50,7 @@
     .parameter "id"
 
     .prologue
+    .line 878
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->this$0:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
@@ -62,6 +64,7 @@
 
     invoke-interface {v0, v1, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
+    .line 880
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->this$0:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-boolean v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
@@ -76,6 +79,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 881
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->val$dialog:Lcom/android/internal/app/AlertController;
 
     #getter for: Lcom/android/internal/app/AlertController;->mDialogInterface:Landroid/content/DialogInterface;
@@ -85,6 +89,7 @@
 
     invoke-interface {v0}, Landroid/content/DialogInterface;->dismiss()V
 
+    .line 883
     :cond_0
     return-void
 .end method

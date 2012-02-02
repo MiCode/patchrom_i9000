@@ -40,6 +40,7 @@
     .locals 2
 
     .prologue
+    .line 48
     const-string v0, "lib/"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -48,6 +49,7 @@
 
     sput v0, Lcom/android/internal/content/NativeLibraryHelper;->APK_LIB_LENGTH:I
 
+    .line 52
     const-string v0, "lib"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -56,6 +58,7 @@
 
     sput v0, Lcom/android/internal/content/NativeLibraryHelper;->LIB_PREFIX_LENGTH:I
 
+    .line 56
     const-string v0, ".so"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -64,6 +67,7 @@
 
     sput v0, Lcom/android/internal/content/NativeLibraryHelper;->LIB_SUFFIX_LENGTH:I
 
+    .line 63
     sget v0, Lcom/android/internal/content/NativeLibraryHelper;->APK_LIB_LENGTH:I
 
     add-int/lit8 v0, v0, 0x2
@@ -87,6 +91,7 @@
     .locals 0
 
     .prologue
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -100,23 +105,28 @@
     .prologue
     const-string v8, "NativeHelper"
 
+    .line 248
     :try_start_0
     new-instance v6, Ljava/util/zip/ZipFile;
 
     invoke-direct {v6, p0}, Ljava/util/zip/ZipFile;-><init>(Ljava/io/File;)V
 
+    .line 250
     .local v6, zipFile:Ljava/util/zip/ZipFile;
     new-instance v5, Ljava/util/LinkedList;
 
     invoke-direct {v5}, Ljava/util/LinkedList;-><init>()V
 
+    .line 252
     .local v5, nativeFiles:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/util/zip/ZipEntry;Ljava/lang/String;>;>;"
     invoke-static {v6, v5}, Lcom/android/internal/content/NativeLibraryHelper;->listPackageNativeBinariesLI(Ljava/util/zip/ZipFile;Ljava/util/List;)I
 
+    .line 254
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v0
 
+    .line 256
     .local v0, N:I
     const/4 v4, 0x0
 
@@ -125,12 +135,14 @@
     :goto_0
     if-ge v4, v0, :cond_0
 
+    .line 257
     invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/util/Pair;
 
+    .line 259
     .local v3, entry:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/util/zip/ZipEntry;Ljava/lang/String;>;"
     new-instance v1, Ljava/io/File;
 
@@ -140,6 +152,7 @@
 
     invoke-direct {v1, p1, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 260
     .local v1, destFile:Ljava/io/File;
     iget-object p0, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -150,10 +163,12 @@
     .catch Ljava/util/zip/ZipException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 256
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
+    .line 262
     .end local v0           #N:I
     .end local v1           #destFile:Ljava/io/File;
     .end local v3           #entry:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/util/zip/ZipEntry;Ljava/lang/String;>;"
@@ -165,6 +180,7 @@
 
     move-object v2, v7
 
+    .line 263
     .local v2, e:Ljava/util/zip/ZipException;
     const-string v7, "NativeHelper"
 
@@ -172,17 +188,21 @@
 
     invoke-static {v8, v7, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 264
     const/4 v7, -0x2
 
+    .line 270
     .end local v2           #e:Ljava/util/zip/ZipException;
     :goto_1
     return v7
 
+    .line 265
     :catch_1
     move-exception v7
 
     move-object v2, v7
 
+    .line 266
     .local v2, e:Ljava/io/IOException;
     const-string v7, "NativeHelper"
 
@@ -190,10 +210,12 @@
 
     invoke-static {v8, v7, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 267
     const/4 v7, -0x4
 
     goto :goto_1
 
+    .line 270
     .end local v2           #e:Ljava/io/IOException;
     .restart local v0       #N:I
     .restart local v4       #i:I
@@ -218,27 +240,31 @@
     .end annotation
 
     .prologue
-    const-string v3, "tmp"
+    const-string/jumbo v3, "tmp"
 
+    .line 275
     invoke-virtual {p0, p1}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v0
 
+    .line 277
     .local v0, inputStream:Ljava/io/InputStream;
     :try_start_0
-    const-string v3, "tmp"
+    const-string/jumbo v3, "tmp"
 
-    const-string v4, "tmp"
+    const-string/jumbo v4, "tmp"
 
     invoke-static {v3, v4, p2}, Ljava/io/File;->createTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     move-result-object v1
 
+    .line 278
     .local v1, tempFile:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 281
     .local v2, tempFilePath:Ljava/lang/String;
     invoke-static {v0, v1}, Landroid/os/FileUtils;->copyToFile(Ljava/io/InputStream;Ljava/io/File;)Z
 
@@ -274,9 +300,11 @@
 
     if-nez v3, :cond_1
 
+    .line 288
     :cond_0
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
+    .line 289
     new-instance v3, Ljava/io/IOException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -313,6 +341,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 293
     .end local v1           #tempFile:Ljava/io/File;
     .end local v2           #tempFilePath:Ljava/lang/String;
     :catchall_0
@@ -327,6 +356,7 @@
     :cond_1
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
+    .line 295
     return-void
 .end method
 
@@ -361,6 +391,7 @@
     .local p2, nativeFiles:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/util/zip/ZipEntry;Ljava/lang/String;>;>;"
     const-string v8, "gdbserver"
 
+    .line 163
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -391,11 +422,13 @@
 
     move-result-object v0
 
+    .line 165
     .local v0, apkGdbServerPath:Ljava/lang/String;
     invoke-virtual {p0}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
 
     move-result-object v1
 
+    .line 167
     .local v1, entries:Ljava/util/Enumeration;,"Ljava/util/Enumeration<+Ljava/util/zip/ZipEntry;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -404,12 +437,14 @@
 
     if-eqz v5, :cond_1
 
+    .line 168
     invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/zip/ZipEntry;
 
+    .line 170
     .local v2, entry:Ljava/util/zip/ZipEntry;
     invoke-virtual {v2}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
@@ -417,10 +452,12 @@
 
     if-nez v5, :cond_0
 
+    .line 173
     invoke-virtual {v2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 175
     .local v3, entryName:Ljava/lang/String;
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -428,6 +465,7 @@
 
     if-eqz v5, :cond_0
 
+    .line 180
     const-string v5, "NativeHelper"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -454,8 +492,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 183
     const-string v4, "gdbserver"
 
+    .line 184
     .local v4, installGdbServerPath:Ljava/lang/String;
     const-string v5, "gdbserver"
 
@@ -465,8 +505,10 @@
 
     invoke-interface {p2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 186
     const/4 v5, 0x0
 
+    .line 188
     .end local v2           #entry:Ljava/util/zip/ZipEntry;
     .end local v3           #entryName:Ljava/lang/String;
     .end local v4           #installGdbServerPath:Ljava/lang/String;
@@ -508,17 +550,21 @@
     .local p1, nativeFiles:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/util/zip/ZipEntry;Ljava/lang/String;>;>;"
     const/4 v5, 0x2
 
+    .line 202
     sget-object v0, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
+    .line 204
     .local v0, cpuAbi:Ljava/lang/String;
     invoke-static {p0, v0, p1}, Lcom/android/internal/content/NativeLibraryHelper;->listPackageSharedLibsForAbiLI(Ljava/util/zip/ZipFile;Ljava/lang/String;Ljava/util/List;)I
 
     move-result v2
 
+    .line 214
     .local v2, result:I
     if-ne v2, v5, :cond_2
 
-    const-string v3, "ro.product.cpu.abi2"
+    .line 215
+    const-string/jumbo v3, "ro.product.cpu.abi2"
 
     const/4 v4, 0x0
 
@@ -526,40 +572,51 @@
 
     move-result-object v1
 
+    .line 216
     .local v1, cpuAbi2:Ljava/lang/String;
     if-eqz v1, :cond_0
 
+    .line 217
     invoke-static {p0, v1, p1}, Lcom/android/internal/content/NativeLibraryHelper;->listPackageSharedLibsForAbiLI(Ljava/util/zip/ZipFile;Ljava/lang/String;Ljava/util/List;)I
 
     move-result v2
 
+    .line 220
     :cond_0
     if-ne v2, v5, :cond_1
 
+    .line 221
     const-string v3, "NativeHelper"
 
     const-string v4, "Native ABI mismatch from package file"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 222
     const/4 v3, -0x2
 
+    .line 238
     .end local v1           #cpuAbi2:Ljava/lang/String;
     :goto_0
     return v3
 
+    .line 225
     .restart local v1       #cpuAbi2:Ljava/lang/String;
     :cond_1
     if-nez v2, :cond_2
 
+    .line 226
     move-object v0, v1
 
+    .line 235
     .end local v1           #cpuAbi2:Ljava/lang/String;
     :cond_2
     if-nez v2, :cond_3
 
+    .line 236
     invoke-static {p0, v0, p1}, Lcom/android/internal/content/NativeLibraryHelper;->listPackageGdbServerLI(Ljava/util/zip/ZipFile;Ljava/lang/String;Ljava/util/List;)I
 
+    .line 238
     :cond_3
     const/4 v3, 0x1
 
@@ -597,21 +654,26 @@
     .local p2, libEntries:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/util/zip/ZipEntry;Ljava/lang/String;>;>;"
     const/4 v11, 0x0
 
+    .line 78
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 79
     .local v0, cpuAbiLen:I
     const/4 v4, 0x0
 
+    .line 80
     .local v4, hasNativeLibraries:Z
     const/4 v5, 0x0
 
+    .line 87
     .local v5, installedNativeLibraries:Z
     invoke-virtual {p0}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
 
     move-result-object v1
 
+    .line 89
     .local v1, entries:Ljava/util/Enumeration;,"Ljava/util/Enumeration<+Ljava/util/zip/ZipEntry;>;"
     :cond_0
     :goto_0
@@ -621,12 +683,14 @@
 
     if-eqz v8, :cond_1
 
+    .line 90
     invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/zip/ZipEntry;
 
+    .line 93
     .local v2, entry:Ljava/util/zip/ZipEntry;
     invoke-virtual {v2}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
@@ -634,10 +698,12 @@
 
     if-nez v8, :cond_0
 
+    .line 96
     invoke-virtual {v2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 106
     .local v3, entryName:Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -663,12 +729,14 @@
 
     if-eqz v8, :cond_0
 
+    .line 112
     const/16 v8, 0x2f
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v6
 
+    .line 114
     .local v6, lastSlash:I
     if-ltz v6, :cond_0
 
@@ -684,8 +752,10 @@
 
     if-eqz v8, :cond_0
 
+    .line 119
     const/4 v4, 0x1
 
+    .line 122
     sget v8, Lcom/android/internal/content/NativeLibraryHelper;->APK_LIB_LENGTH:I
 
     add-int/2addr v8, v0
@@ -700,12 +770,14 @@
 
     if-eqz v8, :cond_0
 
+    .line 131
     add-int/lit8 v8, v6, 0x1
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v7
 
+    .line 132
     .local v7, libFileName:Ljava/lang/String;
     new-instance v8, Ljava/io/File;
 
@@ -717,8 +789,10 @@
 
     if-eqz v8, :cond_0
 
+    .line 136
     const/4 v5, 0x1
 
+    .line 142
     invoke-static {v2, v7}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v8
@@ -727,6 +801,7 @@
 
     goto :goto_0
 
+    .line 144
     .end local v2           #entry:Ljava/util/zip/ZipEntry;
     .end local v3           #entryName:Ljava/lang/String;
     .end local v6           #lastSlash:I
@@ -734,14 +809,18 @@
     :cond_1
     if-nez v4, :cond_2
 
+    .line 145
     const/4 v8, 0x1
 
+    .line 150
     :goto_1
     return v8
 
+    .line 147
     :cond_2
     if-nez v5, :cond_3
 
+    .line 148
     const/4 v8, 0x2
 
     goto :goto_1
@@ -749,6 +828,7 @@
     :cond_3
     move v8, v11
 
+    .line 150
     goto :goto_1
 .end method
 
@@ -757,8 +837,10 @@
     .parameter "nativeLibraryDir"
 
     .prologue
+    .line 309
     const/4 v1, 0x0
 
+    .line 316
     .local v1, deletedFiles:Z
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -766,13 +848,16 @@
 
     if-eqz v3, :cond_1
 
+    .line 317
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
+    .line 318
     .local v0, binaries:[Ljava/io/File;
     if-eqz v0, :cond_1
 
+    .line 319
     const/4 v2, 0x0
 
     .local v2, nn:I
@@ -781,6 +866,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 324
     aget-object v3, v0, v2
 
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
@@ -789,6 +875,7 @@
 
     if-nez v3, :cond_0
 
+    .line 325
     const-string v3, "NativeHelper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -817,16 +904,19 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 319
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 327
     :cond_0
     const/4 v1, 0x1
 
     goto :goto_1
 
+    .line 335
     .end local v0           #binaries:[Ljava/io/File;
     .end local v2           #nn:I
     :cond_1
@@ -838,6 +928,7 @@
     .parameter "nativeLibraryPath"
 
     .prologue
+    .line 299
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V

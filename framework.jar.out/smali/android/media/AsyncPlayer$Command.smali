@@ -33,6 +33,7 @@
     .locals 0
 
     .prologue
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +44,7 @@
     .parameter "x0"
 
     .prologue
+    .line 38
     invoke-direct {p0}, Landroid/media/AsyncPlayer$Command;-><init>()V
 
     return-void
@@ -54,11 +56,12 @@
     .locals 2
 
     .prologue
+    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "{ code="
+    const-string/jumbo v1, "{ code="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

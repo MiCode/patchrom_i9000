@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 197
     iput-object p1, p0, Lcom/android/server/TvOutService$1;->this$0:Lcom/android/server/TvOutService;
 
     invoke-direct {p0}, Landroid/view/IRotationWatcher$Stub;-><init>()V
@@ -38,9 +39,11 @@
     .parameter "rotation"
 
     .prologue
+    .line 200
     iget-object v0, p0, Lcom/android/server/TvOutService$1;->this$0:Lcom/android/server/TvOutService;
 
     invoke-static {p1}, Lcom/android/server/TvOutService;->onRotationChanged(I)V
 
+    .line 201
     return-void
 .end method

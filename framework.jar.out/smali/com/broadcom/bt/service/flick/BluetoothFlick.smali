@@ -74,6 +74,7 @@
     .locals 2
 
     .prologue
+    .line 143
     const-string v0, "com.broadcom.bt.app.flick.action."
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -82,6 +83,7 @@
 
     sput v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->ACTION_PREFIX_LENGTH:I
 
+    .line 180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,6 +106,7 @@
 
     sput-object v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->ACTION_TXRX_STATUS:Ljava/lang/String;
 
+    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,6 +129,7 @@
 
     sput-object v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->ACTION_CONNECTED:Ljava/lang/String;
 
+    .line 241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,6 +152,7 @@
 
     sput-object v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->ACTION_SEARCH_STARTED:Ljava/lang/String;
 
+    .line 252
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -177,12 +182,15 @@
     .locals 1
 
     .prologue
+    .line 285
     invoke-direct {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;-><init>()V
 
+    .line 259
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mEventHandler:Lcom/broadcom/bt/service/flick/IBluetoothFlickEventHandler;
 
+    .line 286
     return-void
 .end method
 
@@ -191,6 +199,7 @@
     .parameter "x0"
 
     .prologue
+    .line 122
     iget-object v0, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mEventHandler:Lcom/broadcom/bt/service/flick/IBluetoothFlickEventHandler;
 
     return-object v0
@@ -203,6 +212,7 @@
     .parameter "x2"
 
     .prologue
+    .line 122
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/flick/BluetoothFlick;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -217,6 +227,7 @@
     .parameter "x2"
 
     .prologue
+    .line 122
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/flick/BluetoothFlick;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -231,6 +242,7 @@
     .parameter "x2"
 
     .prologue
+    .line 122
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/flick/BluetoothFlick;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -245,6 +257,7 @@
     .parameter "x2"
 
     .prologue
+    .line 122
     invoke-static {p0, p1, p2}, Lcom/broadcom/bt/service/flick/BluetoothFlick;->actionsEqual(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -257,31 +270,38 @@
     .parameter "filter"
 
     .prologue
+    .line 509
     if-nez p0, :cond_0
 
+    .line 510
     new-instance p0, Landroid/content/IntentFilter;
 
     .end local p0
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 512
     .restart local p0
     :cond_0
     sget-object v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->ACTION_SEARCH_STARTED:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 513
     sget-object v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->ACTION_CONNECTED:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 514
     sget-object v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->ACTION_TXRX_STATUS:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 515
     sget-object v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->ACTION_FINISHED:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 516
     return-object p0
 .end method
 
@@ -291,6 +311,7 @@
     .parameter "cb"
 
     .prologue
+    .line 273
     const-string v1, "bluetooth_flick"
 
     invoke-static {p0, v1}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceEnabled(Landroid/content/Context;Ljava/lang/String;)Z
@@ -299,22 +320,27 @@
 
     if-nez v1, :cond_0
 
+    .line 274
     const-string v1, "BluetoothFlick"
 
     const-string v2, "Unable to get BluetoothFlick proxy: service is not enabled."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 276
     const/4 v1, 0x0
 
+    .line 280
     :goto_0
     return v1
 
+    .line 279
     :cond_0
     new-instance v0, Lcom/broadcom/bt/service/flick/BluetoothFlick;
 
     invoke-direct {v0}, Lcom/broadcom/bt/service/flick/BluetoothFlick;-><init>()V
 
+    .line 280
     .local v0, p:Lcom/broadcom/bt/service/flick/BluetoothFlick;
     const-string v1, "com.broadcom.bt.app.system"
 
@@ -333,10 +359,12 @@
     .locals 3
 
     .prologue
+    .line 566
     iget-object v1, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mService:Lcom/broadcom/bt/service/flick/IBluetoothFlickService;
 
     if-eqz v1, :cond_0
 
+    .line 568
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mService:Lcom/broadcom/bt/service/flick/IBluetoothFlickService;
 
@@ -344,15 +372,18 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 573
     :cond_0
     :goto_0
     return-void
 
+    .line 569
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 570
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothFlick"
 
@@ -367,10 +398,12 @@
     .locals 3
 
     .prologue
+    .line 551
     iget-object v1, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mService:Lcom/broadcom/bt/service/flick/IBluetoothFlickService;
 
     if-eqz v1, :cond_0
 
+    .line 553
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mService:Lcom/broadcom/bt/service/flick/IBluetoothFlickService;
 
@@ -378,15 +411,18 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 558
     :cond_0
     :goto_0
     return-void
 
+    .line 554
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 555
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothFlick"
 
@@ -401,8 +437,10 @@
     .locals 0
 
     .prologue
+    .line 330
     invoke-super {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;->finalize()V
 
+    .line 331
     return-void
 .end method
 
@@ -410,6 +448,7 @@
     .locals 2
 
     .prologue
+    .line 316
     monitor-enter p0
 
     :try_start_0
@@ -417,38 +456,46 @@
 
     if-eqz v0, :cond_0
 
+    .line 317
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mEventHandler:Lcom/broadcom/bt/service/flick/IBluetoothFlickEventHandler;
 
+    .line 320
     :cond_0
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_1
 
+    .line 321
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 322
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 324
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mService:Lcom/broadcom/bt/service/flick/IBluetoothFlickService;
 
+    .line 325
     invoke-super {p0}, Lcom/broadcom/bt/service/framework/BaseProxy;->finish()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 326
     monitor-exit p0
 
     return-void
 
+    .line 316
     :catchall_0
     move-exception v0
 
@@ -462,6 +509,7 @@
     .parameter "service"
 
     .prologue
+    .line 295
     :try_start_0
     invoke-static {p1}, Lcom/broadcom/bt/service/flick/IBluetoothFlickService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/broadcom/bt/service/flick/IBluetoothFlickService;
 
@@ -471,16 +519,20 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 296
     const/4 v1, 0x1
 
+    .line 299
     :goto_0
     return v1
 
+    .line 297
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 298
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothFlick"
 
@@ -488,6 +540,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 299
     const/4 v1, 0x0
 
     goto :goto_0
@@ -498,6 +551,7 @@
     .parameter "handler"
 
     .prologue
+    .line 350
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -511,10 +565,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 352
     monitor-exit p0
 
     return-void
 
+    .line 350
     :catchall_0
     move-exception v0
 
@@ -531,19 +587,23 @@
     .parameter "receiverPriority"
 
     .prologue
+    .line 483
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mEventHandler:Lcom/broadcom/bt/service/flick/IBluetoothFlickEventHandler;
 
+    .line 487
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v1, :cond_1
 
+    .line 489
     if-nez p2, :cond_0
 
+    .line 490
     const/4 v1, 0x0
 
     :try_start_1
@@ -551,9 +611,11 @@
 
     move-result-object p2
 
+    .line 492
     :cond_0
     invoke-virtual {p2, p4}, Landroid/content/IntentFilter;->setPriority(I)V
 
+    .line 493
     new-instance v1, Lcom/broadcom/bt/service/flick/BluetoothFlick$FlickBroadcastReceiver;
 
     const/4 v2, 0x0
@@ -562,6 +624,7 @@
 
     iput-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 494
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
@@ -573,17 +636,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 500
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 496
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 497
     .local v0, t:Ljava/lang/Throwable;
     :try_start_2
     const-string v1, "BluetoothFlick"
@@ -596,6 +662,7 @@
 
     goto :goto_0
 
+    .line 483
     .end local v0           #t:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -613,6 +680,7 @@
     .parameter "receiverPriority"
 
     .prologue
+    .line 415
     monitor-enter p0
 
     if-eqz p3, :cond_0
@@ -627,10 +695,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 418
     monitor-exit p0
 
     return-void
 
+    .line 415
     :cond_0
     const/4 v0, 0x0
 
@@ -648,6 +718,7 @@
     .locals 1
 
     .prologue
+    .line 307
     const/4 v0, 0x0
 
     return v0
@@ -658,10 +729,12 @@
     .parameter "fpath"
 
     .prologue
+    .line 581
     iget-object v1, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mService:Lcom/broadcom/bt/service/flick/IBluetoothFlickService;
 
     if-eqz v1, :cond_0
 
+    .line 583
     :try_start_0
     iget-object v1, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mService:Lcom/broadcom/bt/service/flick/IBluetoothFlickService;
 
@@ -669,19 +742,22 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 588
     :cond_0
     :goto_0
     return-void
 
+    .line 584
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 585
     .local v0, t:Ljava/lang/Throwable;
     const-string v1, "BluetoothFlick"
 
-    const-string v2, "sendFlick"
+    const-string/jumbo v2, "sendFlick"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -692,6 +768,7 @@
     .locals 2
 
     .prologue
+    .line 537
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -699,27 +776,32 @@
     :try_start_0
     iput-object v0, p0, Lcom/broadcom/bt/service/flick/BluetoothFlick;->mEventHandler:Lcom/broadcom/bt/service/flick/IBluetoothFlickEventHandler;
 
+    .line 539
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
+    .line 540
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 541
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/broadcom/bt/service/framework/BaseProxy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 543
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 537
     :catchall_0
     move-exception v0
 

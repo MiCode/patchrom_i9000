@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 1152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
     .parameter "in"
 
     .prologue
+    .line 1154
     new-instance v0, Landroid/widget/ExpandableListView$SavedState;
 
     const/4 v1, 0x0
@@ -58,6 +60,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1152
     invoke-virtual {p0, p1}, Landroid/widget/ExpandableListView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/widget/ExpandableListView$SavedState;
 
     move-result-object v0
@@ -70,6 +73,7 @@
     .parameter "size"
 
     .prologue
+    .line 1158
     new-array v0, p1, [Landroid/widget/ExpandableListView$SavedState;
 
     return-object v0
@@ -80,6 +84,7 @@
     .parameter "x0"
 
     .prologue
+    .line 1152
     invoke-virtual {p0, p1}, Landroid/widget/ExpandableListView$SavedState$1;->newArray(I)[Landroid/widget/ExpandableListView$SavedState;
 
     move-result-object v0

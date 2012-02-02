@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 787
     iput-object p1, p0, Landroid/app/SearchDialog$4;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .parameter "v"
 
     .prologue
+    .line 790
     iget-object v0, p0, Landroid/app/SearchDialog$4;->this$0:Landroid/app/SearchDialog;
 
     #getter for: Landroid/app/SearchDialog;->mSearchable:Landroid/app/SearchableInfo;
@@ -50,9 +52,11 @@
 
     if-nez v0, :cond_0
 
+    .line 794
     :goto_0
     return-void
 
+    .line 793
     :cond_0
     iget-object v0, p0, Landroid/app/SearchDialog$4;->this$0:Landroid/app/SearchDialog;
 

@@ -33,6 +33,7 @@
     .parameter
 
     .prologue
+    .line 2242
     iput-object p1, p0, Lcom/android/server/EncryptService$8;->this$0:Lcom/android/server/EncryptService;
 
     iput-object p2, p0, Lcom/android/server/EncryptService$8;->val$sCID:Ljava/lang/String;
@@ -50,8 +51,10 @@
     .locals 6
 
     .prologue
+    .line 2246
     const/4 v2, -0x3
 
+    .line 2252
     .local v2, nRet:I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/EncryptService$8;->this$0:Lcom/android/server/EncryptService;
@@ -60,13 +63,16 @@
 
     move-result-object v1
 
+    .line 2254
     .local v1, mountService:Landroid/os/storage/IMountService;
     if-nez v1, :cond_0
 
+    .line 2271
     .end local v1           #mountService:Landroid/os/storage/IMountService;
     :goto_0
     return-void
 
+    .line 2257
     .restart local v1       #mountService:Landroid/os/storage/IMountService;
     :cond_0
     iget-object v3, p0, Lcom/android/server/EncryptService$8;->val$sCID:Ljava/lang/String;
@@ -79,6 +85,7 @@
 
     move-result v2
 
+    .line 2268
     .end local v1           #mountService:Landroid/os/storage/IMountService;
     :goto_1
     iget-object v3, p0, Lcom/android/server/EncryptService$8;->this$0:Lcom/android/server/EncryptService;
@@ -91,11 +98,13 @@
 
     goto :goto_0
 
+    .line 2261
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
+    .line 2263
     .local v0, ex:Ljava/lang/Exception;
     iget-object v3, p0, Lcom/android/server/EncryptService$8;->this$0:Lcom/android/server/EncryptService;
 
@@ -103,8 +112,10 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/EncryptService;->setError(I)V
 
+    .line 2264
     const/4 v2, -0x2
 
+    .line 2265
     const-string v3, "EncryptService"
 
     new-instance v4, Ljava/lang/StringBuilder;

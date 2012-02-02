@@ -10,8 +10,10 @@
     .parameter "loadListener"
 
     .prologue
+    .line 41
     invoke-direct {p0, p2}, Landroid/webkit/StreamLoader;-><init>(Landroid/webkit/LoadListener;)V
 
+    .line 43
     const-string v4, "data:"
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
@@ -22,9 +24,11 @@
 
     move-result-object v3
 
+    .line 44
     .local v3, url:Ljava/lang/String;
     const/4 v2, 0x0
 
+    .line 45
     .local v2, data:[B
     const/16 v4, 0x2c
 
@@ -32,17 +36,20 @@
 
     move-result v0
 
+    .line 46
     .local v0, commaIndex:I
     const/4 v4, -0x1
 
     if-eq v0, v4, :cond_2
 
+    .line 47
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 48
     .local v1, contentType:Ljava/lang/String;
     add-int/lit8 v4, v0, 0x1
 
@@ -54,8 +61,10 @@
 
     move-result-object v2
 
+    .line 49
     invoke-virtual {p2, v1}, Landroid/webkit/LoadListener;->parseContentTypeHeader(Ljava/lang/String;)V
 
+    .line 50
     const-string v4, "base64"
 
     invoke-virtual {p2}, Landroid/webkit/LoadListener;->transferEncoding()Ljava/lang/String;
@@ -68,30 +77,36 @@
 
     if-eqz v4, :cond_0
 
+    .line 51
     invoke-static {v2}, Lorg/apache/harmony/luni/util/Base64;->decode([B)[B
 
     move-result-object v2
 
+    .line 56
     .end local v1           #contentType:Ljava/lang/String;
     :cond_0
     :goto_0
     if-eqz v2, :cond_1
 
+    .line 57
     new-instance v4, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v4, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     iput-object v4, p0, Landroid/webkit/StreamLoader;->mDataStream:Ljava/io/InputStream;
 
+    .line 58
     array-length v4, v2
 
     int-to-long v4, v4
 
     iput-wide v4, p0, Landroid/webkit/StreamLoader;->mContentLength:J
 
+    .line 60
     :cond_1
     return-void
 
+    .line 54
     :cond_2
     invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
 
@@ -107,6 +122,7 @@
     .parameter "h"
 
     .prologue
+    .line 76
     return-void
 .end method
 
@@ -116,10 +132,12 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 64
     iget-object v0, p0, Landroid/webkit/StreamLoader;->mDataStream:Ljava/io/InputStream;
 
     if-eqz v0, :cond_0
 
+    .line 65
     iget-object v0, p0, Landroid/webkit/StreamLoader;->mLoadListener:Landroid/webkit/LoadListener;
 
     const/16 v1, 0xc8
@@ -130,9 +148,11 @@
 
     move v0, v3
 
+    .line 70
     :goto_0
     return v0
 
+    .line 68
     :cond_0
     iget-object v0, p0, Landroid/webkit/StreamLoader;->mLoadListener:Landroid/webkit/LoadListener;
 
@@ -148,6 +168,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/LoadListener;->error(ILjava/lang/String;)V
 
+    .line 70
     const/4 v0, 0x0
 
     goto :goto_0

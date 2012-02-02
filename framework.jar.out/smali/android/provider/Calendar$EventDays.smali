@@ -30,6 +30,7 @@
     .locals 3
 
     .prologue
+    .line 1072
     const-string v0, "content://com.android.calendar/instances/groupbyday"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -38,13 +39,14 @@
 
     sput-object v0, Landroid/provider/Calendar$EventDays;->CONTENT_URI:Landroid/net/Uri;
 
+    .line 1075
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    const-string v2, "startDay"
+    const-string/jumbo v2, "startDay"
 
     aput-object v2, v0, v1
 
@@ -63,6 +65,7 @@
     .locals 0
 
     .prologue
+    .line 1071
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -79,18 +82,22 @@
 
     const/4 v1, 0x1
 
+    .line 1088
     if-ge p2, v1, :cond_0
 
     move-object v0, v4
 
+    .line 1095
     :goto_0
     return-object v0
 
+    .line 1091
     :cond_0
     add-int v0, p1, p2
 
     sub-int v7, v0, v1
 
+    .line 1092
     .local v7, endDay:I
     sget-object v0, Landroid/provider/Calendar$EventDays;->CONTENT_URI:Landroid/net/Uri;
 
@@ -98,24 +105,27 @@
 
     move-result-object v6
 
+    .line 1093
     .local v6, builder:Landroid/net/Uri$Builder;
     int-to-long v0, p1
 
     invoke-static {v6, v0, v1}, Landroid/content/ContentUris;->appendId(Landroid/net/Uri$Builder;J)Landroid/net/Uri$Builder;
 
+    .line 1094
     int-to-long v0, v7
 
     invoke-static {v6, v0, v1}, Landroid/content/ContentUris;->appendId(Landroid/net/Uri$Builder;J)Landroid/net/Uri$Builder;
 
+    .line 1095
     invoke-virtual {v6}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1
 
     sget-object v2, Landroid/provider/Calendar$EventDays;->PROJECTION:[Ljava/lang/String;
 
-    const-string v3, "selected=1"
+    const-string/jumbo v3, "selected=1"
 
-    const-string v5, "startDay"
+    const-string/jumbo v5, "startDay"
 
     move-object v0, p0
 

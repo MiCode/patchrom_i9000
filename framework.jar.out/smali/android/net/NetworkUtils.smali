@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +23,7 @@
     .parameter "ipInfo"
 
     .prologue
+    .line 97
     iget v1, p1, Landroid/net/DhcpInfo;->ipAddress:I
 
     iget v2, p1, Landroid/net/DhcpInfo;->netmask:I
@@ -61,6 +63,7 @@
     .parameter "hostname"
 
     .prologue
+    .line 118
     :try_start_0
     invoke-static {p0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
     :try_end_0
@@ -68,11 +71,13 @@
 
     move-result-object v3
 
+    .line 124
     .local v3, inetAddress:Ljava/net/InetAddress;
     invoke-virtual {v3}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v1
 
+    .line 125
     .local v1, addrBytes:[B
     const/4 v4, 0x3
 
@@ -113,15 +118,18 @@
     .local v0, addr:I
     move v4, v0
 
+    .line 129
     .end local v0           #addr:I
     .end local v1           #addrBytes:[B
     .end local v3           #inetAddress:Ljava/net/InetAddress;
     :goto_0
     return v4
 
+    .line 119
     :catch_0
     move-exception v2
 
+    .line 120
     .local v2, e:Ljava/net/UnknownHostException;
     const/4 v4, -0x1
 
@@ -159,8 +167,10 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 133
     const/4 v2, 0x0
 
+    .line 134
     .local v2, result:I
     const-string v3, "\\."
 
@@ -168,6 +178,7 @@
 
     move-result-object v0
 
+    .line 135
     .local v0, array:[Ljava/lang/String;
     array-length v3, v0
 
@@ -177,9 +188,11 @@
 
     move v3, v5
 
+    .line 144
     :goto_0
     return v3
 
+    .line 137
     :cond_0
     const/4 v3, 0x3
 
@@ -190,6 +203,7 @@
 
     move-result v2
 
+    .line 138
     shl-int/lit8 v3, v2, 0x8
 
     const/4 v4, 0x2
@@ -202,6 +216,7 @@
 
     add-int v2, v3, v4
 
+    .line 139
     shl-int/lit8 v3, v2, 0x8
 
     const/4 v4, 0x1
@@ -214,6 +229,7 @@
 
     add-int v2, v3, v4
 
+    .line 140
     shl-int/lit8 v3, v2, 0x8
 
     const/4 v4, 0x0
@@ -230,8 +246,10 @@
 
     move v3, v2
 
+    .line 144
     goto :goto_0
 
+    .line 141
     :catch_0
     move-exception v3
 
@@ -240,5 +258,6 @@
     .local v1, e:Ljava/lang/NumberFormatException;
     move v3, v5
 
+    .line 142
     goto :goto_0
 .end method

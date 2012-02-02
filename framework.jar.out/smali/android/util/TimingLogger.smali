@@ -40,10 +40,13 @@
     .parameter "label"
 
     .prologue
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 73
     invoke-virtual {p0, p1, p2}, Landroid/util/TimingLogger;->reset(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 74
     return-void
 .end method
 
@@ -54,18 +57,22 @@
     .parameter "splitLabel"
 
     .prologue
+    .line 119
     iget-boolean v2, p0, Landroid/util/TimingLogger;->mDisabled:Z
 
     if-eqz v2, :cond_0
 
+    .line 123
     :goto_0
     return-void
 
+    .line 120
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 121
     .local v0, now:J
     iget-object v2, p0, Landroid/util/TimingLogger;->mSplits:Ljava/util/ArrayList;
 
@@ -75,6 +82,7 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 122
     iget-object v2, p0, Landroid/util/TimingLogger;->mSplitLabels:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -86,13 +94,16 @@
     .locals 12
 
     .prologue
+    .line 131
     iget-boolean v8, p0, Landroid/util/TimingLogger;->mDisabled:Z
 
     if-eqz v8, :cond_0
 
+    .line 143
     :goto_0
     return-void
 
+    .line 132
     :cond_0
     iget-object v8, p0, Landroid/util/TimingLogger;->mTag:Ljava/lang/String;
 
@@ -118,6 +129,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 133
     iget-object v8, p0, Landroid/util/TimingLogger;->mSplits:Ljava/util/ArrayList;
 
     const/4 v9, 0x0
@@ -132,9 +144,11 @@
 
     move-result-wide v0
 
+    .line 134
     .local v0, first:J
     move-wide v3, v0
 
+    .line 135
     .local v3, now:J
     const/4 v2, 0x1
 
@@ -148,6 +162,7 @@
 
     if-ge v2, v8, :cond_1
 
+    .line 136
     iget-object v8, p0, Landroid/util/TimingLogger;->mSplits:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -160,6 +175,7 @@
 
     move-result-wide v3
 
+    .line 137
     iget-object v8, p0, Landroid/util/TimingLogger;->mSplitLabels:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -168,6 +184,7 @@
 
     check-cast v7, Ljava/lang/String;
 
+    .line 138
     .local v7, splitLabel:Ljava/lang/String;
     iget-object v8, p0, Landroid/util/TimingLogger;->mSplits:Ljava/util/ArrayList;
 
@@ -185,6 +202,7 @@
 
     move-result-wide v5
 
+    .line 140
     .local v5, prev:J
     iget-object v8, p0, Landroid/util/TimingLogger;->mTag:Ljava/lang/String;
 
@@ -226,10 +244,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 135
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
+    .line 142
     .end local v5           #prev:J
     .end local v7           #splitLabel:Ljava/lang/String;
     :cond_1
@@ -276,6 +296,7 @@
     .locals 2
 
     .prologue
+    .line 99
     iget-object v0, p0, Landroid/util/TimingLogger;->mTag:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -291,35 +312,42 @@
     :goto_0
     iput-boolean v0, p0, Landroid/util/TimingLogger;->mDisabled:Z
 
+    .line 100
     iget-boolean v0, p0, Landroid/util/TimingLogger;->mDisabled:Z
 
     if-eqz v0, :cond_1
 
+    .line 109
     :goto_1
     return-void
 
+    .line 99
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
+    .line 101
     :cond_1
     iget-object v0, p0, Landroid/util/TimingLogger;->mSplits:Ljava/util/ArrayList;
 
     if-nez v0, :cond_2
 
+    .line 102
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/util/TimingLogger;->mSplits:Ljava/util/ArrayList;
 
+    .line 103
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/util/TimingLogger;->mSplitLabels:Ljava/util/ArrayList;
 
+    .line 108
     :goto_2
     const/4 v0, 0x0
 
@@ -327,11 +355,13 @@
 
     goto :goto_1
 
+    .line 105
     :cond_2
     iget-object v0, p0, Landroid/util/TimingLogger;->mSplits:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
+    .line 106
     iget-object v0, p0, Landroid/util/TimingLogger;->mSplitLabels:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -345,11 +375,15 @@
     .parameter "label"
 
     .prologue
+    .line 85
     iput-object p1, p0, Landroid/util/TimingLogger;->mTag:Ljava/lang/String;
 
+    .line 86
     iput-object p2, p0, Landroid/util/TimingLogger;->mLabel:Ljava/lang/String;
 
+    .line 87
     invoke-virtual {p0}, Landroid/util/TimingLogger;->reset()V
 
+    .line 88
     return-void
 .end method

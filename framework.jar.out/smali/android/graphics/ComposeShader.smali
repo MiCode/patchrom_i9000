@@ -11,8 +11,10 @@
     .parameter "mode"
 
     .prologue
+    .line 43
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
+    .line 44
     iget v0, p1, Landroid/graphics/Shader;->native_instance:I
 
     iget v1, p2, Landroid/graphics/Shader;->native_instance:I
@@ -25,6 +27,7 @@
 
     iput v0, p0, Landroid/graphics/Shader;->native_instance:I
 
+    .line 46
     return-void
 .end method
 
@@ -35,8 +38,10 @@
     .parameter "mode"
 
     .prologue
+    .line 31
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
+    .line 32
     iget v0, p1, Landroid/graphics/Shader;->native_instance:I
 
     iget v1, p2, Landroid/graphics/Shader;->native_instance:I
@@ -52,8 +57,10 @@
 
     iput v0, p0, Landroid/graphics/Shader;->native_instance:I
 
+    .line 34
     return-void
 
+    .line 32
     :cond_0
     const/4 v2, 0x0
 

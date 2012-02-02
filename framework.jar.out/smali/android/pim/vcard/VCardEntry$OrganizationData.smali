@@ -51,28 +51,40 @@
     .parameter "isPrimary"
 
     .prologue
+    .line 307
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 308
     iput p1, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->type:I
 
+    .line 309
     iput-object p2, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->label:Ljava/lang/String;
 
+    .line 310
     iput-object p3, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->companyName:Ljava/lang/String;
 
+    .line 311
     iput-object p4, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->departmentName:Ljava/lang/String;
 
+    .line 312
     iput-object p5, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->titleName:Ljava/lang/String;
 
+    .line 313
     iput-object p6, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->jobDescription:Ljava/lang/String;
 
+    .line 314
     iput-object p7, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->symbol:Ljava/lang/String;
 
+    .line 315
     iput-object p8, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->phoneticName:Ljava/lang/String;
 
+    .line 316
     iput-object p9, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->officeLocation:Ljava/lang/String;
 
+    .line 317
     iput-boolean p10, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->isPrimary:Z
 
+    .line 318
     return-void
 .end method
 
@@ -86,6 +98,7 @@
     .parameter "isPrimary"
 
     .prologue
+    .line 289
     const/4 v2, 0x0
 
     const/4 v6, 0x0
@@ -110,6 +123,7 @@
 
     invoke-direct/range {v0 .. v10}, Landroid/pim/vcard/VCardEntry$OrganizationData;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
+    .line 296
     return-void
 .end method
 
@@ -122,15 +136,18 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 322
     instance-of v2, p1, Landroid/pim/vcard/VCardEntry$OrganizationData;
 
     if-nez v2, :cond_0
 
     move v2, v4
 
+    .line 326
     :goto_0
     return v2
 
+    .line 325
     :cond_0
     move-object v0, p1
 
@@ -138,6 +155,7 @@
 
     move-object v1, v0
 
+    .line 326
     .local v1, organization:Landroid/pim/vcard/VCardEntry$OrganizationData;
     iget v2, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->type:I
 
@@ -237,10 +255,12 @@
     .prologue
     const-string v2, ", "
 
+    .line 338
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 339
     .local v0, builder:Ljava/lang/StringBuilder;
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->companyName:Ljava/lang/String;
 
@@ -250,10 +270,12 @@
 
     if-nez v1, :cond_0
 
+    .line 340
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->companyName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 343
     :cond_0
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->departmentName:Ljava/lang/String;
 
@@ -263,21 +285,25 @@
 
     if-nez v1, :cond_2
 
+    .line 344
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
+    .line 345
     const-string v1, ", "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 347
     :cond_1
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->departmentName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 350
     :cond_2
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->titleName:Ljava/lang/String;
 
@@ -287,21 +313,25 @@
 
     if-nez v1, :cond_4
 
+    .line 351
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
 
     if-lez v1, :cond_3
 
+    .line 352
     const-string v1, ", "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 354
     :cond_3
     iget-object v1, p0, Landroid/pim/vcard/VCardEntry$OrganizationData;->titleName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 357
     :cond_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -314,7 +344,8 @@
     .locals 4
 
     .prologue
-    const-string v0, "type: %d, company: %s, department: %s, title: %s, isPrimary: %s"
+    .line 362
+    const-string/jumbo v0, "type: %d, company: %s, department: %s, title: %s, isPrimary: %s"
 
     const/4 v1, 0x5
 

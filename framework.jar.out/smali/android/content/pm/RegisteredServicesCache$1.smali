@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 107
     .local p0, this:Landroid/content/pm/RegisteredServicesCache$1;,"Landroid/content/pm/RegisteredServicesCache.1;"
     iput-object p1, p0, Landroid/content/pm/RegisteredServicesCache$1;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
@@ -40,10 +41,12 @@
     .parameter "intent"
 
     .prologue
+    .line 110
     .local p0, this:Landroid/content/pm/RegisteredServicesCache$1;,"Landroid/content/pm/RegisteredServicesCache.1;"
     iget-object v0, p0, Landroid/content/pm/RegisteredServicesCache$1;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
     invoke-virtual {v0}, Landroid/content/pm/RegisteredServicesCache;->generateServicesMap()V
 
+    .line 111
     return-void
 .end method

@@ -34,16 +34,19 @@
     .parameter
 
     .prologue
+    .line 994
     iput-object p1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 995
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTimer:Ljava/util/Timer;
 
+    .line 1092
     return-void
 .end method
 
@@ -53,6 +56,7 @@
     .parameter "x1"
 
     .prologue
+    .line 994
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipService$ConnectivityReceiver;-><init>(Lcom/android/server/sip/SipService;)V
 
     return-void
@@ -65,6 +69,7 @@
     .parameter "x2"
 
     .prologue
+    .line 994
     invoke-direct {p0, p1, p2}, Lcom/android/server/sip/SipService$ConnectivityReceiver;->onReceiveInternal(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -75,6 +80,7 @@
     .parameter "x0"
 
     .prologue
+    .line 994
     iget-object v0, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTask:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
     return-object v0
@@ -86,6 +92,7 @@
     .parameter "x1"
 
     .prologue
+    .line 994
     iput-object p1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTask:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
     return-object p1
@@ -95,6 +102,7 @@
     .locals 3
 
     .prologue
+    .line 1061
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
     #getter for: Lcom/android/server/sip/SipService;->mContext:Landroid/content/Context;
@@ -110,6 +118,7 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
+    .line 1063
     .local v0, cm:Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
@@ -124,21 +133,26 @@
     .parameter "connected"
 
     .prologue
+    .line 1067
     iget-object v0, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
     monitor-enter v0
 
+    .line 1072
     if-eqz p2, :cond_1
 
+    .line 1073
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTask:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
     if-eqz v1, :cond_0
 
+    .line 1074
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTask:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
     invoke-virtual {v1}, Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;->cancel()Z
 
+    .line 1075
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
     #getter for: Lcom/android/server/sip/SipService;->mMyWakeLock:Lcom/android/server/sip/SipWakeLock;
@@ -150,6 +164,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/sip/SipWakeLock;->release(Ljava/lang/Object;)V
 
+    .line 1077
     :cond_0
     new-instance v1, Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
@@ -157,6 +172,7 @@
 
     iput-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTask:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
+    .line 1078
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTimer:Ljava/util/Timer;
 
     iget-object v2, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTask:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
@@ -165,6 +181,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
+    .line 1081
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
     #getter for: Lcom/android/server/sip/SipService;->mMyWakeLock:Lcom/android/server/sip/SipWakeLock;
@@ -176,11 +193,14 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/sip/SipWakeLock;->acquire(Ljava/lang/Object;)V
 
+    .line 1089
     :goto_0
     monitor-exit v0
 
+    .line 1090
     return-void
 
+    .line 1083
     :cond_1
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTask:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
@@ -199,10 +219,12 @@
 
     if-eqz v1, :cond_2
 
+    .line 1084
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->mTask:Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;
 
     invoke-virtual {v1}, Lcom/android/server/sip/SipService$ConnectivityReceiver$MyTimerTask;->cancel()Z
 
+    .line 1085
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
     #getter for: Lcom/android/server/sip/SipService;->mMyWakeLock:Lcom/android/server/sip/SipWakeLock;
@@ -214,6 +236,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/sip/SipWakeLock;->release(Ljava/lang/Object;)V
 
+    .line 1087
     :cond_2
     iget-object v1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
@@ -224,6 +247,7 @@
 
     goto :goto_0
 
+    .line 1089
     :catchall_0
     move-exception v1
 
@@ -242,10 +266,12 @@
     .prologue
     const/4 v8, 0x1
 
+    .line 1009
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 1010
     .local v0, action:Ljava/lang/String;
     const-string v6, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -255,13 +281,16 @@
 
     if-eqz v6, :cond_0
 
+    .line 1011
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
+    .line 1012
     .local v2, b:Landroid/os/Bundle;
     if-eqz v2, :cond_0
 
+    .line 1013
     const-string v6, "networkInfo"
 
     invoke-virtual {v2, v6}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -270,16 +299,19 @@
 
     check-cast v3, Landroid/net/NetworkInfo;
 
+    .line 1015
     .local v3, netInfo:Landroid/net/NetworkInfo;
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 1016
     .local v5, type:Ljava/lang/String;
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v4
 
+    .line 1018
     .local v4, state:Landroid/net/NetworkInfo$State;
     iget-object v6, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
@@ -296,6 +328,7 @@
 
     if-eq v6, v8, :cond_1
 
+    .line 1058
     .end local v2           #b:Landroid/os/Bundle;
     .end local v3           #netInfo:Landroid/net/NetworkInfo;
     .end local v4           #state:Landroid/net/NetworkInfo$State;
@@ -304,6 +337,7 @@
     :goto_0
     return-void
 
+    .line 1027
     .restart local v2       #b:Landroid/os/Bundle;
     .restart local v3       #netInfo:Landroid/net/NetworkInfo;
     .restart local v4       #state:Landroid/net/NetworkInfo$State;
@@ -313,6 +347,7 @@
 
     move-result-object v1
 
+    .line 1038
     .local v1, activeNetInfo:Landroid/net/NetworkInfo;
     sget-object v6, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
 
@@ -330,20 +365,24 @@
 
     if-ne v6, v7, :cond_0
 
+    .line 1046
     :cond_2
     sget-object v6, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
 
     if-ne v4, v6, :cond_3
 
+    .line 1048
     invoke-direct {p0, v5, v8}, Lcom/android/server/sip/SipService$ConnectivityReceiver;->onChanged(Ljava/lang/String;Z)V
 
     goto :goto_0
 
+    .line 1049
     :cond_3
     sget-object v6, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
 
     if-ne v4, v6, :cond_0
 
+    .line 1051
     const/4 v6, 0x0
 
     invoke-direct {p0, v5, v6}, Lcom/android/server/sip/SipService$ConnectivityReceiver;->onChanged(Ljava/lang/String;Z)V
@@ -359,6 +398,7 @@
     .parameter "intent"
 
     .prologue
+    .line 1001
     iget-object v0, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
     #calls: Lcom/android/server/sip/SipService;->getExecutor()Lcom/android/server/sip/SipService$MyExecutor;
@@ -372,5 +412,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/sip/SipService$MyExecutor;->execute(Ljava/lang/Runnable;)V
 
+    .line 1006
     return-void
 .end method

@@ -25,10 +25,13 @@
     .parameter "looper"
 
     .prologue
+    .line 176
     iput-object p1, p0, Landroid/pim/ContactsAsyncHelper$WorkerHandler;->this$0:Landroid/pim/ContactsAsyncHelper;
 
+    .line 177
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 178
     return-void
 .end method
 
@@ -39,15 +42,18 @@
     .parameter "msg"
 
     .prologue
+    .line 182
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/pim/ContactsAsyncHelper$WorkerArgs;
 
+    .line 184
     .local v0, args:Landroid/pim/ContactsAsyncHelper$WorkerArgs;
     iget v4, p1, Landroid/os/Message;->arg1:I
 
     packed-switch v4, :pswitch_data_0
 
+    .line 210
     :goto_0
     iget-object v4, p0, Landroid/pim/ContactsAsyncHelper$WorkerHandler;->this$0:Landroid/pim/ContactsAsyncHelper;
 
@@ -57,23 +63,29 @@
 
     move-result-object v3
 
+    .line 211
     .local v3, reply:Landroid/os/Message;
     iget v4, p1, Landroid/os/Message;->arg1:I
 
     iput v4, v3, Landroid/os/Message;->arg1:I
 
+    .line 212
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v4, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
+    .line 213
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
+    .line 214
     return-void
 
+    .line 186
     .end local v3           #reply:Landroid/os/Message;
     :pswitch_0
     const/4 v2, 0x0
 
+    .line 188
     .local v2, inputStream:Ljava/io/InputStream;
     :try_start_0
     iget-object v4, v0, Landroid/pim/ContactsAsyncHelper$WorkerArgs;->context:Landroid/content/Context;
@@ -90,9 +102,11 @@
 
     move-result-object v2
 
+    .line 194
     :goto_1
     if-eqz v2, :cond_0
 
+    .line 195
     iget-object v4, v0, Landroid/pim/ContactsAsyncHelper$WorkerArgs;->uri:Landroid/net/Uri;
 
     invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -107,11 +121,13 @@
 
     goto :goto_0
 
+    .line 190
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
+    .line 191
     .local v1, e:Ljava/lang/Exception;
     const-string v4, "ContactsAsyncHelper"
 
@@ -121,6 +137,7 @@
 
     goto :goto_1
 
+    .line 200
     .end local v1           #e:Ljava/lang/Exception;
     :cond_0
     const/4 v4, 0x0
@@ -129,6 +146,7 @@
 
     goto :goto_0
 
+    .line 184
     nop
 
     :pswitch_data_0

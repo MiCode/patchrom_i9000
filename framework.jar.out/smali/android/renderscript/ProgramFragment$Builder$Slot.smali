@@ -30,13 +30,17 @@
     .parameter "_fmt"
 
     .prologue
+    .line 96
     iput-object p1, p0, Landroid/renderscript/ProgramFragment$Builder$Slot;->this$0:Landroid/renderscript/ProgramFragment$Builder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 97
     iput-object p2, p0, Landroid/renderscript/ProgramFragment$Builder$Slot;->env:Landroid/renderscript/ProgramFragment$Builder$EnvMode;
 
+    .line 98
     iput-object p3, p0, Landroid/renderscript/ProgramFragment$Builder$Slot;->format:Landroid/renderscript/ProgramFragment$Builder$Format;
 
+    .line 99
     return-void
 .end method

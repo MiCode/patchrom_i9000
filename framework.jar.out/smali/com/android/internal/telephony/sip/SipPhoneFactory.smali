@@ -8,6 +8,7 @@
     .locals 0
 
     .prologue
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,6 +21,7 @@
     .parameter "phoneNotifier"
 
     .prologue
+    .line 42
     :try_start_0
     new-instance v2, Landroid/net/sip/SipProfile$Builder;
 
@@ -29,6 +31,7 @@
 
     move-result-object v1
 
+    .line 43
     .local v1, profile:Landroid/net/sip/SipProfile;
     new-instance v2, Lcom/android/internal/telephony/sip/SipPhone;
 
@@ -36,15 +39,18 @@
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 46
     .end local v1           #profile:Landroid/net/sip/SipProfile;
     :goto_0
     return-object v2
 
+    .line 44
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
+    .line 45
     .local v0, e:Ljava/text/ParseException;
     const-string v2, "SipPhoneFactory"
 
@@ -52,6 +58,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 46
     const/4 v2, 0x0
 
     goto :goto_0

@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 2992
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$5$1;->this$1:Lcom/android/server/am/ActivityManagerService$5;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$5$1;->val$d:Landroid/app/Dialog;
@@ -45,17 +46,20 @@
     .locals 3
 
     .prologue
+    .line 2995
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$5$1;->this$1:Lcom/android/server/am/ActivityManagerService$5;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService$5;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v0
 
+    .line 2996
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$5$1;->val$d:Landroid/app/Dialog;
 
     invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
 
+    .line 2997
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$5$1;->this$1:Lcom/android/server/am/ActivityManagerService$5;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService$5;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -64,10 +68,13 @@
 
     iput-boolean v2, v1, Lcom/android/server/am/ActivityManagerService;->mLaunchWarningShown:Z
 
+    .line 2998
     monitor-exit v0
 
+    .line 2999
     return-void
 
+    .line 2998
     :catchall_0
     move-exception v1
 

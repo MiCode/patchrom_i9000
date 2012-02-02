@@ -30,6 +30,7 @@
     .locals 1
 
     .prologue
+    .line 390
     const-string v0, "(?:\\r\\n?|\\n)[ \t]"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -38,6 +39,7 @@
 
     sput-object v0, Landroid/pim/RecurrenceSet;->IGNORABLE_ICAL_WHITESPACE_RE:Ljava/util/regex/Pattern;
 
+    .line 393
     const-string v0, ".{75}"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -61,29 +63,37 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 42
     iput-object v4, p0, Landroid/pim/RecurrenceSet;->rrules:[Landroid/pim/EventRecurrence;
 
+    .line 43
     iput-object v4, p0, Landroid/pim/RecurrenceSet;->rdates:[J
 
+    .line 44
     iput-object v4, p0, Landroid/pim/RecurrenceSet;->exrules:[Landroid/pim/EventRecurrence;
 
+    .line 45
     iput-object v4, p0, Landroid/pim/RecurrenceSet;->exdates:[J
 
-    const-string v4, "rrule"
+    .line 54
+    const-string/jumbo v4, "rrule"
 
     invoke-virtual {p1, v4}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 55
     .local v3, rruleStr:Ljava/lang/String;
-    const-string v4, "rdate"
+    const-string/jumbo v4, "rdate"
 
     invoke-virtual {p1, v4}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 56
     .local v2, rdateStr:Ljava/lang/String;
     const-string v4, "exrule"
 
@@ -91,6 +101,7 @@
 
     move-result-object v1
 
+    .line 57
     .local v1, exruleStr:Ljava/lang/String;
     const-string v4, "exdate"
 
@@ -98,9 +109,11 @@
 
     move-result-object v0
 
+    .line 58
     .local v0, exdateStr:Ljava/lang/String;
     invoke-direct {p0, v3, v2, v1, v0}, Landroid/pim/RecurrenceSet;->init(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 59
     return-void
 .end method
 
@@ -116,29 +129,37 @@
     .prologue
     const/4 v8, 0x0
 
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 42
     iput-object v8, p0, Landroid/pim/RecurrenceSet;->rrules:[Landroid/pim/EventRecurrence;
 
+    .line 43
     iput-object v8, p0, Landroid/pim/RecurrenceSet;->rdates:[J
 
+    .line 44
     iput-object v8, p0, Landroid/pim/RecurrenceSet;->exrules:[Landroid/pim/EventRecurrence;
 
+    .line 45
     iput-object v8, p0, Landroid/pim/RecurrenceSet;->exdates:[J
 
-    const-string v8, "rrule"
+    .line 72
+    const-string/jumbo v8, "rrule"
 
     invoke-interface {p1, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v6
 
+    .line 73
     .local v6, rruleColumn:I
-    const-string v8, "rdate"
+    const-string/jumbo v8, "rdate"
 
     invoke-interface {p1, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
+    .line 74
     .local v4, rdateColumn:I
     const-string v8, "exrule"
 
@@ -146,6 +167,7 @@
 
     move-result v2
 
+    .line 75
     .local v2, exruleColumn:I
     const-string v8, "exdate"
 
@@ -153,29 +175,35 @@
 
     move-result v0
 
+    .line 76
     .local v0, exdateColumn:I
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
+    .line 77
     .local v7, rruleStr:Ljava/lang/String;
     invoke-interface {p1, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 78
     .local v5, rdateStr:Ljava/lang/String;
     invoke-interface {p1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 79
     .local v3, exruleStr:Ljava/lang/String;
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 80
     .local v1, exdateStr:Ljava/lang/String;
     invoke-direct {p0, v7, v5, v3, v1}, Landroid/pim/RecurrenceSet;->init(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 81
     return-void
 .end method
 
@@ -194,18 +222,25 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 42
     iput-object v0, p0, Landroid/pim/RecurrenceSet;->rrules:[Landroid/pim/EventRecurrence;
 
+    .line 43
     iput-object v0, p0, Landroid/pim/RecurrenceSet;->rdates:[J
 
+    .line 44
     iput-object v0, p0, Landroid/pim/RecurrenceSet;->exrules:[Landroid/pim/EventRecurrence;
 
+    .line 45
     iput-object v0, p0, Landroid/pim/RecurrenceSet;->exdates:[J
 
+    .line 86
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/pim/RecurrenceSet;->init(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 87
     return-void
 .end method
 
@@ -216,20 +251,24 @@
     .parameter "ruleStr"
 
     .prologue
+    .line 365
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
+    .line 374
     :cond_0
     return-void
 
+    .line 368
     :cond_1
     invoke-static {p2}, Landroid/pim/RecurrenceSet;->getRuleStrings(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
+    .line 369
     .local v5, rrules:[Ljava/lang/String;
     move-object v0, v5
 
@@ -245,16 +284,20 @@
 
     aget-object v4, v0, v1
 
+    .line 370
     .local v4, rrule:Ljava/lang/String;
     new-instance v3, Landroid/pim/ICalendar$Property;
 
     invoke-direct {v3, p1}, Landroid/pim/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
+    .line 371
     .local v3, prop:Landroid/pim/ICalendar$Property;
     invoke-virtual {v3, v4}, Landroid/pim/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
+    .line 372
     invoke-virtual {p0, v3}, Landroid/pim/ICalendar$Component;->addProperty(Landroid/pim/ICalendar$Property;)V
 
+    .line 369
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -267,23 +310,28 @@
     .parameter "dateStr"
 
     .prologue
+    .line 425
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 441
     :goto_0
     return-void
 
+    .line 429
     :cond_0
     new-instance v0, Landroid/pim/ICalendar$Property;
 
     invoke-direct {v0, p1}, Landroid/pim/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
+    .line 430
     .local v0, prop:Landroid/pim/ICalendar$Property;
     const/4 v1, 0x0
 
+    .line 431
     .local v1, tz:Ljava/lang/String;
     const-string v3, ";"
 
@@ -291,23 +339,27 @@
 
     move-result v2
 
+    .line 432
     .local v2, tzidx:I
     const/4 v3, -0x1
 
     if-eq v2, v3, :cond_1
 
+    .line 433
     const/4 v3, 0x0
 
     invoke-virtual {p2, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 434
     add-int/lit8 v3, v2, 0x1
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 436
     :cond_1
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -315,6 +367,7 @@
 
     if-nez v3, :cond_2
 
+    .line 437
     new-instance v3, Landroid/pim/ICalendar$Parameter;
 
     const-string v4, "TZID"
@@ -323,9 +376,11 @@
 
     invoke-virtual {v0, v3}, Landroid/pim/ICalendar$Property;->addParameter(Landroid/pim/ICalendar$Parameter;)V
 
+    .line 439
     :cond_2
     invoke-virtual {v0, p2}, Landroid/pim/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
+    .line 440
     invoke-virtual {p0, v0}, Landroid/pim/ICalendar$Component;->addProperty(Landroid/pim/ICalendar$Property;)V
 
     goto :goto_0
@@ -337,25 +392,30 @@
     .parameter "component"
 
     .prologue
+    .line 446
     const-string v0, "DURATION"
 
     invoke-virtual {p1, v0}, Landroid/pim/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Landroid/pim/ICalendar$Property;
 
     move-result-object v0
 
+    .line 448
     .local v0, durationProperty:Landroid/pim/ICalendar$Property;
     if-eqz v0, :cond_0
 
+    .line 450
     invoke-virtual {v0}, Landroid/pim/ICalendar$Property;->getValue()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 473
     .end local v0           #durationProperty:Landroid/pim/ICalendar$Property;
     .end local p0
     .end local p1
     :goto_0
     return-object p0
 
+    .line 454
     .restart local v0       #durationProperty:Landroid/pim/ICalendar$Property;
     .restart local p0
     .restart local p1
@@ -367,13 +427,16 @@
 
     move-result-object p1
 
+    .line 456
     .local p1, dtendProperty:Landroid/pim/ICalendar$Property;
     if-nez p1, :cond_1
 
+    .line 458
     const-string p0, "+P0S"
 
     goto :goto_0
 
+    .line 460
     :cond_1
     const-string v0, "TZID"
 
@@ -381,6 +444,7 @@
 
     move-result-object v0
 
+    .line 462
     .local v0, endTzidParameter:Landroid/pim/ICalendar$Parameter;
     if-nez v0, :cond_2
 
@@ -389,12 +453,14 @@
     .end local v0           #endTzidParameter:Landroid/pim/ICalendar$Parameter;
     move-object v1, v0
 
+    .line 465
     .local v1, endTzid:Ljava/lang/String;
     :goto_1
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0, v1}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
+    .line 466
     .local v0, end:Landroid/text/format/Time;
     invoke-virtual {p1}, Landroid/pim/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -403,6 +469,7 @@
     .end local p1           #dtendProperty:Landroid/pim/ICalendar$Property;
     invoke-virtual {v0, p1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
+    .line 467
     const/4 p1, 0x0
 
     invoke-virtual {v0, p1}, Landroid/text/format/Time;->toMillis(Z)J
@@ -418,12 +485,14 @@
 
     sub-long/2addr v0, v2
 
+    .line 469
     .end local v1           #endTzid:Ljava/lang/String;
     .local v0, durationMillis:J
     const-wide/16 v2, 0x3e8
 
     div-long/2addr v0, v2
 
+    .line 470
     .local v0, durationSeconds:J
     iget-boolean p0, p0, Landroid/text/format/Time;->allDay:Z
 
@@ -440,6 +509,7 @@
 
     if-nez p0, :cond_3
 
+    .line 471
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -471,6 +541,7 @@
 
     goto :goto_0
 
+    .line 462
     .local v0, endTzidParameter:Landroid/pim/ICalendar$Parameter;
     .restart local p0
     .restart local p1       #dtendProperty:Landroid/pim/ICalendar$Property;
@@ -481,6 +552,7 @@
 
     goto :goto_1
 
+    .line 473
     .end local p0
     .end local p1           #dtendProperty:Landroid/pim/ICalendar$Property;
     .local v0, durationSeconds:J
@@ -517,13 +589,17 @@
     .parameter "recurrence"
 
     .prologue
+    .line 505
     if-nez p0, :cond_0
 
+    .line 506
     const/4 v1, 0x0
 
+    .line 513
     :goto_0
     return-object v1
 
+    .line 508
     :cond_0
     const-string v1, "TZID"
 
@@ -531,9 +607,11 @@
 
     move-result-object v0
 
+    .line 510
     .local v0, tzidParam:Landroid/pim/ICalendar$Parameter;
     if-eqz v0, :cond_1
 
+    .line 511
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -564,6 +642,7 @@
 
     goto :goto_0
 
+    .line 513
     :cond_1
     invoke-virtual {p0}, Landroid/pim/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -578,10 +657,12 @@
     .parameter "name"
 
     .prologue
+    .line 479
     invoke-virtual {p0, p1}, Landroid/pim/ICalendar$Component;->getProperties(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
+    .line 480
     .local v2, properties:Ljava/util/List;,"Ljava/util/List<Landroid/pim/ICalendar$Property;>;"
     if-eqz v2, :cond_0
 
@@ -591,13 +672,16 @@
 
     if-eqz v5, :cond_1
 
+    .line 481
     :cond_0
     const/4 v5, 0x0
 
+    .line 501
     .end local p0
     :goto_0
     return-object v5
 
+    .line 484
     .restart local p0
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -608,6 +692,7 @@
 
     if-ne v5, v6, :cond_2
 
+    .line 485
     const/4 v5, 0x0
 
     invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -623,15 +708,18 @@
 
     goto :goto_0
 
+    .line 488
     .restart local p0
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 490
     .local v4, sb:Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
+    .line 491
     .local v0, first:Z
     invoke-virtual {p0, p1}, Landroid/pim/ICalendar$Component;->getProperties(Ljava/lang/String;)Ljava/util/List;
 
@@ -655,11 +743,14 @@
 
     check-cast v3, Landroid/pim/ICalendar$Property;
 
+    .line 492
     .local v3, property:Landroid/pim/ICalendar$Property;
     if-eqz v0, :cond_3
 
+    .line 493
     const/4 v0, 0x0
 
+    .line 499
     :goto_2
     invoke-virtual {v3}, Landroid/pim/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -669,6 +760,7 @@
 
     goto :goto_1
 
+    .line 497
     :cond_3
     const-string v5, "\n"
 
@@ -676,6 +768,7 @@
 
     goto :goto_2
 
+    .line 501
     .end local v3           #property:Landroid/pim/ICalendar$Property;
     :cond_4
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -690,6 +783,7 @@
     .parameter "unfoldedIcalContent"
 
     .prologue
+    .line 414
     sget-object v0, Landroid/pim/RecurrenceSet;->FOLD_RE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -710,20 +804,25 @@
     .parameter "ruleStr"
 
     .prologue
+    .line 377
     if-nez p0, :cond_0
 
+    .line 378
     const/4 v4, 0x0
 
     new-array v4, v4, [Ljava/lang/String;
 
+    .line 386
     :goto_0
     return-object v4
 
+    .line 380
     :cond_0
     invoke-static {p0}, Landroid/pim/RecurrenceSet;->unfold(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 381
     .local v3, unfoldedRuleStr:Ljava/lang/String;
     const-string v4, "\n"
 
@@ -731,9 +830,11 @@
 
     move-result-object v2
 
+    .line 382
     .local v2, split:[Ljava/lang/String;
     array-length v0, v2
 
+    .line 383
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -741,6 +842,7 @@
     :goto_1
     if-ge v1, v0, :cond_1
 
+    .line 384
     aget-object v4, v2, v1
 
     invoke-static {v4}, Landroid/pim/RecurrenceSet;->fold(Ljava/lang/String;)Ljava/lang/String;
@@ -749,6 +851,7 @@
 
     aput-object v4, v2, v1
 
+    .line 383
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -756,6 +859,7 @@
     :cond_1
     move-object v4, v2
 
+    .line 386
     goto :goto_0
 .end method
 
@@ -774,6 +878,7 @@
     .prologue
     const-string v6, "\n"
 
+    .line 92
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -786,6 +891,7 @@
 
     if-nez v5, :cond_4
 
+    .line 94
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -793,12 +899,14 @@
 
     if-nez v5, :cond_1
 
+    .line 95
     const-string v5, "\n"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
+    .line 96
     .local v4, rruleStrs:[Ljava/lang/String;
     array-length v5, v4
 
@@ -806,6 +914,7 @@
 
     iput-object v5, p0, Landroid/pim/RecurrenceSet;->rrules:[Landroid/pim/EventRecurrence;
 
+    .line 97
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -814,23 +923,28 @@
 
     if-ge v2, v5, :cond_1
 
+    .line 98
     new-instance v3, Landroid/pim/EventRecurrence;
 
     invoke-direct {v3}, Landroid/pim/EventRecurrence;-><init>()V
 
+    .line 99
     .local v3, rrule:Landroid/pim/EventRecurrence;
     aget-object v5, v4, v2
 
     invoke-virtual {v3, v5}, Landroid/pim/EventRecurrence;->parse(Ljava/lang/String;)V
 
+    .line 100
     iget-object v5, p0, Landroid/pim/RecurrenceSet;->rrules:[Landroid/pim/EventRecurrence;
 
     aput-object v3, v5, v2
 
+    .line 97
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 104
     .end local v2           #i:I
     .end local v3           #rrule:Landroid/pim/EventRecurrence;
     .end local v4           #rruleStrs:[Ljava/lang/String;
@@ -841,12 +955,14 @@
 
     if-nez v5, :cond_2
 
+    .line 105
     invoke-static {p2}, Landroid/pim/RecurrenceSet;->parseRecurrenceDates(Ljava/lang/String;)[J
 
     move-result-object v5
 
     iput-object v5, p0, Landroid/pim/RecurrenceSet;->rdates:[J
 
+    .line 108
     :cond_2
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -854,12 +970,14 @@
 
     if-nez v5, :cond_3
 
+    .line 109
     const-string v5, "\n"
 
     invoke-virtual {p3, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
+    .line 110
     .local v1, exruleStrs:[Ljava/lang/String;
     array-length v5, v1
 
@@ -867,6 +985,7 @@
 
     iput-object v5, p0, Landroid/pim/RecurrenceSet;->exrules:[Landroid/pim/EventRecurrence;
 
+    .line 111
     const/4 v2, 0x0
 
     .restart local v2       #i:I
@@ -875,21 +994,26 @@
 
     if-ge v2, v5, :cond_3
 
+    .line 112
     new-instance v0, Landroid/pim/EventRecurrence;
 
     invoke-direct {v0}, Landroid/pim/EventRecurrence;-><init>()V
 
+    .line 113
     .local v0, exrule:Landroid/pim/EventRecurrence;
     invoke-virtual {v0, p3}, Landroid/pim/EventRecurrence;->parse(Ljava/lang/String;)V
 
+    .line 114
     iget-object v5, p0, Landroid/pim/RecurrenceSet;->exrules:[Landroid/pim/EventRecurrence;
 
     aput-object v0, v5, v2
 
+    .line 111
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
+    .line 118
     .end local v0           #exrule:Landroid/pim/EventRecurrence;
     .end local v1           #exruleStrs:[Ljava/lang/String;
     .end local v2           #i:I
@@ -900,12 +1024,14 @@
 
     if-nez v5, :cond_4
 
+    .line 119
     invoke-static {p4}, Landroid/pim/RecurrenceSet;->parseRecurrenceDates(Ljava/lang/String;)[J
 
     move-result-object v5
 
     iput-object v5, p0, Landroid/pim/RecurrenceSet;->exdates:[J
 
+    .line 122
     :cond_4
     return-void
 .end method
@@ -917,8 +1043,10 @@
     .prologue
     const/4 v9, 0x0
 
+    .line 141
     const-string v5, "UTC"
 
+    .line 142
     .local v5, tz:Ljava/lang/String;
     const-string v7, ";"
 
@@ -926,26 +1054,31 @@
 
     move-result v6
 
+    .line 143
     .local v6, tzidx:I
     const/4 v7, -0x1
 
     if-eq v6, v7, :cond_0
 
+    .line 144
     invoke-virtual {p0, v9, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 145
     add-int/lit8 v7, v6, 0x1
 
     invoke-virtual {p0, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 147
     :cond_0
     new-instance v4, Landroid/text/format/Time;
 
     invoke-direct {v4, v5}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
+    .line 148
     .local v4, time:Landroid/text/format/Time;
     const-string v7, ","
 
@@ -953,12 +1086,15 @@
 
     move-result-object v3
 
+    .line 149
     .local v3, rawDates:[Ljava/lang/String;
     array-length v2, v3
 
+    .line 150
     .local v2, n:I
     new-array v0, v2, [J
 
+    .line 151
     .local v0, dates:[J
     const/4 v1, 0x0
 
@@ -966,22 +1102,27 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
+    .line 153
     aget-object v7, v3, v1
 
     invoke-virtual {v4, v7}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
+    .line 154
     invoke-virtual {v4, v9}, Landroid/text/format/Time;->toMillis(Z)J
 
     move-result-wide v7
 
     aput-wide v7, v0, v1
 
+    .line 155
     iput-object v5, v4, Landroid/text/format/Time;->timezone:Ljava/lang/String;
 
+    .line 151
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 157
     :cond_1
     return-object v0
 .end method
@@ -992,8 +1133,10 @@
     .parameter "component"
 
     .prologue
+    .line 305
     const-wide/16 v0, -0x1
 
+    .line 306
     .local v0, dtstart:J
     const-string v2, "dtstart"
 
@@ -1003,6 +1146,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 307
     const-string v0, "dtstart"
 
     .end local v0           #dtstart:J
@@ -1014,6 +1158,7 @@
 
     move-result-wide v0
 
+    .line 309
     .restart local v0       #dtstart:J
     :cond_0
     const-string v2, "duration"
@@ -1022,6 +1167,7 @@
 
     move-result-object v4
 
+    .line 310
     .local v4, duration:Ljava/lang/String;
     const-string v2, "eventTimezone"
 
@@ -1029,20 +1175,23 @@
 
     move-result-object v9
 
+    .line 311
     .local v9, tzid:Ljava/lang/String;
-    const-string v2, "rrule"
+    const-string/jumbo v2, "rrule"
 
     invoke-virtual {p0, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 312
     .local v8, rruleStr:Ljava/lang/String;
-    const-string v2, "rdate"
+    const-string/jumbo v2, "rdate"
 
     invoke-virtual {p0, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
+    .line 313
     .local v7, rdateStr:Ljava/lang/String;
     const-string v2, "exrule"
 
@@ -1050,6 +1199,7 @@
 
     move-result-object v6
 
+    .line 314
     .local v6, exruleStr:Ljava/lang/String;
     const-string v2, "exdate"
 
@@ -1057,6 +1207,7 @@
 
     move-result-object v5
 
+    .line 315
     .local v5, exdateStr:Ljava/lang/String;
     const-string v2, "allDay"
 
@@ -1064,6 +1215,7 @@
 
     move-result-object p0
 
+    .line 316
     .local p0, allDayInteger:Ljava/lang/Integer;
     if-eqz p0, :cond_3
 
@@ -1078,6 +1230,7 @@
 
     const/4 p0, 0x1
 
+    .line 318
     .local p0, allDay:Z
     :goto_0
     const-wide/16 v2, -0x1
@@ -1104,15 +1257,18 @@
 
     if-eqz v2, :cond_4
 
+    .line 323
     :cond_1
     const/4 p0, 0x0
 
+    .line 359
     .end local v0           #dtstart:J
     .end local v9           #tzid:Ljava/lang/String;
     .end local p0           #allDay:Z
     :goto_1
     return p0
 
+    .line 316
     .restart local v0       #dtstart:J
     .restart local v9       #tzid:Ljava/lang/String;
     :cond_2
@@ -1126,6 +1282,7 @@
 
     goto :goto_0
 
+    .line 326
     .local p0, allDay:Z
     :cond_4
     new-instance v2, Landroid/pim/ICalendar$Property;
@@ -1134,9 +1291,11 @@
 
     invoke-direct {v2, v3}, Landroid/pim/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
+    .line 327
     .local v2, dtstartProp:Landroid/pim/ICalendar$Property;
     const/4 v3, 0x0
 
+    .line 328
     .local v3, dtstartTime:Landroid/text/format/Time;
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1145,8 +1304,10 @@
     .end local v3           #dtstartTime:Landroid/text/format/Time;
     if-nez v3, :cond_7
 
+    .line 329
     if-nez p0, :cond_5
 
+    .line 330
     new-instance v3, Landroid/pim/ICalendar$Parameter;
 
     const-string v10, "TZID"
@@ -1155,18 +1316,22 @@
 
     invoke-virtual {v2, v3}, Landroid/pim/ICalendar$Property;->addParameter(Landroid/pim/ICalendar$Parameter;)V
 
+    .line 332
     :cond_5
     new-instance v3, Landroid/text/format/Time;
 
     invoke-direct {v3, v9}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
+    .line 338
     .end local v9           #tzid:Ljava/lang/String;
     .restart local v3       #dtstartTime:Landroid/text/format/Time;
     :goto_2
     invoke-virtual {v3, v0, v1}, Landroid/text/format/Time;->set(J)V
 
+    .line 341
     if-eqz p0, :cond_6
 
+    .line 342
     new-instance p0, Landroid/pim/ICalendar$Parameter;
 
     .end local p0           #allDay:Z
@@ -1179,22 +1344,27 @@
 
     invoke-virtual {v2, p0}, Landroid/pim/ICalendar$Property;->addParameter(Landroid/pim/ICalendar$Parameter;)V
 
+    .line 343
     const/4 p0, 0x1
 
     iput-boolean p0, v3, Landroid/text/format/Time;->allDay:Z
 
+    .line 344
     const/4 p0, 0x0
 
     iput p0, v3, Landroid/text/format/Time;->hour:I
 
+    .line 345
     const/4 p0, 0x0
 
     iput p0, v3, Landroid/text/format/Time;->minute:I
 
+    .line 346
     const/4 p0, 0x0
 
     iput p0, v3, Landroid/text/format/Time;->second:I
 
+    .line 349
     :cond_6
     invoke-virtual {v3}, Landroid/text/format/Time;->format2445()Ljava/lang/String;
 
@@ -1202,40 +1372,50 @@
 
     invoke-virtual {v2, p0}, Landroid/pim/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
+    .line 350
     invoke-virtual {p1, v2}, Landroid/pim/ICalendar$Component;->addProperty(Landroid/pim/ICalendar$Property;)V
 
+    .line 351
     new-instance p0, Landroid/pim/ICalendar$Property;
 
     const-string v0, "DURATION"
 
     invoke-direct {p0, v0}, Landroid/pim/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
+    .line 352
     .local p0, durationProp:Landroid/pim/ICalendar$Property;
     invoke-virtual {p0, v4}, Landroid/pim/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
+    .line 353
     invoke-virtual {p1, p0}, Landroid/pim/ICalendar$Component;->addProperty(Landroid/pim/ICalendar$Property;)V
 
+    .line 355
     const-string p0, "RRULE"
 
     .end local p0           #durationProp:Landroid/pim/ICalendar$Property;
     invoke-static {p1, p0, v8}, Landroid/pim/RecurrenceSet;->addPropertiesForRuleStr(Landroid/pim/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 356
     const-string p0, "RDATE"
 
     invoke-static {p1, p0, v7}, Landroid/pim/RecurrenceSet;->addPropertyForDateStr(Landroid/pim/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 357
     const-string p0, "EXRULE"
 
     invoke-static {p1, p0, v6}, Landroid/pim/RecurrenceSet;->addPropertiesForRuleStr(Landroid/pim/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 358
     const-string p0, "EXDATE"
 
     invoke-static {p1, p0, v5}, Landroid/pim/RecurrenceSet;->addPropertyForDateStr(Landroid/pim/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 359
     const/4 p0, 0x1
 
     goto :goto_1
 
+    .line 335
     .end local v3           #dtstartTime:Landroid/text/format/Time;
     .restart local v0       #dtstart:J
     .restart local v9       #tzid:Ljava/lang/String;
@@ -1258,12 +1438,14 @@
     .parameter "component"
 
     .prologue
+    .line 237
     const-string v0, "dtstart"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
+    .line 238
     .local v3, dtstartColumn:I
     const-string v0, "duration"
 
@@ -1271,6 +1453,7 @@
 
     move-result v4
 
+    .line 239
     .local v4, durationColumn:I
     const-string v0, "eventTimezone"
 
@@ -1278,20 +1461,23 @@
 
     move-result v9
 
+    .line 240
     .local v9, tzidColumn:I
-    const-string v0, "rrule"
+    const-string/jumbo v0, "rrule"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v8
 
+    .line 241
     .local v8, rruleColumn:I
-    const-string v0, "rdate"
+    const-string/jumbo v0, "rdate"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v7
 
+    .line 242
     .local v7, rdateColumn:I
     const-string v0, "exrule"
 
@@ -1299,6 +1485,7 @@
 
     move-result v6
 
+    .line 243
     .local v6, exruleColumn:I
     const-string v0, "exdate"
 
@@ -1306,6 +1493,7 @@
 
     move-result v5
 
+    .line 244
     .local v5, exdateColumn:I
     const-string v0, "allDay"
 
@@ -1313,9 +1501,11 @@
 
     move-result v0
 
+    .line 247
     .local v0, allDayColumn:I
     const-wide/16 v1, -0x1
 
+    .line 248
     .local v1, dtstart:J
     invoke-interface {p0, v3}, Landroid/database/Cursor;->isNull(I)Z
 
@@ -1323,40 +1513,48 @@
 
     if-nez v10, :cond_0
 
+    .line 249
     invoke-interface {p0, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
 
+    .line 251
     :cond_0
     invoke-interface {p0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 252
     .local v4, duration:Ljava/lang/String;
     invoke-interface {p0, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
+    .line 253
     .local v9, tzid:Ljava/lang/String;
     invoke-interface {p0, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 254
     .local v8, rruleStr:Ljava/lang/String;
     invoke-interface {p0, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
+    .line 255
     .local v7, rdateStr:Ljava/lang/String;
     invoke-interface {p0, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
+    .line 256
     .local v6, exruleStr:Ljava/lang/String;
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 257
     .local v5, exdateStr:Ljava/lang/String;
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
 
@@ -1370,6 +1568,7 @@
     .end local v0           #allDayColumn:I
     const/4 p0, 0x1
 
+    .line 259
     .local p0, allDay:Z
     :goto_0
     const-wide/16 v10, -0x1
@@ -1396,9 +1595,11 @@
 
     if-eqz v0, :cond_3
 
+    .line 264
     :cond_1
     const/4 p0, 0x0
 
+    .line 300
     .end local v1           #dtstart:J
     .end local v3           #dtstartColumn:I
     .end local v9           #tzid:Ljava/lang/String;
@@ -1406,6 +1607,7 @@
     :goto_1
     return p0
 
+    .line 257
     .restart local v1       #dtstart:J
     .restart local v3       #dtstartColumn:I
     .restart local v9       #tzid:Ljava/lang/String;
@@ -1414,6 +1616,7 @@
 
     goto :goto_0
 
+    .line 267
     .restart local p0       #allDay:Z
     :cond_3
     new-instance v0, Landroid/pim/ICalendar$Property;
@@ -1423,9 +1626,11 @@
     .end local v3           #dtstartColumn:I
     invoke-direct {v0, v3}, Landroid/pim/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
+    .line 268
     .local v0, dtstartProp:Landroid/pim/ICalendar$Property;
     const/4 v3, 0x0
 
+    .line 269
     .local v3, dtstartTime:Landroid/text/format/Time;
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1434,8 +1639,10 @@
     .end local v3           #dtstartTime:Landroid/text/format/Time;
     if-nez v3, :cond_6
 
+    .line 270
     if-nez p0, :cond_4
 
+    .line 271
     new-instance v3, Landroid/pim/ICalendar$Parameter;
 
     const-string v10, "TZID"
@@ -1444,18 +1651,22 @@
 
     invoke-virtual {v0, v3}, Landroid/pim/ICalendar$Property;->addParameter(Landroid/pim/ICalendar$Parameter;)V
 
+    .line 273
     :cond_4
     new-instance v3, Landroid/text/format/Time;
 
     invoke-direct {v3, v9}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
+    .line 279
     .end local v9           #tzid:Ljava/lang/String;
     .restart local v3       #dtstartTime:Landroid/text/format/Time;
     :goto_2
     invoke-virtual {v3, v1, v2}, Landroid/text/format/Time;->set(J)V
 
+    .line 282
     if-eqz p0, :cond_5
 
+    .line 283
     new-instance p0, Landroid/pim/ICalendar$Parameter;
 
     .end local p0           #allDay:Z
@@ -1468,22 +1679,27 @@
 
     invoke-virtual {v0, p0}, Landroid/pim/ICalendar$Property;->addParameter(Landroid/pim/ICalendar$Parameter;)V
 
+    .line 284
     const/4 p0, 0x1
 
     iput-boolean p0, v3, Landroid/text/format/Time;->allDay:Z
 
+    .line 285
     const/4 p0, 0x0
 
     iput p0, v3, Landroid/text/format/Time;->hour:I
 
+    .line 286
     const/4 p0, 0x0
 
     iput p0, v3, Landroid/text/format/Time;->minute:I
 
+    .line 287
     const/4 p0, 0x0
 
     iput p0, v3, Landroid/text/format/Time;->second:I
 
+    .line 290
     :cond_5
     invoke-virtual {v3}, Landroid/text/format/Time;->format2445()Ljava/lang/String;
 
@@ -1491,8 +1707,10 @@
 
     invoke-virtual {v0, p0}, Landroid/pim/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
+    .line 291
     invoke-virtual {p1, v0}, Landroid/pim/ICalendar$Component;->addProperty(Landroid/pim/ICalendar$Property;)V
 
+    .line 292
     new-instance p0, Landroid/pim/ICalendar$Property;
 
     const-string v0, "DURATION"
@@ -1500,32 +1718,40 @@
     .end local v0           #dtstartProp:Landroid/pim/ICalendar$Property;
     invoke-direct {p0, v0}, Landroid/pim/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
+    .line 293
     .local p0, durationProp:Landroid/pim/ICalendar$Property;
     invoke-virtual {p0, v4}, Landroid/pim/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
+    .line 294
     invoke-virtual {p1, p0}, Landroid/pim/ICalendar$Component;->addProperty(Landroid/pim/ICalendar$Property;)V
 
+    .line 296
     const-string p0, "RRULE"
 
     .end local p0           #durationProp:Landroid/pim/ICalendar$Property;
     invoke-static {p1, p0, v8}, Landroid/pim/RecurrenceSet;->addPropertiesForRuleStr(Landroid/pim/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 297
     const-string p0, "RDATE"
 
     invoke-static {p1, p0, v7}, Landroid/pim/RecurrenceSet;->addPropertyForDateStr(Landroid/pim/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 298
     const-string p0, "EXRULE"
 
     invoke-static {p1, p0, v6}, Landroid/pim/RecurrenceSet;->addPropertiesForRuleStr(Landroid/pim/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 299
     const-string p0, "EXDATE"
 
     invoke-static {p1, p0, v5}, Landroid/pim/RecurrenceSet;->addPropertyForDateStr(Landroid/pim/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 300
     const/4 p0, 0x1
 
     goto :goto_1
 
+    .line 276
     .end local v3           #dtstartTime:Landroid/text/format/Time;
     .restart local v0       #dtstartProp:Landroid/pim/ICalendar$Property;
     .restart local v1       #dtstart:J
@@ -1549,17 +1775,20 @@
     .parameter "values"
 
     .prologue
+    .line 173
     const-string v0, "DTSTART"
 
     invoke-virtual {p0, v0}, Landroid/pim/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Landroid/pim/ICalendar$Property;
 
     move-result-object v0
 
+    .line 175
     .local v0, dtstartProperty:Landroid/pim/ICalendar$Property;
     invoke-virtual {v0}, Landroid/pim/ICalendar$Property;->getValue()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 176
     .local v1, dtstart:Ljava/lang/String;
     const-string v2, "TZID"
 
@@ -1567,6 +1796,7 @@
 
     move-result-object v0
 
+    .line 179
     .local v0, tzidParam:Landroid/pim/ICalendar$Parameter;
     if-nez v0, :cond_2
 
@@ -1574,6 +1804,7 @@
 
     move-object v3, v2
 
+    .line 180
     .local v3, tzid:Ljava/lang/String;
     :goto_0
     new-instance v5, Landroid/text/format/Time;
@@ -1586,19 +1817,23 @@
     :goto_1
     invoke-direct {v5, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
+    .line 181
     .local v5, start:Landroid/text/format/Time;
     invoke-virtual {v5, v1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
     move-result v2
 
+    .line 182
     .local v2, inUtc:Z
     iget-boolean v0, v5, Landroid/text/format/Time;->allDay:Z
 
+    .line 186
     .local v0, allDay:Z
     if-nez v2, :cond_0
 
     if-eqz v0, :cond_8
 
+    .line 187
     :cond_0
     const-string v2, "UTC"
 
@@ -1606,6 +1841,7 @@
     .local v2, tzid:Ljava/lang/String;
     move-object v9, v2
 
+    .line 190
     .end local v2           #tzid:Ljava/lang/String;
     .local v9, tzid:Ljava/lang/String;
     :goto_2
@@ -1613,6 +1849,7 @@
 
     move-result-object v2
 
+    .line 191
     .local v2, duration:Ljava/lang/String;
     const-string v3, "RRULE"
 
@@ -1620,6 +1857,7 @@
 
     move-result-object v8
 
+    .line 192
     .local v8, rrule:Ljava/lang/String;
     const-string v3, "RDATE"
 
@@ -1631,6 +1869,7 @@
 
     move-result-object v7
 
+    .line 193
     .local v7, rdate:Ljava/lang/String;
     const-string v3, "EXRULE"
 
@@ -1638,6 +1877,7 @@
 
     move-result-object v4
 
+    .line 194
     .local v4, exrule:Ljava/lang/String;
     const-string v3, "EXDATE"
 
@@ -1649,6 +1889,7 @@
 
     move-result-object v3
 
+    .line 196
     .local v3, exdate:Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1675,6 +1916,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 201
     :cond_1
     const-string p1, "CalendarProvider"
 
@@ -1705,12 +1947,15 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 205
     const/4 p0, 0x0
 
+    .line 230
     .end local v5           #start:Landroid/text/format/Time;
     :goto_3
     return p0
 
+    .line 179
     .end local v2           #duration:Ljava/lang/String;
     .end local v3           #exdate:Ljava/lang/String;
     .end local v4           #exrule:Ljava/lang/String;
@@ -1732,8 +1977,10 @@
     :cond_3
     move-object v0, v3
 
+    .line 180
     goto :goto_1
 
+    .line 208
     .end local v1           #dtstart:Ljava/lang/String;
     .local v0, allDay:Z
     .restart local v2       #duration:Ljava/lang/String;
@@ -1746,10 +1993,12 @@
     :cond_4
     if-eqz v0, :cond_5
 
+    .line 212
     const-string v1, "UTC"
 
     iput-object v1, v5, Landroid/text/format/Time;->timezone:Ljava/lang/String;
 
+    .line 214
     :cond_5
     const/4 v1, 0x0
 
@@ -1757,6 +2006,7 @@
 
     move-result-wide v5
 
+    .line 215
     .local v5, millis:J
     const-string v1, "dtstart"
 
@@ -1766,12 +2016,14 @@
 
     invoke-virtual {p1, v1, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
+    .line 216
     const-wide/16 v10, -0x1
 
     cmp-long v1, v5, v10
 
     if-nez v1, :cond_6
 
+    .line 218
     const-string p1, "CalendarProvider"
 
     .end local p1
@@ -1801,39 +2053,47 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 220
     const/4 p0, 0x0
 
     goto :goto_3
 
+    .line 223
     .restart local v0       #allDay:Z
     .restart local p0
     .restart local p1
     :cond_6
-    const-string p0, "rrule"
+    const-string/jumbo p0, "rrule"
 
     .end local p0
     invoke-virtual {p1, p0, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string p0, "rdate"
+    .line 224
+    const-string/jumbo p0, "rdate"
 
     invoke-virtual {p1, p0, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 225
     const-string p0, "exrule"
 
     invoke-virtual {p1, p0, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 226
     const-string p0, "exdate"
 
     invoke-virtual {p1, p0, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 227
     const-string p0, "eventTimezone"
 
     invoke-virtual {p1, p0, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 228
     const-string p0, "duration"
 
     invoke-virtual {p1, p0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 229
     const-string p0, "allDay"
 
     if-eqz v0, :cond_7
@@ -1848,10 +2108,12 @@
 
     invoke-virtual {p1, p0, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 230
     const/4 p0, 0x1
 
     goto :goto_3
 
+    .line 229
     .restart local v0       #allDay:Z
     :cond_7
     const/4 v0, 0x0
@@ -1880,6 +2142,7 @@
     .parameter "foldedIcalContent"
 
     .prologue
+    .line 418
     sget-object v0, Landroid/pim/RecurrenceSet;->IGNORABLE_ICAL_WHITESPACE_RE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -1901,6 +2164,7 @@
     .locals 1
 
     .prologue
+    .line 129
     iget-object v0, p0, Landroid/pim/RecurrenceSet;->rrules:[Landroid/pim/EventRecurrence;
 
     if-nez v0, :cond_0

@@ -38,6 +38,7 @@
     .locals 0
 
     .prologue
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,6 +53,7 @@
     .parameter "longitude"
 
     .prologue
+    .line 72
     const-wide v19, 0xdc6d62da00L
 
     sub-long v19, p1, v19
@@ -66,6 +68,7 @@
 
     div-float v7, v19, v20
 
+    .line 75
     .local v7, daysSince2000:F
     const v19, 0x40c7ae92
 
@@ -75,6 +78,7 @@
 
     add-float v11, v19, v20
 
+    .line 78
     .local v11, meanAnomaly:F
     const v19, 0x3d08e2fe
 
@@ -114,6 +118,7 @@
 
     add-float v18, v19, v20
 
+    .line 82
     .local v18, trueAnomaly:F
     const v19, 0x3fe5f6c3
 
@@ -123,6 +128,7 @@
 
     add-float v15, v19, v20
 
+    .line 85
     .local v15, solarLng:F
     move-wide/from16 v0, p5
 
@@ -134,6 +140,7 @@
 
     div-double v3, v19, v21
 
+    .line 86
     .local v3, arcLongitude:D
     const v19, 0x3a6bedfa
 
@@ -157,6 +164,7 @@
 
     move v12, v0
 
+    .line 87
     .local v12, n:F
     const v19, 0x3a6bedfa
 
@@ -206,6 +214,7 @@
 
     add-double v16, v19, v21
 
+    .line 91
     .local v16, solarTransitJ2000:D
     invoke-static {v15}, Landroid/util/FloatMath;->sin(F)F
 
@@ -229,11 +238,13 @@
 
     move-result-wide v13
 
+    .line 93
     .local v13, solarDec:D
     const-wide v19, 0x3f91df46a0000000L
 
     mul-double v9, p3, v19
 
+    .line 95
     .local v9, latRad:D
     const v19, -0x422988b0
 
@@ -271,6 +282,7 @@
 
     div-double v5, v19, v21
 
+    .line 99
     .local v5, cosHourAngle:D
     const-wide/high16 v19, 0x3ff0
 
@@ -278,6 +290,7 @@
 
     if-ltz v19, :cond_0
 
+    .line 100
     const/16 v19, 0x1
 
     move/from16 v0, v19
@@ -286,6 +299,7 @@
 
     iput v0, v1, Lcom/android/server/TwilightCalculator;->mState:I
 
+    .line 101
     const-wide/16 v19, -0x1
 
     move-wide/from16 v0, v19
@@ -294,6 +308,7 @@
 
     iput-wide v0, v2, Lcom/android/server/TwilightCalculator;->mSunset:J
 
+    .line 102
     const-wide/16 v19, -0x1
 
     move-wide/from16 v0, v19
@@ -302,9 +317,11 @@
 
     iput-wide v0, v2, Lcom/android/server/TwilightCalculator;->mSunrise:J
 
+    .line 121
     :goto_0
     return-void
 
+    .line 104
     :cond_0
     const-wide/high16 v19, -0x4010
 
@@ -312,6 +329,7 @@
 
     if-gtz v19, :cond_1
 
+    .line 105
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -320,6 +338,7 @@
 
     iput v0, v1, Lcom/android/server/TwilightCalculator;->mState:I
 
+    .line 106
     const-wide/16 v19, -0x1
 
     move-wide/from16 v0, v19
@@ -328,6 +347,7 @@
 
     iput-wide v0, v2, Lcom/android/server/TwilightCalculator;->mSunset:J
 
+    .line 107
     const-wide/16 v19, -0x1
 
     move-wide/from16 v0, v19
@@ -338,6 +358,7 @@
 
     goto :goto_0
 
+    .line 111
     :cond_1
     invoke-static {v5, v6}, Ljava/lang/Math;->acos(D)D
 
@@ -353,6 +374,7 @@
 
     move v8, v0
 
+    .line 113
     .local v8, hourAngle:F
     move v0, v8
 
@@ -380,6 +402,7 @@
 
     iput-wide v0, v2, Lcom/android/server/TwilightCalculator;->mSunset:J
 
+    .line 114
     move v0, v8
 
     float-to-double v0, v0
@@ -406,6 +429,7 @@
 
     iput-wide v0, v2, Lcom/android/server/TwilightCalculator;->mSunrise:J
 
+    .line 116
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/TwilightCalculator;->mSunrise:J
@@ -426,6 +450,7 @@
 
     if-lez v19, :cond_2
 
+    .line 117
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -436,6 +461,7 @@
 
     goto/16 :goto_0
 
+    .line 119
     :cond_2
     const/16 v19, 0x1
 

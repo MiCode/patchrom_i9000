@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 318
     iput-object p1, p0, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;->this$1:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -42,6 +43,7 @@
     .prologue
     const-string v2, "DeviceStorageUtil"
 
+    .line 321
     const-string v0, "DeviceStorageUtil"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -84,6 +86,7 @@
 
     invoke-static {v2, v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 323
     const-string v0, "mounted"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -100,6 +103,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 324
     iget-object v0, p0, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;->this$1:Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater;
 
     #getter for: Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater;->mStorageManager:Landroid/os/storage/StorageManager;
@@ -116,12 +120,14 @@
 
     invoke-virtual {v0, v1}, Landroid/os/storage/StorageManager;->unregisterListener(Landroid/os/storage/StorageEventListener;)V
 
+    .line 326
     new-instance v0, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1$1;-><init>(Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1;)V
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/DeviceStorageUtil$SdCardFormater$1$1;->start()V
 
+    .line 356
     :cond_0
     const-string v0, "DeviceStorageUtil"
 
@@ -129,5 +135,6 @@
 
     invoke-static {v2, v0}, Lcom/android/server/enterprise/Utils;->writeToLog(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 357
     return-void
 .end method

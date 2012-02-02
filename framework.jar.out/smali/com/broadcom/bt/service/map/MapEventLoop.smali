@@ -33,8 +33,10 @@
     .locals 0
 
     .prologue
+    .line 43
     invoke-static {}, Lcom/broadcom/bt/service/map/MapEventLoop;->Native_classBluetoothMapInit()V
 
+    .line 44
     return-void
 .end method
 
@@ -45,20 +47,26 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 63
     invoke-direct {p0, p1}, Lcom/broadcom/bt/service/framework/BaseService;-><init>(Landroid/content/Context;)V
 
+    .line 37
     iput-boolean v1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->isAccessGranted:Z
 
+    .line 38
     new-instance v0, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;
 
     invoke-direct {v0}, Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;-><init>()V
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->m_MapSmsProvider:Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;
 
+    .line 53
     iput-boolean v1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mInterrupted:Z
 
+    .line 64
     invoke-direct {p0}, Lcom/broadcom/bt/service/map/MapEventLoop;->Native_classInitData()V
 
+    .line 65
     return-void
 .end method
 
@@ -79,6 +87,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -89,6 +98,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -99,6 +109,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->m_MapSmsProvider:Lcom/broadcom/bt/service/map/provider/sms/SmsProvider;
 
     return-object v0
@@ -109,6 +120,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     iget-boolean v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mInterrupted:Z
 
     return v0
@@ -119,6 +131,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     invoke-direct {p0}, Lcom/broadcom/bt/service/map/MapEventLoop;->Native_BluetoothMapMSEEventLoop()V
 
     return-void
@@ -129,6 +142,7 @@
     .parameter "x0"
 
     .prologue
+    .line 32
     invoke-direct {p0}, Lcom/broadcom/bt/service/map/MapEventLoop;->Native_classUninitData()V
 
     return-void
@@ -142,8 +156,10 @@
     .parameter "sPath"
 
     .prologue
+    .line 644
     move-object v0, p1
 
+    .line 646
     .local v0, s_provider_folder:Ljava/lang/String;
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -151,6 +167,7 @@
 
     if-lez v1, :cond_0
 
+    .line 648
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -177,6 +194,7 @@
 
     move-result-object v0
 
+    .line 650
     :cond_0
     return-object v0
 .end method
@@ -185,6 +203,7 @@
     .locals 1
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/broadcom/bt/service/framework/BaseService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -199,6 +218,7 @@
     .parameter "s_provider_folder"
 
     .prologue
+    .line 267
     const-string v2, "MapEventLoop"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -267,11 +287,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 275
     const/4 v14, 0x0
 
+    .line 276
     .local v14, status:B
     if-eqz p3, :cond_0
 
+    .line 277
     :try_start_0
     move-object/from16 v0, p1
 
@@ -309,11 +332,13 @@
 
     move v4, v14
 
+    .line 306
     .end local v14           #status:B
     .local v4, status:B
     :goto_0
     return-void
 
+    .line 281
     .end local v4           #status:B
     .restart local v14       #status:B
     :cond_0
@@ -333,8 +358,10 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 285
     const/4 v4, 0x2
 
+    .line 286
     .end local v14           #status:B
     .restart local v4       #status:B
     :try_start_1
@@ -358,11 +385,13 @@
 
     goto :goto_0
 
+    .line 302
     :catch_0
     move-exception v2
 
     move-object v13, v2
 
+    .line 303
     .local v13, e:Landroid/os/RemoteException;
     :goto_1
     const-string v2, "MapEventLoop"
@@ -375,12 +404,14 @@
 
     goto :goto_0
 
+    .line 290
     .end local v4           #status:B
     .end local v13           #e:Landroid/os/RemoteException;
     .restart local v14       #status:B
     :cond_1
     add-int/lit8 p4, p4, 0x1
 
+    .line 292
     :try_start_2
     iget-object v5, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
     :try_end_2
@@ -465,6 +496,7 @@
     .restart local v4       #status:B
     goto :goto_0
 
+    .line 302
     .end local v4           #status:B
     .restart local v14       #status:B
     :catch_1
@@ -500,6 +532,7 @@
     .parameter "folder"
 
     .prologue
+    .line 312
     const-string v0, "MapEventLoop"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -552,9 +585,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 315
     if-eqz p2, :cond_2
 
-    const-string v0, "root/telecom"
+    .line 317
+    const-string/jumbo v0, "root/telecom"
 
     invoke-virtual {p4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -562,6 +597,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 319
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     const/4 v2, 0x0
@@ -580,12 +616,14 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/broadcom/bt/service/map/MapService;->sendFolderListingInfo(IBIILjava/lang/String;Ljava/lang/String;B)V
 
+    .line 337
     :cond_0
     :goto_0
     return-void
 
+    .line 322
     :cond_1
-    const-string v0, "root"
+    const-string/jumbo v0, "root"
 
     invoke-virtual {p4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -593,6 +631,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 324
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     const/4 v2, 0x0
@@ -601,7 +640,7 @@
 
     const/4 v4, 0x0
 
-    const-string v5, "telecom"
+    const-string/jumbo v5, "telecom"
 
     const-string v6, ""
 
@@ -613,6 +652,7 @@
 
     goto :goto_0
 
+    .line 334
     :cond_2
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
@@ -639,6 +679,7 @@
     .locals 1
 
     .prologue
+    .line 68
     const-string v0, "bluetooth_map"
 
     return-object v0
@@ -648,12 +689,14 @@
     .locals 2
 
     .prologue
+    .line 72
     const-string v0, "MapEventLoop"
 
     const-string v1, "init()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 74
     return-void
 .end method
 
@@ -666,6 +709,7 @@
     .prologue
     const-string v2, "MapEventLoop"
 
+    .line 207
     monitor-enter p0
 
     :try_start_0
@@ -675,7 +719,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "onMCEConnected"
+    const-string/jumbo v4, "onMCEConnected"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -691,19 +735,23 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 210
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v2, p1}, Lcom/broadcom/bt/service/map/MapService;->getContext(I)Lcom/broadcom/bt/service/map/MapProviderContext;
 
     move-result-object v0
 
+    .line 211
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     if-eqz v0, :cond_0
 
+    .line 213
     invoke-virtual {v0, p2, p3}, Lcom/broadcom/bt/service/map/MapProviderContext;->addSession(ILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 215
     :try_start_1
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mCallback:Lcom/broadcom/bt/service/map/IMapCallback;
 
@@ -716,16 +764,19 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 224
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 216
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 217
     .local v1, e:Landroid/os/RemoteException;
     :try_start_2
     const-string v2, "MapEventLoop"
@@ -740,6 +791,7 @@
 
     goto :goto_0
 
+    .line 207
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .end local v1           #e:Landroid/os/RemoteException;
     :catchall_0
@@ -749,6 +801,7 @@
 
     throw v2
 
+    .line 221
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     :try_start_3
@@ -758,7 +811,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "onMCEConnected - did not find context for"
+    const-string/jumbo v4, "onMCEConnected - did not find context for"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -787,28 +840,33 @@
     .prologue
     const-string v2, "MapEventLoop"
 
+    .line 229
     monitor-enter p0
 
     :try_start_0
     const-string v2, "MapEventLoop"
 
-    const-string v3, "onMCEDisconnected"
+    const-string/jumbo v3, "onMCEDisconnected"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 231
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v2, p1}, Lcom/broadcom/bt/service/map/MapService;->getContext(I)Lcom/broadcom/bt/service/map/MapProviderContext;
 
     move-result-object v0
 
+    .line 233
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     if-eqz v0, :cond_0
 
+    .line 236
     invoke-virtual {v0, p2}, Lcom/broadcom/bt/service/map/MapProviderContext;->removeSession(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 238
     :try_start_1
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mCallback:Lcom/broadcom/bt/service/map/IMapCallback;
 
@@ -821,16 +879,19 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 247
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 239
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 240
     .local v1, e:Landroid/os/RemoteException;
     :try_start_2
     const-string v2, "MapEventLoop"
@@ -845,6 +906,7 @@
 
     goto :goto_0
 
+    .line 229
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .end local v1           #e:Landroid/os/RemoteException;
     :catchall_0
@@ -854,6 +916,7 @@
 
     throw v2
 
+    .line 244
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     :try_start_3
@@ -863,7 +926,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "onMCEDisconnected - did not find context for"
+    const-string/jumbo v4, "onMCEDisconnected - did not find context for"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -896,6 +959,7 @@
 
     const-string v0, " "
 
+    .line 342
     monitor-enter p0
 
     :try_start_0
@@ -905,7 +969,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onMCEGetFolderEntry "
+    const-string/jumbo v3, "onMCEGetFolderEntry "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -951,21 +1015,25 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 345
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v1
 
+    .line 346
     .local v1, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v1, :cond_2
 
+    .line 348
     invoke-virtual {v1, p4}, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->getProviderFolder(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 349
     .local v5, s_provider_folder:Ljava/lang/String;
-    const-string v0, "root/telecom"
+    const-string/jumbo v0, "root/telecom"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -973,7 +1041,7 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "root"
+    const-string/jumbo v0, "root"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -981,11 +1049,13 @@
 
     if-eqz v0, :cond_1
 
+    .line 353
     :cond_0
     invoke-virtual {p0, p1, p2, p3, v5}, Lcom/broadcom/bt/service/map/MapEventLoop;->getFolderEntryforVirtualRoot(IIILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 366
     .end local v5           #s_provider_folder:Ljava/lang/String;
     :goto_0
     monitor-exit p0
@@ -1002,6 +1072,7 @@
 
     move v4, p3
 
+    .line 358
     :try_start_1
     invoke-virtual/range {v0 .. v5}, Lcom/broadcom/bt/service/map/MapEventLoop;->getFolderEntryFromProvider(Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;IIILjava/lang/String;)V
     :try_end_1
@@ -1009,6 +1080,7 @@
 
     goto :goto_0
 
+    .line 342
     .end local v1           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     .end local v5           #s_provider_folder:Ljava/lang/String;
     :catchall_0
@@ -1018,6 +1090,7 @@
 
     throw v0
 
+    .line 363
     .restart local v1       #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_2
     :try_start_2
@@ -1027,7 +1100,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onMCEGetFolderEntry - did not find session for"
+    const-string/jumbo v3, "onMCEGetFolderEntry - did not find session for"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1056,15 +1129,17 @@
     .parameter "char_set"
 
     .prologue
+    .line 469
     monitor-enter p0
 
     :try_start_0
     const-string v5, "MapEventLoop"
 
-    const-string v6, "onMCEGetMsg"
+    const-string/jumbo v6, "onMCEGetMsg"
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 471
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
@@ -1081,9 +1156,11 @@
 
     move-result-object v15
 
+    .line 472
     .local v15, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v15, :cond_4
 
+    .line 475
     :try_start_1
     iget-object v5, v15, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mCtx:Lcom/broadcom/bt/service/map/MapProviderContext;
 
@@ -1095,6 +1172,7 @@
 
     move-result-object v11
 
+    .line 476
     .local v11, s_provider_id:Ljava/lang/String;
     if-eqz v11, :cond_0
 
@@ -1106,6 +1184,7 @@
 
     if-eqz v5, :cond_1
 
+    .line 483
     :cond_0
     move-object/from16 v0, p0
 
@@ -1128,12 +1207,14 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 514
     .end local v11           #s_provider_id:Ljava/lang/String;
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 488
     .restart local v11       #s_provider_id:Ljava/lang/String;
     :cond_1
     :try_start_2
@@ -1143,6 +1224,7 @@
 
     move-result-object v16
 
+    .line 489
     .local v16, s_virtual_folder:Ljava/lang/String;
     if-eqz v16, :cond_2
 
@@ -1158,6 +1240,7 @@
 
     if-eqz v5, :cond_3
 
+    .line 496
     :cond_2
     move-object/from16 v0, p0
 
@@ -1182,6 +1265,7 @@
 
     goto :goto_0
 
+    .line 508
     .end local v11           #s_provider_id:Ljava/lang/String;
     .end local v16           #s_virtual_folder:Ljava/lang/String;
     :catch_0
@@ -1189,6 +1273,7 @@
 
     move-object v14, v5
 
+    .line 509
     .local v14, e:Landroid/os/RemoteException;
     :try_start_3
     const-string v5, "MapEventLoop"
@@ -1203,6 +1288,7 @@
 
     goto :goto_0
 
+    .line 469
     .end local v14           #e:Landroid/os/RemoteException;
     .end local v15           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :catchall_0
@@ -1212,6 +1298,7 @@
 
     throw v5
 
+    .line 501
     .restart local v11       #s_provider_id:Ljava/lang/String;
     .restart local v15       #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     .restart local v16       #s_virtual_folder:Ljava/lang/String;
@@ -1233,7 +1320,7 @@
 
     move-result-object v9
 
-    const-string v6, "root"
+    const-string/jumbo v6, "root"
 
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
@@ -1262,6 +1349,7 @@
 
     goto :goto_0
 
+    .line 512
     .end local v11           #s_provider_id:Ljava/lang/String;
     .end local v16           #s_virtual_folder:Ljava/lang/String;
     :cond_4
@@ -1272,7 +1360,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "onMCEGetMsg - did not find session for "
+    const-string/jumbo v7, "onMCEGetMsg - did not find session for "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1305,15 +1393,17 @@
     .parameter "ref_data"
 
     .prologue
+    .line 418
     monitor-enter p0
 
     :try_start_0
     const-string v3, "MapEventLoop"
 
-    const-string v4, "onMCEGetMsgEntry"
+    const-string/jumbo v4, "onMCEGetMsgEntry"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 420
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
@@ -1328,19 +1418,25 @@
 
     move-result-object v50
 
+    .line 421
     .local v50, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v50, :cond_7
 
+    .line 422
     const/16 v49, 0x0
 
+    .line 423
     .local v49, msgInfo:Lcom/broadcom/bt/service/map/MessageInfo;
     const/4 v5, 0x0
 
+    .line 424
     .local v5, status:B
     if-eqz p3, :cond_0
 
+    .line 425
     const/16 p4, 0x0
 
+    .line 433
     :cond_0
     move-object/from16 v0, v50
 
@@ -1358,6 +1454,7 @@
 
     move-result-object v25
 
+    .line 435
     .local v25, s_virtual_folder:Ljava/lang/String;
     move-object/from16 v0, v50
 
@@ -1379,6 +1476,7 @@
 
     if-lt v3, v4, :cond_6
 
+    .line 436
     move-object/from16 v0, v50
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mMessageInfo:[Lcom/broadcom/bt/service/map/MessageInfo;
@@ -1387,8 +1485,10 @@
 
     aget-object v49, v3, p4
 
+    .line 437
     add-int/lit8 p4, p4, 0x1
 
+    .line 438
     const-string v3, "MapEventLoop"
 
     invoke-virtual/range {v49 .. v49}, Lcom/broadcom/bt/service/map/MessageInfo;->toString()Ljava/lang/String;
@@ -1397,6 +1497,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 439
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
@@ -1564,6 +1665,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 464
     .end local v5           #status:B
     .end local v25           #s_virtual_folder:Ljava/lang/String;
     .end local v49           #msgInfo:Lcom/broadcom/bt/service/map/MessageInfo;
@@ -1572,6 +1674,7 @@
 
     return-void
 
+    .line 439
     .restart local v5       #status:B
     .restart local v25       #s_virtual_folder:Ljava/lang/String;
     .restart local v49       #msgInfo:Lcom/broadcom/bt/service/map/MessageInfo;
@@ -1610,9 +1713,11 @@
 
     goto :goto_4
 
+    .line 453
     :cond_6
     const/4 v5, 0x2
 
+    .line 454
     const/4 v3, 0x0
 
     :try_start_1
@@ -1622,12 +1727,14 @@
 
     iput-object v0, v1, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mMessageInfo:[Lcom/broadcom/bt/service/map/MessageInfo;
 
+    .line 455
     const-string v3, "MapEventLoop"
 
     const-string v4, "No more messages"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 456
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
@@ -1684,6 +1791,7 @@
 
     goto :goto_5
 
+    .line 418
     .end local v5           #status:B
     .end local v25           #s_virtual_folder:Ljava/lang/String;
     .end local v49           #msgInfo:Lcom/broadcom/bt/service/map/MessageInfo;
@@ -1695,6 +1803,7 @@
 
     throw v3
 
+    .line 462
     .restart local v50       #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_7
     :try_start_2
@@ -1704,7 +1813,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onMCEGetMsgEntry - did not find session for"
+    const-string/jumbo v5, "onMCEGetMsgEntry - did not find session for"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1746,15 +1855,17 @@
     .parameter "pri_status"
 
     .prologue
+    .line 374
     monitor-enter p0
 
     :try_start_0
     const-string v3, "MapEventLoop"
 
-    const-string v4, "onMCEGetMsgListInfo"
+    const-string/jumbo v4, "onMCEGetMsgListInfo"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 377
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
@@ -1771,9 +1882,11 @@
 
     move-result-object v20
 
+    .line 378
     .local v20, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v20, :cond_2
 
+    .line 386
     :try_start_1
     move-object/from16 v0, v20
 
@@ -1791,6 +1904,7 @@
 
     move-result-object v7
 
+    .line 388
     .local v7, s_provider_folder:Ljava/lang/String;
     move-object/from16 v0, v20
 
@@ -1800,7 +1914,8 @@
 
     move-result-object v7
 
-    const-string v3, "root/telecom"
+    .line 389
+    const-string/jumbo v3, "root/telecom"
 
     invoke-virtual {v7, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1808,7 +1923,7 @@
 
     if-nez v3, :cond_0
 
-    const-string v3, "root"
+    const-string/jumbo v3, "root"
 
     invoke-virtual {v7, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1816,6 +1931,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 395
     :cond_0
     move-object/from16 v0, p0
 
@@ -1845,11 +1961,13 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 412
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 401
     .restart local v7       #s_provider_folder:Ljava/lang/String;
     :cond_1
     :try_start_2
@@ -1908,12 +2026,14 @@
 
     goto :goto_0
 
+    .line 406
     .end local v7           #s_provider_folder:Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object/from16 v19, v3
 
+    .line 407
     .local v19, e:Landroid/os/RemoteException;
     :try_start_3
     const-string v3, "MapEventLoop"
@@ -1928,6 +2048,7 @@
 
     goto :goto_0
 
+    .line 374
     .end local v19           #e:Landroid/os/RemoteException;
     .end local v20           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :catchall_0
@@ -1937,6 +2058,7 @@
 
     throw v3
 
+    .line 410
     .restart local v20       #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_2
     :try_start_4
@@ -1946,7 +2068,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onMCEGetMsgListInfo - did not find session for"
+    const-string/jumbo v5, "onMCEGetMsgListInfo - did not find session for"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1979,15 +2101,17 @@
     .prologue
     const-string v3, "MapEventLoop"
 
+    .line 589
     monitor-enter p0
 
     :try_start_0
     const-string v3, "MapEventLoop"
 
-    const-string v4, "onMCENotifyRegister"
+    const-string/jumbo v4, "onMCENotifyRegister"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 591
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v3, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
@@ -1996,17 +2120,22 @@
 
     move-result-object v2
 
+    .line 592
     .local v2, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v2, :cond_1
 
+    .line 594
     :try_start_1
-    const-string v1, "off"
+    const-string/jumbo v1, "off"
 
+    .line 595
     .local v1, notificationmode:Ljava/lang/String;
     if-eqz p2, :cond_0
 
-    const-string v1, "on"
+    .line 596
+    const-string/jumbo v1, "on"
 
+    .line 598
     :cond_0
     iget-object v3, v2, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mCtx:Lcom/broadcom/bt/service/map/MapProviderContext;
 
@@ -2025,17 +2154,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 606
     .end local v1           #notificationmode:Ljava/lang/String;
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 600
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
+    .line 601
     .local v0, e:Landroid/os/RemoteException;
     :try_start_2
     const-string v3, "MapEventLoop"
@@ -2050,6 +2182,7 @@
 
     goto :goto_0
 
+    .line 589
     .end local v0           #e:Landroid/os/RemoteException;
     .end local v2           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :catchall_0
@@ -2059,6 +2192,7 @@
 
     throw v3
 
+    .line 604
     .restart local v2       #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_1
     :try_start_3
@@ -2068,7 +2202,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onMCENotifyRegister - did not find session for "
+    const-string/jumbo v5, "onMCENotifyRegister - did not find session for "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2099,15 +2233,17 @@
     .parameter "msg_content_uri"
 
     .prologue
+    .line 520
     monitor-enter p0
 
     :try_start_0
     const-string v3, "MapEventLoop"
 
-    const-string v4, "onMCEPushMsg"
+    const-string/jumbo v4, "onMCEPushMsg"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 524
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
@@ -2124,9 +2260,11 @@
 
     move-result-object v14
 
+    .line 525
     .local v14, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v14, :cond_2
 
+    .line 528
     :try_start_1
     iget-object v3, v14, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mProviderCurrentPath:Ljava/lang/String;
 
@@ -2140,13 +2278,15 @@
 
     move-result-object v15
 
+    .line 529
     .local v15, s_virtual_folder:Ljava/lang/String;
     invoke-virtual {v14, v15}, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->getProviderFolder(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
+    .line 530
     .local v10, s_provider_folder:Ljava/lang/String;
-    const-string v3, "root/telecom"
+    const-string/jumbo v3, "root/telecom"
 
     invoke-virtual {v10, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -2154,7 +2294,7 @@
 
     if-nez v3, :cond_0
 
-    const-string v3, "root"
+    const-string/jumbo v3, "root"
 
     invoke-virtual {v10, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -2162,6 +2302,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 536
     :cond_0
     move-object/from16 v0, p0
 
@@ -2186,6 +2327,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 552
     .end local v10           #s_provider_folder:Ljava/lang/String;
     .end local v15           #s_virtual_folder:Ljava/lang/String;
     :goto_0
@@ -2193,6 +2335,7 @@
 
     return-void
 
+    .line 540
     .restart local v10       #s_provider_folder:Ljava/lang/String;
     .restart local v15       #s_virtual_folder:Ljava/lang/String;
     :cond_1
@@ -2209,7 +2352,7 @@
 
     iget-object v6, v4, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderDSId:Ljava/lang/String;
 
-    const-string v4, "root"
+    const-string/jumbo v4, "root"
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -2238,6 +2381,7 @@
 
     goto :goto_0
 
+    .line 546
     .end local v10           #s_provider_folder:Ljava/lang/String;
     .end local v15           #s_virtual_folder:Ljava/lang/String;
     :catch_0
@@ -2245,6 +2389,7 @@
 
     move-object v13, v3
 
+    .line 547
     .local v13, e:Landroid/os/RemoteException;
     :try_start_3
     const-string v3, "MapEventLoop"
@@ -2259,6 +2404,7 @@
 
     goto :goto_0
 
+    .line 520
     .end local v13           #e:Landroid/os/RemoteException;
     .end local v14           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :catchall_0
@@ -2268,6 +2414,7 @@
 
     throw v3
 
+    .line 550
     .restart local v14       #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_2
     :try_start_4
@@ -2277,7 +2424,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onMCEPushMsg - did not find session for "
+    const-string/jumbo v5, "onMCEPushMsg - did not find session for "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2310,15 +2457,17 @@
     .parameter "status_value"
 
     .prologue
+    .line 557
     monitor-enter p0
 
     :try_start_0
     const-string v0, "MapEventLoop"
 
-    const-string v1, "onMCESetMsgStatus"
+    const-string/jumbo v1, "onMCESetMsgStatus"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 559
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
@@ -2327,11 +2476,14 @@
 
     move-result-object v9
 
+    .line 560
     .local v9, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v9, :cond_1
 
+    .line 562
     const/4 v10, 0x0
 
+    .line 564
     .local v10, s_provider_id:Ljava/lang/String;
     :try_start_1
     iget-object v0, v9, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mCtx:Lcom/broadcom/bt/service/map/MapProviderContext;
@@ -2340,10 +2492,13 @@
 
     move-result-object v10
 
+    .line 565
     if-eqz v10, :cond_0
 
+    .line 566
     const/4 v11, 0x0
 
+    .line 567
     .local v11, s_virtual_folder:Ljava/lang/String;
     iget-object v0, v9, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mCtx:Lcom/broadcom/bt/service/map/MapProviderContext;
 
@@ -2351,6 +2506,7 @@
 
     move-result-object v11
 
+    .line 568
     iget-object v0, v9, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mCtx:Lcom/broadcom/bt/service/map/MapProviderContext;
 
     iget-object v0, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mCallback:Lcom/broadcom/bt/service/map/IMapCallback;
@@ -2384,6 +2540,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 584
     .end local v10           #s_provider_id:Ljava/lang/String;
     .end local v11           #s_virtual_folder:Ljava/lang/String;
     :goto_0
@@ -2391,15 +2548,17 @@
 
     return-void
 
+    .line 574
     .restart local v10       #s_provider_id:Ljava/lang/String;
     :cond_0
     :try_start_2
     const-string v0, "MapEventLoop"
 
-    const-string v1, "onMCESetMsgStatus : Cannot get provider id failing.  Oops how did this happen?"
+    const-string/jumbo v1, "onMCESetMsgStatus : Cannot get provider id failing.  Oops how did this happen?"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 575
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     const/4 v3, 0x0
@@ -2423,11 +2582,13 @@
 
     goto :goto_0
 
+    .line 578
     :catch_0
     move-exception v0
 
     move-object v8, v0
 
+    .line 579
     .local v8, e:Landroid/os/RemoteException;
     :try_start_3
     const-string v0, "MapEventLoop"
@@ -2442,6 +2603,7 @@
 
     goto :goto_0
 
+    .line 557
     .end local v8           #e:Landroid/os/RemoteException;
     .end local v9           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     .end local v10           #s_provider_id:Ljava/lang/String;
@@ -2452,6 +2614,7 @@
 
     throw v0
 
+    .line 582
     .restart local v9       #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :cond_1
     :try_start_4
@@ -2461,7 +2624,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "onMCESetMsgStatus - did not find session for "
+    const-string/jumbo v2, "onMCESetMsgStatus - did not find session for "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2489,15 +2652,17 @@
     .prologue
     const-string v2, "MapEventLoop"
 
+    .line 611
     monitor-enter p0
 
     :try_start_0
     const-string v2, "MapEventLoop"
 
-    const-string v3, "onMCEUpdateInbox"
+    const-string/jumbo v3, "onMCEUpdateInbox"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 613
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v2, p1}, Lcom/broadcom/bt/service/map/MapService;->getContextFromSessionId(I)Lcom/broadcom/bt/service/map/MapProviderContext;
@@ -2506,9 +2671,11 @@
 
     move-result-object v0
 
+    .line 614
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     if-eqz v0, :cond_0
 
+    .line 617
     :try_start_1
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mCallback:Lcom/broadcom/bt/service/map/IMapCallback;
 
@@ -2521,16 +2688,19 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 625
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 618
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 619
     .local v1, e:Landroid/os/RemoteException;
     :try_start_2
     const-string v2, "MapEventLoop"
@@ -2545,6 +2715,7 @@
 
     goto :goto_0
 
+    .line 611
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .end local v1           #e:Landroid/os/RemoteException;
     :catchall_0
@@ -2554,6 +2725,7 @@
 
     throw v2
 
+    .line 622
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     :cond_0
     :try_start_3
@@ -2563,7 +2735,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "onMCEUpdateInbox - did not find context for"
+    const-string/jumbo v4, "onMCEUpdateInbox - did not find context for"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2592,6 +2764,7 @@
     .prologue
     const-string v1, "MapEventLoop"
 
+    .line 251
     monitor-enter p0
 
     :try_start_0
@@ -2601,7 +2774,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onMSESetFolder "
+    const-string/jumbo v3, "onMSESetFolder "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2617,24 +2790,29 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 253
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v1, p1}, Lcom/broadcom/bt/service/map/MapService;->getClientSession(I)Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
 
     move-result-object v0
 
+    .line 254
     .local v0, s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     if-eqz v0, :cond_0
 
+    .line 256
     iput-object p2, v0, Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;->mProviderCurrentPath:Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 261
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 258
     :cond_0
     :try_start_1
     const-string v1, "MapEventLoop"
@@ -2643,7 +2821,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onMSESetFolder - did not find session for"
+    const-string/jumbo v3, "onMSESetFolder - did not find session for"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2663,6 +2841,7 @@
 
     goto :goto_0
 
+    .line 251
     .end local v0           #s:Lcom/broadcom/bt/service/map/MapProviderContext$ClientSession;
     :catchall_0
     move-exception v1
@@ -2684,33 +2863,41 @@
 
     const-string v3, "MapEventLoop"
 
+    .line 156
     monitor-enter p0
 
     :try_start_0
     const-string v3, "MapEventLoop"
 
-    const-string v4, "onMSEStarted"
+    const-string/jumbo v4, "onMSEStarted"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 159
     iget-object v3, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v3, p1, p2}, Lcom/broadcom/bt/service/map/MapService;->getContextByDsName(Ljava/lang/String;B)Lcom/broadcom/bt/service/map/MapProviderContext;
 
     move-result-object v0
 
+    .line 160
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     if-eqz v0, :cond_1
 
+    .line 161
     const/4 v2, 0x1
 
+    .line 162
     .local v2, mse_status:B
     iput p3, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mMseInstanceId:I
 
+    .line 163
     if-nez p4, :cond_0
 
+    .line 164
     const/4 v2, 0x2
 
+    .line 165
     const-string v3, "MapEventLoop"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2743,6 +2930,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 172
     :goto_0
     :try_start_1
     iget-object v3, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mCallback:Lcom/broadcom/bt/service/map/IMapCallback;
@@ -2756,12 +2944,14 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 181
     .end local v2           #mse_status:B
     :goto_1
     monitor-exit p0
 
     return-void
 
+    .line 169
     .restart local v2       #mse_status:B
     :cond_0
     :try_start_2
@@ -2799,6 +2989,7 @@
 
     goto :goto_0
 
+    .line 156
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .end local v2           #mse_status:B
     :catchall_0
@@ -2808,6 +2999,7 @@
 
     throw v3
 
+    .line 174
     .restart local v0       #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .restart local v2       #mse_status:B
     :catch_0
@@ -2815,6 +3007,7 @@
 
     move-object v1, v3
 
+    .line 175
     .local v1, e:Landroid/os/RemoteException;
     :try_start_3
     const-string v3, "MapEventLoop"
@@ -2827,6 +3020,7 @@
 
     goto :goto_1
 
+    .line 178
     .end local v1           #e:Landroid/os/RemoteException;
     .end local v2           #mse_status:B
     :cond_1
@@ -2836,7 +3030,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onMSEStarted - did not find context for"
+    const-string/jumbo v5, "onMSEStarted - did not find context for"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2875,15 +3069,17 @@
     .prologue
     const-string v2, "MapEventLoop"
 
+    .line 187
     monitor-enter p0
 
     :try_start_0
     const-string v2, "MapEventLoop"
 
-    const-string v3, "onMSEStopped"
+    const-string/jumbo v3, "onMSEStopped"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 189
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v2, p1}, Lcom/broadcom/bt/service/map/MapService;->getContext(I)Lcom/broadcom/bt/service/map/MapProviderContext;
@@ -2892,6 +3088,7 @@
 
     move-result-object v0
 
+    .line 191
     .local v0, ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     if-eqz v0, :cond_0
 
@@ -2900,6 +3097,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 192
     iget-object v2, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mCallback:Lcom/broadcom/bt/service/map/IMapCallback;
 
     iget-object v3, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderId:Ljava/lang/String;
@@ -2910,6 +3108,7 @@
 
     invoke-interface {v2, v3, v4, v5}, Lcom/broadcom/bt/service/map/IMapCallback;->onMSEStateChanged(Ljava/lang/String;Ljava/lang/String;B)V
 
+    .line 195
     :cond_0
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
@@ -2917,6 +3116,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 196
     iget-object v2, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     iget-object v3, v0, Lcom/broadcom/bt/service/map/MapProviderContext;->mProviderId:Ljava/lang/String;
@@ -2928,17 +3128,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 201
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 198
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
+    .line 199
     .local v1, e:Landroid/os/RemoteException;
     :try_start_2
     const-string v2, "MapEventLoop"
@@ -2953,6 +3156,7 @@
 
     goto :goto_0
 
+    .line 187
     .end local v0           #ctx:Lcom/broadcom/bt/service/map/MapProviderContext;
     .end local v1           #e:Landroid/os/RemoteException;
     :catchall_0
@@ -2967,21 +3171,24 @@
     .locals 2
 
     .prologue
+    .line 630
     monitor-enter p0
 
     :try_start_0
     const-string v0, "MapEventLoop"
 
-    const-string v1, "onMsgGetInProgress"
+    const-string/jumbo v1, "onMsgGetInProgress"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 632
     monitor-exit p0
 
     return-void
 
+    .line 630
     :catchall_0
     move-exception v0
 
@@ -2994,21 +3201,24 @@
     .locals 2
 
     .prologue
+    .line 637
     monitor-enter p0
 
     :try_start_0
     const-string v0, "MapEventLoop"
 
-    const-string v1, "onMsgPushInProgress"
+    const-string/jumbo v1, "onMsgPushInProgress"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 639
     monitor-exit p0
 
     return-void
 
+    .line 637
     :catchall_0
     move-exception v0
 
@@ -3022,14 +3232,17 @@
     .parameter "service"
 
     .prologue
+    .line 77
     const-string v0, "MapEventLoop"
 
-    const-string v1, "setMapService()"
+    const-string/jumbo v1, "setMapService()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 78
     iput-object p1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
+    .line 79
     return-void
 .end method
 
@@ -3039,26 +3252,30 @@
     .prologue
     const-string v0, "MapEventLoop"
 
+    .line 83
     monitor-enter p0
 
     :try_start_0
     const-string v0, "MapEventLoop"
 
-    const-string v1, "start()"
+    const-string/jumbo v1, "start()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 84
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mThread:Ljava/lang/Thread;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_0
 
+    .line 123
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 89
     :cond_0
     :try_start_1
     new-instance v0, Lcom/broadcom/bt/service/map/MapEventLoop$1;
@@ -3089,20 +3306,24 @@
 
     iput-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mThread:Ljava/lang/Thread;
 
+    .line 118
     const-string v0, "MapEventLoop"
 
     const-string v1, "Starting Event Loop thread"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 120
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mInterrupted:Z
 
+    .line 121
     iget-object v0, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
+    .line 122
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/broadcom/bt/service/map/MapEventLoop;->onStateChangeEvent(Z)V
@@ -3111,6 +3332,7 @@
 
     goto :goto_0
 
+    .line 83
     :catchall_0
     move-exception v0
 
@@ -3123,6 +3345,7 @@
     .locals 3
 
     .prologue
+    .line 129
     monitor-enter p0
 
     :try_start_0
@@ -3132,18 +3355,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 132
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mThread:Ljava/lang/Thread;
 
     if-eqz v1, :cond_1
 
+    .line 133
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     if-eqz v1, :cond_0
 
+    .line 134
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mService:Lcom/broadcom/bt/service/map/MapService;
 
     invoke-virtual {v1}, Lcom/broadcom/bt/service/map/MapService;->unregisterallProviders()V
 
+    .line 138
     :cond_0
     const/4 v1, 0x1
 
@@ -3151,15 +3378,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 141
     :try_start_1
     iget-object v1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mThread:Ljava/lang/Thread;
 
     invoke-virtual {v1}, Ljava/lang/Thread;->join()V
 
+    .line 142
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/broadcom/bt/service/map/MapEventLoop;->mThread:Ljava/lang/Thread;
 
+    .line 143
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/broadcom/bt/service/map/MapEventLoop;->onStateChangeEvent(Z)V
@@ -3167,17 +3397,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 149
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 145
     :catch_0
     move-exception v1
 
     move-object v0, v1
 
+    .line 146
     .local v0, e:Ljava/lang/InterruptedException;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
@@ -3186,6 +3419,7 @@
 
     goto :goto_0
 
+    .line 129
     .end local v0           #e:Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v1

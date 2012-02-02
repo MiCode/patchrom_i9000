@@ -30,6 +30,7 @@
     .parameter
 
     .prologue
+    .line 10367
     iput-object p1, p0, Lcom/android/server/PackageManagerService$12;->this$0:Lcom/android/server/PackageManagerService;
 
     iput-boolean p2, p0, Lcom/android/server/PackageManagerService$12;->val$reportStatus:Z
@@ -60,6 +61,7 @@
     .prologue
     const/4 v5, 0x1
 
+    .line 10370
     iget-object v1, p0, Lcom/android/server/PackageManagerService$12;->this$0:Lcom/android/server/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/PackageManagerService;->mHandler:Lcom/android/server/PackageManagerService$PackageHandler;
@@ -79,6 +81,7 @@
 
     move-result-object v0
 
+    .line 10372
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/PackageManagerService$12;->this$0:Lcom/android/server/PackageManagerService;
 
@@ -86,8 +89,10 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/PackageManagerService$PackageHandler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 10373
     return-void
 
+    .line 10370
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     const/4 v3, 0x0

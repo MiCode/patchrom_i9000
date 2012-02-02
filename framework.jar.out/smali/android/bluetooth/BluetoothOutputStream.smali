@@ -13,10 +13,13 @@
     .parameter "s"
 
     .prologue
+    .line 32
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
+    .line 33
     iput-object p1, p0, Landroid/bluetooth/BluetoothOutputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
+    .line 34
     return-void
 .end method
 
@@ -31,10 +34,12 @@
     .end annotation
 
     .prologue
+    .line 40
     iget-object v0, p0, Landroid/bluetooth/BluetoothOutputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothSocket;->close()V
 
+    .line 41
     return-void
 .end method
 
@@ -52,17 +57,21 @@
 
     const/4 v2, 0x0
 
+    .line 54
     new-array v0, v3, [B
 
+    .line 55
     .local v0, b:[B
     int-to-byte v1, p1
 
     aput-byte v1, v0, v2
 
+    .line 56
     iget-object v1, p0, Landroid/bluetooth/BluetoothOutputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/bluetooth/BluetoothSocket;->write([BII)I
 
+    .line 57
     return-void
 .end method
 
@@ -78,8 +87,10 @@
     .end annotation
 
     .prologue
+    .line 79
     if-nez p1, :cond_0
 
+    .line 80
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "buffer is null"
@@ -88,6 +99,7 @@
 
     throw v0
 
+    .line 82
     :cond_0
     or-int v0, p2, p3
 
@@ -99,6 +111,7 @@
 
     if-le p3, v0, :cond_2
 
+    .line 83
     :cond_1
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -108,10 +121,12 @@
 
     throw v0
 
+    .line 85
     :cond_2
     iget-object v0, p0, Landroid/bluetooth/BluetoothOutputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/bluetooth/BluetoothSocket;->write([BII)I
 
+    .line 86
     return-void
 .end method

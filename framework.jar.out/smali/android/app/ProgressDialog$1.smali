@@ -24,6 +24,7 @@
     .parameter
 
     .prologue
+    .line 119
     iput-object p1, p0, Landroid/app/ProgressDialog$1;->this$0:Landroid/app/ProgressDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -42,8 +43,10 @@
 
     const/4 v10, 0x0
 
+    .line 122
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
+    .line 125
     iget-object v6, p0, Landroid/app/ProgressDialog$1;->this$0:Landroid/app/ProgressDialog;
 
     #getter for: Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
@@ -55,6 +58,7 @@
 
     move-result v4
 
+    .line 126
     .local v4, progress:I
     iget-object v6, p0, Landroid/app/ProgressDialog$1;->this$0:Landroid/app/ProgressDialog;
 
@@ -67,6 +71,7 @@
 
     move-result v1
 
+    .line 127
     .local v1, max:I
     int-to-double v6, v4
 
@@ -74,6 +79,7 @@
 
     div-double v2, v6, v8
 
+    .line 128
     .local v2, percent:D
     iget-object v6, p0, Landroid/app/ProgressDialog$1;->this$0:Landroid/app/ProgressDialog;
 
@@ -82,6 +88,7 @@
 
     move-result-object v0
 
+    .line 129
     .local v0, format:Ljava/lang/String;
     iget-object v6, p0, Landroid/app/ProgressDialog$1;->this$0:Landroid/app/ProgressDialog;
 
@@ -112,6 +119,7 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 130
     new-instance v5, Landroid/text/SpannableString;
 
     iget-object v6, p0, Landroid/app/ProgressDialog$1;->this$0:Landroid/app/ProgressDialog;
@@ -127,6 +135,7 @@
 
     invoke-direct {v5, v6}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 131
     .local v5, tmp:Landroid/text/SpannableString;
     new-instance v6, Landroid/text/style/StyleSpan;
 
@@ -140,6 +149,7 @@
 
     invoke-virtual {v5, v6, v10, v7, v8}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
+    .line 133
     iget-object v6, p0, Landroid/app/ProgressDialog$1;->this$0:Landroid/app/ProgressDialog;
 
     #getter for: Landroid/app/ProgressDialog;->mProgressPercent:Landroid/widget/TextView;
@@ -149,5 +159,6 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 134
     return-void
 .end method

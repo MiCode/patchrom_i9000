@@ -25,6 +25,7 @@
     .parameter "x0"
 
     .prologue
+    .line 519
     iput-object p1, p0, Lcom/android/server/PowerManagerService$1;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0, p2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
@@ -38,6 +39,7 @@
     .locals 3
 
     .prologue
+    .line 522
     iget-object v0, p0, Lcom/android/server/PowerManagerService$1;->this$0:Lcom/android/server/PowerManagerService;
 
     new-instance v1, Landroid/os/Handler;
@@ -47,6 +49,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mScreenOffHandler:Landroid/os/Handler;
     invoke-static {v0, v1}, Lcom/android/server/PowerManagerService;->access$1802(Lcom/android/server/PowerManagerService;Landroid/os/Handler;)Landroid/os/Handler;
 
+    .line 523
     iget-object v0, p0, Lcom/android/server/PowerManagerService$1;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mScreenOffThread:Landroid/os/HandlerThread;
@@ -56,6 +59,7 @@
 
     monitor-enter v0
 
+    .line 524
     :try_start_0
     iget-object v1, p0, Lcom/android/server/PowerManagerService$1;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -64,6 +68,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mInitComplete:Z
     invoke-static {v1, v2}, Lcom/android/server/PowerManagerService;->access$2002(Lcom/android/server/PowerManagerService;Z)Z
 
+    .line 525
     iget-object v1, p0, Lcom/android/server/PowerManagerService$1;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mScreenOffThread:Landroid/os/HandlerThread;
@@ -73,10 +78,13 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
+    .line 526
     monitor-exit v0
 
+    .line 527
     return-void
 
+    .line 526
     :catchall_0
     move-exception v1
 

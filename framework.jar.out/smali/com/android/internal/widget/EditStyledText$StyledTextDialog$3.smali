@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 1416
     iput-object p1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog$3;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .parameter "which"
 
     .prologue
+    .line 1418
     const-string v1, "EditStyledText"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -64,6 +66,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1419
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog$3;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
     iget-object v1, v1, Lcom/android/internal/widget/EditStyledText$StyledTextDialog;->mSizeDisplayInts:[Ljava/lang/CharSequence;
@@ -76,6 +79,7 @@
 
     move-result v0
 
+    .line 1421
     .local v0, size:I
     iget-object v1, p0, Lcom/android/internal/widget/EditStyledText$StyledTextDialog$3;->this$1:Lcom/android/internal/widget/EditStyledText$StyledTextDialog;
 
@@ -83,5 +87,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/widget/EditStyledText;->setItemSize(I)V
 
+    .line 1422
     return-void
 .end method

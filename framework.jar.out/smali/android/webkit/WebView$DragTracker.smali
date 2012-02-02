@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 6602
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
     .parameter "bm"
 
     .prologue
+    .line 6609
     return-void
 .end method
 
@@ -39,6 +41,7 @@
     .parameter "canvas"
 
     .prologue
+    .line 6610
     return-void
 .end method
 
@@ -48,6 +51,7 @@
     .parameter "y"
 
     .prologue
+    .line 6603
     return-void
 .end method
 
@@ -55,6 +59,7 @@
     .locals 0
 
     .prologue
+    .line 6608
     return-void
 .end method
 
@@ -64,6 +69,7 @@
     .parameter "sy"
 
     .prologue
+    .line 6606
     const/4 v0, 0x0
 
     return v0

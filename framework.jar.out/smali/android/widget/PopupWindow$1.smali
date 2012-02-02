@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 125
     iput-object p1, p0, Landroid/widget/PopupWindow$1;->this$0:Landroid/widget/PopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
     .prologue
     const/4 v3, -0x1
 
+    .line 127
     iget-object v0, p0, Landroid/widget/PopupWindow$1;->this$0:Landroid/widget/PopupWindow;
 
     #getter for: Landroid/widget/PopupWindow;->mAnchor:Ljava/lang/ref/WeakReference;
@@ -55,6 +57,7 @@
 
     check-cast v6, Landroid/view/View;
 
+    .line 128
     .local v6, anchor:Landroid/view/View;
     if-eqz v6, :cond_0
 
@@ -67,6 +70,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 129
     iget-object v0, p0, Landroid/widget/PopupWindow$1;->this$0:Landroid/widget/PopupWindow;
 
     #getter for: Landroid/widget/PopupWindow;->mPopupView:Landroid/view/View;
@@ -80,6 +84,7 @@
 
     check-cast v7, Landroid/view/WindowManager$LayoutParams;
 
+    .line 132
     .local v7, p:Landroid/view/WindowManager$LayoutParams;
     iget-object v0, p0, Landroid/widget/PopupWindow$1;->this$0:Landroid/widget/PopupWindow;
 
@@ -107,6 +112,7 @@
     #calls: Landroid/widget/PopupWindow;->updateAboveAnchor(Z)V
     invoke-static {v0, v1}, Landroid/widget/PopupWindow;->access$500(Landroid/widget/PopupWindow;Z)V
 
+    .line 133
     iget-object v0, p0, Landroid/widget/PopupWindow$1;->this$0:Landroid/widget/PopupWindow;
 
     iget v1, v7, Landroid/view/WindowManager$LayoutParams;->x:I
@@ -119,6 +125,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/PopupWindow;->update(IIIIZ)V
 
+    .line 135
     .end local v7           #p:Landroid/view/WindowManager$LayoutParams;
     :cond_0
     return-void

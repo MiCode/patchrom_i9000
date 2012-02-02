@@ -32,6 +32,7 @@
     .locals 0
 
     .prologue
+    .line 511
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,6 +50,7 @@
 
     const/4 v2, -0x1
 
+    .line 513
     iget v0, p1, Landroid/text/util/LinkSpec;->start:I
 
     iget v1, p2, Landroid/text/util/LinkSpec;->start:I
@@ -57,9 +59,11 @@
 
     move v0, v2
 
+    .line 529
     :goto_0
     return v0
 
+    .line 517
     :cond_0
     iget v0, p1, Landroid/text/util/LinkSpec;->start:I
 
@@ -69,8 +73,10 @@
 
     move v0, v3
 
+    .line 518
     goto :goto_0
 
+    .line 521
     :cond_1
     iget v0, p1, Landroid/text/util/LinkSpec;->end:I
 
@@ -80,8 +86,10 @@
 
     move v0, v3
 
+    .line 522
     goto :goto_0
 
+    .line 525
     :cond_2
     iget v0, p1, Landroid/text/util/LinkSpec;->end:I
 
@@ -91,8 +99,10 @@
 
     move v0, v2
 
+    .line 526
     goto :goto_0
 
+    .line 529
     :cond_3
     const/4 v0, 0x0
 
@@ -105,6 +115,7 @@
     .parameter "x1"
 
     .prologue
+    .line 511
     check-cast p1, Landroid/text/util/LinkSpec;
 
     .end local p1
@@ -123,6 +134,7 @@
     .parameter "o"
 
     .prologue
+    .line 533
     const/4 v0, 0x0
 
     return v0

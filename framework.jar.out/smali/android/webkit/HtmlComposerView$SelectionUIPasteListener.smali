@@ -27,6 +27,7 @@
     .parameter
 
     .prologue
+    .line 420
     iput-object p1, p0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,20 +49,24 @@
 
     const-string v9, "HtmlComposerView"
 
+    .line 422
     const-string v7, "HtmlComposerView"
 
     const-string v7, "SelectionUIPasteListener onPaste"
 
     invoke-static {v9, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 423
     const/4 v7, 0x3
 
     if-ne p2, v7, :cond_2
 
+    .line 425
     new-instance v3, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
+    .line 426
     .local v3, options:Landroid/graphics/BitmapFactory$Options;
     const-string v7, "HtmlComposerView"
 
@@ -85,15 +90,18 @@
 
     invoke-static {v9, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 427
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
+    .line 428
     .local v2, imageUri:Landroid/net/Uri;
     invoke-virtual {v2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 429
     .local v0, absoluteFilePath:Ljava/lang/String;
     const-string v7, "HtmlComposerView"
 
@@ -117,6 +125,7 @@
 
     invoke-static {v9, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 430
     const-string v7, "HtmlComposerView"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -139,8 +148,10 @@
 
     invoke-static {v9, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 431
     iput-boolean v11, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
+    .line 432
     const-string v7, "HtmlComposerView"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -185,8 +196,10 @@
 
     invoke-static {v9, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 433
     invoke-static {v0, v3}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
+    .line 434
     const-string v7, "HtmlComposerView"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -209,11 +222,14 @@
 
     invoke-static {v9, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 435
     iget v5, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
+    .line 436
     .local v5, originWidth:I
     iget v4, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
+    .line 437
     .local v4, originHeight:I
     iget-object v7, p0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
 
@@ -222,25 +238,32 @@
 
     move-result v6
 
+    .line 438
     .local v6, width:I
     mul-int v7, v4, v6
 
     div-int v1, v7, v5
 
+    .line 440
     .local v1, height:I
     if-eqz v6, :cond_1
 
+    .line 442
     if-le v6, v5, :cond_0
 
+    .line 444
     move v6, v5
 
+    .line 445
     move v1, v4
 
+    .line 448
     :cond_0
     iget-object v7, p0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
 
     invoke-virtual {v7, p1, v6, v1}, Landroid/webkit/HtmlComposerView;->insertImage(Ljava/lang/String;II)V
 
+    .line 460
     .end local v0           #absoluteFilePath:Ljava/lang/String;
     .end local v1           #height:I
     .end local v2           #imageUri:Landroid/net/Uri;
@@ -253,8 +276,10 @@
 
     invoke-virtual {v7, v11}, Landroid/webkit/HtmlComposerView;->setCaretForEdit(Z)V
 
+    .line 461
     return-void
 
+    .line 452
     .restart local v0       #absoluteFilePath:Ljava/lang/String;
     .restart local v1       #height:I
     .restart local v2       #imageUri:Landroid/net/Uri;
@@ -269,6 +294,7 @@
 
     goto :goto_0
 
+    .line 458
     .end local v0           #absoluteFilePath:Ljava/lang/String;
     .end local v1           #height:I
     .end local v2           #imageUri:Landroid/net/Uri;

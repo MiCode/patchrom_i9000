@@ -39,18 +39,22 @@
     .parameter
 
     .prologue
+    .line 661
     iput-object p1, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 651
     const/high16 v0, 0x43c8
 
     iput v0, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mBounceDuration:F
 
+    .line 653
     const/high16 v0, 0x3f80
 
     iput v0, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mBounceExtentCoef:F
 
+    .line 662
     return-void
 .end method
 
@@ -59,6 +63,7 @@
     .parameter "timeFraction"
 
     .prologue
+    .line 714
     iget v0, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mBounceExtentCoef:F
 
     sget-object v1, Landroid/widget/BounceController;->mTweener:Landroid/widget/BounceController$Tweener;
@@ -80,6 +85,7 @@
     .locals 1
 
     .prologue
+    .line 755
     iget-object v0, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     #getter for: Landroid/widget/BounceController;->mView:Landroid/view/ViewGroup;
@@ -89,6 +95,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 756
     return-void
 .end method
 
@@ -96,10 +103,12 @@
     .locals 5
 
     .prologue
+    .line 724
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 726
     .local v0, tNow:J
     iget-wide v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mStartTime:J
 
@@ -111,6 +120,7 @@
 
     div-float v2, v3, v4
 
+    .line 728
     .local v2, timeFraction:F
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
@@ -120,39 +130,46 @@
 
     iput v4, v3, Landroid/widget/BounceController;->mBounceExtent:F
 
+    .line 735
     const/high16 v3, 0x3f80
 
     cmpl-float v3, v2, v3
 
     if-lez v3, :cond_1
 
+    .line 736
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     const/4 v4, 0x0
 
     iput v4, v3, Landroid/widget/BounceController;->mBounceExtent:F
 
+    .line 738
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     iget-object v3, v3, Landroid/widget/BounceController;->mEdgeGlowTop:Landroid/widget/EdgeGlow;
 
     if-eqz v3, :cond_0
 
+    .line 739
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     iget-object v3, v3, Landroid/widget/BounceController;->mEdgeGlowTop:Landroid/widget/EdgeGlow;
 
     invoke-virtual {v3}, Landroid/widget/EdgeGlow;->onRelease2()V
 
+    .line 740
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     iget-object v3, v3, Landroid/widget/BounceController;->mEdgeGlowBottom:Landroid/widget/EdgeGlow;
 
     invoke-virtual {v3}, Landroid/widget/EdgeGlow;->onRelease2()V
 
+    .line 743
     :cond_0
     invoke-virtual {p0}, Landroid/widget/BounceController$BounceScrollRunnableDefault;->cancel()V
 
+    .line 745
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     #getter for: Landroid/widget/BounceController;->mView:Landroid/view/ViewGroup;
@@ -162,9 +179,11 @@
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->invalidate()V
 
+    .line 752
     :goto_0
     return-void
 
+    .line 749
     :cond_1
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
@@ -175,6 +194,7 @@
 
     invoke-virtual {v3, p0}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
 
+    .line 751
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     #getter for: Landroid/widget/BounceController;->mView:Landroid/view/ViewGroup;
@@ -202,14 +222,18 @@
 
     const/4 v5, 0x0
 
+    .line 670
     invoke-virtual {p0}, Landroid/widget/BounceController$BounceScrollRunnableDefault;->cancel()V
 
+    .line 672
     cmpl-float v3, p1, v5
 
     if-nez v3, :cond_2
 
+    .line 673
     iput-boolean v8, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mStartFromDrag:Z
 
+    .line 675
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     iget v3, v3, Landroid/widget/BounceController;->mBounceExtent:F
@@ -243,6 +267,7 @@
 
     div-float v0, v3, v4
 
+    .line 678
     .local v0, extentRatio:F
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
@@ -283,12 +308,14 @@
 
     iput v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mBounceDuration:F
 
+    .line 681
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     iget v3, v3, Landroid/widget/BounceController;->mBounceExtent:F
 
     iput v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mBounceExtentCoef:F
 
+    .line 704
     .end local v0           #extentRatio:F
     :cond_0
     :goto_1
@@ -298,6 +325,7 @@
 
     iput-wide v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mStartTime:J
 
+    .line 706
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     #getter for: Landroid/widget/BounceController;->mView:Landroid/view/ViewGroup;
@@ -307,8 +335,10 @@
 
     invoke-virtual {v3, p0}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
 
+    .line 711
     return-void
 
+    .line 675
     :cond_1
     iget-object v4, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
@@ -323,9 +353,11 @@
 
     goto :goto_0
 
+    .line 684
     :cond_2
     iput-boolean v6, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mStartFromDrag:Z
 
+    .line 686
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result v3
@@ -341,6 +373,7 @@
 
     if-lez v3, :cond_3
 
+    .line 687
     cmpg-float v3, p1, v5
 
     if-gez v3, :cond_4
@@ -357,6 +390,7 @@
 
     mul-float p1, v3, v4
 
+    .line 690
     :cond_3
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
@@ -371,6 +405,7 @@
 
     div-float v2, v3, v4
 
+    .line 692
     .local v2, speedRatio:F
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
@@ -413,6 +448,7 @@
 
     iput v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mBounceDuration:F
 
+    .line 695
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
 
     #getter for: Landroid/widget/BounceController;->mOrientation:I
@@ -445,15 +481,18 @@
 
     mul-float v1, v3, v4
 
+    .line 698
     .local v1, maxBounceExtent:F
     mul-float v3, v1, v2
 
     iput v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mBounceExtentCoef:F
 
+    .line 700
     cmpl-float v3, p1, v5
 
     if-lez v3, :cond_0
 
+    .line 701
     iget v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->mBounceExtentCoef:F
 
     mul-float/2addr v3, v7
@@ -462,6 +501,7 @@
 
     goto/16 :goto_1
 
+    .line 687
     .end local v1           #maxBounceExtent:F
     .end local v2           #speedRatio:F
     :cond_4
@@ -469,6 +509,7 @@
 
     goto :goto_2
 
+    .line 695
     .restart local v2       #speedRatio:F
     :cond_5
     iget-object v3, p0, Landroid/widget/BounceController$BounceScrollRunnableDefault;->this$0:Landroid/widget/BounceController;
