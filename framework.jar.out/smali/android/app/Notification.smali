@@ -673,7 +673,7 @@
     if-eqz p3, :cond_2
 
 
-    const v1, 0x1020040
+    const v1, 0x1020042
 
     invoke-virtual {v0, v1, p3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 

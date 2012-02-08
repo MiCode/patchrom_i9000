@@ -144,27 +144,6 @@
         <item>上午</item>
         <item>下午</item>
     </string-array>
-    <string-array name="config_statusBarIcons">
-        <item>ime</item>
-        <item>sync_failing</item>
-        <item>sync_active</item>
-        <item>gps</item>
-        <item>bluetooth</item>
-        <item>nfc</item>
-        <item>tty</item>
-        <item>speakerphone</item>
-        <item>mute</item>
-        <item>volume</item>
-        <item>wifi</item>
-        <item>cdma_eri</item>
-        <item>data_connection</item>
-        <item>phone_evdo_signal</item>
-        <item>phone_signal</item>
-        <item>battery</item>
-        <item>alarm_clock</item>
-        <item>secure</item>
-        <item>clock</item>
-    </string-array>
     <string-array name="networkAttributes">
         <item>wifi,1,1,1</item>
         <item>mobile,0,0,0</item>
