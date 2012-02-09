@@ -22,7 +22,7 @@
     .line 15
     sget-object v0, Lcom/android/systemui/statusbar/ResourceMapper;->sMapping:Landroid/util/SparseIntArray;
 
-    const v1, 0x10802c2
+    const v1, 0x10802af
 
     const v2, 0x602035d
 
@@ -31,7 +31,7 @@
     .line 16
     sget-object v0, Lcom/android/systemui/statusbar/ResourceMapper;->sMapping:Landroid/util/SparseIntArray;
 
-    const v1, 0x10802d8
+    const v1, 0x10802c5
 
     const v2, 0x6020373
 
@@ -40,7 +40,7 @@
     .line 17
     sget-object v0, Lcom/android/systemui/statusbar/ResourceMapper;->sMapping:Landroid/util/SparseIntArray;
 
-    const v1, 0x10802df
+    const v1, 0x10802cc
 
     const v2, 0x602037a
 
