@@ -12,13 +12,12 @@ local-miui-apps     := Contacts ContactsProvider Mms TelephonyProvider ThemeMana
 	Launcher2 DownloadProvider TelocationProvider Notes Music DownloadProviderUi Updater
 
 # All apps need to be removed from original ZIP file
-local-remove-apps   := aldiko-standard-1.2.6.1-samsung-s1 BuddiesNow ClockPackage \
+local-remove-apps   := aldiko-standard-1.2.6.1-samsung-s1 BuddiesNow \
 CoolEUKor CWMManager Days DialerTabActivity Dlna DualClock Email InfoAlarm \
-JobManager Memo MiniDiary PressReader Protips PhoneSetupWizard SamsungApps SamsungAppsUNA3 \
+Memo MiniDiary PressReader Protips PhoneSetupWizard SamsungApps SamsungAppsUNA3 \
 SamsungWidget_CalendarClock SamsungWidget_FeedAndUpdate SamsungWidget_ProgramMonitor \
-SamsungWidget_StockClock SetupWizard SnsAccount SnsProvider syncmldm thinkdroid TouchWiz30Launcher \
-TouchWizCalculator TouchWizCalendar TweakManager TwWallpaperChooser UnifiedInbox \
-VideoPlayer VoiceSearch WriteandGo YouTube
+SamsungWidget_StockClock SetupWizard SnsAccount SnsProvider syncmldm thinkdroid \
+TouchWiz30Launcher TweakManager UnifiedInbox VoiceSearch WriteandGo YouTube
 
 include $(PORT_ROOT)/build/porting.mk
 

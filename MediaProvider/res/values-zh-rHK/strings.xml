@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">媒體</string>
+    <string name="app_label">媒體儲存裝置</string>
+    <string name="artist_label">演出者</string>
+    <string name="media_scanning_tiker_start">媒體掃描器執行中...</string>
+    <string name="media_scanning_tiker_end">媒體掃描已完成</string>
+    <string name="media_scanning_running">媒體掃描中...</string>
+    <string name="media_scanning_running_definition">正在掃描 SD 卡上所有媒體檔案...</string>
+    <string name="media_scanning_system">設備內存</string>
+    <string name="media_scanning_internal_sd">USB存儲</string>
+    <string name="media_scanning_external_sd">SD 卡</string>
+    <string name="alphabet_indexlist">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+</resources>

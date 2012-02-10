@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">媒體</string>
+    <string name="app_label">媒體儲存空間</string>
+    <string name="artist_label">歌手/創作人</string>
+    <string name="media_scanning_tiker_start">正在搜尋多媒體檔案…</string>
+    <string name="media_scanning_tiker_end">多媒體搜尋已完成</string>
+    <string name="media_scanning_running">多媒體搜尋...</string>
+    <string name="media_scanning_running_definition">搜尋在SD卡全部的多媒體檔案中...</string>
+    <string name="media_scanning_system">設備內存</string>
+    <string name="media_scanning_internal_sd">USB存儲</string>
+    <string name="media_scanning_external_sd">SD 卡</string>
+    <string name="alphabet_indexlist">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+</resources>

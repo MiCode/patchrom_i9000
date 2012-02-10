@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Media</string>
+    <string name="app_label">Media Storage</string>
+    <string name="artist_label">Artista</string>
+    <string name="media_scanning_tiker_start">Scanner multimediale in esecuzione…</string>
+    <string name="media_scanning_tiker_end">Scansione multimediale completata</string>
+    <string name="media_scanning_running">Scansione multimediale…</string>
+    <string name="media_scanning_running_definition">Scansione di tutti i file multimediali sulla scheda SD…</string>
+    <string name="media_scanning_system">Memoria dispositivo</string>
+    <string name="media_scanning_internal_sd">Memoria USB</string>
+    <string name="media_scanning_external_sd">Sch.mem.</string>
+</resources>
