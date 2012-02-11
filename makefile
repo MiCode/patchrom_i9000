@@ -5,7 +5,7 @@ local-zip-file     := 9000_final.zip
 local-out-zip-file := NEW_9000.zip
 
 # All apps from zip and has smali files chanded(need to be builded by apktool)
-local-modified-apps := Phone CSC LogsProvider SettingsProvider
+local-modified-apps := Phone CSC LogsProvider SettingsProvider MediaProvider
 
 # All apks from MIUI execept MIUISystemUI and framework-res.apk
 local-miui-apps     := Contacts ContactsProvider Mms TelephonyProvider ThemeManager \

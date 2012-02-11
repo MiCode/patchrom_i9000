@@ -55,7 +55,7 @@
     .line 828
     const/4 v0, 0x0
 
-    const/16 v1, 0x64
+    const/16 v1, 0x65
 
     invoke-direct {p0, p1, p2, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
@@ -95,7 +95,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x64
+    const/16 v2, 0x65
 
     #calls: Lcom/android/providers/media/MediaProvider;->updateDatabase(Landroid/database/sqlite/SQLiteDatabase;ZII)V
     invoke-static {p1, v0, v1, v2}, Lcom/android/providers/media/MediaProvider;->access$1200(Landroid/database/sqlite/SQLiteDatabase;ZII)V
