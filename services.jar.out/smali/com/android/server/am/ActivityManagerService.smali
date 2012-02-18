@@ -1485,7 +1485,7 @@
     .local v1, systemDir:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    invoke-static {v1}, Lmiui/os/Environment;->init(Ljava/io/File;)V
+    invoke-static {v1, v0}, Lmiui/os/Environment;->init(Ljava/io/File;Ljava/io/File;)V
 
     new-instance v3, Lcom/android/server/am/BatteryStatsService;
 

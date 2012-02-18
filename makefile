@@ -9,7 +9,7 @@ local-modified-apps := Phone CSC LogsProvider SettingsProvider MediaProvider
 
 # All apks from MIUI execept MIUISystemUI and framework-res.apk
 local-miui-apps     := Contacts ContactsProvider Mms TelephonyProvider ThemeManager \
-	DownloadProvider TelocationProvider Notes Music DownloadProviderUi Updater
+	DownloadProvider TelocationProvider Notes Music DownloadProviderUi Updater SideKick
 
 local-miui-modified-apps := Launcher2
 
